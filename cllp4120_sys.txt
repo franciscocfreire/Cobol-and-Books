@@ -1,0 +1,133 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E  A L N J E 0 2
+
+10.12.17 JOB81022 ---- FRIDAY,    06 MAR 2015 ----
+10.12.17 JOB81022  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+10.12.17 JOB81022  $EXIT006A  Job CLLP4120 Jobid(JOB81022) alterado para CLASS=E
+10.12.18 JOB81022  $HASP373 CLLP4120 STARTED - WLM INIT  - SRVCLASS BATCH_01 - SYS AL2C
+10.12.18 JOB81022  IEF403I CLLP4120 - STARTED - TIME=10.12.18
+10.12.18 JOB81022  -                                                --TIMINGS (MINS.)--                   ----PAGING COUNTS---
+10.12.18 JOB81022  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  SRVCLASS  PAGE  SWAP   VIO SWAPS
+10.12.18 JOB81022  -CLLP4120 STEP1                00     69     21    .00    .00     .0   1431  BATCH_01     0     0     0     0
+10.12.18 JOB81022  IEF404I CLLP4120 - ENDED - TIME=10.12.18
+10.12.18 JOB81022  -CLLP4120 ENDED.  NAME-D115848              TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+10.12.18 JOB81022  $HASP395 CLLP4120 ENDED
+------ JES2 JOB STATISTICS ------
+  06 MAR 2015 JOB EXECUTION DATE
+           26 CARDS READ
+          129 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+            8 SYSOUT SPOOL KBYTES
+         0.00 MINUTES EXECUTION TIME
+
+        1 //CLLP4120 JOB 'LPCL,4120,PR32','D115848',MSGCLASS=Z                    JOB81022
+        2 //JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR
+        3 //         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR
+        4 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR
+        5 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+        6 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        7 //STEP1    EXEC PGM=PLAN1010,
+          //       PARM='SIM'
+          //*
+          //* ***    IMPORTANTE IMPORTANTE IMPORTANTE IMPORTANTE IMPORTANTE
+          //* ***    RODAR O SORTMERG DA NET PARA GERAR OS ARQUIVOS OK PARA TESTE
+          //*
+          //* ***    COPIA O ARQUIVO DAS PENDENCIAS COM DADOS CADASTRAIS (ALPHA)
+          //*
+        8 //SYSUT1   DD DSN=AD.BRQ.TM.CLLP.CLLP.PENDCADA(0),
+          //*      DISP=(OLD,DELETE,KEEP) <- PARA QUE NAO SEJA DELETADO NOS TESTES
+          //       DISP=SHR
+        9 //SYSUT2   DD DSN=AD.BRQ.CLLP.PENDCADA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,40),
+          //       SPACE=(TRK,(020000,4000),RLSE),
+          //       DCB=(AD.A,LRECL=0480,RECFM=FB)
+       10 //PRINTER  DD SYSOUT=*
+       11 //SYSOUT   DD SYSOUT=*
+       12 //SYSUDUMP DD SYSOUT=Y
+          //*
+
+IEF236I ALLOC. FOR CLLP4120 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D905 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME SYSUT1
+IGD101I SMS ALLOCATED TO DDNAME (SYSUT2  )
+        DSN (AD.BRQ.CLLP.PENDCADA.G0012V00               )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DCT
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLP4120 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AD.BRQ.TM.CLLP.CLLP.PENDCADA.G0017V00        RETAINED,  DDNAME=SYSUT1
+IGD107I AD.BRQ.CLLP.PENDCADA.G0012V00                ROLLED IN, DDNAME=SYSUT2
+IEF285I   M67777.CLLP4120.JOB81022.D0000101.?          SYSOUT
+IEF285I   M67777.CLLP4120.JOB81022.D0000102.?          SYSOUT
+IEF285I   M67777.CLLP4120.JOB81022.D0000103.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 06-Mar-2015 10:12:18 AM
+Step  Num: 1              PGM  Name: PLAN1010     End:   06-Mar-2015 10:12:18 AM
+CPU (TCB): 00:00:00.03                            Storage below 16M:        856k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.06                            Service Units:           1,431
+Tape Mnts: 0                                      Total EXCPs:                69
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D JOBLIB              1  23,476        D1F7 D SYSUT1             23  27,840
+D37B D SYSUT2             22  27,840
+
+Total DASD EXCPs:                 46        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2015065.1012
+IEF032I STEP/STEP1   /STOP  2015065.1012
+        CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   856K  SYS:   404K  EXT:        4K  SYS:    10768K
+        ATB- REAL:                   952K  SLOTS:                     0K
+             VIRT- ALLOC:       6M SHRD:       0M
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IGD104I AV.CHGM.LOADLIB.BSL.LOB                      RETAINED,  DDNAME=
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST2AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP4120       System ID: AL2C        Submit: 06-Mar-2015 10:12:17 AM
+Job JESID: JOB81022       MVS level: SP7.2.1     Start:  06-Mar-2015 10:12:18 AM
+Job Class: E                                     End:    06-Mar-2015 10:12:18 AM
+CPU (TCB): 00:00:00.03                           Storage below 16M:         856k
+CPU (SRB): 00:00:00.00                           Storage above 16M:           4k
+Trans Act: 00:00:00.06                           Service Units:            1,431
+Tape Mnts: 0                                     Total EXCPs:                 69
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer: D115848
+Acct Info: LPCL,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP4120/START 2015065.1012
+IEF033I  JOB/CLLP4120/STOP  2015065.1012
+        CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+
+*-----------------------------------------------------------------------------*
+* CLLP4120/STEP1    BRADESCO-DPD-PCP-SISTEMAS ESPECIAIS 06/03/2015 - 10.12 H  *
+*-----------------------------------------------------------------------------*
+* QTDE REGS BLKSI LRECL FM VOLSER END        D S N A M E                      *
+* 000001260 27840 00480 FB SA2DCR UCB L BRQ.TM.CLLP.CLLP.PENDCADA.G0017V0     *
+* 000001260 27840 00480 FB SA2DCT UCB G AD.BRQ.CLLP.PENDCADA.G0012V00         *
+*-----------------------------------------------------------------------------*
+* CLLP4120/STEP1    BRADESCO-DPD-PCP-SISTEMAS ESPECIAIS 06/03/2015 - 10.12 H  *
+*-----------------------------------------------------------------------------*

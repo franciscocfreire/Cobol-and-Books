@@ -1,0 +1,12 @@
+
+RDABB009 - MOVIMENTO DE ATUALIZACAO        05/11/2014        14:34:38        - 1 -
+
+       CPF FILIAL CTRL        CLUB NOME CADU                                NOME RDAB
+---------- ------ ---- ----------- ---------------------------------------- ----------------------------------------
+     19940      1   22  1259546214 NILTON FABIO MASCANHI ME                 NILTON FABIO M***ANHI ME
+     29614      1    4    16700082 TRANSMANEIRO TRANSPORTES EM GERAL E LOCA TRANS****IRO T****PORTES EM GERAL E LOCA
+     59923      1   19    29182506 BRASILIA COUNTRY CLUBE                   BRA****A COUNTRY CLUBE
+     64804      1   54    13908588 CONFECCOES EBENESER LTDA ME              CONFECCO** EBENESER LTDA ME
+     85533      1   13    14933411 CARPECA PECAS E ACESSORIOS PARA VEICULOS CARPECA PE**S E ACESSORIOS PARA VEICULOS
+    138957      1    7    31663095 POSTO DE GASOLINA FELICI LTDA            POSTO DE GASOLINA **LICI LTDA
+    142603      1   28    22920919 POSTO SENNA LTDA                         POSTO SENNA **DA

@@ -1,0 +1,6 @@
+RDABB006 - MOVIMENTO DE ATUALIZACAO        21/11/2014        11:41:01        - 1 -                                                   
+                                                                                                                                     
+ BCO AGENCIA          CONTA IND-ORI TPO-LOGR ENDERECO                                 NRO     COMPL ENDERECO          CEP CEP COMPL  
+---- ------- -------------- ------- -------- ---------------------------------------- ------- -------------------- ------ ---------  
+ 237     140         232778 1       1        R SP 15 - DE 1 ATE 99998                 S/N     Q5 L31                74580       765  
+ 237     460          67242 1       1        CORONEL MANOEL BANDEIRA                  00772                         65900        10  

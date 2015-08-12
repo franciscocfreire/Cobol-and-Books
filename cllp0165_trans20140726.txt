@@ -1,0 +1,129 @@
+// REP CLLP0165                                                         
+//CLLP0165 JOB 'CLLP,4120,PR32','B142376',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=DB2                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=MZNJE01,CLASS=E                                  
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=MZNJE01,CLASS=J                                  
+//OUTM     OUTPUT DEST=MZNJE01,CLASS=M                                  
+//OUTN     OUTPUT DEST=ANYLOCAL,CLASS=N                                 
+//OUTO     OUTPUT DEST=MZNJE01,CLASS=O                                  
+//OUTP     OUTPUT DEST=ANYLOCAL,CLASS=P                                 
+//OUTQ     OUTPUT DEST=ANYLOCAL,CLASS=Q                                 
+//OUTR     OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTRR    OUTPUT DEST=MZNJE01,CLASS=R                                  
+//OUTV     OUTPUT DEST=MZNJE01,CLASS=V                                  
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAC8                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAC9                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAD0                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAD1                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAJ1                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAR5                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAX3                 
+//*                                                                     
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CPESSOA-CADTR                                 
+//*                                                                     
+//SORTIN   DD DSN=AC.CLLP.SAICOMCR.PEFIS(0),                            
+//       DISP=SHR                                                       
+//         DD DSN=AC.CLLP.RDAB0010.PEFIS(0),                            
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.PESSOFIS.CLASS(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001220,0244),RLSE),                                
+//       DCB=(AC.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(62,26,A),FORMAT=BI                                        
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0015                                            
+//*                                                                     
+//* ***    OBTEM DADOS PF E LOGRADOURO                                  
+//*                                                                     
+//ARQPARVV DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//PENDFICA DD DSN=AC.CLLP.ARQFICA.FICAV001(0),                          
+//       DISP=SHR                                                       
+//ARQDAPES DD DSN=AC.CLLP.RDAB0015.LOGRFIS(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(004130,0826),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//RELVAZIO DD SYSOUT=%%FORM#IAC8,                                       
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELTOTAL DD SYSOUT=%%FORM#IAC9,                                       
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELNENCO DD SYSOUT=%%FORM#IAD0,                                       
+//       DCB=(LRECL=0132,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=RDAB0024                                            
+//*                                                                     
+//* ***    CARGA DA BASE UNIFICADA - FICAV004                           
+//* ***    OBTEM CPSSOA-LIGADA(CGRAU-LIG=1 CONJUGE)                     
+//*                                                                     
+//PENDENCI DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQIFICA DD DSN=AC.CLLP.ARQFICA.FICAV004(0),                          
+//       DISP=SHR                                                       
+//PENDFICA DD DSN=AC.CLLP.RDAB0024.PSSOALIG(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000100,0020),RLSE),                                
+//       DCB=(AC.A,LRECL=150,RECFM=FB)                                  
+//RELNENCO DD SYSOUT=%%FORM#IAD1,                                       
+//       DCB=(LRECL=0132,RECFM=FBA)                                     
+//RELTOTAL DD SYSOUT=%%FORM#IAJ1,                                       
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CPESSOA-LIGADA                                
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3.PENDFICA,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.PESOALIG.CLASS(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000100,0020),RLSE),                                
+//       DCB=(AC.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(114,26,A),FORMAT=BI                                       
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=RDAB0028                                            
+//*                                                                     
+//* ***    OBTEM NOME DO CONJUGE                                        
+//*                                                                     
+//ARQUIRES DD DSN=AC.CLLP.IRESV001.CLASS(0),                            
+//       DISP=SHR                                                       
+//ARQPARVV DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQDAPES DD DSN=AC.CLLP.RDAB0028.CONJG(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000330,0066),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//RELNENCO DD SYSOUT=%%FORM#IAR5,                                       
+//       DCB=(LRECL=0132,RECFM=FBA)                                     
+//RELTOTAL DD SYSOUT=%%FORM#IAX3,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

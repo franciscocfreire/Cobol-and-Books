@@ -1,0 +1,54 @@
+//RDAB0215 JOB 'RDAB,4120,PR32','A299565',MSGCLASS=Z,REGION=4096K       
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN2440,                                           
+//       PARM=006                                                       
+//*                                                                     
+//* ***    COPIA ARQUIVO RECEBIDO DA ROTINA LPCL.                       
+//*                                                                     
+//ENT00001 DD DSN=TM.CLLP.RDAB.PESSJURI.CARGFICA,                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00001 DD DSN=MX.RDAB.PESSJURI.CARGFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000040,0008),RLSE),                                
+//       DCB=(MX.A,LRECL=0081,RECFM=FB)                                 
+//ENT00002 DD DSN=TM.CLLP.RDAB.PESSFISI.CARGFICA,                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00002 DD DSN=MX.RDAB.PESSFISI.CARGFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(002050,0410),RLSE),                                
+//       DCB=(MX.A,LRECL=0270,RECFM=FB)                                 
+//ENT00003 DD DSN=TM.CLLP.RDAB.CTACORR.BASEFICA,                        
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00003 DD DSN=MX.RDAB.CTACORR.BASEFICA(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000870,0174),RLSE),                                
+//       DCB=(MX.A,LRECL=0098,RECFM=FB)                                 
+//ENT00004 DD DSN=TM.CLLP.RDAB.ARQLOGRD.BASEFICA,                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00004 DD DSN=MX.RDAB.ARQLOGRD.BASEFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001200,0240),RLSE),                                
+//       DCB=(MX.A,LRECL=0146,RECFM=FB)                                 
+//ENT00005 DD DSN=TM.CLLP.RDAB.ARQFONES.BASEFICA,                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00005 DD DSN=MX.RDAB.ARQFONES.BASEFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000310,0062),RLSE),                                
+//       DCB=(MX.A,LRECL=0044,RECFM=FB)                                 
+//ENT00006 DD DSN=TM.CLLP.RDAB.ARQSOCIO.BASEFICA,                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00006 DD DSN=MX.RDAB.CADSOCIO.BASEFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000220,0044),RLSE),                                
+//       DCB=(MX.A,LRECL=0197,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

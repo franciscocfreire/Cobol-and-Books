@@ -1,0 +1,19 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+1CLLP2673                                           BANCO BRADESCO S/A                                                    FOLHA:    1                           
+ 05/03/2015                                  REG.DE BENS COM DADOS DO GART/ CLLP X RECR - SICV - MIGRADOS                    15:31:57                           
+                                                                                                                                                                
+                     L E G A D O                                                          N O V A  A R Q U I T E T U R A                                        
+                                                                                                                                                                
+ AGENCIA    CC    CART    CONTRATO     CPSSOA-JURIDC    CTPO-CONTR    NSEQ-CONTR                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                 S U M A R I Z A C A O                                                                                                          
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                     LIDOS - ARQUIVO ARQSICV........:                    667                                                                                    
+                     LIDOS - ARQUIVO ARQBENS........:                      6                                                                                    
+                     REGISTROS MIGRADOS................:                   0                                                                                    
+                     REGISTROS NAO MIGRADOS............:                   6                                                                                    

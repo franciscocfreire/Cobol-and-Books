@@ -1,0 +1,165 @@
+//CLLPX001 JOB 'RDAB,4120,PR32','A299565',MSGCLASS=Z,SCHENV=DB2         
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    GERAR ARQUIVO COM CPF/CNPJ                                   
+//*                                                                     
+//SORTIN   DD DSN=TA.RDAB.CLLP.RDABB008.CORR,                           
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=AC.CLLP.HPURDAB.CLASS.CORR(+1),                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(01000,200),RLSE),                                  
+//       DCB=(AC.A,LRECL=050,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,10,A),FORMAT=BI                                         
+ INREC FIELDS=(1,5,X'00000C',6,42)                                      
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    GERAR ARQUIVO COM CPF/CNPJ                                   
+//*                                                                     
+//SORTIN   DD DSN=TA.RDAB.CLLP.CPFCNPJ.CORR,                            
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=AC.CLLP.CPFCNPJ.CLASS.CORR(+1),                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(01000,200),RLSE),                                  
+//       DCB=(AC.A,LRECL=150,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(25,8,A),FORMAT=BI                                         
+ SUM FIELDS=NONE                                                        
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=RDAB0254                                            
+//*                                                                     
+//* ***    GERAR ARQUIVO DE NOMES DO RDAB SOMENTE DO MOVIMENTO          
+//* ***    ATUALIZADO DESDE A IMPLANTACAO                               
+//* ***                                                                 
+//*                                                                     
+//HPURDABE DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//BKPRDAB  DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//HPURDABS DD DSN=AC.CLLP.HPURDABS.CORR(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+//       DCB=(AC.A,LRECL=050,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4A   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASS POR CLUB                                               
+//*                                                                     
+//SORTIN   DD DSN=AC.CLLP.PRV.CADUV000(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.JA001S4A.CADUV000(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(01000,200),RLSE),                                  
+//       DCB=(AC.A,LRECL=320,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,10,A),FORMAT=BI                                         
+//*                                                                     
+//STEP4B   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CLUB                                          
+//*                                                                     
+//SORTIN   DD DSN=AC.PSDC.PRV.CADUB069.DESCOMPR(0),                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.JA001S4B.CADUB069(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001670,0334),RLSE),                                
+//       DCB=(AC.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(11,6,PD,A),FORMAT=BI                                      
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=RDAB0251                                            
+//*                                                                     
+//* ***    GERA ARQUIVO DE NOMES DO CADU (PESSOA FISICA)                
+//* ***                                                                 
+//*                                                                     
+//CADUV000 DD DSN=*.STEP4A.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//CADUB069 DD DSN=*.STEP4B.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//ARQSAIDA DD DSN=AC.CLLP.JA001S05.NOMECADU(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+//       DCB=(AC.A,LRECL=100,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR CPF + HORA ATUALIZACAO (D)                   
+//*                                                                     
+//SORTIN   DD DSN=*.STEP5.ARQSAIDA,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.JA001S06.NOMECADU(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(01000,200),RLSE),                                  
+//       DCB=(AC.A,LRECL=100,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,15,A,57,26,D),FORMAT=BI                                 
+ END                                                                    
+//*                                                                     
+//STEP7    EXEC PGM=RDAB0252                                            
+//*                                                                     
+//* ***    GERA ARQUIVO DE NOMES DO CADU + RDAB                         
+//* ***                                                                 
+//*                                                                     
+//NOMERDAB DD DSN=*.STEP4.HPURDABS,                                     
+//       DISP=OLD                                                       
+//NOMECADU DD DSN=*.STEP6.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADURDAB DD DSN=AC.CLLP.JA001S07.CADURDAB(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+//       DCB=(AC.A,LRECL=130,RECFM=FB)                                  
+//DESPRDAB DD DSN=AC.CLLP.JA001S07.DESPRDAB(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+//       DCB=(AC.A,LRECL=130,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8    EXEC PGM=PLAN2440,                                           
+//       PARM=003                                                       
+//*                                                                     
+//* ***    TRANSMITE ARQUIVO DO MOVIMENTO RDAB PARA ALPHAVILLE          
+//*                                                                     
+//ENT00001 DD DSN=*.STEP7.CADURDAB,                                     
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=TM.CLLP.RDAB.CADURDAB.CORR,                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(003800,0760),RLSE),                                
+//       DCB=(LRECL=130,RECFM=FB)                                       
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

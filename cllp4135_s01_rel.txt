@@ -1,0 +1,7 @@
+                                                   --- INICIO DO RELATORIO ---  
+                                                                                
+CLLP7366             B A N C O  B R A D E S C O  S / A                06/03/2015
+                  TABULACAO DE CLIENTES COM CPF/ENDERECO/               10:38:29
+                          TELEFONES INCOMPLETOS                                 
+        QTDE DE CLIENTES      VALOR DE COBRANCA           VALOR LIQUIDO         
+             000201                 5.292.529,55              4.683.377,41      

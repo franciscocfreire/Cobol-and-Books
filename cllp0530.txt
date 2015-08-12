@@ -1,0 +1,130 @@
+//CLLP0530 JOB 'CLLP,4120,PR32','B013444',MSGCLASS=Z,REGION=4096K       
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTGG11                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTCNY4                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTCNZ8                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC PGM=LPCL6005                                            
+//*                                                                     
+//* ***    SEPARA ARQUIVO DE MOVIMENTO EM 2 ARQUIVOS.                   
+//* ***    - O PRIMEIRO CONTENDO REGISTROS TIPOS 1 A 5.                 
+//* ***    - O SEGUNDO CONTENDO REGISTROS TIPO 6.                       
+//*                                                                     
+//MOVTO    DD DSN=MX.CLLP.MOVLT(0),                                     
+//       DISP=SHR                                                       
+//MOVTO1   DD DSN=MX.CLLP.MOVTO1(+1),                                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0200,RECFM=FB)                                 
+//MOVTO2   DD DSN=MX.CLLP.MOVTO2(+1),                                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0200,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=LPCL6150,                                           
+//       COND=(999,NE,STEP1)                                            
+//*                                                                     
+//* ***    FAZ A TRANSFERENCIA DAS PENDENCIAS EM LP DE RECUPERAVEIS     
+//* ***    PARA IRRECUPERAVEIS COM BASE NO TIPO 06 DO  REGISTRO PE-     
+//* ***    DIDO DE LISTAGENS DE PROCESSOS EM PODER DOS ADVOGADOS.       
+//*                                                                     
+//MOVTO2   DD DSN=*.STEP1.MOVTO2,                                       
+//       DISP=OLD                                                       
+//CADLOCAL DD DSN=MX.CLLP.PRV.CADLOCAL(0),                              
+//       DISP=SHR                                                       
+//CADANT   DD DSN=MX.CLLP.CADALPCL.LEI(0),                              
+//       DISP=SHR                                                       
+//CADATU   DD DSN=MX.CLLP.CADALPCL.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//CADALT   DD DSN=MX.CLLP.CADALT(+1),                                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000120,0024),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//RELATO   DD SYSOUT=%%FORM#GG11,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//RELREJ   DD SYSOUT=%%FORM#CNY4,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD,                                                  
+//       COND=(999,NE,STEP1)                                            
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO COM REGISTROS DO CADASTRO                 
+//* ***    DE CLLP COM REGISTROS ALTERADOS.                             
+//* ***    CLASSIFICACAO- CPF DO ADVOGADO.                              
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.CADALT,                                       
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.CADCLAS(+1),                                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000120,0024),RLSE),                                
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(457,6,A),FORMAT=BI                                        
+ OUTREC FIELDS=(1,600)                                                  
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=CLLP6200,                                           
+//       COND=(999,NE,STEP1)                                            
+//*                                                                     
+//* ***    EMITE LISTAGENS DAS PENDENCIAS EM LP TRANSFE                 
+//* ***    RIDAS DE RECUPERAVEIS PARA IRRECUPERAVEIS.                   
+//*                                                                     
+//ACLISTA  DD DSN=*.STEP1.MOVTO2,                                       
+//       DISP=OLD                                                       
+//CADATUAL DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADADV   DD DSN=MX.CLLP.PRV.CADADVOG(0),                              
+//       DISP=SHR                                                       
+//TABOCOR  DD DSN=MX.CLLP.PRV.TABOCORR(0),                              
+//       DISP=SHR                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTLPCL(0),                                  
+//       DISP=SHR                                                       
+//CONTROLE DD DUMMY,                                                    
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//RELATO5  DD DUMMY,                                                    
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//RELATO6  DD DUMMY,                                                    
+//       DCB=(LRECL=0152,RECFM=FBM)                                     
+//RELATO7  DD DUMMY,                                                    
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//RELATO8  DD DUMMY,                                                    
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//RELATO9  DD DUMMY,                                                    
+//       DCB=(LRECL=0155,RECFM=FBA)                                     
+//RELATO10 DD SYSOUT=%%FORM#CNZ8,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//RELATO11 DD DUMMY,                                                    
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

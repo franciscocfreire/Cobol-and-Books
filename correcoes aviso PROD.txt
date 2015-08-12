@@ -1,0 +1,245 @@
+========================================================
+=       NET CLLPA400
+========================================================
+CLLPTF9Y - HX0159804
+
+(1) - CLLPA404
+RETIRAR A DEPENDENCIA DO CLLPH400
+COLOCAR JOB COMO MENSAL
+
+(2) - CLLPA420
+DEPENDER DO JOB CLLPA750
+
+(3) - CLLPA421
+DEPENDER DO JOB CLLPA753
+RETIRAR RELEASE CLLPH400
+
+(4) - CLLPA422
+RETIRAR RELEASE CLLPH400
+
+(5) - CLLPA424
+RETIRAR RELEASE CLLPH400
+
+(6) - CLLPA427
+RETIRAR RELEASE CLLPH400
+
+(7) - CLLPA428
+RETIRAR RELEASE CLLPH400
+
+(8) - CLLPA429
+RETIRAR RELEASE CLLPH400
+
+(9) - CLLPA435
+COLOCAR RELEASE CLLPH400
+
+(10) - CLLPA441
+COLOCAR RELEASE CLLPH400
+
+(11) - CLLPA444
+COLOCAR RELEASE CLLPH400
+
+(12) - CLLPA429                           
+STEP0
+DE:
+//SORTIN   DD DSN=MX.CLLP.AGENC01(0),                   
+//       DISP=SHR                                       
+
+PARA:
+//SORTIN   DD DSN=MX.CLLP.AGENC01.LEI(0),                   
+//       DISP=SHR                                       
+
+
+STEP6
+DE:
+//SORTIN   DD DSN=MX.CLLP.CORRE02(0),           
+//       DISP=SHR                            
+
+PARA:
+//SORTIN   DD DSN=MX.CLLP.CORRE02.LEI(0),           
+//       DISP=SHR                               
+
+(13) - CLLPA430
+STEP0E
+DE:
+//STEP0E   EXEC PGM=CLLP0791
+
+PARA:
+//STEP0E   EXEC PGM=CLLPJ791
+
+STEP1C
+DE:
+//SORTIN   DD DSN=MX.LPCL.PRIEMPF2.LEI(0),  
+//       DISP=SHR                           
+
+PARA:
+//SORTIN   DD DSN=MX.LPCL.PRIEMPF2(0),  
+//       DISP=SHR           
+
+
+(14) - CLLPA431
+STEP1
+DE:
+//CEPFAC   DD DSN=MX.CLLP.AGEN1CEP.CORREN.LSNG(+1),  
+//       DISP=(,CATLG,DELETE),                       
+//       UNIT=DISCO,                                 
+//       SPACE=(TRK,(000010,0002),RLSE),             
+//       DCB=(MX.A,LRECL=0025,RECFM=FB)              
+
+PARA:
+
+//CEPFAC   DD DSN=MX.CLLP.AGEN1CEP.CORREN.LSNG.L(+1),  
+//       DISP=(,CATLG,DELETE),                       
+//       UNIT=DISCO,                                 
+//       SPACE=(TRK,(000010,0002),RLSE),             
+//       DCB=(MX.A,LRECL=0025,RECFM=FB)              
+
+
+
+(15) - CLLPA436                                     
+STEP2C
+DE:
+//SORTIN   DD DSN=MX.LPCL.PRIEMPF2.LEI(0),  
+//       DISP=SHR                           
+
+PARA:
+//SORTIN   DD DSN=MX.LPCL.PRIEMPF2(0),  
+//       DISP=SHR                          
+
+(16) - CLLPA440
+
+STEP3
+DE:
+//CONTRSAI DD DSN=MX.CLLP.ARQCONTR(+1),         
+//       DISP=(,CATLG,DELETE),                  
+//       UNIT=(DISCO),                          
+//       SPACE=(TRK,(000010,0002),RLSE),        
+//       DCB=(MX.A,LRECL=0015,RECFM=FB)         
+//ETIQUETA DD DUMMY,                            
+//       DCB=(LRECL=0080,RECFM=FB)              
+//FAC      DD DSN=MX.CLLP.CLLPFAC2(+1),         
+//       DISP=(,CATLG,DELETE),                  
+//       UNIT=DISCO,                            
+//       SPACE=(TRK,(000010,0002),RLSE),        
+//       DCB=(MX.A,LRECL=0076,RECFM=FBA)        
+
+PARA
+//CONTRSAI DD DSN=MX.CLLP.ARQCONTR.LEI(+1),         
+//       DISP=(,CATLG,DELETE),                  
+//       UNIT=(DISCO),                          
+//       SPACE=(TRK,(000010,0002),RLSE),        
+//       DCB=(MX.A,LRECL=0015,RECFM=FB)         
+//ETIQUETA DD DUMMY,                            
+//       DCB=(LRECL=0080,RECFM=FB)              
+//FAC      DD DSN=MX.CLLP.CLLPFAC2.LEI(+1),         
+//       DISP=(,CATLG,DELETE),                  
+//       UNIT=DISCO,                            
+//       SPACE=(TRK,(000010,0002),RLSE),        
+//       DCB=(MX.A,LRECL=0076,RECFM=FBA)        
+
+
+(17) - CLLPA444
+STEP1
+DE:
+//AVISOS   DD DSN=MX.CLLP.CORRE02.LEAS(0),         
+//       DISP=OLD                                  
+
+PARA
+//AVISOS   DD DSN=MX.CLLP.CORRE02.LEAS.LEI(0),         
+//       DISP=OLD                                  
+
+
+
+(18) - CLLPH400
+
+RETIRAR DEPENDENCIA CLLPA404
+RETIRAR DEPENDENCIA CLLPA421
+RETIRAR DEPENDENCIA CLLPA422
+RETIRAR DEPENDENCIA CLLPA424
+RETIRAR DEPENDENCIA CLLPA427
+RETIRAR DEPENDENCIA CLLPA428
+RETIRAR DEPENDENCIA CLLPA429
+
+COLOCAR DEPENDENCIA CLLPA435
+COLOCAR DEPENDENCIA CLLPA441
+COLOCAR DEPENDENCIA CLLPA444
+
+========================================================
+=       NET CLLPA700  HX0908950 - CLLPHV0Z
+========================================================
+(1) - CLLPA715
+
+STEP1
+DE:
+//SYSIN    DD *                            
+ INREC FIELDS=(1,3,7,3,63,2)               
+
+
+PARA:
+//SYSIN    DD *                             
+ INREC FIELDS=(1,3,7,3,63,2)                
+ SORT FIELDS=(1,6,BI,A)                     
+ END                                        
+
+(2) - CLLPA720
+
+STEP 1 - ALTERAR
+DE:
+//SORTOUT  DD DSN=MX.CLLP.LPCLB037.CLLPA700(+1),    
+//       DISP=(,CATLG,DELETE),                      
+//       UNIT=DISCO,                                
+//       DCB=(MX.A)                                 
+
+PARA:
+//SORTOUT  DD DSN=MX.CLLP.LPCLB037.CLLPA700(+1),    
+//       DISP=(,CATLG,DELETE),                      
+//       UNIT=DISCO,                                
+//       DCB=(MX.A,LRECL=0043,RECFM=FB)
+
+
+STEP2 - INCLUIR DD ARQNSEL
+
+//ARQNSEL  DD DSN=MX.CLLP.ARQNSEL.CLLPA700(+1),    
+//       DISP=(,CATLG,DELETE),                     
+//       UNIT=DISCO,                               
+//       SPACE=(TRK,(000260,0052),RLSE),           
+//       DCB=(MX.A,LRECL=0043,RECFM=FB)            
+
+
+(3) -CLLPA740
+
+STEP6
+
+DE:
+//STEP6    EXEC PGM=CLLPG116
+
+PARA:
+//STEP6    EXEC PGM=CLLP7116     
+
+(4) -CLLPA745
+
+STEP12A
+DE:
+
+//STEP12A  EXEC PGM=CLLP7127,     
+//       PARM='LEAS'             
+
+PARA:
+//STEP12A  EXEC PGM=CLLPG127,     
+//       PARM='LEAS'              
+
+
+(5) - CLLPA750
+COLOCAR RELEASE NO DO JOB CLLPA420
+
+(6) - CLLPA753
+COLOCAR RELEASE NO DO JOB CLLPA421
+
+(7) - CLLPA755
+
+DE:
+//STEP08   EXEC PGM=CLLP7119
+
+PARA:
+//STEP08   EXEC PGM=CLLPG119
+
+

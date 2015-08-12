@@ -1,0 +1,158 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  M Z 1 A  --  N O D E
+
+10.01.20 JOB07907 ---- FRIDAY,    11 JUL 2014 ----
+10.01.20 JOB07907  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+10.01.24 JOB07907  IEF677I WARNING MESSAGE(S) FOR JOB CLLP1402 ISSUED
+10.01.24 JOB07907  ICH70001I PRODSTR  LAST ACCESS AT 10:01:24 ON FRIDAY, JULY 11
+10.01.24 JOB07907  $HASP373 CLLP1402 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+10.01.24 JOB07907  IEF403I CLLP1402 - STARTED - TIME=10.01.24
+10.01.24 JOB07907  BUFL014I   MODMESUS  Bufno=005  Amode diferente da escolha do
+10.01.24 JOB07907  BUFL014I   MESU      Bufno=005  Amode diferente da escolha do
+10.01.24 JOB07907  -                                                --TIMINGS (M
+10.01.24 JOB07907  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+10.01.24 JOB07907  -CLLP1402 STEP1    MODMESU     00    269     36    .00    .00
+10.01.24 JOB07907  IEF404I CLLP1402 - ENDED - TIME=10.01.24
+10.01.24 JOB07907  -CLLP1402 ENDED.  NAME-B610523              TOTAL TCB CPU TIM
+10.01.24 JOB07907  $HASP395 CLLP1402 ENDED
+------ JES2 JOB STATISTICS ------
+  11 JUL 2014 JOB EXECUTION DATE
+           27 CARDS READ
+          136 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+            9 SYSOUT SPOOL KBYTES
+         0.00 MINUTES EXECUTION TIME
+
+        1 //CLLP1402 JOB 'CLLP,4120,PR32','B610523',MSGCLASS=1,SCHENV=DB2,
+          //       MSGLEVEL=(1,1)
+          //*---- SUBMITTED BY CONTROL-M (FROM MEMLIB)      ODATE=140711
+          //*---- SCHEDULE MX.CTMR.PUB.PR32.CARGAS.CTM93210.G0001V00(+1)
+          //*---- SCHEDULED DUE TO RBC:
+          //*---- JCL      MX.JCLFILE(CLLP1402)
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=RDW1S  RUN NO.=00001
+        2 //OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL
+        3 //OUT2     OUTPUT DEST=ANYLOCAL,CLASS=U
+        4 //OUT3     OUTPUT DEST=ALNJE01,CLASS=P
+        5 //JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR
+        6 //         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR
+        7 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          //*
+        8 //STEP1    EXEC MODMESU
+        9 XXMODMESU  PROC P=
+       10 XXMODMESU  EXEC PGM=MESU0040,PARM='&P'
+          XX*
+          XX* PROCEDURE PARA CRIACAO DE MODULOS - PRODUCAO
+          XX*
+          IEFC653I SUBSTITUTION JCL - PGM=MESU0040,PARM=''
+       11 XXSTEPLIB  DD DSN=MX.BIBGERAL,DISP=SHR
+       12 XXMESU     DD DSN=MX.MESU.MESTAGEN(0),DISP=SHR
+       13 XXMODMESUI DD DDNAME=MODMESUI
+       14 //MODMESUS DD DSN=MX.CLLP.MESGEMAV(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000030,0006),RLSE),
+          //       DCB=(MX.A,LRECL=0080,RECFM=FB)
+          X/MODMESUS DD DDNAME=MODMESUS
+       15 //MESUPARM DD *
+          X/MESUPARM DD DDNAME=MESUPARM
+          //*
+          //* ***    GERACAO DE ARQUIVO MESTRE DE AGENCIAS
+          //*
+          //*
+       16 //
+
+ STMT NO. MESSAGE
+        8 IEFC001I PROCEDURE MODMESU WAS EXPANDED USING SYSTEM LIBRARY SUOP.PRD.
+       15 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RES
+ICH70001I PRODSTR  LAST ACCESS AT 10:01:24 ON FRIDAY, JULY 11, 2014
+IEF236I ALLOC. FOR CLLP1402 MODMESU STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I 571E ALLOCATED TO
+IEF237I C004 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I F91C ALLOCATED TO MESU
+IEF237I DMY  ALLOCATED TO MODMESUI
+IGD101I SMS ALLOCATED TO DDNAME (MODMESUS)
+        DSN (MX.CLLP.MESGEMAV.G2231V00                   )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM10D8
+IEF237I JES2 ALLOCATED TO MESUPARM
+BUFL014I   MODMESUS  Bufno=005  Amode diferente da escolha do usuario
+BUFL014I   MESU      Bufno=005  Amode diferente da escolha do usuario
+IEF142I CLLP1402 MODMESU STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IEF285I   MX.MESU.MESTAGEN.G8635V00                    KEPT
+IEF285I   VOL SER NOS= PRMJ02.
+IGD103I SMS ALLOCATED TO DDNAME SYS00001
+IGD104I SYS14192.T100124.RA000.CLLP1402.R0294560     RETAINED,  DDNAME=SYS00001
+IGD107I MX.CLLP.MESGEMAV.G2231V00                    ROLLED IN, DDNAME=MODMESUS
+IEF285I   PRODSTR.CLLP1402.JOB07907.D0000101.?         SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: MODMESU        Cond Code: 0000         Start: 11-Jul-2014 10:01:24 AM
+Step  Num: 1              PGM  Name: MESU0040     End:   11-Jul-2014 10:01:24 AM
+CPU (TCB): 00:00:00.01                            Storage below 16M:        284k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k
+Trans Act: 00:00:00.15                            Service Units:           1,043
+Tape Mnts: 0                                      Total EXCPs:               269
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+C0BA D STEPLIB             1  23,476        F91C D MESU              219  27,600
+8902 D MODMESUS           29  27,920
+
+Total DASD EXCPs:                249        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/MODMESU /START 2014192.1001
+IEF032I STEP/MODMESU /STOP  2014192.1001
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   284K  SYS:   320K  EXT:        8K  SYS:    10848K
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   DB2M1.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= DB2M13.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13M1C.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP1402       System ID: MZ1C        Submit: 11-Jul-2014 10:01:18 AM
+Job JESID: JOB07907       MVS level: SP7.1.3     Start:  11-Jul-2014 10:01:24 AM
+Job Class: A                                     End:    11-Jul-2014 10:01:24 AM
+CPU (TCB): 00:00:00.01                           Storage below 16M:         284k
+CPU (SRB): 00:00:00.00                           Storage above 16M:           8k
+Trans Act: 00:00:00.15                           Service Units:            1,043
+Tape Mnts: 0                                     Total EXCPs:                269
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: B610523
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP1402/START 2014192.1001
+IEF033I  JOB/CLLP1402/STOP  2014192.1001
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+Job Class: A                                     End:    11-Jul-2014 10:01:24 AM
+CPU (TCB): 00:00:00.01                           Storage below 16M:         284k
+CPU (SRB): 00:00:00.00                           Storage above 16M:           8k
+Trans Act: 00:00:00.15                           Service Units:            1,043
+Tape Mnts: 0                                     Total EXCPs:                269
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: B610523
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP1402/START 2014192.1001
+IEF033I  JOB/CLLP1402/STOP  2014192.1001
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC

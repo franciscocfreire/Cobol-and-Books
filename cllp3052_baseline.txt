@@ -1,0 +1,816 @@
+      *===============================================================* 
+       IDENTIFICATION DIVISION.                                         
+      *===============================================================* 
+       PROGRAM-ID. CLLP3052.                                            
+       AUTHOR. PAULOSO.                                                 
+      *===============================================================* 
+      *        COPIA DO PROGRAMA CLLP3051 SEM PARM C/ ARQDATAS        * 
+      *===============================================================* 
+      *                   C P M   S I S T E M A S                     * 
+      *---------------------------------------------------------------* 
+      *      ANALISTA     : PAULOSO                                   * 
+      *      DATA         : 13/01/2003                                * 
+      *      OBJETIVO     : REDUZIR CADASTRO LPCL                     * 
+      *===============================================================* 
+           EJECT                                                        
+      *===============================================================* 
+       ENVIRONMENT DIVISION.                                            
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       CONFIGURATION SECTION.                                           
+      *---------------------------------------------------------------* 
+                                                                        
+       SPECIAL-NAMES.                                                   
+           DECIMAL-POINT IS COMMA.                                      
+                                                                        
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       INPUT-OUTPUT SECTION.                                            
+      *---------------------------------------------------------------* 
+                                                                        
+       FILE-CONTROL.                                                    
+                                                                        
+           SELECT ARQDATA  ASSIGN TO UT-S-ARQDATA                       
+                      FILE STATUS IS WRK-FS-ARQDATA.                    
+                                                                        
+           SELECT LPCLREDU ASSIGN TO UT-S-LPCLREDU                      
+                      FILE STATUS IS WRK-FS-LPCLREDU.                   
+                                                                        
+      *===============================================================* 
+       DATA DIVISION.                                                   
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       FILE SECTION.                                                    
+      *---------------------------------------------------------------* 
+      *    INPUT :    ARQDATA                                          *
+      *---------------------------------------------------------------* 
+       FD  ARQDATA                                                      
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       01  REG-ARQDATA.                                                 
+           05  DAT-DATACOMP.                                            
+               10  DAT-DIACOMP         PIC 9(02).                       
+               10  FILLER              PIC X(01).                       
+               10  DAT-MESCOMP         PIC 9(02).                       
+               10  FILLER              PIC X(01).                       
+               10  DAT-ANOCOMP         PIC 9(04).                       
+               10  FILLER              PIC X(70).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      *    OUTPUT:    LPCLREDU                                         *
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  LPCLREDU                                                     
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+-INC I#CLLP83                                                           
+           05  REDU-EMPRESA-ORIGEM     PIC  9(05)    COMP-3.            
+                                                                        
+      *---------------------------------------------------------------* 
+       WORKING-STORAGE SECTION.                                         
+      *---------------------------------------------------------------* 
+                                                                        
+       77  FILLER                      PIC X(32)        VALUE           
+           '* INICIO DA WORKING  *'.                                    
+                                                                        
+      *---------------------------------------------------------------* 
+      *        DEFINICAO DE ACUMULADORES E AREAS AUXILIARES           * 
+      *---------------------------------------------------------------* 
+                                                                        
+       77  WRK-ABEND                   PIC S9(04) COMP  VALUE  +1111.   
+       77  WRK-FS-LPCLREDU             PIC X(02)        VALUE  SPACES.  
+       77  WRK-FS-ARQDATA              PIC X(02)        VALUE  SPACES.  
+       77  WRK-OPERACAO                PIC X(13) VALUE  SPACES.         
+       77  WRK-ABERTURA                PIC X(13) VALUE  'NA ABERTURA'.  
+       77  WRK-LEITURA                 PIC X(13) VALUE  'NA LEITURA'.   
+       77  WRK-GRAVACAO                PIC X(13) VALUE  'NA GRAVACAO'.  
+       77  WRK-FECHAMENTO              PIC X(13) VALUE  'NO FECHAMENTO'.
+       77  WRK-FIM-CADALPCL            PIC X(01) VALUE  'N'.            
+       77  WRK-FLAG                    PIC X(01) VALUE  ' '.            
+       77  WRK-IND                     PIC 9(03) VALUE  ZEROS.          
+       77  WRK-REDU-QUITACAO           PIC X(03) VALUE  SPACES.         
+       77  WRK-VREVE                   PIC 9(13)V99 VALUE ZEROS.        
+       77  MENSAGEM                    PIC  X(50) VALUE SPACES.         
+                                                                        
+       01  WRK-DATA                     PIC 9(08) VALUE ZEROS.          
+       01  FILLER      REDEFINES   WRK-DATA.                            
+           03  WRK-DIA                  PIC 9(02).                      
+           03  WRK-MES                  PIC 9(02).                      
+           03  WRK-ANO                  PIC 9(04).                      
+                                                                        
+       01  WRK-DATA-INV                 PIC 9(08) VALUE ZEROS.          
+       01  FILLER      REDEFINES   WRK-DATA-INV.                        
+           03  WRK-ANO-INV              PIC 9(04).                      
+           03  WRK-MES-INV              PIC 9(02).                      
+           03  WRK-DIA-INV              PIC 9(02).                      
+                                                                        
+       01  WRK-DATA-BAS                 PIC 9(08) VALUE ZEROS.          
+       01  FILLER      REDEFINES   WRK-DATA-BAS.                        
+           03  WRK-ANO-BAS              PIC 9(04).                      
+           03  WRK-MES-BAS              PIC 9(02).                      
+           03  WRK-DIA-BAS              PIC 9(02).                      
+                                                                        
+PW0001 01  WRK-CAD-NUMCL                PIC 9(15) VALUE ZEROS.          
+PW0001 01  FILLER      REDEFINES   WRK-CAD-NUMCL.                       
+PW0001     03  WRK-BYTE1                PIC 9(02).                      
+PW0001     03  WRK-RESTO                PIC 9(13).                      
+                                                                        
+       01  LISTA-CAMPOS.                                                
+           05  DT-ENVIADA             PIC  9(08) COMP-3.                
+           05  OPCAO                  PIC  X(01).                       
+           05  DT-JULIANA             PIC  9(07) COMP-3.                
+           05  DT-EDITADA             PIC  X(10).                       
+           05  DT-GREGORI             PIC  9(08).                       
+           05  DIA-SEMANA             PIC  X(13).                       
+           05  MES-EXTENSO            PIC  X(09).                       
+           05  DT-UT-ANTER.                                             
+               10  DIA-UT-ANTER       PIC  9(02).                       
+               10  MES-UT-ANTER       PIC  9(02).                       
+               10  ANO-UT-ANTER       PIC  9(04).                       
+           05  DIA-UT-POSTE           PIC  9(08).                       
+                                                                        
+       01  WRK-TIPO-R                      PIC 9(01) VALUE ZEROS.       
+       01  WRK-TIPO-X REDEFINES WRK-TIPO-R PIC X(01).                   
+                                                                        
+      *---------------------------------------------------------------* 
+      *          TABELA  -  TIPO DE PAGAMENTO                         * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  TABELA-TIPO-PAGAMENTO.                                       
+           03  TAB-TP-PGTO.                                             
+               05  FILLER         PIC X(06) VALUE 'A  001'.             
+               05  FILLER         PIC X(06) VALUE 'AA 002'.             
+               05  FILLER         PIC X(06) VALUE 'AB 002'.             
+               05  FILLER         PIC X(06) VALUE 'AC 002'.             
+               05  FILLER         PIC X(06) VALUE 'A1 003'.             
+               05  FILLER         PIC X(06) VALUE 'A2 004'.             
+               05  FILLER         PIC X(06) VALUE 'A3 001'.             
+               05  FILLER         PIC X(06) VALUE 'A4 002'.             
+               05  FILLER         PIC X(06) VALUE 'A5 002'.             
+               05  FILLER         PIC X(06) VALUE 'A6 002'.             
+               05  FILLER         PIC X(06) VALUE 'A7 003'.             
+               05  FILLER         PIC X(06) VALUE 'A8 004'.             
+               05  FILLER         PIC X(06) VALUE 'A9 001'.             
+               05  FILLER         PIC X(06) VALUE 'B  001'.             
+               05  FILLER         PIC X(06) VALUE 'BA 002'.             
+               05  FILLER         PIC X(06) VALUE 'BB 002'.             
+               05  FILLER         PIC X(06) VALUE 'BC 002'.             
+               05  FILLER         PIC X(06) VALUE 'B1 003'.             
+               05  FILLER         PIC X(06) VALUE 'B2 004'.             
+               05  FILLER         PIC X(06) VALUE 'B3 001'.             
+               05  FILLER         PIC X(06) VALUE 'B4 002'.             
+               05  FILLER         PIC X(06) VALUE 'B5 002'.             
+               05  FILLER         PIC X(06) VALUE 'B6 002'.             
+               05  FILLER         PIC X(06) VALUE 'B7 003'.             
+               05  FILLER         PIC X(06) VALUE 'B8 004'.             
+               05  FILLER         PIC X(06) VALUE 'B9 001'.             
+               05  FILLER         PIC X(06) VALUE 'C  005'.             
+               05  FILLER         PIC X(06) VALUE 'CA 002'.             
+               05  FILLER         PIC X(06) VALUE 'CB 002'.             
+               05  FILLER         PIC X(06) VALUE 'CC 002'.             
+               05  FILLER         PIC X(06) VALUE 'C1 003'.             
+               05  FILLER         PIC X(06) VALUE 'C2 004'.             
+               05  FILLER         PIC X(06) VALUE 'C3 001'.             
+               05  FILLER         PIC X(06) VALUE 'C4 002'.             
+               05  FILLER         PIC X(06) VALUE 'C5 002'.             
+               05  FILLER         PIC X(06) VALUE 'C6 002'.             
+               05  FILLER         PIC X(06) VALUE 'C7 003'.             
+               05  FILLER         PIC X(06) VALUE 'C8 004'.             
+               05  FILLER         PIC X(06) VALUE 'C9 001'.             
+               05  FILLER         PIC X(06) VALUE 'D  001'.             
+               05  FILLER         PIC X(06) VALUE 'DA 002'.             
+               05  FILLER         PIC X(06) VALUE 'DB 002'.             
+               05  FILLER         PIC X(06) VALUE 'DC 002'.             
+               05  FILLER         PIC X(06) VALUE 'D1 003'.             
+               05  FILLER         PIC X(06) VALUE 'D2 004'.             
+               05  FILLER         PIC X(06) VALUE 'D3 001'.             
+               05  FILLER         PIC X(06) VALUE 'D4 002'.             
+               05  FILLER         PIC X(06) VALUE 'D5 002'.             
+               05  FILLER         PIC X(06) VALUE 'D6 002'.             
+               05  FILLER         PIC X(06) VALUE 'D7 003'.             
+               05  FILLER         PIC X(06) VALUE 'D8 004'.             
+               05  FILLER         PIC X(06) VALUE 'D9 001'.             
+               05  FILLER         PIC X(06) VALUE 'E  001'.             
+               05  FILLER         PIC X(06) VALUE 'EA 002'.             
+               05  FILLER         PIC X(06) VALUE 'EB 002'.             
+               05  FILLER         PIC X(06) VALUE 'EC 002'.             
+               05  FILLER         PIC X(06) VALUE 'E1 003'.             
+               05  FILLER         PIC X(06) VALUE 'E2 004'.             
+               05  FILLER         PIC X(06) VALUE 'E3 001'.             
+               05  FILLER         PIC X(06) VALUE 'E4 002'.             
+               05  FILLER         PIC X(06) VALUE 'E5 002'.             
+               05  FILLER         PIC X(06) VALUE 'E6 002'.             
+               05  FILLER         PIC X(06) VALUE 'E7 003'.             
+               05  FILLER         PIC X(06) VALUE 'E8 004'.             
+               05  FILLER         PIC X(06) VALUE 'E9 001'.             
+               05  FILLER         PIC X(06) VALUE 'F  001'.             
+               05  FILLER         PIC X(06) VALUE 'FA 002'.             
+               05  FILLER         PIC X(06) VALUE 'FB 002'.             
+               05  FILLER         PIC X(06) VALUE 'FC 002'.             
+               05  FILLER         PIC X(06) VALUE 'F1 003'.             
+               05  FILLER         PIC X(06) VALUE 'F2 004'.             
+               05  FILLER         PIC X(06) VALUE 'F3 001'.             
+               05  FILLER         PIC X(06) VALUE 'F4 002'.             
+               05  FILLER         PIC X(06) VALUE 'F5 002'.             
+               05  FILLER         PIC X(06) VALUE 'F6 002'.             
+               05  FILLER         PIC X(06) VALUE 'F7 003'.             
+               05  FILLER         PIC X(06) VALUE 'F8 004'.             
+               05  FILLER         PIC X(06) VALUE 'F9 001'.             
+               05  FILLER         PIC X(06) VALUE 'G  005'.             
+               05  FILLER         PIC X(06) VALUE 'GA 002'.             
+               05  FILLER         PIC X(06) VALUE 'GB 002'.             
+               05  FILLER         PIC X(06) VALUE 'GC 002'.             
+               05  FILLER         PIC X(06) VALUE 'G1 003'.             
+               05  FILLER         PIC X(06) VALUE 'G2 004'.             
+               05  FILLER         PIC X(06) VALUE 'G3 001'.             
+               05  FILLER         PIC X(06) VALUE 'G4 002'.             
+               05  FILLER         PIC X(06) VALUE 'G5 002'.             
+               05  FILLER         PIC X(06) VALUE 'G6 002'.             
+               05  FILLER         PIC X(06) VALUE 'G7 003'.             
+               05  FILLER         PIC X(06) VALUE 'G8 004'.             
+               05  FILLER         PIC X(06) VALUE 'G9 001'.             
+               05  FILLER         PIC X(06) VALUE 'H  001'.             
+               05  FILLER         PIC X(06) VALUE 'HA 002'.             
+               05  FILLER         PIC X(06) VALUE 'HB 002'.             
+               05  FILLER         PIC X(06) VALUE 'HC 002'.             
+               05  FILLER         PIC X(06) VALUE 'H1 003'.             
+               05  FILLER         PIC X(06) VALUE 'H2 004'.             
+               05  FILLER         PIC X(06) VALUE 'H3 001'.             
+               05  FILLER         PIC X(06) VALUE 'H4 002'.             
+               05  FILLER         PIC X(06) VALUE 'H5 002'.             
+               05  FILLER         PIC X(06) VALUE 'H6 002'.             
+               05  FILLER         PIC X(06) VALUE 'H7 003'.             
+               05  FILLER         PIC X(06) VALUE 'H8 004'.             
+               05  FILLER         PIC X(06) VALUE 'H9 001'.             
+               05  FILLER         PIC X(06) VALUE 'I  001'.             
+               05  FILLER         PIC X(06) VALUE 'IA 002'.             
+               05  FILLER         PIC X(06) VALUE 'IB 002'.             
+               05  FILLER         PIC X(06) VALUE 'IC 002'.             
+               05  FILLER         PIC X(06) VALUE 'I1 003'.             
+               05  FILLER         PIC X(06) VALUE 'I2 004'.             
+               05  FILLER         PIC X(06) VALUE 'I3 001'.             
+               05  FILLER         PIC X(06) VALUE 'I4 002'.             
+               05  FILLER         PIC X(06) VALUE 'I5 002'.             
+               05  FILLER         PIC X(06) VALUE 'I6 002'.             
+               05  FILLER         PIC X(06) VALUE 'I7 003'.             
+               05  FILLER         PIC X(06) VALUE 'I8 004'.             
+               05  FILLER         PIC X(06) VALUE 'I9 001'.             
+               05  FILLER         PIC X(06) VALUE 'J  001'.             
+               05  FILLER         PIC X(06) VALUE 'JA 002'.             
+               05  FILLER         PIC X(06) VALUE 'JB 002'.             
+               05  FILLER         PIC X(06) VALUE 'JC 002'.             
+               05  FILLER         PIC X(06) VALUE 'J1 003'.             
+               05  FILLER         PIC X(06) VALUE 'J2 004'.             
+               05  FILLER         PIC X(06) VALUE 'J3 001'.             
+               05  FILLER         PIC X(06) VALUE 'J4 002'.             
+               05  FILLER         PIC X(06) VALUE 'J5 002'.             
+               05  FILLER         PIC X(06) VALUE 'J6 002'.             
+               05  FILLER         PIC X(06) VALUE 'J7 003'.             
+               05  FILLER         PIC X(06) VALUE 'J8 004'.             
+               05  FILLER         PIC X(06) VALUE 'J9 001'.             
+               05  FILLER         PIC X(06) VALUE 'T  001'.             
+               05  FILLER         PIC X(06) VALUE 'U  001'.             
+               05  FILLER         PIC X(06) VALUE 'V  001'.             
+               05  FILLER         PIC X(06) VALUE 'W  001'.             
+               05  FILLER         PIC X(06) VALUE 'X  001'.             
+               05  FILLER         PIC X(06) VALUE 'Y  001'.             
+               05  FILLER         PIC X(06) VALUE '0  002'.             
+               05  FILLER         PIC X(06) VALUE '2  001'.             
+               05  FILLER         PIC X(06) VALUE '2A 002'.             
+               05  FILLER         PIC X(06) VALUE '2B 002'.             
+               05  FILLER         PIC X(06) VALUE '2C 002'.             
+               05  FILLER         PIC X(06) VALUE '21 003'.             
+               05  FILLER         PIC X(06) VALUE '22 004'.             
+               05  FILLER         PIC X(06) VALUE '23 001'.             
+               05  FILLER         PIC X(06) VALUE '24 002'.             
+               05  FILLER         PIC X(06) VALUE '25 002'.             
+               05  FILLER         PIC X(06) VALUE '26 002'.             
+               05  FILLER         PIC X(06) VALUE '27 003'.             
+               05  FILLER         PIC X(06) VALUE '28 004'.             
+               05  FILLER         PIC X(06) VALUE '29 001'.             
+               05  FILLER         PIC X(06) VALUE '3  001'.             
+               05  FILLER         PIC X(06) VALUE '3A 002'.             
+               05  FILLER         PIC X(06) VALUE '3B 002'.             
+               05  FILLER         PIC X(06) VALUE '3C 002'.             
+               05  FILLER         PIC X(06) VALUE '3X 001'.             
+               05  FILLER         PIC X(06) VALUE '31 003'.             
+               05  FILLER         PIC X(06) VALUE '32 004'.             
+               05  FILLER         PIC X(06) VALUE '33 001'.             
+               05  FILLER         PIC X(06) VALUE '34 002'.             
+               05  FILLER         PIC X(06) VALUE '35 002'.             
+               05  FILLER         PIC X(06) VALUE '36 002'.             
+               05  FILLER         PIC X(06) VALUE '37 003'.             
+               05  FILLER         PIC X(06) VALUE '38 004'.             
+               05  FILLER         PIC X(06) VALUE '39 001'.             
+               05  FILLER         PIC X(06) VALUE '4  001'.             
+               05  FILLER         PIC X(06) VALUE '4A 002'.             
+               05  FILLER         PIC X(06) VALUE '4B 002'.             
+               05  FILLER         PIC X(06) VALUE '4C 002'.             
+               05  FILLER         PIC X(06) VALUE '41 003'.             
+               05  FILLER         PIC X(06) VALUE '42 004'.             
+               05  FILLER         PIC X(06) VALUE '43 001'.             
+               05  FILLER         PIC X(06) VALUE '44 002'.             
+               05  FILLER         PIC X(06) VALUE '45 002'.             
+               05  FILLER         PIC X(06) VALUE '46 002'.             
+               05  FILLER         PIC X(06) VALUE '47 003'.             
+               05  FILLER         PIC X(06) VALUE '48 004'.             
+               05  FILLER         PIC X(06) VALUE '49 001'.             
+               05  FILLER         PIC X(06) VALUE '5  001'.             
+               05  FILLER         PIC X(06) VALUE '5A 002'.             
+               05  FILLER         PIC X(06) VALUE '5B 002'.             
+               05  FILLER         PIC X(06) VALUE '5C 002'.             
+               05  FILLER         PIC X(06) VALUE '51 003'.             
+               05  FILLER         PIC X(06) VALUE '52 004'.             
+               05  FILLER         PIC X(06) VALUE '53 001'.             
+               05  FILLER         PIC X(06) VALUE '54 002'.             
+               05  FILLER         PIC X(06) VALUE '55 002'.             
+               05  FILLER         PIC X(06) VALUE '56 002'.             
+               05  FILLER         PIC X(06) VALUE '57 003'.             
+               05  FILLER         PIC X(06) VALUE '58 004'.             
+               05  FILLER         PIC X(06) VALUE '59 001'.             
+               05  FILLER         PIC X(06) VALUE '6  005'.             
+               05  FILLER         PIC X(06) VALUE '7  005'.             
+               05  FILLER         PIC X(06) VALUE '8  001'.             
+               05  FILLER         PIC X(06) VALUE '9  005'.             
+               05  FILLER         PIC X(06) VALUE '9X 005'.             
+           03  FILLER REDEFINES TAB-TP-PGTO                             
+                    OCCURS  195 TIMES.                                  
+               05  TAB-DE         PIC X(03).                            
+               05  TAB-PARA       PIC X(03).                            
+                                                                        
+      *--------------------------------------------------------------*  
+      *     AREA PARA O ARQUIVO COMPRIMIDO - CADALPCL                *  
+      *--------------------------------------------------------------*  
+                                                                        
+      *--        DDNAME DO ARQUIVO                                      
+       77  WRK-NOME-ARQUIVO            PIC X(08)    VALUE  'CADALPCL'.  
+                                                                        
+      *--        AREA PARA RECEBER O REGISTRO DO CADALPCL        --*    
+                                                                        
+-INC I#CLLP11                                                           
+                                                                        
+      *----------------------------------------------------------------*
+       01  FILLER                      PIC X(32)        VALUE           
+           '*  FIM DA WORKING CLLP3052 *'.                              
+                                                                        
+          EJECT                                                         
+      *===============================================================* 
+       PROCEDURE DIVISION.                                              
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       0000-INICIAR SECTION.                                            
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 0100-INICIALIZAR.                                    
+                                                                        
+           PERFORM 3000-PROCESSAR UNTIL                                 
+                         WRK-FIM-CADALPCL EQUAL 'S'.                    
+                                                                        
+           PERFORM 8000-FINALIZAR.                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       0000-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       0100-INICIALIZAR     SECTION.                                    
+      *---------------------------------------------------------------* 
+                                                                        
+           OPEN   INPUT   ARQDATA                                       
+                  OUTPUT  LPCLREDU.                                     
+                                                                        
+           MOVE    WRK-ABERTURA            TO   WRK-OPERACAO            
+           PERFORM 1000-TESTAR-FILE-STATUS.                             
+                                                                        
+           PERFORM 2200-LER-ARQDATA.                                    
+           IF WRK-FS-ARQDATA     EQUAL     '10'                         
+              DISPLAY '********** CLLP3052 **********'                  
+              DISPLAY '*                            *'                  
+              DISPLAY '*   ARQUIVO  ARQDATA  VAZIO  *'                  
+              DISPLAY '*                            *'                  
+              DISPLAY '*     PROGRAMA CANCELADO     *'                  
+              DISPLAY '*                            *'                  
+              DISPLAY '********** CLLP3052 **********'                  
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+           PERFORM 2400-OBTER-DIA-UTIL.                                 
+                                                                        
+           PERFORM 2100-LER-CADALPCL.                                   
+           IF RETURN-CODE        EQUAL       4                          
+              DISPLAY '********** CLLP3052 **********'                  
+              DISPLAY '*                            *'                  
+              DISPLAY '*   ARQUIVO CADALPCL  VAZIO  *'                  
+              DISPLAY '*                            *'                  
+              DISPLAY '*     PROGRAMA CANCELADO     *'                  
+              DISPLAY '*                            *'                  
+              DISPLAY '********** CLLP3052 **********'                  
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       0100-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1000-TESTAR-FILE-STATUS SECTION.                                 
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 1200-TESTAR-FS-ARQDATA.                              
+                                                                        
+           PERFORM 1300-TESTAR-FS-LPCLREDU.                             
+                                                                        
+      *---------------------------------------------------------------* 
+       1000-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1200-TESTAR-FS-ARQDATA    SECTION.                               
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-ARQDATA     NOT EQUAL '00'                         
+              DISPLAY '**************CLLP3052***************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              ARQDATA              *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-ARQDATA        
+                                                 '         *'           
+              DISPLAY '**************CLLP3052***************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       1200-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1300-TESTAR-FS-LPCLREDU   SECTION.                               
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-LPCLREDU    NOT EQUAL '00'                         
+              DISPLAY '**************CLLP3052***************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              LPCLREDU             *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-LPCLREDU       
+                                                 '         *'           
+              DISPLAY '**************CLLP3052***************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       1300-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       2100-LER-CADALPCL     SECTION.                                   
+      *---------------------------------------------------------------* 
+                                                                        
+           CALL  'POOL0300'     USING  WRK-NOME-ARQUIVO                 
+                                       WKCADCL.                         
+           IF RETURN-CODE   EQUAL    4                                  
+              MOVE 'S' TO WRK-FIM-CADALPCL                              
+              GO TO 2100-99-FIM.                                        
+                                                                        
+           IF (( CAD-TIPO  EQUAL  3 OR 5 ) AND                          
+               ( CAD-IDENT EQUAL   'CL'  ) AND                          
+               ( CAD-PRECL EQUAL  SPACES )) OR                          
+               ( CAD-EMP   EQUAL  6500 OR 6699 )                        
+                 GO                 TO     2100-LER-CADALPCL.           
+                                                                        
+           MOVE  CAD-DATA-TRANSLP      TO WRK-DATA                      
+           MOVE  WRK-DIA                TO WRK-DIA-INV                  
+           MOVE  WRK-MES                TO WRK-MES-INV                  
+           MOVE  WRK-ANO                TO WRK-ANO-INV.                 
+                                                                        
+           IF  CAD-TIPO       EQUAL  1      AND                         
+               CAD-EMP        EQUAL  5240   AND                         
+               WRK-DATA-INV   NOT LESS 20010801                         
+               COMPUTE  WRK-VREVE   = (CAD-VREVE  + CAD-VREVI)          
+           ELSE                                                         
+              MOVE CAD-VREVE   TO  REDU-VREVE.                          
+                                                                        
+           IF  ( CAD-TIPO          EQUAL     1   AND                    
+                 CAD-VRCON         LESS   REDU-VREVE )                  
+                 GO                 TO     2100-LER-CADALPCL.           
+                                                                        
+           MOVE  CAD-VCTO       TO WRK-DATA                             
+           MOVE  WRK-DIA        TO WRK-DIA-INV                          
+           MOVE  WRK-MES        TO WRK-MES-INV                          
+           MOVE  WRK-ANO        TO WRK-ANO-INV.                         
+                                                                        
+           IF (CAD-EMP           EQUAL      5240   AND                  
+               WRK-DATA-INV      GREATER    WRK-DATA-BAS )              
+               GO               TO    2100-LER-CADALPCL.                
+                                                                        
+      *---------------------------------------------------------------* 
+       2100-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+      *---------------------------------------------------------------* 
+       2200-LER-ARQDATA      SECTION.                                   
+      *---------------------------------------------------------------* 
+                                                                        
+           READ    ARQDATA.                                             
+                                                                        
+           IF WRK-FS-ARQDATA  EQUAL '10'                                
+              GO TO 2200-99-FIM.                                        
+                                                                        
+           MOVE WRK-LEITURA              TO  WRK-OPERACAO.              
+           PERFORM 1200-TESTAR-FS-ARQDATA.                              
+                                                                        
+      *---------------------------------------------------------------* 
+       2200-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+      *---------------------------------------------------------------* 
+       2400-OBTER-DIA-UTIL     SECTION.                                 
+      *---------------------------------------------------------------* 
+                                                                        
+           IF  DAT-MESCOMP             EQUAL  12                        
+               COMPUTE WRK-ANO-BAS     =  DAT-ANOCOMP + 1               
+               MOVE    01              TO WRK-MES-BAS                   
+                                          WRK-DIA-BAS                   
+           ELSE                                                         
+               COMPUTE WRK-MES-BAS     =  DAT-MESCOMP + 1               
+               MOVE    DAT-ANOCOMP     TO WRK-ANO-BAS                   
+               MOVE    01              TO WRK-DIA-BAS.                  
+                                                                        
+           MOVE WRK-DATA-BAS           TO DT-ENVIADA.                   
+           MOVE SPACES                 TO OPCAO.                        
+                                                                        
+           CALL 'POOL1205'     USING   LISTA-CAMPOS                     
+                                       MENSAGEM                         
+                                                                        
+           IF  RETURN-CODE             EQUAL ZEROS                      
+               MOVE  DIA-UT-ANTER      TO  DAT-DIACOMP                  
+           ELSE                                                         
+               DISPLAY '************** CLLP3052 **************'         
+               DISPLAY '*                                    *'         
+               DISPLAY '*     ERRO NO ACESSO A POOL1205      *'         
+               DISPLAY '*           RETURN-CODE = ' RETURN-CODE         
+               DISPLAY '*         PROGRAMA CANCELADO         *'         
+               DISPLAY '*                                    *'         
+               DISPLAY '*************** CLLP3052 *************'         
+               PERFORM 8000-FINALIZAR.                                  
+                                                                        
+           MOVE DAT-ANOCOMP            TO WRK-ANO-BAS.                  
+           MOVE DAT-MESCOMP            TO WRK-MES-BAS.                  
+           MOVE DAT-DIACOMP            TO WRK-DIA-BAS.                  
+                                                                        
+      *---------------------------------------------------------------* 
+       2400-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+      *---------------------------------------------------------------* 
+       3000-PROCESSAR          SECTION.                                 
+      *---------------------------------------------------------------* 
+                                                                        
+PW0001     MOVE  CAD-NUMCL       TO         WRK-CAD-NUMCL.              
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      89     AND                  
+PW0001         CAD-MOVTO         EQUAL      07062002)                   
+PW0001         MOVE  7830        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      88     AND                  
+PW0001         CAD-MOVTO         EQUAL      14092001)                   
+PW0001         MOVE  7830        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      78     AND                  
+PW0001         CAD-MOVTO         EQUAL      16052003)                   
+PW0001         MOVE  7830        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      77     AND                  
+PW0001         CAD-MOVTO         EQUAL      16052003)                   
+PW0001         MOVE  7352        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      87     AND                  
+PW0001         CAD-MOVTO         EQUAL      20092003 AND                
+PW0001         CAD-PRECL         EQUAL      'B')                        
+PW0001         MOVE  7830        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      87     AND                  
+PW0001         CAD-MOVTO         EQUAL      20092003 AND                
+PW0001         CAD-PRECL         EQUAL      'C')                        
+PW0001         MOVE  7883        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      87     AND                  
+PW0001         CAD-MOVTO         EQUAL      20092003 AND                
+PW0001         CAD-PRECL         EQUAL      'D')                        
+PW0001**********OVE  7881        TO  REDU-EMPRESA-ORIGEM.               
+FMP            MOVE  7356        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      68     AND                  
+PW0001         CAD-MOVTO         EQUAL      28052004)                   
+PW0001         MOVE  7290        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      57     AND                  
+PW0001         CAD-MOVTO         EQUAL      22102004)                   
+PW0001         MOVE  9242        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      47     AND                  
+PW0001         CAD-MOVTO         EQUAL      30062004)                   
+PW0001         MOVE  8263        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      47     AND                  
+PW0001         CAD-MOVTO         EQUAL      29102004)                   
+PW0001         MOVE  7290        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      37)                         
+PW0001         MOVE  8100        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      48)                         
+PW0001         MOVE  5201        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+PW0001     IF (CAD-EMP           EQUAL      7000   AND                  
+PW0001         WRK-BYTE1         EQUAL      97)                         
+PW0001         MOVE  7277        TO  REDU-EMPRESA-ORIGEM.               
+                                                                        
+           MOVE CAD-AGEN         TO  REDU-AGENCIA                       
+                                                                        
+           IF  CAD-CC     EQUAL  ZEROS                                  
+               MOVE  1            TO  REDU-CONTA                        
+           ELSE                                                         
+               MOVE CAD-CC       TO  REDU-CONTA.                        
+                                                                        
+           MOVE CAD-CART         TO  REDU-CARTEIRA                      
+           MOVE CAD-CART2        TO  REDU-CART2                         
+           MOVE CAD-EMP          TO  REDU-EMPRESA                       
+           MOVE CAD-VCTO         TO  REDU-VCTO                          
+           MOVE CAD-DTBCL        TO  REDU-DTBCL                         
+           MOVE CAD-VRCON        TO  REDU-VRCON                         
+           MOVE CAD-VRINI        TO  REDU-VRINI                         
+           MOVE CAD-COBRM        TO  REDU-COBRM                         
+           MOVE CAD-ADVOG        TO  REDU-ADVOG                         
+           MOVE CAD-CDULT        TO  REDU-CDULT                         
+           MOVE CAD-PRECL        TO  REDU-MARCA                         
+           MOVE CAD-IDCON        TO  REDU-IDCON                         
+           MOVE CAD-TIPBX        TO  REDU-TIPBX                         
+           MOVE CAD-TIPO         TO  REDU-TIPO.                         
+           MOVE CAD-NCGC         TO  REDU-NCGC.                         
+           MOVE CAD-FIL          TO  REDU-FILIAL.                       
+           MOVE CAD-CTR          TO  REDU-CTRL.                         
+           MOVE CAD-DTIOP        TO  REDU-DT-INICIO                     
+           MOVE CAD-DTBLP        TO  REDU-DTBLP.                        
+           MOVE CAD-VRBXA        TO  REDU-VRCTBXA.                      
+           MOVE CAD-DEBCC        TO  REDU-DEBCC.                        
+ ********  MOVE CAD-EMISSAO      TO  REDU-EMISSAO.                      
+           MOVE CAD-NATUREZA     TO  REDU-NAT-OPER.                     
+           MOVE CAD-DATA-TRANSLP TO  REDU-DTTRANSLP.                    
+                                                                        
+           IF  CAD-CONTR  EQUAL  ZEROS                                  
+               MOVE  CAD-NUMCL   TO  REDU-CONTRATO                      
+           ELSE                                                         
+             MOVE    CAD-CONTR   TO  REDU-CONTRATO.                     
+                                                                        
+           IF  CAD-TIPO   EQUAL  3 OR 5                                 
+               PERFORM 3100-BUSCAR-QUITACAO                             
+               PERFORM 3110-PESQUISAR-TABELA                            
+                   VARYING WRK-IND FROM 1 BY 1                          
+                   UNTIL   WRK-REDU-QUITACAO EQUAL TAB-DE(WRK-IND) OR   
+                           WRK-IND         GREATER 195                  
+               IF  WRK-IND  GREATER  195                                
+                   MOVE     '002'             TO REDU-QUITACAO          
+               ELSE                                                     
+                   MOVE     TAB-PARA(WRK-IND) TO REDU-QUITACAO          
+           ELSE                                                         
+               MOVE SPACES    TO  REDU-QUITACAO.                        
+                                                                        
+           WRITE REG-LPCL-REDU.                                         
+           MOVE WRK-GRAVACAO TO WRK-OPERACAO.                           
+           PERFORM 1300-TESTAR-FS-LPCLREDU.                             
+                                                                        
+           PERFORM 2100-LER-CADALPCL.                                   
+                                                                        
+      *---------------------------------------------------------------* 
+       3000-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       3100-BUSCAR-QUITACAO SECTION.                                    
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE  SPACES         TO  WRK-REDU-QUITACAO.                  
+           MOVE  CAD-COMPL-TPO-BAIXA                                    
+                                TO  WRK-REDU-QUITACAO(2:1).             
+                                                                        
+           MOVE  CAD-TIPO      TO  WRK-TIPO-R.                          
+           MOVE  WRK-TIPO-X     TO  WRK-REDU-QUITACAO(1:1).             
+                                                                        
+           IF   CAD-TIPBX    =    '0'                                   
+                MOVE    '0'             TO  WRK-REDU-QUITACAO(1:1).     
+                                                                        
+           IF  (CAD-TIPO       =          3 )  AND                      
+               (CAD-TIPBX      =         '*' )                          
+                MOVE    '2'             TO  WRK-REDU-QUITACAO(1:1).     
+                                                                        
+           IF (CAD-TIPO        =            5 )  AND                    
+              (CAD-TIPBX       =           '*' )                        
+                MOVE    '4'             TO  WRK-REDU-QUITACAO(1:1).     
+                                                                        
+           IF (CAD-TIPBX       =           '@' )   AND                  
+             ((CAD-ANTEX       =            0  )   OR                   
+              (CAD-TPEXPUR      NOT EQUAL 'A'    ))                     
+                MOVE    '6'            TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+           IF (CAD-TIPBX       =         '@' )     AND                  
+             ((CAD-ANTEX       >          0   )     OR                  
+              (CAD-TPEXPUR     =         'A'  ))                        
+               MOVE    '7'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+           IF (CAD-TIPBX       =         '@'  )  AND                    
+              (CAD-DTREX       >          0   )                         
+               MOVE    '8'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           '9'                          
+               MOVE    '9'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'A'                          
+               MOVE    'A'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'B'                          
+               MOVE    'B'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'C'                          
+               MOVE    'C'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'D'                          
+               MOVE    'D'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'E'                          
+               MOVE    'E'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'F'                          
+               MOVE    'F'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'G'                          
+               MOVE    'G'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'H'                          
+               MOVE    'H'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'I'                          
+               MOVE    'I'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'J'                          
+               MOVE    'J'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'R'                          
+               MOVE    'R'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'T'                          
+               MOVE    'T'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'U'                          
+               MOVE    'U'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'V'                          
+               MOVE    'V'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'W'                          
+               MOVE    'W'             TO    WRK-REDU-QUITACAO(1:1).    
+                                                                        
+            IF CAD-TIPBX       =           'X'                          
+               MOVE    'X'             TO     WRK-REDU-QUITACAO(1:1).   
+                                                                        
+            IF CAD-TIPBX       =           'Y'                          
+               MOVE    'Y'             TO     WRK-REDU-QUITACAO(1:1).   
+                                                                        
+      *---------------------------------------------------------------* 
+       3100-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       3110-PESQUISAR-TABELA SECTION.                                   
+      *---------------------------------------------------------------* 
+      *  ROTINA PARA PESQUISAR TABELA DE FORMA DE PAGAMENTO.            
+      *---------------------------------------------------------------* 
+       3110-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       8000-FINALIZAR SECTION.                                          
+      *---------------------------------------------------------------* 
+                                                                        
+           CLOSE        ARQDATA                                         
+                        LPCLREDU.                                       
+                                                                        
+           MOVE WRK-FECHAMENTO TO WRK-OPERACAO.                         
+           PERFORM 1000-TESTAR-FILE-STATUS.                             
+                                                                        
+           STOP RUN.                                                    
+                                                                        
+      *---------------------------------------------------------------* 
+       8000-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 

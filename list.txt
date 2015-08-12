@@ -1,0 +1,110 @@
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0011                                  
+                              CLLP0300                                  
+                              CLLP0300                                  
+                              CLLP0305                                  
+                              CLLP0305                                  
+                              CLLP0305                                  
+                              CLLP0305                                  
+                              CLLP0305                                  
+                              CLLP0310                                  
+                              CLLP0310                                  
+                              CLLP0310                                  
+                              CLLP0310                                  
+                              CLLP0310                                  
+                              CLLP0310                                  
+                              CLLP0310                                  
+                              CLLP0315                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0512                                  
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP0514,                                 
+                              CLLP1080                                  
+                              CLLP1085                                  
+                              CLLP2720                                  
+                              CLLP4096                                  
+                              CLLP4201      * PROGRAMA CLONE CLLP4200   
+                              CLLP4219                                  
+                              CLLP4250                                  
+                              CLLP5350                                  
+                              CLLP5350                                  
+                              CLLP5360                                  
+                              CLLP5360                                  
+                              CLLP5370                                  
+                              CLLP5370                                  
+                              CLLP5545                                  
+                              CLLP5545                                  
+                              CLLP5545                                  
+                              CLLP5545                                  
+                              CLLP5545                                  
+                              CLLP5546                                  
+                              CLLP5546                                  
+                              CLLP5546                                  
+                              CLLP5546                                  
+                              CLLP5588                                  
+                              CLLP5588                                  
+                              CLLP5588                                  
+                              CLLP5588                                  
+                              CLLP5741 * PROGRAMA C L O N E             
+                              CLLP5741 * PROGRAMA C L O N E             
+                              CLLP5741 * PROGRAMA C L O N E             
+                              CLLP5741 * PROGRAMA C L O N E             
+                              CLLP5741 * PROGRAMA C L O N E             
+                              CLLP5841  * PROGRAMA C L O N E            
+                              CLLP5841  * PROGRAMA C L O N E            
+                              CLLP5841  * PROGRAMA C L O N E            
+                              CLLP5841 * PROGRAMA C L O N E             
+                              CLLP5841 * PROGRAMA C L O N E             
+                              CLLP6395                                  
+                              CLLP6400,                                 
+                              CLLP6401,                                 
+                              CLLP6410                                  
+                              CLLP6415                                  
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6420,                                 
+                              CLLP6695                                  
+                              CLLP6695                                  
+                              CLLP6695                                  
+                              CLLP7150                                  
+                              CLLP7402                                  
+                              CLLP7402                                  
+                              CLLP7535                                  
+                              CLLP7580                                  
+                              CLLP7580                                  
+                              CLLP7580                                  
+                              CLLP9956,                                 
+                              CLLP9956,                                 
+                              CLLP9956,                                 

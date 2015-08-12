@@ -1,0 +1,331 @@
+1       Merge+Reconcile REPORT: Current Reconciliation File in Storage  
+                                                                        
+ View All Base eXcluded------------                                     
+  B:WALKTR#1                                                            
+                                                                        
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 5    Lines NOT 
+  < 0005        PROGRAM-ID. PEAT1064.                                   
+  <>B___        PROGRAM-ID. POUP1064.                                   
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 6    Lines NOT 
+  < 0012       *    PROGRAMA     : PEAT1064                             
+  <>B___       *    PROGRAMA     : POUP1064                             
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 12   Lines NOT 
+  < 0025       *           | MVTODIAE | INPUT   | I#POUPN0 |  102  |    
+  <>B___       *           | MVTODIAE | INPUT   | I#POUPN0 |  140  |    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0027       *           | MVTODIAS | OUTPUT  | I#POUPN0 |  102  |    
+  <>B___       *           | MVTODIAS | OUTPUT  | I#POUPN0 |  140  |    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 47   Lines NOT 
+  < 0075       *                 ORG. SEQUENCIAL  -  LRECL 102          
+  <>B___       *                 ORG. SEQUENCIAL  -  LRECL 140          
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 7    Lines NOT 
+  < 0083        01  FD-MVTODIAE                 PIC  X(102).            
+  <>B___        01  FD-MVTODIAE                 PIC  X(140).            
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 17   Lines NOT 
+  < 0101       *                 ORG. SEQUENCIAL  -  LRECL 102          
+  <>B___       *                 ORG. SEQUENCIAL  -  LRECL 140          
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 7    Lines NOT 
+  < 0109        01  FD-MVTODIAS                 PIC  X(102).            
+  <>B___        01  FD-MVTODIAS                 PIC  X(140).            
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 6    Lines NOT 
+  < 0116        01  FILLER PIC X(34) VALUE  '** INICIO DA WORKING PEAT10
+  <>B___        01  FILLER PIC X(34) VALUE  '** INICIO DA WORKING POUP10
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 15   Lines NOT 
+  < 0132        01  WRK-MCTS-REG.                                       
+  <>B___        COPY 'I#POUPN0'.                                        
+  < B___            02  WRK-BANCO              PIC  9(003)  COMP-3 VALUE
+  < B___            02  WRK-CHAV.                                       
+  < B___                05  WRK-AGENCIA        PIC  9(005)  COMP-3 VALUE
+  < B___                05  WRK-RAZAO.                                  
+  < B___                    10  WRK-GRUPO      PIC  9(003)  COMP-3 VALUE
+  < B___                    10  WRK-SUBGP      PIC  9(003)  COMP-3 VALUE
+  < B___                05  WRK-CONTA          PIC  9(007)  COMP-3 VALUE
+  < B___                05  WRK-DIGITO         PIC  X(001)         VALUE
+  < B___                05  WRK-DAT-MOV-AAAAMMDD                        
+  < B___                                        PIC  9(009)  COMP-3 VALU
+  < B___            02  WRK-LANCAMENTO         PIC  9(005)  COMP-3 VALUE
+  < B___            02  WRK-NUMERO-DOC         PIC  9(007)  COMP-3 VALUE
+  < B___            02  WRK-DEB-CRED           PIC  X(001)         VALUE
+  < B___            02  WRK-VALOR              PIC  9(013)V99           
+  < B___                                                     COMP-3 VALU
+  < B___            02  WRK-DIA-VINCULO        PIC  9(003)  COMP-3 VALUE
+  < B___            02  WRK-CTRO-CUSTO         PIC  X(004)         VALUE
+  < B___            02  WRK-SUBC-CRS           PIC  9(005)  COMP-3 VALUE
+  < B___            02  WRK-SERVICO            PIC  X(002)         VALUE
+  < B___            02  WRK-TIPO-ENTRADA       PIC  X(001)         VALUE
+  < B___            02  WRK-SN                 PIC  X(001)         VALUE
+  < B___            02  WRK-ORIGEM             PIC  X(032)         VALUE
+  < B___            02  WRK-DIA-LA             PIC  9(002)         VALUE
+  < B___            02  WRK-DATA-ORIGINAL      PIC  9(009)  COMP-3 VALUE
+  < B___            02  WRK-TRILHA.                                     
+  < B___                05  WRK-PRODUTO        PIC  X(004)         VALUE
+  < B___                05  WRK-OPERACAO       PIC  X(007)         VALUE
+  < B___            02  WRK-NRO-SEQ-LA         PIC  X(003)         VALUE
+  < B___            02  FILLER                  PIC  X(001)         VALU
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 48   Lines NOT 
+  000210                                                                
+  > B___        01  WRK-MODULO                  PIC  X(008)         VALU
+  > B___                                                                
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 11   Lines NOT 
+  < 0222        01  WRK-DLCTO-CREDT-ANT         PIC  9(9)           VALU
+  <>B___        01  WRK-DLCTO-CREDT-ANT         PIC  9(8)           VALU
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0224        01  WRK-DLCTO-CREDT-DIA         PIC  9(9)           VALU
+  <>B___        01  WRK-DLCTO-CREDT-DIA         PIC  9(8)           VALU
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 11   Lines NOT 
+  < B___        01  WRK-AUX-TAM-15              PIC -9(13)V99       VALU
+  < B___        01  FILLER REDEFINES WRK-AUX-TAM-15.                    
+  < B___         03 FILLER                      PIC  X(1).              
+  < B___         03 WRK-AUX-TAM-15-R            PIC  9(13)V99.          
+  < B___                                                                
+  < B___        01  WRK-MODULO                  PIC  X(8)           VALU
+  < B___                                                                
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 11   Lines NOT 
+  < 0254        01  WRK-LIT-PGM                 PIC  X(008)  VALUE 'PEAT
+  <>B___        01  WRK-LIT-PGM                 PIC  X(008)  VALUE 'POUP
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 38   Lines NOT 
+  < 0293        01  FILLER PIC X(34) VALUE  '** FIM DA WORKING PEAT1064 
+  <>B___        01  FILLER PIC X(34) VALUE  '** FIM DA WORKING POUP1064 
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 124  Lines NOT 
+  < 0418               DISPLAY '***=========== PEAT1064 ===========***' 
+  <>B___               DISPLAY '***=========== POUP1064 ===========***' 
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 3    Lines NOT 
+  000422               DISPLAY '***================================***' 
+  > B___               MOVE  'ARQUIVO MVTODIAE VAZIO' TO  ERR-TEXTO     
+  > B___               MOVE  'APL'              TO  ERR-TIPO-ACESSO     
+  > B___               PERFORM  9999-FINALIZAR-ERRO                     
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 5    Lines NOT 
+  < 0428               DISPLAY '***=========== PEAT1064 ===========***' 
+  <>B___               DISPLAY '***=========== POUP1064 ===========***' 
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 20   Lines NOT 
+  < 0449            READ MVTODIAE               INTO WRK-MCTS-REG       
+  <>B___            READ MVTODIAE               INTO MOVSUBC            
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 4    Lines NOT 
+  < 0454               MOVE  WRK-AGENCIA       TO  WRK-CHV-MOV-AGE      
+  <>B___               MOVE  MVSB-CJUNC-DEPDC   TO  WRK-CHV-MOV-AGE     
+  < 0455               MOVE  WRK-CONTA         TO  WRK-CHV-MOV-CTA      
+  <>B___               MOVE  MVSB-CCTA-POUP     TO  WRK-CHV-MOV-CTA     
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 3    Lines NOT 
+  000459                                                                
+  > B___            IF  ACU-LIDOS-MVTODIAE      EQUAL   ZEROS AND       
+  > B___                WRK-FS-MVTODIAE         EQUAL   '10'            
+  > B___                GO TO 2100-99-FIM                               
+  > B___            END-IF.                                             
+  > B___                                                                
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0462                (WRK-GRUPO          NOT EQUAL 10) OR            
+  <>B___                (MVSB-RAZAO         NOT EQUAL   10510)          
+  < B___                (WRK-SUBGP          NOT EQUAL 51)               
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 84   Lines NOT 
+  < 0548             IF WRK-DEB-CRED       NOT EQUAL  '1'               
+  <>B___             IF MVSB-CDEB-CRED      NOT EQUAL   1               
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 16   Lines NOT 
+  < 0565             MOVE WRK-AUX-TAM-05-R      TO  WRK-AGENCIA         
+  <>B___               MOVE WRK-AUX-TAM-05-R      TO  MVSB-CJUNC-DEPDC  
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0567             MOVE WRK-AUX-TAM-07-R      TO  WRK-CONTA           
+  <>B___               MOVE WRK-AUX-TAM-07-R      TO  MVSB-CCTA-POUP    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0569             MOVE WRK-B0431-DIGITO      TO  WRK-DIGITO          
+  <>B___               MOVE WRK-B0431-DIGITO      TO  MVSB-CDIG-CCTA    
+  > B___                                                                
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0571             MOVE  WRK-VALOR           TO  WRK-VMOVTO           
+  <>B___                                                                
+  < 0572             IF WRK-DEB-CRED           EQUAL  '2'               
+  <>B___               MOVE  MVSB-VMOVTO          TO  WRK-VMOVTO        
+  > B___                                                                
+  > B___               IF MVSB-CDEB-CRED          EQUAL   2             
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 6    Lines NOT 
+  < 0579 @BRQ        MOVE  WRK-VALOR           TO  WRK-VMOVTO           
+  <>B___               MOVE  MVSB-VMOVTO          TO  WRK-VMOVTO        
+  < 0580             IF WRK-DEB-CRED           EQUAL  '2'               
+  <>B___                                                                
+  > B___               IF MVSB-CDEB-CRED          EQUAL   2             
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 16   Lines NOT 
+  < 0597            MOVE WRK-AUX-TAM-05-R       TO  WRK-AGENCIA         
+  <>B___            MOVE WRK-AUX-TAM-05-R       TO  MVSB-CJUNC-DEPDC    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0599            MOVE WRK-AUX-TAM-07-R       TO  WRK-CONTA           
+  <>B___            MOVE WRK-AUX-TAM-07-R       TO  MVSB-CCTA-POUP      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0601            MOVE WRK-B0431-DIGITO       TO  WRK-DIGITO          
+  <>B___            MOVE WRK-B0431-DIGITO       TO  MVSB-CDIG-CCTA      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0603            MOVE WRK-VALOR             TO  WRK-VMOVTO           
+  <>B___            MOVE MVSB-VMOVTO            TO  WRK-VMOVTO          
+  > B___                                                                
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0605            MOVE WRK-DAT-MOV-AAAAMMDD  TO  WRK-DLCTO-CREDT-DIA  
+  <>B___                                                                
+  < 0606            IF   WRK-DAT-MOV-AAAAMMDD  NOT EQUAL   WRK-DLCTO-CRE
+  <>B___            MOVE MVSB-DLCTO-MOVTO       TO  WRK-DLCTO-CREDT-DIA 
+  > B___                                                                
+  > B___            IF   MVSB-DLCTO-MOVTO   NOT EQUAL   WRK-DLCTO-CREDT-
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0608                 MOVE WRK-DAT-MOV-AAAAMMDD TO  WRK-DLCTO-CREDT-A
+  <>B___                 MOVE MVSB-DLCTO-MOVTO  TO  WRK-DLCTO-CREDT-ANT 
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 11   Lines NOT 
+  < 0620            MOVE    WRK-VALOR          TO  WRK-MOVTO-DEBITAR.   
+  <>B___            MOVE    MVSB-VMOVTO         TO  WRK-MOVTO-DEBITAR.  
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0623                (WRK-DAT-MOV-AAAAMMDD   EQUAL   WRK-DLCTO-CREDT-
+  <>B___                (MVSB-DLCTO-MOVTO       EQUAL   WRK-DLCTO-CREDT-
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 17   Lines NOT 
+  < 0641            MOVE WRK-AUX-TAM-05-R       TO  WRK-AGENCIA         
+  <>B___            MOVE WRK-AUX-TAM-05-R       TO  MVSB-CJUNC-DEPDC    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0643            MOVE WRK-AUX-TAM-07-R       TO  WRK-CONTA           
+  <>B___            MOVE WRK-AUX-TAM-07-R       TO  MVSB-CCTA-POUP      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0645            MOVE WRK-B0431-DIGITO       TO  WRK-DIGITO          
+  <>B___            MOVE WRK-B0431-DIGITO       TO  MVSB-CDIG-CCTA      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0648                MOVE    WRK-CREDT-DIA-MP TO WRK-AUX-TAM-15      
+  <>B___                MOVE    WRK-CREDT-DIA-MP TO MVSB-VMOVTO         
+  < B___                MOVE    WRK-AUX-TAM-15-R TO WRK-VALOR           
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0651                MOVE    WRK-VALOR      TO  WRK-VMOVTO           
+  <>B___                MOVE    MVSB-VMOVTO     TO  WRK-VMOVTO          
+  < 0652 @BRQ           COMPUTE WRK-MOVTO-DEBITAR=  WRK-MOVTO-DEBITAR -W
+  <>B___                COMPUTE WRK-MOVTO-DEBITAR=  WRK-MOVTO-DEBITAR - 
+  < 0653 @BRQ           COMPUTE WRK-SLD-CTA-MP   =  WRK-SLD-CTA-MP    -W
+  <>B___                                                               W
+  > B___                COMPUTE WRK-SLD-CTA-MP   =  WRK-SLD-CTA-MP    - 
+  > B___                                                               W
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 3    Lines NOT 
+  < 0657                MOVE    WRK-VALOR      TO  WRK-VMOVTO           
+  <>B___                MOVE    MVSB-VMOVTO     TO  WRK-VMOVTO          
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 26   Lines NOT 
+  < 0684 @BRQ           MOVE   WRK-AUX-TAM-05-R    TO  WRK-AGENCIA      
+  <>B___                MOVE    WRK-AUX-TAM-05-R TO  MVSB-CJUNC-DEPDC   
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0686 @BRQ           MOVE   WRK-AUX-TAM-07-R    TO  WRK-CONTA        
+  <>B___                MOVE    WRK-AUX-TAM-07-R TO  MVSB-CCTA-POUP     
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0688 @BRQ           MOVE   WRK-B0431-DIGITO    TO  WRK-DIGITO       
+  <>B___                MOVE    WRK-B0431-DIGITO TO  MVSB-CDIG-CCTA     
+  < 0689                MOVE    WRK-SLD-CTA-ESTOQUE TO WRK-AUX-TAM-15   
+  <>B___                MOVE WRK-SLD-CTA-ESTOQUE TO  MVSB-VMOVTO        
+  < B___                MOVE    WRK-AUX-TAM-15-R TO WRK-VALOR           
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0693                MOVE ZEROS              TO  WRK-VALOR           
+  <>B___                MOVE    ZEROS            TO  MVSB-VMOVTO        
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0696             MOVE    WRK-VALOR          TO  WRK-VMOVTO          
+  <>B___             MOVE    MVSB-VMOVTO         TO  WRK-VMOVTO         
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0698             MOVE    WRK-MOVTO-DEBITAR  TO  WRK-AUX-TAM-15      
+  <>B___             MOVE    WRK-MOVTO-DEBITAR   TO  MVSB-VMOVTO        
+  < B___             MOVE    WRK-AUX-TAM-15-R   TO  WRK-VALOR           
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0701             MOVE    WRK-AUX-TAM-05-R   TO  WRK-AGENCIA         
+  <>B___             MOVE    WRK-AUX-TAM-05-R    TO  MVSB-CJUNC-DEPDC   
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0703             MOVE    WRK-AUX-TAM-07-R   TO  WRK-CONTA           
+  <>B___             MOVE    WRK-AUX-TAM-07-R    TO  MVSB-CCTA-POUP     
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0705             MOVE    WRK-B0431-DIGITO   TO  WRK-DIGITO          
+  <>B___             MOVE    WRK-B0431-DIGITO    TO  MVSB-CDIG-CCTA     
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 3    Lines NOT 
+  < 0709 @BRQ        MOVE   WRK-AUX-TAM-05-R    TO  WRK-AGENCIA         
+  <>B___             MOVE    WRK-AUX-TAM-05-R TO  MVSB-CJUNC-DEPDC      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0711 @BRQ        MOVE   WRK-AUX-TAM-07-R    TO  WRK-CONTA           
+  <>B___             MOVE    WRK-AUX-TAM-07-R TO  MVSB-CCTA-POUP        
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0713 @BRQ        MOVE   WRK-B0431-DIGITO    TO  WRK-DIGITO          
+  <>B___             MOVE    WRK-B0431-DIGITO TO  MVSB-CDIG-CCTA        
+  > B___             MOVE WRK-MOVTO-DEBITAR   TO  MVSB-VMOVTO           
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0715             MOVE    WRK-VALOR          TO  WRK-VMOVTO          
+  <>B___             MOVE    MVSB-VMOVTO         TO  WRK-VMOVTO         
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 6    Lines NOT 
+  < 0722       * DEBITAR DA CONTA ESTOQUE                               
+  <>B___       * DEBITAR DA CONTA MP                                    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 6    Lines NOT 
+  < 0729                MOVE WRK-AUX-TAM-05-R   TO  WRK-AGENCIA         
+  <>B___                MOVE WRK-AUX-TAM-05-R   TO  MVSB-CJUNC-DEPDC    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0731                MOVE WRK-AUX-TAM-07-R   TO  WRK-CONTA           
+  <>B___                MOVE WRK-AUX-TAM-07-R   TO  MVSB-CCTA-POUP      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0733                MOVE    WRK-B0431-DIGITO TO WRK-DIGITO          
+  <>B___                MOVE    WRK-B0431-DIGITO TO MVSB-CDIG-CCTA      
+  < 0734                MOVE    WRK-SLD-CTA-MP   TO  WRK-AUX-TAM-15     
+  <>B___                MOVE    WRK-SLD-CTA-MP  TO  MVSB-VMOVTO         
+  < B___                MOVE    WRK-AUX-TAM-15-R TO  WRK-VALOR          
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0738                MOVE ZEROS              TO  WRK-VALOR           
+  <>B___                MOVE ZEROS              TO  MVSB-VMOVTO         
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0741             MOVE   WRK-VALOR           TO  WRK-VMOVTO          
+  <>B___             MOVE   MVSB-VMOVTO         TO  WRK-VMOVTO          
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0743             MOVE   WRK-MOVTO-DEBITAR   TO  WRK-AUX-TAM-15      
+  <>B___             MOVE   WRK-MOVTO-DEBITAR   TO  MVSB-VMOVTO         
+  < B___             MOVE   WRK-AUX-TAM-15-R    TO  WRK-VALOR           
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0746             MOVE   WRK-AUX-TAM-05-R    TO  WRK-AGENCIA         
+  <>B___             MOVE   WRK-AUX-TAM-05-R    TO  MVSB-CJUNC-DEPDC    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0748             MOVE   WRK-AUX-TAM-07-R    TO  WRK-CONTA           
+  <>B___             MOVE   WRK-AUX-TAM-07-R    TO  MVSB-CCTA-POUP      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0750             MOVE   WRK-B0431-DIGITO    TO  WRK-DIGITO          
+  <>B___             MOVE   WRK-B0431-DIGITO    TO  MVSB-CDIG-CCTA      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 3    Lines NOT 
+  < 0754             MOVE    WRK-AUX-TAM-05-R   TO  WRK-AGENCIA         
+  <>B___             MOVE    WRK-AUX-TAM-05-R   TO  MVSB-CJUNC-DEPDC    
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0756             MOVE    WRK-AUX-TAM-07-R   TO  WRK-CONTA           
+  <>B___             MOVE    WRK-AUX-TAM-07-R   TO  MVSB-CCTA-POUP      
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0758             MOVE    WRK-B0431-DIGITO   TO  WRK-DIGITO          
+  <>B___             MOVE    WRK-B0431-DIGITO   TO  MVSB-CDIG-CCTA      
+  > B___             MOVE    WRK-MOVTO-DEBITAR  TO  MVSB-VMOVTO         
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 1    Lines NOT 
+  < 0760             MOVE    WRK-VALOR         TO  WRK-VMOVTO           
+  <>B___             MOVE    MVSB-VMOVTO        TO  WRK-VMOVTO          
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 19   Lines NOT 
+  < 0780               DISPLAY '***=========== PEAT1064 ===========***' 
+  <>B___               DISPLAY '***=========== POUP1064 ===========***' 
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 24   Lines NOT 
+  < 0805            IF  WRK-DEB-CRED           EQUAL  '1'               
+  <>B___            IF  MVSB-CDEB-CRED          EQUAL   1               
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 5    Lines NOT 
+  < 0811                DISPLAY '***=========== PEAT1064 ===========***'
+  <>B___                DISPLAY '***=========== POUP1064 ===========***'
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 21   Lines NOT 
+  < 0833            MOVE    WRK-NUMERO-DOC      TO  POUPM4-CDOCTO-LCTO  
+  <>B___            MOVE    MVSB-CDOCTO-LCTO    TO  POUPM4-CDOCTO-LCTO  
+  < 0834            MOVE    WRK-LANCAMENTO      TO  POUPM4-CODLCTO-5POS 
+  <>B___            MOVE    MVSB-CODLCTO-5POS   TO  POUPM4-CODLCTO-5POS 
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 2    Lines NOT 
+  < 0837            MOVE    'POUP1065'          TO  WRK-MODULO          
+  <>B___            MOVE    'POUP1065'          TO  WRK-MODULO.         
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 11   Lines NOT 
+  < 0849            WRITE FD-MVTODIAS           FROM WRK-MCTS-REG       
+  <>B___            WRITE FD-MVTODIAS           FROM MOVSUBC            
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 46   Lines NOT 
+  < 0896            DISPLAY '**   ESTATISTICAS DE PROCESSAMENTO - PEAT10
+  <>B___            DISPLAY '**   ESTATISTICAS DE PROCESSAMENTO - POUP10
+    - -  - - - - - - - - - - - - - - - - - - - - - - - - 40   Lines NOT 
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        

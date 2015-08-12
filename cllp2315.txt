@@ -1,0 +1,66 @@
+//CLLP2315 JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=CLLP5905                                            
+//*                                                                     
+//* ***    CRIA ARQUIVO COM PENDENCIAS ATIVAS EM CL DE 20 BYTES         
+//*                                                                     
+//LPCLENTR DD DSN=MX.CLLP.CADATIVO.CLLP2301(0),                         
+//       DISP=(OLD,DELETE,KEEP)                                         
+//LPCLSAID DD DSN=MX.CLLP.LPCLSAID.CLLP2315(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0020,RECFM=FB)                                 
+//EZTVFM   DD UNIT=DISCO,                                               
+//       SPACE=(4096,(100,100))                                         
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSSNAP  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA PENDENCIAS ATIVAS EM CL EM ORDEM ASCENDENTE DE    
+//* ***    AGENCIA, CONTA CORRENTE, CARTEIRA, CONTRATO E VENCIMENTO.    
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.LPCLSAID,                                     
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.SAIDCLAS.CLLP4630(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0020,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,3,PD,A,4,4,PD,A,8,3,PD,A,11,4,PD,A,15,5,PD,A)           
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=CLLP5916                                            
+//*                                                                     
+//* ***    FAZ O CONFRONTO ENTRE ARQUIVO DE CLLP COM ARQUIVO DA         
+//* ***    ROTINA MORA.                                                 
+//* ***    ENCONTRANDO REGISTROS IGUAIS NOS DOIS ARQUIVOS, O PROGRAMA   
+//* ***    IRA DESPREZAR O REGISTRO DO ARQUIVO DA MORA.                 
+//*                                                                     
+//ARQLPCL  DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQMORA  DD DSN=MX.CLLP.ARQDB22.CLLP2305.LEI(0),                      
+//       DISP=SHR                                                       
+//MORASEP  DD DSN=MX.CLLP.MORASEP.CLLP2315(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0590,RECFM=FB)                                 
+//MORAEXP  DD DSN=MX.CLLP.MORASEP.CLLP2315.LEI(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0677,RECFM=FB)                                 
+//ARQRETI  DD DSN=MX.CLLP.ARQRETI.CLLP2315(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0590,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

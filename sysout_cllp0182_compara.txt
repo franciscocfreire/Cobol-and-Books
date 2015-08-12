@@ -1,0 +1,321 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E
+
+11.47.28 JOB40250 ---- FRIDAY,    18 JUL 2014 ----
+11.47.28 JOB40250  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+11.47.28 JOB40250  $EXIT006A  Job ICEJ0182 Jobid(JOB40250) alterado para CLASS=E
+11.47.30 JOB40250  ICH70001I M67777   LAST ACCESS AT 11:43:34 ON FRIDAY, JULY 18
+11.47.30 JOB40250  $HASP373 ICEJ0182 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+11.47.30 JOB40250  IEF403I ICEJ0182 - STARTED - TIME=11.47.30
+11.47.30 JOB40250  -                                                --TIMINGS (M
+11.47.30 JOB40250  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+11.47.30 JOB40250  -ICEJ0182 DELETA               00     14      7    .00    .00
+11.47.30 JOB40250  +CVDT0150 **TOTAIS DO COMPARATIVO** JOB=ICEJ0182 STEP=STEP9
+11.47.30 JOB40250  +PARM=001001
+11.47.30 JOB40250  +CVDT0150 * PROCESSOU REGISTRO A REGISTRO
+11.47.30 JOB40250  +ARQTESTE DSN=AD.TEMP.CLLP.CLLP0182.SORT1                  LR
+11.47.30 JOB40250  +PRODUCAO DSN=AD.TEMP.CLLP0182.ARQEXP01                    LR
+11.47.30 JOB40250  +DIVERGE  DSN=AD.TEMP.CLLP.DIVERGE.CLLP0182.STEP9          LR
+11.47.30 JOB40250  +TEST SEM DSN=AD.TEMP.CLLP.TESTSEM.CLLP0182.STEP9          LR
+11.47.30 JOB40250  +PROD SEM DSN=AD.TEMP.CLLP.PRODSEM.CLLP0182.STEP9          LR
+11.47.30 JOB40250  +
+11.47.30 JOB40250  + **ATENCAO**************************************************
+11.47.30 JOB40250  +             DISCREPANCIA NO TAMANHO DOS REGISTROS
+11.47.30 JOB40250  +             LRECL TESTE=00314, PRODUCAO=00414  DIVERGE=0041
+11.47.30 JOB40250  + **ATENCAO**************************************************
+11.47.30 JOB40250  +
+11.47.30 JOB40250  +TOTAL DE REGS. TESTE      =       651
+11.47.30 JOB40250  +TOTAL DE REGS. PRODUCAO   =       651
+11.47.30 JOB40250  +TOTAL DE DIVERGE GRAVADOS =       651 NAO GRAVADOS=
+11.47.30 JOB40250  +TOTAL REG.TEST S/ CORRESP.=         0
+11.47.30 JOB40250  +TOTAL REG.PROD.S/ CORRESP.=         0
+11.47.30 JOB40250  +*************ESTATISTICA DAS DIVERGENCIAS ******************
+11.47.30 JOB40250  + POSIN-POSFI FREQUENC.   POSIN-POSFI FREQUENC.   POSIN-POSFI
+11.47.30 JOB40250  +   315---414 ......651
+11.47.30 JOB40250  +***********FINAL DA ESTATISTICA ****************************
+11.47.30 JOB40250  -ICEJ0182 STEP9                00    132     20    .00    .00
+11.47.30 JOB40250  -ICEJ0182 STEP9A               00     84     38    .00    .00
+11.47.30 JOB40250  IEF404I ICEJ0182 - ENDED - TIME=11.47.30
+11.47.30 JOB40250  -ICEJ0182 ENDED.  NAME-A172212              TOTAL TCB CPU TIM
+11.47.30 JOB40250  $HASP395 ICEJ0182 ENDED
+------ JES2 JOB STATISTICS ------
+  18 JUL 2014 JOB EXECUTION DATE
+           87 CARDS READ
+        1,088 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+          155 SYSOUT SPOOL KBYTES
+         0.00 MINUTES EXECUTION TIME
+
+        1 //ICEJ0182 JOB 'CLLP,4120,PR32','A172212',MSGCLASS=Z,SCHENV=DB2
+          //*MAIN    CLASS=ALDB2A
+        2 //JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR
+        3 //         DD DSN=AV.BIBGERAL,DISP=SHR
+        4 //         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR
+        5 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR
+        6 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+        7 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          //*
+          //*
+          //* *** ==============================================
+          //* *** COMPARA ARQUIVOS DE TRANSITOS DO JOB CLLP0170 CLLP0180
+          //* *** ==============================================
+          //*
+          //*==============================================================*
+        8 //DELETA   EXEC PGM=IEFBR14
+          //*==============================================================*
+        9 //DD007   DD DSN=AD.TEMP.CLLP.DIVERGE.CLLP0182.STEP9,
+          //         DISP=(MOD,DELETE),SPACE=(TRK,1)
+       10 //DD008   DD DSN=AD.TEMP.CLLP.PRODSEM.CLLP0182.STEP9,
+          //         DISP=(MOD,DELETE),SPACE=(TRK,1)
+       11 //DD009   DD DSN=AD.TEMP.CLLP.TESTSEM.CLLP0182.STEP9,
+          //         DISP=(MOD,DELETE),SPACE=(TRK,1)
+          //*==============================================================*
+          //*
+          //******** JOB COMPARA ARQUIVO 314 COM O 414
+          //*
+          //*
+       12 //STEP9    EXEC PGM=CVDT0150,
+          //       PARM='001001'
+          //* ***    COMPARA ARQUIVO DE TESTE E PRODUCAO
+          //*
+       13 //ARQTESTE DD DSN=AD.TEMP.CLLP.CLLP0182.SORT1,
+          //       DISP=SHR
+       14 //ARQPROD  DD DSN=AD.TEMP.CLLP0182.ARQEXP01,
+          //       DISP=SHR
+       15 //DIVERGE  DD DSN=AD.TEMP.CLLP.DIVERGE.CLLP0182.STEP9,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,5),
+          //       SPACE=(TRK,(002000,0500),RLSE),
+          //       DCB=(AD.A,LRECL=0414,RECFM=FB)
+       16 //PRODSEM  DD DSN=AD.TEMP.CLLP.PRODSEM.CLLP0182.STEP9,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,5),
+          //       SPACE=(TRK,(002000,0500),RLSE),
+          //       DCB=(AD.A,LRECL=0414,RECFM=FB)
+       17 //TESTSEM  DD DSN=AD.TEMP.CLLP.TESTSEM.CLLP0182.STEP9,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,5),
+          //       SPACE=(TRK,(002000,0500),RLSE),
+          //       DCB=(AD.A,LRECL=0314,RECFM=FB)
+       18 //SYSOUT   DD SYSOUT=*
+       19 //SYSUDUMP DD SYSOUT=Y
+          //*
+       20 //STEP9A   EXEC PGM=ICETOOL
+
+          //*
+          //****** RELATORIO DO ARQUIVO ARQFONES.BASEFICA DESENVOLVIMENTO
+          //*
+       21 //IN       DD DSN=AD.TEMP.CLLP0182.ARQEXP01,
+          //       DISP=SHR
+       22 //LISTA    DD SYSOUT=(W,,AM19),
+          //       DCB=(LRECL=133,RECFM=FBA)
+       23 //DFSMSG   DD SYSOUT=T
+       24 //TOOLMSG  DD SYSOUT=T
+       25 //TOOLIN   DD *
+       26 //SYSOUT   DD SYSOUT=*
+       27 //SYSUDUMP DD SYSOUT=Y
+          //*
+
+ICH70001I M67777   LAST ACCESS AT 11:43:34 ON FRIDAY, JULY 18, 2014
+IEF236I ALLOC. FOR ICEJ0182 DELETA
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D805 ALLOCATED TO
+IEF237I D5C2 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME DD007
+IGD103I SMS ALLOCATED TO DDNAME DD008
+IGD103I SMS ALLOCATED TO DDNAME DD009
+IEF142I ICEJ0182 DELETA - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERTT                                  PASSED,    DDNAME=JOBLIB
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=
+IGD106I AV.CHGM.LOADLIB.BSL.LOB                      PASSED,    DDNAME=
+IGD106I SA.RDG2.SREST.AL2.DCALOAD                    PASSED,    DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13A2A.
+IGD105I AD.TEMP.CLLP.DIVERGE.CLLP0182.STEP9          DELETED,   DDNAME=DD007
+IGD105I AD.TEMP.CLLP.PRODSEM.CLLP0182.STEP9          DELETED,   DDNAME=DD008
+IGD105I AD.TEMP.CLLP.TESTSEM.CLLP0182.STEP9          DELETED,   DDNAME=DD009
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: DELETA         Cond Code: 0000         Start: 18-Jul-2014 11:47:30 AM
+Step  Num: 1              PGM  Name: IEFBR14      End:   18-Jul-2014 11:47:30 AM
+CPU (TCB): 00:00:00.00                            Storage below 16M:          8k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.00                            Service Units:              93
+Tape Mnts: 0                                      Total EXCPs:                14
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB              2  23,200        D9CC D JOBLIB              1  23,200
+
+
+Total DASD EXCPs:                  3        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/DELETA  /START 2014199.1147
+IEF032I STEP/DELETA  /STOP  2014199.1147
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     8K  SYS:   404K  EXT:        4K  SYS:    10240K
+IEF236I ALLOC. FOR ICEJ0182 STEP9
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D805 ALLOCATED TO
+IEF237I D5C2 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ARQTESTE
+IGD103I SMS ALLOCATED TO DDNAME ARQPROD
+IGD101I SMS ALLOCATED TO DDNAME (DIVERGE )
+        DSN (AD.TEMP.CLLP.DIVERGE.CLLP0182.STEP9         )
+        STORCLAS (STANDARD) MGMTCLAS (DN2DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DBH
+IGD101I SMS ALLOCATED TO DDNAME (PRODSEM )
+        DSN (AD.TEMP.CLLP.PRODSEM.CLLP0182.STEP9         )
+        STORCLAS (STANDARD) MGMTCLAS (DN2DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DD2
+IGD101I SMS ALLOCATED TO DDNAME (TESTSEM )
+        DSN (AD.TEMP.CLLP.TESTSEM.CLLP0182.STEP9         )
+        STORCLAS (STANDARD) MGMTCLAS (DN2DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DCP
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+CVDT0150 **TOTAIS DO COMPARATIVO** JOB=ICEJ0182 STEP=STEP9    *
+PARM=001001
+CVDT0150 * PROCESSOU REGISTRO A REGISTRO
+ARQTESTE DSN=AD.TEMP.CLLP.CLLP0182.SORT1                  LRECL=00314 *
+PRODUCAO DSN=AD.TEMP.CLLP0182.ARQEXP01                    LRECL=00414 *
+DIVERGE  DSN=AD.TEMP.CLLP.DIVERGE.CLLP0182.STEP9          LRECL=00414 *
+TEST SEM DSN=AD.TEMP.CLLP.TESTSEM.CLLP0182.STEP9          LRECL=00314 *
+PROD SEM DSN=AD.TEMP.CLLP.PRODSEM.CLLP0182.STEP9          LRECL=00414 *
+
+ **ATENCAO*********************************************************  *
+             DISCREPANCIA NO TAMANHO DOS REGISTROS                   *
+             LRECL TESTE=00314, PRODUCAO=00414  DIVERGE=00414        *
+ **ATENCAO*********************************************************  *
+
+TOTAL DE REGS. TESTE      =       651
+TOTAL DE REGS. PRODUCAO   =       651
+TOTAL DE DIVERGE GRAVADOS =       651 NAO GRAVADOS=         0
+TOTAL REG.TEST S/ CORRESP.=         0
+TOTAL REG.PROD.S/ CORRESP.=         0
+*************ESTATISTICA DAS DIVERGENCIAS **************************************
+ POSIN-POSFI FREQUENC.   POSIN-POSFI FREQUENC.   POSIN-POSFI FREQUENC.   POSIN-P
+   315---414 ......651
+***********FINAL DA ESTATISTICA ************************************************
+IEF142I ICEJ0182 STEP9 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERTT                                  PASSED,    DDNAME=JOBLIB
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=
+IGD106I AV.CHGM.LOADLIB.BSL.LOB                      PASSED,    DDNAME=
+IGD106I SA.RDG2.SREST.AL2.DCALOAD                    PASSED,    DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13A2A.
+IGD104I AD.TEMP.CLLP.CLLP0182.SORT1                  RETAINED,  DDNAME=ARQTESTE
+IGD104I AD.TEMP.CLLP0182.ARQEXP01                    RETAINED,  DDNAME=ARQPROD
+IGD104I AD.TEMP.CLLP.DIVERGE.CLLP0182.STEP9          RETAINED,  DDNAME=DIVERGE
+IGD104I AD.TEMP.CLLP.PRODSEM.CLLP0182.STEP9          RETAINED,  DDNAME=PRODSEM
+IGD104I AD.TEMP.CLLP.TESTSEM.CLLP0182.STEP9          RETAINED,  DDNAME=TESTSEM
+IEF285I   M67777.ICEJ0182.JOB40250.D0000102.?          SYSOUT
+IEF285I   M67777.ICEJ0182.JOB40250.D0000103.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP9          Cond Code: 0000         Start: 18-Jul-2014 11:47:30 AM
+Step  Num: 2              PGM  Name: CVDT0150     End:   18-Jul-2014 11:47:30 AM
+CPU (TCB): 00:00:00.04                            Storage below 16M:      2,636k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.10                            Service Units:           1,547
+Tape Mnts: 0                                      Total EXCPs:               132
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB             45  23,200        D6DA D ARQTESTE            9  27,946
+D850 D ARQPROD            11  27,738        D7D1 D DIVERGE            30  27,738
+
+
+Total DASD EXCPs:                 95        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP9   /START 2014199.1147
+IEF032I STEP/STEP9   /STOP  2014199.1147
+        CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  2636K  SYS:   412K  EXT:        4K  SYS:    10512K
+IEF236I ALLOC. FOR ICEJ0182 STEP9A
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D805 ALLOCATED TO
+IEF237I D5C2 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME IN
+IEF237I JES2 ALLOCATED TO LISTA
+IEF237I JES2 ALLOCATED TO DFSMSG
+IEF237I JES2 ALLOCATED TO TOOLMSG
+IEF237I JES2 ALLOCATED TO TOOLIN
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I ICEJ0182 STEP9A - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AD.TEMP.CLLP0182.ARQEXP01                    RETAINED,  DDNAME=IN
+IEF285I   M67777.ICEJ0182.JOB40250.D0000104.?          SYSOUT
+IEF285I   M67777.ICEJ0182.JOB40250.D0000105.?          SYSOUT
+IEF285I   M67777.ICEJ0182.JOB40250.D0000106.?          SYSOUT
+IEF285I   M67777.ICEJ0182.JOB40250.D0000101.?          SYSIN
+IEF285I   M67777.ICEJ0182.JOB40250.D0000107.?          SYSOUT
+IEF285I   M67777.ICEJ0182.JOB40250.D0000108.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP9A         Cond Code: 0000         Start: 18-Jul-2014 11:47:30 AM
+Step  Num: 3              PGM  Name: ICETOOL      End:   18-Jul-2014 11:47:30 AM
+CPU (TCB): 00:00:00.02                            Storage below 16M:      1,124k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     16,412k
+Trans Act: 00:00:00.07                            Service Units:             819
+Tape Mnts: 0                                      Total EXCPs:                84
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB             12  23,200        D9CC D JOBLIB             11  23,200
+D850 D IN                  1  27,738
+
+Total DASD EXCPs:                 24        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP9A  /START 2014199.1147
+IEF032I STEP/STEP9A  /STOP  2014199.1147
+        CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1124K  SYS:   412K  EXT:    16412K  SYS:    10536K
+IGD104I AV.BIBGERTT                                  RETAINED,  DDNAME=JOBLIB
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=
+IGD104I AV.CHGM.LOADLIB.BSL.LOB                      RETAINED,  DDNAME=
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13A2A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: ICEJ0182       System ID: AL2C        Submit: 18-Jul-2014 11:47:28 AM
+Job JESID: JOB40250       MVS level: SP7.1.3     Start:  18-Jul-2014 11:47:30 AM
+Job Class: E                                     End:    18-Jul-2014 11:47:30 AM
+CPU (TCB): 00:00:00.06                           Storage below 16M:       2,636k
+CPU (SRB): 00:00:00.00                           Storage above 16M:      16,412k
+Trans Act: 00:00:00.18                           Service Units:            2,459
+Tape Mnts: 0                                     Total EXCPs:                230
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer: A172212
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/ICEJ0182/START 2014199.1147
+IEF033I  JOB/ICEJ0182/STOP  2014199.1147
+        CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.00 SEC

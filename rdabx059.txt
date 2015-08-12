@@ -1,0 +1,27 @@
+//RDABX054 JOB 'RDAB,4120,PR32','D115848',MSGCLASS=Z,SCHENV=DB2         
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP01   EXEC PGM=PLAN2440,                                           
+//       PARM=002                                                       
+//*                                                                     
+//* ***    TRANSMITE ARQUIVO PARA AL1                                   
+//*                                                                     
+//ENT00001 DD DSN=MX.RDAB.JX058S02.RB006CLA(0),                         
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=TA.RDAB.CLLP.RDABB006.CORR,                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(LRECL=0146,RECFM=FB)                                      
+//ENT00002 DD DSN=MX.RDAB.PRV.CPFCNPJ.CORR(0),                          
+//       DISP=SHR                                                       
+//SAI00002 DD DSN=TA.RDAB.CLLP.CPFCNPJ.CORR,                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(LRECL=0150,RECFM=FB)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

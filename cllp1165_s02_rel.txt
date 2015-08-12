@@ -1,0 +1,8 @@
+
+REES5110               SISTEMA DE REMESSA PARA ESCRITORIO              PAG.   1
+04/03/2015                   RELATORIO DE TOTALIZACAO                  13:30:01
+                 - TOTAIS - CODIGO DE IDENTIFICACAO DO CLIENTE
+                   LIDOS DO CADASTRO DE CLIENTES .............            1
+                   LIDOS DO CADASTRO DE CONTA CORRENTE .......        1.000
+                   CLIENTES COM IDENTIFICACAO ................            0
+                   CLIENTES SEM IDENTIFICACAO ................            1

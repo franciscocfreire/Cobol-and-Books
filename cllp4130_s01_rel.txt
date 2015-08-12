@@ -1,0 +1,10 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP7362             B A N C O  B R A D E S C O  S / A                06/03/2015                                                                                
+                     TABULACAO DE CLIENTES COM EXTRATO                  12:07:14                                                                                
+                            BLOQUEADO ROTINA SCCE                                                                                                               
+TIPO DE FREQUENCIA   QTDE DE CLIENTES  VALOR DE COBRANCA        VALOR LIQUIDO                                                                                   
+                                                                                                                                                                
+        11               000008                344.383,57             160.176,24                                                                                
+        12               000005                 30.944,24              28.886,68                                                                                
+        14               000003                    134,12                 122,44                                                                                

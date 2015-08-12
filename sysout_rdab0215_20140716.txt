@@ -1,0 +1,305 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  M Z 1 C  --  N O D E
+
+09.40.39 JOB51491 ---- WEDNESDAY, 16 JUL 2014 ----
+09.40.39 JOB51491  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+09.40.39 JOB51491  ICH70001I PRODSTR  LAST ACCESS AT 09:40:39 ON WEDNESDAY, JULY
+09.40.39 JOB51491  $HASP373 RDAB0215 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+09.40.39 JOB51491  IEF403I RDAB0215 - STARTED - TIME=09.40.39
+09.40.40 JOB51491  BUFL004I   ENT00001  Bufno=005  Dataset  menor  que 045 TRKS
+09.40.40 JOB51491  BUFL002I   ENT00001  TM.CLLP.RDAB.PESSJURI.CARGFICA
+09.40.40 JOB51491  BUFL013I   SAI00001  Nao Bufferizado. Alcancado Limite de Mem
+09.40.40 JOB51491  BUFL011I   SAI00001  Memoria Solicitada(00682K)  Usada(000016
+09.40.40 JOB51491  BUFL012I   SAI00001  Memoria Reservada (04096K)  Total(000409
+09.40.40 JOB51491  BUFL002I   SAI00001  MX.RDAB.PESSJURI.CARGFICA.G1337V00
+09.40.40 JOB51491  BUFL014I   SAI00002  Bufno=005  Amode diferente da escolha do
+09.40.40 JOB51491  BUFL014I   SAI00003  Bufno=005  Amode diferente da escolha do
+09.40.40 JOB51491  BUFL014I   SAI00004  Bufno=005  Amode diferente da escolha do
+09.40.41 JOB51491  BUFL014I   SAI00005  Bufno=005  Amode diferente da escolha do
+09.40.41 JOB51491  BUFL014I   SAI00006  Bufno=005  Amode diferente da escolha do
+09.40.41 JOB51491  -                                                --TIMINGS (M
+09.40.41 JOB51491  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+09.40.41 JOB51491  -RDAB0215 STEP1                00   3850    391    .00    .00
+09.40.41 JOB51491  IEF404I RDAB0215 - ENDED - TIME=09.40.41
+09.40.41 JOB51491  -RDAB0215 ENDED.  NAME-A299565              TOTAL TCB CPU TIM
+09.40.41 JOB51491  $HASP395 RDAB0215 ENDED
+------ JES2 JOB STATISTICS ------
+  16 JUL 2014 JOB EXECUTION DATE
+           61 CARDS READ
+          299 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           20 SYSOUT SPOOL KBYTES
+         0.02 MINUTES EXECUTION TIME
+
+        1 //RDAB0215 JOB 'RDAB,4120,PR32','A299565',MSGCLASS=1,REGION=4096K,
+          //       MSGLEVEL=(1,1)
+          //*---- SUBMITTED BY CONTROL-M (FROM MEMLIB)      ODATE=140716
+          //*---- SCHEDULE MX.CTMR.PUB.PR32.CARGAS.CTM93207.G0001V00(+1)
+          //*---- SCHEDULED DUE TO RBC:
+          //*---- JCL      MX.JCLFILE(RDAB0215)
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=RS9WQ  RUN NO.=00001
+        2 //JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR
+        3 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        4 //STEP1    EXEC PGM=PLAN2440,
+          //       PARM=006
+          //*
+          //* ***    COPIA ARQUIVO RECEBIDO DA ROTINA LPCL.
+          //*
+        5 //ENT00001 DD DSN=TM.CLLP.RDAB.PESSJURI.CARGFICA,
+          //       DISP=(OLD,DELETE,KEEP)
+        6 //SAI00001 DD DSN=MX.RDAB.PESSJURI.CARGFICA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000040,0008),RLSE),
+          //       DCB=(MX.A,LRECL=0081,RECFM=FB)
+        7 //ENT00002 DD DSN=TM.CLLP.RDAB.PESSFISI.CARGFICA,
+          //       DISP=(OLD,DELETE,KEEP)
+        8 //SAI00002 DD DSN=MX.RDAB.PESSFISI.CARGFICA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,02),
+          //       SPACE=(TRK,(002050,0410),RLSE),
+          //       DCB=(MX.A,LRECL=0270,RECFM=FB)
+        9 //ENT00003 DD DSN=TM.CLLP.RDAB.CTACORR.BASEFICA,
+          //       DISP=(OLD,DELETE,KEEP)
+       10 //SAI00003 DD DSN=MX.RDAB.CTACORR.BASEFICA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000870,0174),RLSE),
+          //       DCB=(MX.A,LRECL=0098,RECFM=FB)
+       11 //ENT00004 DD DSN=TM.CLLP.RDAB.ARQLOGRD.BASEFICA,
+          //       DISP=(OLD,DELETE,KEEP)
+       12 //SAI00004 DD DSN=MX.RDAB.ARQLOGRD.BASEFICA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,02),
+          //       SPACE=(TRK,(001200,0240),RLSE),
+          //       DCB=(MX.A,LRECL=0146,RECFM=FB)
+       13 //ENT00005 DD DSN=TM.CLLP.RDAB.ARQFONES.BASEFICA,
+          //       DISP=(OLD,DELETE,KEEP)
+       14 //SAI00005 DD DSN=MX.RDAB.ARQFONES.BASEFICA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000310,0062),RLSE),
+          //       DCB=(MX.A,LRECL=0044,RECFM=FB)
+       15 //ENT00006 DD DSN=TM.CLLP.RDAB.ARQSOCIO.BASEFICA,
+          //       DISP=(OLD,DELETE,KEEP)
+       16 //SAI00006 DD DSN=MX.RDAB.CADSOCIO.BASEFICA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000220,0044),RLSE),
+
+          //       DCB=(MX.A,LRECL=0197,RECFM=FB)
+       17 //PRINTER  DD SYSOUT=*
+       18 //SYSOUT   DD SYSOUT=*
+       19 //SYSUDUMP DD SYSOUT=Y
+          //*
+       20 //
+
+ICH70001I PRODSTR  LAST ACCESS AT 09:40:39 ON WEDNESDAY, JULY 16, 2014
+IEF236I ALLOC. FOR RDAB0215 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I C003 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ENT00001
+IGD101I SMS ALLOCATED TO DDNAME (SAI00001)
+        DSN (MX.RDAB.PESSJURI.CARGFICA.G1337V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1037
+IGD103I SMS ALLOCATED TO DDNAME ENT00002
+IGD101I SMS ALLOCATED TO DDNAME (SAI00002)
+        DSN (MX.RDAB.PESSFISI.CARGFICA.G1337V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM12Z6
+IGD103I SMS ALLOCATED TO DDNAME ENT00003
+IGD101I SMS ALLOCATED TO DDNAME (SAI00003)
+        DSN (MX.RDAB.CTACORR.BASEFICA.G1337V00           )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1010
+IGD103I SMS ALLOCATED TO DDNAME ENT00004
+IGD101I SMS ALLOCATED TO DDNAME (SAI00004)
+        DSN (MX.RDAB.ARQLOGRD.BASEFICA.G1337V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM13B7
+IGD103I SMS ALLOCATED TO DDNAME ENT00005
+IGD101I SMS ALLOCATED TO DDNAME (SAI00005)
+        DSN (MX.RDAB.ARQFONES.BASEFICA.G1337V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1014
+IGD103I SMS ALLOCATED TO DDNAME ENT00006
+IGD101I SMS ALLOCATED TO DDNAME (SAI00006)
+        DSN (MX.RDAB.CADSOCIO.BASEFICA.G0001V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1066
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL004I   ENT00001  Bufno=005  Dataset  menor  que 045 TRKS
+BUFL002I   ENT00001  TM.CLLP.RDAB.PESSJURI.CARGFICA
+BUFL013I   SAI00001  Nao Bufferizado. Alcancado Limite de Memoria
+BUFL011I   SAI00001  Memoria Solicitada(00682K)  Usada(0000168K) Below
+BUFL012I   SAI00001  Memoria Reservada (04096K)  Total(0004096K) Below
+BUFL002I   SAI00001  MX.RDAB.PESSJURI.CARGFICA.G1337V00
+BUFL014I   SAI00002  Bufno=005  Amode diferente da escolha do usuario
+BUFL014I   SAI00003  Bufno=005  Amode diferente da escolha do usuario
+BUFL014I   SAI00004  Bufno=005  Amode diferente da escolha do usuario
+BUFL014I   SAI00005  Bufno=005  Amode diferente da escolha do usuario
+BUFL014I   SAI00006  Bufno=005  Amode diferente da escolha do usuario
+IEF142I RDAB0215 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD105I TM.CLLP.RDAB.PESSJURI.CARGFICA               DELETED,   DDNAME=ENT00001
+IGD103I SMS ALLOCATED TO DDNAME SYS00001
+IGD104I SYS14197.T094041.RA000.RDAB0215.R0256675     RETAINED,  DDNAME=SYS00001
+IGD107I MX.RDAB.PESSJURI.CARGFICA.G1337V00           ROLLED IN, DDNAME=SAI00001
+IGD105I TM.CLLP.RDAB.PESSFISI.CARGFICA               DELETED,   DDNAME=ENT00002
+IGD103I SMS ALLOCATED TO DDNAME SYS00002
+IGD104I SYS14197.T094041.RA000.RDAB0215.R0256676     RETAINED,  DDNAME=SYS00002
+IGD107I MX.RDAB.PESSFISI.CARGFICA.G1337V00           ROLLED IN, DDNAME=SAI00002
+IGD105I TM.CLLP.RDAB.CTACORR.BASEFICA                DELETED,   DDNAME=ENT00003
+IGD103I SMS ALLOCATED TO DDNAME SYS00003
+IGD104I SYS14197.T094041.RA000.RDAB0215.R0256678     RETAINED,  DDNAME=SYS00003
+IGD107I MX.RDAB.CTACORR.BASEFICA.G1337V00            ROLLED IN, DDNAME=SAI00003
+IGD105I TM.CLLP.RDAB.ARQLOGRD.BASEFICA               DELETED,   DDNAME=ENT00004
+IGD103I SMS ALLOCATED TO DDNAME SYS00004
+IGD104I SYS14197.T094041.RA000.RDAB0215.R0256679     RETAINED,  DDNAME=SYS00004
+IGD107I MX.RDAB.ARQLOGRD.BASEFICA.G1337V00           ROLLED IN, DDNAME=SAI00004
+IGD105I TM.CLLP.RDAB.ARQFONES.BASEFICA               DELETED,   DDNAME=ENT00005
+IGD103I SMS ALLOCATED TO DDNAME SYS00005
+IGD104I SYS14197.T094041.RA000.RDAB0215.R0256681     RETAINED,  DDNAME=SYS00005
+IGD107I MX.RDAB.ARQFONES.BASEFICA.G1337V00           ROLLED IN, DDNAME=SAI00005
+IGD105I TM.CLLP.RDAB.ARQSOCIO.BASEFICA               DELETED,   DDNAME=ENT00006
+IGD107I MX.RDAB.CADSOCIO.BASEFICA.G0001V00           ROLLED IN, DDNAME=SAI00006
+IEF285I   PRODSTR.RDAB0215.JOB51491.D0000101.?         SYSOUT
+IEF285I   PRODSTR.RDAB0215.JOB51491.D0000102.?         SYSOUT
+IEF285I   PRODSTR.RDAB0215.JOB51491.D0000103.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 16-Jul-2014 09:40:39 AM
+Step  Num: 1              PGM  Name: PLAN2440     End:   16-Jul-2014 09:40:41 AM
+CPU (TCB): 00:00:00.06                            Storage below 16M:        300k
+CPU (SRB): 00:00:00.01                            Storage above 16M:          8k
+Trans Act: 00:00:00.99                            Service Units:           5,246
+Tape Mnts: 0                                      Total EXCPs:             3,850
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+C0BA D JOBLIB              1  23,476        7178 D ENT00001           16  27,945
+B8CF D SAI00001           15  27,945        71BF D ENT00002        1,008  27,810
+9732 D SAI00002        1,007  27,810        71BC D ENT00003          416  27,930
+B88C D SAI00003          415  27,930        71DF D ENT00004          326  27,886
+9514 D SAI00004          325  27,886        71BC D ENT00005           82  27,984
+BE90 D SAI00005           81  27,984        7198 D ENT00006           18  27,974
+BE15 D SAI00006           17  27,974
+
+Total DASD EXCPs:              3,727        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014197.0940
+IEF032I STEP/STEP1   /STOP  2014197.0940
+        CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+        VIRT:   300K  SYS:   368K  EXT:        8K  SYS:    10772K
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13M1C.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: RDAB0215       System ID: MZ1C        Submit: 16-Jul-2014 09:40:38 AM
+Job JESID: JOB51491       MVS level: SP7.1.3     Start:  16-Jul-2014 09:40:39 AM
+Job Class: A                                     End:    16-Jul-2014 09:40:41 AM
+CPU (TCB): 00:00:00.06                           Storage below 16M:         300k
+CPU (SRB): 00:00:00.01                           Storage above 16M:           8k
+Trans Act: 00:00:00.99                           Service Units:            5,246
+Tape Mnts: 0                                     Total EXCPs:              3,850
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: A299565
+Acct Info: RDAB,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/RDAB0215/START 2014197.0940
+IEF033I  JOB/RDAB0215/STOP  2014197.0940
+        CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+
+
+
+* RDAB0215 * PLANEJ. E CONTROLE DA PRODUCAO      *
+**************************************************
+* JOB=RDAB0215  STEP=STEP1     DATA=16/07/2014   *
+* LABEL=001/006  REGS.=00000004870 HORA=09.40.40 *
+* BLKSIZE=27945     LRECL=00081     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TM.CLLP.RDAB.PESSJURI.CARGFICA                 *
+* VOLSER=SM1S15                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* MX.RDAB.PESSJURI.CARGFICA.G1337V00             *
+* VOLSER=SM1037                                  *
+**************************************************
+**************************************************
+* JOB=RDAB0215  STEP=STEP1     DATA=16/07/2014   *
+* LABEL=002/006  REGS.=00000103631 HORA=09.40.40 *
+* BLKSIZE=27810     LRECL=00270     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TM.CLLP.RDAB.PESSFISI.CARGFICA                 *
+* VOLSER=SM1S07                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* MX.RDAB.PESSFISI.CARGFICA.G1337V00             *
+* VOLSER=SM12Z6                                  *
+**************************************************
+**************************************************
+* JOB=RDAB0215  STEP=STEP1     DATA=16/07/2014   *
+* LABEL=003/006  REGS.=00000118066 HORA=09.40.40 *
+* BLKSIZE=27930     LRECL=00098     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TM.CLLP.RDAB.CTACORR.BASEFICA                  *
+* VOLSER=SM1S01                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* MX.RDAB.CTACORR.BASEFICA.G1337V00              *
+* VOLSER=SM1010                                  *
+**************************************************
+**************************************************
+* JOB=RDAB0215  STEP=STEP1     DATA=16/07/2014   *
+* LABEL=004/006  REGS.=00000061900 HORA=09.40.41 *
+* BLKSIZE=27886     LRECL=00146     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQLOGRD.BASEFICA                 *
+* VOLSER=SM1S09                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* MX.RDAB.ARQLOGRD.BASEFICA.G1337V00             *
+* VOLSER=SM13B7                                  *
+**************************************************
+**************************************************
+* JOB=RDAB0215  STEP=STEP1     DATA=16/07/2014   *
+* LABEL=005/006  REGS.=00000051101 HORA=09.40.41 *
+* BLKSIZE=27984     LRECL=00044     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQFONES.BASEFICA                 *
+* VOLSER=SM1S01                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* MX.RDAB.ARQFONES.BASEFICA.G1337V00             *
+* VOLSER=SM1014                                  *
+**************************************************
+**************************************************
+* JOB=RDAB0215  STEP=STEP1     DATA=16/07/2014   *
+* LABEL=006/006  REGS.=00000002316 HORA=09.40.41 *
+* BLKSIZE=27974     LRECL=00197     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQSOCIO.BASEFICA                 *
+* VOLSER=SM1S16                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* MX.RDAB.CADSOCIO.BASEFICA.G0001V00             *
+* VOLSER=SM1066                                  *
+**************************************************

@@ -1,0 +1,46 @@
+//CLLP0857 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP0A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    SEPARAR AS CARTEIRAS NUMERICAS DAS ALFANUMERICAS             
+//* ***    CARTEIRA X(3) POSICAO 74                                     
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CADAVMOE(0),                                  
+//       DISP=SHR                                                       
+//SORTOUT1 DD DSN=MX.CLLP.CADAVMOE.CARTALF1(+1),                        
+//       DISP=(OLD,CATLG,DELETE),                                       
+//       UNIT=(DISCO,01),                                               
+//       SPACE=(TRK,(000100,0010),RLSE),                                
+//       DCB=(MX.A,LRECL=0187,RECFM=FB)                                 
+//SORTOUT2 DD DSN=MX.CLLP.ARQUFIMA.CARTNUM1(+1),                        
+//       DISP=(OLD,CATLG,DELETE),                                       
+//       UNIT=(DISCO,01),                                               
+//       SPACE=(TRK,(000100,0010),RLSE),                                
+//       DCB=(MX.A,LRECL=0187,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ OUTFIL INCLUDE=(74,3,ZD,NE,NUM),FNAMES=SORTOUT1                        
+ OUTFIL SAVE,FNAMES=SORTOUT2                                            
+ SORT FIELDS=COPY                                                       
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    CRIACAO DO ARQUIVO CADAVMOE QUE SERA LIDO NO                 
+//* ***    ALPHAVILLE NO JOB FIMA0805, VIA CANAL ESCON.                 
+//*                                                                     
+//SYSUT1   DD DSN=*STEP0A.SORTOUT2,                                     
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=TA.CLLP.FIMA.CADAVMOE,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0100,0100),RLSE),                                  
+//       DCB=(LRECL=0187,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=(Z,,AN01)                                          
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

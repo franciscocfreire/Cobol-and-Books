@@ -1,0 +1,345 @@
+********************************* TOP OF DATA **********************************
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E
+                                                                                
+11.32.29 JOB25042 ---- WEDNESDAY, 10 SEP 2014 ----                              
+11.32.29 JOB25042  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.            
+11.32.29 JOB25042  $EXIT006A  Job L17429Y  Jobid(JOB25042) alterado para CLASS=E
+11.32.31 JOB25042  ICH70001I M67777   LAST ACCESS AT 11:30:06 ON WEDNESDAY, SEPT
+11.32.31 JOB25042  $HASP373 L17429Y  STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+11.32.31 JOB25042  IEF403I L17429Y - STARTED - TIME=11.32.31                    
+11.32.31 JOB25042  -                                                --TIMINGS (M
+11.32.31 JOB25042  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+11.32.31 JOB25042  -L17429Y  STEP1                00    153     19    .00    .00
+11.32.31 JOB25042  +SRSI035I - Smart/RESTART Version 10.1.7 (G1) initialization 
+11.32.31 JOB25042  +SRSI055W - No RAINPUT file of profile options was detected  
+11.32.31 JOB25042  +SRSC122I - Smart/RESTART abends will be issued via User ABEN
+11.32.31 JOB25042  +SRSI039I - Subsequent messages will be directed to the SRSPR
+11.32.32 JOB25042  -L17429Y  STEP2                00    915    187    .00    .00
+11.32.32 JOB25042  IEF404I L17429Y - ENDED - TIME=11.32.32                      
+11.32.32 JOB25042  -L17429Y  ENDED.  NAME-C397220              TOTAL TCB CPU TIM
+11.32.32 JOB25042  $HASP395 L17429Y  ENDED                                      
+------ JES2 JOB STATISTICS ------                                               
+  10 SEP 2014 JOB EXECUTION DATE                                                
+           48 CARDS READ                                                        
+          339 SYSOUT PRINT RECORDS                                              
+            0 SYSOUT PUNCH RECORDS                                              
+           23 SYSOUT SPOOL KBYTES                                               
+         0.02 MINUTES EXECUTION TIME                                            
+        1 //L17429Y  JOB 'RECR,4120,PR32','C397220',MSGCLASS=E                  
+        2 //JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR                                
+        3 //         DD DSN=AV.BIBGERAL,DISP=SHR                                
+          //*        DD DSN=MQ2CM1.QSCM.USERAUTH,DISP=SHR                       
+          //*        DD DSN=SA.RDG2.SREST.CM1A.DCALOAD,DISP=SHR                 
+          //*        DD DSN=DB2CM.R2.DSNLOAD,DISP=SHR                           
+          //*        DD DSN=MQ2A2.QSA2.USERAUTH,DISP=SHR                        
+        4 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                  
+        5 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                           
+        6 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                           
+        7 //STEP1    EXEC PGM=RECR2IJF                                          
+          //*                                                                   
+          //* ***    *********************************************************  
+          //* ***    FORMATAR ARQUIVO DE AVISO DE COBRANCA INCLUINDO OS DADOS   
+          //* ***    NECESSARIOS PARA COMPOR O FORMULARIO.                      
+          //* ***    *********************************************************  
+          //*                                                                   
+          //* ***    INSTRUCOES PARA REPROCESSAMENTO CONSULTAR O JOB PA31A999.  
+          //*                                                                   
+        8 //EMODLAVS DD DSN=AD.BRQ.RECR.T7QO.JC247S0B.SCOBNOVO,                 
+          //       DISP=SHR                                                     
+        9 //SMODLAVS DD DSN=AD.BRQ.RECR.JC248S01.SMODLAVS,                      
+          //       DISP=(,CATLG,DELETE),                                        
+          //       UNIT=(DISCO,40),                                             
+          //       SPACE=(TRK,(25000,7500),RLSE),                               
+          //       DCB=(AD.A,LRECL=4000,RECFM=FB)                               
+       10 //SYSOUT   DD SYSOUT=*                                                
+       11 //SYSUDUMP DD SYSOUT=Y                                                
+         //*                                                                   
+      12 //STEP2    EXEC PGM=RECR2IHV                                          
+         //*                                                                   
+         //* ***    ********************************************************   
+         //* ***    ACESSAR O MODULO DO ECOR PARA ENVIAR O ARQUIVO DE AVISO    
+         //* ***    DE COBRANCA.                                               
+         //* ***    ********************************************************   
+         //*                                                                   
+      13 //EMODLAVS DD DSN=*.STEP1.SMODLAVS,                                   
+         //       DISP=SHR                                                     
+      14 //SMODLAVS DD DSN=AD.BRQ.RECR.JC248S02.SMODLAVS,                      
+         //       DISP=(,CATLG,CATLG),                                         
+         //       UNIT=(DISCO,40),                                             
+         //       SPACE=(TRK,(25000,7500)),                                    
+         //       DCB=(AD.A,LRECL=1000,RECFM=FB)                               
+         //*#RAINPUT  DD *                                                     
+         //*#REST_NEWDSN(RETURN)                                               
+      15 //SYSOUT   DD SYSOUT=*   
+       16 //SYSUDUMP DD SYSOUT=Y                                                
+          //*                                                                   
+ICH70001I M67777   LAST ACCESS AT 11:30:06 ON WEDNESDAY, SEPTEMBER 10, 2014     
+IEF236I ALLOC. FOR L17429Y STEP1                                                
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                          
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IEF237I D905 ALLOCATED TO                                                       
+IEF237I D036 ALLOCATED TO                                                       
+IGD103I SMS ALLOCATED TO DDNAME EMODLAVS                                        
+IGD101I SMS ALLOCATED TO DDNAME (SMODLAVS)                                      
+        DSN (AD.BRQ.RECR.JC248S01.SMODLAVS               )                      
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)             
+        VOL SER NOS= SA2DAU                                                     
+IEF237I JES2 ALLOCATED TO SYSOUT                                                
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                              
+IEF142I L17429Y STEP1 - STEP WAS EXECUTED - COND CODE 0000                      
+IGD106I AV.BIBGERTT                                  PASSED,    DDNAME=JOBLIB   
+	  
+IGD106I AV.BIBGERTT                                  PASSED,    DDNAME=JOBLIB   
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=         
+IGD106I SA.RDG2.SREST.AL2.DCALOAD                    PASSED,    DDNAME=         
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED                   
+IEF285I   VOL SER NOS= ST2AL2.                                                  
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                   
+IEF285I   VOL SER NOS= R13A2A.                                                  
+IGD104I AD.BRQ.RECR.T7QO.JC247S0B.SCOBNOVO           RETAINED,  DDNAME=EMODLAVS 
+IGD104I AD.BRQ.RECR.JC248S01.SMODLAVS                RETAINED,  DDNAME=SMODLAVS 
+IEF285I   M67777.L17429Y.JOB25042.D0000101.?           SYSOUT                   
+IEF285I   M67777.L17429Y.JOB25042.D0000102.?           SYSOUT                   
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s                    
+                                                                                
+Step Name: STEP1          Cond Code: 0000         Start: 10-Sep-2014 11:32:31 AM
+Step  Num: 1              PGM  Name: RECR2IJF     End:   10-Sep-2014 11:32:31 AM
+CPU (TCB): 00:00:00.05                            Storage below 16M:        440k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      5,004k
+Trans Act: 00:00:00.19                            Service Units:           2,023
+Tape Mnts: 0                                      Total EXCPs:               153
+                                                                                
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB             89  23,200        D7B6 D JOBLIB              2  23,200
+D0A2 D EMODLAVS           13  27,000        D6DA D SMODLAVS            9  24,000
+                                                                                
+                                                                                
+Total DASD EXCPs:                113        Total Tape EXCPs:                  0
+                                                                                
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014253.1132                                        
+IEF032I STEP/STEP1   /STOP  2014253.1132                                        
+        CPU:     0 HR  00 MIN  00.05 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+        VIRT:   440K  SYS:   412K  EXT:     5004K  SYS:    11456K               
+IEF236I ALLOC. FOR L17429Y STEP2                                                
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                          
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IEF237I D905 ALLOCATED TO                                                       
+IEF237I D036 ALLOCATED TO                                                       
+IGD103I SMS ALLOCATED TO DDNAME EMODLAVS                                        
+IGD101I SMS ALLOCATED TO DDNAME (SMODLAVS)                                      
+        DSN (AD.BRQ.RECR.JC248S02.SMODLAVS               )                      
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)             
+        VOL SER NOS= SA2DCG                                                     
+IEF237I JES2 ALLOCATED TO SYSOUT                                                
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                              
+SRSI035I - Smart/RESTART Version 10.1.7 (G1) initialization in progress         
+SRSI055W - No RAINPUT file of profile options was detected                      
+SRSC122I - Smart/RESTART abends will be issued via User ABEND code 2005         
+IEF237I JES2 ALLOCATED TO SRSPRINT                                              
+SRSI039I - Subsequent messages will be directed to the SRSPRINT file            
+IGD105I SYS14253.T113231.RA000.L17429Y.$$RAIDIN.H02  DELETED,   DDNAME=$$RAIDIN 
+IGD105I SYS14253.T113231.RA000.L17429Y.$$RAIDOU.H02  DELETED,   DDNAME=$$RAIDOU 
+IGD105I SYS14253.T113232.RA000.L17429Y.$$RAIDIN.H02  DELETED,   DDNAME=$$RAIDIN 
+IGD105I SYS14253.T113232.RA000.L17429Y.$$RAIDOU.H02  DELETED,   DDNAME=$$RAIDOU 
+IGD104I AV.TEMP.L17429Y.STEP2.L2014253.C1132321      RETAINED,  DDNAME=SRSLOGR  
+IGD103I SMS ALLOCATED TO DDNAME SYS00001                                        
+IGD104I AV.TEMP.L17429Y.STEP2.L2014253.C1132321      RETAINED,  DDNAME=SYS00001 
+IGD105I SYS14253.T113232.RA000.L17429Y.$$RAIDIN.H02  DELETED,   DDNAME=$$RAIDIN 
+IGD105I SYS14253.T113232.RA000.L17429Y.$$RAIDOU.H02  DELETED,   DDNAME=$$RAIDOU 
+IGD104I AV.TEMP.L17429Y.STEP2.H2014253.C1132319      RETAINED,  DDNAME=SRSCHECK 
+IGD103I SMS ALLOCATED TO DDNAME SYS00002                                        
+IGD104I AV.TEMP.L17429Y.STEP2.H2014253.C1132319      RETAINED,  DDNAME=SYS00002 
+IGD105I SYS14253.T113232.RA000.L17429Y.$$RAIDIN.H02  DELETED,   DDNAME=$$RAIDIN 
+IGD105I SYS14253.T113232.RA000.L17429Y.$$RAIDOU.H02  DELETED,   DDNAME=$$RAIDOU 
+IEF142I L17429Y STEP2 - STEP WAS EXECUTED - COND CODE 0000                      
+IGD104I AD.BRQ.RECR.JC248S01.SMODLAVS                RETAINED,  DDNAME=EMODLAVS 
+IGD104I AD.BRQ.RECR.JC248S02.SMODLAVS                RETAINED,  DDNAME=SMODLAVS 
+IEF285I   M67777.L17429Y.JOB25042.D0000103.?           SYSOUT                   
+IEF285I   M67777.L17429Y.JOB25042.D0000104.?           SYSOUT                   
+IEF285I   M67777.L17429Y.JOB25042.D0000105.?           SYSOUT                   
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s                    
+                                                                                
+Step Name: STEP2          Cond Code: 0000         Start: 10-Sep-2014 11:32:31 AM
+Step  Num: 2              PGM  Name: RECR2IHV     End:   10-Sep-2014 11:32:32 AM
+CPU (TCB): 00:00:00.38                            Storage below 16M:      1,236k
+CPU (SRB): 00:00:00.01                            Storage above 16M:      5,780k
+Trans Act: 00:00:01.12                            Service Units:          15,584
+Tape Mnts: 0                                      Total EXCPs:               915
+                                                                                
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB            202  23,200        D7B6 D JOBLIB            265  23,200
+D6DA D EMODLAVS            4  24,000        D24B D $$RAIDIN            3   1,250
+D4A7 D $$RAIDOU            3   1,250        D4D6 D $$RAIDIN            3   1,250
+D2A7 D $$RAIDOU            3   1,250        D0F5 D SRSLOGR             4       0
+D47E D $$RAIDIN            3   1,250        D6FA D $$RAIDOU            3   1,250
+D052 D SRSCHECK          139       0        D4D0 D $$RAIDIN            3   1,250
+D468 D $$RAIDOU            3   1,250                                            
+                                                                                
+Total DASD EXCPs:                638        Total Tape EXCPs:                  0
+                                                                                
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP2   /START 2014253.1132                                        
+IEF032I STEP/STEP2   /STOP  2014253.1132                                        
+        CPU:     0 HR  00 MIN  00.38 SEC    SRB:     0 HR  00 MIN  00.01 SEC    
+        VIRT:  1236K  SYS:   412K  EXT:     5780K  SYS:    12280K               
+IGD104I AV.BIBGERTT                                  RETAINED,  DDNAME=JOBLIB   
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=         
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=         
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT                     
+IEF285I   VOL SER NOS= ST2AL2.                                                  
+IEF285I   SYS1.CEE.SCEERUN                             KEPT                     
+IEF285I   VOL SER NOS= R13A2A.                                                  
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s                     
+                                                                                
+Job  Name: L17429Y        System ID: AL2C        Submit: 10-Sep-2014 11:32:28 AM
+Job JESID: JOB25042       MVS level: SP7.1.3     Start:  10-Sep-2014 11:32:31 AM
+Job Class: E                                     End:    10-Sep-2014 11:32:32 AM
+CPU (TCB): 00:00:00.43                           Storage below 16M:       1,236k
+CPU (SRB): 00:00:00.01                           Storage above 16M:       5,780k
+Trans Act: 00:00:01.30                           Service Units:           17,607
+Tape Mnts: 0                                     Total EXCPs:              1,068
+                                                                                
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+                                                                                
+RACF User: M67777                           Programmer: C397220                 
+Acct Info: RECR,4120,PR32                                                       
+                                                                                
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/L17429Y /START 2014253.1132                                        
+IEF033I  JOB/L17429Y /STOP  2014253.1132                                        
+        CPU:     0 HR  00 MIN  00.43 SEC    SRB:     0 HR  00 MIN  00.01 SEC    
+RECR2IJF - INICIO DO PROCESSAMENTO                                              
+************* PROGRAMA RECR2IJF *************                                   
+*                                           *                                   
+* REGISTROS LIDOS EMODLAVS...:          300 *                                   
+*                                           *                                   
+* REGISTROS GRAVADOS SMODLAVS:           51 *                                   
+*                                           *                                   
+*********************************************                                   
+************* PROGRAMA RECR2IJF *************                                   
+*                                           *                                   
+*  PROGRAMA RECR2IJF ENCERRADO COM SUCESSO  *                                   
+*                                           *                                   
+************* PROGRAMA RECR2IJF *************                                   
+RECR2IHV - PROCESSAMENTO NORMAL (SEM RESTART)                                   
+************* PROGRAMA RECR2IHV *************                                   
+*                                           *                                   
+* REGISTROS LIDOS EMODLAVS...:            1 *                                   
+*                                           *                                   
+* REGISTROS GRAVADOS SMODLAVS:            0 *                                   
+*                                           *                                   
+* ACESSOS REALIZADOS AO ECOR.:            0 *                                   
+*                                           *                                   
+*********************************************                                   
+11:32:31  .                                                                     
+11:32:31  SRSI003I - Smart/RESTART Version 10 Release 1 Modification 7 Level G1 
+11:32:31  SRSI003I - (c) Relational Architects International - All rights reserv
+11:32:31  SRSI003I -                                                            
+11:32:31  SRSI003I - Job Name = L17429Y Step Name = STEP2 Procstep Name =       
+11:32:31  SRSI003I - Run Date = 2014.253 : 09/10/2014 Run Time = 11.32.31       
+11:32:31  SRSI030I - A JID was not explicitly specified in the RAIINPUT profile 
+11:32:31  SRSI030I - Internal JOBID has been set to the current job name        
+11:32:31  SRSI050I - Connection to RAI server RAI0 successful                   
+11:32:31  .                                                                     
+11:32:31  DCA080I - Smart/RRSAF Version 10 Release 1 Modification 7 Level A1    
+11:32:31  DCA080I - (c) Relational Architects International - All rights reserve
+11:32:31  DCA080I -                                                             
+11:32:31  DCA080I - Job Name = L17429Y Step Name = STEP2 Procstep Name =        
+11:32:31  DCA080I - Run Date = 2014.253 : 09/10/2014 Run Time = 11.32.31        
+11:32:31  .                                                                     
+11:32:31  DCA123I - Smart/RRSAF Version 10.1.7 (A1) connected to DB2 via RRSAF  
+11:32:31  DCA125I - A DB2 accounting record will be written when program exits  
+11:32:31  DCA011I - Thread created for application plan RECR2IHV                
+11:32:31  SRSI117W - No DDNAME of SRSCHECK was found - will assume an initial ru
+11:32:32  SRSI226I - New checkpoint dataset :                                   
+11:32:32  SRSI226I - Data Set Name AV.TEMP.L17429Y.STEP2.H2014253.C1132319      
+11:32:32  SRSI104I - Checkpoint file successfully opened for random access      
+11:32:32  SRSI120I - Job ID L17429Y assigned for this jobstep                   
+11:32:32  SRSI108I - Formatting of Checkpoint blocks sets is complete           
+11:32:32  SRSI184I - Checkpoint row INSERT committed prior to any application RM
+11:32:32  SRSI138I - Smart/RESTART detects an INITIAL run of JOB L17429Y        
+11:32:32  SRSL016I - New LOGGER dataset :                                       
+11:32:32  SRSL016I - Data Set Name AV.TEMP.L17429Y.STEP2.L2014253.C1132321      
+11:32:32  SRSL003I - Invoking Smart/LOGGER to initiate file journaling          
+11:32:32  SRL500I - Smart/LOGGER Version 1 Release 2 Modification 7 Level A1    
+11:32:32  SRL501I - (c) Relational Architects , Inc - All rights reserved       
+11:32:32  SRL502I -                                                             
+11:32:32  SRL503I - Job Name = L17429Y Step Name = STEP2 Procstep Name =        
+11:32:32  SRL504I - Run Date = 2014.253 : 09/10/2014 Run Time = 11.32.32        
+11:32:32  SRL505I -                                                             
+11:32:32  SRL018I - Job ID L17429Y is assigned to this jobstep                  
+11:32:32  SRL012I - Logger SRSLOGR DSN = AV.TEMP.L17429Y.STEP2.L2014253.C1132321
+11:32:32  and ready for work                                                    
+11:32:32  SRL254W - Initial run is forced by RunTime parameters - LOG dataset wi
+11:32:32  erased                                                                
+11:32:32  SRS336I - CKRS0100 was compiled using COBOL for MVS & VM Version 01020
+11:32:32  SRS336I - on 09/10/2014 at 08:46:44 . PGM received control through a n
+11:32:32  SRS336I - call contains 00479 Procedure and 00827 Data Division statem
+11:32:32  SRS915I - Manual API Mode Environment Initializing for CSECT CKRS0100 
+11:32:32  SRS438I - Application specified a RAM area at 25CA5705 for 00010 bytes
+11:32:32  SRS361I - All QSAM files not in exclusion list will be managed by RSAM
+11:32:32  .                                                                     
+11:32:32  SRS421W - No Repositionable IO has been detected as of this checkpoint
+11:32:32  SRL247I - CHECKPNT ..Insert ..Delete ..Update ......IO ..AvgCPU ..TotC
+11:32:32  SRL221I - Checkpoint 00000001 successfully completed                  
+11:32:32  SRS031I - CHECKPOINT 0000001 is complete. CHECKPOINT ID is 0000001    
+11:32:32  SRS616W - An Immediate Checkpoint request was issued before an applica
+11:32:32  SRS616W - COMMIT. ROLLBACK redirection inactive until the first applic
+11:32:32  COMMIT                                                                
+11:32:32  SRS615I - Baseline COMMIT processing completed successfully           
+11:32:32  SRS999I - Smart/RESTART Initialized successfully                      
+11:32:32  SRSC136I - RATE checkpointing criterion has been changed to 0000005   
+11:32:32  SRSC136I - logical checkpoints per physical checkpoint                
+11:32:32  SRS272I - The OPEN DCB parameter list for file SYSOUT was a LONG FORM 
+11:32:32  .                                                                     
+11:32:32  SRS432I - An application request to OPEN file EMODLAVS was detected by
+11:32:32  SRS024I - File EMODLAVS currently consists of 01 volumes and 01 datase
+11:32:32  SRS024I - EMODLAVS AD.BRQ.RECR.JC248S01.SMODLAVS                SA2DAU
+11:32:32  SRS023I - EMODLAVS INPUT  04000   24000 FB    PS      004 No          
+11:32:32  SRS606I - Transparent OPEN for file EMODLAVS from module CKRS0100 comp
+11:32:32  .                                                                     
+11:32:32  SRS432I - An application request to OPEN file SMODLAVS was detected by
+11:32:32  SRS024I - File SMODLAVS currently consists of 01 volumes and 01 datase
+11:32:32  SRS024I - SMODLAVS AD.BRQ.RECR.JC248S02.SMODLAVS                SA2DCG
+11:32:32  SRS023I - SMODLAVS OUTPUT 01000   27000 FB    PS      004 No          
+11:32:32  SRS606I - Transparent OPEN for file SMODLAVS from module CKRS0100 comp
+11:32:32  SRS520I - An application request to close file EMODLAVS was detected b
+11:32:32  SRS487I - Disk file EMODLAVS  trk 0000000 blk 000 offset 0004000 rec 0
+11:32:32  SRS493I - 000000000 records at CKPT and 000000001 at CLOSE for EMODLAV
+11:32:32  SRS498I - File EMODLAVS successfully Closed                           
+11:32:32  SRS520I - An application request to close file SMODLAVS was detected b
+11:32:32  SRS487I - Disk file SMODLAVS  trk 0000000 blk 000 offset 0000000 rec 0
+11:32:32  SRS493I - 000000000 records at CKPT and 000000000 at CLOSE for SMODLAV
+11:32:32  SRS498I - File SMODLAVS successfully Closed                           
+11:32:32  SRST096I - Implicit Termination in progress                           
+11:32:32  SRL255I - Smart/LOGGER termination is NORMAL..                        
+11:32:32  SRL257I - Summary of all LUWs activities by DDNAME :                  
+11:32:32  SRL247I - FINAL... ..Insert ..Delete ..Update ......IO ..AvgCPU ..TotC
+11:32:32  SRL016I - Logger SRSLOGR was freed and DSN =                          
+11:32:32  AV.TEMP.L17429Y.STEP2.L2014253.C1132321 was deleted                   
+11:32:32  SRL011I - Logger SRSLOGR was closed                                   
+11:32:32  SRL215I - Exit processing completed                                   
+11:32:32  SRST092I - One non - application commit issued prior to user coded SQL
+11:32:32  SRST052I - A total of 000000001 LOGICAL commit requests were processed
+11:32:32  SRST052I - A total of 000000001 PHYSICAL commit requests were processe
+11:32:32  SRST065I - Total of 000000001 calls were made to module CKRS0100 this 
+11:32:32  SRSI111I - Smart/RESTART terminated successfully.                     
+11:32:32  SRSI111I - The checkpoint file has been erased                        
+11:32:32  SRST109I - The checkpoint file has been deleted                       
+11:32:32  DCA014I - Thread for application plan RECR2IHV has terminated NORMALLY
+11:32:32  DCA015I - Smart/RRSAF has disconnected from DB2 subsystem DB2         
+11:32:32  DCA016I - Smart/RRSAF processing completed                            
+11:32:32  SRST015I - Smart/RESTART has terminated normally                      
+******************************** BOTTOM OF DATA ********************************
+                                                                                
+                                                                                

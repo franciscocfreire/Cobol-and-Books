@@ -1,0 +1,15 @@
+
+CLLP2733                             PENDENCIAS BAIXADAS   EM   LP/MO   -  LPCLB008  COM CORRESPONDENTE           PAG.     1
+                                                                                                                          15/01/2015
+                                                        MOVIMENTO 09/07/2012
+              AGENCIA -       -
+              CONTA                                   DATA        DATA
+              CORRENTE  CARTEIRA     CONTRATO   VENCIMENTO   DA   BAIXA  TIPO DE SEGURO  STATUS DO SEGURO
+              --------  --------     --------  -----------  -----------  --------------  -------------------
+
+                        TOTALIZACAO
+           ---------------------------------------------
+           ARQUIVO  PRESTAMISTAS ..........:           2.000
+           LPCLB008 - LIDOS ...............:           1.710
+           REGISTROS ATUALIZADOS ..........:           1.710
+           LPLCB008 - SEM CORRESPONDENTE ..:       2.000

@@ -1,0 +1,28 @@
+      =====================================================        
+      FAVOR ALTERAR O JOB CLLPA016, CONFORME INDICA ABAIXO:        
+      =====================================================    
+	  
+	(1) - Incluir STEP7A apos STEP7
+	
+//STEP7A    EXEC SORTD                                  
+//*                                                     
+//* ***    COPIAR ARQUIVOS                              
+//*                                                     
+//SORTIN   DD DSN=*.STEP07.MOVTOGO,
+//       DISP=SHR                                       
+//MOVTOGO  DD DSN=MX.CLLP.BANKPAR.JA016S07.MOV5695.LEI(+1), 
+//       DISP=(,CATLG,DELETE),                 
+//       UNIT=DISCO,                           
+//       SPACE=(TRK,(000070,0014),RLSE),       
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)        
+//SYSIN    DD *                                                        
+ SORT FIELDS=COPY                                                       
+ OUTFIL OUTREC=(1,575,X'000000000C',X'000000000000000C',                
+                X'000000000000000C',X'000000000000000C',                
+                X'0000000000000C',X'0000000000000C',                    
+                X'00000000000000000C',X'00000000000000000C',39C' ')     
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                 
+//SYSOUT   DD SYSOUT=*                                     
+//SYSUDUMP DD SYSOUT=Y                                     
+//*                                                        

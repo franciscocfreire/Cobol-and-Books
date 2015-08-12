@@ -1,0 +1,666 @@
+      *---------------------------------------------------------------*         
+      *  NOME INC              -DDNAME-                LENGTH   1982  *         
+      *  I#IMAGPU              MVPUTTER                SISTEMA  WCAC  *         
+      *---------------------------------------------------------------*         
+      *  DESCRICAO: ARQUIVO CONFERENCIA AUTOMATICA - LAYOUT PUTTER    *         
+      *---------------------------------------------------------------*         
+      *                                                                         
+       01      IMAGPU-REG                          PIC X(1982).                 
+      *                                                                         
+      *---------------------------------------------------------------*         
+      *        DEFINICAO DO HEADER                                    *         
+      *---------------------------------------------------------------*         
+      *                                                                         
+       01      IMAGPU-REG-HDR         REDEFINES    IMAGPU-REG.                  
+      *                                                                         
+      *---     CAMARA COMPE ORIGEM HEADER                ---*0001/0003*         
+      *                                                                         
+           05  IMAGPU-CCMARA-ORIG-HDR-X.                                        
+               10  IMAGPU-CCMARA-ORIG-HDR          PIC 9(003).                  
+      *                                                                         
+      *---     NOME DO ARQUIVO                           ---*0004/0009*         
+      *        FIXO = PUTTER                                                    
+           05  IMAGPU-NOME-ARQ-HDR                 PIC X(006).                  
+      *                                                                         
+      *---     BANCO DESTINATARIO MOVTO HEADER           ---*0010/0012*         
+           05  IMAGPU-CBCO-DEST-HDR-X.                                          
+               10  IMAGPU-CBCO-DEST-HDR            PIC 9(003).                  
+      *                                                                         
+      *---     NR. VERSAO DO ARQUIVO                     ---*0013/0018*         
+           05  IMAGPU-NR-VERSAO-HDR-X.                                          
+               10  IMAGPU-NR-VERSAO-HDR            PIC 9(006).                  
+               10  IMAGPU-NR-VERSAO-HDR-R          REDEFINES                    
+                   IMAGPU-NR-VERSAO-HDR.                                        
+                   15  IMAGPU-CCMARA-ORIG-H        PIC 9(003).                  
+                   15  IMAGPU-NR-VERSAO-H          PIC 9(003).                  
+      *                                                                         
+      *---     DATA MOVIMENTO HEADER                     ---*0019/0026          
+      *        FORMATO = AAAAMMDD                                               
+           05  IMAGPU-DMOVTO-HDR-X.                                             
+               10  IMAGPU-DMOVTO-HDR               PIC 9(008).                  
+      *                                                                         
+      *---     VAGO                                      ---*0027/1806*         
+           05  IMAGPU-VAGO-01                      PIC X(1780).                 
+      *                                                                         
+      *---     SEQUENCIA REG ARQ HEADER                  ---*1807/1814*         
+           05  IMAGPU-CSEQ-REG-HDR-X.                                           
+               10  IMAGPU-CSEQ-REG-HDR             PIC 9(008).                  
+      *                                                                         
+      *---     EXPANSAO HEADER                           ---*1815/1982*         
+           05  IMAGPU-EXPANSAO-HDR                 PIC X(168).                  
+      *                                                                         
+      *---------------------------------------------------------------*         
+      *        DEFINICAO DO DETALHE                                   *         
+      *---------------------------------------------------------------*         
+      *                                                                         
+       01      IMAGPU-REG-DETALHE     REDEFINES    IMAGPU-REG.                  
+      *                                                                         
+      *---     CODIGO DO DOC REF NUMBER                  ---*0001/0030*         
+           05  IMAGPU-CDOC-REF-NUMBER              PIC X(030).                  
+           05  IMAGPU-CDOC-REF-NUMBER-R            REDEFINES                    
+               IMAGPU-CDOC-REF-NUMBER.                                          
+      *                                                                         
+      *---     CODIGO AGENCIA DESTINATARIO CMC7          ---*0001/0004*         
+               10  IMAGPU-CAG-DSTNAT-X.                                         
+                   15  IMAGPU-CAG-DSTNAT           PIC 9(004).                  
+      *                                                                         
+      *---     NR CONTA CORRENTE DESTINATARIO CMC7       ---*0005/0010*         
+               10  IMAGPU-CCTA-DSTNAT-X.                                        
+                   15  IMAGPU-CCTA-DSTNAT          PIC 9(006).                  
+      *                                                                         
+      *---     PARTE FINAL DOC REF NUMBER                ---*0011/0030*         
+               10  IMAGPU-CDOC-REF-NUMBER-FINAL    PIC X(020).                  
+      *                                                                         
+      *---     IDENTIFICACAO DO SCANNER DE CAPTURA       ---*0031/0038*         
+           05  IMAGPU-IDTF-SCANNER                 PIC X(008).                  
+      *                                                                         
+      *---     DATA DA CAPTURA DA IMAGEM                 ---*0039/0046*         
+      *        FORMATO = AAAAMMDD                                               
+           05  IMAGPU-DIMAG-CAPTURA-X.                                          
+               10  IMAGPU-DIMAG-CAPTURA            PIC 9(008).                  
+      *                                                                         
+      *---     DATA DE PROCESSAMENTO                     ---*0047/0054*         
+      *        FORMATO = AAAAMMDD                                               
+           05  IMAGPU-DPROC-CHEQ-X.                                             
+               10  IMAGPU-DPROC-CHEQ               PIC 9(008).                  
+      *                                                                         
+      *---     PRIORIDADE DO DOCUMENTO                   ---*0055/0057*         
+           05  IMAGPU-DOCTO-PRIOR-X.                                            
+               10  IMAGPU-DOCTO-PRIOR              PIC 9(003).                  
+      *                                                                         
+      *---     NR CHEQUE                                 ---*0058/0063*         
+           05  IMAGPU-CREG-CHEQUE-X.                                            
+               10  IMAGPU-CREG-CHEQUE              PIC 9(006).                  
+      *                                                                         
+      *---     CODIGO BANCO SACADO                       ---*0064/0066*         
+           05  IMAGPU-CBCO-SACADO-X.                                            
+               10  IMAGPU-CBCO-SACADO              PIC 9(003).                  
+      *                                                                         
+      *---     CODIGO AGENCIA DO SACADO                  ---*0067/0070*         
+           05  IMAGPU-CAG-SACADO-X.                                             
+               10  IMAGPU-CAG-SACADO               PIC 9(004).                  
+      *                                                                         
+      *---     CODIGO BANCO APRESENTANTE                 ---*0071/0073*         
+           05  IMAGPU-CBCO-APRES-CHQ-X.                                         
+               10  IMAGPU-CBCO-APRES-CHQ           PIC 9(003).                  
+      *                                                                         
+      *---     AGENCIA ACOLHEDORA CHEQUE                 ---*0074/0077*         
+           05  IMAGPU-CAG-ACOLH-CHQ-X.                                          
+               10  IMAGPU-CAG-ACOLH-CHQ            PIC 9(004).                  
+      *                                                                         
+      *---     COD DA CONTA ARMAZENADA                   ---*0078/0097*         
+           05  IMAGPU-CDOC-ACCOUNT                 PIC X(020).                  
+           05  IMAGPU-CDOC-ACCOUNT-R               REDEFINES                    
+               IMAGPU-CDOC-ACCOUNT.                                             
+      *                                                                         
+      *---     AGENCIA TRAG                              ---*0078/0087*         
+               10  IMAGPU-CAG-TRAG-X.                                           
+                   15  IMAGPU-VAGO-01              PIC 9(005).                  
+                   15  IMAGPU-CAG-TRAG             PIC 9(005).                  
+      *                                                                         
+      *---     CONTA CORRENTE TRAG SEM DV                ---*0088/0097*         
+               10  IMAGPU-CCTA-CORR-TRAG-X.                                     
+                   15  IMAGPU-CCTA-CORR-TRAG       PIC 9(010).                  
+      *                                                                         
+      *---     NUMERO DA CONTA DO DOCUMENTO              ---*0098/0107*         
+           05  IMAGPU-NCTA-ACCOUNT                 PIC X(010).                  
+           05  IMAGPU-NCTA-ACCOUNT-R               REDEFINES                    
+               IMAGPU-NCTA-ACCOUNT.                                             
+      *                                                                         
+      *---     VAGO                                      ---*0098/0100*         
+               10  IMAGPU-VAGO-03                  PIC X(003).                  
+      *                                                                         
+      *---     CONTA CORRENTE DA SACADA TRAG             ---*0101/0106*         
+               10  IMAGPU-CCTA-CORR-SACADA-TRAG-X.                              
+                   15  IMAGPU-CCTA-CORR-SACADA-TRAG    PIC 9(006).              
+      *                                                                         
+      *---     DIGITO CONTA SACADA TRAG                  ---*0107/0107*         
+               10  IMAGPU-CDIG-CCTA-SACADA-TRAG-X.                              
+                   15  IMAGPU-CDIG-CCTA-SACADA-TRAG    PIC 9(001).              
+      *                                                                         
+      *---     TIPO DE CLIENTE                           ---*0108/0108*         
+      *        1 = PESSOA FISICA                                                
+      *        2 = PESSOA JURIDICA                                              
+      *        3 = OUTRAS                                                       
+           05  IMAGPU-CIND-TCLI-X.                                              
+               10  IMAGPU-CIND-TCLI                PIC 9(001).                  
+      *                                                                         
+      *---     CODIGO MOEDA                              ---*0109/0111*         
+      *        FIXO = BRL                                                       
+           05  IMAGPU-COD-MOEDA                    PIC X(003).                  
+      *                                                                         
+      *---     VALOR DO CHEQUE                           ---*0112/0124*         
+           05  IMAGPU-VCHEQ-COMPE-X.                                            
+               10  IMAGPU-VCHEQ-COMPE              PIC 9(013).                  
+      *                                                                         
+      *---     CODIGO MOEDA LOCAL                        ---*0125/0127*         
+           05  IMAGPU-COD-MOEDA-LOC                PIC X(003).                  
+      *                                                                         
+      *---     VALOR DO CHEQUE CONVERTIDO                ---*0128/0140*         
+           05  IMAGPU-VCHEQ-COMPE-CONV-X.                                       
+               10  IMAGPU-VCHEQ-COMPE-CONV         PIC 9(013).                  
+      *                                                                         
+      *---     DATA DO MOVIMENTO                         ---*0141/0148*         
+      *        FORMATO = AAAAMMDD                                               
+           05  IMAGPU-DMOVTO-CHEQ-X.                                            
+               10  IMAGPU-DMOVTO-CHEQ              PIC 9(008).                  
+      *                                                                         
+      *---     COD TRANSACAO P/ IDENT DIF TIPOS DE DOC   ---*0149/0150*         
+           05  IMAGPU-CTXN                         PIC X(002).                  
+      *                                                                         
+      *---     VERSAO DO CORE DA INTERFACE PUTTER        ---*0151/0156*         
+           05  IMAGPU-VERSAO-CORE                  PIC X(006).                  
+      *                                                                         
+      *---     REG DATA DE ENTRADA NO SIGNPLUS           ---*0157/0182*         
+           05  IMAGPU-TIME-IN                      PIC X(026).                  
+      *                                                                         
+      *---     REG DATA DE SAIDA   NO SIGNPLUS           ---*0183/0208*         
+           05  IMAGPU-TIME-OUT                     PIC X(026).                  
+      *                                                                         
+      *---     RESULT 1 DO GETTER: CONTA EXITE           ---*0209/0209*         
+      *        '0' = SIM                                                        
+      *        '1' = NAO                                                        
+           05  IMAGPU-GTR1-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 1 DO GETTER        ---*0210/0229*         
+           05  IMAGPU-GTR1-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 2 DO GETTER: DADOS INCONSISTENTES  ---*0230/0231*         
+      *        '1' = ENCONTRADOS                                                
+      *        ' ' = DADOS OK                                                   
+           05  IMAGPU-GTR2-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 2 DO GETTER        ---*0232/0250*         
+           05  IMAGPU-GTR2-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 3 DO GETTER: FAIXA PRE-DEFINIDA    ---*0251/0251*         
+      *        '1' = VALOR DO DOCUMENTO FORA DA FAIXA PRE-DEFINIDA              
+      *        ' ' = VALOR DO DOCUMENTO DENTRO DA FAIXA PRE-DEFINIDA            
+           05  IMAGPU-GTR3-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 3 DO GETTER        ---*0252/0271*         
+           05  IMAGPU-GTR3-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 4 DO GETTER: DISP DA IMAGEM        ---*0272/0272*         
+      *        '1' = IMAGEM NAO DISPONIVEL                                      
+      *        ' ' = IMAGEM OK                                                  
+           05  IMAGPU-GTR4-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 4 DO GETTER        ---*0273/0292*         
+           05  IMAGPU-GTR4-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 5 DO GETTER:                       ---*0293/0293*         
+      *        '1' = IMAGEM CORROMPIDA OU FORMATO ERRADO                        
+      *        ' ' = IMAGEM OK                                                  
+           05  IMAGPU-GTR5-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 5 DO GETTER        ---*0294/0313*         
+           05  IMAGPU-GTR5-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 6 DO GETTER: TAMANHO PADRAO        ---*0314/0314*         
+      *        '1' = IMAGEM COM TAMANHO FORA DE PADRAO                          
+      *        ' ' = IAMGEM OK                                                  
+           05  IMAGPU-GTR6-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 6 DO GETTER        ---*0315/0334*         
+           05  IMAGPU-GTR6-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 7 DO GETTER: RESOLUCAO DA IMAGEM   ---*0335/0335*         
+      *        '1' = IMAGEM COM PROBLEMA DE RESOLUCAO                           
+      *        ' ' = IMAGEM OK                                                  
+           05  IMAGPU-GTR7-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 7 DO GETTER        ---*0336/0355*         
+           05  IMAGPU-GTR7-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 8 DO GETTER: NOMINATIVO            ---*0356/0356*         
+      *        '1' = DOCUMENTO SEM NOMINATIVO                                   
+      *        ' ' = NOMINATIVO OK                                              
+           05  IMAGPU-GTR8-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 8 DO GETTER        ---*0357/0376*         
+           05  IMAGPU-GTR8-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 9 DO GETTER: ANALISE DE DADOS EXT  ---*0377/0377*         
+      *        '1' = EXISTEM DADOS EXTERNOS PARA ANALISE                        
+      *        ' ' = NAO EXISTEM DADOS EXTERNOS PARA ANALISE                    
+           05  IMAGPU-GTR9-RESULT                  PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 9 DO GETTER        ---*0378/0397*         
+           05  IMAGPU-GTR9-COMMENT                 PIC X(020).                  
+      *                                                                         
+      *---     RESULT 10 DO GETTER: ANALISE DE DADOS     ---*0398/0398*         
+      *        '1' = RESULTADO DA ANALISE DE DADOS DESCONHECIDO                 
+      *        ' ' = RESULTADO CONHECIDO                                        
+           05  IMAGPU-GTR10-RESULT                 PIC X(001).                  
+      *                                                                         
+      *---     DESCRICAO DO RESULTADO 10 DO GETTER       ---*0399/0418*         
+           05  IMAGPU-GTR10-COMMENT                PIC X(020).                  
+      *                                                                         
+      *---     RESULT DA VERIFICACAO AUTOMATICA ASSINATURA--*0419/0420*         
+           05  IMAGPU-ASV-RESULT                   PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTOMATICA DA ASS  --*0421/0422*         
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-ASV-RATE                     PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DO ASV   ---*0423/0502*         
+           05  IMAGPU-ASV-COMMENT                  PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO CAR/LAR               ---*0503/0504*         
+           05  IMAGPU-APIA1-RESULT-CAR-LAR         PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTOMATICA DA CAR/LAR*0505/0506*         
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA1-RATE-CAR-LAR           PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DO CAR/LAR--*0507/0586*         
+           05  IMAGPU-APIA1-COMMENT-CAR-LAR        PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO CAR                   ---*0587/0588*         
+           05  IMAGPU-APIA2-RESULT-CAR             PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTOMATICA DA CAR  --*0589/0590*         
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA2-RATE-CAR               PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DO CAR    --*0591/0670*         
+           05  IMAGPU-APIA2-COMMENT-CAR            PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO LAR                   ---*0671/0672*         
+           05  IMAGPU-APIA3-RESULT-LAR             PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTOMATICA DA LAR  --*0673/0674*         
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA3-RATE-LAR               PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DO LAR    --*0675/0754*         
+           05  IMAGPU-APIA3-COMMENT-LAR            PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO DATA                  ---*0755/0576*         
+           05  IMAGPU-APIA4-RESULT-DATA            PIC X(002).                  
+      *                                                                         
+      *---     FATOR ENCONTRADO PARA A DATA               --*0757/0758*         
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA4-RATE-DATA              PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DO DATA   --*0759/0838*         
+           05  IMAGPU-APIA4-COMMENT-DATA           PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO DO CMC7               ---*0839/0840*         
+      *        LINHA 1 - NUMERO DE CONTA                                        
+           05  IMAGPU-APIA5-RESULT-LINHA1          PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTOMATICA DO CMC7 --*0841/0842*         
+      *        LINHA 1 - NUMERO DE CONTA                                        
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA5-RATE-CONTA             PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DO CMC7   --*0843/0922*         
+      *        LINHA 1 - NUMERO DE CONTA                                        
+           05  IMAGPU-APIA5-COMMENT-CONTA          PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO CMC7                  ---*0923/0924*         
+      *        LINHA 1 - AGENCIA                                                
+           05  IMAGPU-APIA6-RESULT-AGENCIA         PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTOMATICA DO CMC7 --*0925/0926*         
+      *        LINHA 1 - AGENCIA                                                
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA6-RATE-AGENCIA           PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DA AGENCIA--*0927/1006*         
+           05  IMAGPU-APIA6-COMMENT-AGENCIA        PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO CMC7                  ---*1007/1008*         
+      *        LINHA 1 - NUMERO DO CHEQUE                                       
+           05  IMAGPU-APIA7-RESULT-CHEQUE          PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTOMATICA DO CMC7 --*1009/1010*         
+      *        LINHA 1 - NUMERO DO CHEQUE                                       
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA7-RATE-CHEQUE            PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULTADO DO CMC7   --*1011/1090*         
+      *        LINHA 1 - NUMERO DO CHEQUE                                       
+           05  IMAGPU-APIA7-COMMENT-CHEQUE         PIC X(080).                  
+      *                                                                         
+      *---     RESULT DA VERIFICAO CPF/CNPJ              ---*1091/1092*         
+           05  IMAGPU-APIA8-RESULT-CPF-CNPJ        PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE DA COMPARACAO AUTO CPF/CNPJ      --*1093/1094*         
+      *        'AA' ATE 'F5'                                                    
+           05  IMAGPU-APIA8-RATE-CPF-CNPJ          PIC X(002).                  
+      *                                                                         
+      *---     DESCRICAO DO CODIGO DO RESULT DO CPF/CNPJ  --*1095/1174*         
+           05  IMAGPU-APIA8-COMMENT-CPF-CNPJ       PIC X(080).                  
+      *                                                                         
+      *---     RESULTADO DE VSV1                         ---*1175/1176*         
+           05  IMAGPU-RESULT-VSV1                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VSV1                          ---*1177/1184*         
+           05  IMAGPU-USER-VSV1                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VSV1          ---*1185/1204*         
+           05  IMAGPU-COMMENT-VSV1                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VSV2                         ---*1205/1206*         
+           05  IMAGPU-RESULT-VSV2                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VSV2                          ---*1207/1214*         
+           05  IMAGPU-USER-VSV2                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VSV2          ---*1215/1234*         
+           05  IMAGPU-COMMENT-VSV2                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VSV3                         ---*1235/1236*         
+           05  IMAGPU-RESULT-VSV3                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VSV3                          ---*1237/1244*         
+           05  IMAGPU-USER-VSV3                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VSV3          ---*1245/1264*         
+           05  IMAGPU-COMMENT-VSV3                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VTV1                         ---*1265/1266*         
+           05  IMAGPU-RESULT-VTV1                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VTV1                          ---*1267/1274*         
+           05  IMAGPU-USER-VTV1                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VTV1          ---*1275/1294*         
+           05  IMAGPU-COMMENT-VTV1                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VTV2                         ---*1295/1296*         
+           05  IMAGPU-RESULT-VTV2                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VTV2                          ---*1297/1304*         
+           05  IMAGPU-USER-VTV2                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VTV2          ---*1305/1324*         
+           05  IMAGPU-COMMENT-VTV2                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VTV3                         ---*1325/1326*         
+           05  IMAGPU-RESULT-VTV3                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VTV3                          ---*1327/1332*         
+           05  IMAGPU-USER-VTV3                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VTV3          ---*1335/1354*         
+           05  IMAGPU-COMMENT-VTV3                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VTV4                         ---*1355/1356*         
+           05  IMAGPU-RESULT-VTV4                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VTV4                          ---*1357/1364*         
+           05  IMAGPU-USER-VTV4                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VTV4          ---*1365/1374*         
+           05  IMAGPU-COMMENT-VTV4                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VTV5                         ---*1385/1386*         
+           05  IMAGPU-RESULT-VTV5                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VTV5                          ---*1387/1394*         
+           05  IMAGPU-USER-VTV5                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VTV5          ---*1395/1414*         
+           05  IMAGPU-COMMENT-VTV5                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE PSV1                         ---*1415/1416*         
+           05  IMAGPU-RESULT-PSV1                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE PSV1                          ---*1417/1424*         
+           05  IMAGPU-USER-PSV1                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO PSV1          ---*1425/1444*         
+           05  IMAGPU-COMMENT-PSV1                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE PSV2                         ---*1445/1446*         
+           05  IMAGPU-RESULT-PSV2                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE PSV2                          ---*1447/1454*         
+           05  IMAGPU-USER-PSV2                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO PSV2          ---*1455/1474*         
+           05  IMAGPU-COMMENT-PSV2                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE PSV3                         ---*1475/1476*         
+           05  IMAGPU-RESULT-PSV3                  PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE PSV3                          ---*1477/1484*         
+           05  IMAGPU-USER-PSV3                    PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO PSV3          ---*1485/1504*         
+           05  IMAGPU-COMMENT-PSV3                 PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE TV1                          ---*1505/1506*         
+           05  IMAGPU-RESULT-TV1                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE TV1                           ---*1507/1514*         
+           05  IMAGPU-USER-TV1                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO TV1           ---*1515/1534*         
+           05  IMAGPU-COMMENT-TV1                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE TV2                          ---*1535/1536*         
+           05  IMAGPU-RESULT-TV2                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE TV2                           ---*1537/1544*         
+           05  IMAGPU-USER-TV2                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO TV2           ---*1545/1564*         
+           05  IMAGPU-COMMENT-TV2                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE TV3                          ---*1565/1566*         
+           05  IMAGPU-RESULT-TV3                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE TV3                           ---*1567/1574*         
+           05  IMAGPU-USER-TV3                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO TV3           ---*1575/1594*         
+           05  IMAGPU-COMMENT-TV3                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VC1                          ---*1595/1596*         
+           05  IMAGPU-RESULT-VC1                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VC1                           ---*1597/1604*         
+           05  IMAGPU-USER-VC1                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VC1           ---*1605/1624*         
+           05  IMAGPU-COMMENT-VC1                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VC2                          ---*1625/1626*         
+           05  IMAGPU-RESULT-VC2                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VC2                           ---*1627/1634*         
+           05  IMAGPU-USER-VC2                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VC2           ---*1635/1654*         
+           05  IMAGPU-COMMENT-VC2                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE VC3                          ---*1655/1656*         
+           05  IMAGPU-RESULT-VC3                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE VC3                           ---*1657/1664*         
+           05  IMAGPU-USER-VC3                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO VC3           ---*1665/1684*         
+           05  IMAGPU-COMMENT-VC3                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE PT1                          ---*1685/1686*         
+           05  IMAGPU-RESULT-PT1                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE PT1                           ---*1687/1694*         
+           05  IMAGPU-USER-PT1                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO PT1           ---*1695/1714*         
+           05  IMAGPU-COMMENT-PT1                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE PT2                          ---*1715/1716*         
+           05  IMAGPU-RESULT-PT2                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE PT2                           ---*1717/1724*         
+           05  IMAGPU-USER-PT2                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO PT2           ---*1725/1744*         
+           05  IMAGPU-COMMENT-PT2                  PIC X(020).                  
+      *                                                                         
+      *---     RESULTADO DE PT3                          ---*1745/1746*         
+           05  IMAGPU-RESULT-PT3                   PIC X(002).                  
+      *                                                                         
+      *---     OPERADOR DE PT3                           ---*1747/1754*         
+           05  IMAGPU-USER-PT3                     PIC X(008).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO RESULTADO PT3           ---*1755/1774*         
+           05  IMAGPU-COMMENT-PT3                  PIC X(020).                  
+      *                                                                         
+      *---     MOTIVO DE DEVOLUCAO CONF.AUTOMATICA       ---*1775/1776*         
+      *        00 = FIXO QUANDO CCLASF-DEVLC-CHEQ <> ZEROS                      
+      *        22 = DIVERGENCIA DE ASSINATURA                                   
+      *        31 = ERRO NA FORMALISTICA                                        
+      *        35 = CHEQUE FRAUDADO                                             
+      *        44 = CHEQUE PRESCRITO                                            
+      *        48 = CHEQUE SEM IDENTIFICACAO DO BENEFICIARIO                    
+           05  IMAGPU-CMOTV-DVL-CONFAUTO-X.                                     
+               10  IMAGPU-CMOTV-DVL-CONFAUTO       PIC 9(002).                  
+      *                                                                         
+      *---     USUARIO FINAL QUE DECIDIU O DOC NA CONF AUTO-*1777/1784*         
+           05  IMAGPU-USUARIO-FINAL                PIC X(008).                  
+      *                                                                         
+      *---     COMENTARIO DO RESULTADO FINAL             ---*1785/1804*         
+           05  IMAGPU-USUARIO-FINAL-COMMENT        PIC X(020).                  
+      *                                                                         
+      *---     CODIGO DE SERVICO CONFERENCIA AUTOMATICA  ---*1805/1806*         
+      *        00 = CHEQUE COM MOTIVACAO DEFINITIVA                             
+      *        01 = CHEQUE SEM CARTAO DE ASSINATURA                             
+      *        02 = CHEQUE COM DIVERGENCIA DE ASSINATURA OU ILEGIVEL            
+      *        03 = CHEQUE SUPERIOR PARA CONFIRMACAO EMISSAO                    
+      *        04 = CHEQUE PASSIVEL DE FRAUDE                                   
+      *        05 = CHEQUE VLB PARA CONFIRMACAO - SUPERIOR 250 MIL              
+      *        06 = LISTA TODAS AS CONTAS                                       
+      *        07 = DECISAO POR CONTA                                           
+      *        08 = LOG DA DEVOLUCAO                                            
+           05  IMAGPU-CCLASF-DEVLC-CHEQ-X.                                      
+               10  IMAGPU-CCLASF-DEVLC-CHEQ        PIC 9(002).                  
+      *                                                                         
+      *---     SEQUENCIA REG NO ARQUIVO                  ---*1807/1814*         
+           05  IMAGPU-CSEQ-REG-DET-X.                                           
+               10  IMAGPU-CSEQ-REG-DET             PIC 9(008).                  
+      *                                                                         
+      *---     RESULTADO VERIFICACAO VERSO CHEQUE        ---*1815/1816*         
+      *        '  ' = VERIFICACAO NAO REALIZADA                                 
+      *        '00' = VERIFICACAO OK                                            
+      *        '02' = CPF/CNPJ NAO DISPONIVEL                                   
+      *        '06' = FUNCAO DESABILITADA PARA ESTA CONTA                       
+      *        '07' = FUNCAO DESABILITADA PARA ESTA REFERENCIA                  
+      *        '09' = CONTA CORRENTE FECHADA                                    
+      *        '14' = ERRO NO ENGINE AUTOMATICO                                 
+      *        '15' = FALHA NA LEITURA                                          
+      *        '16' = OUTRAS RAZOES PARA NAO PROCESSAR O DOCUMENTO              
+      *        '91' = ERRO NA TABELA DE DADOS OU NA REDE                        
+      *        '92' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-BASE             
+      *        '93' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-CHECK            
+      *        '99' = OUTROS ERROS (RESERVADO)                                  
+           05  IMAGPU-APIA9-RESULT                 PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE VERIFICACAO AUTOMAT VERSO CHEQ  ---*1817/1818*         
+           05  IMAGPU-APIA9-RATE                   PIC X(002).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO O CODIGO LIDO           ---*1819/1898*         
+           05  IMAGPU-APIA9-COMMENT                PIC X(080).                  
+      *                                                                         
+      *---     RESULTADO VERIFICACAO XXX - XXXX          ---*1899/1900*         
+      *        '  ' = VERIFICACAO NAO REALIZADA                                 
+      *        '00' = VERIFICACAO OK                                            
+      *        '02' = CPF/CNPJ NAO DISPONIVEL                                   
+      *        '06' = FUNCAO DESABILITADA PARA ESTA CONTA                       
+      *        '07' = FUNCAO DESABILITADA PARA ESTA REFERENCIA                  
+      *        '09' = CONTA CORRENTE FECHADA                                    
+      *        '14' = ERRO NO ENGINE AUTOMATICO                                 
+      *        '15' = FALHA NA LEITURA                                          
+      *        '16' = OUTRAS RAZOES PARA NAO PROCESSAR O DOCUMENTO              
+      *        '91' = ERRO NA TABELA DE DADOS OU NA REDE                        
+      *        '92' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-BASE             
+      *        '93' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-CHECK            
+      *        '99' = OUTROS ERROS (RESERVADO)                                  
+           05  IMAGPU-APIA10-RESULT                PIC X(002).                  
+      *                                                                         
+      *---     QUALIDADE VERIFICACAO AUTOMAT XXX - XXXX  ---*1901/1902*         
+           05  IMAGPU-APIA10-RATE                  PIC X(002).                  
+      *                                                                         
+      *---     TEXTO DESCREVENDO O RESULTADO XXX - XXXX  ---*1903/1982*         
+           05  IMAGPU-APIA10-COMMENT               PIC X(080).                  
+      *                                                                         
+      *---------------------------------------------------------------*         
+      *        DEFINICAO DO TRAILER                                   *         
+      *---------------------------------------------------------------*         
+      *                                                                         
+       01      IMAGPU-REG-TRAILER     REDEFINES    IMAGPU-REG.                  
+      *                                                                         
+      *---     CAMARA COMPE ORIGEM TRAILER               ---*0001/0003*         
+           05  IMAGPU-CCMARA-ORIG-TRL-X.                                        
+               10  IMAGPU-CCMARA-ORIG-TRL          PIC 9(003).                  
+      *                                                                         
+      *---     NOME DO ARQUIVO TRAILER                   ---*0004/0009*         
+      *        FIXO = PUTTER                                                    
+           05  IMAGPU-NOME-ARQ-TRL                 PIC X(006).                  
+      *                                                                         
+      *---     BANCO DESTINATARIO MOVTO TRAILER          ---*0010/0012*         
+           05  IMAGPU-CBCO-DEST-TRL-X.                                          
+               10  IMAGPU-CBCO-DEST-TRL            PIC 9(003).                  
+      *                                                                         
+      *---     NR. VERSAO DO ARQUIVO                     ---*0013/0018*         
+           05  IMAGPU-NR-VERSAO-TRL-X.                                          
+               10  IMAGPU-NR-VERSAO-TRL            PIC 9(006).                  
+               10  IMAGPU-NR-VERSAO-TRL-R          REDEFINES                    
+                   IMAGPU-NR-VERSAO-TRL.                                        
+                   15  IMAGPU-CCMARA-ORIG-T        PIC 9(003).                  
+                   15  IMAGPU-NR-VERSAO-T          PIC 9(003).                  
+      *                                                                         
+      *---     DATA MOVIMENTO TRAILER                    ---*0019/0026*         
+      *        FORMATO = AAAAMMDD                                               
+           05  IMAGPU-DMOVTO-TRL-X.                                             
+               10  IMAGPU-DMOVTO-TRL               PIC 9(008).                  
+      *                                                                         
+      *---     QUANTIDADE DE DETALHES                    ---*0027/0033*         
+           05  IMAGPU-QTD-REGS-TRL-X.                                           
+               10  IMAGPU-QTD-REGS-TRL             PIC 9(007).                  
+      *                                                                         
+      *---     SOMA DOS DETALHES                         ---*0034/0050*         
+           05  IMAGPU-VLR-REGS-TRL-X.                                           
+               10  IMAGPU-VLR-REGS-TRL             PIC 9(017).                  
+      *                                                                         
+      *---     VAGO                                      ---*0051/1806*         
+           05  IMAGPU-VAGO-06                      PIC X(1756).                 
+      *                                                                         
+      *---     SEQUENCIA REG ARQ TRAILER                 ---*1807/1814*         
+           05  IMAGPU-CSEQ-REG-TRL-X.                                           
+               10  IMAGPU-CSEQ-REG-TRL             PIC 9(008).                  
+      *                                                                         
+      *---     EXPANSAO TRAILER                          ---*1815/1982*         
+           05  IMAGPU-EXPANSAO-TRL                 PIC X(168).                  
+      *                                                                         
+      *---------------------------------------------------------------*         
+      *                    FIM  DO BOOK I#IMAGPU                      *         
+      *---------------------------------------------------------------*         

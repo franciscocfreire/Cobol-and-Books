@@ -1,0 +1,27 @@
+//CLLP2311 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z,                  
+//       REGION=8192K,SCHENV=DB2                                        
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC PGM=CLLPA006,                                           
+//       PARM=02                                                        
+//*                                                                     
+//* ***    CRIA CADASTRO COM IOF COMPLEMENTAR                           
+//*                                                                     
+//CADANT   DD DSN=MX.CLLP.CADACALC.CLLP2310.LEI(0),                     
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATFIMES(0),                              
+//       DISP=SHR                                                       
+//CADATU   DD DSN=MX.CLLP.CADACALC.C2310NEW(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=768,RECFM=FB)                                  
+//RELATO1  DD DUMMY,                                                    
+//       DCB=(LRECL=0180,RECFM=FBA)                                     
+//RELATO2  DD DUMMY,                                                    
+//       DCB=(LRECL=0180,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

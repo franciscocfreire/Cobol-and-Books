@@ -1,0 +1,168 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 C  --  N O D E
+
+08.22.51 JOB41940 ---- THURSDAY,  04 DEC 2014 ----
+08.22.51 JOB41940  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+08.22.51 JOB41940  $EXIT006A  Job CLLPA430 Jobid(JOB41940) alterado para CLASS=E
+08.22.51 JOB41940  $HASP373 CLLPA430 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+08.22.51 JOB41940  IEF403I CLLPA430 - STARTED - TIME=08.22.51
+08.22.57 JOB41940  -                                                --TIMINGS (M
+08.22.57 JOB41940  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+08.22.57 JOB41940  -CLLPA430 STEP1G               00    644    137    .00    .00
+08.22.57 JOB41940  IEF404I CLLPA430 - ENDED - TIME=08.22.57
+08.22.57 JOB41940  -CLLPA430 ENDED.  NAME-D115848              TOTAL TCB CPU TIM
+08.22.57 JOB41940  $HASP395 CLLPA430 ENDED
+------ JES2 JOB STATISTICS ------
+  04 DEC 2014 JOB EXECUTION DATE
+           28 CARDS READ
+          164 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           10 SYSOUT SPOOL KBYTES
+         0.10 MINUTES EXECUTION TIME
+
+        1 //CLLPA430 JOB 'CLLP,4120,PR32','D115848',MSGCLASS=Z
+        2 //JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR
+        3 //         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR
+        4 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR
+        5 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+        6 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        7 //STEP1G   EXEC PGM=CLLP2955,
+          //           PARM='0RC003'
+        8 //STEPLIB  DD DSN=AV.BIBGERTT,DISP=SHR
+        9 //         DD DSN=AV.BIBGERAL,DISP=SHR
+       10 //         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR
+       11 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR
+       12 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+       13 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          //*
+          //* ***    EMITE AVISOS PARA CORREIOS (CORRENTISTAS)
+          //*
+          //* ***    AVISO DE PENDENCIA
+          //*
+       14 //EMODLAVS DD DSN=AD.BRQ.CORR1L1.CORREN.CLLPA430.D0412,
+          //       DISP=SHR
+       15 //SMODLAVS DD DSN=AD.BRQ.A358.JA430S1F.AVISOCOB(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000320,0064),RLSE),
+          //       DCB=(AD.A,LRECL=1290,RECFM=FBA)
+       16 //SYSOUT   DD SYSOUT=*
+       17 //SYSUDUMP DD SYSOUT=Y
+
+IEF236I ALLOC. FOR CLLPA430 STEP1G
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D905 ALLOCATED TO
+IEF237I D036 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D905 ALLOCATED TO
+IEF237I D036 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME EMODLAVS
+IGD101I SMS ALLOCATED TO DDNAME (SMODLAVS)
+        DSN (AD.BRQ.A358.JA430S1F.AVISOCOB.G0012V00      )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DCR
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLPA430 STEP1G - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AV.BIBGERTT                                  RETAINED,  DDNAME=STEPLIB
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=
+IGD104I AV.CHGM.LOADLIB.BSL.LOB                      RETAINED,  DDNAME=
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST2AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13A2A.
+IGD104I AD.BRQ.CORR1L1.CORREN.CLLPA430.D0412         RETAINED,  DDNAME=EMODLAVS
+IGD107I AD.BRQ.A358.JA430S1F.AVISOCOB.G0012V00       ROLLED IN, DDNAME=SMODLAVS
+IEF285I   M67777.CLLPA430.JOB41940.D0000101.?          SYSOUT
+IEF285I   M67777.CLLPA430.JOB41940.D0000102.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1G         Cond Code: 0000         Start: 04-Dec-2014 08:22:51 AM
+Step  Num: 1              PGM  Name: CLLP2955     End:   04-Dec-2014 08:22:57 AM
+CPU (TCB): 00:00:00.34                            Storage below 16M:        444k
+CPU (SRB): 00:00:00.01                            Storage above 16M:     56,404k
+Trans Act: 00:00:03.04                            Service Units:          18,730
+Tape Mnts: 0                                      Total EXCPs:               644
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D STEPLIB           209  23,200        D2E3 D STEPLIB             5  23,200
+D9CC D STEPLIB            27  23,200        D7B6 D STEPLIB             2  23,200
+D036 D STEPLIB           344  23,200        D6A1 D EMODLAVS            3  27,090
+D1F7 D SMODLAVS            2  27,090
+
+Total DASD EXCPs:                592        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1G  /START 2014338.0822
+IEF032I STEP/STEP1G  /STOP  2014338.0822
+        CPU:     0 HR  00 MIN  00.34 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+        VIRT:   444K  SYS:   412K  EXT:    56404K  SYS:    11212K
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IGD104I AV.CHGM.LOADLIB.BSL.LOB                      RETAINED,  DDNAME=
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST2AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13A2A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLPA430       System ID: AL2C        Submit: 04-Dec-2014 08:22:49 AM
+Job JESID: JOB41940       MVS level: SP7.1.3     Start:  04-Dec-2014 08:22:51 AM
+Job Class: E                                     End:    04-Dec-2014 08:22:57 AM
+CPU (TCB): 00:00:00.34                           Storage below 16M:         444k
+CPU (SRB): 00:00:00.01                           Storage above 16M:      56,404k
+Trans Act: 00:00:03.04                           Service Units:           18,730
+Tape Mnts: 0                                     Total EXCPs:                644
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer: D115848
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLPA430/START 2014338.0822
+IEF033I  JOB/CLLPA430/STOP  2014338.0822
+        CPU:     0 HR  00 MIN  00.34 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+
+*******************************************
+****         CHECKPOINT RESTART        ****
+*******************************************
+**  FREQUENCIA DE CHECKPOINT UTILIZADA   **
+**  POR ESTE PROGRAMA (CLLP2955): 00005  **
+*******************************************
+*******************************************
+** PROCESSO / JOB CADASTRADO PARA OPERAR **
+**    NA MODALIDADE DE CONTINGENCIA      **
+*******************************************
+** NAO E POSSIVEL UM RESTART AUTOMATICO  **
+*******************************************
+CLLP2955 - PROCESSAMENTO NORMAL (SEM RESTART)
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013281
+************* PROGRAMA CLLP2955 *************
+*                                           *
+* REGISTROS LIDOS EMODLAVS...:           26 *
+*                                           *
+* REGISTROS GRAVADOS SMODLAVS:           26 *
+*                                           *
+* ACESSOS REALIZADOS AO ECOR.:           26 *
+*                                           *
+*********************************************
+*** ECOR2912 - LOTE FINALIZADO = 000000000013281
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000026
+************* PROGRAMA CLLP2955 *************
+*                                           *
+*  PROGRAMA CLLP2955 ENCERRADO COM SUCESSO  *
+*                                           *
+************* PROGRAMA CLLP2955 *************

@@ -1,0 +1,198 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 1 A  --  N O D E
+
+19.00.13 JOB49490 ---- FRIDAY,    25 JUL 2014 ----
+19.00.13 JOB49490  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+19.00.14 JOB49490  ICH70001I PRODSTR  LAST ACCESS AT 19:00:13 ON FRIDAY, JULY 25
+19.00.14 JOB49490  $HASP373 CLLP0161 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+19.00.14 JOB49490  IEF403I CLLP0161 - STARTED - TIME=19.00.14
+19.00.14 JOB49490  BUFL001I   ARQPARVV  Bufno=050  Blksize=27900  Amode=31  UNIT
+19.00.14 JOB49490  BUFL002I   ARQPARVV  AC.CLLP.CPFCNPJ.CLAS.G0001V00
+19.00.14 JOB49490  BUFL001I   PENDIRES  Bufno=050  Blksize=27936  Amode=31  UNIT
+19.00.14 JOB49490  BUFL002I   PENDIRES  AC.CLLP.ARQIRES.IRESB018.G0001V00
+19.00.14 JOB49490  BUFL001I   ARQDAPES  Bufno=050  Blksize=27500  Amode=31  UNIT
+19.00.14 JOB49490  BUFL002I   ARQDAPES  AC.CLLP.RDAB0030.RATING.G0001V00
+19.00.40 JOB49490  -                                                --TIMINGS (M
+19.00.40 JOB49490  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+19.00.40 JOB49490  -CLLP0161 STEP1                00   159K  19882    .02    .00
+19.00.40 JOB49490  IEF404I CLLP0161 - ENDED - TIME=19.00.40
+19.00.40 JOB49490  -CLLP0161 ENDED.  NAME-D81645               TOTAL TCB CPU TIM
+19.00.40 JOB49490  $HASP395 CLLP0161 ENDED
+------ JES2 JOB STATISTICS ------
+  25 JUL 2014 JOB EXECUTION DATE
+           56 CARDS READ
+        4,926 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+          658 SYSOUT SPOOL KBYTES
+         0.43 MINUTES EXECUTION TIME
+
+        1 //CLLP0161 JOB 'CLLP,4120,PR32','D81645',MSGCLASS=1,REGION=4M,
+          //       SCHENV=DB2,
+          //       MSGLEVEL=(1,1)
+          //*---- SUBMITTED BY CONTROL-M (FROM MEMLIB)      ODATE=140725
+          //*---- SCHEDULE AC.CTMR.PUB.PR32.CARGAS.CTM93207.G0001V00(+1)
+          //*---- SCHEDULED DUE TO RBC:
+          //*---- JCL      AC.JCLFILE(CLLP0161)
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=LNUPV  RUN NO.=00001
+        2 //OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL
+        3 //OUTE     OUTPUT DEST=MZNJE01,CLASS=E
+        4 //OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F
+        5 //OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G
+        6 //OUTJ     OUTPUT DEST=MZNJE01,CLASS=J
+        7 //OUTM     OUTPUT DEST=MZNJE01,CLASS=M
+        8 //OUTN     OUTPUT DEST=ANYLOCAL,CLASS=N
+        9 //OUTO     OUTPUT DEST=MZNJE01,CLASS=O
+       10 //OUTP     OUTPUT DEST=ANYLOCAL,CLASS=P
+       11 //OUTQ     OUTPUT DEST=ANYLOCAL,CLASS=Q
+       12 //OUTR     OUTPUT DEST=ANYLOCAL,CLASS=R
+       13 //OUTRR    OUTPUT DEST=MZNJE01,CLASS=R
+       14 //OUTV     OUTPUT DEST=MZNJE01,CLASS=V
+       15 //OUTW     OUTPUT DEST=ALNJE02,CLASS=W
+       16 //OUT5     OUTPUT DEST=ALNJE02,CLASS=5
+       17 //OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z
+          //*
+          //* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTLUA0
+          //* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTLUA1
+          //* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTLUA2
+          //*
+       18 //JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR
+       19 //         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR
+       20 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+       21 //STEP1    EXEC PGM=RDAB0030
+          //*
+          //* ***    OBTEM RATING DO CLIENTE
+          //*
+       22 //ARQPARVV DD DSN=AC.CLLP.CPFCNPJ.CLAS(0),
+          //       DISP=SHR
+       23 //PENDIRES DD DSN=AC.CLLP.ARQIRES.IRESB018(0),
+          //       DISP=OLD
+       24 //ARQDAPES DD DSN=AC.CLLP.RDAB0030.RATING(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,02),
+          //       SPACE=(TRK,(003480,0696),RLSE),
+          //       DCB=(AC.A,LRECL=500,RECFM=FB)
+       25 //RELVAZIO DD SYSOUT=(,,LUA0),OUTPUT=(*.OUTP,*.OUTF),
+          //       DCB=(LRECL=0081,RECFM=FBA)
+       26 //RELTOTAL DD SYSOUT=(,,LUA1),OUTPUT=(*.OUTP,*.OUTF),
+          //       DCB=(LRECL=0081,RECFM=FBA)
+       27 //RELNENCO DD SYSOUT=(,,LUA2),OUTPUT=(*.OUTP,*.OUTF),
+          //       DCB=(LRECL=0133,RECFM=FBA)
+       28 //SYSOUT   DD SYSOUT=*
+       29 //SYSPRINT DD SYSOUT=*
+       30 //SYSUDUMP DD SYSOUT=Y
+          //*
+
+       31 //
+
+ICH70001I PRODSTR  LAST ACCESS AT 19:00:13 ON FRIDAY, JULY 25, 2014
+IEF236I ALLOC. FOR CLLP0161 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I A302 ALLOCATED TO
+IEF237I 634C ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ARQPARVV
+IGD103I SMS ALLOCATED TO DDNAME PENDIRES
+IGD101I SMS ALLOCATED TO DDNAME (ARQDAPES)
+        DSN (AC.CLLP.RDAB0030.RATING.G0001V00            )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA11Z9
+IEF237I JES2 ALLOCATED TO RELVAZIO
+IEF237I JES2 ALLOCATED TO RELTOTAL
+IEF237I JES2 ALLOCATED TO RELNENCO
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL001I   ARQPARVV  Bufno=050  Blksize=27900  Amode=31  UNIT=DASD
+BUFL002I   ARQPARVV  AC.CLLP.CPFCNPJ.CLAS.G0001V00
+BUFL001I   PENDIRES  Bufno=050  Blksize=27936  Amode=31  UNIT=DASD
+BUFL002I   PENDIRES  AC.CLLP.ARQIRES.IRESB018.G0001V00
+BUFL001I   ARQDAPES  Bufno=050  Blksize=27500  Amode=31  UNIT=DASD
+BUFL002I   ARQDAPES  AC.CLLP.RDAB0030.RATING.G0001V00
+IEF142I CLLP0161 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AC.CLLP.CPFCNPJ.CLAS.G0001V00                RETAINED,  DDNAME=ARQPARVV
+IGD104I AC.CLLP.ARQIRES.IRESB018.G0001V00            RETAINED,  DDNAME=PENDIRES
+IGD107I AC.CLLP.RDAB0030.RATING.G0001V00             ROLLED IN, DDNAME=ARQDAPES
+IEF285I   PRODSTR.CLLP0161.JOB49490.D0000101.?         SYSOUT
+IEF285I   PRODSTR.CLLP0161.JOB49490.D0000102.?         SYSOUT
+IEF285I   PRODSTR.CLLP0161.JOB49490.D0000103.?         SYSOUT
+IEF285I   PRODSTR.CLLP0161.JOB49490.D0000104.?         SYSOUT
+IEF285I   PRODSTR.CLLP0161.JOB49490.D0000105.?         SYSOUT
+IEF285I   PRODSTR.CLLP0161.JOB49490.D0000106.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 25-Jul-2014 07:00:14 PM
+Step  Num: 1              PGM  Name: RDAB0030     End:   25-Jul-2014 07:00:40 PM
+CPU (TCB): 00:00:01.45                            Storage below 16M:        476k
+CPU (SRB): 00:00:00.55                            Storage above 16M:      7,408k
+Trans Act: 00:00:25.78                            Service Units:         195,767
+Tape Mnts: 0                                      Total EXCPs:           159,194
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+CD08 D JOBLIB              7  23,476        6A95 D ARQPARVV          202  27,900
+A80A D PENDIRES      128,001  27,936        5932 D PENDIRES       30,131  27,936
+A226 D ARQDAPES          599  27,500
+
+Total DASD EXCPs:            158,940        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014206.1900
+IEF032I STEP/STEP1   /STOP  2014206.1900
+        CPU:     0 HR  00 MIN  01.45 SEC    SRB:     0 HR  00 MIN  00.55 SEC
+        VIRT:   476K  SYS:   348K  EXT:     7408K  SYS:    10456K
+IGD104I AC.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   DB2A1.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= DB2A11.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13AL1.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP0161       System ID: AL1A        Submit: 25-Jul-2014 07:00:13 PM
+Job JESID: JOB49490       MVS level: SP7.1.3     Start:  25-Jul-2014 07:00:14 PM
+Job Class: A                                     End:    25-Jul-2014 07:00:40 PM
+CPU (TCB): 00:00:01.45                           Storage below 16M:         476k
+CPU (SRB): 00:00:00.55                           Storage above 16M:       7,408k
+Trans Act: 00:00:25.78                           Service Units:          195,767
+Tape Mnts: 0                                     Total EXCPs:            159,194
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: D81645
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP0161/START 2014206.1900
+IEF033I  JOB/CLLP0161/STOP  2014206.1900
+        CPU:     0 HR  00 MIN  01.45 SEC    SRB:     0 HR  00 MIN  00.55 SEC
+
+************************ RDAB0030 ***********************
+**                                                     **
+**    REGISTROS LIDOS     - ARQPARVV:         37.322   **
+**                                                     **
+**    REGISTROS LIDOS     - PENDIRES:     61.353.908   **
+**                                                     **
+**    REGISTROS GRAVADOS  - ARQDAPES:         32.896   **
+**                                                     **
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: D81645
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP0161/START 2014206.1900
+IEF033I  JOB/CLLP0161/STOP  2014206.1900
+        CPU:     0 HR  00 MIN  01.45 SEC    SRB:     0 HR  00 MIN  00.55 SEC
+
+************************ RDAB0030 ***********************
+**                                                     **
+**    REGISTROS LIDOS     - ARQPARVV:         37.322   **
+**                                                     **
+**    REGISTROS LIDOS     - PENDIRES:     61.353.908   **
+**                                                     **
+**    REGISTROS GRAVADOS  - ARQDAPES:         32.896   **
+**                                                     **
+************************ RDAB0030 ***********************

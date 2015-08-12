@@ -1,0 +1,11 @@
+
+RDABB009 - MOVIMENTO DE ATUALIZACAO        05/11/2014        16:31:30        - 1 -
+
+       CPF FILIAL CTRL        CLUB NOME CADU                                NOME RDAB
+---------- ------ ---- ----------- ---------------------------------------- ----------------------------------------
+     19940      1   22  1259546214 NILTON FABIO MASCANHI ME                 TESTE ACERTO BASE RDAB 1
+     29614      1    4    16700082 TRANSMANEIRO TRANSPORTES EM GERAL E LOCA TESTE ACERTO BASE RDAB 2          E LOCA
+     64804      1   54    13908588 CONFECCOES EBENESER LTDA ME              TESTE ACERTO BASE RDAB 3
+    138957      1    7    31663095 POSTO DE GASOLINA FELICI LTDA            TESTE ACERTO BASE RDAB 4
+    142603      1   28    22920919 POSTO SENNA LTDA                         TESTE ACERTO BASE RDAB 5
+    144348      1   52    13442295 BRAGA BITENCOURTE MERCEARIA LTDA ME      TESTE ACERTO BASE RDAB 6         ME

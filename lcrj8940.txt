@@ -1,0 +1,271 @@
+      *===============================================================*         
+       IDENTIFICATION                  DIVISION.                                
+      *===============================================================*         
+                                                                                
+       PROGRAM-ID. LCRJ8940.                                                    
+       AUTHOR.     BRQ IT SERVICES.                                             
+                                                                                
+      *===============================================================*         
+      *                 B R Q    I T   S E R V I C E S                *         
+      *---------------------------------------------------------------*         
+      *                                                               *         
+      *   PROGRAMA    : LCRJ8940                                      *         
+      *   PROGRAMADOR : TONY                   - BRQ IT SERVICES      *         
+      *   ANALISTA    : JANSONEI               - BRQ IT SERVICES      *         
+      *   SUPERVISOR  : EDMILSON               - GRUPO 75             *         
+      *   DATA        : NOVEMBRO/2012                                 *         
+      *                                                               *         
+      *   OBJETIVO    : MODULO DE CONSULTA REALIMENTACAO              *         
+      *                                                               *         
+      *  MODULOS CHAMADOS :                                           *         
+      *  +----------------------------------------------------------+ *         
+      *  |  MODULO  | DESCRICAO                  |   BOOK   | LRECL | *         
+      *  +----------+----------------------------+----------+-------+ *         
+      *  | CKRS1000 | OBTER TIPO DE CONEXAO      |          |       | *         
+      *  | CKRS1050 | FAZ CONEXAO COM DB2        |          |       | *         
+      *  | BRAD7100 | TRATAMENTO DE ERROS        | I#BRAD7C |       | *         
+      *  | BRAD7600 | OBTER DATA/HORA DO SISTEMA | WORK     |       | *         
+      *  +----------------------------------------------------------+ *         
+      *                                                               *         
+      *  ARQUIVOS                                                     *         
+      *  +----------------------------------------------------------+ *         
+      *  |  DDNAME  | I/O |     DESCRICAO        |   BOOK   | LRECL | *         
+      *  +---------------------------------------+----------+-------+ *         
+      *  | XXXXXXXX |  X  | XXXXXXXXXXXXXXXXXXXX | XXXXXXXX |  XXXX | *         
+      *  +---------------------------------------+----------+-------+ *         
+      *                                                               *         
+      *  BANCO DE DADOS DB2                                           *         
+      *  +----------------------------------------------------------+ *         
+      *  |      TABELA      | DESCRICAO               |   DCLGEN    | *         
+      *  +--------------------------------------------+-----+-------+ *         
+      *  | THIST_GUIA_REGTD | TABELA DE BOLETOS -HISTO|  LCRJB043   | *         
+      *  +-----------------+--------------------------+-------------+ *         
+      *                                                               *         
+      *===============================================================*         
+                                                                                
+      *===============================================================*         
+       ENVIRONMENT                     DIVISION.                                
+      *===============================================================*         
+                                                                                
+      *---------------------------------------------------------------*         
+       CONFIGURATION                   SECTION.                                 
+      *---------------------------------------------------------------*         
+                                                                                
+       SPECIAL-NAMES.                                                           
+           DECIMAL-POINT IS COMMA.                                              
+                                                                                
+      *===============================================================*         
+       DATA                            DIVISION.                                
+      *===============================================================*         
+                                                                                
+      *---------------------------------------------------------------*         
+       WORKING-STORAGE                 SECTION.                                 
+      *---------------------------------------------------------------*         
+                                                                                
+      *---------------------------------------------------------------*         
+       77  FILLER                      PIC X(32) VALUE                          
+           '*--INICIO DA WORKING LCRJ8940--*'.                                  
+      *---------------------------------------------------------------*         
+                                                                                
+      *---------------------------------------------------------------*         
+      *    AREA AUXILIARES                                            *         
+      *---------------------------------------------------------------*         
+                                                                                
+       01  WRK-S-Z-13V99               PIC S9(15)V99    VALUE ZEROS.            
+       01  WRK-Z-13V99-R               REDEFINES WRK-S-Z-13V99                  
+                                       PIC  9(15)V99.                           
+                                                                                
+      *---------------------------------------------------------------*         
+      *    AREA UTILIZADA PELOS PROGRAMAS BRAD                        *         
+      *---------------------------------------------------------------*         
+                                                                                
+       01  WRK-B7600-DATA-HORA.                                                 
+           03  WRK-B7600-DT-JULIANA    PIC 9(05) COMP-3 VALUE ZEROS.            
+           03  WRK-B7600-AAMMDD        PIC 9(07) COMP-3 VALUE ZEROS.            
+           03  WRK-B7600-DT-SSAAMMDD   PIC 9(09) COMP-3 VALUE ZEROS.            
+           03  WRK-B7600-HORA-HHMMSS   PIC 9(07) COMP-3 VALUE ZEROS.            
+           03  WRK-B7600-HORA-HHMMSSMMMMMM                                      
+                                       PIC 9(13) COMP-3 VALUE ZEROS.            
+           03  WRK-B7600-TIMSTAMP.                                              
+               05  WRK-B7600-ANO       PIC 9(04)        VALUE ZEROS.            
+               05  WRK-B7600-MES       PIC 9(02)        VALUE ZEROS.            
+               05  WRK-B7600-DIA       PIC 9(02)        VALUE ZEROS.            
+               05  WRK-B7600-HOR       PIC 9(02)        VALUE ZEROS.            
+               05  WRK-B7600-MIN       PIC 9(02)        VALUE ZEROS.            
+               05  WRK-B7600-SEG       PIC 9(02)        VALUE ZEROS.            
+               05  FILLER              PIC 9(06)        VALUE ZEROS.            
+                                                                                
+      *---------------------------------------------------------------*         
+      *    AREA UTILIZADA PELA BRAD7100                               *         
+      *---------------------------------------------------------------*         
+           COPY I#BRAD7C.                                                       
+                                                                                
+      *---------------------------------------------------------------*         
+       01  FILLER                      PIC X(32) VALUE                          
+           '*--AREA DO BOOK I#LCRJ00  --*'.                                     
+      *---------------------------------------------------------------*         
+           COPY I#LCRJ00.                                                       
+                                                                                
+       77  FILLER                      PIC X(012) VALUE '* USO DB2  *'.         
+      *---------------------------------------------------------------*         
+      *    AREA UTILIZADA PARA INCLUDES DO DB2                        *         
+      *---------------------------------------------------------------*         
+                                                                                
+           EXEC SQL                                                             
+                INCLUDE SQLCA                                                   
+           END-EXEC.                                                            
+                                                                                
+           EXEC SQL                                                             
+                INCLUDE LCRJB043                                                
+           END-EXEC.                                                            
+                                                                                
+      *---------------------------------------------------------------*         
+       01  FILLER                      PIC X(32) VALUE                          
+           '*--INICIO LINKAGE LCRJ8940--*'.                                     
+      *---------------------------------------------------------------*         
+                                                                                
+       LINKAGE SECTION.                                                         
+                                                                                
+           COPY I#LCRJCB.                                                       
+                                                                                
+      *===============================================================*         
+       PROCEDURE                       DIVISION  USING  LCRJCB-REG.             
+      *===============================================================*         
+                                                                                
+      *---------------------------------------------------------------*         
+       0000-PRINCIPAL                  SECTION.                                 
+      *---------------------------------------------------------------*         
+                                                                                
+           PERFORM 1000-INICIALIZA.                                             
+                                                                                
+           PERFORM 3000-PROCESSA.                                               
+                                                                                
+           GOBACK.                                                              
+                                                                                
+      *---------------------------------------------------------------*         
+       0000-99-FIM.                    EXIT.                                    
+      *---------------------------------------------------------------*         
+                                                                                
+      *---------------------------------------------------------------*         
+       1000-INICIALIZA                 SECTION.                                 
+      *---------------------------------------------------------------*         
+                                                                                
+           CALL 'BRAD1050'.                                                     
+                                                                                
+           INITIALIZE  WRK-B7600-DATA-HORA.                                     
+                                                                                
+      *--- OBTEM DATA E HORA DO SISTEMA                                         
+                                                                                
+           CALL    'BRAD7600'          USING WRK-B7600-DATA-HORA.               
+                                                                                
+           STRING  WRK-B7600-DIA '/'                                            
+                   WRK-B7600-MES '/'                                            
+                   WRK-B7600-ANO                                                
+           DELIMITED BY SIZE           INTO WRK-DATAPROC.                       
+                                                                                
+           STRING  WRK-B7600-HOR ':'                                            
+                   WRK-B7600-MIN ':'                                            
+                   WRK-B7600-SEG                                                
+           DELIMITED BY SIZE           INTO WRK-HORAPROC.                       
+                                                                                
+           MOVE ZEROS                  TO LCRJCB-CCOD-RETOR                     
+                                          LCRJCB-VTITLO-ATULZ.                  
+                                                                                
+           MOVE SPACES                 TO LCRJCB-DVCTO-TITLO                    
+                                          LCRJCB-CLOC-ERRO                      
+                                          LCRJCB-CCOD-ERRO                      
+                                          LCRJCB-CMSG-ERRO                      
+                                          LCRJCB-CRESER-SAIDA.                  
+                                                                                
+      *---------------------------------------------------------------*         
+       1000-99-FIM.                    EXIT.                                    
+      *---------------------------------------------------------------*         
+                                                                                
+      *---------------------------------------------------------------*         
+       3000-PROCESSA                   SECTION.                                 
+      *---------------------------------------------------------------*         
+                                                                                
+           PERFORM 3100-SELECT-LCRJB043.                                        
+                                                                                
+      *---------------------------------------------------------------*         
+       3000-99-FIM.                    EXIT.                                    
+      *---------------------------------------------------------------*         
+                                                                                
+      *----------------------------------------------------------------*        
+       3100-SELECT-LCRJB043            SECTION.                                 
+      *----------------------------------------------------------------*        
+                                                                                
+           MOVE LCRJCB-NNOSSO-NRO      TO NNOSSO-NRO-GUIA  OF LCRJB043.         
+           MOVE LCRJCB-DPGTO-TITLO     TO DVCTO-TITLO-COBR OF LCRJB043.         
+                                                                                
+           EXEC SQL                                                             
+               SELECT HINCL_REG,                                                
+                      CBCO_PRODT_COBR,                                          
+                      CIDTFD_PRODT_COBR,                                        
+                      CNEGOC_COBR,                                              
+                      CSIT_BLETO_VEIC,                                          
+                      VTITLO_ORIGN,                                             
+                      CIDTFD_INDCD,                                             
+                      RLIN_DIGIT_BLETO,                                         
+                      CBARRA_BLETO_PGTO                                         
+                 INTO :LCRJB043.HINCL-REG,                                      
+                      :LCRJB043.CBCO-PRODT-COBR,                                
+                      :LCRJB043.CIDTFD-PRODT-COBR,                              
+                      :LCRJB043.CNEGOC-COBR,                                    
+                      :LCRJB043.CSIT-BLETO-VEIC,                                
+                      :LCRJB043.VTITLO-ORIGN,                                   
+                      :LCRJB043.CIDTFD-INDCD,                                   
+                      :LCRJB043.RLIN-DIGIT-BLETO,                               
+                      :LCRJB043.CBARRA-BLETO-PGTO                               
+               FROM DB2PRD.THIST_GUIA_REGTD                                     
+               WHERE NNOSSO_NRO_GUIA  = :LCRJB043.NNOSSO-NRO-GUIA               
+                 AND DVCTO_TITLO_COBR = :LCRJB043.DVCTO-TITLO-COBR              
+               ORDER BY HINCL_REG DESC                                          
+               FETCH FIRST 1 ROWS ONLY                                          
+           END-EXEC.                                                            
+                                                                                
+           IF  SQLCODE                 EQUAL ZEROS OR -811                      
+               MOVE 00                 TO LCRJCB-CCOD-RETOR                     
+               MOVE DVCTO-TITLO-COBR   OF LCRJB043                              
+                                       TO LCRJCB-DVCTO-TITLO            00660001
+               MOVE VTITLO-ORIGN       OF LCRJB043                              
+                                       TO WRK-S-Z-13V99                 00690001
+               MOVE WRK-Z-13V99-R      TO LCRJCB-VTITLO-ATULZ           00690001
+               MOVE SPACES             TO LCRJCB-CLOC-ERRO              00720001
+               MOVE SPACES             TO LCRJCB-CCOD-ERRO              00750001
+               MOVE SPACES             TO LCRJCB-CMSG-ERRO              00780001
+               GO                      TO 3100-99-FIM                   00780001
+           END-IF.                                                              
+                                                                                
+           IF  SQLCODE                 EQUAL +100                               
+               MOVE 01                 TO LCRJCB-CCOD-RETOR                     
+               MOVE SPACES             TO LCRJCB-DVCTO-TITLO            00660001
+               MOVE ZEROS              TO LCRJCB-VTITLO-ATULZ           00690001
+               MOVE SPACES             TO LCRJCB-CLOC-ERRO              00720001
+               MOVE SPACES             TO LCRJCB-CCOD-ERRO              00750001
+               MOVE SPACES             TO LCRJCB-CMSG-ERRO              00780001
+               GO                      TO 3100-99-FIM                   00780001
+           END-IF.                                                              
+                                                                                
+           IF (SQLCODE                 NOT EQUAL ZEROS                          
+           AND SQLCODE                 NOT EQUAL 100                            
+           AND SQLCODE                 NOT EQUAL -811)                          
+           OR (SQLWARN0                EQUAL 'W')                               
+               MOVE 'DB2'              TO ERR-TIPO-ACESSO                       
+               MOVE 'THIST_GUIA_REGTD' TO ERR-DBD-TAB                           
+               MOVE 'UPDATE'           TO ERR-FUN-COMANDO                       
+               MOVE SQLCODE            TO ERR-SQL-CODE                          
+               MOVE '8940'             TO ERR-LOCAL                             
+               MOVE SPACES             TO ERR-SEGM                              
+               MOVE 88                 TO LCRJCB-CCOD-RETOR                     
+               MOVE SPACES             TO LCRJCB-DVCTO-TITLO            00660001
+               MOVE ZEROS              TO LCRJCB-VTITLO-ATULZ           00690001
+               MOVE 'LCRJ8940'         TO LCRJCB-CLOC-ERRO              00720001
+               MOVE '00000001'         TO LCRJCB-CCOD-ERRO              00750001
+               MOVE ERRO-AREA(01:80)   TO LCRJCB-CMSG-ERRO              00780001
+           END-IF.                                                              
+                                                                                
+      *---------------------------------------------------------------*         
+       3100-99-FIM.                    EXIT.                                    
+      *---------------------------------------------------------------*         
+                                                                                

@@ -1,0 +1,62 @@
+//CLLP2222 JOB 'CLLP,4120,PR32','I311083',MSGCLASS=Z,REGION=8192K       
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTBU60                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=CLLP7011,                                           
+//       PARM='MAIS 3 MESES'                                            
+//*                                                                     
+//* ***    ATUALIZA ARQUIVO DE BAIXA COM OS REGISTROS EXPURGADOS        
+//*                                                                     
+//CADBAIXA DD DSN=MX.CLLP.S076641.BXEXPURG.MENSAL.LEI(0),               
+//       DISP=SHR                                                       
+//BAIX3MES DD DSN=MX.CLLP.D0PRVMZ.PRV.BXMAIS3M.LEI(0),                  
+//       DISP=SHR                                                       
+//BAIXATU  DD DSN=MX.CLLP.D0PRVMZ.PRV.BXMAIS3M.LEI(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300000,050000),RLSE),                              
+//       DCB=(MX.A,LRECL=0414,RECFM=FB,BUFNO=50),                       
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#BU60,                                       
+//       DCB=(LRECL=080,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CONVERTER O ARQUIVO RECEBIDO DO DCIR                         
+//* ***    INCLUINDO OS CAMPOS DA LEI DA TRANSPARENCIA                  
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.BAIXATU,                                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.D0PRVMZ.PRV.BXMAIS3M(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000020,0004),RLSE),                                
+//       DCB=(MX.A,LRECL=0314,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTREC FIELDS=(1,314)                                                  
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

@@ -1,0 +1,4 @@
+
+TOTAIS DE REGISTROS -       12.289-ARQDB22 - LIDOS
+                                 0-ARQDB22-- EXCLUIDOS
+                            12.289-ARQDB22 - GRAVADOS

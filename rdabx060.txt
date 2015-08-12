@@ -1,0 +1,34 @@
+//RDABX060 JOB 'RDAB,4120,PR32','D115848',MSGCLASS=Z,SCHENV=DB2         
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    RECEPCIONA ARQUIVO AL1 PARA UPDATE RDABB006                  
+//*                                                                     
+//SYSUT1   DD DSN=TM.CLLP.RDAB.CADURDAB.LOGRD.CORR,                     
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSUT2   DD DSN=MX.RDAB.JX060S01.CADURDAB.CORR(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(030000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0130,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0284                                            
+//*                                                                     
+//* ***    ATUALIZACAO DO RDABB006                                      
+//*                                                                     
+//ARQEND   DD DSN=*.STEP1.SYSUT2,                                       
+//       DISP=SHR                                                       
+//ARQUPDT  DD DSN=MX.RDAB.JX060S02.ARQUPDT(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+//       DCB=(MX.A,LRECL=146,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

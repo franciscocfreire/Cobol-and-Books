@@ -1,0 +1,1052 @@
+      *================================================================*
+       IDENTIFICATION                  DIVISION.                        
+      *================================================================*
+                                                                        
+       PROGRAM-ID. CLLPB719.                                            
+       AUTHOR.     JEFERSON TERHORST.                                   
+                                                                        
+      *================================================================*
+      *                    C P M  -  S I S T E M A S                   *
+      *----------------------------------------------------------------*
+      *    PROGRAMA....:   CLLPB719                                    *
+      *    PROGRAMADOR.:   JEFERSON TERHORST        - CPM PATO BRANCO  *
+      *    ANALISTA CPM:   FELIPE ALEX SOMMER       - CPM PATO BRANCO  *
+      *    ANALISTA....:   PAULO CARNEIRO           - G & P / GP 70    *
+      *    DATA........:   14/06/2006                                  *
+      *----------------------------------------------------------------*
+      *    OBJETIVO....:   ATUALIZAR CADASTRO DE AVISO COM A INFORMA«„O*
+      *                    DO SEGURO PRESTAMISTAS                      *
+      *                                                                *
+      *                                                                *
+      *----------------------------------------------------------------*
+      *    ARQUIVOS....:                                               *
+      *                DDNAME                       INCLUDE/BOOK       *
+      *                    ARQDATA                    I#CLLPGA         *
+      *                    CADAVIS                    I#CLLPPO         *
+      *                    MVCLIEEN                   I#CLLPPM         *
+      *                    AVISOSEG                   I#CLLPPK         *
+      *                    RELAVIS                       -             *
+      *----------------------------------------------------------------*
+      *    BOOK'S......:                                               *
+      *    I#CLLPGA - ARQUIVO DE CONTROLE DE DATA DO MOVIMENTO.        *
+      *    I#CLLPQQ - CAD. PENDENCIAS ATIVAS COM SEGURO PRESTAMISTA.   *
+      *    I#CLLPPK - PRESTAMISTAS PARAS CONTROLE DE AVISO DE COBRANCA *
+      *    POL7100C - AREA PARA TRATAMENTO DE ERROS.                   *
+      *----------------------------------------------------------------*
+      *    MODULOS.....:                                               *
+      *    BRAD7100 - MODULO PARA TRATAMENTO DE ERROS.                 *
+      *    BRAD7600 - MODULO PARA OBTER DATA E HORA DO SISTEMA.        *
+      *================================================================*
+      *               B R Q     I T     S E R V I C E S                *
+      *================================================================*
+      *                       A L T E R A C A O                        *
+      *----------------------------------------------------------------*
+      *    PROGRAMADOR.:  HENRIQUE GUIMARAES      - BRQ                *
+      *    ANALISTA....:  HENRIQUE GUIMARAES      - BRQ                *
+      *    DATA........:  11/04/2014                                   *
+      *----------------------------------------------------------------*
+      *    OBJETIVO....:  ADAPTACOES PARA A LEI DA TRANSPARENCIA       *
+      *                   TROCAR BOOK INTERNAS(562) POR I#CLLPPN(1290) *
+      *    PROJETO 13-0358                                             *
+      *================================================================*
+                                                                        
+      *================================================================*
+       ENVIRONMENT                     DIVISION.                        
+      *================================================================*
+                                                                        
+      *----------------------------------------------------------------*
+       CONFIGURATION                   SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+       SPECIAL-NAMES.                                                   
+           DECIMAL-POINT               IS COMMA.                        
+                                                                        
+      *----------------------------------------------------------------*
+       INPUT-OUTPUT                    SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+       FILE-CONTROL.                                                    
+                                                                        
+           SELECT ARQDATA  ASSIGN      TO UT-S-ARQDATA                  
+           FILE STATUS                 IS WRK-FS-ARQDATA.               
+                                                                        
+           SELECT MVCLIEEN ASSIGN      TO UT-S-MVCLIEEN                 
+           FILE STATUS                 IS WRK-FS-MVCLIEEN.              
+                                                                        
+           SELECT CADAVIS ASSIGN       TO UT-S-CADAVIS                  
+           FILE STATUS                 IS WRK-FS-CADAVIS.               
+                                                                        
+           SELECT AVISOSEG ASSIGN      TO UT-S-AVISOSEG                 
+           FILE STATUS                 IS WRK-FS-AVISOSEG.              
+                                                                        
+           SELECT RELAVIS  ASSIGN      TO UT-S-RELAVIS                  
+           FILE STATUS                 IS WRK-FS-RELAVIS.               
+                                                                        
+      *================================================================*
+       DATA                            DIVISION.                        
+      *================================================================*
+                                                                        
+      *----------------------------------------------------------------*
+       FILE                            SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+      *----------------------------------------------------------------*
+      *    INPUT:  ARQUIVO DE CONTROLE DE DATA DO MOVIMENTO.           *
+      *            ORG. SEQUENCIAL     -   LRECL   =  065              *
+      *----------------------------------------------------------------*
+                                                                        
+       FD  ARQDATA                                                      
+           RECORDING MODE IS F                                          
+           LABEL RECORD   IS STANDARD                                   
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       COPY I#CLLP18.                                                   
+                                                                        
+      *----------------------------------------------------------------*
+      *    INPUT:  MOVIMENTO DAS OPERACOES PARA ATIVAS (ARQDB22)       *
+      *            ORG. SEQUENCIAL     -   LRECL   =                   *
+      *----------------------------------------------------------------*
+                                                                        
+       FD  MVCLIEEN                                                     
+           RECORDING MODE IS F                                          
+           LABEL RECORD   IS STANDARD                                   
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       COPY I#CLLPPM.                                                   
+                                                                        
+      *----------------------------------------------------------------*
+      *    INPUT:  CADASTRO DE PENDENCIAS - PARAMETROS         )       *
+      *            ORG. SEQUENCIAL     -   LRECL   =  1290             *
+      *----------------------------------------------------------------*
+                                                                        
+       FD  CADAVIS                                                      
+           RECORDING MODE IS F                                          
+           LABEL RECORD   IS STANDARD                                   
+           BLOCK CONTAINS 0 RECORDS.                                    
+           COPY 'I#CLLPPN'.                                             
+                                                                        
+      *----------------------------------------------------------------*
+      *    INPUT:  ARQUIVO DE AVISO DE COBRANÁAS                       *
+      *            ORG. SEQUENCIAL     -   LRECL   =  1290             *
+      *----------------------------------------------------------------*
+                                                                        
+       FD  AVISOSEG                                                     
+           RECORDING MODE IS F                                          
+           LABEL RECORD   IS STANDARD                                   
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+           COPY 'I#CLLPPN'.                                             
+                                                                        
+      *----------------------------------------------------------------*
+      *    OUTPUT: LISTA PENDENCIAS ENVIADAS AO AVISO DE COBRANCA      *
+      *            ORG. SEQUENCIAL     -   LRECL   =  081              *
+      *----------------------------------------------------------------*
+                                                                        
+       FD  RELAVIS                                                      
+           RECORDING MODE IS F                                          
+           LABEL RECORD   IS STANDARD                                   
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       01  FD-RELAVIS                  PIC  X(133).                     
+                                                                        
+      *----------------------------------------------------------------*
+      *    OUTPUT: LISTA PENDENCIAS NAO ENVIADAS AO AVISO DE COBRANCA  *
+      *            ORG. SEQUENCIAL     -   LRECL   =  133              *
+      *----------------------------------------------------------------*
+                                                                        
+      *----------------------------------------------------------------*
+       WORKING-STORAGE                 SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+      *----------------------------------------------------------------*
+       77  FILLER                      PIC  X(050)          VALUE       
+           '*** INICIO DA WORKING STORAGE SECTION ***'.                 
+      *----------------------------------------------------------------*
+                                                                        
+                                                                        
+      *----------------------------------------------------------------*
+       77  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA PARA ACUMULADORES ***'.                            
+      *----------------------------------------------------------------*
+                                                                        
+       77  ACU-PAG-SELE                PIC  9(005) COMP-3  VALUE ZEROS. 
+       77  ACU-PAG-NAVIS               PIC  9(005) COMP-3  VALUE ZEROS. 
+       77  ACU-LINHAS-SELE             PIC  9(003) COMP-3  VALUE ZEROS. 
+       77  ACU-LINHAS-NAVIS            PIC  9(003) COMP-3  VALUE ZEROS. 
+       77  ACU-LINHA-LIMITE1           PIC  9(003) COMP-3  VALUE ZEROS. 
+       77  ACU-LIDOS-MVCLIEEN          PIC  9(009) COMP-3  VALUE ZEROS. 
+       77  ACU-LIDOS-CADAVIS           PIC  9(009) COMP-3  VALUE ZEROS. 
+       77  ACU-GRAVADOS-AVISOSEG       PIC  9(009) COMP-3  VALUE ZEROS. 
+       77  ACU-GRAVADOS-NAVIS          PIC  9(009) COMP-3  VALUE ZEROS. 
+       77  ACU-GRAVADOS-ATUALIZ        PIC  9(009) COMP-3  VALUE ZEROS. 
+       77  ACU-DESPREZADOS             PIC  9(009) COMP-3  VALUE ZEROS. 
+       77  WRK-IND-OCORR               PIC  9(009) COMP-3  VALUE ZEROS. 
+                                                                        
+      *----------------------------------------------------------------*
+       77  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA PARA TESTES DE FILE STATUS ***'.                   
+      *----------------------------------------------------------------*
+                                                                        
+       77  WRK-FS-ARQDATA              PIC  X(002)         VALUE SPACES.
+       77  WRK-FS-MVCLIEEN             PIC  X(002)         VALUE SPACES.
+       77  WRK-FS-CADAVIS              PIC  X(002)         VALUE SPACES.
+       77  WRK-FS-AVISOSEG             PIC  X(002)         VALUE SPACES.
+       77  WRK-FS-RELAVIS              PIC  X(002)         VALUE SPACES.
+       77  WRK-ABERTURA                PIC  X(013)         VALUE        
+           ' NA ABERTURA '.                                             
+       77  WRK-LEITURA                 PIC  X(013)         VALUE        
+           ' NA LEITURA  '.                                             
+       77  WRK-GRAVACAO                PIC  X(013)         VALUE        
+           ' NA GRAVACAO '.                                             
+       77  WRK-FECHAMENTO              PIC  X(013)         VALUE        
+           'NO FECHAMENTO'.                                             
+                                                                        
+      *----------------------------------------------------------------*
+       77  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA PARA VARIAVEIS AUXILIARES ***'.                    
+      *----------------------------------------------------------------*
+                                                                        
+       77  WRK-BATCH                   PIC  X(008)         VALUE        
+           'BATCH'.                                                     
+       77  WRK-ENCONTROU-NATUREZA      PIC  X(001)         VALUE SPACES.
+       77  WRK-MASCARA                 PIC ZZZ.ZZZ.ZZZ.Z99 VALUE ZEROS. 
+                                                                        
+       01  FILLER.                                                      
+           05  WRK-NOME-CPFNUM         PIC 9(09)          VALUE ZEROS.  
+           05  WRK-NOME-CPFFIL         PIC 9(05)          VALUE ZEROS.  
+           05  WRK-EMPRESA-AUX         PIC 9(05)          VALUE ZEROS.  
+           05  WRK-AGENCIA-AUX         PIC 9(05)          VALUE ZEROS.  
+           05  WRK-CONTA-AUX           PIC 9(07)          VALUE ZEROS.  
+                                                                        
+       01  WRK-DATA-AUX.                                                
+           05 WRK-DIA-AUX              PIC 9(002)          VALUE ZEROS. 
+           05 FILLER                   PIC X(001)          VALUE '.'.   
+           05 WRK-MES-AUX              PIC 9(002)          VALUE ZEROS. 
+           05 FILLER                   PIC X(001)          VALUE '.'.   
+           05 WRK-ANO-AUX              PIC 9(004)          VALUE ZEROS. 
+                                                                        
+      *----------------------------------------------------------------*
+       01  FILLER                      PIC  X(050)         VALUE        
+           '*** MENSAGEM DE ERRO DE FILE STATUS ***'.                   
+      *----------------------------------------------------------------*
+                                                                        
+       01  WRK-ERRO-ARQUIVO.                                            
+           05  FILLER                  PIC  X(008)         VALUE        
+               '** ERRO '.                                              
+           05  WRK-OPERACAO            PIC  X(013)         VALUE SPACES.
+           05  FILLER                  PIC  X(012)         VALUE        
+               ' DO ARQUIVO '.                                          
+           05  WRK-NOME-ARQUIVO        PIC  X(008)         VALUE SPACES.
+           05  FILLER                  PIC  X(017)         VALUE        
+               ' - FILE STATUS = '.                                     
+           05  WRK-FILE-STATUS         PIC  X(002)         VALUE SPACES.
+           05  FILLER                  PIC  X(003)         VALUE ' **'. 
+                                                                        
+      *----------------------------------------------------------------*
+       01  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA PARA BRAD7600 ***'.                                
+      *----------------------------------------------------------------*
+                                                                        
+       01  WRK-DATA-HORA.                                               
+           05 WRK-DATA-JULIANA         PIC  9(005) COMP-3  VALUE ZEROS. 
+           05 WRK-DATA-AAMMDD          PIC  9(007) COMP-3  VALUE ZEROS. 
+           05 WRK-DATA-AAAAMMDD        PIC  9(009) COMP-3  VALUE ZEROS. 
+           05 WRK-HORA-HHMMSS          PIC  9(007) COMP-3  VALUE ZEROS. 
+           05 WRK-HORA-HHMMSSMMMMMM    PIC  9(013) COMP-3  VALUE ZEROS. 
+           05 WRK-TIMESTAMP.                                            
+             10 WRK-ANO                PIC  9(004)         VALUE ZEROS. 
+             10 WRK-MES                PIC  9(002)         VALUE ZEROS. 
+             10 WRK-DIA                PIC  9(002)         VALUE ZEROS. 
+             10 WRK-HOR                PIC  9(002)         VALUE ZEROS. 
+             10 WRK-MIN                PIC  9(002)         VALUE ZEROS. 
+             10 WRK-SEG                PIC  9(002)         VALUE ZEROS. 
+             10 FILLER                 PIC  X(006)         VALUE SPACES.
+                                                                        
+      *---------------------------------------------------------------* 
+       01  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA DA POOL1205 ***'.                                  
+      *---------------------------------------------------------------* 
+                                                                        
+       01  WRK-MENSAGEM-1205         PIC  X(050)        VALUE SPACES.   
+                                                                        
+       01  WRK-AREA-POOL1205.                                           
+           05  WRK-DT-ENVIADA-1205   PIC  9(008) COMP-3 VALUE ZEROS.    
+           05  WRK-OPCAO-1205        PIC  X(001)        VALUE SPACES.   
+           05  WRK-DT-JULIANA-1205   PIC  9(007) COMP-3 VALUE ZEROS.    
+           05  WRK-DT-EDITADA-1205   PIC  X(010)        VALUE SPACES.   
+           05  WRK-DT-GREGORI-1205   PIC  9(008)        VALUE ZEROS.    
+           05  WRK-DIA-SEMANA-1205   PIC  X(013)        VALUE SPACES.   
+           05  WRK-MES-EXTENSO-1205  PIC  X(009)        VALUE SPACES.   
+           05  WRK-DIA-UT-ANTER-1205 PIC  9(008)        VALUE ZEROS.    
+           05  WRK-DIA-UT-POSTE-1205 PIC  9(008)        VALUE ZEROS.    
+                                                                        
+       01  WRK-DATA-INV                PIC 9(008)  VALUE ZEROS.         
+       01  FILLER      REDEFINES       WRK-DATA-INV.                    
+           05 WRK-ANO-INV              PIC 9(004).                      
+           05 WRK-MES-INV              PIC 9(002).                      
+           05 WRK-DIA-INV              PIC 9(002).                      
+                                                                        
+       01  WRK-DATA-VCTO               PIC X(010).                      
+       01  FILLER   REDEFINES    WRK-DATA-VCTO.                         
+           05 WRK-DIA-VCTO             PIC 9(002).                      
+           05 FILLER                   PIC X(001).                      
+           05 WRK-MES-VCTO             PIC 9(002).                      
+           05 FILLER                   PIC X(001).                      
+           05 WRK-ANO-VCTO             PIC 9(004).                      
+                                                                        
+      *----------------------------------------------------------------*
+       01  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA PARA CHAVES DE ARQUIVO ***'.                       
+      *----------------------------------------------------------------*
+                                                                        
+       01  WRK-MVCLIEEN-CHAVE.                                          
+           05 WRK-MVCLIEEN-CPFNUM       PIC  9(009)        VALUE ZEROS. 
+           05 WRK-MVCLIEEN-CPFFIL       PIC  9(005)        VALUE ZEROS. 
+           05 WRK-MVCLIEEN-CPFCTR       PIC  9(003)        VALUE ZEROS. 
+                                                                        
+       01  WRK-CADAVIS-CHAVE.                                           
+           05 WRK-CADAVIS-CPFNUM        PIC  9(009)        VALUE ZEROS. 
+           05 WRK-CADAVIS-CPFFIL        PIC  9(005)        VALUE ZEROS. 
+           05 WRK-CADAVIS-CPFCTR        PIC  9(003)        VALUE ZEROS. 
+                                                                        
+      *----------------------------------------------------------------*
+       01  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA DA BRAD7100 ***'.                                  
+      *----------------------------------------------------------------*
+                                                                        
+           COPY 'I#BRAD7C'.                                             
+                                                                        
+      *----------------------------------------------------------------*
+       01  FILLER                      PIC  X(050)         VALUE        
+           '*** AREA PARA RELAVIS ***'.                                 
+      *----------------------------------------------------------------*
+                                                                        
+       01  CABEC1-REL1.                                                 
+           05  FILLER                  PIC  X(001)         VALUE '1'.   
+           05  FILLER                  PIC  X(014)         VALUE        
+               'CLLPB719'.                                              
+           05  FILLER                  PIC  X(051)         VALUE        
+               'CLIENTES COM SEGURO PRESTAMISTA - AVISO DE COBRANCA'.   
+           05  FILLER                  PIC  X(020)         VALUE SPACES.
+           05  FILLER                  PIC  X(005)         VALUE        
+               'PAG. '.                                                 
+           05  CB1-REL1-PAG            PIC  Z.ZZ9          VALUE ZEROS. 
+                                                                        
+       01  CABEC2-REL1.                                                 
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+SID********05  FILLER                  PIC  X(085)         VALUE SPACES.
+SID        05  FILLER                  PIC  X(044)         VALUE SPACES.
+SID        05  CB2-NOME-BCO            PIC  X(020)         VALUE SPACES.
+SID        05  FILLER                  PIC  X(021)         VALUE SPACES.
+           05  CB2-REL1-DIA            PIC  9(002)         VALUE ZEROS. 
+           05  FILLER                  PIC  X(001)         VALUE '/'.   
+           05  CB2-REL1-MES            PIC  9(002)         VALUE ZEROS. 
+           05  FILLER                  PIC  X(001)         VALUE '/'.   
+           05  CB2-REL1-ANO            PIC  9(004)         VALUE ZEROS. 
+                                                                        
+       01  CABEC3-REL1-BRANCO.                                          
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  FILLER                  PIC  X(080)         VALUE SPACES.
+                                                                        
+       01  CABEC7-REL1.                                                 
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  FILLER                  PIC  X(007)         VALUE        
+               'EMPRESA'.                                               
+           05  FILLER                  PIC  X(002)         VALUE SPACES.
+           05  FILLER                  PIC  X(007)         VALUE        
+               'AGENCIA'.                                               
+           05  FILLER                  PIC  X(002)         VALUE SPACES.
+           05  FILLER                  PIC  X(005)         VALUE        
+               'CONTA'.                                                 
+           05  FILLER                  PIC  X(010)         VALUE SPACES.
+           05  FILLER                  PIC  X(022)         VALUE        
+               'CGC / CPF'.                                             
+           05  FILLER                  PIC  X(010)         VALUE        
+               'CARTEIRA'.                                              
+           05  FILLER                  PIC  X(011)         VALUE        
+               'RESTRICAO'.                                             
+           05  FILLER                  PIC  X(019)         VALUE        
+               'STATUS DO SEGURO'.                                      
+                                                                        
+       01  CABEC8-REL1.                                                 
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  FILLER                  PIC  X(095)        VALUE ALL '_'.
+                                                                        
+       01  LINDET2-REL1.                                                
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  LD2-EMPRESA             PIC  ZZZZZ          VALUE ZEROS. 
+           05  FILLER                  PIC  X(004)         VALUE SPACES.
+           05  LD2-AGENCIA             PIC  ZZZZZ          VALUE ZEROS. 
+           05  FILLER                  PIC  X(004)         VALUE SPACES.
+           05  LD2-CONTA               PIC  ZZZZZZZ        VALUE ZEROS. 
+           05  FILLER                  PIC  X(008)         VALUE SPACES.
+           05  LD2-NOME-CPFNUM         PIC  ZZZ.ZZZ.ZZZ    VALUE ZEROS. 
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  LD2-NOME-CPFFIL         PIC  ZZZZZ          VALUE ZEROS. 
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  LD2-NOME-CPFCTR         PIC  99             VALUE ZEROS. 
+           05  FILLER                  PIC  X(002)         VALUE SPACES.
+           05  LD2-COD-NAT-OPER        PIC  X(002)         VALUE SPACES.
+           05  FILLER                  PIC  X(008)         VALUE SPACES.
+           05  LD2-RESTRIC             PIC  X(02)          VALUE SPACES.
+           05  FILLER                  PIC  X(009)         VALUE SPACES.
+           05  LD2-REL1-STATUS         PIC  X(019)         VALUE SPACES.
+                                                                        
+       01  CABEC9-REL1.                                                 
+           05  FILLER                  PIC  X(001)         VALUE '0'.   
+           05  FILLER                  PIC  X(024)         VALUE SPACES.
+           05  FILLER                  PIC  X(011)         VALUE        
+               'TOTALIZACAO'.                                           
+                                                                        
+       01  CABEC10-REL1.                                                
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  FILLER                  PIC  X(011)         VALUE SPACES.
+           05  FILLER                  PIC  X(045)         VALUE        
+               ALL '-'.                                                 
+                                                                        
+       01  LINTOT1-REL1A.                                               
+           05  FILLER                  PIC  X(001)         VALUE '0'.   
+           05  FILLER                  PIC  X(011)         VALUE SPACES.
+           05  FILLER                  PIC  X(034)         VALUE        
+               'PRESTAMISTAS - LIDOS ...........: '.                    
+           05  LT1-REL1-ATIVO-LIDOS    PIC  ZZZ.ZZZ.ZZZ.ZZ9 VALUE ZEROS.
+                                                                        
+       01  LINTOT1-REL1B.                                               
+           05  FILLER                  PIC  X(001)         VALUE '0'.   
+           05  FILLER                  PIC  X(011)         VALUE SPACES.
+           05  FILLER                  PIC  X(034)         VALUE        
+               'CADAVIS - LIDOS ...............: '.                     
+           05  LT1-REL1-PEND-LIDOS     PIC  ZZZ.ZZZ.ZZZ.ZZ9 VALUE ZEROS.
+                                                                        
+       01  LINTOT3-REL1.                                                
+           05  FILLER                  PIC  X(001)         VALUE SPACES.
+           05  FILLER                  PIC  X(011)         VALUE SPACES.
+           05  FILLER                  PIC  X(034)         VALUE        
+               'PRESTAMISTAS GRAVADOS ..........: '.                    
+           05  LT3-ATIVO-GRAVADOS-REL1 PIC  ZZZ.ZZZ.ZZZ.ZZ9 VALUE ZEROS.
+                                                                        
+      *================================================================*
+       LINKAGE                         SECTION.                         
+      *================================================================*
+                                                                        
+       01  LNK-CAMPOS-PARM.                                             
+           03 LNK-TAMANHO-PARM              PIC S9(04)  COMP.           
+           03 LNK-CCUSTO-PARM               PIC X(04).                  
+                                                                        
+      *================================================================*
+       PROCEDURE      DIVISION      USING       LNK-CAMPOS-PARM.        
+      *================================================================*
+                                                                        
+      ******************************************************************
+      * CONTROLE DAS PRINCIPAIS ROTINAS DO PROGRAMA.                   *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       0000-INICIAR                    SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           PERFORM 1000-INICIALIZAR.                                    
+                                                                        
+           PERFORM 2000-VERIFICAR-VAZIO.                                
+                                                                        
+           PERFORM 3000-PROCESSAR      UNTIL                            
+               WRK-MVCLIEEN-CHAVE          EQUAL HIGH-VALUES            
+           AND WRK-CADAVIS-CHAVE           EQUAL HIGH-VALUES.           
+                                                                        
+           PERFORM 4000-FINALIZAR.                                      
+                                                                        
+      *----------------------------------------------------------------*
+       0000-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * EXECUTA ABERTURA E TESTE DE FILE-STATUS DOS ARQUIVOS DE I/O.   *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1000-INICIALIZAR                SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           OPEN INPUT  ARQDATA                                          
+                       MVCLIEEN                                         
+                       CADAVIS                                          
+                OUTPUT AVISOSEG                                         
+                       RELAVIS.                                         
+                                                                        
+           MOVE WRK-ABERTURA           TO WRK-OPERACAO.                 
+                                                                        
+           PERFORM 1100-TESTAR-FILE-STATUS.                             
+                                                                        
+           PERFORM 1200-OBTER-DATA-SISTEMA.                             
+                                                                        
+      *----------------------------------------------------------------*
+       1000-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * CHAMA AS ROTINAS DE TESTE DE FILE-STATUS DOS ARQUIVOS DE I/O.  *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1100-TESTAR-FILE-STATUS         SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           PERFORM 1115-TESTAR-FS-MVCLIEEN.                             
+                                                                        
+           PERFORM 1117-TESTAR-FS-CADAVIS.                              
+                                                                        
+           PERFORM 1120-TESTAR-FS-ARQDATA.                              
+                                                                        
+           PERFORM 1140-TESTAR-FS-AVISOSEG.                             
+                                                                        
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+      *----------------------------------------------------------------*
+       1100-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * TESTA O FILE-STATUS DO ARQUIVO DE ENTRADA MVCLIEEN.            *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1115-TESTAR-FS-MVCLIEEN         SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           IF  WRK-FS-MVCLIEEN         NOT EQUAL '00'                   
+               MOVE 'APL'              TO ERR-TIPO-ACESSO               
+               MOVE 'MVCLIEEN'         TO WRK-NOME-ARQUIVO              
+               MOVE WRK-FS-MVCLIEEN    TO WRK-FILE-STATUS               
+               MOVE WRK-ERRO-ARQUIVO   TO ERR-TEXTO                     
+               PERFORM 9999-PROCESSAR-ROTINA-ERRO                       
+           END-IF.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       1115-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * TESTA O FILE-STATUS DO ARQUIVO DE ENTRADA CADAVIS.             *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1117-TESTAR-FS-CADAVIS          SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           IF  WRK-FS-CADAVIS          NOT EQUAL '00'                   
+               MOVE 'APL'              TO ERR-TIPO-ACESSO               
+               MOVE 'CADAVIS'          TO WRK-NOME-ARQUIVO              
+               MOVE WRK-FS-CADAVIS     TO WRK-FILE-STATUS               
+               MOVE WRK-ERRO-ARQUIVO   TO ERR-TEXTO                     
+               PERFORM 9999-PROCESSAR-ROTINA-ERRO                       
+           END-IF.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       1117-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * TESTA O FILE-STATUS DO ARQUIVO DE ENTRADA ARQDATA.             *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1120-TESTAR-FS-ARQDATA          SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           IF  WRK-FS-ARQDATA          NOT EQUAL '00'                   
+               MOVE 'APL'              TO ERR-TIPO-ACESSO               
+               MOVE 'ARQDATA '         TO WRK-NOME-ARQUIVO              
+               MOVE WRK-FS-ARQDATA     TO WRK-FILE-STATUS               
+               MOVE WRK-ERRO-ARQUIVO   TO ERR-TEXTO                     
+               PERFORM 9999-PROCESSAR-ROTINA-ERRO                       
+           END-IF.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       1120-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * TESTA O FILE STATUS DO ARQUIVO DE SAIDA AVISOSEG.              *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1140-TESTAR-FS-AVISOSEG         SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           IF  WRK-FS-AVISOSEG         NOT EQUAL '00'                   
+               MOVE 'APL'              TO ERR-TIPO-ACESSO               
+               MOVE 'AVISOSEG'         TO WRK-NOME-ARQUIVO              
+               MOVE WRK-FS-AVISOSEG    TO WRK-FILE-STATUS               
+               MOVE WRK-ERRO-ARQUIVO   TO ERR-TEXTO                     
+               PERFORM 9999-PROCESSAR-ROTINA-ERRO                       
+           END-IF.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       1140-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * TESTA O FILE STATUS DO ARQUIVO DE SAIDA RELAVIS.               *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1150-TESTAR-FS-RELAVIS          SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           IF  WRK-FS-RELAVIS          NOT EQUAL '00'                   
+               MOVE 'APL'              TO ERR-TIPO-ACESSO               
+               MOVE 'RELAVIS '         TO WRK-NOME-ARQUIVO              
+               MOVE WRK-FS-RELAVIS     TO WRK-FILE-STATUS               
+               MOVE WRK-ERRO-ARQUIVO   TO ERR-TEXTO                     
+               PERFORM 9999-PROCESSAR-ROTINA-ERRO                       
+           END-IF.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       1150-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * OBTEM A DATA E HORA DO SISTEMA UTILIZANDO A BRAD7600.          *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       1200-OBTER-DATA-SISTEMA         SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           CALL 'BRAD7600'             USING WRK-DATA-HORA.             
+                                                                        
+           MOVE WRK-DIA                TO CB2-REL1-DIA                  
+                                          WRK-DIA-AUX.                  
+                                                                        
+           MOVE WRK-MES                TO CB2-REL1-MES                  
+                                          WRK-MES-AUX.                  
+                                                                        
+           MOVE WRK-ANO                TO CB2-REL1-ANO                  
+                                          WRK-ANO-AUX.                  
+                                                                        
+      *----------------------------------------------------------------*
+       1200-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * VERIFICA E EMITE DISPLAY CASO ARQUIVOS ESTEJAM VAZIOS.         *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       2000-VERIFICAR-VAZIO            SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           PERFORM 2105-LER-MVCLIEEN.                                   
+                                                                        
+           IF  WRK-FS-MVCLIEEN         EQUAL '10'                       
+               DISPLAY '***********  CLLPB719 ***********'              
+               DISPLAY '*                               *'              
+               DISPLAY '*         ARQUIVO MVCLIEEN      *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*            ESTA VAZIO         *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*        PROGRAMA ENCERRADO     *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*********** CLLPB719 ************'              
+           END-IF.                                                      
+                                                                        
+           PERFORM 2107-LER-CADAVIS.                                    
+                                                                        
+           IF  WRK-FS-CADAVIS          EQUAL '10'                       
+               DISPLAY '***********  CLLPB719 ***********'              
+               DISPLAY '*                               *'              
+               DISPLAY '*          ARQUIVO CADAVIS      *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*            ESTA VAZIO         *'              
+               DISPLAY '*                               *'              
+***************DISPLAY '*        PROGRAMA ENCERRADO     *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*********** CLLPB719 ************'              
+           END-IF.                                                      
+                                                                        
+           PERFORM 2200-LER-ARQDATA.                                    
+                                                                        
+           IF  WRK-FS-ARQDATA          EQUAL '10'                       
+               DISPLAY '***********  CLLPB719 ***********'              
+               DISPLAY '*                               *'              
+               DISPLAY '*         ARQUIVO ARQDATA       *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*            ESTA VAZIO         *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*        PROGRAMA ENCERRADO     *'              
+               DISPLAY '*                               *'              
+               DISPLAY '*********** CLLPB719 ************'              
+               MOVE 'APL'              TO ERR-TIPO-ACESSO               
+               MOVE 'ARQUIVO ARQDATA ESTA VAZIO - PROGRAMA ENCERRADO'   
+                                       TO ERR-TEXTO                     
+               PERFORM 9999-PROCESSAR-ROTINA-ERRO                       
+           END-IF.                                                      
+                                                                        
+           MOVE 99                     TO ACU-LINHAS-SELE               
+                                          ACU-LINHAS-NAVIS.             
+                                                                        
+      *----------------------------------------------------------------*
+       2000-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * EXECUTA A LEITURA DO ARQUIVO MVCLIEEN E TESTA FILE-STATUS.     *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       2105-LER-MVCLIEEN               SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           READ MVCLIEEN.                                               
+                                                                        
+           IF  WRK-FS-MVCLIEEN         EQUAL '10'                       
+               MOVE HIGH-VALUES        TO WRK-MVCLIEEN-CHAVE            
+               GO TO 2105-99-FIM                                        
+           END-IF.                                                      
+                                                                        
+           MOVE WRK-LEITURA            TO WRK-OPERACAO.                 
+                                                                        
+           PERFORM 1115-TESTAR-FS-MVCLIEEN.                             
+                                                                        
+           MOVE   OU-NOME-CPFNUM        TO WRK-MVCLIEEN-CPFNUM.         
+           MOVE   OU-NOME-CPFFIL        TO WRK-MVCLIEEN-CPFFIL.         
+           MOVE   OU-NOME-CPFCTR        TO WRK-MVCLIEEN-CPFCTR.         
+                                                                        
+           ADD 1                       TO ACU-LIDOS-MVCLIEEN.           
+                                                                        
+      *----------------------------------------------------------------*
+       2105-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * EXECUTA A LEITURA DO ARQUIVO CADAVIS E TESTA FILE-STATUS.      *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       2107-LER-CADAVIS                SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           READ CADAVIS.                                                
+                                                                        
+           IF  WRK-FS-CADAVIS          EQUAL '10'                       
+               MOVE HIGH-VALUES        TO WRK-CADAVIS-CHAVE             
+               GO TO 2107-99-FIM                                        
+           END-IF.                                                      
+                                                                        
+           MOVE WRK-LEITURA            TO WRK-OPERACAO.                 
+                                                                        
+           PERFORM 1117-TESTAR-FS-CADAVIS.                              
+                                                                        
+           MOVE   SPC-CGC-NUM           OF CADAVIS                      
+                                        TO WRK-CADAVIS-CPFNUM.          
+           MOVE   SPC-CGC-FIL           OF CADAVIS                      
+                                        TO WRK-CADAVIS-CPFFIL.          
+           MOVE   SPC-CGC-CTR           OF CADAVIS                      
+                                        TO WRK-CADAVIS-CPFCTR.          
+                                                                        
+           ADD 1                       TO ACU-LIDOS-CADAVIS.            
+                                                                        
+      *----------------------------------------------------------------*
+       2107-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * EXECUTA A LEITURA DO ARQUIVO ARQDATA E TESTA FILE-STATUS.      *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       2200-LER-ARQDATA                SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           READ ARQDATA.                                                
+                                                                        
+           IF  WRK-FS-ARQDATA          EQUAL '10'                       
+               GO TO 2200-99-FIM                                        
+           END-IF.                                                      
+                                                                        
+           MOVE WRK-LEITURA            TO WRK-OPERACAO.                 
+                                                                        
+           PERFORM 1120-TESTAR-FS-ARQDATA.                              
+                                                                        
+      *----------------------------------------------------------------*
+       2200-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * CONTROLE DOS PROCESSOS GERAIS DO PGM.                          *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       3000-PROCESSAR                  SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           IF WRK-CADAVIS-CHAVE         EQUAL   WRK-MVCLIEEN-CHAVE      
+              PERFORM 3100-MONTAR-AVISOSEG                              
+              PERFORM 3210-IMPRIMIR-RELATORIO                           
+              PERFORM 2105-LER-MVCLIEEN                                 
+              PERFORM 2107-LER-CADAVIS                                  
+           ELSE                                                         
+              IF WRK-CADAVIS-CHAVE       LESS     WRK-MVCLIEEN-CHAVE    
+                 PERFORM 3150-MONTAR-AVISOSEG-1                         
+                 PERFORM 2107-LER-CADAVIS                               
+              ELSE                                                      
+                 PERFORM 2105-LER-MVCLIEEN.                             
+                                                                        
+      *----------------------------------------------------------------*
+       3000-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * MONTA O RELATORIO DE PENDENCIAS QUE NAO IRAO PARA O AVIS       *
+      ******************************************************************
+                                                                        
+      ******************************************************************
+      * MONTAR ARQUIVO DE CLIENTES COM SEGUROS PRESTAMISTAS            *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       3100-MONTAR-AVISOSEG             SECTION.                        
+      *----------------------------------------------------------------*
+                                                                        
+           MOVE REG-SPC OF CADAVIS TO  REG-SPC OF AVISOSEG              
+                                                                        
+           MOVE ZEROS              TO  WRK-IND-OCORR.                   
+           MOVE SPACES             TO  WRK-ENCONTROU-NATUREZA.          
+                                                                        
+           PERFORM 3105-MONTAR-OCORR                                    
+                        UNTIL WRK-IND-OCORR EQUAL 7.                    
+                                                                        
+                                                                        
+           WRITE REG-SPC OF AVISOSEG.                                   
+                                                                        
+           PERFORM 1140-TESTAR-FS-AVISOSEG.                             
+                                                                        
+           ADD 1                       TO ACU-GRAVADOS-AVISOSEG.        
+                                                                        
+      *----------------------------------------------------------------*
+       3100-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+      ******************************************************************
+      * VERIFICAR SE A NATUREZA TEM OPERACOES COM SEGURO PRESTAMISTAS  *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       3105-MONTAR-OCORR             SECTION.                           
+      *----------------------------------------------------------------*
+                                                                        
+           ADD 1                     TO WRK-IND-OCORR.                  
+                                                                        
+           IF  SPC-NATUREZA OF AVISOSEG (WRK-IND-OCORR)                 
+                                     EQUAL  OU-COD-NAT-OPER             
+               MOVE '*'              TO SPC-POSSIBILIT OF AVISOSEG      
+                                        (WRK-IND-OCORR)                 
+               MOVE 'S'              TO WRK-ENCONTROU-NATUREZA          
+               PERFORM 3210-IMPRIMIR-RELATORIO                          
+           END-IF.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       3105-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      *----------------------------------------------------------------*
+       3150-MONTAR-AVISOSEG-1           SECTION.                        
+      *----------------------------------------------------------------*
+                                                                        
+           MOVE REG-SPC OF CADAVIS TO  REG-SPC OF AVISOSEG.             
+                                                                        
+           WRITE REG-SPC OF AVISOSEG.                                   
+                                                                        
+           PERFORM 1140-TESTAR-FS-AVISOSEG.                             
+                                                                        
+           ADD 1                       TO ACU-GRAVADOS-AVISOSEG.        
+                                                                        
+      *----------------------------------------------------------------*
+       3150-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * MONTA O RELATORIO DAS PENDENCIAS ATTUALIZADAS                  *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       3210-IMPRIMIR-RELATORIO       SECTION.                           
+      *----------------------------------------------------------------*
+                                                                        
+           ADD 1                       TO ACU-GRAVADOS-ATUALIZ.         
+                                                                        
+PIAZZA     IF  ACU-LINHA-LIMITE1     GREATER 999999999                  
+PIAZZA         GO TO 3210-99-FIM.                                       
+                                                                        
+           IF  ACU-LINHAS-SELE         GREATER 55                       
+               PERFORM 3211-MONTAR-CABECALHO-SELE                       
+               MOVE 15                 TO ACU-LINHAS-SELE               
+PIAZZA         ADD  05                 TO ACU-LINHA-LIMITE1             
+           END-IF.                                                      
+                                                                        
+           MOVE  OU-NOME-CPFNUM         TO   WRK-NOME-CPFNUM            
+           MOVE  OU-NOME-CPFFIL         TO   WRK-NOME-CPFFIL            
+           MOVE  SPC-EMPRESA            OF AVISOSEG                     
+                                        TO   WRK-EMPRESA-AUX            
+           MOVE  SPC-AGENCIA            OF AVISOSEG                     
+                                        TO   WRK-AGENCIA-AUX            
+           MOVE  SPC-NUM-CC             OF AVISOSEG                     
+                                        TO   WRK-CONTA-AUX              
+           MOVE  WRK-NOME-CPFNUM        TO   LD2-NOME-CPFNUM            
+           MOVE  WRK-NOME-CPFFIL        TO   LD2-NOME-CPFFIL            
+           MOVE  WRK-EMPRESA-AUX        TO   LD2-EMPRESA                
+           MOVE  WRK-AGENCIA-AUX        TO   LD2-AGENCIA                
+           MOVE  WRK-CONTA-AUX          TO   LD2-CONTA                  
+           MOVE  OU-NOME-CPFCTR         TO   LD2-NOME-CPFCTR            
+           MOVE  OU-COD-NAT-OPER        TO   LD2-COD-NAT-OPER           
+           IF WRK-ENCONTROU-NATUREZA    EQUAL 'S'                       
+              MOVE  SPACES              TO   LD2-RESTRIC                
+              MOVE 'COM CORRESPONDENTE' TO  LD2-REL1-STATUS             
+           ELSE                                                         
+              MOVE  SPACES              TO   LD2-RESTRIC                
+              MOVE 'SEM CORRESPONDENTE' TO  LD2-REL1-STATUS.            
+                                                                        
+           MOVE WRK-GRAVACAO           TO WRK-OPERACAO.                 
+                                                                        
+           WRITE FD-RELAVIS            FROM LINDET2-REL1.               
+                                                                        
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+           ADD 1                       TO ACU-LINHAS-SELE               
+                                          ACU-LINHA-LIMITE1.            
+                                                                        
+      *----------------------------------------------------------------*
+       3210-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * MONTA O CABECALHO DO RELATORIO CONSISTENTES.                   *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       3211-MONTAR-CABECALHO-SELE      SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           ADD 1                       TO ACU-PAG-SELE.                 
+                                                                        
+           MOVE ACU-PAG-SELE           TO CB1-REL1-PAG.                 
+                                                                        
+                                                                        
+           MOVE WRK-GRAVACAO           TO WRK-OPERACAO.                 
+           WRITE FD-RELAVIS            FROM CABEC1-REL1.                
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+SID        IF  LNK-CCUSTO-PARM     EQUAL 'LEAS'                         
+SID            MOVE 'BRADESCO LEASING S/A' TO CB2-NOME-BCO              
+SID        ELSE                                                         
+SID            MOVE 'BANCO BRADESCO S.A  ' TO CB2-NOME-BCO              
+SID        END-IF.                                                      
+                                                                        
+           WRITE FD-RELAVIS            FROM CABEC2-REL1.                
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+                                                                        
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+           WRITE FD-RELAVIS            FROM CABEC7-REL1.                
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+           WRITE FD-RELAVIS            FROM CABEC8-REL1.                
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+           WRITE FD-RELAVIS            FROM CABEC3-REL1-BRANCO.         
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+      *----------------------------------------------------------------*
+       3211-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * EMITE DISPLAY DE TOTAIS FECHA ARQUIVOS E ENCERRA O PGM.        *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       4000-FINALIZAR                  SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           PERFORM 4100-EMITIR-DISPLAY-TOTAIS.                          
+                                                                        
+           PERFORM 4200-EMITIR-TOTAIS.                                  
+                                                                        
+           CLOSE ARQDATA                                                
+                 MVCLIEEN                                               
+                 CADAVIS                                                
+                 AVISOSEG                                               
+                 RELAVIS.                                               
+                                                                        
+           MOVE WRK-FECHAMENTO         TO WRK-OPERACAO.                 
+                                                                        
+           PERFORM 1100-TESTAR-FILE-STATUS.                             
+                                                                        
+           STOP RUN.                                                    
+                                                                        
+      *----------------------------------------------------------------*
+       4000-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * EMITE DISPLAY DE TOTAIS DE LIDOS E GRAVADOS NA SYSOUT.         *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       4100-EMITIR-DISPLAY-TOTAIS      SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           DISPLAY '***************** CLLPB719 ******************'.     
+           DISPLAY '*                                           *'.     
+           MOVE ACU-LIDOS-MVCLIEEN     TO WRK-MASCARA.                  
+           DISPLAY '* REGISTROS LIDOS MVCLIEEN...:  ' WRK-MASCARA ' *'. 
+           DISPLAY '*                                           *'.     
+           DISPLAY '*                                           *'.     
+           MOVE ACU-LIDOS-CADAVIS      TO WRK-MASCARA.                  
+           DISPLAY '* REGISTROS LIDOS CADAVIS...:   ' WRK-MASCARA ' *'. 
+           DISPLAY '*                                           *'.     
+           DISPLAY '*                                           *'.     
+           MOVE ACU-GRAVADOS-AVISOSEG   TO WRK-MASCARA.                 
+           DISPLAY '* REGISTROS GRAVADOS AVISOSEG:  ' WRK-MASCARA ' *'. 
+           DISPLAY '*                                           *'.     
+           MOVE ACU-GRAVADOS-ATUALIZ    TO WRK-MASCARA.                 
+           DISPLAY '* REGISTROS GRAVADOS RELAVIS.:  ' WRK-MASCARA ' *'. 
+           DISPLAY '*                                           *'.     
+           DISPLAY '***************** CLLPB719 ******************'.     
+                                                                        
+      *----------------------------------------------------------------*
+       4100-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * EMITE TOTAIS DE LIDOS E GRAVADOS NOS RELATORIOS.               *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       4200-EMITIR-TOTAIS              SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           IF  ACU-GRAVADOS-ATUALIZ    EQUAL ZEROS                      
+               PERFORM 3211-MONTAR-CABECALHO-SELE                       
+           END-IF.                                                      
+                                                                        
+           MOVE WRK-GRAVACAO           TO WRK-OPERACAO.                 
+           WRITE FD-RELAVIS            FROM CABEC9-REL1.                
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+           WRITE FD-RELAVIS            FROM CABEC10-REL1.               
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+           MOVE ACU-LIDOS-MVCLIEEN     TO LT1-REL1-ATIVO-LIDOS.         
+           MOVE ACU-LIDOS-CADAVIS      TO LT1-REL1-PEND-LIDOS.          
+           MOVE ACU-GRAVADOS-AVISOSEG  TO LT3-ATIVO-GRAVADOS-REL1.      
+                                                                        
+           WRITE FD-RELAVIS            FROM LINTOT1-REL1A.              
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+           WRITE FD-RELAVIS            FROM LINTOT1-REL1B.              
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+           WRITE FD-RELAVIS            FROM LINTOT3-REL1.               
+           PERFORM 1150-TESTAR-FS-RELAVIS.                              
+                                                                        
+                                                                        
+      *----------------------------------------------------------------*
+       4200-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        
+      ******************************************************************
+      * FINALIZA O PROGRAMA ATRAVES DA BRAD7100.                       *
+      ******************************************************************
+      *----------------------------------------------------------------*
+       9999-PROCESSAR-ROTINA-ERRO      SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           MOVE 'CLLPB719'             TO ERR-PGM.                      
+                                                                        
+           CALL 'BRAD7100'             USING WRK-BATCH                  
+                                             ERRO-AREA.                 
+                                                                        
+           GOBACK.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       9999-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*

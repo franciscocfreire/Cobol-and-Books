@@ -1,0 +1,66 @@
+//RDABX058 JOB 'RDAB,4120,PR32','D115848',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC DB2M1HPU                                                
+//*                                                                     
+//* ***    ----------------------------------------------------------*  
+//* ***    DESCARREGA TABELA RDABB006 DB2 EM ARQUIVO SEQUENCIAL         
+//* ***    PARA CARGA NA TABELA RDABB006 - AMBIENTE MZ1                 
+//* ***    ----------------------------------------------------------*  
+//*                                                                     
+//SYSPUNCH DD DUMMY                                                     
+//SYSREC00 DD DSN=MX.RDAB.JX058S01.HPUBB006(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A)                                                     
+//SYSIN    DD *                                                         
+  UNLOAD TABLESPACE RDABD000.RDABS006                                   
+  DB2 YES                                                               
+  QUIESCE NO                                                            
+ SELECT CBCO,                                                           
+        CAG_BCRIA,                                                      
+        CCTA_BCRIA_CLI,                                                 
+        CINDCD_ORIGE_LOGDR,                                             
+        CINDCD_TPO_LOGDR,                                               
+        ELOGDR_CLI_BASE,                                                
+        ENRO_LOGDR_BASE,                                                
+        ECOMPL_LOGDR_BASE,                                              
+        EBAIRO_LOGDR_BASE,                                              
+        RMUN_BASE,                                                      
+        CCEP_CLI_BASE,                                                  
+        CCEP_COMPL_BASE,                                                
+        CSGL_UF_CLI_BASE,                                               
+        CINDCD_LOGDR_INCOR,                                             
+        CINDCD_ATULZ_BASE,                                              
+        DULT_ATULZ_BASE,                                                
+        CSIT_RETOR_LOGDR                                                
+   FROM DB2PRD.LOGDR_BASE_UNIC                                          
+  OUTDDN (SYSREC00)                                                     
+  FORMAT  DSNTIAUL                                                      
+  LOADDDN SYSPUNCH                                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSTSPRT DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DO HPU DA TABELA RDABB006 POR             
+//* ***    BANCO AGENCIA E CONTA INDICADOR DE ORIGEM DO LOGRADORO       
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.HPU.SYSREC00,                                 
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.RDAB.JX058S02.RB006CLA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(10000,2000),RLSE),                                 
+//       DCB=(AC.A,LRECL=146,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,14,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     

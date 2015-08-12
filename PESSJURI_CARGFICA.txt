@@ -1,0 +1,955 @@
+                                                   --- INICIO DO RELATORIO ---                                                     --
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+     34681      1    9 CONDOMINIO EDIFICIO RIBAMAR              01.01.1990               0                 24.09.2014                
+    167146      1   26 SUSPENTEC COM REC PECAS P AUTOS          19.08.1994               0                 25.04.2014                
+    171640      1   64 ASSOCIACAO DOS FUNCIONARIOS DA MINASFORT 15.03.1993               0                 11.06.2014                
+    191181      1   80 OTAVIANO SILVA MEIRA ME                  13.09.1994               0                 15.09.2014                
+    204282      1   49 OUROMAC COMERCIO DE PECAS E SERVICOS PAR 08.09.1994               0                 06.02.2014                
+    224177      1   71 MARCOS ARMANDO FANTI ME                  31.08.1994               0                 22.05.2014                
+    240620      1    6 MOTTA E CIA LTDA ME                      05.09.1994               0                 28.04.2014                
+    341741      1   36 NOITCA CURSOS LTDA                       24.02.1994               0                 06.08.2014                
+    398573      1   15 EMERSON SANTOS NASCIMENTO                20.01.1995               0                 29.08.2014                
+    427603      1   74 CONDOMINIO EDIFICIO BUSINESS PLACE IBIRA 30.04.1999               0                 18.07.2014                
+    477335      1    3 FOTOMAR ARTIGOS FOTOGRAFICOS LTDA ME     09.02.1995               0                 24.10.2014                
+    564472      1   77 COND EDIF DONA MARY                      22.12.1970               0                 23.10.2014                
+    571716      1   49 ANTONIO DA SILVA MORAES ME               27.03.1995               0                 05.11.2014                
+    580933      1    3 HI TECH ENGENHARIA E SERVICOS LTDA       31.07.2002               0                 18.08.2014                
+    666084      1    5 RELOGIOS TAMAI LTDAEPP                   20.06.1995               0                 10.07.2014                
+    690849      2   15 KRUDYGU EVENTOS LTDA ME                  05.12.2011               0                 04.04.2014                
+    728433      1   68 B G DE MORAES ME                         26.07.1995               0                 13.06.2014                
+    797614      1   46 CLELIO TRANSPORTES LTDA                  10.08.1995               0                 07.02.2014                
+    850996      1   24 CENTRO ESPIRITA LEON DENIS               03.11.2005               0                 05.05.2010                
+    899586      1   78 FED.DAS ENT.CULTURAIS ITALO BRASILEIRAS  03.11.2005               0                 19.05.2014                
+    994933      1   41 FARMACIA ITA COMERCIAL PRIMAVE           22.12.1995               0                 03.02.2014                
+   1042873      1   20 CENTERTEXTIL COM DE TECIDOS LTDA         01.02.1996               0                 23.10.2014                
+   1054665      1   40 PANIFICADORA E CONFEITARIA PIO X LTDA ME 23.02.1996               0                 08.01.2014                
+   1056196      1    7 CARLOS ROBSON AFONSO CALCADOS ME         09.02.1996               0                 14.05.2014                
+   1085404      1   98 G V PROPAGANDA E PUBLICIDADE LTDA        28.02.1996               0                 23.06.2014                
+   1114114      1   25 OPCAO PARK ESTACIONAMENTO E LAVAGEM DE A 15.03.1998               0                 29.09.2014                
+   1155220      1   57 G ALVES PINTO ME                         23.04.1996               0                 04.07.2014                
+   1161044      1   66 MAXINOVE INDUSTRIA E COMERCIO LTDA       18.04.1996               0                 30.05.2014                
+   1178397      1   79 RESTAURANTE PASTA GRILL LTDA             17.04.1996               0                 13.05.2014                
+   1209413      1   43 WELFARE IMP DE PROD MEDICO ODONTOLOGICOS 04.04.1996               0                 07.11.2014                
+   1245418      1   21 ALBERTINO ANTUNES ME                     31.05.1996               0                 04.11.2014                
+   1248391      1   20 CONDOMINIO EDIFICIO PIRAMIDE II          05.01.1995               0                 08.08.2014                
+   1287728      1    9 GUITEX INDUSTRIA E COMERCIO LTDA ME      01.06.1996               0                 10.01.2014                
+   1308274      1    5 GRACELI PORTO BENEVIDES ME               15.07.1996               0                 17.10.2014                
+   1399091      1   42 TEREZA DE JESUS DE ASSIS ME              23.08.1996               0                 27.11.2013                
+   1402689      1   43 GG TRANSPORTES LTDA                      20.07.1996               0                 10.09.2008                
+   1442657      2   52 TRANSCAJURU LTDA - EPP                   12.07.2010               0                 15.10.2014                
+   1444425      2   33 SEON YOUNG HWANG OH                      29.01.2009               0                 25.07.2014                
+   1562725      5   60 MADEIREIRA RIO NORTE LTDA                27.09.2010               0                 26.09.2014                
+   1571818      1   27 PAPELARIA E LIVRARIA BARROSO LTDA        21.11.1996               0                 02.09.2014                
+   1592159      2   96 CHESS INDUSTRIA E COMERCIO LTDA          11.03.2014               0                 03.04.2014                
+   1627684      3   80 COMERCIAL CALOMENO LTDA                  05.10.2009               0                 27.08.2014                
+   1663030      1   40 TRES MORAES DE TERESOPOLIS CONSTRUCOES   19.02.1997               0                 29.10.2014                
+   1694775      1   77 M. A. PATY 2010 PERFUMARIA LTDA ME       30.01.1997               0                 26.08.2014                
+   1781522      1   30 SERGIO VARELLA & ASSOCIADOS LTDA. EPP    18.04.1997               0                 10.03.2014                
+   1798875      2   24 POSTO REIS LTDA                          31.08.2011               0                 11.11.2013                
+   1836913      1    5 CAMARA MUN DE LIMOEIRO DO NORTE          15.05.1997               0                 04.06.2010                
+   1844230      1    8 IZOLINA POLETTO BRAGA PEREIRA ME         11.09.2004               0                 23.09.2011                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+   1860665      1   38 WILSON TEIXEIRA DOS SANTOS & CIA LTDA    23.04.1997               0                 21.08.2014                
+   1991941      1    5 MARIA ERILANDIA DE OLIVEIRA PEREIRA CARA 04.07.1997               0                 04.11.2014                
+   1994325      1    8 VIMALUX TINTAS E VERNIZES LTDA           14.01.1997               0                 23.10.2014                
+   2025509      1   14 VASQUES E VASQUES LTDA                   29.07.1997               0                 14.03.2014                
+   2039003      1   64 PARIS PACK EMBALAGENS LTDA               15.08.1997               0                 10.07.2013                
+   2044248      1   80 CHALE CONSULT ADM IMOVEIS SC LTDA        15.05.1997               0                 29.04.2014                
+   2047260      1   48 NAKATANI MATERIAIS DE CONSTRUCOES LTDA   03.07.1997               0                 29.10.2014                
+   2089349      1   77 N R J INFORMATICA LTDA                   14.05.1997               0                 26.03.2014                
+   2130014      1   55 MORGAN MATERIAS PARA CONSTRUCAO LTDA     02.05.1997               0                 07.07.2014                
+   2160964      1   22 AG22 COMERCIAL E SERVICOS LTDA           25.08.2001               0                 23.05.2014                
+   2181191      1   60 KORAL BRASIL CONFECCAO LTDA ME           03.10.1997               0                 06.05.2013                
+   2212355      1   70 TEREZA MARIA DA COSTA ME                 06.12.1976               0                 27.08.2014                
+   2238790      1   73 T DE C MARQUES E CIA LTDA ME             15.10.1997               0                 29.10.2014                
+   2280280      1   64 COLCHOARIA CANTAREIRA LTDA EPP           04.12.1997               0                 24.07.2014                
+   2317728      1   77 COM E REPRES DE MAQ INJETORAS E ACESS MO 02.01.1998               0                 24.06.2014                
+   2330334      1   59 COOP DE ECO E C MUTUO DOS COM DE VESTUAR 19.08.1998               0                 20.10.2014                
+   2352103      1   46 CLINICA ODONTOLOGICA RENATA AZEREDO S/C  07.02.1998               0                 02.07.2013                
+   2365745      2   60 E KURODA SILVERIO CONFECCOES - ME        12.02.1998               0                 13.08.2014                
+   2372839      1   86 YAMA PENAPOLIS METALURGICA LTDA          08.02.1998               0                 04.07.2014                
+   2452410      1    7 CONDOMINIO DO EDIFICIO MENINO JESUS DE B 03.04.1998               0                 09.06.2014                
+   2458174      1   28 CONDOMINIO EDIFICIO RIO TEFFE            09.04.1998               0                 20.08.2014                
+   2710574      1   89 ESCOLA DE EDUCACAO INFANTIL RENASCER LTD 10.08.1998               0                 10.09.2014                
+   2710797      1   46 RALF PLASTIC INDUSTRIA E COMERCIO LTDA E 10.08.1988               0                 24.07.2014                
+   2723040      1   97 RIO TAYNA JOAIS LTDA                     28.07.1998               0                 20.01.2014                
+   2732057      1    0 PRRA INTERMEDIACAO DE TITULOS E VALORES  04.09.1998               0                 22.10.2014                
+   2732234      1   59 MAR QUENTE CONFECCOES LTDA               26.08.1998               0                 19.05.2014                
+   2760947      1   26 RICHARD NIEHUES & CIA LTDA               26.08.1998               0                 26.05.2014                
+   2780146      1   22 DROGARIA DROGAMEDICA LTDA                20.10.1979               0                 14.12.2012                
+   2834686      2   22 CENTRO DE FORMACAO DE CONDUTORES MARINHO 23.01.2003               0                 17.11.2010                
+   2839261      1   25 B.K. CONFECCOES LTDA - ME                31.10.1998               0                 26.05.2014                
+   2851029      1    2 FABFER IND E COM LTDA                    23.10.1998               0                 20.08.2014                
+   2859769      1   95 RZ COMERCIO DE CONFEC E ACESSORIOS LTDA  25.11.1998               0                 16.09.2014                
+   2911301      1    0 G PATITUCCI DE OLIVEIRA REPRESENTACOES M 21.11.1998               0                 25.04.2014                
+   2935477      1   94 DAVIS ALBERTO DE OLIVEIRA ME             20.01.1999               0                 28.03.2014                
+   2936481      1   77 ALESSANDRA ADRIANA PRESTES PNEUS EPP     01.01.2000               0                 15.07.2014                
+   3021833      1   27 AGROPECUARIA CINCO IRMAS LTDA            01.12.1998               0                 03.09.2014                
+   3036053      1   50 SIMMCRONA INFORMATICA LTDA               12.02.1999               0                 25.08.2014                
+   3052844      1   74 PRISCILLA DA SILVA PIMENTA - ME          09.03.1999               0                 25.07.2014                
+   3147650      3   14 EDITORA CENTRAL GOSPEL LTDA              06.05.2004               0                 30.05.2014                
+   3157166      1    4 FLORICULTURA TINA DECORACOES LTDA ME     01.06.1999               0                 11.03.2014                
+   3194153      1    5 M F ESTEVAM                              31.05.1999               0                 09.10.2014                
+   3323570      1    0 FRANCISCO LUIS ARTURO ORJALES FARTO      01.06.1998               0                 29.10.2014                
+   3359706      1   32 EBCM EMPRESA BRASILEIRA DE CONSTRUCAO ME 23.08.1999               0                 21.10.2014                
+   3365536      1    7 CENTER MED CLINICA MEDICA LTDA           22.12.1999               0                 14.01.2014                
+   3377860      1   37 BELMONTE ECOLOGIA MEIO AMBIENTE E ENTRET 06.08.1999               0                 23.06.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+   3381707      1   83 ORTOANA MOVEIS E COLCHOES LTDA           06.09.1999               0                 22.02.2013                
+   3394630      2   67 VICARI & FILHOS LTDA - ME                22.08.2013               0                 27.10.2014                
+   3398325      1   62 PORTO PESCA COMERCIAL LTDA               15.09.1999               0                 23.10.2014                
+   3399534      1   20 DURAN BASILE SERV AUX DE VENDAS SC LTDA  16.08.1999               0                 29.04.2014                
+   3413834      1   17 DF MERCADINHO ME                         14.09.1999               0                 12.08.2014                
+   3420428      1   81 AGENCIA SUL DE PESQUISA E ESTATISTICAS   13.09.1999               0                 11.08.2014                
+   3428160      1   24 GILVAN VINUTO DA SILVA ME                22.06.2010               0                 13.10.2014                
+   3438030      1   72 PIRAMIDY REGISTRO DE MARCAS E PATENTES S 17.09.1999               0                 25.08.2014                
+   3447736      1    9 PROJETO ACADEMIA SOCIEDADE SIMPLES LTDA  06.10.1999               0                 13.10.2014                
+   3450650      1   27 CARLOS H PALLADINO NAKAMURA CARAPICUIBA  07.10.1999               0                 14.07.2014                
+   3490445      1   95 ASSOCIACAO DE PRESERVACAO E ECOTURISMO R 04.11.1999               0                 06.11.2014                
+   3613244      1   38 CLINICA ISABEL CRISTINA OLIVEIRA ARAUJO  21.12.1999               0                 25.04.2014                
+   3682667      1    0 PENSAO ALVES AREIA LTDA                  08.03.2000               0                 04.09.2014                
+   3713947      1   38 CONDOMINIO EDIFICIO EMILIO HUESPE        03.03.2000               0                 22.08.2014                
+   3733322      1   38 BAR E MERCEARIA BENEVIDES E OLIVEIRA LTD 17.03.2000               0                 10.10.2013                
+   3743593      1   74 EXPRESSO ELIMAR LTDA.                    22.02.2000               0                 15.08.2014                
+   3762108      1    0 VITOR MANOEL RODRIGUES DA SILVA SERVICOS 29.03.2000               0                 26.11.2013                
+   3778449      1   73 ARAGAO E MOACIR S/C LTDA                 14.04.2000               0                 19.11.2012                
+   3791321      1   40 ALL TIME EDITORA E EVENTOS LTDA          14.02.2000               0                 26.06.2014                
+   3800025      1   68 UNIAO DOS EXECUTIVOS DO LITORAL PAULISTA 05.05.2000               0                 18.08.2014                
+   3825633      1   27 EIXO CONFECCOES LTDA                     22.05.2000               0                 05.11.2014                
+   3851662      1   63 MARIA DO CARMO BOMFIM ROQUE SENA         01.07.2000               0                 07.03.2014                
+   3883656      1   98 BORPLAS PLASTICOS E BORRACHAS LTDA - EPP 14.06.2000               0                 25.03.2014                
+   3921951      1   91 BREVIX CONSULTORIA EMPRESARIAL           19.05.2000               0                 20.01.2014                
+   3932153      1   65 ALMITEC INFORMATICA E COMERCIO LTDA ME   12.07.2000               0                 24.02.2014                
+   3967466      1   59 ADRIANA ANDRADE DE ARAUJO-ME             25.07.2000               0                 05.11.2014                
+   3983571      1   81 DR ROBERTO CARLOS ASCENCAO CLINICA MEDIC 10.08.2000               0                 18.06.2014                
+   3988329     29    0 ASSOCIACAO ARAUTOS DO EVANGELHO DO BRASI 03.03.2009               0                 25.04.2014                
+   3989113      1   50 ALEX DUBLES LTDA ME                      04.08.2000               0                 02.10.2009                
+   4014052      1   78 IGREJA EVANGELICA MANAIM                 18.08.2000               0                 17.07.2014                
+   4021583      1   98 DUVAN BAR E RESTAURANTE LTDA             01.09.2000               0                 24.09.2014                
+   4091600      1   63 PRECITEC MOLDES MATRIZES E USINAGEM LTDA 04.10.2000               0                 19.08.2014                
+   4140845      1   33 MARTHAS SERVICOS GERAIS LTDA             15.10.1997               0                 11.09.2014                
+   4171578      1   61 COSTA E DUQUE BERTASI ADVOGADOS ASSOCIAD 29.11.2000               0                 28.04.2014                
+   4173513      1   55 MARQUES & GOMES COMERCIO DE VEICULOS LTD 29.11.2000               0                 05.11.2014                
+   4214101      1   16 CURSO APOGEU DE JUIZ DE FORA LTDA        29.12.2000               0                 08.07.2014                
+   4309744      1   43 VITRALSUL LTDA                           22.02.2001               0                 02.09.2013                
+   4331437      1   69 COBRANCA ADV LTDA ME                     13.03.2001               0                 06.02.2014                
+   4333031      1   15 EMPORIO ABREU LTDA                       07.03.2001               0                 29.09.2014                
+   4358777      1   83 CONDOMINIO RESIDENCIAL ALVORADA          03.02.2001               0                 14.02.2014                
+   4401617      1   70 SILVANETO IRINEU DA SILVA ME             05.04.2001               0                 24.03.2014                
+   4416365      1   52 POSTO ELDORADO TRES LAGOAS LTDA          26.04.2001               0                 28.08.2014                
+   4468645      1    4 INSTITUTO DE ONCOLOGIA S/C LTDA          10.05.2001               0                 18.04.2013                
+   4476820      1    5 JURI COMERCIO LTDA                       05.04.2001               0                 28.10.2014                
+   4517051      1   46 TRANSPORTES DARILENE LTDA ME             01.06.2001               0                 02.06.2014                
+   4562881      1   95 E. R. M. ESTOFADOS LTDA ME               20.07.2001               0                 06.10.2014                
+   4592033      1   29 LOURDES BARBIERI DOMINGUES ME            04.07.2001               0                 21.05.2014                
+   4598273      1   30 WESLEY MORILLA REPRESENTACA E COMERCIO L 30.07.2001               0                 29.09.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+   4634525      2   10 M.E. VICENTIN - ME                       05.03.2014               0                 25.08.2014                
+   4636420      1   10 WELL SEGURANCA ELETRONICA LTDA           09.08.2001               0                 02.09.2013                
+   4646678      1    5 QUEIROZ E DIAS LTDA ME                   29.08.2001               0                 30.10.2014                
+   4660373      1   40 MISSTIC INDUSTRIA E COMERCIO - EIRELI    06.09.2001               0                 30.10.2014                
+   4672022      1   59 A L PATTO ME                             13.09.2001               0                 07.11.2014                
+   4714963      1    8 MICHEL E MICHEL ODONTOLOGOS ASSOCIADOS S 09.08.2001               0                 30.09.2014                
+   4755109      2   70 DULAR ELETRO MOVEIS LTDA                 02.02.2004               0                 20.10.2014                
+   4789232      1   21 BARBOSA REPARO NAVAIS LTDA               06.11.2001               0                 23.04.2014                
+   4798006      1    7 RELMA COMERCIAL IMPORTACAO E EXPORTACAO  05.12.2001               0                 12.03.2014                
+   4800390      1   35 FALCI GONCALVES COMERCIO DE ALIMENTOS LT 19.11.2001               0                 31.05.2013                
+   4812485      1   79 COMERCIAL E CORRETORA PASSARINHO DE VEIC 24.10.2001               0                 15.10.2012                
+   4908545      1   51 LIRA TELECOM LTDA ME                     03.11.2005               0                 18.08.2014                
+   4924058      1   82 L1 M3 PUBLICIDADE LTDA                   03.11.2005               0                 10.10.2014                
+   4938885      1   25 EDIFICIO RESIDENCIAL LONG BEACH          25.11.1999               0                 15.08.2014                
+   4973454      1    8 BARROS PERFUMES CE COSMETICOS LTDA ME    26.01.2002               0                 25.04.2014                
+   4994242      1    7 JORNAL MINAS CONCURSO LTDA               22.03.2002               0                 12.06.2014                
+   5020670      1   93 BKS USINAGEM AUTOMATICA IND E COM LTDA E 03.11.2005               0                 19.09.2014                
+   5048763      1   26 S R B COMERCIAL LTDA                     23.04.2002               0                 30.10.2014                
+   5058028      1    1 MCM MANUTENCAO E CONSERVACAO LTDA ME     08.05.2002               0                 19.02.2014                
+   5069548      1    1 ESTERILIX COMERCIO E SERVICOS LTDA       22.03.2002               0                 28.04.2014                
+   5115046      1   70 J COSTA ARAUJO SIQUEIRA AUTO PECAS LTDA  17.06.2002               0                 16.06.2014                
+   5133651      1   73 GUERRA SERVICOS AUTOMOTIVOS LTDA         13.05.2002               0                 04.06.2014                
+   5188233      1   83 KARLA VIVIANE WELICZ                     29.07.2002               0                 22.05.2014                
+   5210283      1   10 L GARGIONI COSMETICOS LTDA               06.08.2002               0                 16.11.2012                
+   5218566      1    8 ELIAS FIGUEIRA DA SILVA                  23.08.2002               0                 22.04.2014                
+   5279966      1   23 CENTRO DIAGNOSTICO DA MULHER LTDA        03.09.2002               0                 07.05.2014                
+   5280366      1   85 A.R.E.A.'S SERVICOS S/C LTDA - ME.       04.09.2002               0                 05.12.2013                
+   5295785      1   90 MMA PIZZARIA LTDA ME                     24.09.2002               0                 05.11.2014                
+   5303356      1   18 VILLA LEONI EMPREEND E PART LTDA         26.08.2002               0                 22.09.2014                
+   5387434      1    0 D RAMOS VESTUARIO EPP                    16.09.2003               0                 27.08.2014                
+   5394853      2   50 M S M INDUSTRIAL LTDA PEDRANORTE         18.01.2000               0                 13.08.2014                
+   5429297      1   29 MAGA-IMIGRANTES COMERCIO DE COMBUSTIVES  10.12.2002               0                 29.09.2014                
+   5459838      1   61 SAN MARINO RENOVADORA DE VEICULOS LTDA   11.11.2002               0                 14.10.2014                
+   5466589      1   31 ROLAND PLAST IND E COM DE PLASTICOS LTDA 20.01.2003               0                 11.10.2013                
+   5482335      1    7 ELETEL ENGENHARIA LTDA                   21.12.2001               0                 28.01.2014                
+   5507688      1   14 ACAI MANIA LANCHONETE LTDA ME            24.01.2003               0                 02.09.2014                
+   5532085      1   72 FUNJECC ELAINE DA SILVA CASTRO           11.07.1990               0                 29.09.2014                
+   5563765      1   53 NEOBORD INDUSTRIA E COMERCIO DE CONFECCO 11.03.2003               0                 05.11.2014                
+   5566696      1   31 A DA SILVA RIBEIRO FARMACIA ME           14.03.2003               0                 02.07.2014                
+   5568517      1    3 SIMONE M. DA CRUZ FONSECA - ME           20.03.2003               0                 04.06.2014                
+   5618295      1   88 SANGUE LATINO INDUSTRIA E COM DE MALHAS  23.04.2003               0                 29.01.2014                
+   5629251      1   53 V A DOS SANTOS BIJUTERIAS ME             22.04.2003               0                 11.11.2013                
+   5649703      2   40 GEVAL CARVALHO DA SILVA - ME             29.10.2004               0                 08.08.2014                
+   5656799      1   92 EDIVALDO PEREIRA CONFECCOES ME           15.05.2003               0                 02.09.2014                
+   5657972      1   77 NATANAEL GOULART COELHO - ME             31.03.2003               0                 14.08.2014                
+   5664417      2   53 J. R. TEIXEIRA DA SILVA CONFECCOES - ME  23.08.2013               0                 10.10.2014                
+   5684024      1   20 VILA MORAES CORRETORA DE SEGUROS DE VIDA 30.05.2003               0                 07.05.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+   5698494      1   43 RAIMUNDO PEREIRA NETO - ME               04.06.2003               0                 04.09.2014                
+   5705085      1   27 SALES E MAIA COMERCIO E REPRESENTACOES L 20.05.2003               0                 26.06.2014                
+   5755842      1   77 EDILBERTO SANTOS DISTRIBUIDOR DE ALIMENT 27.06.2003               0                 20.10.2014                
+   5759671      1   54 ABADAI COMUNICACOES E MARKETING          01.07.2003               0                 13.08.2014                
+   5769173      1   92 OPCAO MAXIMA TRANSPORTE E LOGISTICA LTDA 09.07.2003               0                 29.10.2014                
+   5789413      1   10 VITRINE DA PIZZA COMERCIAL LTDA ME       17.07.2003               0                 29.01.2014                
+   5856970      1    7 CONDOMINIO RESIDENCIAL SAO MANOEL        04.08.2003               0                 11.07.2013                
+   5860741      1   66 TEMA TRANSPORTES LTDA                    22.07.2003               0                 19.09.2014                
+   5904387      1   24 L & A PRODUCOES LTDA ME                  24.09.2003               0                 29.10.2014                
+   5911390      1   75 ASSOCIACAO DOS MORADORES DA CHACARA 124  22.09.2003               0                 30.06.2014                
+   5921928      1   22 RENATO MATTOS ZUCCOLO IMOVEIS            30.10.2003               0                 30.04.2014                
+   5934148      1   17 TRANSMODULOS COM DE CONTR MOD TRANSP LTD 29.09.2003               0                 23.06.2014                
+   6018910      1   88 EMPOWERMENT CORRETORA DE SEGUROS DE VIDA 28.10.2003               0                 01.11.2013                
+   6018936      1   26 CSP2 VEICULOS LTDA                       30.10.2003               0                 04.09.2014                
+   6030184      1   19 HALL S/A-ASSIST. MEDICA HOSP-ALUGUEL     02.12.2003               0                 15.02.2013                
+   6047460      1   51 TRANSPORTES SAUDADE NORDESTE LTDA        11.12.2003               0                 30.10.2014                
+   6050078      2   88 RIDAUTO2003 AUTO PECAS LTDA - ME         01.12.2003               0                 17.07.2009                
+   6066970      1   76 SOLARI COMERCIO E INCORPORACAO DE IMOVEI 15.12.2003               0                 30.10.2014                
+   6101311      1   23 SCHIVARTCHE EMPREENDIMENTOS LTDA         15.01.2004               0                 14.07.2014                
+   6111776      1   65 MERCADO DO MAZINHO LTDA - ME             06.02.2004               0                 02.10.2014                
+   6132312      1   35 CAVALO VAPOR INDUSTRIA E COMERCIO LTDA   20.02.2004               0                 26.06.2014                
+   6132598      1   59 CENTRO DE FORMACAO DE CONDUTORES VALE D  20.02.2004               0                 03.11.2014                
+   6133236      1   82 MARCO ALMEIDA CORRETAGEM E CONSULTORIA I 23.10.2004               0                 11.09.2014                
+   6135471      1   93 MINISTERIO DA RESTAURACAO PLENA          14.11.2003               0                 12.08.2013                
+   6139410      1    2 EUROPESCA INDUSTRIA E COMERCIO DE PESCAD 10.03.2004               0                 27.06.2014                
+   6181476      1   52 INNOVA RIO ENGENHARIA E CONSTRUCOES LTDA 31.03.2004               0                 28.08.2014                
+   6183119      1   23 DOC MARIA EDITORA LTDA - ME              29.03.2004               0                 13.03.2009                
+   6190119      1   50 FERREIRA & COROLIN COMERCIO DE DECORACOE 25.03.2004               0                 27.05.2014                
+   6262820      1   38 LIX CONSTRUCOES LTDA                     23.10.2004               0                 12.09.2014                
+   6277459      1   13 IMBITUBA OPERADORA PORTUARIA             21.05.2004               0                 04.09.2014                
+   6289412      1   70 F H CREVELLARI ME                        10.08.2004               0                 14.07.2014                
+   6295987      1    3 ANEL TRANSPORTES LTDA - ME               08.03.2004               0                 22.09.2014                
+   6326386      1    2 DROPS MODAS LTDA                         14.06.2004               0                 05.05.2014                
+   6372801      7   50 CCF IMPORTACAO E COMERCIO TEXTIL LTDA -  26.06.2014               0                 11.08.2014                
+   6554877      1    0 MONSENHOR GIL PREFEITURA                 31.12.1974               0                 24.10.2013                
+   6689681      1   23 A C BEZERRA REPRESENTACOES LTDA          27.07.1978               0                 11.11.2013                
+   6850108      1   50 ADRIANA APARECIDA DE LIMA DIGITACAO - ME 14.07.2004               0                 05.11.2014                
+   6866648      1   21 O & S CONSULTORIA E ACESSORIA EMPRESARIA 19.07.2004               0                 21.05.2014                
+   6879879      1   70 ALTEC ENGENHARIA LTDA                    19.07.2004               0                 24.10.2014                
+   6910076      1   30 TKR CALCADOS E CONFECCOES LTDA           09.08.2004               0                 28.07.2014                
+   6927754      4   10 J.N.E TELECOMUNICACOES E INFORMATICA EIR 04.05.2010               0                 29.05.2014                
+   6974552      1   87 EXTINMAX COMERCIO DE EXTINTORES E EQUIPA 12.08.2004               0                 27.08.2014                
+   7001673      1    5 BATARRA ALIMENTOS LTDA. - ME             16.09.2004               0                 29.08.2014                
+   7058974      1   75 MARCELO FERREIRA AVALO ME                06.10.2004               0                 13.10.2014                
+   7089633      1   67 TIERTE COMERCIO E REPRESENTACOES LTDA    12.11.2004               0                 16.12.2013                
+   7091300      1   72 ILCA DE OLIVEIRA DANTAS ME               09.11.2004               0                 24.07.2013                
+   7110611      1   31 TRANSPORTES J M C LTDA EPP               18.11.2004               0                 08.04.2013                
+   7147810      1   14 NIVI - SEG CORRETORA DE SEGUROS DE VIDA  21.12.2004               0                 21.05.2014                
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+   7166413      1   90 J C SANTOS SILVA                         06.01.2005               0                 17.01.2014                
+   7169369      5    3 DESTAK EMPREENDIMENTOS E PARTICIPACOES L 04.02.2009               0                 23.07.2014                
+   7170216      1   44 CENTRO INTEGRADO DE ENSINO TECNICO LTDA  05.11.2004               0                 17.03.2014                
+   7189973      1   60 J M N TRANSPORTE RODOVIARIO E LOCACOES L 26.01.2005               0                 27.06.2014                
+   7205006      1   44 COBI SAUDE LTDA ME                       20.01.2005               0                 30.10.2014                
+   7286515      1   49 EDITORA WP NEWS LTDA ME                  17.04.2006               0                 26.06.2014                
+   7300501      2   13 CAMILA GOMES - EPP                       27.03.2008               0                 11.07.2014                
+   7328557      1    3 GIOVANI TELLES DA SILVA                  16.03.2005               0                 08.08.2014                
+   7330154      3   52 GABRIEL AGGIO POSSIGNOLLO & CIA LTDA - E 13.12.2012               0                 03.07.2014                
+   7363608      1   20 CARDIOMED SERV DE CARDIOLOGIA E REPRESEN 06.05.2005               0                 02.07.2014                
+   7411872      1   91 MUNDO BRASIL COMUNICACOES LTDA           26.04.2005               0                 07.03.2014                
+   7439146      1   87 WEGER DO BRASIL INDUSTRIA E COM DE EQUIP 11.05.2005               0                 06.11.2014                
+   7454336      1   73 SKILL CORRETORA DE MERCADORIAS LTDA      31.05.2005               0                 23.06.2014                
+   7471730      3   81 ZATTA COMERCIO DE CALCADOS LTDA - ME     06.06.2014               0                 08.07.2014                
+   7494327      1    6 EVANDRO IRON BATISTA DA CONCEICAO ME     15.07.2005               0                 24.09.2014                
+   7526101      1   40 J F RAMOS EMPREENDIMENTOS IMOBILIARIOS L 25.07.2005               0                 01.09.2014                
+   7562053      1   45 J WILSON MOREIRA GONCALVES DE ILHEUS ME  19.08.2005               0                 24.10.2013                
+   7607322      1   42 FRANQUEADORA DE SERVICOS PRIME LTDA ME   30.08.2005               0                 08.10.2014                
+   7662086      1   67 IRMAOS FRANTZ ADMIN DE IMOVEIS LTDA      18.10.2005               0                 09.07.2014                
+   7686738      1    1 PORTAL ADMINISTRACAO COBRANCA E PARTICIP 25.08.2005               0                 22.09.2014                
+   7702490      1   17 LISANFREE SERRALHERIA INDUSTRIAL LTDA EP 17.11.2005               0                 17.10.2014                
+   7715946      1   83 MOGIPASSES COMERCIO DE BILHETES ELETRONI 20.10.2005               0                 28.01.2014                
+   7742612      1    7 POSSEIDON TURISMO LTDA                   26.05.1988               0                 07.04.2014                
+   7752032      1   92 CAMARA DE MEDIACAO E ARBITRAGEM DE SAO B 05.07.2005               0                 23.06.2014                
+   7760056      1   93 J R A INDUSTRIA ELETROMECANICA LTDA EPP  13.12.2005               0                 03.07.2014                
+   7764404      1    9 J T DA SILVA SOUZA - ME                  19.12.2005               0                 28.10.2013                
+   7770680      1   71 SOL REPRESENTACAO COMERCIAL LTDA         12.12.2005               0                 11.08.2014                
+   7775651      1    0 RAIMUNDO PAULA BARBOSA ME                06.01.2006               0                 08.01.2014                
+   7807877      1   38 SERGIO MURILO DE SOUZA - ME              10.10.2005               0                 22.04.2014                
+   7858754      1   26 BLANC ITALINA BIJUTERIAS LTDA ME         06.02.2006               0                 08.10.2014                
+   7880687      5   70 NOSSO ESTOQUE DISTRIBUICAO LTDA          19.08.2011               0                 10.06.2014                
+   7884328      1   67 RIBEIRO & LIMA AUTOMOVEIS LTDA ME        07.03.2006               0                 07.10.2014                
+   7894190      1   87 FACTURA COBRANCA LTDA ME                 21.02.2006               0                 28.05.2014                
+   7894929      1   50 WALTER MONTEIRO E MERCEDES BETA MERCADO  22.02.2006               0                 16.12.2013                
+   7906868      1    2 GRILO DOCE INDUSTRIA DE ALIMENTOS LTDA M 13.03.2006               0                 30.05.2014                
+   7908853      2   56 SPM COMERCIO DE ROUPAS LTDA - ME         23.10.2013               0                 21.08.2014                
+   7912489      1   17 FERREIRA LEITE - ADVOGADOS               08.03.2006               0                 10.06.2014                
+   7919828      2   78 VALDELINA GEOVANE BARBOSA                30.03.2010               0                 27.08.2014                
+   7983750      1   70 TRANSPORTES FAGCIUS LTDA                 08.05.2006               0                 09.06.2014                
+   8032614      1   67 BEBELLI ALIMENTOS LTDA - ME              30.05.2006               0                 15.10.2014                
+   8053403      1    0 GISLENE CRISTINA SIQUEIRA - ME           24.04.2006               0                 17.02.2014                
+   8072110      1   70 VEIGA DE MORAES ADVOGADOS ASSOCIADOS     12.05.2006               0                 24.07.2014                
+   8096907      1    8 GRAFICA E STUDIO CRISAN LTDA             06.03.2006               0                 19.05.2014                
+   8169983      1    4 ASSOCIACAO DOS PRODUTORES DA REGIAO DO R 23.06.2006               0                 27.10.2014                
+   8170298      4   32 TORINO TRADE S/A                         15.10.2013               0                 06.05.2014                
+   8186320      1   90 ROMULO HENRIQUE BARREIROS CAMPEAO - ME   17.04.2006               0                 17.07.2014                
+   8205206      1   60 IVANILDO ALVES DA COSTA FUNERARIA        02.06.2006               0                 08.11.2013                
+   8209224      1   10 COUTINHO PEREIRA POUSADA RURAL LTDA. ME  31.07.2006               0                 25.02.2013                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+   8216562      1   89 PLASTCOSMO COMERCIO DE ARTIGOS DESCARTAV 04.07.2006               0                 29.07.2014                
+   8296646      1   70 ASSOCIACAO EDUCACIONAL JUVENIL E INFANTI 14.09.2006               0                 01.07.2014                
+   8302220      1   81 OTICA BASE LTDA                          01.09.2006               0                 22.09.2014                
+   8328931      3   97 DIGILINK COMERCIO DE ELETRO ELETRONICOS  26.11.2012               0                 13.08.2014                
+   8339009      1   33 WTT INDUSTRIA E COMERCIO DE CILINDROS LT 15.09.2006               0                 31.07.2014                
+   8546633      2   92 ADRIANA RAUPP BEHENCK                    29.08.2008               0                 21.02.2014                
+   8574199      1   73 JAMES LUIS MELO ME                       08.01.2007               0                 21.10.2014                
+   8603838      1   81 KAIROZ TRANSPORTES RODOVIARIOS DE CARGAS 17.01.2007               0                 28.04.2014                
+   8612069      1   88 EDNA APARECIDA DE MELO - ME              22.01.2007               0                 01.10.2014                
+   8649372      2   36 DORTLOC LOCACAO DE VEICULOS LTDA - ME    13.08.2008               0                 12.03.2014                
+   8665318      1    1 DISTRIMAR ALIMENTICIOS LTDA - EPP        05.02.2007               0                 24.09.2014                
+   8780061      1   20 OLHOS DA AMERICA COM IMP EXP E SERV DE E 03.04.2007               0                 07.07.2014                
+   8794451      1   50 AMAZONBIO - INDUSTRIA E COMERCIO DE BIOD 02.05.2007               0                 08.01.2014                
+   8797990      1   42 GOMES DE AGUIAR & AZEVEDO LTDA ME        27.04.2007               0                 18.01.2013                
+   8801939      1   67 SANDRA SANTANA DE SOUSA SOBRAL ME        03.05.2007               0                 03.11.2014                
+   8806260      1   60 LLEIDA MAQUINAS E EQUIPAMENTOS LTDA - ME 26.04.2007               0                 07.01.2014                
+   8824965      1    0 ENGENHO BRASIL XXI LTDA ME               02.05.2007               0                 05.11.2014                
+   8869850      1   32 SINAI SAO PAULO CONSTRUCOES LTDA ME      09.07.2007               0                 15.09.2014                
+   8876014      2   66 J. M. B. CARVALHO - ME                   07.02.2013               0                 03.11.2014                
+   8882352      1   20 PORTO BORRACHAS - DISTRIBUIDORA DE BORRA 23.05.2007               0                 22.09.2014                
+   8899164      1    4 RUBAO RESTAURANTE LTDA                   13.06.2007               0                 29.10.2014                
+   8907346      2   60 CASA CIRURGICA PAES DE BARROS LTDA-ME    30.09.2008               0                 14.07.2014                
+   8926708      1   80 ISAIAS ITAMAR MAZZOTTI - ME              09.07.2007               0                 30.07.2014                
+   8929068      1   61 B BOTI PERFUMARIA E COSMETICOS LTDA EPP  01.06.2007               0                 01.10.2014                
+   8932589      1   78 FJ GOULART COMERCIO DE AUTOMOVEIS E TRAN 05.07.2007               0                 29.08.2014                
+   9002761      2   38 DESTAQUE PARK SERVICOS DE ESTACIONAMENTO 24.07.2014               0                 01.09.2014                
+   9093738      3   87 DOUGLAS SERAFIM DA SILVA ME              13.06.2011               0                 07.10.2014                
+   9106111      1   51 AUTO PECAS E POSTO DE MOLAS VARGEANA LTD 27.09.2007               0                 28.05.2014                
+   9107454      2   11 ALTAIR FERREIRA AYRES PERSIANAS          25.09.2007               0                 23.09.2014                
+   9108115      1   79 SARAVAH COMUNICACAO E DESIGN LTDA        04.10.2007               0                 04.11.2014                
+   9111474      1   85 SEAWATER DO BRASIL MAQUINAS E EQUIPAMENT 01.09.2007               0                 22.09.2014                
+   9126503      1   82 JCK MIRASSOL CONSTR INCORP LTDA          09.10.2007               0                 23.06.2014                
+   9160093      1   96 SAN JUAN PERFUMARIA E COSMETICOS LTDA EP 25.09.2007               0                 20.05.2014                
+   9187137      1   71 V F MARTINS ENFEITES                     07.10.2008               0                 11.07.2014                
+   9205414      1   21 RAM COMERCIO DE MATERIAIS ELETRICOS E HI 08.11.2007               0                 28.10.2014                
+   9217900      1   60 MAGA-CENTRO COMERCIO DE COMBUSTIVEIS E L 15.10.2007               0                 30.09.2014                
+   9244471      2    9 VIDRO FUME CONFECCOES IMPORTACAO E EXPOR 12.11.2010               0                 19.12.2013                
+   9278948      1   88 GISELY PATRICIA BERTOCO DE PAULA         07.12.2007               0                 03.10.2014                
+   9281526      1   61 A F PESSOA SERVICO DE DISTRIBUICAO LTDA  28.12.2007               0                 03.11.2014                
+   9304404      1   43 LOTEAMENTO RESIDENCIAL DOS PINHEIROS SPE 04.01.2008               0                 02.05.2014                
+   9339142      1   52 ICT INSTITUTO DE CONSULTORIA E TREINAMEN 22.01.2008               0                 03.11.2009                
+   9356547      1    7 TOP CENTER UTILIDADES LTDA               22.06.2007               0                 28.08.2014                
+   9376378      1   69 ESPINOSA REPRESENTACOES COMERCIAIS LTDA  25.02.2008               0                 25.11.2013                
+   9403917      1    1 REAL DUQUE ALIMENTOS LTDA ME             15.02.2008               0                 23.05.2014                
+   9427492      1   70 MARIANA ROBERTA BUENO - ME               28.02.2008               0                 09.12.2010                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+   9493225      6    6 JESUS & COUTINHO INDUSTRIA DE CALCADOS L 05.08.2011               0                 06.08.2014                
+   9509166      1    2 CUITE MINERACOES LTDA                    27.03.2008               0                 31.07.2014                
+   9531193      1   81 R J- BROA CADASTRO LTDA - ME             22.04.2008               0                 13.06.2014                
+   9543496      1   14 SR MANUTENCAO E SERVICOS LTDA - ME       28.04.2008               0                 29.01.2014                
+   9557629      1    1 NICODEMO TECNOLOGIA DA INFORMACAO LTDA   07.05.2008               0                 19.07.2012                
+   9629899      1   80 PAVITEC PAVIMENTACAO E TECNOLOGIA LTDA.- 02.06.2008               0                 02.07.2014                
+   9631539      1   13 MONICA APARECIDA DA CRUZ NOGUEIRA - ME   22.11.2006               0                 30.10.2014                
+   9649064      1   92 RIA COMERCIO DE MOVEIS PARA ESCRITORIO L 09.06.2008               0                 16.07.2014                
+  10014258      1    9 G FIALHO & FIALHO TRANSPORTES LTDA - ME  02.07.2008               0                 09.09.2014                
+  10171620      1   47 MARINO E FEITOSA - CURSOS LIVRES LTDA -  09.06.2008               0                 07.11.2014                
+  10198332      1   86 ADEMIR ARGUELHO ME                       23.07.2008               0                 25.08.2014                
+  10210057      1   79 EUROTEC FOMENTO MERCANTIL LTDA           08.07.2008               0                 03.11.2014                
+  10220882      1   54 A & B PREPARACAO DE DOCUMENTOS LTDA      11.07.2008               0                 06.08.2014                
+  10222739      1    0 WCR NORTE GESTAO EMPRESARIAL-CONTABILIDA 29.07.2008               0                 29.09.2014                
+  10257213      1   57 TEREZA ALVES FERREIRA ESTACIONAMENTO     07.08.2008               0                 30.04.2014                
+  10372242      1   60 WEBSTERS PRODUCOES ARTISTICAS E CINEMATO 22.09.2008               0                 29.10.2014                
+  10375579      1   20 GEIZA APARECIDA ALVES FLORES - ME        30.09.2008               0                 12.05.2014                
+  10379340      1   29 SPEED CONNECT - TECNOLOGIA E EQUIPAMENTO 25.09.2008               0                 15.09.2014                
+  10386124      1    0 FRANCISCO GOMES BRANDAO                  30.09.2008               0                 17.09.2014                
+  10391746      1   27 UNIAO QUIMICA DO BRASIL LTDA             04.12.1985               0                 23.07.2014                
+  10393593      1   57 PREFEITURA MUNICIPAL DE ICAPUI           14.01.1986               0                 08.01.2014                
+  10409853      2   16 FELIPPI BERNARDI & GUEDES LTDA ME        18.11.2010               0                 20.10.2014                
+  10409853      3    5 FELIPPI BERNARDI & GUEDES LTDA - ME      03.05.2013               0                 08.08.2014                
+  10412087      1   68 CHACOK SALAO DE BELEZA LTDA. - ME        30.09.2008               0                 16.05.2014                
+  10448771      1    8 FATTUS COMERCIO E SERRALHERIA LTDA       10.04.1969               0                 16.10.2014                
+  10505331      1   37 GILBERTO TAVARES POUSADA ME              17.11.2008               0                 06.05.2014                
+  10522473      1    2 AUGUSTO VASCONCELOS COMERCIO DE GENEROS  09.12.2008               0                 28.04.2014                
+  10527337      1    5 ESPACO FEMININO LTDA                     10.12.2008               0                 03.10.2014                
+  10529975      1   65 ATLANTIS IMPORTACAO E COMERCIO LTDA ME   10.11.2008               0                 20.06.2014                
+  10566256      1   14 PLASTHANE INDUSTRIA E COMERCIO DE PLASTI 12.01.2009               0                 31.10.2014                
+  10590595      1   36 GRIFF CACAU COMERCIO DE ALIMENTOS E CHOC 12.01.2009               0                 22.11.2013                
+  10591669      1   59 SILOE RESTAURANTE E LANCHONETE LTDA      15.10.2008               0                 06.02.2013                
+  10595048      1   43 CIDADESHOES CALCADOS LTDA                22.12.2008               0                 29.08.2014                
+  10613078      1   35 MR - SERVICOS DE IMPERMEABILIZACOES LTDA 25.11.2008               0                 07.05.2014                
+  10625145      1   31 NAQUADIA LTDA                            23.01.2009               0                 22.10.2014                
+  10662370      1   48 GESILENE ROMANHUK LINDO                  18.02.2009               0                 05.08.2014                
+  10663319      1   50 EBBA COMERCIO DE BRINQUEDOS E PRESENTES  20.02.2009               0                 16.06.2014                
+  10663605      1   16 CEREALISTA CAMPO VERDE LTDA ME           04.02.2009               0                 03.10.2014                
+  10669244      1   15 ART SOFTWARES LTDA - ME                  26.02.2009               0                 24.10.2012                
+  10687072      1    2 C.H. ESTEVES & CIA LTDA                  03.12.2008               0                 25.09.2013                
+  10715609      2   81 ALINE NASCIMENTO DA SILVA - MODAS - ME   22.07.2014               0                 15.08.2014                
+  10733835      1    4 R.M.R. - TRANSPORTES LTDA ME             18.03.2009               0                 28.04.2014                
+  10766874      1    8 CENTRO DE ESTETICA ANA PAULA & MEIRE LTD 17.03.2009               0                 12.09.2014                
+  10774624      1   10 MAPTEX COMERCIO DE MAQUINAS TEXTEIS LTDA 22.04.2009               0                 05.01.2010                
+  10787391      1   90 F.S.G. DOS SANTOS ARTIGOS FUNERARIOS - M 13.04.2009               0                 23.01.2014                
+  10791314      1    3 CONDOMINIO DO EDIFICIO CASA BLANCA       27.05.2008               0                 31.10.2014                
+  10804373      1   79 R. MORENO CASTILLO & N.P. EBERTZ REPRESE 02.04.2009               0                 15.09.2014                
+  10808993      1   86 FELIPE G. D. NOGUEIRA & CIA LTDA         22.04.2009               0                 17.01.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  10830143      1   84 INSTITUTO DE EDUCACAO ALIANCA S/S LTDA   04.05.2009               0                 23.05.2014                
+  10836574      1   58 CHINA OSASCO ALIMENTOS LTDA - EPP        24.04.2009               0                 13.12.2013                
+  10907561      1   22 DOCNER DESENVOLVIMENTO DE SOFTWARE BRASI 01.06.2009               0                 06.05.2014                
+  10908195      1   26 LAJES TRELICAS & PREMOLDADOS LTDA -ME    10.06.2009               0                 13.02.2014                
+  10916149      1   79 EDIFICIO RESIDENCIAL QUEIROZ             10.06.2009               0                 20.05.2014                
+  10926027      2   44 JR BOVINOS LTDA                          08.07.2013               0                 16.10.2014                
+  10934272      1   12 R. CARNEIRO DE SOUZA ME                  23.06.2009               0                 22.10.2014                
+  10961949      2   92 LOMILOKA PRESENTES LTDA - ME             25.07.2012               0                 23.04.2014                
+  10966670      2    0 VANIA MARIA SGOBBI - ME                  23.11.2012               0                 08.01.2014                
+  10967431      1   85 LOTHUSS TRANSPORTES E SERVICOS LTDA - ME 04.06.2009               0                 03.02.2014                
+  10992536      1   94 MORENO REPRESENTACOES COMERCIAIS LTDA -  24.07.2009               0                 30.10.2014                
+  11002734      1   26 XODOZINHO PET SHOP LTDA- ME              17.06.2009               0                 25.06.2014                
+  11013321      1   47 POSTO AVENIDA 14 COMERCIO DE COMBUSTIVEI 31.07.2009               0                 28.10.2014                
+  11052806      1   40 EDITORA ARRANJO DE LETRAS EIRELI         13.08.2009               0                 26.09.2014                
+  11055426      1   69 CAVASSINI CASA LTDA ME                   10.08.2009               0                 01.08.2014                
+  11088950      1   36 PRIME LONDRINA MARKETING PROMOCIONAL LTD 20.08.2009               0                 08.10.2014                
+  11090590      1    7 NUTRAMAIS RESTAURANTES LTDA              26.08.2009               0                 22.09.2014                
+  11118766      1   91 ROYAL UMBRELLA IMPORTACAO E EXPORTACAO L 12.08.2009               0                 10.07.2013                
+  11132629      2   92 BATURIKI COMERCIO DE ROUPAS LTDA - ME    18.04.2013               0                 16.09.2014                
+  11149423      1   94 UVEL UNISUL VEICULOS LTDA.               11.09.2009               0                 29.10.2014                
+  11151327      1   80 UELIOMARQUES NERES DE ABREU              27.03.2009               0                 26.08.2013                
+  11173086      1   70 BIOVIDA ODONTO LTDA.                     03.09.2009               0                 29.08.2012                
+  11247379      1   55 LAMF CONSULTORIA E GESTAO EMPRESARIAL LT 16.10.2009               0                 31.07.2014                
+  11252265      1    1 ROSA BRANCA PRODUCOES EVENTOS LTDA       05.10.2009               0                 11.09.2014                
+  11252559      1   25 LAMAR MACHADO GESTAO DE NEGOCIOS LTDA ME 09.10.2009               0                 27.01.2014                
+  11254615      1   60 CONTIN & BORGES LTDA ME                  02.10.2009               0                 19.05.2014                
+  11312645      1   86 BRUNO SCARTOZZONI                        11.11.2009               0                 06.01.2014                
+  11318522      1   52 S.I BAR E RESTAURANTE LTDA - ME          03.11.2009               0                 16.10.2014                
+  11336376      1   98 F. D. G. DA SILVA JUNIOR                 27.11.2009               0                 27.05.2014                
+  11345650      2   76 J. L. ZUCCHI - ME                        27.01.2012               0                 14.07.2014                
+  11360243      1   57 GAROUPA ALIMENTOS LTDA - EPP             01.12.2009               0                 29.09.2014                
+  11367585      1    7 GPZ NET PARTICIPACOES E GESTAO LTDA.     18.11.2009               0                 18.08.2014                
+  11408939      1    6 TRES ELOS ADMINISTRACAO E PARTICIPACOES  02.12.2009               0                 28.04.2014                
+  11413024      1   99 MICHELC E MICHELC LTDA ME                17.12.2009               0                 05.12.2013                
+  11413633      1   48 SELETA CAFE LTDA                         10.12.2009               0                 15.09.2014                
+  11416149      1   72 HARBURG BRASIL PARTICIPACOES LTDA.       03.12.2009               0                 21.10.2013                
+  11416752      1   54 EDES DOS SANTOS PINHEIRO ME              07.12.2009               0                 16.12.2013                
+  11429192      1   72 RAMOS CONSTRUTORA E INCORPORADORA IMOBIL 16.12.2009               0                 19.09.2014                
+  11493200      1   40 VERA LUCIA SATILES DE ALMEIDA - ME       26.01.2010               0                 31.07.2014                
+  11510447      1   27 VILSON S ZANELLATI - EPP                 28.01.2010               0                 22.10.2014                
+  11518827      1    8 PALLAS TRANDING IMPORTACOES TEXTEIS LTDA 03.02.2010               0                 25.08.2014                
+  11521877      1   44 EDIFICIO VISTA ENSEADA                   25.11.2008               0                 22.01.2014                
+  11549421      1   92 MONTES E LIMA SERVICOS PARA AUTOMOVEIS L 09.02.2010               0                 31.10.2014                
+  11646989      1   21 AUDENIR GIL DE SOUZA                     05.03.2010               0                 22.05.2014                
+  11654790      1   45 TRAVESSA DOS LANCHES LTDA. EPP           02.03.2010               0                 03.12.2013                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  11662535      1   44 OKABAYASHI & OKABAYASHI LTDA - EPP       04.03.2010               0                 17.10.2014                
+  11689201      1   64 LUCIENE TRINDADE TAVARES                 16.03.2010               0                 26.05.2014                
+  11776528      1   73 ANA CARLA BALDISSERA - ME                05.04.2010               0                 11.08.2014                
+  11807539      1   73 FIXAR PRODUTOS MEDICOS HOSPITALARES LTDA 08.04.2010               0                 31.01.2014                
+  11809529      1   77 SANDRA REGINA NICOLAS                    19.03.2010               0                 27.03.2014                
+  11829940      1    4 ANA KELRIE COSTA DE ALMEIDA 66828244320  18.04.2010               0                 18.06.2014                
+  11880256      1   57 ERILENE MAGALHAES DA SILVA 07155614645   30.04.2010               0                 24.09.2014                
+  11885483      1   75 ETHOS & ASSOCIADOS EMPRESARIAL LTDA.     16.04.2010               0                 19.12.2012                
+  11904461      1    5 EVERTON MASSUCATE - ME                   20.04.2010               0                 22.08.2014                
+  11919161      1    8 ANA ALIZIA RODRIGUES FARIA SARRETA 34652 10.05.2010               0                 29.10.2014                
+  11933217      1   70 SIDNEY FONSECA DO CARMO                  13.05.2010               0                 08.08.2014                
+  11982864      1   72 CESM ASSESSORIA EMPRESARIAL LTDA - ME    10.05.2010               0                 28.07.2014                
+  12100109      1   80 CAMPO VERDE DISTR PROD LIMPEZA E DESCART 02.06.2010               0                 15.08.2014                
+  12109126      1   88 UPPER-PMO - GERENCIAMENTO DE PROJETOS LT 15.03.2010               0                 25.09.2013                
+  12118345      1   23 COMERCIO E REP AMAZONIA LTDA             17.08.1987               0                 19.05.2014                
+  12119999      1   71 K. M. COMERCIO VAREJISTA DE CONFECCOES L 22.06.2010               0                 27.02.2014                
+  12164502      1   37 COLOMBO COMUNICACAO E PRODUCAO JORNALIST 28.06.2010               0                 07.08.2014                
+  12165649      2   22 PAULO S GONCALVES ME                     27.02.2013               0                 30.04.2014                
+  12197326      1   30 MIL GRAOS COMERCIO DE PRODUTOS NATURAIS  22.06.2010               0                 28.08.2014                
+  12256687      1    0 BARBATO & SOUZA RESTAURANTE LTDA - EPP   13.07.2010               0                 27.10.2014                
+  12258938      1   95 PAULA PRISCILLA SANTOS DA SILVA 10504276 21.07.2010               0                 11.03.2014                
+  12268249      1   61 ALAGOAS DIESEL S A                       30.03.1970               0                 07.10.2014                
+  12284702      2    4 ANDREIS & ANDREIS TRANSPORTES LTDA - EPP 09.02.2012               0                 07.10.2014                
+  12284702      4   76 ANDREIS & ANDREIS TRANSPORTES LTDA - EPP 09.02.2012               0                 07.10.2014                
+  12284702      6   38 ANDREIS & ANDREIS TRANSPORTES LTDA - EPP 09.02.2012               0                 07.10.2014                
+  12349215      1    0 L.R MERCADINHO E PADARIA LTDA ME         28.07.2010               0                 15.07.2014                
+  12416983      1   20 ROMANA MONTAGEM DE ESTRUTURAS METALICAS  10.08.2010               0                 24.10.2014                
+  12486567      1    7 SAMANTA MARIA DE JESUS 08497488601       04.09.2010               0                 14.05.2012                
+  12526348      1    4 GILBERTO APARECIDO BACCAN JUNIOR         14.09.2010               0                 19.09.2014                
+  12564158      1   73 POSTO BARROS LTDA                        20.09.2010               0                 10.09.2014                
+  12580891      1   81 JONATHAN HAYAMA DA SILVA 32559876876 - M 24.09.2010               0                 08.09.2014                
+  12608561      1   57 JLV ENGENHARIA CONSTRUCOES E INCORPORACO 03.09.2010               0                 10.06.2013                
+  12806119      1   35 GRACIEMA CALDAS E SILVA COMERCIO DE PROD 19.10.2010               0                 17.04.2014                
+  12823636      1   12 TUFAO & CIA INDUSTRIA E COMERCIO LTDA -  08.11.2010               0                 17.09.2014                
+  12824676      1   89 DIEGO JOSE SANTOS DA SILVA 33223347836   09.11.2010               0                 04.08.2014                
+  12825231      1   13 FUNDO MUNICIPAL DE SAUDE                 23.04.1991               0                 01.09.2014                
+  12834738      2   14 ROSELI DA C LANDIM                       10.07.2012               0                 22.07.2014                
+  12882430      1   63 EVANCINIE VINCOLETO JUNIOR 38567377153   18.11.2010               0                 29.07.2011                
+  12959329      1   63 SOUZA MOURA SERVICOS MEDICOS LTDA        18.10.2010               0                 29.10.2014                
+  12973107      1    3 LUIS ANTONIO PONTES DE MEDEIROS LAVA RAP 02.12.2010               0                 31.10.2014                
+  13019330      1   70 EDARPA MANUTENCOES LTDA ME               10.11.2010               0                 23.10.2014                
+  13033205      1   15 DORGIVAL NOGUEIRA DE LIMA                20.12.2010               0                 22.04.2014                
+  13034998      1   97 ANDRE LUIZ LOPES CASSOLI - PRESTACAO DE  14.12.2010               0                 25.09.2014                
+  13050239      1   18 EL SHADAI NILOPOLIS CORRETORA DE SEGUROS 29.11.2010               0                 24.09.2014                
+  13055806      1   29 CINTIA VIRGINIA DE SOUZA - ME            20.12.2010               0                 26.05.2014                
+  13079765      1    0 IDALIR SERGIO BIOLCHI - TRANSPORTE       07.01.2011               0                 09.10.2014                
+  13089707      1   68 FRANCOSO & SILVA DROGARIA LTDA - ME      27.12.2010               0                 30.05.2014                
+  13158178      1    7 VEREDA COMERCIAL IMPORTACAO E EXPORTACAO 23.12.2010               0                 04.11.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+  13164644      1   67 PSCC ROSA E MAIA ENGENHARIA LTDA         03.01.2011               0                 30.06.2014                
+  13204621      1   39 SPINDOLA PARAFUSOS E TINTAS AUTOMOTIVAS  03.02.2011               0                 18.12.2013                
+  13211888      1   53 RESTAURANTE CHAMEGO ZEN LTDA ME          07.02.2011               0                 18.07.2014                
+  13218120      1    1 L. F. FIORAVANTI & CIA LTDA.             02.02.2011               0                 05.09.2014                
+  13230905      1    8 BALTICO ASSESSORIA EM COBRANCA LTDA      28.01.2011               0                 30.06.2014                
+  13237681      1   58 A J DE OLIVEIRA                          03.02.2011               0                 07.02.2014                
+  13251588      1    6 JR&F CONSULTORIA EMPRESARIAL LTDA        10.02.2011               0                 24.10.2014                
+  13367118      1    2 L.M. COMERCIO DE SUCATAS LTDA - ME       01.03.2011               0                 03.11.2014                
+  13415097      1   45 SS VISTORIAS FRAIBURGO LTDA EPP          17.03.2011               0                 20.10.2014                
+  13419048      1   80 PEDRO A.C.L. SIQUEIRA MODA EIRELI        24.10.2010               0                 28.10.2014                
+  13434495      1    9 MICHELE PIRES DO NASCIMENTO ME           29.03.2011               0                 16.04.2012                
+  13465894      1   37 ELESSANDRO FRANCO DA SILVA               05.04.2011               0                 03.10.2014                
+  13467306      1    2 KIYOMI MURAMOTO - ME                     30.03.2011               0                 16.06.2014                
+  13483678      1   14 E & Z REPRESENTACAO COMERCIAL LTDA       11.03.2011               0                 15.09.2014                
+  13487324      1   48 CESAR AUGUSTO DE OLIVEIRA DECORACAO      08.04.2011               0                 09.10.2014                
+  13490189      1   90 IDEAL COMERCIO DE POSTES E LUMINARIAS LT 05.04.2011               0                 23.07.2014                
+  13511907      1   67 FKF COMERCIO DE PRESENTES LTDA           18.03.2011               0                 04.11.2014                
+  13578235      1    7 MARICOTA COMERCIO DE ROUPAS INFANTIS EIR 08.04.2011               0                 13.10.2014                
+  13581653      2   34 JEOFFREY MURRIEL SILVA FARIAS - ME       04.11.2013               0                 28.07.2014                
+  13599299      1   94 LUTEGATTI ASSESSORIA COMERCIAL LTDA      01.03.2011               0                 14.08.2014                
+  13881794      1   91 TAIS JAQUILINE PAZZINI ME                04.04.2011               0                 29.09.2014                
+  13896347      1    6 MARIA ORTIZ COMERCIO DE ELETRO ELETRONIC 27.06.2011               0                 10.03.2014                
+  13954822      1   53 ESQUADRA INVESTIMENTOS - AGENTES AUTONOM 04.07.2011               0                 20.08.2014                
+  13993722      1   36 CAREN FRANCO GOULART - ME                11.07.2011               0                 18.08.2014                
+  14148722      1    0 M B DE SOUZA - ME                        11.08.2011               0                 28.10.2014                
+  14199856      1   42 RIVERO, MOREIRA E RIBEIRO ADVOGADOS      04.08.2011               0                 22.05.2014                
+  14208596      1   24 CLIMAX HOTEIS TURISMO LTDA - ME          30.08.2011               0                 28.10.2014                
+  14219010      1   27 CONDOMINIO RESIDENCIAL RUBI              08.07.2011               0                 02.05.2014                
+  14220004      1   90 D. FISCHER & FISCHER LTDA - ME           22.08.2011               0                 30.09.2014                
+  14254559      1   52 F.R.MENEZES COMERCIO E SERVICOS DE JARDI 19.07.2011               0                 15.08.2014                
+  14315743      1   65 AB EVNE RESEARCH LEVANTAMENTO & GESTAO D 31.08.2011               0                 19.03.2014                
+  14319946      1   20 JOAO PAULO PEREIRA DO NASCIMENTO - RESTA 15.09.2011               0                 08.08.2014                
+  14360150      1   10 E P DE BRITO                             30.09.1988               0                 02.12.2013                
+  14380730      1   70 VALDIR DE MOURA GONCALVES SILICONES - EP 13.05.2011               0                 13.10.2014                
+  14444043      1   70 BFL COMERCIO DE PRESENTES LTDA - EPP     08.09.2011               0                 04.08.2014                
+  14445790      1   23 GUSTAVO DE BARROS MASIERO 41461899850    12.10.2011               0                 28.04.2014                
+  14460511      1    9 UNIQUE LQD INVESTMENTS - EMPREENDIMENTOS 14.10.2011               0                 05.11.2014                
+  14533037      1   90 BARAO AUTO POSTO LTDA                    27.10.2011               0                 13.03.2014                
+  14540053      2   90 JOSE NILTON DIAS LOPES - ME              03.12.2013               0                 21.07.2014                
+  14548447      1    4 CNC SERVICOS DE CORTE E DOBRA LTDA       27.10.2011               0                 13.10.2014                
+  14664307      1    0 MARIA DAS GRACAS OLIVEIRA 25758803863    23.11.2011               0                 20.03.2014                
+  14667271      1    0 MEGAVIAS VIAGENS E LOCACOES LTDA - ME    01.11.2011               0                 16.06.2014                
+  14670523      1   50 PRIME ASSESSORIA                         08.11.2011               0                 28.04.2014                
+  14677404      1   29 CENTRO DE ATENDIMENTO ESPECIALIZADO LEA  24.10.2011               0                 10.10.2014                
+  14725117      1   47 KERN & OLIVEIRA ADVOGADOS ASSOCIADOS     29.11.2011               0                 29.07.2014                
+  14740300      1   11 IMPORTADORA E TRANSPORTADORA CONSENTINE  14.10.2011               0                 24.09.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  14779608      1   70 B.R.F. OZIO PECAS PARA AR CONDICIONADOS  22.11.2011               0                 10.09.2014                
+  14793879      1   80 FRANCISCO EUDENIO SABOIA BARROS ME       09.12.2011               0                 21.08.2014                
+  14806323      1   81 SANDRA NUNES DE MORAIS 51128683768       27.12.2011               0                 18.06.2014                
+  14878973      2   13 ERMELINDA CASTREQUINI NOGUEIRA - ME      17.01.2012               0                 02.07.2013                
+  14883550      1    0 COSTURATUDO MAQUINAS LTDA - EPP          09.01.2012               0                 15.10.2014                
+  14928429      1   58 E COMUNICACAO PUBLICIDADE LTDA.          21.12.2011               0                 14.07.2014                
+  15022243      1    6 SOLANGE APARECIDA SOARES RIBEIRO 1975377 09.02.2012               0                 22.10.2014                
+  15058563      1    8 MADEIRANIT MADEIRAS LTDA                 29.07.1981               0                 28.07.2014                
+  15096206      1   34 REALIZA PRESTADORA DE SERVICOS E MANUTEN 06.02.2012               0                 28.10.2014                
+  15205679      1   22 ROSANE RODRIGUES MARTINS 01232411620     15.03.2012               0                 15.10.2014                
+  15262172      1    0 ISABELA DIAS DE MORAES - ME              15.03.2012               0                 04.07.2014                
+  15264009      1   87 ANDERSON DELESPOSTE VIANA                26.03.2012               0                 08.07.2013                
+  15304604      1    7 PAULO JUNIOR BARBOSA DA SILVA 9269125041 02.04.2012               0                 16.07.2014                
+  15412902      1    2 EURIPEDES COSTA DA SILVA 01884038174     23.04.2012               0                 13.08.2014                
+  15416850      1   42 GEORGE DEMETRE GAVALAS DESENHOS TECNICOS 22.03.2012               0                 29.07.2014                
+  15448759      1    9 FERNANDA APARECIDA DE OLIVEIRA SANTOS IN 20.04.2012               0                 12.06.2014                
+  15479086      1   54 PEDRO JOSE NUNES FERREIRA ME             07.05.2012               0                 22.07.2013                
+  15484787      1   81 DISK CERVEJA RODRIGUES - EIRELI ME       04.05.2012               0                 08.06.2012                
+  15491486      1   85 J RODRIGUES NETO - ME                    24.04.2012               0                 23.09.2013                
+  15567103      1    5 LIPI SOCIEDADE DE ADVOGADOS              09.05.2012               0                 30.10.2014                
+  15576725      1    8 TAMY COHEN AVRAMESCU CORTES EM TECIDOS - 15.05.2012               0                 04.02.2014                
+  15601202      1   66 M. A. B. COUTO TRANSPORTES - ME          25.05.2012               0                 14.08.2014                
+  15647193      1   44 CAROLINE PACHECO ALVES OLIVEIRA GUEDES S 03.06.2012               0                 06.05.2014                
+  15656426      1   75 LOTEADORA BOA VISTA DE SERTANOPOLIS LTDA 28.05.2012               0                 05.11.2014                
+  15745126      1   62 ZULMIRA DELGADO RODIGHERI ME             20.06.2012               0                 06.10.2014                
+  15745898      1    2 FRIGOALIANCA - COMERCIO VAREJISTA DE CAR 20.06.2012               0                 30.10.2014                
+  15746131      1   90 FRANCIELEN THAIS LORENCO 35545967877     20.06.2012               0                 14.04.2014                
+  15764409      1   51 ELAINE BERGUE 09380700881                23.06.2012               0                 23.07.2012                
+  15809362      1    3 VILLAGIO DI GRAVATAL CONSTRUCOES LTDA    27.06.2012               0                 09.06.2014                
+  16434765      1   70 DEMIURGUS PARTICIPACOES LTDA.            29.06.2012               0                 16.01.2014                
+  16571585      1   30 VALERIA APARECIDA RUIVO LEONEL - ME      16.08.2011               0                 25.07.2014                
+  16573112      1   71 CONDOMINIO RESIDENCIAL AQUARIUS          25.06.2012               0                 13.08.2014                
+  16628572      1   50 COMERCIAL PINA LTDA                      03.08.2012               0                 31.10.2014                
+  16671526      1   33 MOTORPARTS COMERCIO DE AUTO PECAS LTDA - 31.07.2012               0                 29.10.2014                
+  16714911      1   10 EURO77 COMERCIO DE SUBPRODUTOS BOVINOS L 16.08.2012               0                 29.10.2014                
+  16774201      1   86 NEXT LOJA DE CONVENENCIA DE SAO CARLOS L 22.06.2012               0                 28.05.2014                
+  16831583      1   32 RESIDENCIAL TUBARAO CONSTRUCOES LTDA     03.09.2012               0                 07.05.2014                
+  16855430      1   25 BRUNO RADSON VIEIRA CARNEIRO             14.09.2012               0                 07.04.2014                
+  16870080      1   76 PLANET SOM SERVICOS AUTOMOTIVOS LTDA - M 11.09.2012               0                 04.11.2014                
+  16883583      3   48 N R D SANTOS HOLANDA & CIA LTDA          20.03.2014               0                 29.10.2014                
+  16942498      1   41 LEANDRO DO AMARAL DIEGUES 15924961800    02.10.2012               0                 21.07.2014                
+  17003350      1    4 VILLE DE PROVENCE CONSTRUCOES SPE LTDA   05.10.2012               0                 05.11.2014                
+  17011860      1   23 MARISA APARECIDA PIRES SILVA 04748103809 16.10.2012               0                 14.10.2014                
+  17071836      2   60 R. MARKET ALIMENTOS LTDA ME              19.04.2013               0                 20.05.2014                
+  17104069      1   68 YUYU PRESENTES LTDA ME                   19.10.2012               0                 04.09.2014                
+  17105205      1   34 ABITI LARGHI CONFECOES LTDA - ME         31.10.2012               0                 29.10.2014                
+  17113066      1   90 D M DOS SANTOS BORRACHARIA - ME          15.10.2012               0                 05.11.2014                
+  17119563      1    4 R & V IDIOMAS LTDA                       09.10.2012               0                 14.03.2014                
+                                                                                                                                     
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  17162916      1   40 MARCOS GIOCONDO DA DALTO 11934784800     14.11.2012               0                 09.07.2014                
+  17213313      1   20 EGR AGROPECUARIA LTDA - ME               27.11.2012               0                 29.10.2014                
+  17252350      2   29 ALEXANDRE ARAUJO MACHADO - ME            17.12.2012               0                 28.05.2014                
+  17256523      1    4 QUARTO ANDAR ARQUITETURA LTDA - ME       08.10.2012               0                 03.11.2014                
+  17273664      1   27 CARINA MARIA DOS SANTOS DA SILVA 3563649 07.12.2012               0                 03.04.2014                
+  17284526      1   43 ALTEMIR DE LEMOS GARCIA 59787180082      11.12.2012               0                 08.10.2014                
+  17290363      1    1 JC MANZONI TRANSPORTES ME                23.06.2012               0                 09.01.2014                
+  17379818      1   60 DR CAMPOS - ME                           09.01.2013               0                 28.08.2014                
+  17415628      1   50 BAU CONSTRUCOES LTDA                     15.01.2013               0                 05.05.2014                
+  17426183      1    4 JOHN PETER COMERCIO DE SAPATOS E ACESSOR 14.12.2012               0                 21.10.2014                
+  17432441      1   65 GMC PRODUCOES ARTISTICAS LTDA.           21.12.2012               0                 07.11.2014                
+  17462676      1    8 MARCOS BRENNER LIMA BARBOSA 04187162348  23.01.2013               0                 02.07.2014                
+  17467516      1   43 TRANSPORTES CAMILO LTDA - ME             24.01.2013               0                 14.01.2014                
+  17471173      1   90 SERGIO HELENO DO NASCIMENTO              25.01.2013               0                 07.06.2013                
+  17481323      1   47 M.R. MULTIOFFICE BUSINESS SERVICES LTDA  14.01.2013               0                 25.08.2014                
+  17488772      1   17 MULTI PEDRAS COM DE PEDRAS DECORATIVAS L 21.01.2013               0                 09.04.2014                
+  17503070      1   65 LANCHONETE ENGENHAO LTDA - ME            14.01.2013               0                 18.08.2014                
+  17533246      1   21 SCOTT BEER COMERCIO DE BEBIDAS LTDA - ME 03.01.2013               0                 19.09.2014                
+  17563648      1   79 GILBERTO DA SILVA BAMBIL 92792855134     11.02.2013               0                 22.08.2014                
+  17670994      1   56 FDR SERVICOS ESPECIALIZADOS EM ANALISE D 08.02.2013               0                 12.05.2014                
+  17699758      1   62 ELOISIO ARAUJO MOREIRA CPF 384.575.716-7 06.03.2013               0                 14.07.2014                
+  17718423      1   44 ANTONIO CARLOS LA PASTA - ME             08.03.2013               0                 03.11.2014                
+  17750024      1   60 D AGOSTINHO ASSESSORIA EMPRESARIAL LTDA  14.03.2013               0                 03.04.2014                
+  17825392      1   20 ANTUERPIA PROMOTORA E ADMINISTRADORA DE  06.03.2013               0                 25.08.2014                
+  17838897      1   20 COMERCIAL SILVA E OLIVEIRA LTDA          01.02.1973               0                 03.04.2014                
+  17862032      1    7 ZUMA PARTICIPACOES LTDA.                 03.04.2013               0                 14.05.2014                
+  17863392      1   15 AGNALDO DONIZETE PARMA - ME              03.04.2013               0                 20.10.2014                
+  17873893      1   82 JORGE RIBEIRO SOARES 44450532368         04.04.2013               0                 05.06.2014                
+  17879262      1   70 ANA LUCIA SANCHES BASTOS MIQUE - ME      04.04.2013               0                 19.06.2013                
+  17895687      1   73 JOAO PAULO VICHIETINI - ME               09.04.2013               0                 07.05.2014                
+  17909302      1   80 LANCHONETE E RESTAURANTE SABOR DA CONQUI 11.04.2013               0                 10.09.2014                
+  17992252      1   47 GABRIELA B ALVES EMBALAGENS - ME         24.04.2013               0                 04.11.2014                
+  18034780      1   56 IGREJA VIDEIRA DE FLORIANOPOLIS          29.04.2013               0                 10.10.2014                
+  18052593      1    3 CENTERLINE CE COMERCIO E SERVICOS DE TEL 03.05.2013               0                 20.06.2014                
+  18052860      1   34 EBS MINAS REPRESENTACOES LTDA            30.05.1983               0                 01.09.2014                
+  18085319      1   22 LUIZ WILSON DE OLIVEIRA JUNIOR TRANSPORT 09.05.2013               0                 30.10.2014                
+  18126071      2   81 MARCIO AGUIAR DE CASTRO - ME             18.07.2013               0                 03.11.2014                
+  18183096      1   36 PATRICIA CACERES COMUNICACAO E VOZ PROFI 23.05.2013               0                 30.06.2014                
+  18188390      1   30 LE ZIL COMERCIO DE JOIAS E PRESENTES LTD 24.05.2013               0                 04.11.2014                
+  18376728      1   88 ZHONGXIAO JI EIRELI - ME                 27.06.2013               0                 27.10.2014                
+  18410937      1    9 DEBORA GISLON - FERRAGENS E FERRAMENTAS  26.06.2013               0                 06.11.2014                
+  18412680      1   16 B & K CLOSET LTDA - EPP                  03.07.2013               0                 04.08.2014                
+  18430362      1   88 RONALDO ELCIO SILVA DE AQUINO            05.07.2013               0                 09.10.2014                
+  18436018      1    4 XAVIER E BRAGA PRESENTES LTDA - ME       05.07.2013               0                 27.01.2014                
+  18441367      1    6 VITOR ATAIR VICTORIO INFORCATTI 33304445 08.07.2013               0                 03.11.2014                
+  18478168      1   72 CRISTINA ANTUNES DA COSTA 04850204910    12.07.2013               0                 28.10.2014                
+  18517043      1    4 GABRIELA GUDRIN DOS SANTOS 44159423850   19.07.2013               0                 01.09.2014                
+  18527351      1   10 AMERICANA IMPRESSAO DIGITAL LTDA - ME    22.07.2013               0                 10.10.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  18606199      2   42 PIEDADE BURGER COMERCIO DE ALIMENTOS LTD 08.08.2013               0                 07.08.2014                
+  18624324      1   66 FRATELLI SEGURANCA ELETRONICA 24H LTDA - 06.08.2013               0                 26.09.2014                
+  18658017      1    4 MASL ENGENHARIA SOCIEDADE SIMPLES - ME   15.07.2013               0                 15.10.2014                
+  18684389      1    5 ULISSES BARBOSA DE SOUSA & CIA LTDA - ME 14.08.2013               0                 03.09.2014                
+  18689990      1   82 PAULO SERGIO DOS SANTOS MINIMERCADO - ME 15.08.2013               0                 21.03.2014                
+  18693095      1   31 K PEREIRA DE OLIVEIRA - ME               30.07.2013               0                 13.03.2014                
+  18932753      1    9 USINA DE IDEIAS INDUSTRIA E COMERCIO LTD 20.09.2013               0                 29.10.2014                
+  18942084      1   48 CENTRO DE ESPECIALIDADE OFTALMOLOGICA DE 24.09.2013               0                 11.08.2014                
+  18951156      1   13 ROSELI BRAGA CABRAL - ME                 01.07.2014               0                 28.10.2014                
+  18984567      1    5 LIZ QUIMICA INDUSTRIA E COMERCIO LTDA    01.10.1983               0                 05.02.2014                
+  18985393      1    3 SONIA APARECIDA DE SOUSA 62592149104     01.10.2013               0                 14.04.2014                
+  18985582      1   78 JESIVALDO SANTOS NEVES 26626027832       01.10.2013               0                 03.12.2013                
+  18999570      1    0 MARIA AMPARO MANZANO GASPARIN 2214297782 03.10.2013               0                 06.12.2013                
+  19009885      7    3 CJF DE VIGILANCIA LTDA                   12.06.1976               0                 07.10.2013                
+  19026565      1   76 MICHAEL JACSON NUNES HONORATO 0099121336 08.10.2013               0                 30.10.2014                
+  19050888      1    3 B. N. R. SALVI PIZZARIA - ME             10.10.2013               0                 22.10.2014                
+  19052940      1   52 LEONAN RESTAURANTE LTDA - ME             11.10.2013               0                 24.12.2013                
+  19056881      1   90 ACO LIGA IMPORTACAO E COMERCIO DE PRODUT 11.10.2013               0                 30.10.2014                
+  19138612      1   73 KARIN C.B.T. NAKAYAMA - ORIENTADOR - ME  17.10.2013               0                 04.07.2014                
+  19160793      1   34 ELETROFERRO ELETRICA, FERROS E FERRAGENS 30.10.2013               0                 07.11.2014                
+  19196881      1   96 BERGAMO & CIA ADMINISTRADORA DE BENS LTD 04.11.2013               0                 24.02.2014                
+  19201994      1   32 A. J. AMARAL SERVICOS DE TRANSPORTES EIR 05.11.2013               0                 31.10.2014                
+  19243004      1   29 ADRIANA DE JESUS DE PAULA 01084366673    12.11.2013               0                 28.04.2014                
+  19287971      1   92 RAQUEL PICCIUTTI - EPP                   21.11.2013               0                 19.02.2014                
+  19298339      1   44 J.M MEIRELES TECIDOS - ME                22.11.2013               0                 10.10.2014                
+  19298990      1   14 MISKI BAR E RESTAURANTE EIRELI           21.11.2013               0                 06.11.2014                
+  19426912      1   58 ESTRELA ROSA DO ROSA PARTICIPACOES LTDA  17.12.2013               0                 23.12.2013                
+  19441023      1   60 ANA CLEIA BEZERRA 01291728473            21.12.2013               0                 24.03.2014                
+  19474293      1   77 MERCEARIA E LANCHONETE                   06.01.2014               0                 22.01.2014                
+  19479832      1   60 SALIZA DE CASTRO SIQUEIRA 02496726180    07.01.2014               0                 04.11.2014                
+  19494076      1   49 QWRH RECURSOS HUMANOS S/A                09.01.2014               0                 05.06.2014                
+  19557573      1   49 THIAGO DE SOUSA SILVA - ME               21.01.2014               0                 12.03.2014                
+  19561162      1   27 ACOCELLA SERVICOS ADMINISTRATIVOS - EIRE 21.01.2014               0                 19.03.2014                
+  19563198      1   40 FAS COMERCIO DE ARTIGOS PARA DECORACAO E 30.10.2013               0                 12.06.2014                
+  19570360      1   57 BEGTSOM & BEGTSOM COLHEITAS E TRANSPORTE 14.01.2014               0                 12.02.2014                
+  19582406      1   58 EDMILSON PEREIRA DA SILVA 07091968816    23.01.2014               0                 26.08.2014                
+  19639375      1   24 SEAL ACESSIBILIDADE E SINALIZACAO VISUAL 03.02.2014               0                 17.09.2014                
+  19670608      1   51 CASAITALIA COMERCIO DE ALIMENTOS LTDA -  06.02.2013               0                 18.07.2014                
+  19689185      1   11 JOSE ANTONIO DE OLIVEIRA JUNIOR 10311292 10.02.2014               0                 25.03.2014                
+  19721905      1   89 FAUSTO COMERCIO E SERVICOS EIRELI ME     14.02.2014               0                 13.03.2014                
+  19750619      1   41 DOUGLAS CDT CONSTRUCAO E INCORPORACAO PE 31.01.2014               0                 05.11.2014                
+  19751407      1   89 DESCARTEPEL COMERCIO E REPRESENTACOES LT 18.02.2014               0                 30.10.2014                
+  19752664      1   35 DBR DISTRIBUICAO EM BANCAS DE REVISTAS L 19.02.2014               0                 28.10.2014                
+  19753270      1    0 SD VISION SISTEMA DE SEGURANCA E MONITOR 19.02.2014               0                 04.04.2014                
+  19766125      1   55 JONAS BLASIUS 06604060985                21.02.2014               0                 28.04.2014                
+  19806163      1   94 CRESCER BEM RURAL                        27.02.2014               0                 14.08.2014                
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  19829178      1   78 ESTRUTURAL ACADEMIA DE CONDICIONAMENTO F 06.03.2014               0                 25.09.2014                
+  19941851      1   67 JOOPP LATAM SISTEMAS SPE LTDA            24.03.2014               0                 15.10.2014                
+  19946591      1   12 SL CIRURGIA PLASTICA LTDA - EPP          25.03.2014               0                 27.10.2014                
+  19982720      2    9 JESSICA FRANCA DE OLIVEIRA EIRELI - EPP  28.04.2014               0                 28.05.2014                
+  20005417      2   35 HOLANDA & OLIVEIRA COMERCIO DE OTICA LTD 02.04.2014               0                 14.04.2014                
+  20009022      1   20 NAYARA DA SILVA PAIVA 37869117897        03.04.2014               0                 17.04.2014                
+  20014314      1   50 DUARTE E SILVA CONSULTORIA E EMPREENDIME 03.04.2014               0                 11.07.2014                
+  20025090      1   82 R G MACARIO TRANSPORTE DE CARGAS - ME    25.03.2014               0                 04.06.2014                
+  20050212      1   90 DINALVA MELO DAMACENO 13961526877        09.04.2014               0                 08.05.2014                
+  20082388      1   24 CREP S LIDER ALIMENTOS LTDA - EPP        14.04.2014               0                 04.11.2014                
+  20089584      1   20 VANESSA PEREIRA LIMA PIZZARIA - ME       15.04.2014               0                 07.10.2014                
+  20101162      1   23 LUIZA FIRMINO DE ALCANTARA 95541179491   17.04.2014               0                 03.11.2014                
+  20116377      1   18 CNM TRANSPORTES INTERNACIONAIS LTDA      16.04.2014               0                 04.06.2014                
+  20149599      1   37 VID DESIGN METAIS E BIJUTERIAS EIRELI -  28.04.2014               0                 04.11.2014                
+  20172982      1    6 LEANDRO DE OLIVEIRA - ACOUGUE - ME       23.04.2014               0                 05.11.2014                
+  20178051      1   15 PAULO ROBERTO VELOSO 11810232708         02.05.2014               0                 21.10.2014                
+  20301142      1    4 MANOEL RODRIGUES MENDES                  22.05.2014               0                 26.05.2014                
+  20324278      1   21 VITORIA E YASMIN                         27.05.2014               0                 27.08.2014                
+  20349391      1   61 ELTON SOUSA DOS SANTOS 60187929319       29.05.2014               0                 07.07.2014                
+  20360275      1   43 HANGAR COMERCIO DE MOTOCICLETAS EIRELI - 02.06.2014               0                 30.10.2014                
+  20364449      1   46 GISLENE APARECIDA CARRION 28237961854    02.06.2014               0                 23.06.2014                
+  20374268      1    9 BRUNO FERNANDO DA SILVA                  03.06.2014               0                 26.09.2014                
+  20410695      1   97 GESICA LARICE FERREIRA DE SOUZA VALERIO  09.06.2014               0                 23.10.2014                
+  20438449      1   43 DYULLE LEITAO DA SILVA 02225081328       12.06.2014               0                 04.08.2014                
+  20591150      1   24 LEAL E SANTOS COMERCIO DE CDS LTDA - ME  07.07.2014               0                 23.10.2014                
+  20593021      1   75 REGINA COELI DE SOUZA OLIVEIRA 008312577 07.07.2014               0                 25.09.2014                
+  20629297      1   66 NOVAPACK EMBALAGENS LTDA - EPP           14.07.2014               0                 07.11.2014                
+  20646601      1   83 LAUDECI ARAUJO RODRIGUES - ME            25.06.2014               0                 27.08.2014                
+  20665032      1   13 MATEUS LACERDA MOVEIS - EIRELI - ME      18.07.2014               0                 05.11.2014                
+  20682246      1    6 LUKA MOVEIS LTDA - ME                    14.07.2014               0                 30.10.2014                
+  20697365      1   24 DROGARIA DO RE MI ME                     03.09.2014               0                 11.09.2014                
+  20713187      1   88 ABRAO SIONE QUEIROZ NEVES 60618175253    25.07.2014               0                 03.09.2014                
+  20718116      1   78 GUARUCOB SERVICOS DE COBRANCA LTDA - ME  28.07.2014               0                 14.10.2014                
+  20740573      1   69 RAIMUNITA CABRAL DOS SANTOS 40571319572  30.07.2014               0                 23.10.2014                
+  20769910      1   40 VALERIA RODRIGUES 18714843838            04.08.2014               0                 30.10.2014                
+  20802239      1   92 DONIZETE BATISTA ALVENARIA ME            24.07.2014               0                 03.11.2014                
+  20856287      1   63 SILVESTRE APARECIDO DOS SANTOS           18.08.2014               0                 26.09.2014                
+  20874444      1   63 ROMEIRO & BEZERRA LTDA - ME              20.08.2014               0                 08.10.2014                
+  20875151      1    9 MARGARETH PEREIRA DA SILVA SANTANA 16859 20.08.2014               0                 02.09.2014                
+  20899193      1   71 ANITA BONITA COSMETICOS LTDA - EPP       22.08.2014               0                 23.10.2014                
+  20917052      1   34 ESPACO SAUDE CAMILA NUNES LTDA - ME      27.08.2014               0                 17.10.2014                
+  20931958      1    3 RRC - ESCRITORIO DE SERVICOS DE APOIO EM 28.08.2014               0                 30.09.2014                
+  20950669      1   51 RESTAURANTE IMPERIO DA BRESSER LTDA - ME 01.09.2014               0                 01.10.2014                
+  21014084      1   92 SILAS HENRIQUE DA SILVA MATOSO EIRELI -  10.09.2014               0                 03.11.2014                
+  21057347      1   40 WANDERLEY JOSE DE OLIVEIRA JUNIOR - ME   17.09.2014               0                 30.10.2014                
+  21064632      1   99 AB COMERCIO DE PRODUTOS ALIMENTICIOS EIR 18.09.2014               0                 03.10.2014                
+  21082822      1   39 ANDREIA CRUZ - ME                        22.09.2014               0                 14.10.2014                
+  21092020      1    0 ARAKEN TRANSPORTES E LOGISTICA LTDA - ME 23.09.2014               0                 28.10.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  21121582      1   34 MARCO A.D.L. DE CASTRO COMERCIO DE BEBID 26.09.2014               0                 20.10.2014                
+  21150853      1   80 MARIA JOSE DE OLIVEIRA                   01.10.2014               0                 04.11.2014                
+  21157545      1   86 S9 TECNOLOGIA DE SISTEMAS LTDA.          02.10.2014               0                 03.11.2014                
+  21200817      1   83 MARIOS HANNA 01310783993                 09.10.2014               0                 17.10.2014                
+  21216787      1    1 HORTIFRUTI NATURAL DA TERRA LTDA - ME    13.10.2014               0                 21.10.2014                
+  21268281      1   38 ELEANDRO BORTOLETTO FURLAN - ME          22.10.2014               0                 05.11.2014                
+  21271870      1   75 TIAGO DO CARMO FERREIRA - ME             22.10.2014               0                 24.10.2014                
+  21271921      1   69 SUMO DAY JAPANESE EIRELI - ME            22.10.2014               0                 29.10.2014                
+  21277305      1   15 ADINARIO LEAL DE SOUZA 00173043690       23.10.2014               0                 03.11.2014                
+  21281570      1   77 PRISCILA DA SILVA VIEIRA 70224012258     23.10.2014               0                 04.11.2014                
+  21309167      1    9 SERRA NEGRA COMERCIO E IMPORTACAO DE ALH 28.10.2014               0                 04.11.2014                
+  22091664      1   46 DISTRIBUIDORA ESPACO LIVRE LTDA          04.06.1986               0                 29.07.2014                
+  23334899      1   84 AUTO FERNANDA LTDA                       24.07.1987               0                 14.10.2014                
+  23464225      1    2 SUPRAMED QUEIJOS & VINHOS COMERCIAL IMPO 27.06.1988               0                 02.05.2014                
+  27593110      1   60 POSTO DE COMB GOITACAZ DE CAMPOS LT      27.07.1981               0                 17.10.2014                
+  27776087      1   40 PERFONE COMERCIO REPRESENTACAO EQUIPT E  04.11.1983               0                 23.10.2014                
+  28198976      1   30 SUBMARINO AMARELO MATERNAL E JAR         18.01.1984               0                 02.05.2014                
+  31052103      1   29 JOHN FREDERICO KOLK ME                   28.07.1986               0                 24.07.2014                
+  32093775      1   45 INSTITUTO ORTOPEDICO DA TIJUCA LTDA      01.11.1996               0                 23.10.2014                
+  33171471      1   11 A CAMELIA FLORES NATURAIS LTDA           01.01.1969               0                 15.05.2014                
+  33200056     70   70 LOJAS RIACHUELO SA                       30.10.2008               0                 05.03.2013                
+  33200056    213    8 LOJAS RIACHUELO                          03.08.1979               0                 09.06.2011                
+  33274044      1   69 GERAUTO COMERCIO DE VEICULOS LTDA        10.08.1987               0                 13.01.2014                
+  35246560      1    5 CONSTRUTORA E IMOBILIARIA JMV LTDA       14.08.1990               0                 03.09.2014                
+  35326156      1   41 GRUPO RUAS E PRACAS                      25.12.1993               0                 05.09.2014                
+  36901908      1   13 LUIZ ROBERTO CASAVECHIA E CIA LTDA       27.11.1991               0                 03.10.2014                
+  37200979      1   51 NARZICIO OHLAND ME                       02.05.1995               0                 05.11.2014                
+  38889671      1   28 AMAKAN ASSESSORIA CONTABIL LTDA ME       27.09.1990               0                 25.09.2014                
+  39027479      1   95 NELSON FIRMINO DA SILVA CONSULTORIA E ES 18.11.2005               0                 27.08.2014                
+  39067913      1   60 BAZAR DIAS DA TAQUARA LTDA               24.09.1990               0                 20.10.2014                
+  39118054      1   91 CARMEN BALBINO DA COSTA - ME             26.09.1990               0                 29.08.2014                
+  39211016      1   89 COND DO EDIF PIONEIROS                   25.05.1986               0                 07.11.2013                
+  41409806      1   15 CONDOMINIO EDIFICIO ONZE DE JULHO        23.07.1981               0                 25.06.2014                
+  41591991      1    1 SERVICOS DE MANUTENCAO ALVES LTDA ME     19.08.1992               0                 20.01.2014                
+  42150169      1   78 M C JOIAS E ARTIGOS PARA PRESENTES LTDA  05.10.1995               0                 28.05.2014                
+  42462515      1   53 PEDRO CALMON FILHO & ASSOCIADOS SOC CIVI 19.06.1975               0                 31.10.2014                
+  42540997      1   12 SARA JOIAS E PRESENTES LTDA              02.04.1976               0                 16.07.2014                
+  43662956      1   61 SUPER MERCADO JARDIM PALMIRA LTDA        17.06.1980               0                 13.10.2014                
+  43796580      1   88 AUTO POSTO 27 LTDA                       12.01.1983               0                 24.07.2014                
+  43844224      1   92 SIBOL RECUPERADORA DE TAMBORES LTDA      23.10.1973               0                 03.11.2014                
+  43950633      1   73 IRMAOS SANO LTDA                         08.01.1953               0                 14.02.2014                
+  44081347      1   81 IGARAPE ADMINISTRADORADE BENS SA         06.02.1978               0                 28.10.2013                
+  44956944      1    2 R MARTINS TRANSPORTES LTDA               11.08.1995               0                 15.10.2014                
+  47427430      1   58 MOMENTO MOTEL VERA CRUZ LTDA             02.10.1987               0                 31.01.2014                
+  47534565      1   12 ASSOC DOS ADVOGADOS SJCAMPOS             19.06.1973               0                 23.10.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  47668397      3   10 CORTEVIVO INDUSTRIA COMERCIO E CORTE DE  14.01.2011               0                 21.10.2014                
+  48813349      3   30 MONALISA JOIAS E PRESENTES AGA LTDA      06.11.2001               0                 20.06.2014                
+  49811300      1   40 POSTO DE SERVICO SAO JOAQUIM LTDA        08.05.1978               0                 18.06.2014                
+  50059070      1   93 AGES ASSOCIACAO CIVIL GAUDIUM ET SPES    14.05.1982               0                 18.12.2013                
+  50089895      1   50 ROTARY CLUB CAMPINAS SUL                 01.07.1994               0                 03.09.2014                
+  50439272      1   60 LABORATORIO CLINICO CASTOR MACHADO S/S L 09.05.1980               0                 01.11.2013                
+  50557164      1   92 FELISBERTO ANGELO FERRARI & CIA LTDA ME  18.06.1982               0                 03.07.2014                
+  50654276      1   61 MC WILL EDITORES INCORPORADOS LTDA       07.04.1995               0                 08.09.2014                
+  51297331      1   76 ELETROCAMP CONSTRUCOES ELETRICAS LTDA    06.08.1979               0                 14.07.2014                
+  51594950      1   22 NM ENGENHARIA E CONSTRUCOES LTDA         31.10.1996               0                 31.10.2014                
+  51629335      1    4 MOLLO CORRETORA DE SEGUROS LTDA          28.06.1984               0                 25.07.2014                
+  53395695      1   14 SREE COMERCIO DE ROUPAS LTDA             13.04.1984               0                 05.05.2014                
+  53671251      1   64 COMERCIO E INDUSTRIA DE FUMO ARAPIRACA L 01.08.1984               0                 13.03.2014                
+  54881404      1   60 ALBERTO BITELLI INTERNATIONAL FILMS LTDA 19.08.1985               0                 27.08.2014                
+  54961958      1   78 COND EDIF TERRAZZA HIGIENOPOLIS          26.09.1985               0                 04.11.2014                
+  55401780      1   73 CABELEREIRO LUCILENE LTDA ME             09.01.1986               0                 10.06.2014                
+  55631162      1   10 REDECA ACUMULADORES LTDA ME              28.04.1986               0                 10.04.2014                
+  55715213      1   91 CITY POSTO DE FRANCA LTDA                30.04.1986               0                 11.02.2014                
+  55803225      1   78 CARMOLAV ASSISTENCIA TECNICA PARA ELETRO 12.05.1986               0                 22.11.2013                
+  55862189      2    2 FENUT CONFECCOES LTDA - ME               25.09.2012               0                 22.09.2014                
+  55943864      1   39 TRANSJEAME TRANSPORTE ESCOLAR LTDA       02.07.1986               0                 21.01.2014                
+  56333024      1   17 GIANFRANCO JOALHEIROS LTDA ME            13.08.1986               0                 26.09.2014                
+  56990153      1   88 EMPREITEIRA DOMINGUES & DOMINGUES LTDA - 30.05.1990               0                 30.06.2014                
+  57145161      1   90 BEALTEX CONFECCOES LTDA ME               11.02.1987               0                 20.10.2014                
+  57500290      1   50 MODELO PROCESSAMENTO DE DADOS LTDA ME    25.09.1987               0                 16.07.2014                
+  57524126      1   82 AUTO POSTO BARAO DE MAUA LTDA            21.09.1966               0                 04.08.2014                
+  57751067      1   85 SANRECLER COMERCIO E REPRESENTACOES LTDA 24.06.1987               0                 14.06.2012                
+  57818254      1   39 DUFRAN EMPREENDIMENTOS IMOBILIARIOS      04.08.1987               0                 16.09.2014                
+  57830390      2   25 ITAJARA COMERCIO DE CARNES LTDA          08.06.2001               0                 06.10.2014                
+  57885444      1   79 ELIZA MARIKO KUROKI PEREIRA ME           13.03.1987               0                 22.11.2013                
+  58071788      1    7 NUNESTAR COMERCIO DE BIJOUTERIAS LTDA    06.10.1967               0                 15.09.2014                
+  58088857      1   95 EGEL ENGENHARIA GEOTECNICA IND E COM LTD 12.02.1988               0                 11.07.2014                
+  59483024      1   91 AUDI CONTABIL MORAIS SC LTDA             19.02.1997               0                 29.04.2014                
+  60229234      1   37 INTERMAX SERVICOS GRAFICOS E INTERNET LT 03.11.2005               0                 24.10.2013                
+  60269859      1   22 FAVARETTO ASSESSORIA FISCO CONTABIL SC L 22.03.1989               0                 10.10.2014                
+  60484169      1   96 SERRALHEIRA MEALE LTDA ME                14.07.1967               0                 17.04.2014                
+  60658390      1   13 ETAE AUDITORES TRIBUTARIOS LTDA          01.12.1961               0                 04.11.2014                
+  60660248      1    0 JOAO FERNANDES DE GOUVEIA                04.02.1964               0                 30.10.2013                
+  60877487      1   17 PLASMECA IND E COM DE A PLAST D          14.12.1967               0                 30.12.2013                
+  60919909     16   56 ASSOCIACAO PROTETORA DA INFANCIA PROVINC 30.06.1993               0                 28.10.2013                
+  60998945      1   76 NAZARE COMERCIO DE PNEUS LTDA            20.07.1989               0                 01.09.2014                
+  61064275      1   83 ROSSAFA VEICULOS LTDA                    01.08.1989               0                 31.08.2012                
+  61082046      1   91 AGUAPLAN POCOS E EQUIP LTDA ME           02.08.1989               0                 06.11.2014                
+  61129177      1   87 M BELEM COM.DE ROUPAS LTDA               01.08.1989               0                 21.08.2014                
+  61269759      1   69 SUPER LANCHES MIL DUZENTOS E DEZOITO LTD 03.11.2005               0                 20.06.2014                
+  61352449      1    3 GOBBATO ARS INOX LTDA                    10.08.1989               0                 26.09.2014                
+  61384293      1   42 RESTAURANTE E LANCHES AO CORDEIRINHO LTD 19.07.1966               0                 17.09.2014                
+  61518569      1   38 CASA DE FERRAGENS ISABEL LTDA ME         05.10.1989               0                 16.09.2013                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  61961124      3   90 NECI DA CUNHA GUEDES - ME                13.08.2013               0                 10.09.2014                
+  61961520      1   55 MACFER USINAGEM E EQUIPAMENTOS INDUSTRIA 09.11.1989               0                 03.10.2014                
+  62025804      1    0 AUTO MECANICA CAPOTE S/C LTDA ME         20.11.1989               0                 23.07.2014                
+  62027289      1   90 IGREJA EV PENT O BRASIL P CRISTOVL JAGUA 05.02.1990               0                 30.10.2014                
+  62136643      1   14 BACCO S COMERCIAL E IMPORTADORA ESCOCIA  08.09.1994               0                 08.08.2014                
+  62314133      3   51 ORLA IMOVEIS LTDA - ME                   14.11.2013               0                 21.02.2014                
+  62319595      1    8 FEDERACAO PAULISTA DE FUTEBOL DE SALAO   30.09.1994               0                 14.05.2014                
+  62521117      1   78 PEPO COMERCIO DE BEBIDAS LTDA            21.02.1990               0                 26.09.2014                
+  62537329      1   43 LEANDRO XAVIER GUIMARAES ME              13.03.1990               0                 02.06.2014                
+  62542170      1   55 IMOBILIARIA JUPITER S/C LTDA             01.09.1969               0                 28.10.2014                
+  62955505     46   69 IGREJA DO EVANGELHO QUADRANGULAR         11.01.1958               0                 18.09.2014                
+  63083794      1   14 AUTO POSTO SETE ESTRELAS LTDA            01.02.1970               0                 07.07.2014                
+  64041809      1   44 CONDOMINIO EDIFICIO MONTE VERDE          08.12.1989               0                 28.02.2014                
+  64147390      1    0 SANCOR INDUSTRIA QUIMICA LTDA EPP        07.07.1990               0                 08.10.2014                
+  64582158      1    8 INCUBADORA PARAISO LTDA                  19.09.1990               0                 02.05.2014                
+  64900947      1   31 PANIFICADORA DOS CAICARAS LTDA           28.11.1990               0                 22.10.2014                
+  65048159      1   21 ASSOCIACAO INTERC INT JOVENS D 4600RI    28.10.1991               0                 11.06.2014                
+  65616138      1   65 GERALDO JOSE DA SILVEIRA PECAS ME        20.03.1991               0                 15.10.2014                
+  65710394      1   17 DENISE DA S BREDA E BREDA SC LT          22.11.1993               0                 16.01.2014                
+  65805418      1   11 GLAIDER COMERCIO MATERIAIS ESPORTIVOS LT 14.03.1991               0                 02.10.2013                
+  66582313      1    3 ROYAL SAO PAULO EMPREENDIMENTOS LTDA     19.07.1991               0                 17.06.2014                
+  67096966      1   45 FOTO STUDIO TAKADA LTDA                  25.10.1991               0                 17.07.2014                
+  67525873      1   99 COMERCIAL KAWAMOTO LTDA                  05.01.1992               0                 10.06.2014                
+  67638221      1   60 QUEEN'S BRINDES E PRESENTES LTDA ME      07.08.1992               0                 16.07.2014                
+  67859025      1   16 PLANAM FORROS E DIVISORIAS LTDA          10.04.1992               0                 10.03.2014                
+  67902478      1   88 SUITEC ELETRONICA LTDA                   18.10.1982               0                 30.04.2014                
+  68017979      1   44 CONDOMINIO EDIFICIO BRASIL III           07.10.1992               0                 13.10.2014                
+  68487727      1   89 CLINICA GRELL EXAMES MEDICOS S/C LTDA    30.06.2001               0                 30.10.2014                
+  68865021      1    3 MARTINS COM DE PROD ALIM UTIL            08.09.1992               0                 03.11.2014                
+  68881150      1   95 PHOENIX INDUSTRIA E COMERCIO DE TABACOS  06.10.1992               0                 10.03.2014                
+  69088250      1   21 ANIMA PRODUCOES DE VIDEO LTDA            25.11.1992               0                 29.01.2014                
+  69359669      1   70 CONDOMINIO DO EDIFICIO VILLA RICA        18.11.1979               0                 08.08.2014                
+  71304737      1   46 CONSTRUTORA SANTA HELENA E LOCACAO DE MA 02.08.1993               0                 17.10.2014                
+  72415391      1   16 H. BORBA & CIA LTDA                      01.07.1993               0                 01.08.2013                
+  72517857      1   94 GERZANIA SARAIVA DE OLIVEIRAME           13.01.1994               0                 09.12.2013                
+  72844228      1   79 FERNANDO FRASCARI ME                     14.04.2009               0                 15.10.2014                
+  72976574      1    0 RAQUEL LARA DE SOUZA MELLO ME            01.11.1993               0                 05.07.2013                
+  73206898      1   22 BRASILPLAC INDUSTRIA E COMERCIO DE PLACA 13.08.1993               0                 16.07.2014                
+  73430712      1   14 ESTACIONAMENTO ESTACENTER CURITIBA LTDA  02.08.1993               0                 04.08.2014                
+  73515751      1   14 COMERCIO E REPRESENTACOES ANTES LTDA ME  20.08.2002               0                 12.05.2014                
+  74477563      1    1 GERISA INDUSTRIA DE EMBALAGENS LTDA      04.03.1994               0                 30.09.2014                
+  76570084      4    3 ESCOLA SOCIAL MADRE CLELIA               25.06.1969               0                 06.11.2014                
+  76609502      1   86 MORRO DAS PEDRAS PRAIA HOTEL HOTELARIA E 01.04.1983               0                 03.11.2014                
+  76756790      1    0 APARECIDA NEGRI RECCO CALCADOS           03.05.1983               0                 30.06.2014                
+  78192044      1   58 IGREJA PRESBITERIANA RENOVADA            12.01.1990               0                 23.10.2014                
+                                                                                                                                     
+TRANSITO PESSJURI.CARGFICA DESENVOLVIMENTO        10/11/2014        09:16:58                                                         
+                                                                                                                                     
+       CPF FILIAL CTRL NOME                                     DT FUND         BR-RENEG CINDCD-COBR-RENEG HATULZ                    
+---------- ------ ---- ---------------------------------------- ---------- ------------- ----------------- ----------                
+  78213626      1   73 MECANICA SOUZA LTDA                      10.06.1961               0                 26.09.2014                
+  79164984      1    4 MAGNAS CORRETORA DE PREVIDENCIA PRIVADA  01.01.1986               0                 18.04.2013                
+  79305140      1   28 PELLONE INDUSTRIA E COMERCIO LTDA        02.05.1986               0                 18.08.2014                
+  79564423      1   94 PAMPEANA REPRESENTACOES COMERCIAIS LTDA  28.09.1986               0                 25.06.2014                
+  80592702      1   40 ELETROGOIS COM M E H F LTDA              12.05.1988               0                 03.09.2014                
+  81291676      1   83 LUIZ INACIO ME                           30.10.2004               0                 30.10.2014                
+  81826414      1   76 J M LATOARIA LTDA ME                     04.05.1990               0                 30.10.2014                
+  81849168      1   78 VOLPATO E GAIDZINSKI LTDA ME             23.05.1990               0                 03.11.2014                
+  83198994      3   91 TRANS-MANCHA TRANSPORTES LTDA            16.03.2009               0                 29.08.2014                
+  83739185      1   88 MACEDO EMPREENDIMENTOS IMOBILIARIOS LTDA 02.01.1979               0                 12.06.2014                
+  85363000      1    9 PANIFICADORA MACEDA LTDA - ME            06.08.1992               0                 16.07.2014                
+  86742517      1   71 MARIA LUCIA DA SILVA & CIA LTDA ME       21.02.1994               0                 14.07.2014                
+  86905734      1   35 LUMAZ LTDA - ME                          10.03.1994               0                 17.10.2014                
+  90213356      1    4 CHURRASCARIA VITORIA LTDA                15.05.1985               0                 13.10.2014                
+  90213596      1    9 HOTEL SUAREZ SAO LEOPOLDO LTDA           10.01.1980               0                 08.09.2014                
+  92559830      1   71 GREEN CARD S/A REFEICOES COMERCIO E SERV 23.01.1989               0                 03.09.2014                
+  92629807      2   97 MAZBAH REFEICOES LTDA - ME               05.02.2014               0                 17.04.2014                
+  93131241      1   50 FEDERACAO NACIONAL DOS TECNICOS AGRICOLA 01.11.1989               0                 11.07.2014                
+  97173660      1    6 COOPERATIVA AGROPECUARIA DE SAO PEDRO DO 07.08.1984               0                 04.11.2014                
+  97363352      1   43 INST P O DESENV INT CRIAN E ADOLESCENTE  21.12.1994               0                 21.10.2014                
+  97423917      1   30 ALVES E PIVETA LTDA                      18.04.1994               0                 29.10.2014                
+  97525958      1   38 JOSUE JUSTINO DO ROSARIO COSTA-ME        22.06.2011               0                 31.10.2014                
+  97528708      2   32 THAIS GALVAO SOARES                      14.07.2011               0                 07.11.2013                
+  97534139      1   57 FABIANO NASCIMENTO ARAZAO DE JESUS 16626 12.07.2011               0                 23.09.2014                
+  97549861      1   65 ADRIANO SILVEIRA BOELKE & CIA LTDA - ME  15.06.2011               0                 05.08.2014                

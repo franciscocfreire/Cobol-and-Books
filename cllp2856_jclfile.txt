@@ -1,0 +1,39 @@
+//CLLP2856 JOB 'CLLP,4120,PR32','B313030',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MJ.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    SELECIONAR REGISTROS DA CARTEIRA 502 E 590                   
+//* ***    ALTERACAO NO SORT CONFORME RO: 773375                        
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.D0PRVMZ.PRV.BAIX3MES(0),                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.BAIXFBNH(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000020,0004),RLSE),                                
+//       DCB=(MX.A,LRECL=0314,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ INCLUDE COND=(31,3,CH,EQ,C'502',OR,31,3,CH,EQ,C'590')                  
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    TRANSMISSAO DO ARQUIVO PARA O SISTEMA FBNH                   
+//* ***    (RECEPCIONADO PELO JOB FBNH2864)                             
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//SYSUT2   DD DSN=TA.CLLP.FBNH.BAIXFBNH,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(002100,0420),RLSE),                                
+//       DCB=(LRECL=0314,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

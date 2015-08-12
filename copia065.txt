@@ -1,0 +1,21 @@
+
+RDABB008 - MOVIMENTO DE ATUALIZACAO        05/11/2014        15:01:52        - 1 -
+
+       CPF FILIAL CTRL        CLUB NOME CADU                                NOME RDAB
+---------- ------ ---- ----------- ---------------------------------------- ----------------------------------------
+      4365      0   69   574394176 JOAQUIM DE SOUZA COSTA                   JOAQ88722
+     11095      0   70  1628892924 LUSIENE LUZIA DA SILVA                   LUSI90762
+     11726      0   97   264728157 ALEXANDRO LUIZ MACIEL                    ALEX91106
+     18781      0    7   601633792 VALDINEY SILVA RODRIGUES                 VALD93010
+     26897      0   66  1835856028 ELOMAR ANDERSON ORNELAS LOPES            ELOM98232
+     26985      0   95   182204405 TOMAZIA RAMOS DOS SANTOS                 TOMA100993
+     31111      0   13   346401674 SAMUEL NGELO MARTINS                     SAMU101426
+     32238      0   50   229579612 MARLENE APARECIDA BERTAGLIA DE SOUZA     MARL119343  SOUZA
+     34598      0   96   341701491 BENEDITO ZUIM                            BENE119909
+     35405      0   88  1251709190 FRANCISCO MOREIRA DOS SANTOS             FRAN123803
+     35695      0   60   913406422 GILDEVAN SANTOS LOPES                    GILD125115
+     37012      0   63  1812394150 HERMILSON SOUSA                          HERM126441
+     37483      0    8  1367532067 TATIANA FAGUNDES RODRIGUES               TATI131748
+     39528      0   51   550066608 JOSE NADER                               JOSE132928
+     40152      0   82  1802447005 RUY DE ASSIS GOMES                       RUY
+     43823      0   58  1713529138 MARIO SERGIO DA SILVA MACEDO             MARI

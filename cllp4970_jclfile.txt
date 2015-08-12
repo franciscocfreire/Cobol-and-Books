@@ -1,0 +1,99 @@
+//CLLP4970 JOB 'CLLP,4120,PR32','B013444',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN0016,                                           
+//       PARM='NCAT'                                                    
+//*                                                                     
+//* ***    EXTRAI BACKUP E COFRE DO CLLP.                               
+//*                                                                     
+//INTRDR   DD *                                                         
+MX.CTMR.PR32.INTRDR                                                     
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//CARTAO   DD *                                                         
+  BKP 01 MX.BIBGERAL ZAN02FGDEANYLOCAL S073522            C=VTSG        
+1        DSN=MX.CLLP.CADALPCL.CLLP2360                             1000 
+2        DSN=MX.CLLP.B063522.CADALPCL.CLLP2360                          
+1   N    DSN=MX.CLLP.PRV.DATFIMES                                  0005 
+2        DSN=MX.CLLP.B063522.PRV.DATFIMES                               
+1        DSN=MX.CLLP.ARQTRFAL.CLLP2330                             0020 
+2        DSN=MX.CLLP.B063522.ARQTRFAL.CLLP2330                          
+1        DSN=MX.CLLP.CADCART.CLLP2330                              0200 
+2        DSN=MX.CLLP.B063522.CADCART.CLLP2330                           
+1        DSN=MX.CLLP.CADCHEQ.CLLP2330                              0100 
+2        DSN=MX.CLLP.B063522.CADCHEQ.CLLP2330                           
+1        DSN=MX.CLLP.CADOUTRA.CLLP2330                             0200 
+2        DSN=MX.CLLP.B063522.CADOUTRA.CLLP2330                          
+1        DSN=MX.CLLP.CADCART.CLLP5718                              0100 
+2        DSN=MX.CLLP.B063522.CADCART.CLLP5718                           
+1        DSN=MX.CLLP.CARTRSEL.CLLP2340                             0200 
+2        DSN=MX.CLLP.B063522.CARTRSEL.CLLP2340                          
+1        DSN=MX.CLLP.CARTRANS.CLLP2350                             1000 
+2        DSN=MX.CLLP.B063522.CARTRANS.CLLP2350                          
+1        DSN=MX.CLLP.CARTREJE.CLLP2350                             1000 
+2        DSN=MX.CLLP.B063522.CARTREJE.CLLP2350                          
+1        DSN=MX.CLLP.CADCHEQ.CLLP5718                              0050 
+2        DSN=MX.CLLP.B063522.CADCHEQ.CLLP5718                           
+1        DSN=MX.CLLP.CHETRSEL.CLLP2340                             1000 
+2        DSN=MX.CLLP.B063522.CHETRSEL.CLLP2340                          
+1        DSN=MX.CLLP.CHETRANS.CLLP2350                             1000 
+2        DSN=MX.CLLP.B063522.CHETRANS.CLLP2350                          
+1        DSN=MX.CLLP.CADOUTR.CLLP5718                              1000 
+2        DSN=MX.CLLP.B063522.CADOUTR.CLLP5718                           
+1        DSN=MX.CLLP.OUTRSEL.CLLP2340                              0050 
+2        DSN=MX.CLLP.B063522.OUTRSEL.CLLP2340                           
+1        DSN=MX.CLLP.CADGERAL                                      3000 
+2        DSN=MX.CLLP.B063522.CADGERAL                                   
+1        DSN=MX.CLLP.GERTRACP                                      2000 
+2        DSN=MX.CLLP.B063522.GERTRACP                                   
+1        DSN=MX.CLLP.ARQTABCL.CLLP2390                             1800 
+2        DSN=MX.CLLP.B063522.ARQTABCL.CLLP2390                          
+1        DSN=MX.CLLP.ARQTRAN.CLLP2390                              2000 
+2        DSN=MX.CLLP.B063522.ARQTRAN.CLLP2390                           
+1        DSN=MX.CLLP.ARQNTRAN.CLLP2390                             2000 
+2        DSN=MX.CLLP.B063522.ARQNTRAN.CLLP2390                          
+1        DSN=MX.CLLP.ARQAUDI.CLLP2390                              2000 
+2        DSN=MX.CLLP.B063522.ARQAUDI.CLLP2390                           
+1        DSN=MX.CLLP.CADFIMES.CLLP2360                             4400 
+2        DSN=MX.CLLP.B063522.CADFIMES.CLLP2360                          
+1        DSN=MX.CLLP.ARQTABC2.CLLP2390                             2000 
+2        DSN=MX.CLLP.B063522.ARQTABC2.CLLP2390                          
+1        DSN=MX.CLLP.CADALPCL.CLLP2390                             4400 
+2        DSN=MX.CLLP.B063522.CADALPCL.CLLP2390                          
+1        DSN=MX.CLLP.ARQAUDI2.CLLP2390                             0500 
+2        DSN=MX.CLLP.B063522.ARQAUDI2.CLLP2390                          
+1        DSN=MX.CLLP.ARQTRAN2.CLLP2390                             0500 
+2        DSN=MX.CLLP.B063522.ARQTRAN2.CLLP2390                          
+1        DSN=MX.CLLP.ARQNTRA2.CLLP2390                             0500 
+2        DSN=MX.CLLP.B063522.ARQNTRA2.CLLP2390                          
+1        DSN=MX.CLLP.ARQTABCL.CLLP4462                             0500 
+2        DSN=MX.CLLP.B063522.ARQTABCL.CLLP4462                          
+1        DSN=MX.CLLP.ARQTABCL.SEM.CL4462                           0500 
+2        DSN=MX.CLLP.B063522.ARQTABC.SEM.CL4462                         
+1        DSN=MX.CLLP.ARQTABUL.SEM.CL4462                           0500 
+2        DSN=MX.CLLP.B063522.ARQTABU.SEM.CL4462                         
+1        DSN=MX.CLLP.ARQTABCL.CLLP4464                             0500 
+2        DSN=MX.CLLP.B063522.ARQTABCL.CLLP4464                          
+1        DSN=MX.CLLP.ARQTABCL.SEM.CL4464                           0500 
+2        DSN=MX.CLLP.B063522.ARQTABC.SEM.CL4464                         
+1        DSN=MX.CLLP.ARQTABUL.SEM.CL4464                           0500 
+2        DSN=MX.CLLP.B063522.ARQTABU.SEM.CL4464                         
+1        DSN=MX.CLLP.FIT4.CLLP4466                                 0035 
+2        DSN=MX.CLLP.B063522.FIT4.CLLP4466                              
+1        DSN=MX.CLLP.FIT4CLA5.CLLP4466                             0035 
+2        DSN=MX.CLLP.B063522.FIT4CLA5.CLLP4466                          
+1        DSN=MX.CLLP.FIT4LPCL.CLLP4467                             0035 
+2        DSN=MX.CLLP.B063522.FIT4LPCL.CLLP4467                          
+1        DSN=MX.CLLP.ARQTABCL.CLLP4461                             0100 
+2        DSN=MX.CLLP.B063522.ARQTABCL.CLLP4461                          
+1        DSN=MX.CLLP.ARQTABCL.CLLP4456                             0100 
+2        DSN=MX.CLLP.B063522.ARQTABCL.CLLP4456                          
+1        DSN=MX.CLLP.ARQTABCL.SEM.CLLP4456                         0100 
+2        DSN=MX.CLLP.B063522.ARQTABC.SEM.CL4456                         
+1        DSN=MX.CLLP.PRP.CADINAD                                   0100 
+2        DSN=MX.CLLP.B063522.PRP.CADINAD                                
+1        DSN=MX.CLLP.OUTRANS.CLLP2350                              0100 
+2        DSN=MX.CLLP.B063522.OUTRANS.CLLP2350                           
+1        DSN=MX.CLLP.PRV.DATAMOV                                   0100 
+2        DSN=MX.CLLP.B063522.PRV.DATAMOV                                
+//*                                                                     

@@ -1,0 +1,57 @@
+      =====================================================        
+      FAVOR ALTERAR O JOB CLLP5402 NO AMBIENTE AL01, CONFORME INDICA ABAIXO:        
+      =====================================================        
+
+	(1) -  ALTERAR O STEP2:
+
+DE:
+
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    COLOCA 32 BYTES NO FINAL DO AQUIVO PARA EFETUAR LOAD         
+//* ***    POSTERIORMENTE                                               
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.HPU.SYSREC00,                                 
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=AC.CLLP.LPCLB998.BAIXA.OUTREC(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AC.A,LRECL=607,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTREC FIELDS=(1,575,C'01.01.0001  ',X'00000F',X'0000000F',           X
+         X'00000F',X'00000F',X'0F',X'0F',X'000F',X'00000F')             
+ END                                                                    
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+
+
+PARA:
+
+
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    COLOCA 32 BYTES NO FINAL DO AQUIVO PARA EFETUAR LOAD         
+//* ***    POSTERIORMENTE                                               
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.HPU.SYSREC00,                                 
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=AC.CLLP.LPCLB998.BAIXA.OUTREC(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AC.A,LRECL=668,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTREC FIELDS=(1,575,C'01.01.0001  ',X'00000F',X'0000000F',           X
+         X'00000F',X'00000F',X'0F',X'0F',X'000F',X'00000F',             
+         X'000000000C',X'000000000000000C',                             
+         X'000000000000000C',X'000000000000000C',                       
+         X'0000000000000C',X'0000000000000C',                           
+         X'00000000000000000C',X'00000000000000000C')                   
+
+ END                                                                    
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+

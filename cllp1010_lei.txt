@@ -1,0 +1,246 @@
+//CLLP1010 JOB 'CLLP,4120,PR32','C085384',MSGCLASS=Z                    
+//JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    GRAVA O ARQUIVO DE DATAS A SER LIDA NA NET CLLP1600          
+//*                                                                     
+//SYSUT1   DD DSN=AD.BRQ.P144.PRV.DATAMOV(0),                           
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=AD.BRQ.A348.DATAMOV.CLLP1000(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AD.A,LRECL=0060,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=PLAN7220                                            
+//*                                                                     
+//* ***    ZERA ARQUIVO DA ROTINA 'CLLP'                                
+//*                                                                     
+//ZERA001  DD DSN=AD.BRQ.P141.FITASPC2(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,000010),                                            
+//       DCB=(AD.A,LRECL=0250,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP9996                                            
+//*                                                                     
+//* ***    VERIFICA A VIRADA DO MES E RETURNA COM RETURN CODE = 888     
+//*                                                                     
+//ARQDATAS DD DSN=*.STEP1.SYSUT2,                                       
+//       DISP=SHR                                                       
+//ARQDTANT DD DSN=AD.BRQ.P141.S073577.DATAMOV.CLLP1000,                 
+//       DISP=SHR                                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    GRAVA O ARQUIVO DE INCONSISTENCIA DO MES ANTERIOR            
+//*                                                                     
+//SYSUT1   DD DSN=AD.BRQ.P144.PRV.INAVADEV.CLLP1000(0),                 
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=AD.BRQ.A348.PRV.DEVAVANT.CLLP1000(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001420,0284),RLSE),                                
+//       DCB=(AD.A,LRECL=0316,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC PGM=PLAN7220                                            
+//*                                                                     
+//* ***    ZERA ARQUIVO DE INCONSISTENCIA                               
+//*                                                                     
+//ZERA001  DD DSN=AD.BRQ.P141.PRV.INAVADEV.CLLP1000(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,001870),                                            
+//       DCB=(AD.A,LRECL=0316,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.CDSERASA.DEV.SA                                
+//*                                                                     
+//ENT00001 DD DSN=AD.BRQ.P144.S073577.CDSERASA.DEV.SA(0),               
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.DEV.SA(+1),                      
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.CDSERASA.AVAL.SA                               
+//*                                                                     
+//ENT00001 DD DSN=AD.BRQ.P144.S07357.CDSERASA.AVAL.SA(0),               
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.AVAL.SA(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(002230,0446),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.N040394.CDSEAVAL                               
+//* ***    BASE DIA ANTERIOR                                            
+//*                                                                     
+//ENT00001 DD DSN=AD.BRQ.P144.S07357.N040394.CDSEAVAL(0),               
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.N.CDSERASA.AVAL.SA(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(008980,1796),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP9    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S008016.CDSERASA.DEV.SA.B204                           
+//*                                                                     
+//ENT00001 DD DSN=AD.BRQ.P144.S008.CDSERASA.DEV.SA.B2(0),               
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.DEV.SA.B204(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(008980,1796),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP10   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S008016.CDSERASA.AVAL.SA.B204                          
+//*                                                                     
+//*ENT00001 DD DSN=AD.BRQ.P144.S008016.CDSERASA.AVAL.SA.B(0),           
+//ENT00001 DD DSN=AD.BRQ.P144.S008.CDSERASA.DEV.SA.B2(0),               
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.AVAL.SA.B204(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP11   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.J1015S00.CONTRMIG.NEGT.CL                      
+//*                                                                     
+//ENT00001 DD DSN=AD.BRQ.P141.S073577.J1015S0.CTRMIG.NEG,               
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CONTRMIG.NEGATI.ANT(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//                                                                      
+//*                                                                     
+//STEP12   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.PRV.CDSERASA.MDEV.SA                           
+//*                                                                     
+//*ENT00001 DD DSN=AD.BRQ.P141.S073577.PRV.CDSERA.MDEV.SA(0),           
+//ENT00001 DD DUMMY,                                                    
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.MDEV.SA.ANT(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP13   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.PRV.CDSERASA.MAVAL.SA                          
+//*                                                                     
+//*ENT00001 DD DSN=AD.BRQ.P141.S073577.PRV.CDSER.MAVAL.SA(0),           
+//ENT00001 DD DUMMY,                                                    
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.MAVAL.SA.ANT(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP14   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.PRV.CDSERASA.MDEV.SA.B204                      
+//*                                                                     
+//*ENT00001 DD DSN=AD.BRQ.P141.S073577.CDSERA.MDV.SA.B204(0),           
+//ENT00001 DD DUMMY,                                                    
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.MDEV.B204.ANT(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP15   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA S073577.PRV.CDSERASA.MAVAL.SA.B204                     
+//*                                                                     
+//*ENT00001 DD DSN=AD.BRQ.P141.S073577.CDSER.MAVA.SA.B204(0),           
+//ENT00001 DD DUMMY,                                                    
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.CDSERASA.MAVAL.204.ANT(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=*                                                  
+//*                                                                     
+//                                                                      
+//*SOLTA    EXEC AV,                                                    
+//*       J=CLLP1030,                                                   
+//*       DS=AD.BRQ.CLLP1000.EXEC                                       
+//*                                                                     

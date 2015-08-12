@@ -1,0 +1,193 @@
+
+CLLPG121                                          BANCO BRADESCO S.A
+11/11/2014                 RELACAO DAS CARTAS DE COBRANCA EMITIDAS PARA AVALISTAS  - CORRENTISTA
+                                                  IGUAL A   16 DIAS
+ AG   CONTA      CPF/CNPJ       N O M E   D O   A V A L I S T A      CAR   TIPO  VENCIMENTO      VALOR    NATUREZA
+===== ======= ================= ==================================== === ======= ========== ============= =======================
+00661 0043963 000024142/0000-36 JULIO CEZAR CHAVES                   842 CORREIO 15/10/2014      40536,48 TD TITULOS DESCONTADOS
+                                TOTAL DO AVALISTA                                                40536,48
+03045 0077110 000852565/0000-01 JOLVINO DE MELO ALVES                331 CORREIO 15/10/2014       7691,10 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 7691,10
+00002 0157289 001964718/0000-26 CELSO RODRIGUES GARCIA               351 CORREIO 15/10/2014       4168,23 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 4168,23
+00522 0076497 003386211/0000-72 NERLI DE FARIA ALBERNAZ              351 CORREIO 15/10/2014      17977,92 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                17977,92
+00427 0068640 003779942/0000-86 SAUL SOUZA MARANHA                   809 CORREIO 15/10/2014       2442,00 TD TITULOS DESCONTADOS
+                                TOTAL DO AVALISTA                                                 2442,00
+00456 0002330 005195453/0000-20 GLAIDSTON GONCALVES DE LUCENA        621 CORREIO 15/10/2014         24,54 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                   24,54
+01301 0006748 008752055/0000-93 LUCIANO SANTIAGO SANTOS              351 CORREIO 15/10/2014       5001,51 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 5001,51
+00195 0081062 015887619/0000-91 ABRELINO DALLA ROSA                  761 CORREIO 15/10/2014     173333,52 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                               173333,52
+01301 0006748 027366105/0000-12 TIAGO FERREIRA DE ALENCAR            351 CORREIO 15/10/2014       5001,51 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 5001,51
+00456 0055585 031868103/0000-02 CICERO RONIELY PEREIRA               379 CORREIO 15/10/2014       4610,46 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 4610,46
+00095 0277488 033895408/0000-22 FLAVIO DA SILVA                      385 CORREIO 15/10/2014         33,57 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                   33,57
+01986 0052910 035618398/0000-00 WALDEMIR VIEIRA PIMENTEL             385 CORREIO 15/10/2014       5406,51 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 5406,51
+01940 0541010 035699586/0000-04 EDSON PIRES DO COUTO                 621 CORREIO 15/10/2014          6,66 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                    6,66
+00923 0022082 037223479/0000-80 ALEXANDRE BASTIANI DOS SANTOS        842 CORREIO 15/10/2014        525,00 TD TITULOS DESCONTADOS
+                                TOTAL DO AVALISTA                                                  525,00
+01469 0017760 041383611/0000-89 JAIME DE MELO REIS                   351 CORREIO 15/10/2014       9965,70 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 9965,70
+00127 0256895 041752128/0000-68 OTACILIO SOARES BARBOSA              351 CORREIO 15/10/2014        850,86 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  850,86
+00195 0165410 044790358/0000-69 GILBERTO PEREIRA DE BARROS           351 CORREIO 15/10/2014       2281,68 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2281,68
+00046 0003385 055806878/0000-26 JOSE WALTER FRATONI                  331 CORREIO 15/10/2014       6490,53 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 6490,53
+00046 0564150 055806878/0000-26 JOSE WALTER FRATONI                  331 CORREIO 15/10/2014      21684,90 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                21684,90
+00046 0564151 055806878/0000-26 JOSE WALTER FRATONI                  331 CORREIO 15/10/2014         74,37 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                   74,37
+00046 0569096 055806878/0000-26 JOSE WALTER FRATONI                  331 CORREIO 15/10/2014        383,16 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  383,16
+00046 0608236 061880008/0000-58 JOSE AUGUSTO FINARDI                 351 CORREIO 15/10/2014      17969,88 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                17969,88
+00002 0157289 065022548/0000-10 JOAO VICENTE FERREIRA FILHO          351 CORREIO 15/10/2014       4168,23 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 4168,23
+00095 0262531 071831248/0000-19 ANDERSON H G MONTECINOS              385 CORREIO 15/10/2014       6224,01 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 6224,01
+00522 0074452 074356437/0000-50 ALEX NASCIMENTO DOS SANTOS           351 CORREIO 15/10/2014        640,17 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  640,17
+00046 0448742 079676338/0000-06 LAERTE PASCHOAL JUNIOR               351 CORREIO 15/10/2014       5471,52 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 5471,52
+00195 0174349 085066778/0000-07 ROSANA BEATRIZ VIEIRA                117 CORREIO 15/10/2014       2915,70 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2915,70
+
+CLLPG121                                          BANCO BRADESCO S.A
+11/11/2014                 RELACAO DAS CARTAS DE COBRANCA EMITIDAS PARA AVALISTAS  - CORRENTISTA
+                                                  IGUAL A   16 DIAS
+ AG   CONTA      CPF/CNPJ       N O M E   D O   A V A L I S T A      CAR   TIPO  VENCIMENTO      VALOR    NATUREZA
+===== ======= ================= ==================================== === ======= ========== ============= =======================
+05264 0500014 103871453/0000-20 MARIA ALICE SILVA BRITO              444 CORREIO 15/10/2014       1159,77 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 1159,77
+01652 0017415 106887815/0000-00 VALDECI LOPES DE ANDRADE             351 CORREIO 15/10/2014       4665,66 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 4665,66
+00215 0211546 109957768/0000-30 PAULO CESAR SIMAO                    351 CORREIO 15/10/2014       2276,25 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2276,25
+00427 0061745 116066733/0000-00 FRANCISCO SIQUEIRA DE MORAES         842 CORREIO 15/10/2014       2040,24 TD TITULOS DESCONTADOS
+                                TOTAL DO AVALISTA                                                 2040,24
+00046 0605335 120347888/0000-77 ROSANA CELIA SCARANI MONEZZI         351 CORREIO 15/10/2014       9225,03 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 9225,03
+00215 0162027 123580868/0000-86 CLAUDIA REGINA DA SILVA RABELO       444 CORREIO 15/10/2014       1622,46 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 1622,46
+00127 0590569 146627618/0000-59 ANTONIO MARCOS PEREIRA MENDES        621 CORREIO 15/10/2014       7096,20 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 7096,20
+00127 0590569 148201588/0000-99 NEIDE OLIVEIRA GOMES                 621 CORREIO 15/10/2014       7096,20 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 7096,20
+01652 0024552 167531098/0000-03 GILMARQUES FERREIRA BRITO            761 CORREIO 15/10/2014      16786,20 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                16786,20
+00269 0211927 175371260/0000-20 PEDRO ALCEU BARP                     530 CORREIO 15/10/2014       4791,93 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 4791,93
+00215 0212681 204514128/0000-42 Sueli Danezia Osteti                 530 CORREIO 15/10/2014        619,95 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  619,95
+00002 0157291 255060708/0000-29 RAFAEL BARION CASTRO DE PADUA        351 CORREIO 15/10/2014      80038,74 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                80038,74
+00661 0034782 270178182/0000-53 VALTER COIMBRA DE ARAUJO             050 CORREIO 15/10/2014        711,00 AG EMPR. AGRIC. E IND.
+                                TOTAL DO AVALISTA                                                  711,00
+01294 0046835 272255772/0000-04 ELINEIDE MARIA DE FIGUEIREDO         351 CORREIO 15/10/2014      53912,91 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                53912,91
+01382 0159955 279029436/0000-49 ELMO TORQUETTE JUNIOR                351 CORREIO 15/10/2014      40840,95 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                40840,95
+01652 0045419 283870235/0000-15 TADEU DE OLIVEIRA                    351 CORREIO 15/10/2014       2275,59 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2275,59
+00163 0017502 284022678/0000-23 PAULO S AMORIN                       351 CORREIO 15/10/2014      15144,84 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                15144,84
+00215 0206472 292601888/0000-65 MARCELO FAE SARRI                    351 CORREIO 15/10/2014       3928,56 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 3928,56
+00483 0023285 296837898/0000-89 JONATAN DE PAULA ALVES               385 CORREIO 15/10/2014       1845,15 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 1845,15
+01986 0052910 305753218/0000-73 CINTIA MOREIRA PIMENTEL              385 CORREIO 15/10/2014       5406,51 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 5406,51
+00269 0222446 312374520/0000-15 MARTINS BORGES FERREIRA              385 CORREIO 15/10/2014        185,94 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  185,94
+00522 0545150 323415392/0000-20 MARIA DO DESTERRO PALHARES AZEVEDO   761 CORREIO 15/10/2014       2184,66 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2184,66
+00457 0528180 325598362/0000-20 PEDRO PAULO SODRE                    621 CORREIO 15/10/2014       2850,03 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2850,03
+00427 0094501 328376159/0000-00 VILMAR VEIBER                        842 CORREIO 15/10/2014       6570,00 TD TITULOS DESCONTADOS
+                                                                     351         19/10/2014       4431,87 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                11001,87
+00215 0205580 347928298/0000-95 ROSELANE ROCHA TOFANELLI DE LACERDA  351 CORREIO 15/10/2014         52,62 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                   52,62
+00522 0065134 382344912/0000-53 ANTONIO MELO COSTA                   385 CORREIO 15/10/2014       2978,22 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2978,22
+
+CLLPG121                                          BANCO BRADESCO S.A
+11/11/2014                 RELACAO DAS CARTAS DE COBRANCA EMITIDAS PARA AVALISTAS  - CORRENTISTA
+                                                  IGUAL A   16 DIAS
+ AG   CONTA      CPF/CNPJ       N O M E   D O   A V A L I S T A      CAR   TIPO  VENCIMENTO      VALOR    NATUREZA
+===== ======= ================= ==================================== === ======= ========== ============= =======================
+00522 0545150 383805282/0000-04 GERALDO SOARES AZEVEDO               761 CORREIO 15/10/2014       2184,66 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2184,66
+00046 0006233 386169838/0000-21 GISLAINE BENITEZ CAMILO              351 CORREIO 15/10/2014       3337,26 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 3337,26
+00483 0000291 408401742/0000-68 RAQUEL VALERIA VICTORIANO DE CARVALH 621 CORREIO 15/10/2014      11381,10 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                11381,10
+00269 0211927 449578230/0000-49 FATIMA BARP                          530 CORREIO 15/10/2014       4791,93 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 4791,93
+01986 0057325 468093840/0000-49 VILMAR NATAL COLOMBO                 455 CORREIO 15/10/2014        410,85 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  410,85
+01245 0021404 507804841/0000-34 ADAO RODRIGUES PIMHEIRO              530 CORREIO 15/10/2014       2842,74 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2842,74
+01294 0069815 515137492/0000-34 LUIS MIGUEL ABAD TOVAR               331 CORREIO 15/10/2014       1925,37 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 1925,37
+01652 0024552 547524345/0000-04 NAGIL GOMES MEDEIROS                 761 CORREIO 15/10/2014      16786,20 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                16786,20
+01652 0017415 603311435/0000-34 MIRELLA COSTA BONFIM DE ANDRADE      351 CORREIO 15/10/2014       4665,66 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 4665,66
+01652 0030388 688543317/0000-91 ADELSO FERRARI                       351 CORREIO 15/10/2014       6421,83 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 6421,83
+01294 0046835 691701856/0000-20 LUIZ ANTONIO VASCONCELOS FILHO       351 CORREIO 15/10/2014      15254,64 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                15254,64
+01994 0021778 699204196/0000-72 MARLI DE LURDES PINTO                842 CORREIO 15/10/2014        811,74 TD TITULOS DESCONTADOS
+                                TOTAL DO AVALISTA                                                  811,74
+00002 0116989 707176808/0000-00 OSVALDO RODRIGUES DE SOUZA           351 CORREIO 15/10/2014        702,90 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  702,90
+01553 0011886 710370049/0000-49 GABRIEL DA SILVA BUENO               050 CORREIO 15/10/2014        103,50 AG EMPR. AGRIC. E IND.
+                                TOTAL DO AVALISTA                                                  103,50
+01294 0057246 714975522/0000-49 EMERSON THIAGO FERREIRA DA SILVA     331 CORREIO 15/10/2014         70,05 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                   70,05
+01294 0057246 746425882/0000-72 NELSON SATOSHI KURODA                331 CORREIO 15/10/2014         70,05 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                   70,05
+00661 0034782 750277472/0000-68 EDILENE MARIA GOMES ARAUJO           050 CORREIO 15/10/2014        711,00 AG EMPR. AGRIC. E IND.
+                                TOTAL DO AVALISTA                                                  711,00
+00457 0528180 788542962/0000-87 LUZIVANE BRITO LABORDA               621 CORREIO 15/10/2014       2850,03 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2850,03
+00002 0157291 798966938/0000-20 TELMA M B C DE PADUA                 351 CORREIO 15/10/2014      80038,74 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                80038,74
+00195 0000565 830988958/0000-53 JOSE CARLOS DE CARVALHO              351 CORREIO 15/10/2014        618,45 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  618,45
+00127 0102737 871566528/0000-34 EDUARDO BEZERRA DE MELO              331 CORREIO 15/10/2014       3769,89 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 3769,89
+01231 0059530 878886108/0000-20 ADALBERTO GONCALVES DE BRITO         469 CORREIO 15/10/2014       1029,78 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 1029,78
+05264 0000660 883203323/0000-20 ALESSANDRA VIEIRA DOS SANTOS         351 CORREIO 15/10/2014       3592,77 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 3592,77
+01245 0021404 891309101/0000-10 MARCOS DA COSTA TOME                 530 CORREIO 15/10/2014       2842,74 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2842,74
+00457 0058998 919247582/0000-53 VINICIUS MILITAO BECKHAUSER          385 CORREIO 15/10/2014        438,39 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  438,39
+00427 0069754 926383762/0000-72 HALINE TONELLO AMARAL                842 CORREIO 15/10/2014       1581,84 TD TITULOS DESCONTADOS
+                                TOTAL DO AVALISTA                                                 1581,84
+00269 0250045 969153150/0000-04 MARCIANO HOSZCZARUK                  331 CORREIO 15/10/2014       6351,18 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 6351,18
+
+CLLPG121                                          BANCO BRADESCO S.A
+11/11/2014                 RELACAO DAS CARTAS DE COBRANCA EMITIDAS PARA AVALISTAS  - CORRENTISTA
+                                                  IGUAL A   16 DIAS
+ AG   CONTA      CPF/CNPJ       N O M E   D O   A V A L I S T A      CAR   TIPO  VENCIMENTO      VALOR    NATUREZA
+===== ======= ================= ==================================== === ======= ========== ============= =======================
+01382 0159955 970904176/0000-20 KATIA RESENDE RIBEIRO                351 CORREIO 15/10/2014      40840,95 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                40840,95
+01652 0045419 975307005/0000-53 ELIENE CALDEIRA SANTOS DE OLIVEIRA   351 CORREIO 15/10/2014       2275,59 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                 2275,59
+00457 0058998 985711252/0000-87 LARIESSA CELLA DE CASTRO             385 CORREIO 15/10/2014        438,39 FI CREDITOS E FINANC.
+                                TOTAL DO AVALISTA                                                  438,39
+                TOTAL         :           83   CARTAS                                           845757,42
+                TOTAL  GERAL  :           83   CARTAS                                           845757,42

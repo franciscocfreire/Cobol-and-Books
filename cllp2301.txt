@@ -1,0 +1,57 @@
+//CLLP2301 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z                   
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP0    EXEC PGM=CLLP0138                                            
+//*                                                                     
+//* ***    FORCA CRIACAO DOS CAMPOS DA LT                               
+//*                                                                     
+//ARQENT01 DD DSN=MX.APMO.S042233.CADALPCL(0),                          
+//       DISP=SHR                                                       
+//ARQEXP01 DD DSN=MX.CLLP.APMO.CADALPCL(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(020000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1    EXEC PGM=CLLP7008                                            
+//*                                                                     
+//* ***    SEPARA CADASTRO DE CLLP:                                     
+//* ***    CADALPCL - CADASTRO DE CLLP GERAL                            
+//* ***    CADATIVO - CAD. CLLP SOMENTE PENDENCIAS ATIVAS -COMPRIMIDO   
+//* ***    FITAPEND - CAD. CLLP SOMENTE PENDENCIAS ATIVAS -DESCOMPRIMIDO
+//*                                                                     
+//CADALPCL DD DSN=MX.CLLP.S074711.CADALPCL.LEI(0),                      
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP0.ARQEXP01,                                     
+//       DISP=OLD                                                       
+//CADATIVO DD DSN=MX.CLLP.CADATIVO.CLLP2301.LEI(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//FITAPEND DD DUMMY,                                                    
+//       DCB=(BLKSIZE=32400,LRECL=0600,RECFM=FB)                        
+//ARQBAIXA DD DUMMY,                                                    
+//       DCB=(BLKSIZE=32400,LRECL=0600,RECFM=FB)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP0139                                            
+//*                                                                     
+//* ***    RETIRAR CAMPOS DA LT                                         
+//*                                                                     
+//ARQENT01 DD DSN=*.STEP1.CADATIVO,                                     
+//       DISP=SHR                                                       
+//ARQEXP01 DD DSN=MX.CLLP.CADATIVO.CLLP2301(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(020000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

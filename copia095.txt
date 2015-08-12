@@ -1,0 +1,2356 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E
+
+15.03.28 JOB25032 ---- TUESDAY,   28 JUL 2015 ----
+15.03.28 JOB25032  IRR010I  USERID CHGMAN   IS ASSIGNED TO THIS JOB.
+15.03.29 JOB25032  $EXIT006A  Job M67765   Jobid(JOB25032) alterado para CLASS=O
+15.03.29 JOB25032  $EXIT006A  Job M67765   Jobid(JOB25032) SCHENV=CHGMAN
+15.05.06 JOB25032  $HASP373 M67765   STARTED - INIT 116  - CLASS O        - SYS
+15.05.06 JOB25032  IEF403I M67765 - STARTED - TIME=15.05.06
+15.05.08 JOB25032  -                                                --TIMINGS (M
+15.05.08 JOB25032  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+15.05.08 JOB25032  -M67765   SORTREST             00     56     25    .00    .00
+15.05.09 JOB25032  -M67765   SORTPROM             00     24      6    .00    .00
+15.05.10 JOB25032  -M67765   GRP7INPT             00     24     19    .00    .00
+15.05.12 JOB25032  -M67765   CHCKPROM             00     27      5    .00    .00
+15.05.12 JOB25032  -M67765   MESSSAGE          FLUSH      0      0    .00    .00
+15.05.12 JOB25032  -M67765   RPMFAIL           FLUSH      0      0    .00    .00
+15.05.12 JOB25032  -M67765   CLNLCL            FLUSH      0      0    .00    .00
+15.05.12 JOB25032  -M67765   APTOPROM             00     29      9    .00    .00
+15.05.14 JOB25032  -M67765   HEXAPROM             00    104     59    .00    .00
+15.05.15 JOB25032  -M67765   HEXAINPT             00     27     10    .00    .00
+15.05.15 JOB25032  -M67765   SORT     SORT        00     32     10    .00    .00
+15.05.17 JOB25032  -M67765   HEXAP800 HEXAPROI    00     10      1    .00    .00
+15.05.18 JOB25032  -M67765   HEXAP800 HEXAPRMT    00     34     22    .00    .00
+15.05.22 JOB25032  -M67765   HEXAP800 HEXAPUBL    00     33     27    .00    .00
+15.05.24 JOB25032  -M67765   HEXAP800 HEXATXA     00     24     16    .00    .00
+15.05.30 JOB25032  -M67765   HEXAP800 HEXAAL2E    11     40     23    .00    .00
+15.05.30 JOB25032   ATENCAO  ***************************************************
+15.05.30 JOB25032   ATENCAO  ** PROMOTE com situacao de inconsistencia        **
+15.05.30 JOB25032   ATENCAO  ** Verifique as mensagens das SYSOUTs HEXAP800   **
+15.05.30 JOB25032   ATENCAO  ** Duvidas, Contate Grupo 93-Gestao Ferramentas  **
+15.05.30 JOB25032   ATENCAO  **          Atendimento Hexavison                **
+15.05.30 JOB25032   ATENCAO  ***************************************************
+15.05.30 JOB25032  -M67765   MESSSAGE             00      4      0    .00    .00
+15.05.31 JOB25032  -M67765   NOTIFY               00     28      7    .00    .00
+15.05.33 JOB25032  -M67765   RPMFAIL              00     15      4    .00    .00
+15.05.35 JOB25032  -M67765   CLNLCL               00     15      5    .00    .00
+15.05.35 JOB25032  -M67765   DELETE01          FLUSH      0      0    .00    .00
+15.05.35 JOB25032  -M67765   DEVJRPM           FLUSH      0      0    .00    .00
+15.05.35 JOB25032  -M67765   DELETE02          FLUSH      0      0    .00    .00
+15.05.35 JOB25032  -M67765   RPMINIT           FLUSH      0      0    .00    .00
+15.05.35 JOB25032  IEF404I M67765 - ENDED - TIME=15.05.35
+15.05.35 JOB25032  -M67765   ENDED.  NAME-                     TOTAL TCB CPU TIM
+15.05.35 JOB25032  $HASP395 M67765   ENDED
+------ JES2 JOB STATISTICS ------
+  28 JUL 2015 JOB EXECUTION DATE
+        1,578 CARDS READ
+        2,318 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+          146 SYSOUT SPOOL KBYTES
+         0.49 MINUTES EXECUTION TIME
+
+        1 //M67765 JOB 'SCSB,0000,BN,SCSB0000',REGION=32M,
+          //*)IM BRASITES - INI
+          //*)IM BRASITES - END
+          // MSGCLASS=Z,CLASS=C
+          //*MAIN CLASS=CHMBATCH
+          //*
+          //*)IM CMCSST01 - INI
+          //*   ----- Stefanini --------\/
+          //*   USER    =(M67765)
+          //*   STGDVTEL=()
+          //*   P#STAGE =()
+          //*   TELTIPO =()
+          //*   TELNAME1=()
+          //*   RACFGRP =()
+          //*   XPAFPRT =()
+          //*   XCLASS  =()
+          //*   ----- Stefanini --------/\
+          //*)IM CMCSST01 - END
+          //*)IM CMN$$JCD - INI (DEVERIA ESTAR ANTES DO CARTAO JOB ACIMA)
+          //*
+          //* THE ABOVE JOB CARDS CAME FROM THE IMBED OF SKEL CMN$$JCD
+          //*  JOB REQUESTED BY M67765 ON 2015/07/28 AT 15:03
+          //*  VARIAVEIS PARA O HEXAVISION:
+          //*  CMN$$AUD   STAGE   =()
+          //*  CMNAUDIT   FUNCAUDI=()
+          //*  VARLIST    SOURCE  =()
+          //*             PROC    =()  SUBSYS=(C)
+          //*             CMPSITE =(AL4B)
+          //*             PROMACT =(P)
+          //*             STGDVTEL=()
+        2 //JOBLIB    DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.LOAD.CUST
+        3 //          DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.LOAD
+        4 //          DD DISP=SHR,DSN=SYS1.CEE.SCEERUN
+        5 //          DD DISP=SHR,DSN=DB2A2.R2.DSNLOAD
+          //*)IM CMN$$JBL - START
+          //*)IM CMN$$JBL - END
+          //*)IM CMN$$JCD - END
+          //*)IM CMN$$RPM - INI
+          //*)IM STF$$PRQ - INI
+          //*  PROMOTE PACKAGE SCSB000028 TO MZ104MX LVL 5 AT AL4B
+          //*-------------------------------------------------------------------
+          //* Seleciona autorizacao centro custo / pacote / componente
+          //*-------------------------------------------------------------------
+        6 //SORTREST EXEC PGM=SORT
+        7 //SYSOUT   DD SYSOUT=*
+        8 //SORTIN   DD DISP=SHR,DSN=AV.CHGM.PRV.AUTHPROM.ROTINAS
+        9 //SORTOUT  DD DISP=(,PASS,DELETE),DSN=&&ROTINAS,
+          //            UNIT=SYSDA,SPACE=(TRK,(1,1),RLSE),
+          //            DCB=(RECFM=FB,LRECL=80,BLKSIZE=0)
+       10 //SORTWK01 DD UNIT=SYSDA,SPACE=(CYL,(1,1))
+       11 //SORTWK02 DD UNIT=SYSDA,SPACE=(CYL,(1,1))
+       12 //SORTWK03 DD UNIT=SYSDA,SPACE=(CYL,(1,1))
+       13 //SYSIN    DD *
+          //*-------------------------------------------------------------------
+          //* Gera sysin de promote para pgm ativ7000
+
+          //*-------------------------------------------------------------------
+       14 //SORTPROM EXEC PGM=SORT,COND=(0,NE)
+       15 //SYSOUT   DD SYSOUT=*
+       16 //SORTOUT  DD DISP=(,PASS,DELETE),DSN=&&SORTPROM,
+          //            UNIT=SYSDA,SPACE=(TRK,(1,1),RLSE),
+          //            DCB=(RECFM=FB,LRECL=80,BLKSIZE=0)
+       17 //SORTIN   DD *
+       18 //SYSIN    DD *
+          //*
+       19 //GRP7INPT EXEC PGM=IEBGENER,     ***   Lista o que vai p/ GRP 7
+          //         COND=(0,NE)
+       20 //SYSPRINT DD SYSOUT=*
+       21 //SYSIN    DD DUMMY
+       22 //SYSUT1   DD DISP=(OLD,PASS),DSN=&&SORTPROM
+       23 //SYSUT2   DD SYSOUT=*
+          //*
+          //*-------------------------------------------------------------------
+          //*  Verifica se esta autorizado a promover pacote / componente
+          //*-------------------------------------------------------------------
+       24 //CHCKPROM EXEC PGM=BRAPROMO,COND=(0,NE),PARM='SCSB000028 AL4B'
+       25 //ROTINAS  DD DISP=(OLD,PASS,DELETE),DSN=&&ROTINAS
+       26 //PROMOTE  DD DISP=(OLD,PASS,DELETE),DSN=&&SORTPROM
+       27 //PROGTI   DD DISP=SHR,DSN=AD.CHGM.AUTHPROM.PGMBLOQ
+       28 //SYSOUT   DD SYSOUT=*
+          //*
+       29 //   IF (CHCKPROM.RC NE 0) THEN
+       30 //MESSSAGE EXEC PGM=PGMWTOL
+       31 //SYSIN    DD *
+          //*
+          //*)IM CMNRPMB9
+       32 //RPMFAIL EXEC PGM=CMNBATCH,   *** ACCESS CHANGE MAN STARTED TASK
+          //             PARM='SUBSYS=C,USER=M67765'
+          //*)IM CMN$$SPR - INI
+       33 //SER#PARM  DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.TCPIPORT
+          //*)IM CMN$$SPR - FIM
+       34 //SERPRINT DD SYSOUT=*
+       35 //SYSPRINT DD SYSOUT=*
+       36 //CMNDELAY DD DISP=SHR,DSN=AV.CHGM.VON.CMNDELAY
+       37 //ABNLIGNR DD DUMMY
+       38 //SYSUDUMP DD SYSOUT=*
+       39 //SYSIN    DD *
+          //*)IM CMNRPMDL - INI
+          //*
+          //*  PROMOTION CLEANUP AT DEVELOPMENT SITE
+          //*
+       40 //CLNLCL    EXEC PGM=IDCAMS
+       41 //SYSPRINT  DD SYSOUT=*
+       42 //SYSIN     DD *
+          //*
+          //*)IM CMNRPMDL - END
+       43 //   ENDIF
+          //*
+       44 //  IF (CHCKPROM.RC EQ 0) THEN
+          //*)IM STF$$RPM - INI
+          //*)IM CMCSPR06 - START
+
+          //* PROMOTE PACKAGE SCSB000028 TO MZ104MX LVL 5 AT AL4B SITE
+       45 //APTOPROM EXEC PGM=IEBGENER   *** CHECK COMPONENTES APTOS PROMOCAO
+       46 //SYSPRINT DD SYSOUT=*
+       47 //SYSIN    DD DUMMY
+       48 //SYSUT2   DD DISP=(,PASS),DSN=&&PROMOTE1,
+          //         UNIT=SYSDA,SPACE=(TRK,(5,5),RLSE),
+          //         DCB=(RECFM=FB,LRECL=80,BLKSIZE=0)
+       49 //SYSUT1   DD *
+          //*
+       50 //HEXAPROM EXEC PGM=IKJEFT1B       *** Informar Recomp ao Hexa
+       51 //SYSEXEC  DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.REX.CUST
+       52 //XMLMOD   DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.CNTL.BSL.CUST(XMLPROMO)
+       53 //SER#PARM DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.TCPIPORT
+       54 //SYSTCPD  DD DISP=SHR,DSN=TPA2.PRD.TCPCS28.TCPIP.DATA(TCPDATA)
+       55 //XMLIN    DD DISP=(,PASS),DSN=&XMLIN,
+          //         UNIT=SYSDA,LRECL=255,RECFM=VB,SPACE=(TRK,(2,2),RLSE)
+       56 //XMLOUT   DD DISP=(,PASS),DSN=&XMLOUT,
+          //         UNIT=SYSDA,LRECL=255,RECFM=VB,SPACE=(TRK,(5,5),RLSE)
+       57 //PROMOTE1 DD DISP=(OLD,PASS),DSN=&&PROMOTE1
+       58 //SYSTSPRT DD SYSOUT=*
+       59 //SYSTSIN  DD *
+          //*
+       60 //HEXAINPT EXEC PGM=IEBGENER,     ***   Lista o que vai p/ HEXAVISON
+          //         COND=(0,NE)
+       61 //SYSPRINT DD SYSOUT=*
+       62 //SYSIN    DD DUMMY
+       63 //SYSUT1   DD DISP=(OLD,PASS),DSN=&&PROMOTE1
+       64 //SYSUT2   DD SYSOUT=*
+          //*
+          //*)IM CMCSPR06 - END
+       65 //HEXAP800 EXEC HEXAP800,         ***  PROC HEXAVISON
+          //         COND=(0,NE)
+       66 XXHEXAP800 PROC FILA1=HEXA.QR.REQ.HOSTOPEN.07,
+          XX         FILA3=HEXA.QR.RSP.HOSTOPEN.39,
+          XX         FILA4=HEXA.QR.REQ.HOSTOPEN.08
+          XX*
+          XX*-------------------------------------------------------------------
+          XX*                           ARQUIVO PROMOTE
+          XX*-------------------------------------------------------------------
+          XX*
+          XX* ***    ORDENACAO DO ARQUIVO PROMOTE
+          XX*
+       67 XXSORT     EXEC SORTD,
+          XX         PARM='DYNALLOC=(DISCO,16)'
+       68 XXSORTD    PROC
+       69 XXSORT     EXEC  PGM=ICEMAN,REGION=0M
+       70 XXSYSOUT   DD  SYSOUT=*
+          XX*
+       71 XXSORTIN   DD DSN=&PROMOTE1,DISP=(OLD,PASS)
+       72 XXSORTOUT  DD DSN=&ARQPRMT,
+          XX        DISP=(NEW,PASS),
+          XX        UNIT=(DISCO),
+          XX        SPACE=(TRK,(003450,0690),RLSE),
+          XX        DCB=(LRECL=080,RECFM=FB)
+       73 XXSYSIN    DD DSN=AV.HEXA.PRV.SYSIN(HEXAS800),DISP=SHR
+
+          XX*
+          XX*-------------------------------------------------------------------
+          XX* IMPEDE PROMOCAO DE PROGRAMAS: INTEGRACAO HEXAVISION X CHANGEMAN
+          XX*-------------------------------------------------------------------
+          XX*
+          XX* ***    BLOQUEIO DE PROGRAMAS HEXA
+          XX*
+       74 XXHEXAPROI EXEC PGM=HEXA4620
+          XX*
+       75 XXSTEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+       76 XX         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+       77 XX         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          XX*
+       78 XXHVSFONTS DD DSN=&ARQPRMT,DISP=(OLD,PASS)
+          XX*
+       79 XXSYSPRINT DD SYSOUT=*
+       80 XXSYSOUT   DD SYSOUT=*
+          XX*
+          XX*-------------------------------------------------------------------
+          XX*          AL2E: INTEGRACAO HEXAVISION X CHANGEMAN (PROMOTE)
+          XX*-------------------------------------------------------------------
+          XX*
+          XX* ***    05: INTEGRACAO AL2E
+          XX*
+       81 XXHEXAPRMT EXEC PGM=HEXA4215,
+          XX         PARM='S'
+          XX*
+       82 XXSTEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+       83 XX         DD DSN=SA.RDG1.ARC.AL2C.ARCLIB,DISP=SHR
+       84 XX         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+       85 XX         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          XX*
+       86 XXHVSPACTE DD DSN=&ARQPRMT,DISP=(OLD,PASS)
+       87 XXSYSPRINT DD SYSOUT=*
+       88 XXSYSOUT   DD SYSOUT=*
+          XX*
+          XX*
+          XX*-------------------------------------------------------------------
+          XX* PUBLICACAO DE OBJETOS: INTEGRACAO HEXAVISION X CHANGEMAN (PROMOTE)
+          XX*-------------------------------------------------------------------
+          XX*
+          XX* ***    08: PUBLICACAO DE OBJETOS
+          XX*
+       89 XXHEXAPUBL EXEC PGM=HEXA3960,
+          XX         PARM='S,&FILA3'
+          XX*
+          IEFC653I SUBSTITUTION JCL - PGM=HEXA3960,PARM='S,HEXA.QR.RSP.HOSTOPEN.
+       90 XXSTEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+       91 XX         DD DSN=SA.RDG1.ARC.AL2C.ARCLIB,DISP=SHR
+       92 XX         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+       93 XX         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          XX*
+       94 XXHVSPACTE DD DSN=&ARQPRMT,DISP=(OLD,PASS)
+       95 XXSYSPRINT DD SYSOUT=*
+       96 XXSYSOUT   DD SYSOUT=*
+
+          XX*
+          XX*
+          XX*-------------------------------------------------------------------
+          XX*      BLOQUEIO TXA: INTEGRACAO HEXAVISION X CHANGEMAN (PROMOTE)
+          XX*-------------------------------------------------------------------
+          XX*
+          XX* ***    13: BLOQUEIO TXA
+          XX*
+       97 XXHEXATXA  EXEC PGM=HEXA4630,
+          XX         PARM='N,&FILA4,N'
+          XX*
+          IEFC653I SUBSTITUTION JCL - PGM=HEXA4630,PARM='N,HEXA.QR.REQ.HOSTOPEN.
+       98 XXSTEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+       99 XX         DD DSN=SA.RDG1.ARC.AL2C.ARCLIB,DISP=SHR
+      100 XX         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+      101 XX         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          XX*
+      102 XXHVSPACT  DD DSN=&ARQPRMT,DISP=(OLD,PASS)
+      103 XXSYSPRINT DD SYSOUT=*
+      104 XXSYSOUT   DD SYSOUT=*
+          XX*
+          XX*
+          XX*-------------------------------------------------------------------
+          XX*       DRESSCODE: INTEGRACAO HEXAVISION X CHANGEMAN (PROMOTE)
+          XX*-------------------------------------------------------------------
+          XX*
+          XX* ***    10: PROMOTE TU
+          XX*        11: PROMOTE TI
+          XX*        12: PROMOTE TH
+          XX*
+      105 XXHEXAAL2E EXEC PGM=HEXA4610,
+          XX         PARM='S,&FILA1,S,N'
+          XX*
+          IEFC653I SUBSTITUTION JCL - PGM=HEXA4610,PARM='S,HEXA.QR.REQ.HOSTOPEN.
+      106 XXSTEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+      107 XX         DD DSN=SA.RDG1.ARC.AL2C.ARCLIB,DISP=SHR
+      108 XX         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+      109 XX         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          XX*
+      110 XXHVSPACTE DD DSN=&ARQPRMT,DISP=(OLD,PASS)
+      111 XXHVSPROCE DD DSN=AV.HEXA.PRV.HVSPROCE,DISP=SHR
+      112 XXSYSPRINT DD SYSOUT=*
+      113 XXSYSOUT   DD SYSOUT=*
+          XX*
+          XX*
+          XX*-------------------------------------------------------------------
+          XX*                HEXAVISION: SUSTENTACAO DE AMBIENTES
+          XX*-------------------------------------------------------------------
+          XX*
+          XX* IF HEXAAL2E.RC LT 11 AND HEXAPUBL.RC LT 11 THEN
+          XX*
+          XX* ***    SELECIONA INFORMACOES DO FONTE PROMOVIDO
+          XX*
+          XX*STEP1    EXEC PGM=HEXA4705,
+          XX*         PARM='S,DESV'
+
+          XX*
+          XX*STEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+          XX*         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          XX*
+          XX*HVSPACT  DD DSN=&ARQPRMT,DISP=(OLD,PASS)
+          XX*HVSDOWNS DD DSN=&HVSDONWS,
+          XX*        DISP=(,PASS),
+          XX*        UNIT=DISCO,
+          XX*        SPACE=(TRK,(0800,0400),RLSE),
+          XX*        DCB=(AV.A,LRECL=133,RECFM=FB,DSORG=PS)
+          XX*SYSPRINT DD SYSOUT=*
+          XX*SYSOUT   DD SYSOUT=*
+          XX*
+          XX*
+          XX* ***    ENVIA DADOS DO PROMOTE DO FONTE PARA O HEXAVISION
+          XX*
+          XX*STEP2    EXEC PGM=HEXA0085,
+          XX*         PARM='LOADS,HEXA.QR.REQ.HOSTOPEN.21'
+          XX*
+          XX*STEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+          XX*         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          XX*
+          XX*HVSDOWNE DD DSN=&HVSDONWS,DISP=(OLD,DELETE)
+          XX*SYSPRINT DD SYSOUT=*
+          XX*SYSOUT   DD SYSOUT=*
+          XX*
+          XX* ENDIF
+          XX*
+          //*
+      114 //  IF (HEXAP800.HEXAPROI.RC NE 0 OR
+          //      HEXAP800.HEXAPRMT.RC NE 0 OR
+          //      HEXAP800.HEXAPUBL.RC NE 0 OR
+          //      HEXAP800.HEXAAL2E.RC NE 0) THEN
+          //*
+      115 //MESSSAGE EXEC PGM=PGMWTOL
+      116 //SYSIN    DD *
+          //*
+          //*)IM CMCSPR08 - START
+      117 //NOTIFY   EXEC PGM=CMNVSRVC,PARM='SUBSYS=C'
+      118 //STEPLIB  DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.LOAD
+      119 //SER#PARM DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.TCPIPORT.DUMMY
+      120 //SYSIN    DD *
+      121 //SERRPLY  DD SYSOUT=*
+      122 //SERPRINT DD SYSOUT=*
+          //*)IM CMCSPR08 - END
+          //*
+          //*)IM CMNRPMB9
+      123 //RPMFAIL EXEC PGM=CMNBATCH,   *** ACCESS CHANGE MAN STARTED TASK
+          //             PARM='SUBSYS=C,USER=M67765'
+          //*)IM CMN$$SPR - INI
+      124 //SER#PARM  DD DISP=SHR,DSN=SYS3.CHGM.CMNZMFA2.TCPIPORT
+          //*)IM CMN$$SPR - FIM
+      125 //SERPRINT DD SYSOUT=*
+      126 //SYSPRINT DD SYSOUT=*
+      127 //CMNDELAY DD DISP=SHR,DSN=AV.CHGM.VON.CMNDELAY
+
+      128 //ABNLIGNR DD DUMMY
+      129 //SYSUDUMP DD SYSOUT=*
+      130 //SYSIN    DD *
+          //*)IM CMNRPMDL - INI
+          //*
+          //*  PROMOTION CLEANUP AT DEVELOPMENT SITE
+          //*
+      131 //CLNLCL    EXEC PGM=IDCAMS
+      132 //SYSPRINT  DD SYSOUT=*
+      133 //SYSIN     DD *
+          //*
+          //*)IM CMNRPMDL - END
+      134 //  ENDIF
+      135 //  IF (HEXAP800.HEXAAL2E.RC EQ 0) THEN
+          //*)IM STF$$RPM - END
+          //*)IM STF$$PRQ - END
+          //*
+          //*  REMOTE PROMOTE/DEMOTE FOR ALNJE11
+          //*  Temp = D67sf3m0F8x
+          //*  PROMACT=(P)
+          //*  RSTTTYP=(IEBCOPY)        stefanini
+          //*  PROMACT=(P)
+          //*  STGLIB =(AD.CHGM.STAGE.SCSB.#000028)
+          //*  RMTLIB =(AI.CHGM.STAGE.SCSB.#000028)
+          //*
+      136 //DELETE01  EXEC PGM=IDCAMS
+      137 //SYSPRINT  DD SYSOUT=*
+      138 //SYSIN     DD *
+          //*
+      139 //DEVJRPM EXEC PGM=IEBCOPY     *** COPY X DATASET
+      140 //SYSPRINT  DD SYSOUT=*
+          //*)IM CMN$$ENQ - INI
+      141 //SYSUT3    DD DISP=(MOD,DELETE),
+          //             DSN=AI.CHGM.STAGE.SCSB.#000028.ENQ,
+          //             UNIT=SYSDA,SPACE=(CYL,(50,30),RLSE)
+      142 //SYSUT4    DD UNIT=SYSDA,SPACE=(CYL,(50,30),RLSE)
+          //*)IM CMN$$ENQ - END
+      143 //RPMDSN   DD DISP=SHR,
+          //            DSN=AD.CHGM.STAGE.SCSB.#000028.S6085FD7
+      144 //RMTDSN    DD DISP=(,CATLG),
+          //             DSN=AI.CHGM.STAGE.SCSB.#000028.S6085FD7,
+          //             UNIT=DISCO,SPACE=(TRK,(1,2,5)),
+          //             DCB=(RECFM=FB,LRECL=80,BLKSIZE=6160)
+      145 //RPMDBR    DD DISP=SHR,DSN=AD.CHGM.STAGE.SCSB.#000028.DBR
+      146 //RMTDBR    DD DISP=(,CATLG),
+          //             DSN=AI.CHGM.STAGE.SCSB.#000028.DBR.M67765,
+          //             UNIT=DISCO,
+          //             LIKE=AD.CHGM.STAGE.SCSB.#000028.DBR,
+          //             DCB=(RECFM=FB,LRECL=80,BLKSIZE=27920)
+      147 //RPMDBC    DD DISP=SHR,DSN=AD.CHGM.STAGE.SCSB.#000028.DBC
+      148 //RMTDBC    DD DISP=(,CATLG),
+          //             DSN=AI.CHGM.STAGE.SCSB.#000028.DBC.M67765,
+          //             UNIT=DISCO,
+          //             LIKE=AD.CHGM.STAGE.SCSB.#000028.DBC,
+          //             DCB=(RECFM=FB,LRECL=80,BLKSIZE=27920)
+
+      149 //RPMLOC    DD DISP=SHR,DSN=AD.CHGM.STAGE.SCSB.#000028.LOC
+      150 //RMTLOC    DD DISP=(,CATLG),
+          //             DSN=AI.CHGM.STAGE.SCSB.#000028.LOC.M67765,
+          //             UNIT=DISCO,
+          //             LIKE=AD.CHGM.STAGE.SCSB.#000028.LOC,
+          //             DCB=(RECFM=U,LRECL=0,BLKSIZE=22894)
+      151 //SYSIN     DD *
+      152 //DELETE02  EXEC PGM=IDCAMS
+      153 //SYSPRINT  DD SYSOUT=*
+      154 //SYSIN     DD *
+          //*
+      155 //RPMINIT EXEC PGM=IEBGENER    *** SUBMIT JOB TO INTERNAL READER
+      156 //SYSPRINT  DD SYSOUT=*
+      157 //SYSUT2    DD SYSOUT=(C,INTRDR)
+      158 //SYSUDUMP  DD SYSOUT=*
+      159 //SYSIN     DD DUMMY
+      160 //SYSUT1    DD DISP=SHR,
+          //          DSN=AI.CHGM.STAGE.SCSB.#000028.S6085FD7(RPMRCOPY)
+          //*)IM STF$$END - INI
+      161 //  ENDIF                                    HEXA / STEFANINI
+      162 //  ENDIF                                    GRP07/ STEFANINI
+          //*)IM STF$$END - END
+
+ STMT NO. MESSAGE
+       65 IEFC001I PROCEDURE HEXAP800 WAS EXPANDED USING SYSTEM LIBRARY AV.PROCL
+       67 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLI
+IEF236I ALLOC. FOR M67765 SORTREST
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSOUT
+IGD103I SMS ALLOCATED TO DDNAME SORTIN
+IGD101I SMS ALLOCATED TO DDNAME (SORTOUT )
+        DSN (SYS15209.T150505.RA000.M67765.ROTINAS.H01   )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2W14
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK01)
+        DSN (SYS15209.T150505.RA000.M67765.R0138895      )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2D13
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK02)
+        DSN (SYS15209.T150505.RA000.M67765.R0138896      )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2W09
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK03)
+        DSN (SYS15209.T150505.RA000.M67765.R0138897      )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2D63
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF142I M67765 SORTREST - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000116.?            SYSOUT
+IGD104I AV.CHGM.PRV.AUTHPROM.ROTINAS                 RETAINED,  DDNAME=SORTIN
+IGD106I SYS15209.T150505.RA000.M67765.ROTINAS.H01    PASSED,    DDNAME=SORTOUT
+IGD105I SYS15209.T150505.RA000.M67765.R0138895       DELETED,   DDNAME=SORTWK01
+IGD105I SYS15209.T150505.RA000.M67765.R0138896       DELETED,   DDNAME=SORTWK02
+IGD105I SYS15209.T150505.RA000.M67765.R0138897       DELETED,   DDNAME=SORTWK03
+IEF285I   CHGMAN.M67765.JOB25032.D0000101.?            SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: SORTREST       Cond Code: 0000         Start: 28-Jul-2015 03:05:06 PM
+Step  Num: 1              PGM  Name: SORT         End:   28-Jul-2015 03:05:08 PM
+CPU (TCB): 00:00:00.27                            Storage below 16M:      1,108k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     16,396k
+Trans Act: 00:00:00.63                            Service Units:          14,599
+Tape Mnts: 0                                      Total EXCPs:                56
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D6D5 D SORTIN              1  27,920        D30E D SORTWK01            2       0
+D7D0 D SORTWK02            2       0        D083 D SORTWK03            2       0
+
+
+Total DASD EXCPs:                  7        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/SORTREST/START 2015209.1505
+IEF032I STEP/SORTREST/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.27 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1108K  SYS:   340K  EXT:    16396K  SYS:    10268K
+        ATB- REAL:                   196K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 SORTPROM
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSOUT
+IGD101I SMS ALLOCATED TO DDNAME (SORTOUT )
+        DSN (SYS15209.T150505.RA000.M67765.SORTPROM.H01  )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2D36
+IEF237I JES2 ALLOCATED TO SORTIN
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF142I M67765 SORTPROM - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000117.?            SYSOUT
+IGD106I SYS15209.T150505.RA000.M67765.SORTPROM.H01   PASSED,    DDNAME=SORTOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000102.?            SYSIN
+IEF285I   CHGMAN.M67765.JOB25032.D0000103.?            SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: SORTPROM       Cond Code: 0000         Start: 28-Jul-2015 03:05:08 PM
+Step  Num: 2              PGM  Name: SORT         End:   28-Jul-2015 03:05:09 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:      1,104k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     16,396k
+Trans Act: 00:00:00.60                            Service Units:             415
+Tape Mnts: 0                                      Total EXCPs:                24
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0A1 D SORTOUT             1  27,920
+
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/SORTPROM/START 2015209.1505
+IEF032I STEP/SORTPROM/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1104K  SYS:   340K  EXT:    16396K  SYS:    10312K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 GRP7INPT
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I DMY  ALLOCATED TO SYSIN
+IGD103I SMS ALLOCATED TO DDNAME SYSUT1
+IEF237I JES2 ALLOCATED TO SYSUT2
+IEF142I M67765 GRP7INPT - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000118.?            SYSOUT
+IGD106I SYS15209.T150505.RA000.M67765.SORTPROM.H01   PASSED,    DDNAME=SYSUT1
+IEF285I   CHGMAN.M67765.JOB25032.D0000119.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: GRP7INPT       Cond Code: 0000         Start: 28-Jul-2015 03:05:09 PM
+Step  Num: 3              PGM  Name: IEBGENER     End:   28-Jul-2015 03:05:10 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:      1,084k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     16,396k
+Trans Act: 00:00:00.45                            Service Units:             349
+Tape Mnts: 0                                      Total EXCPs:                24
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0A1 D SYSUT1              1  27,920
+
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/GRP7INPT/START 2015209.1505
+IEF032I STEP/GRP7INPT/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1084K  SYS:   336K  EXT:    16396K  SYS:    10144K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 CHCKPROM
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ROTINAS
+IGD103I SMS ALLOCATED TO DDNAME PROMOTE
+IGD103I SMS ALLOCATED TO DDNAME PROGTI
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF142I M67765 CHCKPROM - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD106I SYS15209.T150505.RA000.M67765.ROTINAS.H01    PASSED,    DDNAME=ROTINAS
+IGD106I SYS15209.T150505.RA000.M67765.SORTPROM.H01   PASSED,    DDNAME=PROMOTE
+IGD104I AD.CHGM.AUTHPROM.PGMBLOQ                     RETAINED,  DDNAME=PROGTI
+IEF285I   CHGMAN.M67765.JOB25032.D0000120.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: CHCKPROM       Cond Code: 0000         Start: 28-Jul-2015 03:05:10 PM
+Step  Num: 4              PGM  Name: BRAPROMO     End:   28-Jul-2015 03:05:12 PM
+CPU (TCB): 00:00:00.03                            Storage below 16M:        432k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     10,916k
+Trans Act: 00:00:00.61                            Service Units:           1,709
+Tape Mnts: 0                                      Total EXCPs:                27
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D919 D JOBLIB              5   6,000        D2E5 D ROTINAS             1  27,920
+D0A1 D PROMOTE             2  27,920        D164 D PROGTI              2  27,960
+
+
+Total DASD EXCPs:                 10        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/CHCKPROM/START 2015209.1505
+IEF032I STEP/CHCKPROM/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   432K  SYS:   552K  EXT:    10916K  SYS:    10168K
+        ATB- REAL:                  1120K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF206I M67765 MESSSAGE - STEP WAS NOT RUN BECAUSE OF CONDITIONAL EXPRESSION ON
+IEF272I M67765 MESSSAGE - STEP WAS NOT EXECUTED.
+IEF373I STEP/MESSSAGE/START 2015209.1505
+IEF032I STEP/MESSSAGE/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF206I M67765 RPMFAIL - STEP WAS NOT RUN BECAUSE OF CONDITIONAL EXPRESSION ON S
+IEF272I M67765 RPMFAIL - STEP WAS NOT EXECUTED.
+IEF373I STEP/RPMFAIL /START 2015209.1505
+IEF032I STEP/RPMFAIL /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF206I M67765 CLNLCL - STEP WAS NOT RUN BECAUSE OF CONDITIONAL EXPRESSION ON ST
+IEF272I M67765 CLNLCL - STEP WAS NOT EXECUTED.
+IEF373I STEP/CLNLCL  /START 2015209.1505
+IEF032I STEP/CLNLCL  /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 APTOPROM
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I DMY  ALLOCATED TO SYSIN
+IGD101I SMS ALLOCATED TO DDNAME (SYSUT2  )
+        DSN (SYS15209.T150505.RA000.M67765.PROMOTE1.H01  )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DEE
+IEF237I JES2 ALLOCATED TO SYSUT1
+IEF142I M67765 APTOPROM - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000125.?            SYSOUT
+IGD106I SYS15209.T150505.RA000.M67765.PROMOTE1.H01   PASSED,    DDNAME=SYSUT2
+IEF285I   CHGMAN.M67765.JOB25032.D0000107.?            SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: APTOPROM       Cond Code: 0000         Start: 28-Jul-2015 03:05:12 PM
+Step  Num: 8              PGM  Name: IEBGENER     End:   28-Jul-2015 03:05:12 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:      1,084k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     16,396k
+Trans Act: 00:00:00.12                            Service Units:             320
+Tape Mnts: 0                                      Total EXCPs:                29
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D692 D SYSUT2              2  27,920
+
+Total DASD EXCPs:                  2        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/APTOPROM/START 2015209.1505
+IEF032I STEP/APTOPROM/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1084K  SYS:   344K  EXT:    16396K  SYS:    10244K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 HEXAPROM
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME SYSEXEC
+IGD103I SMS ALLOCATED TO DDNAME XMLMOD
+IGD103I SMS ALLOCATED TO DDNAME SER#PARM
+IGD103I SMS ALLOCATED TO DDNAME SYSTCPD
+IGD101I SMS ALLOCATED TO DDNAME (XMLIN   )
+        DSN (SYS15209.T150505.RA000.M67765.XMLIN.H01     )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DBT
+IGD101I SMS ALLOCATED TO DDNAME (XMLOUT  )
+        DSN (SYS15209.T150505.RA000.M67765.XMLOUT.H01    )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DF1
+IGD103I SMS ALLOCATED TO DDNAME PROMOTE1
+IEF237I JES2 ALLOCATED TO SYSTSPRT
+IEF237I JES2 ALLOCATED TO SYSTSIN
+IEF237I D595 ALLOCATED TO SYS00001
+IEF285I   SYS1.UADS                                    KEPT
+IEF285I   VOL SER NOS= SHRA2A.
+IGD103I SMS ALLOCATED TO DDNAME SYS00002
+IGD104I SYS3.CHGM.CMNZMFA2.LOAD                      RETAINED,  DDNAME=SYS00002
+IEF142I M67765 HEXAPROM - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I SYS3.CHGM.CMNZMFA2.REX.CUST                  RETAINED,  DDNAME=SYSEXEC
+IGD104I SYS3.CHGM.CMNZMFA2.CNTL.BSL.CUST             RETAINED,  DDNAME=XMLMOD
+IGD104I SYS3.CHGM.CMNZMFA2.TCPIPORT                  RETAINED,  DDNAME=SER#PARM
+IGD104I TPA2.PRD.TCPCS28.TCPIP.DATA                  RETAINED,  DDNAME=SYSTCPD
+IGD106I SYS15209.T150505.RA000.M67765.XMLIN.H01      PASSED,    DDNAME=XMLIN
+IGD106I SYS15209.T150505.RA000.M67765.XMLOUT.H01     PASSED,    DDNAME=XMLOUT
+IGD106I SYS15209.T150505.RA000.M67765.PROMOTE1.H01   PASSED,    DDNAME=PROMOTE1
+IEF285I   CHGMAN.M67765.JOB25032.D0000126.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000108.?            SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: HEXAPROM       Cond Code: 0000         Start: 28-Jul-2015 03:05:12 PM
+Step  Num: 9              PGM  Name: IKJEFT1B     End:   28-Jul-2015 03:05:14 PM
+CPU (TCB): 00:00:00.04                            Storage below 16M:      1,480k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      1,412k
+Trans Act: 00:00:01.97                            Service Units:           2,214
+Tape Mnts: 0                                      Total EXCPs:               104
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D8B2 D SYSEXEC            10  32,720        D736 D XMLMOD              7  32,720
+D2FD D XMLIN               3  27,998        D3CE D XMLOUT             21  27,998
+D692 D PROMOTE1            3  27,920
+
+Total DASD EXCPs:                 44        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/HEXAPROM/START 2015209.1505
+IEF032I STEP/HEXAPROM/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1480K  SYS:   476K  EXT:     1412K  SYS:    11308K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 HEXAINPT
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I DMY  ALLOCATED TO SYSIN
+IGD103I SMS ALLOCATED TO DDNAME SYSUT1
+IEF237I JES2 ALLOCATED TO SYSUT2
+IEF142I M67765 HEXAINPT - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000127.?            SYSOUT
+IGD106I SYS15209.T150505.RA000.M67765.PROMOTE1.H01   PASSED,    DDNAME=SYSUT1
+IEF285I   CHGMAN.M67765.JOB25032.D0000128.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: HEXAINPT       Cond Code: 0000         Start: 28-Jul-2015 03:05:14 PM
+Step  Num: 10             PGM  Name: IEBGENER     End:   28-Jul-2015 03:05:15 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:      1,084k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     16,396k
+Trans Act: 00:00:00.08                            Service Units:             327
+Tape Mnts: 0                                      Total EXCPs:                27
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D692 D SYSUT1              1  27,920
+
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/HEXAINPT/START 2015209.1505
+IEF032I STEP/HEXAINPT/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1084K  SYS:   332K  EXT:    16396K  SYS:    10220K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 SORT SORT
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSOUT
+IGD103I SMS ALLOCATED TO DDNAME SORTIN
+IGD101I SMS ALLOCATED TO DDNAME (SORTOUT )
+        DSN (SYS15209.T150505.RA000.M67765.ARQPRMT.H01   )
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DBB
+IGD103I SMS ALLOCATED TO DDNAME SYSIN
+IEF142I M67765 SORT SORT - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000129.?            SYSOUT
+IGD106I SYS15209.T150505.RA000.M67765.PROMOTE1.H01   PASSED,    DDNAME=SORTIN
+IGD106I SYS15209.T150505.RA000.M67765.ARQPRMT.H01    PASSED,    DDNAME=SORTOUT
+IGD104I AV.HEXA.PRV.SYSIN                            RETAINED,  DDNAME=SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: SORT           Cond Code: 0000         Start: 28-Jul-2015 03:05:15 PM
+Step  Num: 11             PGM  Name: ICEMAN       End:   28-Jul-2015 03:05:15 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:      1,100k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     16,396k
+Trans Act: 00:00:00.05                            Service Units:             529
+Tape Mnts: 0                                      Total EXCPs:                32
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D692 D SORTIN              1  27,920        D04F D SORTOUT             1  27,920
+D90F D SYSIN               2  27,920
+
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/SORT    /START 2015209.1505
+IEF032I STEP/SORT    /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1100K  SYS:   344K  EXT:    16396K  SYS:    10304K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 HEXAPROI HEXAP800
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I D805 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME HVSFONTS
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF142I M67765 HEXAPROI HEXAP800 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+IGD106I SYS15209.T150505.RA000.M67765.ARQPRMT.H01    PASSED,    DDNAME=HVSFONTS
+IEF285I   CHGMAN.M67765.JOB25032.D0000130.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000131.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: HEXAPROI       Cond Code: 0000         Start: 28-Jul-2015 03:05:15 PM
+Step  Num: 12             PGM  Name: HEXA4620     End:   28-Jul-2015 03:05:17 PM
+CPU (TCB): 00:00:00.31                            Storage below 16M:        516k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      3,556k
+Trans Act: 00:00:01.57                            Service Units:          16,795
+Tape Mnts: 0                                      Total EXCPs:                10
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D STEPLIB             1  23,476        D04F D HVSFONTS            3  27,920
+
+
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/HEXAPROI/START 2015209.1505
+IEF032I STEP/HEXAPROI/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.31 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   516K  SYS:   412K  EXT:     3556K  SYS:    10356K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 HEXAPRMT HEXAP800
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D805 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME HVSPACTE
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF142I M67765 HEXAPRMT HEXAP800 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IGD104I SA.RDG1.ARC.AL2C.ARCLIB                      RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+IGD106I SYS15209.T150505.RA000.M67765.ARQPRMT.H01    PASSED,    DDNAME=HVSPACTE
+IEF285I   CHGMAN.M67765.JOB25032.D0000132.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000133.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: HEXAPRMT       Cond Code: 0000         Start: 28-Jul-2015 03:05:17 PM
+Step  Num: 13             PGM  Name: HEXA4215     End:   28-Jul-2015 03:05:18 PM
+CPU (TCB): 00:00:00.36                            Storage below 16M:        428k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      3,684k
+Trans Act: 00:00:00.69                            Service Units:          19,857
+Tape Mnts: 0                                      Total EXCPs:                34
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D STEPLIB             1  23,476        D04F D HVSPACTE            3  27,920
+
+
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/HEXAPRMT/START 2015209.1505
+IEF032I STEP/HEXAPRMT/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.36 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   428K  SYS:   416K  EXT:     3684K  SYS:    10380K
+        ATB- REAL:                  1140K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 HEXAPUBL HEXAP800
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D805 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME HVSPACTE
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF142I M67765 HEXAPUBL HEXAP800 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IGD104I SA.RDG1.ARC.AL2C.ARCLIB                      RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+IGD106I SYS15209.T150505.RA000.M67765.ARQPRMT.H01    PASSED,    DDNAME=HVSPACTE
+IEF285I   CHGMAN.M67765.JOB25032.D0000134.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000135.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: HEXAPUBL       Cond Code: 0000         Start: 28-Jul-2015 03:05:18 PM
+Step  Num: 14             PGM  Name: HEXA3960     End:   28-Jul-2015 03:05:22 PM
+CPU (TCB): 00:00:00.34                            Storage below 16M:        508k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      3,932k
+Trans Act: 00:00:03.38                            Service Units:          18,765
+Tape Mnts: 0                                      Total EXCPs:                33
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D STEPLIB             1  23,476
+
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/HEXAPUBL/START 2015209.1505
+IEF032I STEP/HEXAPUBL/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.34 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   508K  SYS:   416K  EXT:     3932K  SYS:    10416K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 HEXATXA HEXAP800
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D805 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME HVSPACT
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF142I M67765 HEXATXA HEXAP800 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IGD104I SA.RDG1.ARC.AL2C.ARCLIB                      RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+IGD106I SYS15209.T150505.RA000.M67765.ARQPRMT.H01    PASSED,    DDNAME=HVSPACT
+IEF285I   CHGMAN.M67765.JOB25032.D0000136.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000137.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: HEXATXA        Cond Code: 0000         Start: 28-Jul-2015 03:05:22 PM
+Step  Num: 15             PGM  Name: HEXA4630     End:   28-Jul-2015 03:05:24 PM
+CPU (TCB): 00:00:00.48                            Storage below 16M:        508k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      3,448k
+Trans Act: 00:00:02.00                            Service Units:          26,043
+Tape Mnts: 0                                      Total EXCPs:                24
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D STEPLIB             1  23,476
+
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/HEXATXA /START 2015209.1505
+IEF032I STEP/HEXATXA /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.48 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   508K  SYS:   416K  EXT:     3448K  SYS:    10360K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 HEXAAL2E HEXAP800
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D805 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME HVSPACTE
+IGD103I SMS ALLOCATED TO DDNAME HVSPROCE
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF142I M67765 HEXAAL2E HEXAP800 - STEP WAS EXECUTED - COND CODE 0011
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IGD104I SA.RDG1.ARC.AL2C.ARCLIB                      RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+IGD106I SYS15209.T150505.RA000.M67765.ARQPRMT.H01    PASSED,    DDNAME=HVSPACTE
+IGD104I AV.HEXA.PRV.HVSPROCE                         RETAINED,  DDNAME=HVSPROCE
+IEF285I   CHGMAN.M67765.JOB25032.D0000138.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000139.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: HEXAAL2E       Cond Code: 0011         Start: 28-Jul-2015 03:05:24 PM
+Step  Num: 16             PGM  Name: HEXA4610     End:   28-Jul-2015 03:05:30 PM
+CPU (TCB): 00:00:00.10                            Storage below 16M:        520k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     81,316k
+Trans Act: 00:00:04.54                            Service Units:           5,594
+Tape Mnts: 0                                      Total EXCPs:                40
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D STEPLIB             1  23,476        D04F D HVSPACTE            3  27,920
+D9D5 D HVSPROCE            2  27,920
+
+Total DASD EXCPs:                  6        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/HEXAAL2E/START 2015209.1505
+IEF032I STEP/HEXAAL2E/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.10 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   520K  SYS:   420K  EXT:    81316K  SYS:    10388K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 MESSSAGE
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSIN
+ ATENCAO  ***************************************************
+ ATENCAO  ** PROMOTE com situacao de inconsistencia        **
+ ATENCAO  ** Verifique as mensagens das SYSOUTs HEXAP800   **
+ ATENCAO  ** Duvidas, Contate Grupo 93-Gestao Ferramentas  **
+ ATENCAO  **          Atendimento Hexavison                **
+ ATENCAO  ***************************************************
+IEF142I M67765 MESSSAGE - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000109.?            SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: MESSSAGE       Cond Code: 0000         Start: 28-Jul-2015 03:05:30 PM
+Step  Num: 17             PGM  Name: PGMWTOL      End:   28-Jul-2015 03:05:30 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:         12k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.01                            Service Units:             358
+Tape Mnts: 0                                      Total EXCPs:                 4
+
+
+
+No I/O activity was found
+
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/MESSSAGE/START 2015209.1505
+IEF032I STEP/MESSSAGE/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:    12K  SYS:   336K  EXT:        4K  SYS:    10412K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 NOTIFY
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IGD103I SMS ALLOCATED TO DDNAME SER#PARM
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF237I JES2 ALLOCATED TO SERRPLY
+IEF237I JES2 ALLOCATED TO SERPRINT
+IEF142I M67765 NOTIFY - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I SYS3.CHGM.CMNZMFA2.LOAD                      RETAINED,  DDNAME=STEPLIB
+IGD104I SYS3.CHGM.CMNZMFA2.TCPIPORT.DUMMY            RETAINED,  DDNAME=SER#PARM
+IEF285I   CHGMAN.M67765.JOB25032.D0000110.?            SYSIN
+IEF285I   CHGMAN.M67765.JOB25032.D0000140.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000141.?            SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: NOTIFY         Cond Code: 0000         Start: 28-Jul-2015 03:05:30 PM
+Step  Num: 18             PGM  Name: CMNVSRVC     End:   28-Jul-2015 03:05:31 PM
+CPU (TCB): 00:00:00.00                            Storage below 16M:         60k
+CPU (SRB): 00:00:00.00                            Storage above 16M:        260k
+Trans Act: 00:00:01.41                            Service Units:             224
+Tape Mnts: 0                                      Total EXCPs:                28
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D5B2 D STEPLIB            12   6,000
+
+Total DASD EXCPs:                 12        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/NOTIFY  /START 2015209.1505
+IEF032I STEP/NOTIFY  /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:    60K  SYS:   336K  EXT:      260K  SYS:    10332K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 RPMFAIL
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME SER#PARM
+IEF237I JES2 ALLOCATED TO SERPRINT
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IGD103I SMS ALLOCATED TO DDNAME CMNDELAY
+IEF237I DMY  ALLOCATED TO ABNLIGNR
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF142I M67765 RPMFAIL - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I SYS3.CHGM.CMNZMFA2.TCPIPORT                  RETAINED,  DDNAME=SER#PARM
+IEF285I   CHGMAN.M67765.JOB25032.D0000142.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000143.?            SYSOUT
+IGD104I AV.CHGM.VON.CMNDELAY                         RETAINED,  DDNAME=CMNDELAY
+IEF285I   CHGMAN.M67765.JOB25032.D0000144.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000111.?            SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: RPMFAIL        Cond Code: 0000         Start: 28-Jul-2015 03:05:31 PM
+Step  Num: 19             PGM  Name: CMNBATCH     End:   28-Jul-2015 03:05:33 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:        516k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      1,128k
+Trans Act: 00:00:01.72                            Service Units:             496
+Tape Mnts: 0                                      Total EXCPs:                15
+
+
+
+No I/O activity was found
+
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/RPMFAIL /START 2015209.1505
+IEF032I STEP/RPMFAIL /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   516K  SYS:   336K  EXT:     1128K  SYS:    10336K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF236I ALLOC. FOR M67765 CLNLCL
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D270 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSIN
+IGD103I SMS ALLOCATED TO DDNAME SYS00003
+IGD104I AD.CHGM.STAGE.SCSB.#000028.S6085FD7          RETAINED,  DDNAME=SYS00003
+IEF142I M67765 CLNLCL - STEP WAS EXECUTED - COND CODE 0000
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 PASSED,    DDNAME=JOBLIB
+IGD106I SYS3.CHGM.CMNZMFA2.LOAD                      PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IEF285I   CHGMAN.M67765.JOB25032.D0000145.?            SYSOUT
+IEF285I   CHGMAN.M67765.JOB25032.D0000112.?            SYSIN
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: CLNLCL         Cond Code: 0000         Start: 28-Jul-2015 03:05:33 PM
+Step  Num: 20             PGM  Name: IDCAMS       End:   28-Jul-2015 03:05:35 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:        244k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.83                            Service Units:             490
+Tape Mnts: 0                                      Total EXCPs:                15
+
+
+
+No I/O activity was found
+
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/CLNLCL  /START 2015209.1505
+IEF032I STEP/CLNLCL  /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   244K  SYS:   360K  EXT:        4K  SYS:    10460K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF206I M67765 DELETE01 - STEP WAS NOT RUN BECAUSE OF CONDITIONAL EXPRESSION ON
+IEF272I M67765 DELETE01 - STEP WAS NOT EXECUTED.
+IEF373I STEP/DELETE01/START 2015209.1505
+IEF032I STEP/DELETE01/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF206I M67765 DEVJRPM - STEP WAS NOT RUN BECAUSE OF CONDITIONAL EXPRESSION ON S
+IEFA104I AI.CHGM.STAGE.SCSB.#000028.S6085FD7 CONTROL CHANGED TO SHR
+IEF272I M67765 DEVJRPM - STEP WAS NOT EXECUTED.
+IEF373I STEP/DEVJRPM /START 2015209.1505
+IEF032I STEP/DEVJRPM /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF206I M67765 DELETE02 - STEP WAS NOT RUN BECAUSE OF CONDITIONAL EXPRESSION ON
+IEF272I M67765 DELETE02 - STEP WAS NOT EXECUTED.
+IEF373I STEP/DELETE02/START 2015209.1505
+IEF032I STEP/DELETE02/STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IEF206I M67765 RPMINIT - STEP WAS NOT RUN BECAUSE OF CONDITIONAL EXPRESSION ON S
+IEF272I M67765 RPMINIT - STEP WAS NOT EXECUTED.
+IEF373I STEP/RPMINIT /START 2015209.1505
+IEF032I STEP/RPMINIT /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+        ATB- REAL:                     0K  SLOTS:                     0K
+             VIRT- ALLOC:      15M SHRD:       0M
+IGD104I SYS3.CHGM.CMNZMFA2.LOAD.CUST                 RETAINED,  DDNAME=JOBLIB
+IGD104I SYS3.CHGM.CMNZMFA2.LOAD                      RETAINED,  DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+IGD103I SMS ALLOCATED TO DDNAME SYS00004
+IGD104I SYS15209.T150535.RA000.M67765.R0139158       RETAINED,  DDNAME=SYS00004
+IGD105I SYS15209.T150505.RA000.M67765.ROTINAS.H01    DELETED,   DDNAME=ROTINAS
+IGD103I SMS ALLOCATED TO DDNAME SYS00005
+IGD104I SYS15209.T150535.RA000.M67765.R0139159       RETAINED,  DDNAME=SYS00005
+IGD105I SYS15209.T150505.RA000.M67765.SORTPROM.H01   DELETED,   DDNAME=PROMOTE
+IGD103I SMS ALLOCATED TO DDNAME SYS00006
+IGD104I SYS15209.T150535.RA000.M67765.R0139160       RETAINED,  DDNAME=SYS00006
+IGD105I SYS15209.T150505.RA000.M67765.PROMOTE1.H01   DELETED,   DDNAME=SORTIN
+IGD103I SMS ALLOCATED TO DDNAME SYS00007
+IGD104I SYS15209.T150535.RA000.M67765.R0139161       RETAINED,  DDNAME=SYS00007
+IGD105I SYS15209.T150505.RA000.M67765.XMLIN.H01      DELETED,   DDNAME=XMLIN
+IGD103I SMS ALLOCATED TO DDNAME SYS00008
+IGD104I SYS15209.T150535.RA000.M67765.R0139162       RETAINED,  DDNAME=SYS00008
+IGD105I SYS15209.T150505.RA000.M67765.XMLOUT.H01     DELETED,   DDNAME=XMLOUT
+IGD103I SMS ALLOCATED TO DDNAME SYS00009
+IGD104I SYS15209.T150535.RA000.M67765.R0139163       RETAINED,  DDNAME=SYS00009
+IGD105I SYS15209.T150505.RA000.M67765.ARQPRMT.H01    DELETED,   DDNAME=HVSPACTE
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: M67765         System ID: AL2A        Submit: 28-Jul-2015 03:03:27 PM
+Job JESID: JOB25032       MVS level: SP7.2.1     Start:  28-Jul-2015 03:05:06 PM
+Job Class: O                                     End:    28-Jul-2015 03:05:35 PM
+CPU (TCB): 00:00:02.01                           Storage below 16M:       1,480k
+CPU (SRB): 00:00:00.00                           Storage above 16M:      81,316k
+Trans Act: 00:00:20.65                           Service Units:          109,084
+Tape Mnts: 0                                     Total EXCPs:                526
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: CHGMAN                           Programmer:
+Acct Info: SCSB,0000,BN,SCSB0000
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/M67765  /START 2015209.1505
+IEF033I  JOB/M67765  /STOP  2015209.1505
+        CPU:     0 HR  00 MIN  02.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+
+ICE201I 0 RECORD TYPE IS F - DATA STARTS IN POSITION 1
+ICE751I 0 C5-I20731 C6-BASE   C7-K96411 C8-I15445 E4-BASE   C9-BASE   E5-I24962
+ICE143I 0 BLOCKSET     SORT  TECHNIQUE SELECTED
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AN
+ICE000I 1 - CONTROL STATEMENTS FOR 5650-ZOS, Z/OS DFSORT V2R1  - 15:05 ON TUE JU
+           SORT FIELDS=(1,4,CH,A)
+                INCLUDE COND=(1,4,CH,EQ,C'****',OR,1,4,CH,EQ,C'SCSB')
+ICE193I 0 ICEAM1 INVOCATION ENVIRONMENT IN EFFECT - ICEAM1 ENVIRONMENT SELECTED
+ICE252I 1 PARMLIB OPTIONS WERE MERGED WITH INSTALLATION MODULE DEFAULTS
+ICE088I 1 M67765  .SORTREST.        , INPUT LRECL = 80, BLKSIZE = 27920, TYPE =
+ICE093I 0 MAIN STORAGE = (MAX,16777216,16777216)
+ICE156I 0 MAIN STORAGE ABOVE 16MB = (16719856,16719856)
+ICE127I 0 OPTIONS: OVFLO=RC0 ,PAD=RC0 ,TRUNC=RC0 ,SPANINC=RC16,VLSCMP=N,SZERO=Y,
+ICE128I 0 OPTIONS: SIZE=16777216,MAXLIM=1048576,MINLIM=90112,EQUALS=N,LIST=Y,ERE
+ICE129I 0 OPTIONS: VIO=N,RESDNT=ALL ,SMF=FULL ,WRKSEC=Y,OUTSEC=Y,VERIFY=N,CHALT=
+ICE130I 0 OPTIONS: RESALL=4096,RESINV=0,SVC=109 ,CHECK=N,WRKREL=Y,OUTREL=Y,CKPT=
+ICE131I 0 OPTIONS: TMAXLIM=16777216,ARESALL=0,ARESINV=0,OVERRGN=65536,CINV=Y,CFW
+ICE132I 0 OPTIONS: VLSHRT=N,ZDPRINT=Y,IEXIT=N,TEXIT=N,LISTX=N,EFS=NONE    ,EXITC
+ICE133I 0 OPTIONS: HIPRMAX=OPTIMAL,DSPSIZE=MAX ,ODMAXBF=0,SOLRF=Y,VLLONG=N,VSAMI
+ICE235I 0 OPTIONS: NULLOUT=RC0
+ICE236I 0 OPTIONS: DYNAPCT=20 ,MOWRK=Y,TUNE=STOR,EXPMAX=50%    ,EXPOLD=50%    ,E
+ICE084I 0 EXCP ACCESS METHOD USED FOR SORTOUT
+ICE084I 0 EXCP ACCESS METHOD USED FOR SORTIN
+ICE750I 0 DC 27920 TC 0 CS DSVVV KSZ 4 VSZ 4
+ICE752I 0 FSZ=349 RC  IGN=0 E  AVG=80 0  WSP=37 C  DYN=0 0
+ICE751I 1 DE-BASE   D5-I18897 D9-BASE   E8-I12417
+ICE090I 0 OUTPUT LRECL = 80, BLKSIZE = 27920, TYPE = FB
+ICE080I 0 IN MAIN STORAGE SORT
+ICE055I 0 INSERT 0, DELETE 1
+ICE054I 0 RECORDS - IN: 1, OUT: 0
+ICE173I 0 NO RECORDS FOR THE SORTOUT DATA SET - RC=0
+ICE134I 0 NUMBER OF BYTES SORTED: 0
+ICE253I 0 RECORDS SORTED - PROCESSED: 0, EXPECTED: 349
+ICE165I 0 TOTAL WORK DATA SET TRACKS ALLOCATED: 45 , TRACKS USED: 0
+ICE199I 0 MEMORY OBJECT USED AS MAIN STORAGE = 0M BYTES
+ICE299I 0 MEMORY OBJECT USED AS WORK STORAGE = 0M BYTES
+ICE180I 0 HIPERSPACE STORAGE USED = 0K BYTES
+ICE188I 0 DATA SPACE STORAGE USED = 0K BYTES
+ICE026I 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)
+ICE052I 0 END OF DFSORT
+
+ICE201I 0 RECORD TYPE IS F - DATA STARTS IN POSITION 1
+ICE751I 0 C5-I20731 C6-BASE   C7-K96411 C8-I15445 E9-BASE   C9-BASE   E5-I24962
+ICE143I 0 BLOCKSET     SORT  TECHNIQUE SELECTED
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AN
+ICE000I 1 - CONTROL STATEMENTS FOR 5650-ZOS, Z/OS DFSORT V2R1  - 15:05 ON TUE JU
+           SORT FIELDS=(21,8,CH,A)
+                INCLUDE COND=(30,3,CH,NE,C'FMT')
+           SUM FIELDS=NONE
+ICE193I 0 ICEAM1 INVOCATION ENVIRONMENT IN EFFECT - ICEAM1 ENVIRONMENT SELECTED
+ICE252I 1 PARMLIB OPTIONS WERE MERGED WITH INSTALLATION MODULE DEFAULTS
+ICE088I 1 M67765  .SORTPROM.        , INPUT LRECL = 80, BLKSIZE = 80, TYPE = FB
+ICE093I 0 MAIN STORAGE = (MAX,16777216,16763998)
+ICE156I 0 MAIN STORAGE ABOVE 16MB = (16703472,16703472)
+ICE127I 0 OPTIONS: OVFLO=RC0 ,PAD=RC0 ,TRUNC=RC0 ,SPANINC=RC16,VLSCMP=N,SZERO=Y,
+ICE128I 0 OPTIONS: SIZE=16777216,MAXLIM=1048576,MINLIM=90112,EQUALS=N,LIST=Y,ERE
+ICE129I 0 OPTIONS: VIO=N,RESDNT=ALL ,SMF=FULL ,WRKSEC=Y,OUTSEC=Y,VERIFY=N,CHALT=
+ICE130I 0 OPTIONS: RESALL=4096,RESINV=0,SVC=109 ,CHECK=N,WRKREL=Y,OUTREL=Y,CKPT=
+ICE131I 0 OPTIONS: TMAXLIM=16777216,ARESALL=0,ARESINV=0,OVERRGN=65536,CINV=Y,CFW
+ICE132I 0 OPTIONS: VLSHRT=N,ZDPRINT=Y,IEXIT=N,TEXIT=N,LISTX=N,EFS=NONE    ,EXITC
+ICE133I 0 OPTIONS: HIPRMAX=OPTIMAL,DSPSIZE=MAX ,ODMAXBF=0,SOLRF=Y,VLLONG=N,VSAMI
+ICE235I 0 OPTIONS: NULLOUT=RC0
+ICE236I 0 OPTIONS: DYNAPCT=20 ,MOWRK=Y,TUNE=STOR,EXPMAX=50%    ,EXPOLD=50%    ,E
+ICE084I 0 EXCP ACCESS METHOD USED FOR SORTOUT
+ICE084I 0 BSAM ACCESS METHOD USED FOR SORTIN
+ICE750I 0 DC 500000 TC 0 CS DSVUU KSZ 8 VSZ 8
+ICE752I 0 FSZ=6250 RC  IGN=0 E  AVG=80 0  WSP=650 C  DYN=0 0
+ICE751I 1 DE-BASE   D5-I18897 D9-BASE   E8-I12417
+ICE090I 0 OUTPUT LRECL = 80, BLKSIZE = 27920, TYPE = FB
+ICE080I 0 IN MAIN STORAGE SORT
+ICE055I 0 INSERT 0, DELETE 226
+ICE054I 0 RECORDS - IN: 423, OUT: 197
+ICE134I 0 NUMBER OF BYTES SORTED: 33840
+ICE253I 0 RECORDS SORTED - PROCESSED: 423, EXPECTED: 6250
+ICE199I 0 MEMORY OBJECT USED AS MAIN STORAGE = 0M BYTES
+ICE299I 0 MEMORY OBJECT USED AS WORK STORAGE = 0M BYTES
+ICE180I 0 HIPERSPACE STORAGE USED = 0K BYTES
+ICE188I 0 DATA SPACE STORAGE USED = 0K BYTES
+ICE026I 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)
+ICE052I 0 END OF DFSORT
+
+ICE201I 0 RECORD TYPE IS F - DATA STARTS IN POSITION 1
+ICE751I 0 C5-I20731 C6-BASE   C7-K96411 C8-I15445 E9-BASE   C9-BASE   E5-I24962
+ICE143I 0 BLOCKSET     COPY  TECHNIQUE SELECTED
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AN
+ICE000I 0 - CONTROL STATEMENTS FOR 5650-ZOS, Z/OS DFSORT V2R1  - 15:05 ON TUE JU
+          OPTION COPY,MSGDDN=SYSPRINT,SORTIN=SYSUT1,SORTOUT=SYSUT2
+ICE193I 0 ICEAM2 INVOCATION ENVIRONMENT IN EFFECT - ICEAM2 ENVIRONMENT SELECTED
+ICE252I 1 PARMLIB OPTIONS WERE MERGED WITH INSTALLATION MODULE DEFAULTS
+ICE088I 0 M67765  .GRP7INPT.        , INPUT LRECL = 80, BLKSIZE = 27920, TYPE =
+ICE093I 0 MAIN STORAGE = (MAX,16777216,16763998)
+ICE156I 0 MAIN STORAGE ABOVE 16MB = (16699200,16699200)
+ICE127I 0 OPTIONS: OVFLO=RC0 ,PAD=RC0 ,TRUNC=RC0 ,SPANINC=RC16,VLSCMP=N,SZERO=Y,
+ICE128I 0 OPTIONS: SIZE=16777216,MAXLIM=1048576,MINLIM=90112,EQUALS=N,LIST=Y,ERE
+ICE129I 0 OPTIONS: VIO=N,RESDNT=ALL ,SMF=FULL ,WRKSEC=Y,OUTSEC=Y,VERIFY=N,CHALT=
+ICE130I 0 OPTIONS: RESALL=4096,RESINV=0,SVC=109 ,CHECK=N,WRKREL=Y,OUTREL=Y,CKPT=
+ICE131I 0 OPTIONS: TMAXLIM=16777216,ARESALL=0,ARESINV=0,OVERRGN=16384,CINV=Y,CFW
+ICE132I 0 OPTIONS: VLSHRT=N,ZDPRINT=Y,IEXIT=N,TEXIT=N,LISTX=N,EFS=NONE    ,EXITC
+ICE133I 0 OPTIONS: HIPRMAX=OPTIMAL,DSPSIZE=MAX ,ODMAXBF=0,SOLRF=Y,VLLONG=N,VSAMI
+ICE235I 0 OPTIONS: NULLOUT=RC0
+ICE236I 0 OPTIONS: DYNAPCT=20 ,MOWRK=Y,TUNE=STOR,EXPMAX=50%    ,EXPOLD=50%    ,E
+ICE084I 0 BSAM ACCESS METHOD USED FOR SYSUT2
+ICE084I 0 EXCP ACCESS METHOD USED FOR SYSUT1
+ICE751I 1 EF-BASE   F0-BASE   E8-I12417
+ICE090I 0 OUTPUT LRECL = 80, BLKSIZE = 27920, TYPE = FB
+ICE055I 0 INSERT 0, DELETE 0
+ICE054I 0 RECORDS - IN: 197, OUT: 197
+ICE026I 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)
+ICE052I 0 END OF DFSORT
+
+M67765   SCSB000028 SCSB1038 LOC AL4B
+M67765   SCSB000028 SCSB1042 LOC AL4B
+M67765   SCSB000028 SCSB1062 LOC AL4B
+M67765   SCSB000028 SCSB1066 LOC AL4B
+M67765   SCSB000028 SCSB1084 LOC AL4B
+M67765   SCSB000028 SCSB1086 LOC AL4B
+M67765   SCSB000028 SCSB1092 LOC AL4B
+M67765   SCSB000028 SCSB1098 LOC AL4B
+M67765   SCSB000028 SCSB1100 LOC AL4B
+M67765   SCSB000028 SCSB1102 LOC AL4B
+M67765   SCSB000028 SCSB1104 LOC AL4B
+M67765   SCSB000028 SCSB1108 LOC AL4B
+M67765   SCSB000028 SCSB1112 LOC AL4B
+M67765   SCSB000028 SCSB1114 LOC AL4B
+M67765   SCSB000028 SCSB1118 LOC AL4B
+M67765   SCSB000028 SCSB1188 LOC AL4B
+M67765   SCSB000028 SCSB1190 LOC AL4B
+M67765   SCSB000028 SCSB1192 LOC AL4B
+M67765   SCSB000028 SCSB1194 LOC AL4B
+M67765   SCSB000028 SCSB1196 LOC AL4B
+M67765   SCSB000028 SCSB1198 LOC AL4B
+M67765   SCSB000028 SCSB1261 LOC AL4B
+M67765   SCSB000028 SCSB1280 LOC AL4B
+M67765   SCSB000028 SCSB1281 LOC AL4B
+M67765   SCSB000028 SCSB1282 LOC AL4B
+M67765   SCSB000028 SCSB1283 LOC AL4B
+M67765   SCSB000028 SCSB1284 LOC AL4B
+M67765   SCSB000028 SCSB1285 LOC AL4B
+M67765   SCSB000028 SCSB1286 LOC AL4B
+M67765   SCSB000028 SCSB1290 LOC AL4B
+M67765   SCSB000028 SCSB1291 LOC AL4B
+M67765   SCSB000028 SCSB1292 LOC AL4B
+M67765   SCSB000028 SCSB1293 LOC AL4B
+M67765   SCSB000028 SCSB1296 LOC AL4B
+M67765   SCSB000028 SCSB1297 LOC AL4B
+M67765   SCSB000028 SCSB1300 LOC AL4B
+M67765   SCSB000028 SCSB1302 LOC AL4B
+M67765   SCSB000028 SCSB1306 LOC AL4B
+M67765   SCSB000028 SCSB1308 LOC AL4B
+M67765   SCSB000028 SCSB1310 LOC AL4B
+M67765   SCSB000028 SCSB1312 LOC AL4B
+M67765   SCSB000028 SCSB1336 LOC AL4B
+M67765   SCSB000028 SCSB1342 LOC AL4B
+M67765   SCSB000028 SCSB1346 LOC AL4B
+M67765   SCSB000028 SCSB1348 LOC AL4B
+M67765   SCSB000028 SCSB1350 LOC AL4B
+M67765   SCSB000028 SCSB1352 LOC AL4B
+M67765   SCSB000028 SCSB1354 LOC AL4B
+M67765   SCSB000028 SCSB1356 LOC AL4B
+M67765   SCSB000028 SCSB1358 LOC AL4B
+M67765   SCSB000028 SCSB1360 LOC AL4B
+M67765   SCSB000028 SCSB1362 LOC AL4B
+M67765   SCSB000028 SCSB1364 LOC AL4B
+M67765   SCSB000028 SCSB1366 LOC AL4B
+M67765   SCSB000028 SCSB1368 LOC AL4B
+
+M67765   SCSB000028 SCSB1370 LOC AL4B
+M67765   SCSB000028 SCSB1374 LOC AL4B
+M67765   SCSB000028 SCSB1376 LOC AL4B
+M67765   SCSB000028 SCSB1378 LOC AL4B
+M67765   SCSB000028 SCSB1382 LOC AL4B
+M67765   SCSB000028 SCSB1384 LOC AL4B
+M67765   SCSB000028 SCSB1386 LOC AL4B
+M67765   SCSB000028 SCSB1388 LOC AL4B
+M67765   SCSB000028 SCSB1392 LOC AL4B
+M67765   SCSB000028 SCSB1394 LOC AL4B
+M67765   SCSB000028 SCSB1400 LOC AL4B
+M67765   SCSB000028 SCSB1403 LOC AL4B
+M67765   SCSB000028 SCSB1406 LOC AL4B
+M67765   SCSB000028 SCSB1409 LOC AL4B
+M67765   SCSB000028 SCSB1412 LOC AL4B
+M67765   SCSB000028 SCSB1415 LOC AL4B
+M67765   SCSB000028 SCSB1420 LOC AL4B
+M67765   SCSB000028 SCSB1421 LOC AL4B
+M67765   SCSB000028 SCSB1422 LOC AL4B
+M67765   SCSB000028 SCSB2014 LOC AL4B
+M67765   SCSB000028 SCSB2038 LOC AL4B
+M67765   SCSB000028 SCSB2040 LOC AL4B
+M67765   SCSB000028 SCSB2042 DBR AL4B
+M67765   SCSB000028 SCSB2050 LOC AL4B
+M67765   SCSB000028 SCSB2062 LOC AL4B
+M67765   SCSB000028 SCSB2064 LOC AL4B
+M67765   SCSB000028 SCSB2066 DBC AL4B
+M67765   SCSB000028 SCSB2069 LOC AL4B
+M67765   SCSB000028 SCSB2074 DBC AL4B
+M67765   SCSB000028 SCSB2083 LOC AL4B
+M67765   SCSB000028 SCSB2084 DBC AL4B
+M67765   SCSB000028 SCSB2085 LOC AL4B
+M67765   SCSB000028 SCSB2086 DBC AL4B
+M67765   SCSB000028 SCSB2087 LOC AL4B
+M67765   SCSB000028 SCSB2089 DBC AL4B
+M67765   SCSB000028 SCSB2092 LOC AL4B
+M67765   SCSB000028 SCSB2093 DBC AL4B
+M67765   SCSB000028 SCSB2094 LOC AL4B
+M67765   SCSB000028 SCSB2096 DBC AL4B
+M67765   SCSB000028 SCSB2098 LOC AL4B
+M67765   SCSB000028 SCSB2099 DBC AL4B
+M67765   SCSB000028 SCSB2100 LOC AL4B
+M67765   SCSB000028 SCSB2101 DBC AL4B
+M67765   SCSB000028 SCSB2102 LOC AL4B
+M67765   SCSB000028 SCSB2104 DBC AL4B
+M67765   SCSB000028 SCSB2108 LOC AL4B
+M67765   SCSB000028 SCSB2112 LOC AL4B
+M67765   SCSB000028 SCSB2114 DBC AL4B
+M67765   SCSB000028 SCSB2116 LOC AL4B
+M67765   SCSB000028 SCSB2118 DBC AL4B
+M67765   SCSB000028 SCSB2120 LOC AL4B
+M67765   SCSB000028 SCSB2188 DBC AL4B
+M67765   SCSB000028 SCSB2190 LOC AL4B
+M67765   SCSB000028 SCSB2191 DBC AL4B
+M67765   SCSB000028 SCSB2192 LOC AL4B
+
+M67765   SCSB000028 SCSB2194 LOC AL4B
+M67765   SCSB000028 SCSB2196 LOC AL4B
+M67765   SCSB000028 SCSB2198 DBR AL4B
+M67765   SCSB000028 SCSB2262 LOC AL4B
+M67765   SCSB000028 SCSB2280 LOC AL4B
+M67765   SCSB000028 SCSB2281 LOC AL4B
+M67765   SCSB000028 SCSB2282 LOC AL4B
+M67765   SCSB000028 SCSB2283 DBC AL4B
+M67765   SCSB000028 SCSB2284 LOC AL4B
+M67765   SCSB000028 SCSB2285 DBC AL4B
+M67765   SCSB000028 SCSB2286 LOC AL4B
+M67765   SCSB000028 SCSB2287 DBC AL4B
+M67765   SCSB000028 SCSB2288 LOC AL4B
+M67765   SCSB000028 SCSB2289 DBC AL4B
+M67765   SCSB000028 SCSB2290 LOC AL4B
+M67765   SCSB000028 SCSB2291 DBC AL4B
+M67765   SCSB000028 SCSB2292 LOC AL4B
+M67765   SCSB000028 SCSB2293 DBC AL4B
+M67765   SCSB000028 SCSB2297 LOC AL4B
+M67765   SCSB000028 SCSB2298 DBC AL4B
+M67765   SCSB000028 SCSB2300 LOC AL4B
+M67765   SCSB000028 SCSB2302 DBC AL4B
+M67765   SCSB000028 SCSB2306 LOC AL4B
+M67765   SCSB000028 SCSB2308 DBC AL4B
+M67765   SCSB000028 SCSB2309 LOC AL4B
+M67765   SCSB000028 SCSB2310 DBC AL4B
+M67765   SCSB000028 SCSB2311 LOC AL4B
+M67765   SCSB000028 SCSB2312 DBC AL4B
+M67765   SCSB000028 SCSB2313 LOC AL4B
+M67765   SCSB000028 SCSB2314 DBC AL4B
+M67765   SCSB000028 SCSB2328 LOC AL4B
+M67765   SCSB000028 SCSB2336 DBC AL4B
+M67765   SCSB000028 SCSB2339 LOC AL4B
+M67765   SCSB000028 SCSB2340 DBC AL4B
+M67765   SCSB000028 SCSB2341 LOC AL4B
+M67765   SCSB000028 SCSB2342 DBC AL4B
+M67765   SCSB000028 SCSB2343 LOC AL4B
+M67765   SCSB000028 SCSB2344 DBC AL4B
+M67765   SCSB000028 SCSB2345 LOC AL4B
+M67765   SCSB000028 SCSB2346 DBC AL4B
+M67765   SCSB000028 SCSB2347 LOC AL4B
+M67765   SCSB000028 SCSB2348 DBC AL4B
+M67765   SCSB000028 SCSB2350 DBR AL4B
+M67765   SCSB000028 SCSB2352 LOC AL4B
+M67765   SCSB000028 SCSB2354 LOC AL4B
+M67765   SCSB000028 SCSB2356 DBR AL4B
+M67765   SCSB000028 SCSB2358 LOC AL4B
+M67765   SCSB000028 SCSB2360 DBR AL4B
+M67765   SCSB000028 SCSB2362 LOC AL4B
+M67765   SCSB000028 SCSB2364 DBR AL4B
+M67765   SCSB000028 SCSB2365 LOC AL4B
+M67765   SCSB000028 SCSB2366 DBR AL4B
+M67765   SCSB000028 SCSB2367 LOC AL4B
+M67765   SCSB000028 SCSB2368 DBR AL4B
+M67765   SCSB000028 SCSB2369 LOC AL4B
+
+M67765   SCSB000028 SCSB2370 DBR AL4B
+M67765   SCSB000028 SCSB2371 LOC AL4B
+M67765   SCSB000028 SCSB2372 LOC AL4B
+M67765   SCSB000028 SCSB2374 LOC AL4B
+M67765   SCSB000028 SCSB2376 DBC AL4B
+M67765   SCSB000028 SCSB2378 LOC AL4B
+M67765   SCSB000028 SCSB2379 DBC AL4B
+M67765   SCSB000028 SCSB2380 LOC AL4B
+M67765   SCSB000028 SCSB2382 DBC AL4B
+M67765   SCSB000028 SCSB2383 LOC AL4B
+M67765   SCSB000028 SCSB2386 DBC AL4B
+M67765   SCSB000028 SCSB2388 LOC AL4B
+M67765   SCSB000028 SCSB2389 DBC AL4B
+M67765   SCSB000028 SCSB2390 LOC AL4B
+M67765   SCSB000028 SCSB2392 LOC AL4B
+M67765   SCSB000028 SCSB2393 DBC AL4B
+M67765   SCSB000028 SCSB2394 LOC AL4B
+M67765   SCSB000028 SCSB2395 DBC AL4B
+M67765   SCSB000028 SCSB2396 LOC AL4B
+M67765   SCSB000028 SCSB2397 DBC AL4B
+M67765   SCSB000028 SCSB2401 LOC AL4B
+M67765   SCSB000028 SCSB2402 DBC AL4B
+M67765   SCSB000028 SCSB2404 LOC AL4B
+M67765   SCSB000028 SCSB2405 DBC AL4B
+M67765   SCSB000028 SCSB2407 LOC AL4B
+M67765   SCSB000028 SCSB2408 DBC AL4B
+M67765   SCSB000028 SCSB2410 LOC AL4B
+M67765   SCSB000028 SCSB2411 DBC AL4B
+M67765   SCSB000028 SCSB2413 LOC AL4B
+M67765   SCSB000028 SCSB2414 DBC AL4B
+M67765   SCSB000028 SCSB2416 LOC AL4B
+M67765   SCSB000028 SCSB2417 DBC AL4B
+
+==================== PROMOTE DO PACOTE: SCSB000028 AL4B    =====================
+
+MSG07.: OK!!  SCSB SEM PROMOTE CONTROLADO
+STATUS: PROMOTE AUTORIZADO.
+
+============================ 28/07/2015 - 15:05:11 =============================
+
+ICE201I 0 RECORD TYPE IS F - DATA STARTS IN POSITION 1
+ICE751I 0 C5-I20731 C6-BASE   C7-K96411 C8-I15445 E9-BASE   C9-BASE   E5-I24962
+ICE143I 0 BLOCKSET     COPY  TECHNIQUE SELECTED
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AN
+ICE000I 0 - CONTROL STATEMENTS FOR 5650-ZOS, Z/OS DFSORT V2R1  - 15:05 ON TUE JU
+          OPTION COPY,MSGDDN=SYSPRINT,SORTIN=SYSUT1,SORTOUT=SYSUT2
+ICE193I 0 ICEAM2 INVOCATION ENVIRONMENT IN EFFECT - ICEAM2 ENVIRONMENT SELECTED
+ICE252I 1 PARMLIB OPTIONS WERE MERGED WITH INSTALLATION MODULE DEFAULTS
+ICE088I 0 M67765  .APTOPROM.        , INPUT LRECL = 80, BLKSIZE = 80, TYPE = FB
+ICE093I 0 MAIN STORAGE = (MAX,16777216,16763998)
+ICE156I 0 MAIN STORAGE ABOVE 16MB = (16699200,16699200)
+ICE127I 0 OPTIONS: OVFLO=RC0 ,PAD=RC0 ,TRUNC=RC0 ,SPANINC=RC16,VLSCMP=N,SZERO=Y,
+ICE128I 0 OPTIONS: SIZE=16777216,MAXLIM=1048576,MINLIM=90112,EQUALS=N,LIST=Y,ERE
+ICE129I 0 OPTIONS: VIO=N,RESDNT=ALL ,SMF=FULL ,WRKSEC=Y,OUTSEC=Y,VERIFY=N,CHALT=
+ICE130I 0 OPTIONS: RESALL=4096,RESINV=0,SVC=109 ,CHECK=N,WRKREL=Y,OUTREL=Y,CKPT=
+ICE131I 0 OPTIONS: TMAXLIM=16777216,ARESALL=0,ARESINV=0,OVERRGN=16384,CINV=Y,CFW
+ICE132I 0 OPTIONS: VLSHRT=N,ZDPRINT=Y,IEXIT=N,TEXIT=N,LISTX=N,EFS=NONE    ,EXITC
+ICE133I 0 OPTIONS: HIPRMAX=OPTIMAL,DSPSIZE=MAX ,ODMAXBF=0,SOLRF=Y,VLLONG=N,VSAMI
+ICE235I 0 OPTIONS: NULLOUT=RC0
+ICE236I 0 OPTIONS: DYNAPCT=20 ,MOWRK=Y,TUNE=STOR,EXPMAX=50%    ,EXPOLD=50%    ,E
+ICE084I 0 EXCP ACCESS METHOD USED FOR SYSUT2
+ICE084I 0 BSAM ACCESS METHOD USED FOR SYSUT1
+ICE751I 1 EF-BASE   F0-BASE   E8-I12417
+ICE090I 0 OUTPUT LRECL = 80, BLKSIZE = 27920, TYPE = FB
+ICE055I 0 INSERT 0, DELETE 0
+ICE054I 0 RECORDS - IN: 423, OUT: 423
+ICE026I 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)
+ICE052I 0 END OF DFSORT
+
+IKJ56644I NO VALID TSO USERID, DEFAULT USER ATTRIBUTES USED
+READY
+ %HEXAPROM SCSB000028 C
+READY
+END
+
+ICE201I 0 RECORD TYPE IS F - DATA STARTS IN POSITION 1
+ICE751I 0 C5-I20731 C6-BASE   C7-K96411 C8-I15445 E9-BASE   C9-BASE   E5-I24962
+ICE143I 0 BLOCKSET     COPY  TECHNIQUE SELECTED
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AN
+ICE000I 0 - CONTROL STATEMENTS FOR 5650-ZOS, Z/OS DFSORT V2R1  - 15:05 ON TUE JU
+          OPTION COPY,MSGDDN=SYSPRINT,SORTIN=SYSUT1,SORTOUT=SYSUT2
+ICE193I 0 ICEAM2 INVOCATION ENVIRONMENT IN EFFECT - ICEAM2 ENVIRONMENT SELECTED
+ICE252I 1 PARMLIB OPTIONS WERE MERGED WITH INSTALLATION MODULE DEFAULTS
+ICE088I 0 M67765  .HEXAINPT.        , INPUT LRECL = 80, BLKSIZE = 27920, TYPE =
+ICE093I 0 MAIN STORAGE = (MAX,16777216,16763998)
+ICE156I 0 MAIN STORAGE ABOVE 16MB = (16699200,16699200)
+ICE127I 0 OPTIONS: OVFLO=RC0 ,PAD=RC0 ,TRUNC=RC0 ,SPANINC=RC16,VLSCMP=N,SZERO=Y,
+ICE128I 0 OPTIONS: SIZE=16777216,MAXLIM=1048576,MINLIM=90112,EQUALS=N,LIST=Y,ERE
+ICE129I 0 OPTIONS: VIO=N,RESDNT=ALL ,SMF=FULL ,WRKSEC=Y,OUTSEC=Y,VERIFY=N,CHALT=
+ICE130I 0 OPTIONS: RESALL=4096,RESINV=0,SVC=109 ,CHECK=N,WRKREL=Y,OUTREL=Y,CKPT=
+ICE131I 0 OPTIONS: TMAXLIM=16777216,ARESALL=0,ARESINV=0,OVERRGN=16384,CINV=Y,CFW
+ICE132I 0 OPTIONS: VLSHRT=N,ZDPRINT=Y,IEXIT=N,TEXIT=N,LISTX=N,EFS=NONE    ,EXITC
+ICE133I 0 OPTIONS: HIPRMAX=OPTIMAL,DSPSIZE=MAX ,ODMAXBF=0,SOLRF=Y,VLLONG=N,VSAMI
+ICE235I 0 OPTIONS: NULLOUT=RC0
+ICE236I 0 OPTIONS: DYNAPCT=20 ,MOWRK=Y,TUNE=STOR,EXPMAX=50%    ,EXPOLD=50%    ,E
+ICE084I 0 BSAM ACCESS METHOD USED FOR SYSUT2
+ICE084I 0 EXCP ACCESS METHOD USED FOR SYSUT1
+ICE751I 1 EF-BASE   F0-BASE   E8-I12417
+ICE090I 0 OUTPUT LRECL = 80, BLKSIZE = 27920, TYPE = FB
+ICE055I 0 INSERT 0, DELETE 0
+ICE054I 0 RECORDS - IN: 423, OUT: 423
+ICE026I 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)
+ICE052I 0 END OF DFSORT
+
+1 SCSB2040 DBR M67770   20150707 205431 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2042 DBR M67770   20150707 205444 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2050 DBR M67770   20150626 150722 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2064 DBR M67770   20150429 175530 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2066 DBR M67770   20150707 205531 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2069 DBR M67770   20150707 205541 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2074 DBR M67770   20150626 145533 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2083 DBR M67770   20150707 205553 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2084 DBR M67770   20150707 205656 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2085 DBR M67770   20150707 205700 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2086 DBR M67770   20150707 205715 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2087 DBR M67770   20150707 205720 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2089 DBR M67770   20150707 205719 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2092 DBR M67770   20150707 205720 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2093 DBR M67770   20150707 205732 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2094 DBR M107364  20150622 180800 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2096 DBR M107364  20150622 180836 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2098 DBR M107364  20150623 112654 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2099 DBR M67770   20150707 205734 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2100 DBR M67770   20150707 205741 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2101 DBR M67770   20150707 205744 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2102 DBR M67770   20150707 205743 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2104 DBR M67770   20150707 205751 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2112 DBR M67770   20150422 143438 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2114 DBR M67770   20150707 205755 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2116 DBR M67770   20150408 182803 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2118 DBR M67768   20150629 075629 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2120 DBR M67770   20150422 165618 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2188 DBR M67770   20150707 205857 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2190 DBR M107364  20150331 113810 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2191 DBR M67770   20150707 205857 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2192 DBR M67770   20150707 205859 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2196 DBR M67770   20150625 160453 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2198 DBR M107364  20150408 113951 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2262 DBR L939777  20150723 105824 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2282 DBR L939777  20150519 081620 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2283 DBR L939777  20150519 132144 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2284 DBR M67770   20150728 122916 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2285 DBR L939777  20150522 145455 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2286 DBR L939777  20150526 102530 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2287 DBR L939777  20150526 105712 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2288 DBR L939777  20150526 111119 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2289 DBR L939777  20150526 131345 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2290 DBR L939777  20150609 084948 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2291 DBR M67770   20150707 205917 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2292 DBR L939777  20150609 085614 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2293 DBR L939777  20150609 090120 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2297 DBR M67770   20150707 210036 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2298 DBR M67770   20150707 210041 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2300 DBR M107364  20150415 081156 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2302 DBR M67770   20150707 210043 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2306 DBR M67770   20150707 210106 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2308 DBR M107364  20150423 102344 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2309 DBR M67770   20150707 210106 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2310 DBR M67770   20150707 210105 M67765   AL4B    MZ104MX  SCSB000028
+
+1 SCSB2311 DBR M107364  20150508 154830 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2312 DBR M67770   20150707 210110 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2313 DBR M67770   20150707 210112 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2314 DBR M67770   20150707 210112 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2328 DBR M67770   20150415 144800 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2336 DBR M67770   20150707 210113 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2339 DBR M67770   20150707 210125 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2340 DBR M67770   20150707 210126 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2341 DBR M67770   20150707 210126 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2342 DBR M67770   20150406 143011 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2343 DBR M67770   20150707 210140 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2344 DBR M67770   20150401 114927 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2345 DBR M67770   20150401 191156 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2346 DBR M67770   20150707 210242 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2347 DBR M67770   20150707 210243 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2348 DBR M67770   20150406 183139 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2350 DBR M67770   20150707 210259 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2354 DBR M67770   20150417 174105 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2356 DBR M67770   20150420 164512 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2358 DBR M67770   20150423 135710 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2360 DBR M67770   20150707 210258 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2362 DBR M67770   20150707 210305 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2364 DBR M67770   20150707 210305 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2365 DBR M67770   20150707 210310 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2366 DBR M67770   20150707 210316 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2367 DBR M67770   20150513 155423 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2368 DBR M67770   20150707 210320 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2369 DBR M67770   20150707 210320 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2370 DBR M107364  20150714 080859 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2371 DBR M107364  20150714 080902 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2374 DBR M67770   20150707 210433 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2376 DBR M67770   20150707 210436 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2378 DBR M67770   20150623 154629 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2379 DBR M67770   20150707 210439 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2380 DBR M67770   20150623 134816 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2382 DBR M67770   20150707 210443 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2383 DBR M67768   20150720 085056 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2386 DBR L939777  20150629 153328 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2388 DBR M107364  20150723 084808 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2389 DBR M107364  20150723 084828 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2392 DBR M67770   20150707 210551 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2393 DBR M67770   20150707 210606 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2394 DBR M67770   20150707 210604 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2395 DBR M67770   20150707 210641 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2396 DBR M67770   20150707 210529 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2397 DBR M67770   20150707 210534 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2401 DBR M67770   20150707 210636 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2402 DBR M67770   20150707 210638 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2404 DBR M67770   20150707 210644 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2405 DBR M67770   20150707 210646 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2407 DBR M67770   20150707 210648 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2408 DBR M67770   20150707 210650 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2410 DBR M67770   20150707 210655 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2411 DBR M67770   20150707 210700 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2413 DBR M67770   20150707 210705 M67765   AL4B    MZ104MX  SCSB000028
+
+1 SCSB2414 DBR M67770   20150707 210707 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2416 DBR M67770   20150707 210711 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2417 DBR M67770   20150707 210715 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2040 DBC M67770   20150707 205431 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2042 DBC M67770   20150707 205444 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2050 DBC M67770   20150626 150722 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2064 DBC M67770   20150429 175530 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2066 DBC M67770   20150707 205531 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2069 DBC M67770   20150707 205541 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2074 DBC M67770   20150626 145533 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2083 DBC M67770   20150707 205553 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2084 DBC M67770   20150707 205656 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2085 DBC M67770   20150707 205700 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2086 DBC M67770   20150707 205715 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2087 DBC M67770   20150707 205720 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2089 DBC M67770   20150707 205719 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2092 DBC M67770   20150707 205720 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2093 DBC M67770   20150707 205732 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2094 DBC M107364  20150622 180800 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2096 DBC M107364  20150622 180836 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2098 DBC M107364  20150623 112654 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2099 DBC M67770   20150707 205734 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2100 DBC M67770   20150707 205741 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2101 DBC M67770   20150707 205744 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2102 DBC M67770   20150707 205743 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2104 DBC M67770   20150707 205751 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2112 DBC M67770   20150422 143438 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2114 DBC M67770   20150707 205755 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2116 DBC M67770   20150408 182803 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2118 DBC M67768   20150629 075629 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2120 DBC M67770   20150422 165618 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2188 DBC M67770   20150707 205857 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2190 DBC M107364  20150331 113810 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2191 DBC M67770   20150707 205857 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2192 DBC M67770   20150707 205859 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2196 DBC M67770   20150625 160453 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2198 DBC M107364  20150408 113951 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2262 DBC L939777  20150723 105824 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2282 DBC L939777  20150519 081620 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2283 DBC L939777  20150519 132144 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2284 DBC M67770   20150728 122916 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2285 DBC L939777  20150522 145455 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2286 DBC L939777  20150526 102530 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2287 DBC L939777  20150526 105712 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2288 DBC L939777  20150526 111119 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2289 DBC L939777  20150526 131345 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2290 DBC L939777  20150609 084948 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2291 DBC M67770   20150707 205917 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2292 DBC L939777  20150609 085614 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2293 DBC L939777  20150609 090120 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2297 DBC M67770   20150707 210036 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2298 DBC M67770   20150707 210041 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2300 DBC M107364  20150415 081156 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2302 DBC M67770   20150707 210043 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2306 DBC M67770   20150707 210106 M67765   AL4B    MZ104MX  SCSB000028
+
+1 SCSB2308 DBC M107364  20150423 102344 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2309 DBC M67770   20150707 210106 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2310 DBC M67770   20150707 210105 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2311 DBC M107364  20150508 154830 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2312 DBC M67770   20150707 210110 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2313 DBC M67770   20150707 210112 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2314 DBC M67770   20150707 210112 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2328 DBC M67770   20150415 144800 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2336 DBC M67770   20150707 210113 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2339 DBC M67770   20150707 210125 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2340 DBC M67770   20150707 210126 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2341 DBC M67770   20150707 210126 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2342 DBC M67770   20150406 143011 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2343 DBC M67770   20150707 210140 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2344 DBC M67770   20150401 114927 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2345 DBC M67770   20150401 191156 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2346 DBC M67770   20150707 210242 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2347 DBC M67770   20150707 210243 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2348 DBC M67770   20150406 183139 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2350 DBC M67770   20150707 210259 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2354 DBC M67770   20150417 174105 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2356 DBC M67770   20150420 164512 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2358 DBC M67770   20150423 135710 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2360 DBC M67770   20150707 210258 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2362 DBC M67770   20150707 210305 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2364 DBC M67770   20150707 210305 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2365 DBC M67770   20150707 210310 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2366 DBC M67770   20150707 210316 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2367 DBC M67770   20150513 155423 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2368 DBC M67770   20150707 210320 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2369 DBC M67770   20150707 210320 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2370 DBC M107364  20150714 080859 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2371 DBC M107364  20150714 080902 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2374 DBC M67770   20150707 210433 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2376 DBC M67770   20150707 210436 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2378 DBC M67770   20150623 154629 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2379 DBC M67770   20150707 210439 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2380 DBC M67770   20150623 134816 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2382 DBC M67770   20150707 210443 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2383 DBC M67768   20150720 085056 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2386 DBC L939777  20150629 153328 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2388 DBC M107364  20150723 084808 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2389 DBC M107364  20150723 084828 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2392 DBC M67770   20150707 210551 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2393 DBC M67770   20150707 210606 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2394 DBC M67770   20150707 210604 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2395 DBC M67770   20150707 210641 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2396 DBC M67770   20150707 210529 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2397 DBC M67770   20150707 210534 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2401 DBC M67770   20150707 210636 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2402 DBC M67770   20150707 210638 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2404 DBC M67770   20150707 210644 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2405 DBC M67770   20150707 210646 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2407 DBC M67770   20150707 210648 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2408 DBC M67770   20150707 210650 M67765   AL4B    MZ104MX  SCSB000028
+
+1 SCSB2410 DBC M67770   20150707 210655 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2411 DBC M67770   20150707 210700 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2413 DBC M67770   20150707 210705 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2414 DBC M67770   20150707 210707 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2416 DBC M67770   20150707 210711 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2417 DBC M67770   20150707 210715 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1038 LOC M107364  20150417 080735 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1042 LOC M107364  20150422 085038 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1062 LOC M67770   20150428 173958 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1066 LOC M67770   20150626 152630 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1084 LOC M107364  20150511 154750 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1086 LOC M107364  20150707 140540 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1092 LOC L939777  20150602 113858 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1098 LOC M107364  20150622 182124 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1100 LOC M107364  20150624 134451 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1102 LOC M107364  20150402 110850 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1104 LOC M67770   20150617 171241 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1108 LOC M67770   20150511 143714 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1112 LOC M67770   20150323 140634 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1114 LOC M107363  20150331 144048 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1118 LOC M67768   20150629 075708 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1188 LOC M67770   20150626 134328 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1190 LOC M107364  20150331 113803 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1192 LOC M107364  20150406 104924 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1194 LOC M67770   20150616 150956 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1196 LOC M67770   20150625 160410 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1198 LOC M107364  20150408 150104 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1261 LOC L939777  20150707 104651 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1280 LOC L939777  20150507 142413 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1281 LOC M67770   20150707 205202 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1282 LOC L939777  20150518 095524 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1283 LOC L939777  20150519 105336 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1284 LOC M67770   20150707 205226 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1285 LOC L939777  20150522 151459 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1286 LOC L939777  20150525 105015 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1290 LOC L939777  20150609 084545 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1291 LOC M67770   20150707 205246 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1292 LOC L939777  20150609 085346 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1293 LOC L939777  20150609 085838 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1296 LOC L939777  20150505 101930 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1297 LOC L939777  20150630 105333 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1300 LOC M107364  20150415 082319 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1302 LOC M107364  20150416 111310 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1306 LOC M107364  20150422 111318 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1308 LOC M107364  20150423 110826 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1310 LOC M107364  20150508 154810 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1312 LOC M107364  20150429 154322 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1336 LOC L939777  20150519 121457 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1342 LOC M67770   20150327 154246 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1346 LOC M67770   20150626 140445 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1348 LOC M67770   20150406 173547 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1350 LOC M67770   20150409 211210 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1352 LOC M67770   20150616 142654 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1354 LOC M107364  20150709 095515 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1356 LOC M67770   20150420 150905 M67765   AL4B    MZ104MX  SCSB000028
+
+1 SCSB1358 LOC M67770   20150422 185647 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1360 LOC M67770   20150423 162123 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1362 LOC M67770   20150504 131622 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1364 LOC M67770   20150505 144304 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1366 LOC M67768   20150621 104837 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1368 LOC M67770   20150507 113456 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1370 LOC M107364  20150713 135222 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1374 LOC L939777  20150624 172413 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1376 LOC M67770   20150622 145825 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1378 LOC M107364  20150709 101156 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1382 LOC M67768   20150703 140953 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1384 LOC M67768   20150709 192211 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1386 LOC L939777  20150629 140731 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1388 LOC M107364  20150626 132909 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1392 LOC M107364  20150627 091857 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1394 LOC M107364  20150629 112324 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1400 LOC L939777  20150625 093837 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1403 LOC L939777  20150701 082653 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1406 LOC L939777  20150701 082725 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1409 LOC L939777  20150626 135914 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1412 LOC L939777  20150701 082808 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1415 LOC L939777  20150701 082848 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1420 LOC M107364  20150701 095841 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1421 LOC M107363  20150702 110000 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB1422 LOC M107364  20150701 101309 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2014 LOC M107364  20150323 110928 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2038 LOC M107364  20150417 081139 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2040 LOC M67770   20150707 205431 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2042 LOC M67770   20150707 205444 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2050 LOC M67770   20150626 150722 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2062 LOC M67770   20150428 180149 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2064 LOC M67770   20150429 175530 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2066 LOC M67770   20150707 205531 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2069 LOC M67770   20150707 205541 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2074 LOC M67770   20150626 145533 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2083 LOC M67770   20150707 205553 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2084 LOC M67770   20150707 205656 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2085 LOC M67770   20150707 205700 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2086 LOC M67770   20150707 205715 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2087 LOC M67770   20150707 205720 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2089 LOC M67770   20150707 205719 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2092 LOC M67770   20150707 205720 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2093 LOC M67770   20150707 205732 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2094 LOC M107364  20150622 180800 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2096 LOC M107364  20150622 180836 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2098 LOC M107364  20150623 112654 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2099 LOC M67770   20150707 205734 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2100 LOC M67770   20150707 205741 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2101 LOC M67770   20150707 205744 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2102 LOC M67770   20150707 205743 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2104 LOC M67770   20150707 205751 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2108 LOC M67770   20150508 174909 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2112 LOC M67770   20150422 143438 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2114 LOC M67770   20150707 205755 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2116 LOC M67770   20150408 182803 M67765   AL4B    MZ104MX  SCSB000028
+
+1 SCSB2118 LOC M67768   20150629 075629 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2120 LOC M67770   20150422 165618 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2188 LOC M67770   20150707 205857 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2190 LOC M107364  20150331 113810 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2191 LOC M67770   20150707 205857 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2192 LOC M67770   20150707 205859 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2194 LOC M67770   20150616 174752 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2196 LOC M67770   20150625 160453 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2198 LOC M107364  20150408 113951 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2262 LOC L939777  20150723 105824 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2280 LOC M67770   20150707 205912 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2281 LOC M67770   20150707 205912 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2282 LOC L939777  20150519 081620 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2283 LOC L939777  20150519 132144 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2284 LOC M67770   20150728 122916 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2285 LOC L939777  20150522 145455 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2286 LOC L939777  20150526 102530 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2287 LOC L939777  20150526 105712 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2288 LOC L939777  20150526 111119 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2289 LOC L939777  20150526 131345 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2290 LOC L939777  20150609 084948 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2291 LOC M67770   20150707 205917 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2292 LOC L939777  20150609 085614 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2293 LOC L939777  20150609 090120 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2297 LOC M67770   20150707 210036 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2298 LOC M67770   20150707 210041 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2300 LOC M107364  20150415 081156 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2302 LOC M67770   20150707 210043 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2306 LOC M67770   20150707 210106 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2308 LOC M107364  20150423 102344 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2309 LOC M67770   20150707 210106 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2310 LOC M67770   20150707 210105 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2311 LOC M107364  20150508 154830 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2312 LOC M67770   20150707 210110 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2313 LOC M67770   20150707 210112 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2314 LOC M67770   20150707 210112 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2328 LOC M67770   20150415 144800 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2336 LOC M67770   20150707 210113 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2339 LOC M67770   20150707 210125 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2340 LOC M67770   20150707 210126 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2341 LOC M67770   20150707 210126 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2342 LOC M67770   20150406 143011 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2343 LOC M67770   20150707 210140 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2344 LOC M67770   20150401 114927 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2345 LOC M67770   20150401 191156 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2346 LOC M67770   20150707 210242 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2347 LOC M67770   20150707 210243 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2348 LOC M67770   20150406 183139 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2350 LOC M67770   20150707 210259 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2352 LOC M67770   20150616 173622 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2354 LOC M67770   20150417 174105 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2356 LOC M67770   20150420 164512 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2358 LOC M67770   20150423 135710 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2360 LOC M67770   20150707 210258 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2362 LOC M67770   20150707 210305 M67765   AL4B    MZ104MX  SCSB000028
+
+1 SCSB2364 LOC M67770   20150707 210305 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2365 LOC M67770   20150707 210310 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2366 LOC M67770   20150707 210316 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2367 LOC M67770   20150513 155423 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2368 LOC M67770   20150707 210320 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2369 LOC M67770   20150707 210320 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2370 LOC M107364  20150714 080859 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2371 LOC M107364  20150714 080902 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2372 LOC M107364  20150716 144232 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2374 LOC M67770   20150707 210433 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2376 LOC M67770   20150707 210436 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2378 LOC M67770   20150623 154629 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2379 LOC M67770   20150707 210439 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2380 LOC M67770   20150623 134816 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2382 LOC M67770   20150707 210443 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2383 LOC M67768   20150720 085056 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2386 LOC L939777  20150629 153328 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2388 LOC M107364  20150723 084808 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2389 LOC M107364  20150723 084828 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2390 LOC M107364  20150717 141402 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2392 LOC M67770   20150707 210551 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2393 LOC M67770   20150707 210606 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2394 LOC M67770   20150707 210604 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2395 LOC M67770   20150707 210641 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2396 LOC M67770   20150707 210529 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2397 LOC M67770   20150707 210534 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2401 LOC M67770   20150707 210636 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2402 LOC M67770   20150707 210638 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2404 LOC M67770   20150707 210644 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2405 LOC M67770   20150707 210646 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2407 LOC M67770   20150707 210648 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2408 LOC M67770   20150707 210650 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2410 LOC M67770   20150707 210655 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2411 LOC M67770   20150707 210700 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2413 LOC M67770   20150707 210705 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2414 LOC M67770   20150707 210707 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2416 LOC M67770   20150707 210711 M67765   AL4B    MZ104MX  SCSB000028
+1 SCSB2417 LOC M67770   20150707 210715 M67765   AL4B    MZ104MX  SCSB000028
+
+ICE201I 0 RECORD TYPE IS F - DATA STARTS IN POSITION 1
+ICE751I 0 C5-I20731 C6-BASE   C7-K96411 C8-I15445 E4-BASE   C9-BASE   E5-I24962
+ICE143I 0 BLOCKSET     SORT  TECHNIQUE SELECTED
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AN
+ICE000I 1 - CONTROL STATEMENTS FOR 5650-ZOS, Z/OS DFSORT V2R1  - 15:05 ON TUE JU
+           SORT FIELDS=(3,8,A),FORMAT=BI
+ICE193I 0 ICEAM1 INVOCATION ENVIRONMENT IN EFFECT - ICEAM1 ENVIRONMENT SELECTED
+ICE252I 1 PARMLIB OPTIONS WERE MERGED WITH INSTALLATION MODULE DEFAULTS
+ICE088I 1 M67765  .SORT    .SORT    , INPUT LRECL = 80, BLKSIZE = 27920, TYPE =
+ICE093I 0 MAIN STORAGE = (MAX,16777216,16777216)
+ICE156I 0 MAIN STORAGE ABOVE 16MB = (16719856,16719856)
+ICE127I 0 OPTIONS: OVFLO=RC0 ,PAD=RC0 ,TRUNC=RC0 ,SPANINC=RC16,VLSCMP=N,SZERO=Y,
+ICE128I 0 OPTIONS: SIZE=16777216,MAXLIM=1048576,MINLIM=90112,EQUALS=N,LIST=Y,ERE
+ICE129I 0 OPTIONS: VIO=N,RESDNT=ALL ,SMF=FULL ,WRKSEC=Y,OUTSEC=Y,VERIFY=N,CHALT=
+ICE130I 0 OPTIONS: RESALL=4096,RESINV=0,SVC=109 ,CHECK=N,WRKREL=Y,OUTREL=Y,CKPT=
+ICE131I 0 OPTIONS: TMAXLIM=16777216,ARESALL=0,ARESINV=0,OVERRGN=65536,CINV=Y,CFW
+ICE132I 0 OPTIONS: VLSHRT=N,ZDPRINT=Y,IEXIT=N,TEXIT=N,LISTX=N,EFS=NONE    ,EXITC
+ICE133I 0 OPTIONS: HIPRMAX=OPTIMAL,DSPSIZE=MAX ,ODMAXBF=0,SOLRF=Y,VLLONG=N,VSAMI
+ICE235I 0 OPTIONS: NULLOUT=RC0
+ICE236I 0 OPTIONS: DYNAPCT=20 ,MOWRK=Y,TUNE=STOR,EXPMAX=50%    ,EXPOLD=50%    ,E
+ICE084I 0 EXCP ACCESS METHOD USED FOR SORTOUT
+ICE084I 0 EXCP ACCESS METHOD USED FOR SORTIN
+ICE750I 0 DC 55840 TC 0 CS DSVVV KSZ 8 VSZ 8
+ICE752I 0 FSZ=698 RC  IGN=0 E  AVG=80 0  WSP=73 C  DYN=0 0
+ICE751I 1 DE-BASE   D5-I18897 D9-BASE   E8-I12417
+ICE090I 0 OUTPUT LRECL = 80, BLKSIZE = 27920, TYPE = FB
+ICE080I 0 IN MAIN STORAGE SORT
+ICE055I 0 INSERT 0, DELETE 0
+ICE054I 0 RECORDS - IN: 423, OUT: 423
+ICE134I 0 NUMBER OF BYTES SORTED: 33840
+ICE253I 0 RECORDS SORTED - PROCESSED: 423, EXPECTED: 698
+ICE199I 0 MEMORY OBJECT USED AS MAIN STORAGE = 0M BYTES
+ICE299I 0 MEMORY OBJECT USED AS WORK STORAGE = 0M BYTES
+ICE180I 0 HIPERSPACE STORAGE USED = 0K BYTES
+ICE188I 0 DATA SPACE STORAGE USED = 0K BYTES
+ICE026I 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)
+ICE052I 0 END OF DFSORT
+
+*******************************************
+*******************************************
+****         CHECKPOINT RESTART        ****
+*******************************************
+** PROCESSO / JOB CADASTRADO PARA OPERAR **
+**    NA MODALIDADE DE CONTINGENCIA      **
+*******************************************
+** NAO E POSSIVEL UM RESTART AUTOMATICO  **
+*******************************************
+*******************************************
+***=================| HEXAVISION - AL2E | PACOTE SCSB000028 |================***
+*** LIBERADO ==> AMBIENTE DE VALIDACAO DIFERENTE DE TI: CM1/CA1/AL2E         ***
+***========================= 28/07/2015 - 15:05:17 ==========================***
+
+***=========| HEXAVISION - PUBLICACAO OBJETOS | PACOTE            |==========***
+*** LIBERADO ==> CHAVE DE EXECUCAO DO PROCESSO DESATIVADA                    ***
+***========================= 28/07/2015 - 15:05:18 ==========================***
+
+***==============|  HEXAVISION - BLOQUEIO TXA | PACOTE            |==========***
+*** LIBERADO ==> CHAVE DE EXECUCAO DO PROCESSO DESATIVADA VIA PARM           ***
+***========================= 28/07/2015 - 15:05:23 ==========================***
+
+***==============| HEXAVISION - DRESSCODE | PACOTE SCSB000028 |==============***
+*** RECUSADO ==> PROGRAMA SCSB2262 NAO CERTIFICADO OK EM TU                  ***
+***========================= 28/07/2015 - 15:05:27 ==========================***
+
+CMN8700I - NOTIFY  Notify service completed
+CMN8700I - NOTIFY  Notify service completed
+CMN8700I - NOTIFY  Notify service completed
+CMN8700I - NOTIFY  Notify service completed
+CMN8700I - NOTIFY  Notify service completed
+
+ChangeMan(R)      CMNVSRVC - 7.1.1
+CMNVSRVC RC=0000,MSG=Func=CONNECT complete RC=0 Reason=6010
+CMNVSRVC SYSIN: OBJ=USER,MSG=NOTIFY,TYP=,VEH=1,ACT=0,REC=M67765
+CMNVSRVC SYSIN: TXT=*************************** A T E N C A O ********
+CMNVSRVC SYSIN: TX2=****************
+CMNVSRVC SYSIN: OBJ=USER,MSG=NOTIFY,TYP=,VEH=1,ACT=0,REC=M67765
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC Record length 00043(DEC),002B(HEX),
+CMNVSRVC RC=0000,MSG=End of data
+CMNVSRVC SYSIN: TXT=PROMOTE inconsistente, verifique a SYSOUT:M67765
+CMNVSRVC SYSIN: TX2=no EVT04       *
+CMNVSRVC SYSIN: OBJ=USER,MSG=NOTIFY,TYP=,VEH=1,ACT=0,REC=M67765
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC Record length 00043(DEC),002B(HEX),
+CMNVSRVC RC=0000,MSG=End of data
+CMNVSRVC SYSIN: TXT=Duvidas, Contate Grupo 93-Gestao Ferramentas atend
+CMNVSRVC SYSIN: TX2=imento Hexavison
+CMNVSRVC SYSIN: OBJ=USER,MSG=NOTIFY,TYP=,VEH=1,ACT=0,REC=M67765
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC Record length 00043(DEC),002B(HEX),
+CMNVSRVC RC=0000,MSG=End of data
+CMNVSRVC SYSIN: TXT=*************************** A T E N C A O ********
+CMNVSRVC SYSIN: TX2=****************
+CMNVSRVC SYSIN: OBJ=USER,MSG=NOTIFY,TYP=,VEH=1,ACT=0,REC=M67765
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC Record length 00043(DEC),002B(HEX),
+CMNVSRVC RC=0000,MSG=End of data
+CMNVSRVC SYSIN: TXT=
+CMNVSRVC SYSIN: TX2=               *
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC RC=0000,MSG=Func=SEND complete RC=0 Reason=6010
+CMNVSRVC Record length 00043(DEC),002B(HEX),
+CMNVSRVC RC=0000,MSG=End of data
+CMNVSRVC RC=0000,MSG=Func=DISCONCT complete RC=0 Reason=6010
+
+ChangeMan(R)      CMNBATCH - 7.1.1B  2015/07/28  15:05:31
+ATTEMPTING TO INITIATE DIALOG WITH CHANGE MAN SUBTASK
+SESSION ESTABLISHED WITH CHANGE MAN SUBTASK
+SYSIN: SCSB000028 99 LVL=5
+SYSIN: SCSB000028 99 LNM=MZ104MX
+SYSIN: SCSB000028 99 SSI=6887913A
+SYSIN: SCSB000028 99 NOD=AL4B,FUN=04,CID=M67765
+CMN9800I - PROMOTE/DEMOTE TO AL4B (04) PACKAGE SCSB000028 FAILED ON 2015/07/28 @
+END OF DATA ON SYSIN - TERMINATING
+SESSION TERMINATED WITH CHANGE MAN STARTED TASK
+
+IDCAMS  SYSTEM SERVICES                                           TIME: 15:05:34
+
+ DEL (AD.CHGM.STAGE.SCSB.#000028.S6085FD7)
+IDC0550I ENTRY (A) AD.CHGM.STAGE.SCSB.#000028.S6085FD7 DELETED
+IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 0
+
+ DEL (AI.CHGM.STAGE.SCSB.#000028.S6085FD7)
+IDC3012I ENTRY AI.CHGM.STAGE.SCSB.#000028.S6085FD7 NOT FOUND
+IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLEG-42
+IDC0551I ** ENTRY AI.CHGM.STAGE.SCSB.#000028.S6085FD7 NOT DELETED
+IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+
+ DEL (AI.CHGM.STAGE.SCSB.#000028.DBR.M67765)
+IDC3012I ENTRY AI.CHGM.STAGE.SCSB.#000028.DBR.M67765 NOT FOUND
+IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLEG-42
+IDC0551I ** ENTRY AI.CHGM.STAGE.SCSB.#000028.DBR.M67765 NOT DELETED
+IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+
+ DEL (AI.CHGM.STAGE.SCSB.#000028.DBC.M67765)
+IDC3012I ENTRY AI.CHGM.STAGE.SCSB.#000028.DBC.M67765 NOT FOUND
+IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLEG-42
+IDC0551I ** ENTRY AI.CHGM.STAGE.SCSB.#000028.DBC.M67765 NOT DELETED
+IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+
+ DEL (AI.CHGM.STAGE.SCSB.#000028.LOC.M67765)
+IDC3012I ENTRY AI.CHGM.STAGE.SCSB.#000028.LOC.M67765 NOT FOUND
+IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLEG-42
+IDC0551I ** ENTRY AI.CHGM.STAGE.SCSB.#000028.LOC.M67765 NOT DELETED
+IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+
+ SET MAXCC = 0
+
+IDC0002I IDCAMS PROCESSING COMPLETE. MAXIMUM CONDITION CODE WAS 0

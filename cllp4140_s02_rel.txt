@@ -1,0 +1,7 @@
+                                                   --- INICIO DO RELATORIO ---  
+                                                                                
+CLLP7372             B A N C O  B R A D E S C O  S / A                06/03/2015
+                     TABULACAO DE CLIENTES QUE POSSUEM                  10:40:34
+                        DIVIDAS EM UM UNICO PRODUTO                             
+        QTDE DE CLIENTES        VALOR DE COBRANCA           VALOR LIQUIDO       
+              004360                355.970.228,42            313.935.111,89    

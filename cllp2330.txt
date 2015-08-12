@@ -1,0 +1,92 @@
+//CLLP2330 JOB 'CLLP,4120,PR32','D115848',MSGCLASS=Z                    
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTAH17                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=CLLP1125                                            
+//*                                                                     
+//* ***    CRIA ARQUIVO PARA EMISSAO DE TABULACAO DE CL/LP/MORA         
+//*                                                                     
+//ARQDB22  DD DSN=MX.CLLP.ARQDB22.T2325.CLAS(0),                        
+//       DISP=SHR                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU.CLLP1125(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0070,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO PARA EMISSAO DE TABULACAO POR:            
+//* ***    AGENCIA, CONTA CORRENTE, CARTEIRA E CONTRATO                 
+//* ***    GRAVA UM REGISTRO POR CONTRATO ACUMULANDO O VALOR LIQUIDO    
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.ARQATU,                                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=MX.CLLP.ARQATU.CLAS1125(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0070,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,PD,A,7,4,PD,A,28,3,CH,A,14,4,PD,A)                    
+ SUM  FIELDS=(33,8,PD)                                                  
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA O ARQUIVO DE ESTATISTICA POR:                     
+//* ***    NATUREZA DE OPERACAO E CARTEIRA                              
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRP.ARQESTAT(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQESTAT.CLASSIFI(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0080,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(31,3,CH,A,5,3,CH,A)                                       
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=CLLP1130,                                           
+//       PARM='MARCO    /2001'                                          
+//*                                                                     
+//* ***    TABULACAO DAS PENDENCIAS EM CL, LP E MORA POR:               
+//* ***    NATUREZA DE OPERACAO E FAIXA DE VALOR                        
+//*                                                                     
+//ARQATU   DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQESTAT DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQDATAS DD DSN=MX.CLLP.PRV.DATFIMES(0),                              
+//       DISP=SHR                                                       
+//ARQINCON DD DSN=MX.CLLP.ARQINCON.CLLP1130(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0070,RECFM=FB)                                 
+//RELATO   DD SYSOUT=%%FORM#AH17,                                       
+//       DCB=(LRECL=133,RECFM=FBM)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

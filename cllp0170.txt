@@ -1,0 +1,242 @@
+//CLLP0170 JOB 'CLLP,4120,PR32','A172212',MSGCLASS=Z,REGION=4M          
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=MZNJE01,CLASS=E                                  
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=MZNJE01,CLASS=J                                  
+//OUTM     OUTPUT DEST=MZNJE01,CLASS=M                                  
+//OUTN     OUTPUT DEST=ANYLOCAL,CLASS=N                                 
+//OUTO     OUTPUT DEST=MZNJE01,CLASS=O                                  
+//OUTP     OUTPUT DEST=ANYLOCAL,CLASS=P                                 
+//OUTQ     OUTPUT DEST=ANYLOCAL,CLASS=Q                                 
+//OUTR     OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTRR    OUTPUT DEST=MZNJE01,CLASS=R                                  
+//OUTV     OUTPUT DEST=MZNJE01,CLASS=V                                  
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAB4                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAB5                 
+//*                                                                     
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    **********************************************************   
+//* ***    CLASSIFICA POR BCO,AG,CTA,CNPJ/CPF                           
+//* ***    **********************************************************   
+//*                                                                     
+//SORTIN   DD DSN=AC.CLLP.LOGRJUR(0),                                   
+//       DISP=SHR                                                       
+//         DD DSN=AC.CLLP.LOGRJUR.RDAB0010(0),                          
+//       DISP=SHR                                                       
+//         DD DSN=AC.CLLP.RDAB0020.VRFAJUR(0),                          
+//       DISP=SHR                                                       
+//         DD DSN=AC.CLLP.RDAB0030.RATING(0),                           
+//       DISP=SHR                                                       
+//         DD DSN=AC.CLLP.RDAB0028.CONJG(0),                            
+//       DISP=SHR                                                       
+//         DD DSN=AC.CLLP.RDAB0015.LOGRFIS(0),                          
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.BASEFICA.CLASS(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(012200,2440),RLSE),                                
+//       DCB=(AC.A,LRECL=0500,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(244,2,PD,A,246,3,PD,A,249,7,PD,A,1,5,PD,A,6,3,PD,A,       
+              459,10,CH,D)                                              
+ END                                                                    
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0150                                            
+//*                                                                     
+//* ***    GERA ARQUIVO P/CARGA DAS TABELAS DA BASE UNICA               
+//*                                                                     
+//TABASUNI DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQPESJD DD DSN=AC.CLLP.PESSJURI.BASEFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000050,0010),RLSE),                                
+//       DCB=(AC.A,LRECL=081,RECFM=FB)                                  
+//ARQPESFS DD DSN=AC.CLLP.PESSFISI.BASEFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(002300,0460),RLSE),                                
+//       DCB=(AC.A,LRECL=270,RECFM=FB)                                  
+//ARQCTCOR DD DSN=AC.CLLP.CTACORR.BASEFICA(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000870,0174),RLSE),                                
+//       DCB=(AC.A,LRECL=098,RECFM=FB)                                  
+//ARQLOGDR DD DSN=AC.CLLP.ARQLOGRD.BASEFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001200,0240),RLSE),                                
+//       DCB=(AC.A,LRECL=146,RECFM=FB)                                  
+//ARQFONES DD DSN=AC.CLLP.ARQFONES.BASEFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000310,0062),RLSE),                                
+//       DCB=(AC.A,LRECL=044,RECFM=FB)                                  
+//REGTOTAL DD SYSOUT=%%FORM#IAB4,                                       
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICAR POR AGENCIA, CONTA, DIGITO E CARTEIRA            
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.ARQPESJD,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.PESSJURI.BASEFICA.CLAS(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000050,0010),RLSE),                                
+//       DCB=(AC.A,LRECL=0081,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(1,5,PD,A,6,3,PD,A),FORMAT=BI                             
+ END                                                                    
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICAR POR AGENCIA, CONTA, DIGITO E CARTEIRA            
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.ARQPESFS,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.PESSFISI.BASEFICA.CLAS(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(002300,0460),RLSE),                                
+//       DCB=(AC.A,LRECL=0270,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,5,PD,A,6,2,PD,A),FORMAT=BI                              
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//*                                                                     
+//STEP4A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICAR POR AGENCIA, CONTA, DIGITO E CARTEIRA            
+//*                                                                     
+//SORTIN   DD DSN=AC.CLLP.CPFEXIST.RDAB0105(0),                         
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=AC.CLLP.CPFEXIST.RDAB0105.CLAS(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000470,0094),RLSE),                                
+//       DCB=(AC.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(25,5,PD,A,30,3,PD,A),FORMAT=BI                            
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//*                                                                     
+//STEP5    EXEC PGM=RDAB0230                                            
+//*                                                                     
+//* ***    RETIRA CPF/CNPJ EXISTENTES NAS TABS PF PJ                    
+//*                                                                     
+//PESSJURI DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//DOCEXIST DD DSN=*.STEP4A.SORT.SORTOUT,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//PESSFISI DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//PJINEXIS DD DSN=AC.CLLP.PESSJURI.CARGFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000040,0008),RLSE),                                
+//       DCB=(AC.A,LRECL=081,RECFM=FB)                                  
+//PFINEXIS DD DSN=AC.CLLP.PESSFISI.CARGFICA(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(002050,0410),RLSE),                                
+//       DCB=(AC.A,LRECL=270,RECFM=FB)                                  
+//RELTOTAL DD SYSOUT=%%FORM#IAB5,                                       
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

@@ -1,0 +1,66 @@
+//T7ALA090 JOB 'SCCE,4510,PR11','B29253',MSGCLASS=Z,SCHENV=DB2          
+//JOBLIB   DD DSN=MP.BIBGERTT,DISP=SHR                                  
+//         DD DSN=MP.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2CM.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC DB2CMHPU                                                
+//*                                                                     
+//* ***     DESCARREGA TABELA SCCEV041.                                 
+//*                                                                     
+//SYSPUNCH DD DUMMY                                                     
+//SYSREC00 DD DSN=MP.T7AL.SCCEV041(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,10000),RLSE),                               
+//       DCB=(MP.A),                                                    
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ UNLOAD TABLESPACE SCCED000.SCCES041                                    
+ DB2 NO                                                                 
+ QUIESCE YES                                                            
+ SELECT CJUNC_DEPDC      ,                                              
+        CCTA_CORR        ,                                              
+        DINIC_VALDD_SERVC,                                              
+        DFIM_VALDD_SERVC ,                                              
+        CPARM_GNRCO                                                     
+ FROM DB2PRD.V01CTA_SERVC_ESPEC                                         
+ WHERE  CSERVC_ESPEC       = 53                                         
+ AND    DINIC_VALDD_SERVC <= CURRENT DATE                               
+ AND    DFIM_VALDD_SERVC  >= CURRENT DATE                               
+ OUTDDN (SYSREC00)                                                      
+ LOADDDN SYSPUNCH                                                       
+ FORMAT DSNTIAUL                                                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO ESCOLHA DO CLIENTE (SCCEV041)             
+//* ***    POR AGENCIA E CONTA                                          
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.HPU.SYSREC00,                                 
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MP.T7AL.SCCEV041.CLAS(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(005400,1080),RLSE),                                
+//       DCB=(MP.A,LRECL=036,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,3,A,4,4,A),FORMAT=BI                                    
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    GERA ARQUIVO DE TRANSITO PARA ROTINA POUP                    
+//*                                                                     
+//ENT00001 DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//SAI00001 DD DSN=TA.T7AL.T7WP.ESCLCL.DBESTOQ,                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(005400,1080),RLSE)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

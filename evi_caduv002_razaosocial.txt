@@ -1,0 +1,22 @@
+                         --- INICIO DO RELATORIO ---                            
+                                                                                
+ARQUIVO CADUV002 RAZAO SOCIAL        27/10/2014        20:18:42        - 1 -    
+                                                                                
+    AG            CTA       CCLUB        CPF FILIAL NOME                        
+------ -------------- ----------- ---------- ------ ----------------------------
+     0              0      641740    7784754      1 DISTRIBUIDORA NORONHA LTDA  
+     0              0     6406076   76192129      1 FRANCISCO MARTINS & CIA LTDA
+     0              0     6942989    7784754      1 DISTR. NORONHA LTDA         
+     0              0     9129413   76192129      2 FRANCISCO MARTINS CIA LTDA  
+     0              0     9428640    7784754      1 DISTR. NORONHA LTDA         
+   429          17270     9844023   78793189      2 IRMAOS RAVANELLO LTDA       
+   338          23800    16963253   72375017      2 COMERCIO DE CONFECCOES CONFO
+  1379          14011    19347995    7784754      1 DISTRIBUDORA NORONHA LTDA   
+     0              0    19361017   72375017      1 COMERCIO DE CONFECCOES CONFO
+     0              0    22288759   78793189      1 IRMAOS RAVARELLO LTDA       
+     0              0    23803649   76192129      1 FRANCISCO MARTINS CIA LTDA  
+     0              0    25043706   78793189      1 IRMAOS RAVANELLO LTDA       
+   429          14851    25190610   76192129      1 FRANCISCO MARTINS CIA LTDA  
+     0              0    29425930    7784754      3 DISTRIBUIDORA NORONHA LTDA  
+     0              0    29460026    7784754      1 DISTRIBUIDORA NORONHA LTDA  
+     0              0   906457564   72375017      1 COMERCIO DE CONFECCOES CONFO

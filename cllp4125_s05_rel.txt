@@ -1,0 +1,979 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      1                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+      1     11                            149,74          156,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+      2     11                            631,43          678,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+      3     11                            538,00          563,01 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+      4     11                         18.606,00       24.465,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+      5     11                          2.912,68        2.912,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+      6     11                         28.550,38       29.548,28 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+      7     11                          1.070,47        1.107,89 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+      8     11                          1.000,00        1.011,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+      9     11                            484,46          501,39 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     10     11                            237,50          317,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     11     11                          1.737,19        1.797,91 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     12     11                          4.215,00        4.708,18 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     13     11                            749,28        1.137,52 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     14                                 9.381,28       31.369,99 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     15     11                         11.570,17       56.813,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     16     11                            242,54          295,41 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     17     11                         22.383,51       25.490,64 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     18     11                          1.408,16        1.457,38 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     19     11                            158,18          163,77 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     20     11                          6.881,89        6.907,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     21     11                         68.359,38       89.988,02 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     22     11                         22.202,02       28.570,55 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     23     11                          5.664,14        5.664,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     24     11                         21.466,49       27.347,67 R DQ DE CAXIAS 951             OURINHOS             19915  210  SP                             
+     25     11                          8.184,26        8.765,63 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     26     11                            566,62          620,35 R BATAVIA 526                  SANTO ANDRE          09090  090  SP                             
+     27     11                         22.687,75       30.897,90 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     28     11                          2.039,11        2.110,37 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     29     11                         12.674,41       14.624,99 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     30     11                          2.224,93        2.302,70 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     31     11                         26.790,92       35.992,46 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     32     11                         27.824,11       35.025,18 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     33     11                            383,86          394,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     34     11                            234,49          242,69 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+     35     11                            700,77          703,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     36     11                          1.650,62        1.708,31 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     37     11                            442,35          446,91 RUA BEZERRA DE MENEZES 455     GUARULHOS            07051  160  SP                             
+     38     11                          1.036,68        1.056,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     39     11                            833,44          849,34 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     40     11                         34.367,76       43.289,42 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     41     11                            146,77          151,90 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     42     11                         12.896,82       16.230,72 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     43     11                         57.417,64       58.985,46 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     44     11                         55.292,91       63.728,73 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     45     11                            461,88          569,62 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     46     11                         17.299,62       17.299,62 R NOVA GRANADA 138 CASA VERDE  SAO PAULO            02522  050  SP                             
+     47     11                            466,90          486,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     48     11                         39.480,71       44.092,28 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     49     11                          1.676,72        1.735,33 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     50     11                          1.417,85        1.467,40 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     51     11                            748,97          947,12 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      2                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+     52     11                            199,02          205,97 R DQ DE CAXIAS 951             OURINHOS             19915  210  SP                             
+     53     11                          1.471,47        1.517,06 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     54     11                         14.063,69       14.970,48 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     55     11                         29.031,03       39.096,04 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     56     11                          2.633,65        2.725,70 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     57     11                            973,21        1.007,23 R ANTONIO RIBEIRO 110 CASA     LINS                 16402  197  SP                             
+     58     11                         12.439,57       15.850,92 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     59     11                            472,51          489,02 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     60     11                          2.269,41        2.417,00 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     61     11                         47.363,09       65.337,89 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+     62     11                            939,99          972,85 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     63     11                          1.300,00        4.098,69 R BR DE MIRACEMA 426 CENTRO                         28036  362                                 
+     64     11                         41.136,70       42.079,74 LUIZ PEREIRA DA ROCHA S N QD 1 JARAGUA              76330  000  GO                             
+     65     11                        125.883,03      156.899,86 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     66     11                            322,61          421,08 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     67     11                          1.858,59        1.923,56 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     68     11                          1.588,00        1.610,45 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     69     11                            997,25        1.122,63 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     70     11                         28.638,35       30.409,62 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     71     11                          7.638,00        9.093,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     72     11                         50.537,57       50.922,58 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     73     11                            445,00          448,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     74     11                         23.753,75       30.948,65 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     75     11                         26.294,50       26.294,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     76     11                         34.866,47       46.977,63 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+     77     11                          1.362,39        1.392,86 R ALFREDO DE MELO              SAO PAULO            08190  290  SP                             
+     78     11                         18.318,63       23.062,07 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     79     11                         54.126,51       72.929,76 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     80     11                         12.073,32       16.219,14 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     81     11                         12.024,84       12.116,38 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+     82     11                         85.268,12       87.222,85  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+     83     11                          5.094,68        5.272,75 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     84     11                         13.559,34       13.979,45 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+     85     11                            759,23          785,77 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+     86     11                         11.891,79       16.368,29 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     87     11                            106,50          109,35 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     88     11                         33.372,83       45.136,96 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+     89     11                         12.887,08       16.422,66 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+     90     11                          1.985,47        2.047,04 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     91     11                            573,33          582,07 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     92     11                          1.913,89        1.980,78 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     93     11                         32.893,10       39.267,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     94     11                          2.085,61        2.121,54 AV HIGIENOPOLIS 494 V GILDA SA SANTO ANDRE          09190  360  SP                             
+     95     11                          2.308,13        2.388,81 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+     96     11                          3.966,29        4.133,49 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+     97     11                         35.694,09       44.565,62 R QUINZE DE NOVEMBRO L 714     PEDERNEIRAS          17280  000  SP                             
+     98     11                          3.799,34        3.915,91 RUA PRESIDENTE MEDICI          SORRISO              78890  000  MT                             
+     99     11                         30.205,40       32.733,20 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    100     11                         14.035,84       17.452,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    101     11                        147.227,37      193.952,85 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    102     11                         23.897,39       32.206,56 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      3                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    103     11                         20.554,19       27.145,84 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    104     11                          4.704,54        5.652,76 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    105     11                            995,42        1.030,21 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    106     11                            243,19          251,69 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    107     11                         32.158,88       39.803,73 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    108     11                             89,78           92,91 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    109     11                            398,00          408,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    110     11                          1.126,00        1.141,05 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    111     11                         35.024,36       36.036,12 R DQ DE CAXIAS 951             OURINHOS             19915  210  SP                             
+    112     11                            453,40          468,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    113     11                         21.815,45       27.784,32 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    114     11                        154.723,45      199.583,88 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    115     11                         50.457,44       64.658,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    116     11                            140,36          145,26 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    117     11                            556,00          698,09 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    118     11                          3.317,00        3.368,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    119     11                          1.443,28        1.493,72 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    120     11                          6.380,60        6.603,61 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    121     11                            616,46        1.108,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    122     11                            519,76          521,73 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    123     11                          2.010,00        2.010,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    124     11                          2.402,40        2.486,37 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    125     11                          5.860,83        7.225,94 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    126     11                         15.571,14       68.221,23 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    127     11                          4.161,84        4.161,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    128     11                        102.844,03      104.858,28 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    129     11                         18.161,84       20.320,89 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    130     11                         34.913,88       40.282,55 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    131     11                         47.034,25       65.804,20 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    132     11                            414,56          429,05 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    133     11                         32.149,03       42.561,44 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+    134     11                          2.000,00        2.822,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    135     11                          1.581,72        2.059,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    136     11                         34.895,74       40.347,06 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    137     11                         23.751,96       32.006,17 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    138     11                         16.942,24       21.806,88 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    139     11                          2.201,85        2.278,82 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    140     11                         10.949,33       14.490,59 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    141     11                          1.090,84        1.090,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    142     11                          1.040,40        1.048,83 R NOVA GRANADA 138 CASA VERDE  SAO PAULO            02522  050  SP                             
+    143     11                          1.331,34        1.377,87 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+    144     11                          3.035,75        3.252,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    145     11                          8.656,98       41.193,05 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    146     11                         12.750,00       17.411,38 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    147     11                          9.188,47        9.223,24  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    148                                 2.442,62        7.274,07 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    149     11                         37.213,25       47.426,43 R DQ DE CAXIAS 951             OURINHOS             19915  210  SP                             
+    150     11                         24.124,17       31.349,12 R DQ DE CAXIAS 951             OURINHOS             19915  210  SP                             
+    151     11                        114.070,34      143.674,51 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    152     11                          5.996,40        6.741,39  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    153     11                            361,42          361,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      4                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    154     11                         28.577,80       39.030,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    155     11                            365,23          377,99 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    156     11                          2.680,00        3.670,26 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    157     11                            775,84          785,51 AV GUILHERME COTCHING 890      SAO PAULO            02113  012  SP                             
+    158     11                            150,00          152,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    159     11                         22.878,43       23.353,21 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    160     11                         56.160,63       62.490,94 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    161     11                            329,68          329,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    162     11                            339,60          351,47 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    163     11                         17.848,30       22.465,31 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    164     11                            386,72          386,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    165     11                          1.926,40        2.456,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    166     11                          3.144,70        3.196,86 AV PAULISTA 2073 HORSA 11 12 A SAO PAULO            01311  940  SP                             
+    167     11                          6.797,20        8.554,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    168     11                            118,79          153,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    169     11                            366,96          446,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    170     11                          1.616,20        7.453,01 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    171     11                            236,08          237,87 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    172     11                            442,44          442,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    173     11                          3.410,82        4.302,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    174     11                       1268.484,75     1268.484,75 RUA V                                               30000  000                                 
+    175     11                            451,93          461,87 BR 116 KM 439 KM 439 ARAPONGAL REGISTRO             11900  000  SP                             
+    176     11                            650,61          657,46 AV THOMAZ ALBERTO WHATELY 1221                      00003  390                                 
+    177     11                            408,25          534,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    178     11                            198,30          259,37 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    179     11                          9.952,74       10.938,50 RUA DR EDUARDO MEDRADO CS                           47800  000                                 
+    180     11                            618,41          852,91 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    181     11                            777,88          947,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    182     11                            474,66          574,71 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    183     11                          4.566,73       17.371,43 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    184     11                          4.354,60        4.506,80 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    185     11                            144,28          149,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    186                                 3.062,79       33.928,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    187     11                          4.595,75        4.886,41 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    188     11                         64.991,26       79.491,33  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    189     11                          1.466,75        1.820,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    190     11                            202,48          223,28 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    191     11                            465,70          724,60 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    192     11                          2.503,19        2.589,45 R 24 DE MAIO 247 APTO 43       SAO PAULO            01041  001  SP                             
+    193     11                            655,92        1.045,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    194     11                            731,10          951,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    195     11                            258,66          260,63 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    196     11                          1.634,47        1.653,42 R PROF VAHIA DE ABREU60 V OLIM SAO PAULO            04549  001  SP                             
+    197     11                            468,08          569,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    198                                 4.954,47       32.215,92 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    199     11                          1.342,53        1.393,14 ROD BR 040 KM 688              CONTAGEM             32145  900  MG                             
+    200     11                          3.977,80        4.051,30 AV PAULISTA 2073 HORSA 11 12 A SAO PAULO            01311  940  SP                             
+    201     11                          1.375,96        1.677,35 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    202     11                          6.882,90        7.040,69 R  MANOEL SALUSTIANO CAVALCANT DUARTINA             17470  000  SP                             
+    203     11                            317,36          365,60 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    204     11                            665,10          688,35 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      5                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    205     11                          1.576,30        1.588,25 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    206                                10.169,85       34.063,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    207     11                          2.646,06        2.738,55 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    208     11                         42.419,16       55.625,77 AV MASCARENHA MORAES 2412 SANT GUAJARA-MIRIM        76850  000  RO                             
+    209     11                         54.641,18       71.163,04 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    210     11                         21.876,77       29.933,73 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    211     11                         24.365,29       30.274,30 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    212     11                          8.354,42        9.086,63 ALAMEDA JOAQUIM EUGENIO DE LIM SAO PAULO            01403  001  SP                             
+    213     11                            767,07          793,87 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    214     11                            596,53          603,98 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    215     11                         34.767,68       45.768,38 R CHILE 508 LJ 02              RIBEIRAO PRETO       14020  610  SP                             
+    216     11                         20.577,79       24.390,78 RUA OSVALDO CRUZ 331 CENTRO    MONTE APRAZIVEL      15150  000  SP                             
+    217     11                          2.929,36        3.963,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    218     11                         20.738,87       88.057,17 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    219     11                            624,43          781,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    220     11                        232.080,67      232.080,67 BR 116 KM 439 KM 439 ARAPONGAL REGISTRO             11900  000  SP                             
+    221     11                            864,00          921,52 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    222     11                            219,60          239,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    223     11                            242,60          279,08 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    224     11                          1.770,88        2.225,21 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    225     11                          3.619,14        4.629,29 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    226     11                         28.630,96       31.260,47 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    227     11                          3.648,85        3.776,39 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    228     11                          2.442,56        9.504,17 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    229     11                        150.409,58     1324.425,15 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    230     11                         12.978,70       65.198,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    231     11                         49.828,19      214.324,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    232                                26.903,61      183.400,87 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    233     11                            922,81        1.141,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    234     11                            137,98          153,95 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    235     11                          9.648,16       11.194,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    236     11                            292,42          430,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    237     11                         15.255,50       20.998,09 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    238     11                            186,78          207,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    239     11                         12.336,80       14.817,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    240     11                          3.851,45        4.832,27 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    241     11                          1.184,39        1.188,87 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    242     11                            264,18          337,39 RUA DIRCE MACUCO SANDOVAL 226  PRESIDENTE PRUDENTE  19053  640  SP                             
+    243     11                          1.875,90        1.941,46 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    244     11                            299,19          309,62 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    245     11                            818,52          847,13 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    246     11                            270,40          490,20 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    247     11                         11.884,22       13.758,71 R SECUNDINO DOMINGUES          SAO PAULO            03223  110  SP                             
+    248     11                          2.933,17        2.989,31 AV DR CARDOSO DE MELO 409      SAO PAULO            04548  002  SP                             
+    249     11                         50.352,56       53.174,15 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    250     11                          2.057,45        2.113,11 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    251     11                         33.169,93       33.845,98 R  MANOEL SALUSTIANO CAVALCANT DUARTINA             17470  000  SP                             
+    252     11                            540,87          559,77 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    253     11                         33.190,68       46.075,61  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    254     11                            156,46          167,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    255     11                          1.781,65        1.843,93 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      6                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    256     11                         58.288,59       58.288,59 R JOSE PAULINO 109             SAO PAULO            01120  001  SP                             
+    257     11                          1.775,41        2.239,37 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    258     11                         16.114,07       21.208,03 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    259     11                          7.220,53        8.117,60  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    260     11                            532,48          920,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    261     11                            693,74          717,99 R ANTONIO RIBEIRO 110 CASA     LINS                 16402  197  SP                             
+    262     11                          1.803,30        1.826,08 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    263     11                         15.010,75       19.076,24 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    264     11                          2.173,71        2.837,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    265     11                            418,06          418,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    266     11                            178,51          184,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    267     11                            883,14        1.087,07 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    268     11                          3.708,87        3.806,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    269     11                            191,69          198,39 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    270     11                          1.991,68        2.061,29 R TREZE DE MAIO 647 SOB LJ SL  CAMPINAS             13010  071  SP                             
+    271     11                          1.453,16        2.365,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    272     11                            490,40          966,20 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    273     11                             90,87          107,41 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    274     11                         34.761,10       41.756,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    275     11                            277,86          486,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    276     11                            103,40          110,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    277     11                          1.343,76        1.687,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    278     11                            313,00          480,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    279     11                            429,09          528,98 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    280     11                            590,02          590,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    281     11                            738,41          744,63 R JOAO DOS SANTOS VERNECK 12 S SAO PAULO            04438  110  SP                             
+    282     11                            704,78        1.293,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    283     11                            723,89          732,79 RUA BEZERRA DE MENEZES 455     GUARULHOS            07051  160  SP                             
+    284     11                          1.771,27        1.833,19 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    285     11                         50.399,00       50.783,82 AV PROF MARIO T MARIANO 23 JD  ARARAQUARA           14808  122  SP                             
+    286     11                          1.415,12        1.415,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    287                                 8.238,54       23.439,39 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    288     11                          1.491,15        1.802,57 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    289     11                          1.483,29        1.523,57 R SANTO AMARO N 490 BELA VISTA SAO PAULO            01315  000  SP                             
+    290     11                         11.991,01       52.141,31 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    291     11                          1.593,68        1.649,38 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+    292     11                            747,16          773,28 R FRANCISCO SANCHES N1982 CID  SAO JOSE DO RIO PRET 15081  120  SP                             
+    293     11                            491,04          900,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    294     11                            191,13          209,01 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    295     11                          6.341,86        6.512,03 R SECUNDINO DOMINGUES          SAO PAULO            03223  110  SP                             
+    296     11                            762,33          900,54 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    297     11                          1.128,79        1.446,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    298     11                            551,20          657,34 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    299     11                          1.011,99        1.244,83 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    300     11                            734,81          912,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    301     11                          1.175,96        1.187,84 R ALFREDO DE MELO              SAO PAULO            08190  290  SP                             
+    302     11                            750,81          875,93 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    303     11                            720,00        3.366,73 00003                                               00003  001                                 
+    304     11                            887,53          906,31 RUA JURUPARI  104   JABAQUARA  SAO PAULO            04348  070  SP                             
+    305     11                            698,68          927,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    306     11                          3.540,14        3.540,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      7                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    307     11                            924,07          940,26 R LOUREIRO DA CRUZ 149 AP11 AC SAO PAULO            01529  000  SP                             
+    308     11                            669,16          669,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    309     11                            741,44        1.020,19 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    310     11                         85.344,42       87.300,90  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    311     11                            147,27          269,85 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    312     11                            147,27          269,85 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    313     11                            394,16          400,89 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    314     11                          1.519,24        1.519,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    315     11                          1.190,40        1.392,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    316     11                            543,45          728,69 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    317     11                            386,02          387,01 RUA BEZERRA DE MENEZES 455     GUARULHOS            07051  160  SP                             
+    318     11                            214,00          271,22 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    319     11                            135,46          137,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    320     11                          1.379,74        1.537,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    321     11                            399,55          491,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    322     11                            400,47        1.493,67 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    323     11                            140,43          142,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    324     11                            236,10          284,15 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    325     11                            699,52          732,28 R NOVA CIDADE 354 BROOKLIN SAO SAO PAULO            04547  000  SP                             
+    326     11                          1.142,72        1.318,21 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    327     11                            357,81          486,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    328     11                            169,39          171,99 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    329     11                          2.687,24        2.749,01 R TONELEIROS 1300              SAO PAULO            05056  001  SP                             
+    330     11                         14.718,68       19.837,25 MAL CASTELO BRANCO 400         SAO MIGUEL ARCANJO   18230  000  SP                             
+    331     11                            505,63          514,49 R JOSE PAULINO 109             SAO PAULO            01120  001  SP                             
+    332     11                          1.486,46        1.780,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    333     11                            539,98          544,53 R JOSE PAULINO 109             SAO PAULO            01120  001  SP                             
+    334     11                            861,83        1.056,49 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    335     11                             99,07          101,35 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    336     11                            348,78          401,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    337     11                          1.902,04        4.257,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    338     11                            912,68        1.125,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    339     11                            400,44          461,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    340     11                          1.092,54        1.116,58 R PROF VAHIA DE ABREU60 V OLIM SAO PAULO            04549  001  SP                             
+    341     11                          4.092,66        4.903,64 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    342     11                            647,95          704,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    343     11                            114,10          116,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    344     11                            468,43          576,31 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    345     11                            125,20          136,62 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    346     11                          3.351,61        4.358,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    347     11                            282,21          284,35 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    348     11                          2.549,05       11.451,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    349     11                            435,52          521,18 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    350     11                            171,70          181,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    351     11                            817,26          888,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    352     11                            592,56          764,38 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    353     11                            666,50          668,18 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    354     11                            514,30          567,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    355     11                          1.685,44        1.685,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    356     11                          2.911,60        3.606,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    357     11                          1.180,53        1.188,88 R CRUZEIRO S 2966/01           PORTO ALEGRE         90840  000  RS                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      8                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    358     11                            384,94          389,23 R CRACOVIA 280 CX 4 EUROPA     BELO HORIZONTE       31620  090  MG                             
+    359     11                          1.339,55        1.715,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    360     11                          6.482,76       13.180,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    361     11                            466,38          564,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    362     11                            660,36          786,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    363     11                          9.322,64      489.787,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    364     11                            530,93          537,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    365     11                            856,16        1.670,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    366     11                            595,86          719,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    367     11                          1.361,55        5.767,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    368     11                          1.426,78        5.131,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    369     11                          2.579,33        2.637,34 RUA ALFREDO DE MELO 832        SAO PAULO            08190  290  SP                             
+    370     11                          1.047,60        1.302,64 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    371     11                            111,73          114,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    372     11                            762,96        1.242,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    373     11                          1.090,76        1.429,29 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    374     11                            165,66          175,18 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    375     11                          2.344,04        2.645,51 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    376     11                         17.826,88       20.815,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    377     11                            869,36        1.034,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    378     11                            296,32          364,49 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    379     11                            333,14          335,50 RUA BEZERRA DE MENEZES 455     GUARULHOS            07051  160  SP                             
+    380     11                          7.734,15        9.758,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    381     11                            118,76          127,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    382     11                            170,16          178,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    383     11                            493,05          645,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    384     11                         20.895,36       26.629,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    385     11                          3.291,57        4.072,61 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    386     11                          1.521,74        1.521,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    387     11                            188,71          229,45 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    388     11                          8.839,04       10.464,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    389     11                            748,00          928,21 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    390     11                          2.120,34        2.502,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    391     11                            371,28          377,79 R JOAO DOS SANTOS VERNECK 12 S SAO PAULO            04438  110  SP                             
+    392     11                            129,68          137,48 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    393     11                            278,46          371,13 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    394     11                          1.386,98        1.693,64 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    395     11                          1.252,79        2.073,11 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    396     11                          2.166,68        2.395,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    397     11                            145,35          156,07 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    398     11                          1.870,33        1.908,70 RUA BEZERRA DE MENEZES 455     GUARULHOS            07051  160  SP                             
+    399     11                         84.625,80       88.885,43  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    400     11                            117,27          147,49 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    401     11                          1.300,00        4.591,12 TV VINTE E SEIS DE ABRIL 29  E SALVADOR             41925  355  BA                             
+    402     11                          1.387,84        1.762,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    403     11                          1.359,04        1.359,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    404     11                          1.452,20        2.115,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    405     11                            947,82        1.156,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    406     11                            108,80          114,71 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    407     11                            177,23          178,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    408     11                          1.315,86        1.341,80 AV FEIRA DE SANTANA  260   VAL SAO JOSE DOS CAMPOS  12238  000  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      9                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    409     11                          3.936,48        3.936,48 RUA ALFREDO DE MELO 832        SAO PAULO            08190  290  SP                             
+    410     11                            174,25          176,25 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    411     11                             95,05          101,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    412     11                          1.340,94        1.694,89 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    413     11                          1.927,36        2.340,79 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    414     11                            285,49          312,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    415     11                        192.540,26      232.185,79 RUA INOCENCIO VITO, VL STA MAR MIRANDA              79380  000  MS                             
+    416     11                            556,40          661,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    417     11                          4.163,73        4.404,69 R VOLUNTARIO DA PATRIA 1139    SAO PAULO            02011  100  SP                             
+    418     11                          1.499,93        1.714,87 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    419     11                            824,64        1.033,61 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    420     11                            626,44          813,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    421     11                            125,51          134,41 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    422     11                          1.097,19        1.328,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    423     11                            478,32          581,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    424     11                            279,81          281,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    425     11                            508,98          575,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    426     11                            171,15          188,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    427     11                            157,67          159,59 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    428     11                          1.000,90        1.331,59 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    429     11                            734,81          743,85 R RAGUEB CHOHFI                SAO PAULO            08375  000  SP                             
+    430     11                         10.778,67       12.117,80  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    431     11                          1.832,52        2.430,08 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    432     11                            850,44        1.302,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    433     11                            202,54          202,54 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    434     11                            675,98          814,99 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    435     11                         31.441,23       43.064,81 MAL CASTELO BRANCO 400         SAO MIGUEL ARCANJO   18230  000  SP                             
+    436     11                         32.654,97       33.912,15 RUA PRESIDENTE MEDICI          SORRISO              78890  000  MT                             
+    437     11                          1.402,62        1.437,80 R JORGE VICTOR VIEIRA          JUQUITIBA            06950  000  SP                             
+    438     11                            836,01          948,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    439     11                          1.216,92        2.218,62 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    440     11                          2.355,56        2.355,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    441     11                          1.776,28        1.815,82 R NOVA GRANADA 138 CASA VERDE  SAO PAULO            02522  050  SP                             
+    442     11                            710,23          711,60 R JOAO DOS SANTOS VERNECK 12 S SAO PAULO            04438  110  SP                             
+    443     11                            581,04          647,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    444     11                            309,96          388,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    445     11                             99,25          126,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    446     11                            158,14          166,13 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    447     11                          1.157,24        1.398,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    448     11                            118,56          124,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    449     11                            938,70        1.744,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    450     11                            310,92          346,45 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    451     11                            101,34          102,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    452     11                          2.156,03        2.193,25 00003                                               00003  001                                 
+    453     11                            300,73          382,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    454     11                            179,20          180,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    455     11                            447,98          447,98 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    456     11                             99,44          112,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    457     11                         10.758,85       12.095,52  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    458     11                          1.450,58        2.753,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    459     11                          1.307,30        6.718,93 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     10                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    460     11                            222,72          230,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    461     11                             99,06          101,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    462     11                         11.432,58       12.912,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    463     11                            742,56        1.241,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    464     11                            914,34        1.136,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    465     11                          1.978,32        2.508,97 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    466     11                            349,83          418,79 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    467     11                          3.012,80        6.083,22 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    468     11                          1.079,98        1.371,59 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    469     11                            774,96          946,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    470     11                          1.510,74        1.915,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    471     11                          2.168,12        3.609,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    472     11                            661,80          791,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    473     11                            880,98        1.107,03 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    474     11                            392,10          471,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    475     11                            128,00          136,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    476     11                            484,06          645,60 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    477     11                          1.913,23        2.478,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    478     11                            103,90          103,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    479     11                            889,52          993,09 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    480     11                          1.058,56        1.930,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    481     11                            981,15          993,50 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    482     11                          1.397,56        1.689,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    483     11                            390,38          444,79 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    484     11                          1.603,28        2.581,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    485     11                          1.460,22        1.885,23 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    486     11                            888,75        1.073,97 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    487     11                            406,06          462,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    488     11                            763,92          925,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    489     11                            257,64          295,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    490     11                          1.241,48        2.447,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    491     11                            162,00          165,09 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    492     11                          3.585,76        3.594,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    493     11                            698,61          837,95 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    494     11                            102,65          117,47 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    495     11                            159,62          171,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    496     11                          2.256,52        2.863,17 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    497     11                          1.071,74        1.683,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    498     11                            250,04          274,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    499     11                             91,94           94,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    500     11                            376,86          581,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    501     11                            796,92        1.244,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    502     11                            410,12          457,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    503     11                             85,80           96,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    504     11                          1.275,31        1.598,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    505     11                         84.843,64       88.443,50  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    506     11                          2.706,55        3.373,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    507     11                            288,60          511,76 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    508     11                            376,80          445,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    509     11                          1.719,24        2.005,85 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    510     11                            205,08          235,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     11                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    511     11                          1.174,46        1.786,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    512     11                            682,90          821,05 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    513                                 2.872,06       15.030,21 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    514     11                          1.208,00        1.554,48 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    515     11                          2.093,14        2.429,29 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    516     11                            309,60          380,64 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    517     11                          1.307,72        2.126,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    518     11                            555,60          669,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    519     11                          1.237,20        2.481,92 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    520     11                            237,92          378,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    521     11                          2.114,29        2.672,17 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    522     11                            915,30        1.100,43 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    523     11                             80,80          100,97 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    524     11                          1.767,32        1.862,38 R SERRA DE JAIRE 271 273 BELEM SAO PAULO            03175  010  SP                             
+    525     11                          1.037,03        1.223,29 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    526     11                            629,12        1.061,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    527     11                             84,28          143,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    528     11                            530,85          538,11 AL FRANCA 1050 CONJ 14 1 ANDAR SAO PAULO            01422  001  SP                             
+    529     11                            178,14          180,18 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    530     11                            387,05          412,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    531     11                            591,67          689,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    532     11                            301,49          335,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    533     11                            122,56          130,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    534     11                          1.342,14        1.355,44 R GEN VITORINO, 316            PORTO ALEGRE         90020  170  RS                             
+    535     11                          2.700,32        3.867,98 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    536     11                            830,30          980,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    537     11                          1.047,22        1.554,54 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    538     11                            964,44        1.355,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    539     11                          2.477,89        3.227,45 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    540     11                            970,10        1.205,73 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    541     11                            575,78          716,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    542     11                            314,76          350,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    543     11                            879,52        1.031,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    544     11                            977,70        1.592,08 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    545     11                          1.073,88        1.319,45 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    546     11                            347,87          400,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    547     11                            309,01          334,55 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    548     11                          1.108,54        1.509,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    549     11                            687,14          687,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    550     11                          2.077,66        2.787,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    551     11                             89,24           96,08 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    552     11                            116,95          118,75 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    553     11                            106,41          108,87 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    554     11                            349,97          396,33 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    555     11                            817,75        1.006,28 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    556     11                            742,56          778,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    557     11                             78,95           92,18 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    558     11                            256,00          313,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    559     11                            327,40          367,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    560     11                          1.757,25        2.206,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    561     11                            491,02          491,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     12                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    562     11                            199,52          222,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    563     11                            469,11          630,47 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    564     11                            199,18          217,62 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    565     11                            182,58          194,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    566     11                            374,48          445,26 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    567     11                            521,64          632,26 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    568     11                            655,50          788,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    569     11                            506,46          616,39 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    570     11                          1.127,42        1.502,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    571     11                          2.177,66        2.772,91 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    572     11                             73,79           94,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    573     11                            563,88          678,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    574     11                            102,55          104,13 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    575     11                          1.369,14        1.647,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    576     11                          4.093,06        4.679,73 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    577     11                          2.720,80        3.514,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    578     11                            246,09          299,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    579     11                            955,50        1.079,66 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    580     11                             83,02           92,20 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    581     11                          7.654,40        8.686,26 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    582     11                            793,40          973,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    583     11                            584,36        1.086,22 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    584     11                            152,56          170,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    585     11                          1.927,61        1.984,24 AV VITORIA, 91                 PORTO ALEGRE         91225  040  RS                             
+    586     11                            766,98        1.023,34 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    587     11                            429,96          654,98 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    588     11                            184,05          190,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    589     11                            240,67          302,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    590     11                            518,39          638,54 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    591     11                            132,38          148,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    592     11                             97,34          104,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    593     11                            281,14          286,52 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    594     11                            689,60          826,76 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    595     11                            644,10          723,98 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    596     11                            579,63          667,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    597     11                            111,21          143,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    598     11                            809,48          960,26 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    599     11                            200,65          225,08 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    600     11                          1.398,30        2.239,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    601     11                          1.006,60        1.266,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    602     11                             91,28          101,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    603     11                             81,38           90,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    604     11                          1.000,34        1.688,48 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    605     11                            249,28          262,92 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    606     11                            495,95        2.734,77 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    607     11                             49,82          181,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    608     11                          1.623,71        2.107,19 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    609     11                          1.401,24        1.403,84 R BR DE MIRACEMA 426 CENTRO                         28036  362                                 
+    610     11                          1.478,80        1.791,89 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    611     11                          1.250,70        1.604,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    612     11                            785,94        1.063,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     13                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    613                                12.792,63       73.492,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    614     11                            658,16        1.293,22 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    615     11                            135,06          137,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    616     11                            895,86        1.516,22 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    617     11                            749,52        1.267,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    618     11                          2.119,69        2.212,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    619     11                            329,52          404,76 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    620     11                          2.263,18        2.987,33 RUA VIELA 1 106                ALTO TAQUARI         78785  000  MT                             
+    621     11                          1.510,46        1.939,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    622     11                            296,16          347,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    623     11                            442,00          515,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    624     11                            390,10          476,41 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    625     11                          1.521,16        2.737,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    626     11                        161.871,24      196.564,98 R TENENTE AVELAR PIRES AZEVEDO SAO PAULO            02531  010  SP                             
+    627     11                          1.785,95        2.285,17 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    628     11                            291,49          348,37 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    629     11                            788,55          943,97 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    630     11                          1.142,40        1.142,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    631     11                            225,53          228,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    632     11                            200,91          228,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    633     11                            624,40          788,62 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    634     11                            171,12          193,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    635     11                            256,67          280,05 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    636     11                            590,03          723,43 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    637     11                             87,46           93,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    638     11                          1.816,07        2.299,85 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    639     11                             68,82          107,76 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    640     11                            703,30          868,34 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    641     11                          2.936,58        3.000,63 248A 36 QD 43 LOT 0 SET COIMBR GOIANIA              74535  190  GO                             
+    642     11                          3.107,98        4.038,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    643     11                            403,64          496,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    644     11                            140,02          221,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    645     11                            156,63          168,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    646     11                          2.349,92        3.132,27 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    647     11                            909,26        1.423,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    648     11                            513,83          623,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    649     11                            620,42          740,33 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    650     11                          4.446,30        9.041,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    651     11                             94,74          100,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    652     11                            235,27          266,14 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    653     11                          1.309,77        1.656,02 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    654     11                            581,71          740,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    655     11                            463,44          547,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    656     11                            484,60          484,60 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    657     11                            487,42          605,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    658     11                            503,53          664,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    659     11                            418,80          505,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    660     11                            187,98          190,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    661     11                          1.032,74        1.863,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    662     11                          1.630,96        1.630,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    663     11                            339,96          389,87 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     14                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    664     11                          1.085,36        1.383,41 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    665     11                            782,30          953,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    666                                 8.080,29       20.882,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    667     11                            339,22          461,34 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    668     11                            362,23          454,67 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    669     11                          1.319,34        2.388,22 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    670     11                            304,27          321,91 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    671     11                          1.738,38        2.201,13 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    672     11                            147,27          160,75 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    673     11                             70,70          111,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    674     11                            172,50          264,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    675     11                            105,55          117,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    676     11                            129,51          144,63 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    677     11                          1.378,62        2.397,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    678     11                            958,96        1.962,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    679     11                          1.032,22        1.260,90 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    680     11                            222,00          259,60 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    681     11                            232,93          306,23 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    682     11                            243,74          298,26 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    683     11                            160,81          172,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    684     11                            268,80          272,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    685     11                            477,97          563,64 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    686     11                            486,00          575,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    687     11                          1.108,30        1.108,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    688     11                            139,59          141,20 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    689     11                          4.775,11        5.368,36 RUA MARCOLINO MARTINS          PALMEIRA DAS MISSOES 98300  000  RS                             
+    690     11                          1.063,81        1.344,38 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    691     11                          2.217,78        3.654,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    692     11                            261,74          348,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    693     11                            231,71          241,21 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    694     11                            368,85          485,37 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    695     11                          1.806,37        2.220,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    696     11                            708,73          790,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    697     11                            694,92          938,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    698     11                            210,18          263,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    699     11                            130,02          134,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    700     11                            754,40          939,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    701     11                            444,08          876,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    702     11                            393,72          435,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    703     11                            780,24        1.407,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    704     11                             81,36           90,85 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    705     11                            935,00        1.131,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    706     11                            154,34          155,52 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    707     11                            126,90          131,83 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    708     11                          1.518,27        1.888,13 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    709     11                            963,37        1.256,35 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    710     11                            288,40          335,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    711     11                          1.438,40        1.735,68 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    712     11                            977,68        1.509,34 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    713     11                            996,03        1.259,05 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    714     11                            233,36          236,07 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     15                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    715     11                            483,28          623,67 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    716     11                          1.292,76        2.357,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    717     11                            252,48          293,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    718     11                          1.176,30        1.463,41 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    719     11                            672,50        1.293,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    720     11                            450,86          795,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    721     11                            203,62          238,18 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    722     11                            173,65          195,67 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    723     11                            286,48          302,17 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    724     11                            849,96        1.052,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    725     11                            257,55          296,57 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    726     11                          1.104,96        1.241,98 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    727     11                          1.318,34        1.831,99 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    728     11                            182,92          344,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    729     11                            380,28          467,88 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    730     11                          1.018,84        1.240,45 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    731     11                          3.905,34        4.074,63 AV VITORIA, 91                 PORTO ALEGRE         91225  040  RS                             
+    732     11                            196,73          241,71 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    733     11                            173,96          315,38 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    734     11                            551,73          626,48 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    735     11                            602,94          704,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    736     11                         85.359,73       92.058,74  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    737     11                          9.790,85       11.007,26  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    738     11                          1.275,44        1.586,05 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    739     11                            193,16          221,47 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    740     11                          1.975,93        2.619,45 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    741     11                            914,35        1.203,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    742     11                            532,60          654,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    743     11                            530,35          640,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    744     11                            317,25          323,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    745     11                            313,84          380,38 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    746     11                            776,26        1.359,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    747     11                          1.177,88        2.319,38 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    748     11                            588,70          708,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    749     11                            302,45          363,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    750     11                            576,81          702,28 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    751     11                            309,46          352,74 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    752     11                          2.066,40        2.613,09 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    753     11                            620,20          750,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    754     11                            491,22          552,25  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    755     11                          1.771,97        1.809,08 TV VINTE E SEIS DE ABRIL 29  E SALVADOR             41925  355  BA                             
+    756     11                          1.120,24        1.486,21 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    757     11                            484,68          590,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    758     11                            383,14          580,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    759     11                            557,40          683,76 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    760     11                            254,16          324,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    761     11                            139,27          140,34 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    762     11                            666,90          789,15 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    763     11                            696,59          877,52 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    764     11                            478,08          611,95 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    765     11                            283,58          304,71 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     16                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    766     11                            184,94          195,01 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    767     11                            138,44          151,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    768     11                            226,67          243,57 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    769     11                            785,46          961,30 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    770     11                            324,66          368,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    771     11                            348,16          415,71 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    772     11                            876,66        1.523,96 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    773     11                            247,58          328,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    774     11                            217,72          238,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    775     11                            818,44        1.071,92 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    776     11                            562,53          670,86 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    777     11                            712,85          874,89 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    778     11                             97,57          124,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    779     11                            171,22          191,46 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    780     11                            252,24          271,13 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    781     11                            399,76          669,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    782     11                            899,04        1.094,32 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    783     11                            697,97          868,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    784     11                            789,12          993,71 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    785     11                          1.788,49        2.224,24 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    786     11                          5.348,60        6.013,10  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    787     11                          1.923,24        2.480,10 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    788     11                            481,92          640,61 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    789     11                          1.038,77        1.058,21 R BR DE MIRACEMA 426 CENTRO                         28036  362                                 
+    790     11                          2.517,26        3.409,70 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    791     11                            172,70          209,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    792     11                          1.128,12        1.390,65 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    793     11                            242,30          265,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    794     11                            717,20          942,25 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    795     11                            270,54          287,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    796     11                            459,25          467,41 R SEBASTIAO VOSS 200           BLUMENAU             89015  560  SC                             
+    797     11                             97,38           98,50 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    798     11                            473,30          573,75 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    799     11                            117,88          126,72 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    800     11                         81.088,67       82.549,99  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    801     11                            780,75          783,70  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    802     11                         10.761,32       12.098,29  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    803     11                            798,91          806,82 RUA FLOR DO BESOURO,209        BELO HORIZONTE       30810  160  MG                             
+    804     11                          1.027,63        1.048,71 R SECUNDINO DOMINGUES          SAO PAULO            03223  110  SP                             
+    805     11                          3.144,92        3.201,92 AV BARAO CERRO LARGO, 695      ALVORADA             94850  170  RS                             
+    806     11                         40.881,13       50.321,77 R. CASA PARAGUAIA              CAMPO GRANDE         79070  250  MS                             
+    807     11                            232,30        1.654,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    808     11                          1.466,96        1.802,31 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    809     11                          1.604,49        4.647,79 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    810     11                            548,46          548,46 R CRUZEIRO S 2966/01           PORTO ALEGRE         90840  000  RS                             
+    811     11                          2.003,29       20.239,82 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    812                                 4.284,65       25.930,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    813     11                            341,04          348,47 R MAESTRO LOBO MESQUITA 272 TU BELO HORIZONTE       31844  180  MG                             
+    814     11                          8.464,94        8.908,93 R MAESTRO LOBO MESQUITA 272 TU BELO HORIZONTE       31844  180  MG                             
+    815     11                            800,00        3.110,02 UNICEF SBS ED SEGURADORAS 13 A                      00007  000                                 
+    816     11                          5.021,61       29.181,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     17                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    817     11                          2.654,81        2.718,72 R GEN VITORINO, 316            PORTO ALEGRE         90020  170  RS                             
+    818     11                          6.923,06        6.949,26  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    819     11                          6.884,98        6.911,04  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    820     11                             44,25           44,25 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    821     11                             44,25           44,25 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    822     11                             24,09           40,39 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    823     11                          3.370,44       15.319,60 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    824                                12.019,33       25.909,07 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    825     11                            178,88          186,80 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    826     11                            952,92          967,05 00003                                               00003  001                                 
+    827     11                         33.768,42       38.002,41 R MAMORE  501                  SAO PAULO            01128  020  SP                             
+    828     11                          1.018,86        1.268,00 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    829     11                            461,45        1.509,39 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    830     11                            628,28          785,58 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    831                                 8.565,28       54.508,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    832     11                         17.225,51       19.016,69 00003                                               00003  001                                 
+    833     11                            354,59          361,38 R NOVA GRANADA 138 CASA VERDE  SAO PAULO            02522  050  SP                             
+    834     11                          1.457,44        1.487,87 R NOVA CIDADE 354 BROOKLIN SAO SAO PAULO            04547  000  SP                             
+    835     11                          2.327,39        2.398,47 ALAMEDA JOAQUIM EUGENIO DE LIM SAO PAULO            01403  001  SP                             
+    836     11                            566,56          566,56 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    837     11                          3.585,90        4.031,41  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    838     11                          3.378,08        3.503,68 AV GUILHERME COTCHING 890      SAO PAULO            02113  012  SP                             
+    839     11                            230,54          239,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    840     11                          7.151,18        8.039,64  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    841     11                          7.163,84        8.053,87  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    842     11                          1.096,21        1.113,93 R NOVA GRANADA 138 CASA VERDE  SAO PAULO            02522  050  SP                             
+    843     11                            137,34          138,94 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    844     11                            735,96          845,17 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    845                                 3.318,18       12.737,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    846     11                            949,94       10.133,40 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    847     11                          1.451,31        1.649,64 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    848     11                            246,88          272,38 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    849     11                            656,00          728,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    850     11                            406,34          412,36 00003                                               00003  001                                 
+    851     11                            277,87          295,59 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    852     11                            195,48          226,44 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    853     11                            938,44          949,21 R NOVA GRANADA 138 CASA VERDE  SAO PAULO            02522  050  SP                             
+    854     11                          1.670,49        1.718,28 R BR DE MIRACEMA 426 CENTRO                         28036  362                                 
+    855     11                          1.638,48        1.992,55 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    856     11                          2.253,88        3.924,64 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    857                                 4.971,61       27.685,84 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    858     11                         33.098,59       34.372,85 RUA PRESIDENTE MEDICI          SORRISO              78890  000  MT                             
+    859                                 8.179,03       18.014,31 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    860     11                            221,15          295,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    861     11                         85.337,48       93.789,63  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    862     11                          4.916,70        4.935,31  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    863     11                            438,50          536,92 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    864     11                            210,50          256,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    865     11                            148,07          153,20 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    866     11                          2.866,16        3.744,12 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    867     11                            448,26          564,16 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     18                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+ REG.   INAD.1.PROD NAT.DIF.PARM  TOTAL LIQUIDO  TOTAL COBRANCA             ENDERECO                   CIDADE         CEP  COMPL UF                             
+    868     11                            931,50          949,17 R MAESTRO LOBO MESQUITA 272 TU BELO HORIZONTE       31844  180  MG                             
+    869     11                         13.001,94       14.542,67 00003                                               00003  001                                 
+    870     11                          2.103,52        2.515,42 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    871     11                            617,20          995,06 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    872     11                          8.373,00        9.291,31 R JORDANIA 1247 CASA B PEDRA A CONTAGEM             32183  190  MG                             
+    873     11                          9.519,48        9.885,97 RUA ABILIO DUTRA   4078        VOTUPORANGA          15503  022  SP                             
+    874     11                            883,71          895,80 RUA SILVA BUENO 509            SAO PAULO            04208  050  SP                             
+    875     11                          1.702,80        2.052,36 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    876     11                            198,71          200,22 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    877     11                          1.169,49        3.852,78 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    878     11                            288,82          320,04 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    879     11                            353,89          374,52 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    880     11                          4.732,53        5.320,49  RINCAO MULLER ZON RURAL       MATO QUEIMADO        97935  000  RS                             
+    881     11                            190,28          195,60 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    882     11                            634,43          651,67 AV MIGUEL ESTEFANO 289         SAO PAULO            04068  020  SP                             
+    883     11                          9.194,52        9.826,65 R BATAVIA 526                  SANTO ANDRE          09090  090  SP                             
+    884     11                            133,32          148,87 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    885     11                          1.205,70        1.208,80 R BR DE MIRACEMA 426 CENTRO                         28036  362                                 
+    886     11                          3.250,83        3.299,30 AV THOMAZ ALBERTO WHATELY 1221                      00003  390                                 
+    887     11                            164,34          208,54 NAVARRO ANDRADE 20 AP 82 PINHE SAO PAULO            05418  020  SP                             
+    888     11                            473,77          483,69 AV CENTRAL Q56 A L22           GOIANIA              74354  230  GO                             

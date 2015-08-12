@@ -1,0 +1,8 @@
+
+REES5120               SISTEMA DE REMESSA PARA ESCRITORIO              PAG.   1
+04/03/2015                   RELATORIO DE TOTALIZACAO                  13:30:02
+                           - TOTAIS - DADOS DA EMPRESA
+                   LIDOS DO CADASTRO DE CLIENTES .............            1
+                   LIDOS DO CADASTRO DE CONTA CORRENTE .......            2
+                   CLIENTES COM DADOS DA EMPRESA .............            1
+                   CLIENTES SEM DADOS DA EMPRESA .............            0

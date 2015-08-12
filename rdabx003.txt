@@ -1,0 +1,49 @@
+//RDABX003 JOB 'RDAB,4120,PR32','A299565',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//* ***    =======================================================      
+//* ***    FREQUENCIA - DIARIA                                          
+//* ***    =======================================================      
+//*                                                                     
+//STEP1    EXEC DB2M1HPU,                                               
+//       DYNAMNBR=20                                                    
+//*                                                                     
+//* ***    ----------------------------------------------------------*  
+//* ***    DESCARREGA TABELA RDABB009 DB2 EM ARQUIVO SEQUENCIAL         
+//* ***    PARA CARGA NA TABELA RDABB009 - AMBIENTE MZ1                 
+//* ***    ----------------------------------------------------------*  
+//*                                                                     
+//SYSPUNCH DD DSN=MX.RDAB.JM006S01.SYSPB009.CORR(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(00100,0040),RLSE),                                 
+//       DCB=(MX.A)                                                     
+//SYSREC00 DD DSN=MX.RDAB.JM006S01.RDABB009.CORR(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A)                                                     
+//SYSTSPRT DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSIN    DD *                                                         
+ UNLOAD TABLESPACE RDABD000.RDABS009                                    
+ DB2 YES                                                                
+ QUIESCE NO                                                             
+  SELECT CCGC_CPF,                                                      
+         CFLIAL_CGC,                                                    
+         CCTRL_CPF_CGC,                                                 
+         IPRIM_TTLAR_BASE                                               
+    FROM DB2PRD.PSSOA_JURID_BASE                                        
+   GROUP BY CCGC_CPF,                                                   
+            CFLIAL_CGC,                                                 
+            CCTRL_CPF_CGC,                                              
+            IPRIM_TTLAR_BASE                                            
+  ;                                                                     
+ OUTDDN (SYSREC00)                                                      
+ FORMAT DSNTIAUL                                                        
+ LOADDDN SYSPUNCH                                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

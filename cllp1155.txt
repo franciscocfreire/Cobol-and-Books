@@ -1,0 +1,408 @@
+//CLLP1155 JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=DB2                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTKUF9                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTKUG0                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTPXS2                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTRZL2                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=MJ.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO ARQDB2 POR ORDEM DE AGENCIA, CONTA COR-   
+//* ***    RENTE                                                        
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.ARQDBOUT.CLLP6442(0),                         
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=MX.CLLP.ARQDB22.CLA1155A(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0366,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,PD,A,16,4,PD,A,21,3,CH,A,24,4,PD,A,34,4,ZD,A,         
+              31,2,ZD,A,28,2,ZD,A)                                      
+ OMIT COND=(191,3,CH,EQ,C'025',OR,191,3,CH,EQ,C'064',OR,191,3,CH,EQ,    
+            C'072',OR,191,3,CH,EQ,C'073',OR,191,3,CH,EQ,C'090',         
+            OR,191,3,CH,EQ,C'091')                                      
+ OUTREC FIELDS=(1,14,16,24,40,20,77,7,84,2,124,8,108,8,140,8,191,43,    
+                349,3,357,100,484,8,530,3,591,100,116,8,457,10)          
+ OPTION HIPRMAX=200,DYNALLOC=(,32)                                      
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=CLLP6450                                            
+//*                                                                     
+//* ***    TRAG DO ARQUIVO ARQDB22 SELECIONADO                          
+//*                                                                     
+//ARQTRAG  DD DSN=MX.CLLP.PRV.ARQATU.CLASAGC2(0),                       
+//       DISP=SHR                                                       
+//ARQDBIN  DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQDBOUT DD DSN=MX.CLLP.ARQDBOUT.CLLP6450(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=366,RECFM=FB)                                  
+//RELATO   DD SYSOUT=%%FORM#KUF9,                                       
+//       DCB=(LRECL=0080,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=Y                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO ARQDB2 POR ORDEM DE AGENCIA, CONTA COR-   
+//* ***    RENTE                                                        
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.ARQDBOUT,                                     
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQDB22.CLAS1155.LEI(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0366,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,PD,A,15,4,PD,A,20,3,CH,A,23,4,PD,A,33,4,ZD,A,         
+              30,2,ZD,A,27,2,ZD,A)                                      
+ END                                                                    
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                         
+//       DISP=SHR                                                       
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00900))                                            
+//*                                                                     
+//STEP3A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO ARQDB2 POR ORDEM DE AGENCIA, CONTA COR-   
+//* ***    RENTE                                                        
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQDB22.CLAS1155(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0248,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTREC FIELDS=(1,248)                                                  
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=CLLP6455                                            
+//*                                                                     
+//* ***    TRAG DO ARQUIVO DE CODIGO DE OCORRENCIA 96                   
+//*                                                                     
+//ARQTRAG  DD DSN=MX.CLLP.PRV.ARQATU.CLASAGC2(0),                       
+//       DISP=SHR                                                       
+//ARQ96ANT DD DSN=MX.CLLP.PRV.ARQCOD96(0),                              
+//       DISP=SHR                                                       
+//ARQ96ATU DD DSN=MX.CLLP.ARQ96ATU(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(CYL,(000239,0047),RLSE),                                
+//       DCB=(MX.A,LRECL=202,RECFM=FB)                                  
+//RELATO   DD SYSOUT=%%FORM#KUG0,                                       
+//       DCB=(LRECL=0080,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=Y                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE CODIGO DE OCORRENCIAMENTO 96           
+//* ***    POR AGENCIA, CONTA, CARTEIRA, CONTRATO E VENCIMENTO          
+//*                                                                     
+//SORTIN   DD DSN=*.STEP4.ARQ96ATU,                                     
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.PRV.ARQCOD96(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(CYL,(000239,0047),RLSE),                                
+//       DCB=(MX.A,LRECL=0202,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,PD,A,7,4,PD,A,12,3,CH,A,15,4,PD,A)                    
+ END                                                                    
+//*                                                                     
+//STEP6    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE BLOQUEIO POR AGENCIA E CONTA           
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRV.ARQBLOQ.CLLP8676(0),                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQBLOQ.CLAS1155(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0032,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,5,CH,A,9,7,CH,A)                                        
+ END                                                                    
+//*                                                                     
+//STEP7    EXEC PGM=CLLP5541                                            
+//*                                                                     
+//* ***    EXCLUSAO DOS REGISTROS COM BLOQUEIO                          
+//*                                                                     
+//ARQBLOQ  DD DUMMY                                                     
+//ARQANT   DD DSN=*.STEP3A.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQDB22.CLLP5541(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=248,RECFM=FB)                                  
+//RELATO   DD SYSOUT=%%FORM#PXS2,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=Y                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8    EXEC PGM=CLLP5548                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO DE OCORRENCIAMENTO                        
+//*                                                                     
+//ACORMOR2 DD DSN=*.STEP5.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADADVOG DD DSN=MX.CLLP.PRV.CADADVOG(0),                              
+//       DISP=SHR                                                       
+//TEMPCARG DD DSN=*.STEP7.ARQATU,                                       
+//       DISP=OLD                                                       
+//TEMPCAR2 DD DSN=MX.CLLP.ARQDB22.CLLP1160(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=248,RECFM=FB)                                  
+//ARQREL2  DD DSN=MX.CLLP.RELADV.CLLP1155(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=110,RECFM=FBA)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=Y                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP9    EXEC PGM=CLLP2530                                            
+//*                                                                     
+//* ***    FORMATA CHAVE PARA CLASSIFICACAO E AGRUPAMENTO               
+//* ***    COM CARTEIRA DO LEASING ZERADA                               
+//*                                                                     
+//ARQANT   DD DSN=*.STEP7.ARQATU,                                       
+//       DISP=OLD                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU.CLLP2530(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=278,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP10   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CHAVE SOMANDO O VALOR DE COBRANCA             
+//*                                                                     
+//SORTIN   DD DSN=*.STEP9.ARQATU,                                       
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQATU.CLAS2530(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0278,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(265,14,CH,A)                                              
+ SUM FIELDS=(257,8,PD)                                                  
+ END                                                                    
+//*                                                                     
+//STEP11   EXEC PGM=CLLP2535                                            
+//*                                                                     
+//* ***    PARCELAS VINCENDAS                                           
+//* ***    FORMATA NO MESMO LAY-OUT DE PARCELAS VENCIDAS                
+//*                                                                     
+//ARQANT   DD DSN=MX.CLLP.S008225.PARTB054(0),                          
+//       DISP=OLD                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU.CLLP2535(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(019510,3902),RLSE),                                
+//       DCB=(MX.A,LRECL=278,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP12   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CHAVE SOMANDO O VALOR DE COBRANCA             
+//*                                                                     
+//SORTIN   DD DSN=*.STEP11.ARQATU,                                      
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQATU.CLAS2535(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(019460,3892),RLSE),                                
+//       DCB=(MX.A,LRECL=0278,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(265,14,CH,A)                                              
+ SUM FIELDS=(249,8,PD,257,8,PD)                                         
+ END                                                                    
+//*                                                                     
+//STEP13   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQDB22 PELO CAMPO CHAVE                          
+//*                                                                     
+//SORTIN   DD DSN=*.STEP9.ARQATU,                                       
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQDB22.CLAS2530(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=278,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(265,14,CH,A)                                              
+ END                                                                    
+//*                                                                     
+//STEP14   EXEC PGM=CLLP2540                                            
+//*                                                                     
+//* ***    INCLUI VALOR TOTAL DE VENCIDOS E VINCENDAS                   
+//*                                                                     
+//ARQANT   DD DSN=*.STEP10.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//ARQTOTAL DD DSN=*.STEP12.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU.CLLP2540(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=278,RECFM=FB)                                  
+//RELATO   DD SYSOUT=%%FORM#RZL2,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP15   EXEC PGM=CLLP2545                                            
+//*                                                                     
+//* ***    INCLUI VALOR TOTAL DE VENCIDOS E VINCENDAS                   
+//*                                                                     
+//ARQACUM  DD DSN=*.STEP13.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//ARQTOTAL DD DSN=*.STEP14.ARQATU,                                      
+//       DISP=OLD                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU.CLLP2545(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=278,RECFM=FB)                                  
+//RELATO   DD DSN=MX.CLLP.ARQATU.RELATO.CLLP2545(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0133,RECFM=FBM)                                
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP16   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQDB22 PELO CAMPO CHAVE, COM CARTEIRA DO         
+//* ***    LEASING DIFERENTE DE ZERO                                    
+//*                                                                     
+//SORTIN   DD DSN=*.STEP15.ARQATU,                                      
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQATU.CLAS2545(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=278,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,PD,A,15,4,PD,A,20,3,CH,A,23,4,PD,A,33,4,CH,A,         
+              30,2,CH,A,27,2,CH,A)                                      
+ END                                                                    
+//*                                                                     
+//STEP17   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    SALVA ARQUIVO MX.CLLP.PRV.ARQATU.CLASAGC2(0)                 
+//*                                                                     
+//ENT00001 DD DSN=MX.CLLP.PRV.ARQATU.CLASAGC2(0),                       
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=MX.CLLP.ARQATU.CLASAGC2(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(CYL,(000002,0001),RLSE),                                
+//       DCB=(MX.A,LRECL=0086,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=(Z,,AN01)                                          
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP18   EXEC PGM=PLAN7220                                            
+//*                                                                     
+//* ***    GERA ARQUIVO ZERADO PARA O PROXIMO PROCESSAMENTO             
+//*                                                                     
+//ZERA001  DD DSN=MX.CLLP.PRV.ARQATU.CLASAGC2(+1),                      
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0086,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=(Z,,AN01)                                          
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

@@ -1,0 +1,7 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP7368            B A N C O  B R A D E S C O  S / A                06/03/2015                                                                                 
+                   TABULACAO DE CLIENTES COM RESTRICOES                12:07:15                                                                                 
+                           NOS ORGAOS SPC/SERASA                                                                                                                
+        QTDE DE CLIENTES       VALOR DE COBRANCA           VALOR LIQUIDO                                                                                        
+             000005                     16.529,50                  8.475,22                                                                                     

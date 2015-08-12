@@ -1,0 +1,14 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO --- 
+                                                                                                                                     
+ARQUIVO LOGRJUR5 NOME        24/10/2014        23:27:17        - 1 -                                                                 
+                                                                                                                                     
+       CCLUB        CPF FILIAL CONTROLE NOME                                         AG          CONTA TP HATULZ                     
+------------ ---------- ------ -------- ---------------------------------------- ------ -------------- -- ----------                 
+   125287550  660000096      0       15 CLAUDIO FERREIRA PINTO                      545          46227 1  01.01.0001                 
+   125287550  660000096      0       15 CLAUDIO FERREIRA PINTO                      545          46227 1  01.01.0001                 
+   135018501     140792      0       91 GILBERTO RISCINHO BASTOS                   2144            392 1  01.01.0001                 
+   135018501     140792      0       91 GILBERTO RISCINHO BASTOS                   2144            392 1  01.01.0001                 
+   139333851     140792      0       91 GILBERTO RISCINHO BASTOS                   2144            392 1  01.01.0001                 
+   139333851     140792      0       91 GILBERTO RISCINHO BASTOS                   2144            392 1  01.01.0001                 
+   185251463     140792      0       91 GILBERTO RISCINHO BASTOS                   2144            392 1  28.05.2014                 
+   453806112  660000172      0        0 HUMBERTO MIRANDA DA CUNHA                  1646           4349 1  08.11.2012                 

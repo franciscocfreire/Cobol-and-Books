@@ -1,0 +1,115 @@
+//CLLPA162 JOB 'CLLP,4120,PR32','A172212',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=DB2                                                     
+//JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CPSSOA                                        
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.A006.SAICOMCR.IRES(0),                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.A006.SAICOMCR.IRESCLAS(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001670,0334),RLSE),                                
+//       DCB=(AD.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(36,26,A),FORMAT=BI                                        
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0005                                            
+//STEPLIB  DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//* ***    OBTEM CPSSOA-CATDTR E DADOS DE PJ, QUANDO NAO ENCONTRADOS    
+//* ***    ESTAO NAS TABS. C/BCO,AG E CTA                               
+//*                                                                     
+//ARQPARVV DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//PENDFICA DD DSN=AD.BRQ.A006.ARQFICA.FICAV000(0),                      
+//       DISP=OLD                                                       
+//ARQDAPES DD DSN=AD.BRQ.A006.LOGRJUR5(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(005650,1130),RLSE),                                
+//       DCB=(AD.A,LRECL=500,RECFM=FB)                                  
+//RELVAZIO DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELTOTAL DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELNENCO DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0132,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CPF/CNPJ, STATUS E DATA DE ATUALIZACAO        
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.ARQDAPES,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.A006.ARQDAPES.CLAS(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(005650,1130),RLSE),                                
+//       DCB=(AD.A,LRECL=0500,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,5,PD,A,6,3,PD,A,9,2,PD,A,469,2,CH,A,465,4,CH,D,         
+              462,2,CH,D,459,2,CH,D)                                    
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=RDAB0007                                            
+//*                                                                     
+//* ***    RETIRAR DUPLICIDADE DE CHAVES (CPSSOA)                       
+//*                                                                     
+//ARQPARVV DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQPEFIS DD DSN=AD.BRQ.A006.SAICOMCR.PEFIS(+1),                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001220,0244),RLSE),                                
+//       DCB=(AD.A,LRECL=150,RECFM=FB)                                  
+//ARQPEJUR DD DSN=AD.BRQ.A006.SAICOMCR.PEJUR(+1),                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000090,0018),RLSE),                                
+//       DCB=(AD.A,LRECL=150,RECFM=FB)                                  
+//ARQDAPES DD DSN=AD.BRQ.A006.LOGRJUR(+1),                              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(004340,0868),RLSE),                                
+//       DCB=(AD.A,LRECL=500,RECFM=FB)                                  
+//RELVAZIO DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELTOTAL DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CPSSOA-CADTR                                  
+//*                                                                     
+//SORTIN   DD DSN=*.STEP4.ARQPEJUR,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.A006.SAICOMCR.PEJURCLA(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000090,0018),RLSE),                                
+//       DCB=(AD.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(62,26,A),FORMAT=BI                                        
+ END                                                                    
+//*                                                                     
+//SOLTA    EXEC AV,                                                     
+//       J=CLLP0163,                                                    
+//       DS=AD.BRQ.DESAFICA.PROD                                        
+//*                                                                     

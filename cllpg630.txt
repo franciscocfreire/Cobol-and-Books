@@ -1,0 +1,824 @@
+      *---------------------------------------------------------------* 
+       ID DIVISION.                                                     
+      *---------------------------------------------------------------* 
+                                                                        
+       PROGRAM-ID.     CLLPG630.                                        
+      ***************************************************************** 
+      *     PROGRAMADOR : MARCIO                C.P.M                 * 
+      *     SUPERVISOR  : ELZA                  C.P.M                 * 
+      *     ANALISTA    : LOURIVAL SANTI        GP.82                 * 
+      *     DATA        : OUTUBRO/97                                  * 
+      *                                                               * 
+      *     OBJETIVO    :    - LER ARQUIVO E SEPARA-LO E ARQUIVO      * 
+      *                   LADO1 E ARQUIVO LADO2.                      * 
+      *                      - ESTE PROGRAMA EH COPIA DO PROGRAMA     * 
+      *                   LPCL3620.                                   * 
+      *                                                               * 
+      *     ENTRADA     :                                             * 
+      *           AVISOS   -   ARQUIVO CRIADO PELOS PGMS LPCL3401 E   * 
+      *                   LPCL3610 - OS REGISTROS NAO ESTAO EM ORDEM, * 
+      *                   CONTUDO SERAM COLOCADOS POSTERIORMENTE  DE- * 
+      *                   PENDENDO DO TIPO(POS. 273) QUE VIER.        * 
+      *                        SE VIER TIPO = 1 SERA CLASSIFICADO POR * 
+      *                   CEP(POS. 91 A 93)   E   NOME DO RESPONSAVEL * 
+      *                   (POS. 23 A 62)  SENAO SERA CLASSIFICADO POR * 
+      *                   CD(POS. 230 A 232), AGENCIA(POS. 1 A 3),    * 
+      *                   CEP(POS. 211 A 213) E ENDER(POS. 186 A 200) * 
+      *                                                               * 
+      *     SAIDA       :                                             * 
+      *           LADO1    -   CONTERA' A PRIMEIRA METADE DO TOTAL DE * 
+      *                   REGISTROS CONTIDOS NO ARQUIVO  'AVISOS'   E * 
+      *                   CADA REGISTRO DE 'LADO1' TERA O SEU  NUMERO * 
+      *                   DE SEQUENCIA DE 1 EM 1. O PRIMEIRO REGISTRO * 
+      *                   TERA 1 E O ULTIMO TERA O NUMERO QUE CORRES- * 
+      *                   PONDE A SUA METADE.                         * 
+      *                                                               * 
+      *           LADO2    -   CONTERA' A SEGUNDA  METADA DO TOTAL DE * 
+      *                   REGISTROS. ENTRETANTO O PRIMEIRO   REGISTRO * 
+      *                   TERA O NUMERO REFERENTE A METADE DO TOTAL.  * 
+      *                                                               * 
+      *           OS ARQUIVOS 'LADO1' E 'LADO2' ESTARAM EM ORDEM.     * 
+      *                                                               * 
+      *           CONTAVIS -   CONTERA' A TABULACAO POR CEP DOS REGIS * 
+      *                   TROS DE 'AVISOS' CLASSIFICADOS  E  GRAVADOS * 
+      *                   EM 'LADO1' E 'LADO2'. CADA REGISTRO TERA  O * 
+      *                   PRIMEIRO E ULTIMO NUMERO SEQUENCIAL DE CADA * 
+      *                   QUEBRA DE CEP.                              * 
+      *                                                               * 
+      *           DATATECL -   CONTERA APENAS UM REGISTRO COM A DATA  * 
+      *                   TECLADA PELO OPERADOR NO FORMATO DDMMAAAA.  * 
+      *                                                               * 
+      *           CEPFAC   -   CONTERA OS REGISTROS DOS CLIENTES COM  * 
+      *                    CEP MAIOR OU IGUAL A 1000.                 * 
+      *                                                               * 
+      *     OBS. GERAL -       OS ARQ.S 'CONTAVIS' E 'DATATECL' SERAO * 
+      *                   GRAVADOS APENAS QUANDO VIER TIPO = 1.       * 
+      *                                                               * 
+      ***************************************************************** 
+      *===============================================================* 
+      *                       A L T E R A C A O                       * 
+      *---------------------------------------------------------------* 
+      *                                                               * 
+      *      PROGRAMADOR  : MATEUS LANDEIRA             - CPM/FPOLIS  * 
+      *      ANALISTA CPM : JORGE SCHREIBER             - CPM/FPOLIS  * 
+      *      ANALISTA     : GILBERTO  -  G&P            - GP/90       * 
+      *      DATA         : 21/01/2003                                * 
+      *                                                               * 
+      *      OBJETIVO     : INCLUSAO DE ARQUIVO DE SAIDA.             * 
+      *                                                               * 
+      *===============================================================* 
+      *                       A L T E R A C A O                       * 
+      *---------------------------------------------------------------* 
+      *                                                               * 
+      *    PROGRAMADOR  : MATEUS LANDEIRA              - CPM/FPOLIS   * 
+      *    ANALISTA CPM : SILVANA MACHADO              - CPM/FPOLIS   * 
+      *    ANALISTA     : JUNIOR - G&P                 - GRUPO 90     * 
+      *    DATA         : 25/08/2003                                  * 
+      *                                                               * 
+      *    OBJETIVO     :                                             * 
+      *      INCLUSAO DE CAMPOS NO ARQUIVO DE SAIDA CEPFAC.           * 
+      *                                                               * 
+      *===============================================================* 
+      *               B R Q     I T     S E R V I C E S                *
+      *================================================================*
+      *                       A L T E R A C A O                        *
+      *----------------------------------------------------------------*
+      *    PROGRAMADOR.:  HENRIQUE GUIMARAES      - BRQ                *
+      *    ANALISTA....:  HENRIQUE GUIMARAES      - BRQ                *
+      *    DATA........:  13/04/2014                                   *
+      *----------------------------------------------------------------*
+      *    OBJETIVO....:  ADAPTACOES PARA A LEI DA TRANSPARENCIA       *
+      *    TROCA BOOK INTERNA POR I#CLLPPN.                            *
+      *    ALTERAR SAIDA DE 262 PARA 1290.                             *
+      *    ELIMINAR A CRIACAO DO LADO2.                                *
+      *    PROJETO 13-0358                                             *
+      *================================================================*
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       ENVIRONMENT DIVISION.                                            
+      *---------------------------------------------------------------* 
+                                                                        
+       CONFIGURATION SECTION.                                           
+       SPECIAL-NAMES.                                                   
+           DECIMAL-POINT IS COMMA.                                      
+                                                                        
+       INPUT-OUTPUT SECTION.                                            
+       FILE-CONTROL.                                                    
+                                                                        
+           SELECT  AVISOS      ASSIGN  UT-S-AVISOS                      
+                   FILE  STATUS  IS WRK-FS-AVISOS.                      
+                                                                        
+                                                                        
+           SELECT  PARAMETR    ASSIGN  UT-S-PARAMETR                    
+                   FILE  STATUS  IS WRK-FS-PARAMETR.                    
+                                                                        
+           SELECT  LADO1       ASSIGN  UT-S-LADO1                       
+                   FILE  STATUS  IS WRK-FS-LADO1.                       
+                                                                        
+           SELECT  CONTAVIS    ASSIGN  UT-S-CONTAVIS                    
+                   FILE  STATUS  IS WRK-FS-CONTAVIS.                    
+                                                                        
+           SELECT  DATATECL    ASSIGN  UT-S-DATATECL                    
+                   FILE  STATUS  IS WRK-FS-DATATECL.                    
+                                                                        
+           SELECT  CEPFAC      ASSIGN  UT-S-CEPFAC                      
+                   FILE  STATUS  IS WRK-FS-CEPFAC.                      
+                                                                        
+           SELECT  SORTIPOS    ASSIGN  UT-S-SORTIPOS.                   
+                                                                        
+       EJECT                                                            
+      *---------------------------------------------------------------* 
+       DATA DIVISION.                                                   
+      *---------------------------------------------------------------* 
+                                                                        
+       FILE SECTION.                                                    
+                                                                        
+       FD  PARAMETR     LABEL RECORD IS STANDARD                        
+                          RECORDING MODE IS F                           
+                          BLOCK CONTAINS 0 RECORDS.                     
+                                                                        
+       01  REG-PARAMETR.                                                
+           03  FILLER                  PIC X(100).                      
+                                                                        
+       FD  AVISOS         LABEL RECORD IS STANDARD                      
+                          RECORDING MODE IS F                           
+                          BLOCK CONTAINS 0 RECORDS.                     
+                                                                        
+           COPY 'I#CLLPPN'.                                             
+                                                                        
+       FD  LADO1          LABEL RECORD IS STANDARD                      
+                          RECORDING MODE IS F                           
+                          BLOCK CONTAINS 0 RECORDS.                     
+                                                                        
+       01  REG-LADO1.                                                   
+           03  FILLER                  PIC X(1290).                     
+                                                                        
+       FD  CONTAVIS       LABEL RECORD IS STANDARD                      
+                          RECORDING MODE IS F                           
+                          BLOCK CONTAINS 0 RECORDS.                     
+                                                                        
+       01  REG-CONTAVIS-CAB-LOT.                                        
+           03  ZEROS1                  PIC 9(05) COMP-3.                
+           03  CON-CONTRATO            PIC 9(07) COMP-3.                
+           03  CON-DATA-POST           PIC 9(09) COMP-3.                
+           03  ZEROS2                  PIC 9(07) COMP-3.                
+           03  BRANCO1                 PIC X(05).                       
+                                                                        
+       01  REG-CONTAVIS-DETALHE.                                        
+           03  CON-CEP                 PIC 9(05) COMP-3.                
+           03  CON-QTDE-EXTR           PIC 9(07) COMP-3.                
+           03  CON-NUM-PRI-EXTR        PIC 9(07) COMP-3.                
+           03  CON-NUM-ULT-EXTR        PIC 9(07) COMP-3.                
+           03  BRANCO2                 PIC X(06).                       
+                                                                        
+       FD  DATATECL       LABEL RECORD IS STANDARD                      
+                          RECORDING MODE IS F                           
+                          BLOCK CONTAINS 0 RECORDS.                     
+                                                                        
+       01  REG-DATATECL.                                                
+           03  DATA-TECL.                                               
+               05  DIA                 PIC 99.                          
+               05  MES                 PIC 99.                          
+               05  ANO                 PIC 9(4).                        
+                                                                        
+       FD  CEPFAC         LABEL RECORD IS STANDARD                      
+                          RECORDING MODE IS F                           
+                          BLOCK CONTAINS 0 RECORDS.                     
+                                                                        
+       01  REG-CEPFAC.                                                  
+           03  CEP                     PIC 9(05).                       
+           03  DT-FRANQUIA.                                             
+               05  DIA                 PIC 9(02).                       
+               05  MES                 PIC 9(02).                       
+               05  ANO                 PIC 9(04).                       
+           03  ROTINA                  PIC X(08).                       
+           03  USUARIO                 PIC 9(04).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      *       REG-SORTIPO1 SERA' USADO QUANDO NO CAMPO 'SPC-TIPO'  DO * 
+      * ARQUIVO 'AVISOS' VIER TIPO = 1, CASO CONTRARIO SERA' USADO  O * 
+      * REG-SORTIPOX.                                                 * 
+      *       REG-SORTIPOX, IDENTIFICA OS OUTROS POSSIVEIS TIPOS  QUE * 
+      * PODERAM VIR ALEM DO TIPO = 1.                                 * 
+      *---------------------------------------------------------------* 
+       SD  SORTIPOS.                                                    
+       01  REG-SORTIPO1.                                                
+           03  FILLER                  PIC X(20).                       
+           03  ST1-NOM-RESPONS         PIC X(40).                       
+           03  FILLER                  PIC X(129).                      
+           03  ST1-CEP                 PIC 9(05).                       
+           03  FILLER                  PIC X(1096).                     
+                                                                        
+       01  REG-SORTIPOX.                                                
+           03  FILLER                  PIC X(013).                      
+           03  STX-AGENCIA             PIC 9(05) COMP-3.                
+           03  FILLER                  PIC X(1153).                     
+           03  STX-END-AGENCIA         PIC X(25).                       
+           03  STX-END-R REDEFINES STX-END-AGENCIA.                     
+               05  STX-END-186A200     PIC X(15).                       
+               05  STX-END-201A210     PIC X(10).                       
+           03  STX-CEP-AGENCIA         PIC 9(09) COMP-3.                
+           03  FILLER                  PIC X(16).                       
+           03  STX-CD                  PIC 9(05) COMP-3.                
+           03  FILLER                  PIC X(72).                       
+                                                                        
+       EJECT                                                            
+      *---------------------------------------------------------------* 
+       WORKING-STORAGE SECTION.                                         
+      *---------------------------------------------------------------* 
+                                                                        
+       77  FILLER                      PIC X(25) VALUE                  
+              'INICIO DA WORKING-STORAGE'.                              
+       77  ACU-REG-LIDOS               PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  ACU-METADE-REG              PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  ACU-RESTO                   PIC 9            VALUE ZERO.     
+       77  ACU-QTDE-LADO1              PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  AUX-CEP                     PIC 9(05) COMP-3 VALUE ZEROS.    
+       77  AUX-QTDE                    PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  AUX-PRI-EXTR                PIC 9(07) COMP-3 VALUE 1.        
+       77  AUX-ULT-EXTR                PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  AUX-QTDE-EXTR               PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  WRK-JOBNAME                 PIC X(08)        VALUE SPACES.   
+       77  WRK-JOBNUMBER               PIC 9(05)        VALUE ZEROS.    
+       77  WRK-POOL1205                PIC X(08)   VALUE 'POOL1205'.    
+                                                                        
+       77  WRK-ABEND                   PIC  S9(04) COMP   VALUE +1111.  
+                                                                        
+       77  WRK-FS-AVISOS               PIC   X(02)        VALUE SPACES. 
+       77  WRK-FS-PARAMETR             PIC   X(02)        VALUE SPACES. 
+       77  WRK-FS-LADO1                PIC   X(02)        VALUE SPACES. 
+       77  WRK-FS-LADO2                PIC   X(02)        VALUE SPACES. 
+       77  WRK-FS-CONTAVIS             PIC   X(02)        VALUE SPACES. 
+       77  WRK-FS-DATATECL             PIC   X(02)        VALUE SPACES. 
+       77  WRK-FS-CEPFAC               PIC   X(02)        VALUE SPACES. 
+                                                                        
+       77  WRK-RE-SORTIPOS             PIC   9(02)        VALUE ZEROS.  
+                                                                        
+       77  WRK-FLAG                    PIC   X(01)        VALUE  '1'.   
+                                                                        
+       01  WRK-REG-PARAMETR.                                            
+           03  WRK-DAT-ARQ             PIC 9(010)   VALUE ZEROS.        
+           03  FILLER                  PIC X(092)   VALUE SPACES.       
+                                                                        
+                                                                        
+       01  ROTINA-DE-DATAS-FERI.                                        
+           03  DATA-ENVIADA-PARA-FERI  PIC 9(09) VALUE ZEROS COMP-3.    
+           03  STATUS-FERI             PIC X     VALUE SPACE.           
+           03  FILLER                  PIC X(60) VALUE SPACES.          
+                                                                        
+       01  WRK-DATA-TECLADA            PIC X(10).                       
+       01  WRK-DATA-TECL-R REDEFINES WRK-DATA-TECLADA.                  
+           03  DIA                     PIC 99.                          
+           03  BARR-1                  PIC X.                           
+           03  MES                     PIC 99.                          
+           03  BARR-2                  PIC X.                           
+           03  ANO                     PIC 9999.                        
+                                                                        
+       01  WRK-DATA.                                                    
+           03  ANO                     PIC 9999.                        
+           03  MES                     PIC 99.                          
+           03  DIA                     PIC 99.                          
+       01  WRK-DATA-R REDEFINES WRK-DATA       PIC 9(08).               
+                                                                        
+      *---------------------------------------------------------------* 
+      * REGISTRO AUXILIAR UTILIZADO NA GRAVACAO DO ARQ. 'LADO1'       * 
+      *---------------------------------------------------------------* 
+       01  REG-LADOS.                                                   
+           03  LDS-1A274               PIC X(1286).                     
+           03  LDS-SEQUENCIAL          PIC 9(007) COMP-3.               
+                                                                        
+       77  FILLER              PIC X(22)   VALUE                        
+              'FIM DA WORKING-STORAGE'.                                 
+      *---------------------------------------------------------------* 
+       LINKAGE  SECTION.                                                
+      *---------------------------------------------------------------* 
+       01  LKG-PARAMETROS.                                              
+           03   LKG-TAMANHO     PIC 9(04)   COMP.                       
+           03   LKG-DADOS.                                              
+            05  LKG-DATA-INFORMADA.                                     
+             07 LKG-DATA-DD     PIC 9(02).                              
+             07 LKG-BARR1       PIC X(01).                              
+             07 LKG-DATA-MM     PIC 9(02).                              
+             07 LKG-BARR2       PIC X(01).                              
+             07 LKG-DATA-AAAA   PIC 9(04).                              
+            05  LKG-DATA-INFORMADA-R REDEFINES LKG-DATA-INFORMADA       
+                                PIC X(10).                              
+       EJECT                                                            
+      *---------------------------------------------------------------* 
+       PROCEDURE DIVISION     USING  LKG-PARAMETROS.                    
+      *---------------------------------------------------------------* 
+                                                                        
+           OPEN    INPUT   AVISOS PARAMETR                              
+                   OUTPUT  LADO1       CONTAVIS DATATECL CEPFAC.        
+                                                                        
+           IF  WRK-FS-AVISOS   NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA ABERTURA DO AVISOS        *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-AVISOS             
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-PARAMETR NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA ABERTURA DO PARAMETR      *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-PARAMETR           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-LADO1    NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA ABERTURA DO LADO1         *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-LADO1              
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-CONTAVIS  NOT EQUAL  '00'                         
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA ABERTURA DO CONTAVIS      *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-CONTAVIS           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-DATATECL  NOT EQUAL  '00'                         
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA ABERTURA DO DATATECL      *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-DATATECL           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-CEPFAC   NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA ABERTURA DO CEPFAC        *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-CEPFAC             
+                         '                 *'                           
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+           CALL 'POOL0560'             USING WRK-JOBNAME                
+                                             WRK-JOBNUMBER.             
+                                                                        
+           IF  RETURN-CODE             NOT EQUAL ZEROS                  
+               DISPLAY '********* CLLPG630 **********'                  
+               DISPLAY '*                           *'                  
+               DISPLAY '* ERRO NO ACESSO A POOL0560 *'                  
+               DISPLAY '*                           *'                  
+               DISPLAY '********* CLLPG630 **********'                  
+               MOVE SPACES         TO WRK-JOBNAME                       
+           END-IF.                                                      
+      *---------------------------------------------------------------* 
+      *       A LEITURA DO ARQUIVO DE PARAMETROS                      * 
+      *---------------------------------------------------------------* 
+                                                                        
+           READ PARAMETR INTO WRK-REG-PARAMETR.                         
+                                                                        
+           IF  WRK-FS-PARAMETR  EQUAL  '10'                             
+               GO TO 000-ENCERRA-PROGRAMA.                              
+                                                                        
+           IF  WRK-FS-PARAMETR NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ****************'      
+               DISPLAY   '*  ERRO NA LEITURA DO PARAMETR        *'      
+               DISPLAY   '*                                     *'      
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-PARAMETR           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ****************'      
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+            MOVE WRK-DAT-ARQ TO WRK-DATA-TECLADA.                       
+      *---------------------------------------------------------------* 
+      *       A LEITURA DO PRIMEIRO REGISTRO NESTE PONTO, POSSIBILITA * 
+      *  IDENTIFICAR QUAL CLASSIFICACAO SERA' EXECUTADA DE ACORDO COM * 
+      *  O TIPO QUE VIER NESTE REGISTRO. SERA' TESTADO SOMENTE O PRI- * 
+      *  MEIRO REG. DO ARQ. 'AVISOS'.                                 * 
+      *---------------------------------------------------------------* 
+                                                                        
+       000-TESTE-PRIM-REG.                                              
+      *------------------*                                              
+                                                                        
+           READ AVISOS.                                                 
+                                                                        
+           IF  WRK-FS-AVISOS  EQUAL  '10'                               
+               GO TO 000-ENCERRA-PROGRAMA.                              
+                                                                        
+           IF  WRK-FS-AVISOS  NOT EQUAL  '00'                           
+               DISPLAY   '************* CLLPG630 ****************'      
+               DISPLAY   '*  ERRO NA LEITURA DO AVISOS          *'      
+               DISPLAY   '*                                     *'      
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-AVISOS             
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ****************'      
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  SPC-TIPO EQUAL  1                                        
+               SORT SORTIPOS ASCENDING KEY ST1-CEP                      
+                                           ST1-NOM-RESPONS              
+                    INPUT PROCEDURE 100-ORDENA-TP1                      
+                   OUTPUT PROCEDURE 300-GRAVA-TODOS-ARQS-SAIDA          
+               PERFORM  100-TESTA-SORT-RETURN                           
+      *---------------------------------------------------------------* 
+      * APOS EXECUTAR O SORT, GRAVACAO DO ULTIMO REG. DE 'CONTAVIS'.  * 
+      *---------------------------------------------------------------* 
+               MOVE AUX-CEP       TO CON-CEP                            
+               MOVE AUX-QTDE-EXTR TO CON-QTDE-EXTR                      
+               MOVE AUX-PRI-EXTR  TO CON-NUM-PRI-EXTR                   
+               MOVE AUX-ULT-EXTR  TO CON-NUM-ULT-EXTR                   
+               MOVE SPACES        TO BRANCO2                            
+               PERFORM  500-GRAVAR-CEPFAC                               
+               WRITE REG-CONTAVIS-DETALHE                               
+               PERFORM  350-TESTA-FS-CONTAVIS                           
+           ELSE                                                         
+               SORT SORTIPOS ASCENDING KEY STX-CD                       
+                                           STX-AGENCIA                  
+                                           STX-CEP-AGENCIA              
+                                           STX-END-186A200              
+                    INPUT PROCEDURE 200-ORDENA-DIFER-TP1                
+                   OUTPUT PROCEDURE 400-GRAVA-LADOS                     
+               PERFORM  100-TESTA-SORT-RETURN.                          
+                                                                        
+                                                                        
+      *-----------------------------------*                             
+       100-TESTA-SORT-RETURN   SECTION.                                 
+      *-----------------------------------*                             
+                                                                        
+           IF  SORT-RETURN  NOT EQUAL ZEROS                             
+               MOVE  SORT-RETURN  TO  WRK-RE-SORTIPOS                   
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*        ERRO  RETURN  SORTIPOS      *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-RE-SORTIPOS           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+       100-99-TESTA-S-RETURN.                                           
+           EXIT.                                                        
+                                                                        
+                                                                        
+       000-ENCERRA-PROGRAMA.                                            
+      *--------------------*                                            
+           CLOSE AVISOS LADO1       CONTAVIS DATATECL CEPFAC            
+                 PARAMETR.                                              
+                                                                        
+           IF  WRK-FS-AVISOS   NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NO FECHAMENTO  AVISOS        *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-AVISOS             
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-LADO1    NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NO FECHAMENTO DO LADO1       *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-LADO1              
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-CONTAVIS  NOT EQUAL  '00'                         
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NO FECHAMENTO DO CONTAVIS    *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-CONTAVIS           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-DATATECL  NOT EQUAL  '00'                         
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NO FECHAMENTO DO DATATECL    *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-DATATECL           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+                                                                        
+           IF  WRK-FS-CEPFAC   NOT EQUAL  '00'                          
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NO FECHAMENTO DO CEPFAC      *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-CEPFAC             
+                         '                 *'                           
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+           STOP RUN.                                                    
+                                                                        
+       EJECT                                                            
+      *---------------------------------------------------------------* 
+      *    NAS ROTINAS 100-10-SOMA-REG-SORTIPO1 E                     * 
+      *                200-10-SOMA-REG-SORTIPOX SERAM SOMADOS A QTDES * 
+      *  DE REG. EM 'AVISO' CLASSIFICADOS EM 'SORTIPOS'.              * 
+      *---------------------------------------------------------------* 
+       100-ORDENA-TP1 SECTION.                                          
+      *----------------------*                                          
+       100-10-SOMA-REG-SORTIPO1.                                        
+      *------------------------*                                        
+           MOVE REG-SPC    TO REG-SORTIPO1.                             
+           ADD 1           TO ACU-REG-LIDOS.                            
+           RELEASE REG-SORTIPO1.                                        
+                                                                        
+           READ AVISOS.                                                 
+                                                                        
+           IF  WRK-FS-AVISOS  EQUAL  '10'                               
+               GO TO 100-ORDENOU-TP1.                                   
+                                                                        
+           IF  WRK-FS-AVISOS  NOT EQUAL  '00'                           
+               DISPLAY   '************* CLLPG630 ****************'      
+               DISPLAY   '*  ERRO NA LEITURA DO AVISOS          *'      
+               DISPLAY   '*                                     *'      
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-AVISOS             
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ****************'      
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+           GO TO 100-10-SOMA-REG-SORTIPO1.                              
+                                                                        
+       100-ORDENOU-TP1.                                                 
+      *---------------*                                                 
+           EXIT.                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+       200-ORDENA-DIFER-TP1 SECTION.                                    
+      *----------------------------*                                    
+       200-10-SOMA-REG-SORTIPOX.                                        
+      *------------------------*                                        
+           MOVE REG-SPC    TO REG-SORTIPOX.                             
+           ADD 1           TO ACU-REG-LIDOS.                            
+           RELEASE REG-SORTIPOX.                                        
+                                                                        
+           READ AVISOS.                                                 
+                                                                        
+           IF  WRK-FS-AVISOS  EQUAL  '10'                               
+               GO TO 200-ORDENOU-DIFER-TP1.                             
+                                                                        
+           IF  WRK-FS-AVISOS  NOT EQUAL  '00'                           
+               DISPLAY   '************* CLLPG630 ****************'      
+               DISPLAY   '*  ERRO NA LEITURA DO AVISOS          *'      
+               DISPLAY   '*                                     *'      
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-AVISOS             
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ****************'      
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+           GO TO 200-10-SOMA-REG-SORTIPOX.                              
+                                                                        
+       200-ORDENOU-DIFER-TP1.                                           
+      *---------------------*                                           
+           EXIT.                                                        
+                                                                        
+       EJECT                                                            
+       300-GRAVA-TODOS-ARQS-SAIDA   SECTION.                            
+      *------------------------------------*                            
+      *---------------------------------------------------------------* 
+      *     O OPERADOR DIGITARA' A DATA PARA GRAVAR O ARQ. 'DATATECL' * 
+      * E UTILIZA-LA NA GRAVACAO DO CABECA DE LOTE DO ARQ. 'CONTAVIS' * 
+      *---------------------------------------------------------------* 
+       300-00-GRAVA-DATATECL.                                           
+      *---------------------*                                           
+           DISPLAY '******** PGM CLLPG630 **********' UPON CONSOLE.     
+           DISPLAY '*  DATA DE POSTAGEM AUTOMATICA *' UPON CONSOLE.     
+           DISPLAY '*     NO FORMATO DD/MM/AAAA    *' UPON CONSOLE.     
+           DISPLAY '*            D+3               *' UPON CONSOLE.     
+           DISPLAY '********************************' UPON CONSOLE.     
+*******    ACCEPT    WRK-DATA-TECLADA FROM CONSOLE.                     
+*******     MOVE WRK-DAT-ARQ TO WRK-DATA-TECLADA. (MOVIDA NO READ)      
+      *----LE O ARQUIVO-----------------------------------------------* 
+      * CASO A DATA DO PARM FORN. PELO OPER. NAO FOR VALIDA O PROGR.  * 
+      * SERAH CANCELADO                                               * 
+      *---------------------------------------------------------------* 
+*******        DISPLAY   '*  CODIFICAR  PARM='DD/MM/AAAA'      *'       
+*******        DISPLAY   '*  CODIFICAR  PARM='DD/MM/AAAA'      *'       
+           IF  LKG-TAMANHO  EQUAL 10                                    
+            MOVE LKG-DATA-INFORMADA-R  TO WRK-DATA-TECLADA.             
+           IF  BARR-1 NOT EQUAL '/' OR                                  
+               BARR-2 NOT EQUAL '/'                                     
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA CODIFICACAO DO PARM       *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  CODIFICAR O PARM CORRETAMENTE     *'       
+               DISPLAY   '*  OU SEJA ENTRE ASPAS  DIGITAR      *'       
+               DISPLAY   '*      DD/MM/AAAA (NORMAMENTE D+3)   *'       
+               DISPLAY   '*      OU ALGUMA DATA DETERMINADA    *'       
+               DISPLAY   '*      PELOS CORREIOS                *'       
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+           COMPUTE DATA-ENVIADA-PARA-FERI =                             
+                   ANO OF WRK-DATA-TECL-R   * 10000  +                  
+                   MES OF WRK-DATA-TECL-R   * 100    +                  
+                   DIA OF WRK-DATA-TECL-R                               
+           CALL 'POOL0080' USING WRK-POOL1205                           
+                                 ROTINA-DE-DATAS-FERI.                  
+                                                                        
+           IF STATUS-FERI EQUAL 'I'                                     
+                    GO TO 300-00-GRAVA-DATATECL.                        
+                                                                        
+           MOVE CORR WRK-DATA-TECL-R TO DATA-TECL.                      
+           WRITE REG-DATATECL.                                          
+                                                                        
+           IF  WRK-FS-DATATECL  NOT EQUAL  '00'                         
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA GRAVACAO DO DATATECL      *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-DATATECL           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+      *   GRAVACAO DO CABECA DE LOTE DO ARQ. 'CONTAVIS'.              * 
+      *---------------------------------------------------------------* 
+       300-05-GRAVA-CABLOT-CONTAVIS.                                    
+      *----------------------------*                                    
+           MOVE CORR WRK-DATA-TECL-R TO WRK-DATA.                       
+           MOVE      WRK-DATA-R      TO CON-DATA-POST.                  
+           MOVE      07087           TO CON-CONTRATO.                   
+           MOVE      0               TO ZEROS1 ZEROS2.                  
+           MOVE      SPACES          TO BRANCO1.                        
+                                                                        
+           WRITE REG-CONTAVIS-CAB-LOT.                                  
+                                                                        
+           PERFORM  350-TESTA-FS-CONTAVIS.                              
+                                                                        
+      *---------------------------------------------------------------* 
+      *    SABENDO-SE A QUANTIDADE DE REGS. EXISTENTES EM 'AVISOS'    * 
+      *  A PRIMEIRA METADE SERA' GRAVADA NO ARQ. 'LADO1' E A SEGUNDA  * 
+      *  METADE NO ARQ. 'LADO2'. ALEM DE CADA REG. GRAVADO POSSUIR O  * 
+      *  SEU NUMERO DE GRAVACAO SEQUENCIALMENTE.                      * 
+      *---------------------------------------------------------------* 
+       300-10-ACHA-SEQUENCIAL.                                          
+      *----------------------*                                          
+           MOVE ACU-REG-LIDOS          TO ACU-QTDE-LADO1.               
+                                                                        
+       EJECT                                                            
+      *---------------------------------------------------------------* 
+      * GRAVACAO NORMAL DOS ARQ.S DE ACORDO COM O TIPO = 1            * 
+      *---------------------------------------------------------------* 
+       300-20-TIPO1.                                                    
+      *------------*                                                    
+           RETURN SORTIPOS AT END GO TO 300-90-GRAVA-ULTIMO-CONTAVIS.   
+                                                                        
+           IF  WRK-FLAG  EQUAL  '1'                                     
+               MOVE ST1-CEP TO AUX-CEP                                  
+               MOVE SPACES  TO  WRK-FLAG.                               
+                                                                        
+      *---------------------------------------------------------------* 
+      *  GRAVACAO DE 'CONTAVIS' OCORRERA' QUANDO HOUVER QUEBRA DE CEP * 
+      *---------------------------------------------------------------* 
+       300-25-GRAVA-CONTAVIS.                                           
+      *---------------------*                                           
+           IF AUX-CEP NOT EQUAL ST1-CEP                                 
+               MOVE AUX-CEP       TO CON-CEP                            
+               MOVE AUX-QTDE-EXTR TO CON-QTDE-EXTR                      
+               MOVE AUX-PRI-EXTR  TO CON-NUM-PRI-EXTR                   
+               MOVE AUX-ULT-EXTR  TO CON-NUM-ULT-EXTR                   
+               MOVE SPACES        TO BRANCO2                            
+               PERFORM  500-GRAVAR-CEPFAC                               
+               WRITE REG-CONTAVIS-DETALHE                               
+               PERFORM  350-TESTA-FS-CONTAVIS                           
+               COMPUTE AUX-PRI-EXTR = 1 + AUX-ULT-EXTR                  
+               MOVE 0             TO AUX-QTDE-EXTR                      
+               MOVE ST1-CEP TO AUX-CEP.                                 
+                                                                        
+       300-30-GRAVA-LADOS.                                              
+      *------------------*                                              
+           MOVE REG-SORTIPO1 TO LDS-1A274.                              
+           ADD 1 TO AUX-QTDE AUX-QTDE-EXTR.                             
+           MOVE AUX-QTDE TO LDS-SEQUENCIAL AUX-ULT-EXTR.                
+           WRITE REG-LADO1 FROM REG-LADOS                               
+           PERFORM  370-TESTA-FS-LADO1.                                 
+                                                                        
+           GO TO 300-20-TIPO1.                                          
+                                                                        
+       300-90-GRAVA-ULTIMO-CONTAVIS.                                    
+      *----------------------------*                                    
+                                                                        
+           MOVE AUX-CEP       TO CON-CEP                                
+           MOVE AUX-QTDE-EXTR TO CON-QTDE-EXTR                          
+           MOVE AUX-PRI-EXTR  TO CON-NUM-PRI-EXTR                       
+           MOVE AUX-ULT-EXTR  TO CON-NUM-ULT-EXTR                       
+           MOVE SPACES        TO BRANCO2                                
+           PERFORM  500-GRAVAR-CEPFAC                                   
+           WRITE REG-CONTAVIS-DETALHE                                   
+           PERFORM  350-TESTA-FS-CONTAVIS                               
+           COMPUTE AUX-PRI-EXTR = 1 + AUX-ULT-EXTR                      
+           MOVE 0             TO AUX-QTDE-EXTR.                         
+                                                                        
+       300-FIM-GRAVACAO-TODOS-SEC.                                      
+      *--------------------------*                                      
+           EXIT.                                                        
+                                                                        
+      *------------------------------*                                  
+       350-TESTA-FS-CONTAVIS  SECTION.                                  
+      *------------------------------*                                  
+                                                                        
+           IF  WRK-FS-CONTAVIS  NOT EQUAL  '00'                         
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA GRAVACAO DO CONTAVIS      *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-CONTAVIS           
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+       350-FIM-TES-FS-CONT.                                             
+           EXIT.                                                        
+                                                                        
+                                                                        
+      *------------------------------*                                  
+       370-TESTA-FS-LADO1     SECTION.                                  
+      *------------------------------*                                  
+                                                                        
+           IF  WRK-FS-LADO1   NOT EQUAL  '00'                           
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA GRAVACAO DO LADO1         *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-LADO1              
+                         '                *'                            
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+       370-FIM-TES-FS-LADO1.                                            
+           EXIT.                                                        
+                                                                        
+      *------------------------------*                                  
+       380-TESTA-FS-CEPFAC    SECTION.                                  
+      *------------------------------*                                  
+                                                                        
+           IF  WRK-FS-CEPFAC  NOT EQUAL  '00'                           
+               DISPLAY   '************* CLLPG630 ***************'       
+               DISPLAY   '*  ERRO NA GRAVACAO DO CEPFAC        *'       
+               DISPLAY   '*                                    *'       
+               DISPLAY   '*  FILE STATUS  = ' WRK-FS-CEPFAC             
+                         '                 *'                           
+               DISPLAY   '************* CLLPG630 ***************'       
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+       380-FIM-TES-FS-CEPFAC.                                           
+           EXIT.                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+       EJECT                                                            
+      *---------------------------------------------------------------* 
+      * GRAVACAO DOS ARQ.S 'LADO1' E 'LADO2' COM TIPOS NOT = 1        * 
+      *---------------------------------------------------------------* 
+       400-GRAVA-LADOS SECTION.                                         
+      *-----------------------*                                         
+           MOVE ACU-REG-LIDOS          TO ACU-QTDE-LADO1.               
+                                                                        
+       400-10-LER-SORTIPOS.                                             
+      *-------------------*                                             
+                                                                        
+           RETURN SORTIPOS AT END GO TO 400-FIM-GRAVACAO-LADOS-SEC.     
+           ADD 1 TO AUX-QTDE.                                           
+           MOVE REG-SORTIPOX TO LDS-1A274.                              
+           MOVE AUX-QTDE TO LDS-SEQUENCIAL.                             
+           WRITE REG-LADO1 FROM REG-LADOS                               
+           PERFORM  370-TESTA-FS-LADO1.                                 
+                                                                        
+           GO TO 400-10-LER-SORTIPOS.                                   
+                                                                        
+       400-FIM-GRAVACAO-LADOS-SEC.                                      
+      *--------------------------*                                      
+           EXIT.                                                        
+                                                                        
+       500-GRAVAR-CEPFAC      SECTION.                                  
+      *------------------------------*                                  
+                                                                        
+           IF CON-CEP                   NOT LESS 1000                   
+              MOVE CON-CEP              TO CEP                          
+              MOVE CORR WRK-DATA-TECL-R TO DT-FRANQUIA                  
+              MOVE WRK-JOBNAME          TO ROTINA                       
+              MOVE 4120                 TO USUARIO                      
+              WRITE REG-CEPFAC                                          
+              PERFORM  380-TESTA-FS-CEPFAC.                             
+                                                                        
+       500-FIM-GRAVAR-CEPFAC.                                           
+           EXIT.                                                        

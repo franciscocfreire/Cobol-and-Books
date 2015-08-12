@@ -1,0 +1,294 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E  A L N J E 0 2
+
+13.10.12 JOB19748 ---- FRIDAY,    16 JAN 2015 ----
+13.10.12 JOB19748  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+13.10.12 JOB19748  $EXIT006A  Job CLLP0870 Jobid(JOB19748) alterado para CLASS=E
+13.10.13 JOB19748  $HASP373 CLLP0870 STARTED - WLM INIT  - SRVCLASS BATCH_01 - SYS AL2C
+13.10.13 JOB19748  IEF403I CLLP0870 - STARTED - TIME=13.10.13
+13.10.13 JOB19748  -                                                --TIMINGS (MINS.)--                   ----PAGING COUNTS---
+13.10.13 JOB19748  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  SRVCLASS  PAGE  SWAP   VIO SWAPS
+13.10.13 JOB19748  -CLLP0870 STEP1                00     34     10    .00    .00     .0   1131  BATCH_01     0     0     0     0
+13.10.13 JOB19748  -CLLP0870 STEP1A   SORT        00     35      8    .00    .00     .0    699  BATCH_01     0     0     0     0
+13.10.13 JOB19748  -CLLP0870 STEP2                00     35     18    .00    .00     .0    542  BATCH_01     0     0     0     0
+13.10.13 JOB19748  IEF404I CLLP0870 - ENDED - TIME=13.10.13
+13.10.13 JOB19748  -CLLP0870 ENDED.  NAME-I311083              TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+13.10.13 JOB19748  $HASP395 CLLP0870 ENDED
+------ JES2 JOB STATISTICS ------
+  16 JAN 2015 JOB EXECUTION DATE
+           68 CARDS READ
+          299 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           21 SYSOUT SPOOL KBYTES
+         0.01 MINUTES EXECUTION TIME
+
+        1 //CLLP0870 JOB 'CLLP,4120,PR32','I311083',MSGCLASS=Z                    JOB19748
+        2 //JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR                                  00000020
+        3 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             00000030
+        4 //STEP1    EXEC PGM=PLAN6130,                                           00000040
+          //       PARM='SOCAT'                                                   00000050
+          //*                                                                     00000060
+          //* ***    DESCARREGA ARQUIVO TRANSITO EM STOR.                         00000070
+          //* ***    ARQUIVO RECEBIDO DO JOB   LSNG0775 .                         00000080
+          //*                                                                     00000090
+          //*#D DSN=MX.LSNG.CLLP.LSNGT101.PARCBAIX                                00000110
+        5 //TABELA   DD *                                                         00000100
+        6 //DDOUT    DD DSN=AD.BRQ.PROD.LSNGBAIX(+1),                             00000120
+          //       DISP=(,CATLG,DELETE),                                          00000130
+          //       UNIT=DISCO,                                                    00000140
+          //       SPACE=(TRK,(000070,0014),RLSE),                                00000150
+          //       DCB=(MX.A,LRECL=0401,RECFM=FB)                                 00000160
+        7 //COPIAOUT DD DUMMY,                                                    00000170
+          //       DCB=(LRECL=0401,RECFM=FB)                                      00000180
+        8 //PRINTER  DD SYSOUT=(Z,,AN01)                                          00000190
+        9 //SYSOUT   DD SYSOUT=*                                                  00000200
+       10 //SYSUDUMP DD SYSOUT=Y                                                  00000210
+          //*                                                                     00000220
+       11 //STEP1A   EXEC SORTD                                                   00000230
+       12 XXSORTD    PROC
+       13 XXSORT     EXEC  PGM=ICEMAN,REGION=0M
+       14 //SYSOUT   DD SYSOUT=*                                                  00000460
+          X/SYSOUT   DD  SYSOUT=*
+          //*                                                                     00000240
+          //* ***    CONVERTER O ARQUIVO                                          00000250
+          //* ***    INCLUINDO OS CAMPOS DA LEI DA TRANSPARENCIA                  00000260
+          //* ***                                                                 00000270
+          //* ***    QUANDO O ARQUIVO LSNG DO STEP1 VIER COM LRECL=401:           00000280
+          //* ***    - ALTERAR STEP1 PARA LRECL=401                               00000290
+          //* ***    - RETIRAR STEP1A                                             00000300
+          //* ***    - ALTERAR STEP2(PGM=LPCL9029) PARA LER DSN=*.STEP1.DDOUT     00000310
+          //*                                                                     00000320
+       15 //SORTIN   DD DSN=*.STEP1.DDOUT,                                        00000330
+          //       DISP=SHR                                                       00000340
+       16 //SORTOUT  DD DSN=AD.BRQ.PROD.LSNGBAIX.LEI(+1),                         00000350
+          //       DISP=(,CATLG,DELETE),                                          00000360
+          //       UNIT=DISCO,                                                    00000370
+          //       SPACE=(TRK,(000200,0020),RLSE),                                00000380
+          //       DCB=(MX.A,LRECL=0401,RECFM=FB)                                 00000390
+       17 //SYSIN    DD *                                                         00000400
+       18 //PRINTER  DD SYSOUT=*                                                  00000450
+       19 //SYSUDUMP DD SYSOUT=Y                                                  00000470
+          //*                                                                     00000480
+       20 //STEP2    EXEC PGM=LPCL9029                                            00000490
+          //*                                                                     00000500
+          //* ***    CONVERSAO DO ARQUIVO MX.LSNG DE 401 PARA 413 BYTES           00000510
+          //*                                                                     00000520
+       21 //ENTRA    DD DSN=*.STEP1A.SORT.SORTOUT,                                00000530
+          //       DISP=SHR                                                       00000540
+       22 //SAIDA    DD DSN=AD.BRQ.PROD.BXLGCONV(+1),                             00000550
+          //       DISP=(,CATLG,DELETE),                                          00000560
+
+          //       UNIT=DISCO,                                                    00000570
+          //       SPACE=(TRK,(000070,0014),RLSE),                                00000580
+          //       DCB=(MX.A,LRECL=0313,RECFM=FB)                                 00000590
+       23 //ARQEXP   DD DSN=AD.BRQ.PROD.BXLGCONV.LEI(+1),                         00000600
+          //       DISP=(,CATLG,DELETE),                                          00000610
+          //       UNIT=DISCO,                                                    00000620
+          //       SPACE=(TRK,(000070,0014),RLSE),                                00000630
+          //       DCB=(MX.A,LRECL=0413,RECFM=FB)                                 00000640
+       24 //SYSOUT   DD SYSOUT=*                                                  00000650
+       25 //SYSUDUMP DD SYSOUT=Y                                                  00000660
+          //*                                                                     00000670
+
+ STMT NO. MESSAGE
+       11 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLIB
+IEF236I ALLOC. FOR CLLP0870 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I D036 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO TABELA
+IGD101I SMS ALLOCATED TO DDNAME (DDOUT   )
+        DSN (AD.BRQ.PROD.LSNGBAIX.G0006V00               )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DCA
+IEF237I DMY  ALLOCATED TO COPIAOUT
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IGD103I SMS ALLOCATED TO DDNAME DDIN0001
+IEF142I CLLP0870 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13A2A.
+IEF285I   M67777.CLLP0870.JOB19748.D0000101.?          SYSIN
+IGD103I SMS ALLOCATED TO DDNAME SYS00001
+IGD104I SYS15016.T131013.RA000.CLLP0870.R0260249     RETAINED,  DDNAME=SYS00001
+IGD107I AD.BRQ.PROD.LSNGBAIX.G0006V00                ROLLED IN, DDNAME=DDOUT
+IEF285I   M67777.CLLP0870.JOB19748.D0000103.?          SYSOUT
+IEF285I   M67777.CLLP0870.JOB19748.D0000104.?          SYSOUT
+IEF285I   M67777.CLLP0870.JOB19748.D0000105.?          SYSOUT
+IGD104I AD.BRQ.PROD.LSNGT101.PARCBAIX.LEI2.CP        RETAINED,  DDNAME=DDIN0001
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 16-Jan-2015 01:10:13 PM
+Step  Num: 1              PGM  Name: PLAN6130     End:   16-Jan-2015 01:10:13 PM
+CPU (TCB): 00:00:00.02                            Storage below 16M:        828k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.08                            Service Units:           1,131
+Tape Mnts: 0                                      Total EXCPs:                34
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D JOBLIB              1  23,476        D6FA D DDOUT               1  27,669
+D364 D DDIN0001            2  27,669
+
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2015016.1310
+IEF032I STEP/STEP1   /STOP  2015016.1310
+        CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   828K  SYS:   380K  EXT:        4K  SYS:    10516K
+IEF236I ALLOC. FOR CLLP0870 SORT STEP1A
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I D036 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSOUT
+IGD103I SMS ALLOCATED TO DDNAME SORTIN
+IGD101I SMS ALLOCATED TO DDNAME (SORTOUT )
+        DSN (AD.BRQ.PROD.LSNGBAIX.LEI.G0007V00           )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2D21
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLP0870 SORT STEP1A - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13A2A.
+IEF285I   M67777.CLLP0870.JOB19748.D0000106.?          SYSOUT
+IGD104I AD.BRQ.PROD.LSNGBAIX.G0006V00                RETAINED,  DDNAME=SORTIN
+IGD103I SMS ALLOCATED TO DDNAME SYS00002
+IGD104I SYS15016.T131013.RA000.CLLP0870.R0260250     RETAINED,  DDNAME=SYS00002
+IGD107I AD.BRQ.PROD.LSNGBAIX.LEI.G0007V00            ROLLED IN, DDNAME=SORTOUT
+IEF285I   M67777.CLLP0870.JOB19748.D0000102.?          SYSIN
+IEF285I   M67777.CLLP0870.JOB19748.D0000107.?          SYSOUT
+IEF285I   M67777.CLLP0870.JOB19748.D0000108.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: SORT           Cond Code: 0000         Start: 16-Jan-2015 01:10:13 PM
+Step  Num: 2              PGM  Name: ICEMAN       End:   16-Jan-2015 01:10:13 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:      1,104k
+CPU (SRB): 00:00:00.00                            Storage above 16M:     18,452k
+Trans Act: 00:00:00.05                            Service Units:             699
+Tape Mnts: 0                                      Total EXCPs:                35
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D JOBLIB              1  23,476        D6FA D SORTIN              1  27,669
+D81A D SORTOUT             1  27,669
+
+Total DASD EXCPs:                  3        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/SORT    /START 2015016.1310
+IEF032I STEP/SORT    /STOP  2015016.1310
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:  1104K  SYS:   380K  EXT:    18452K  SYS:    10388K
+IEF236I ALLOC. FOR CLLP0870 STEP2
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I D036 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ENTRA
+IGD101I SMS ALLOCATED TO DDNAME (SAIDA   )
+        DSN (AD.BRQ.PROD.BXLGCONV.G0007V00               )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2D2F
+IGD101I SMS ALLOCATED TO DDNAME (ARQEXP  )
+        DSN (AD.BRQ.PROD.BXLGCONV.LEI.G0007V00           )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2D7D
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLP0870 STEP2 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AD.BRQ.PROD.LSNGBAIX.LEI.G0007V00            RETAINED,  DDNAME=ENTRA
+IGD103I SMS ALLOCATED TO DDNAME SYS00003
+IGD104I SYS15016.T131013.RA000.CLLP0870.R0260251     RETAINED,  DDNAME=SYS00003
+IGD107I AD.BRQ.PROD.BXLGCONV.G0007V00                ROLLED IN, DDNAME=SAIDA
+IGD103I SMS ALLOCATED TO DDNAME SYS00004
+IGD104I SYS15016.T131013.RA000.CLLP0870.R0260252     RETAINED,  DDNAME=SYS00004
+IGD107I AD.BRQ.PROD.BXLGCONV.LEI.G0007V00            ROLLED IN, DDNAME=ARQEXP
+IEF285I   M67777.CLLP0870.JOB19748.D0000109.?          SYSOUT
+IEF285I   M67777.CLLP0870.JOB19748.D0000110.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP2          Cond Code: 0000         Start: 16-Jan-2015 01:10:13 PM
+Step  Num: 3              PGM  Name: LPCL9029     End:   16-Jan-2015 01:10:13 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:        436k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      6,188k
+Trans Act: 00:00:00.04                            Service Units:             542
+Tape Mnts: 0                                      Total EXCPs:                35
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D JOBLIB              1  23,476        D81A D ENTRA               2  27,669
+D8FD D SAIDA               1  27,857        D07C D ARQEXP              1  27,671
+
+
+Total DASD EXCPs:                  5        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP2   /START 2015016.1310
+IEF032I STEP/STEP2   /STOP  2015016.1310
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   436K  SYS:   404K  EXT:     6188K  SYS:    10424K
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13A2A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP0870       System ID: AL2C        Submit: 16-Jan-2015 01:10:12 PM
+Job JESID: JOB19748       MVS level: SP7.1.3     Start:  16-Jan-2015 01:10:13 PM
+Job Class: E                                     End:    16-Jan-2015 01:10:13 PM
+CPU (TCB): 00:00:00.04                           Storage below 16M:       1,104k
+CPU (SRB): 00:00:00.00                           Storage above 16M:      18,452k
+Trans Act: 00:00:00.17                           Service Units:            2,372
+Tape Mnts: 0                                     Total EXCPs:                104
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer: I311083
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP0870/START 2015016.1310
+IEF033I  JOB/CLLP0870/STOP  2015016.1310
+        CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+
+K DSN=AD.BRQ.PROD.LSNGT101.PARCBAIX.LEI2.CP      ***   PROCESSADO   *** 0000011
+
+ICE201I H RECORD TYPE IS F - DATA STARTS IN POSITION 1
+ICE751I 0 C5-I12416 C6-K90026 C7-K94453 C8-K94453 E9-K60824 C9-BASE   E5-K80744 E7-I12416
+ICE143I 0 BLOCKSET     COPY  TECHNIQUE SELECTED
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AND MORE
+ICE000I 1 - CONTROL STATEMENTS FOR 5694-A01, Z/OS DFSORT V1R12 - 13:10 ON FRI JAN 16, 2015 -
+           SORT FIELDS=COPY                                                       00000410
+           OUTFIL OUTREC=(1,362,X'0000000000000C',X'0000000000000C',              00000420
+                                X'0000000000000C',1C'0',17C' ')                   00000430
+           END                                                                    00000440
+ICE193I 0 ICEAM1 INVOCATION ENVIRONMENT IN EFFECT - ICEAM1 ENVIRONMENT SELECTED
+ICE252I 1 PARMLIB OPTIONS WERE MERGED WITH INSTALLATION MODULE DEFAULTS
+ICE088I 0 CLLP0870.STEP1A  .SORT    , INPUT LRECL = 401, BLKSIZE = 27669, TYPE = FB
+ICE093I 0 MAIN STORAGE = (MAX,16777216,16777216)
+ICE156I 0 MAIN STORAGE ABOVE 16MB = (16719856,16719856)
+ICE127I 0 OPTIONS: OVFLO=RC0 ,PAD=RC0 ,TRUNC=RC0 ,SPANINC=RC16,VLSCMP=N,SZERO=Y,RESET=Y,VSAMEMT=Y,DYNSPC=256
+ICE128I 0 OPTIONS: SIZE=16777216,MAXLIM=1048576,MINLIM=90112,EQUALS=N,LIST=Y,ERET=ABEND,MSGDDN=SYSOUT
+ICE129I 0 OPTIONS: VIO=N,RESDNT=ALL ,SMF=FULL ,WRKSEC=Y,OUTSEC=Y,VERIFY=N,CHALT=N,DYNALOC=N             ,ABCODE=MSG
+ICE130I 0 OPTIONS: RESALL=4096,RESINV=0,SVC=109 ,CHECK=N,WRKREL=Y,OUTREL=Y,CKPT=N,COBEXIT=COB2
+ICE131I 0 OPTIONS: TMAXLIM=16777216,ARESALL=0,ARESINV=0,OVERRGN=65536,CINV=Y,CFW=Y,DSA=0
+ICE132I 0 OPTIONS: VLSHRT=N,ZDPRINT=Y,IEXIT=N,TEXIT=N,LISTX=N,EFS=NONE    ,EXITCK=S,PARMDDN=DFSPARM ,FSZEST=N
+ICE133I 0 OPTIONS: HIPRMAX=OPTIMAL,DSPSIZE=MAX ,ODMAXBF=2097152,SOLRF=Y,VLLONG=N,VSAMIO=N,MOSIZE=0
+ICE235I 0 OPTIONS: NULLOUT=RC0
+ICE236I 0 OPTIONS: DYNAPCT=20 ,MOWRK=Y
+ICE084I 0 EXCP ACCESS METHOD USED FOR SORTIN
+ICE231I 0 STORAGE USED FOR OUTFIL : BELOW 16M = 20480, ABOVE 16M = 2103296
+ICE210I 0 SORTOUT  : EXCP USED, LRECL = 401, BLKSIZE = 27669, TYPE = FB
+ICE751I 1 EF-BASE   CB-K64632 F0-K91597 E8-I12416
+ICE055I 0 INSERT 0, DELETE 0
+ICE054I 0 RECORDS - IN: 50, OUT: 50
+ICE227I 0 SORTOUT  : DELETED = 0, REPORT = 0, DATA = 50
+ICE228I 0 SORTOUT  : TOTAL IN = 50, TOTAL OUT = 50
+ICE026I 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)
+ICE052I 0 END OF DFSORT

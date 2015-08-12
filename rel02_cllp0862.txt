@@ -1,0 +1,11 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO --- 
+                                                                                                                                     
+11/09/2014            B A N C O  B R A D E S C O  S / A.                10:27:37                                                     
+CLLP7675    HISTORICO DE BAIXAS REALIZADAS NA FIDELITY - REJEITADOS   PAG.:   01                                                     
+   AGE    CONTA     DATA     TIPO  MOTIVO                                                                                            
+ 00022  0049579  20/05/2013   K    CARTEIRA DIF DE 312, 399, 435, 439 E 474                                                          
+ 00022  0049579  20/05/2013   2    CARTEIRA DIF DE 312, 399, 435, 439 E 474                                                          
+ 00027  0068097  20/05/2013   2    CARTEIRA DIF DE 312, 399, 435, 439 E 474                                                          
+ 00027  0068097  20/05/2013   K    CARTEIRA DIF DE 312, 399, 435, 439 E 474                                                          
+ 01193  0064102  20/05/2013   K    CARTEIRA DIF DE 312, 399, 435, 439 E 474                                                          
+ 03475  0011960  20/05/2013   2    CARTEIRA DIF DE 312, 399, 435, 439 E 474                                                          

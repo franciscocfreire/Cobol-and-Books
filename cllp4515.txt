@@ -1,0 +1,170 @@
+//CLLP4515 JOB 'CLLP,4120,PR32','B013444',MSGCLASS=Z,                   
+//       REGION=4096K,SCHENV=DB2                                        
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHDC3                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHDC4                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTDX10                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP0    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA O ARQUIVO DIGIT (GERADO NO JOB CLLP4510) POR      
+//* ***    EMPRESA/AGENCIA/CARTEIRA/CONTA/CONTRATO/VENCIMENTO           
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.MOVTRACL.CLLP4510(0),                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.MVTO4515.CLASS(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(2,5,A,7,5,A,135,3,A,52,7,A,138,7,A,63,4,A,61,2,A,         
+              59,2,A,570,2,A),FORMAT=BI                                 
+ END                                                                    
+//*                                                                     
+//STEP1    EXEC PGM=CLLPF620                                            
+//*                                                                     
+//* ***    CONSISTENCIA DOS ARQUIVOS MANDADOS PELAS                     
+//* ***    ROTINAS: COMO, EMPF, EMPG.                                   
+//* ***    REFERENTE AO MOVIMENTO RETROATIVO.                           
+//*                                                                     
+//ARQDATA  DD DSN=MX.CLLP.ARQDATA.CLLP4510(0),                          
+//       DISP=SHR                                                       
+//CADLOCAL DD DSN=MX.CLLP.PRV.CADLOCAL(0),                              
+//       DISP=SHR                                                       
+//CADPEND  DD DSN=MX.CLLP.PRV.CADAPEND(0),                              
+//       DISP=SHR                                                       
+//MOVTO    DD DSN=*.STEP0.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CERTO    DD DSN=MX.CLLP.MOVCERTO.CLLP4515(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//RELATO   DD SYSOUT=%%FORM#HDC3,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLPE690                                            
+//*                                                                     
+//* ***    SEPARA REGISTRO DE INCLUSAO.                                 
+//*                                                                     
+//MOVTOG   DD DSN=*.STEP1.CERTO,                                        
+//       DISP=OLD                                                       
+//MOVTOGI  DD DSN=MX.CLLP.MOVINCL.CLLP4515(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//MOVTOGO  DD DUMMY,                                                    
+//       DCB=(LRECL=0675,RECFM=FB)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA  ARQUIVO  SO COM REGISTRO  DE  INCLUSAO           
+//* ***    EMPRESA/AGENCIA/CONTA/CARTEIRA/CONTRATO/VENCIMENTO           
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.MOVTOGI,                                      
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.CLASINCL.CLLP4515(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(2,5,A,7,5,A,52,7,A,135,3,A,138,7,A,63,4,A,61,2,A,         
+              59,2,A,570,2,A),FORMAT=BI                                 
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=CLLPE705                                            
+//*                                                                     
+//* ***    NUMERA NRO. DE CL'S DOS REGISTROS DE INCLUSAO                
+//* ***    ACESSA TABELA DB2 - LPCLB000.                                
+//*                                                                     
+//MOVTOGI  DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQDATA  DD DSN=MX.CLLP.ARQDATA.CLLP4510(0),                          
+//       DISP=SHR                                                       
+//MOVOK    DD DSN=MX.CLLP.MOVNROCL.CLLP4515(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//RELATO   DD SYSOUT=%%FORM#HDC4,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICACAO: AGENCIA/CONTA CORRENTE/CARTEIRA/CONTRATO      
+//*                                                                     
+//SORTIN   DD DSN=*.STEP4.MOVOK,                                        
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CLAS.MOVOK(+1),                               
+//       DISP=(,CATLG,DELETE),                                          
+//       SPACE=(TRK,(5660,1132),RLSE),                                  
+//       DCB=(MX.A,LRECL=675,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(7,5,A,52,7,A,135,3,A,138,7,A),FORMAT=BI                   
+ END                                                                    
+//*                                                                     
+//STEP6    EXEC PGM=CLLP5380                                            
+//EMOVMENT DD DSN=*.STEP5.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//EAVALIST DD DSN=MX.LPCL.S015871.AVAL.ACUM(0),                         
+//       DISP=OLD                                                       
+//SMOVMENT DD DSN=MX.CLLP.MOVNROCL.CLLP4515(+2),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//SAVALIST DD DSN=MX.CLLP.AVAL.ACUM(+1),                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(011140,2228),RLSE),                                
+//       DCB=(MX.A,LRECL=0115,RECFM=FB)                                 
+//RELAT    DD SYSOUT=%%FORM#DX10,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7    EXEC PGM=PLAN1970,                                           
+//       PARM=01                                                        
+//*                                                                     
+//* ***    GRAVA ARQUIVO TRANSITO PARA LPCL                             
+//*                                                                     
+//ENT00001 DD DSN=*.STEP6.SAVALIST,                                     
+//       DISP=OLD                                                       
+//SAI00001 DD DSN=MX.CLLP.LPCL.AVALACUM,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(007020,1504),RLSE),                                
+//       DCB=(MX.A,LRECL=0115,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

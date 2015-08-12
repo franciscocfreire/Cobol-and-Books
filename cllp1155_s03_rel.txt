@@ -1,0 +1,4 @@
+
+TOTAIS DE REGISTROS -         12.139-LIDOS
+                                   0-EXCLUIDOS
+                              12.139-GRAVADOS

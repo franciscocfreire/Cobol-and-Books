@@ -1,0 +1,78 @@
+      =====================================================        
+      FAVOR ALTERAR O JOB CLLP1270, CONFORME INDICA ABAIXO:        
+      =====================================================        
+
+	(1) -  ALTERAR O STEP9:			
+
+DE:
+//STEP9    EXEC SORTD                                                 
+//*                                                                   
+//* ***    CLASSIFICAR POR ANALISTA/AGENCIA/CONTA/NATUREZA/VENCIMENTO 
+//*                                                                   
+//SORTIN   DD DSN=*.STEP8.CADLPCL,                                    
+//       DISP=SHR                                                     
+//SORTOUT  DD DSN=MX.CLLP.CADAVISO.CLLP1270(+1),                      
+//       DISP=(,CATLG,DELETE),                                        
+//       UNIT=DISCO,                                                  
+//       SPACE=(TRK,(000050,0010),RLSE),                              
+//       DCB=(MX.A,LRECL=0285,RECFM=FB)                               
+//SYSIN    DD *                                                       
+ SORT FIELDS=(129,10,A,242,7,A,13,5,A,11,2,A),FORMAT=BI               
+ END                                                                  
+                                                                
+
+	
+PARA:
+	
+//STEP9    EXEC SORTD                                                 
+//*                                                                   
+//* ***    CLASSIFICAR POR ANALISTA/AGENCIA/CONTA/NATUREZA/VENCIMENTO 
+//*                                                                   
+//SORTIN   DD DSN=*.STEP8.CADLPCL,                                    
+//       DISP=SHR                                                     
+//SORTOUT  DD DSN=MX.CLLP.CADAVISO.CLLP1270(+1),                      
+//       DISP=(,CATLG,DELETE),                                        
+//       UNIT=DISCO,                                                  
+//       SPACE=(TRK,(000050,0010),RLSE),                              
+//       DCB=(MX.A,LRECL=0385,RECFM=FB)                               
+//SYSIN    DD *                                                       
+ SORT FIELDS=(129,10,A,242,7,A,13,5,A,11,2,A),FORMAT=BI               
+ OUTREC FIELDS=(1,285,X'000000000C',3X'000000000000000C',         
+                2X'0000000000000C',2X'00000000000000000C',39C' ') 
+ END                                                              
+        
+
+DE:
+//CADLPCL  DD DSN=MX.CLLP.CADCARTA.CLLP7623.CLLP1270(+1),     
+//       DISP=(,CATLG,DELETE),                                
+//       UNIT=DISCO,                                          
+//       SPACE=(TRK,(000090,0018),RLSE),                      
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                       
+
+PARA:
+
+//CADLPCL  DD DSN=MX.CLLP.CADCARTA.CLLP7623.CLLP1270(+1),     
+//       DISP=(,CATLG,DELETE),                                
+//       UNIT=DISCO,                                          
+//       SPACE=(TRK,(000090,0018),RLSE),                      
+//       DCB=(MX.A,LRECL=1290,RECFM=FB)                       
+		
+	(3) -  ALTERAR O STEP12:			
+	
+DE:
+
+//STEP12   EXEC SORTD                                                 
+//*                                                                   
+//* ***    CLASSIFICAR CADLPCL POR DEVEDOR/AVALISTA/AGENCIA/CONTA/NAT 
+//*                                                                   
+//SORTIN   DD DSN=*.STEP11.CADLPCLS,                                  
+//       DISP=SHR                                                     
+//SORTOUT  DD DSN=MX.CLLP.CADALPCL.CLLP1270(+1),                      
+//       DISP=(,CATLG,DELETE),                                        
+//       UNIT=DISCO,                                                  
+//       SPACE=(TRK,(000090,0018),RLSE),                              
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                               
+//SYSIN    DD *                                                       
+ SORT FIELDS=(1,10,A,82,10,A,21,3,A,24,4,A,11,2,A),FORMAT=BI          
+ END                                                                  
+	

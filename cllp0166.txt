@@ -1,0 +1,182 @@
+//CLLP0166 JOB 'CLLP,4120,PR32','C397220',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=DB2                                                     
+//JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP0A   EXEC PGM=POOL0003                                            
+//*                                                                     
+//* ***    DESCOMPRIMIR ARQUIVO                                         
+//*                                                                     
+//ENTRA    DD DSN=AD.BRQ.CADU.CADUB0Q4.HPM.COMP,                        
+//       DISP=SHR                                                       
+//SAI      DD DSN=AD.BRQ.CADU.CADUB0Q4.CLAS,                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(002,001),RLSE),                                    
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=T                                                  
+//SYSUDUMP DD SYSOUT=T                                                  
+//*                                                                     
+//STEP1    EXEC PGM=RDAB0900                                            
+//*                                                                     
+//* ***    OBTER DADOS DOS SOCIOS P/ COMPLEMENTAR                       
+//* ***    ARQ. DE CLIENTES.                                            
+//* ***    ( TABELA RDAB0500 - ARQ. CLIENTES )                          
+//*                                                                     
+//ARQPARVV DD DSN=AD.BRQ.P006.ARQPJUR.RDAB0010.CLAS(0),                 
+//       DISP=SHR                                                       
+//CADUB0Q4 DD DSN=*.STEP0A.SAI,                                         
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQSAIDA DD DSN=AD.BRQ.P006.RDAB0032.ARQSOCIO(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0400),RLSE),                                 
+//       DCB=(AD.A,LRECL=0223,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA PENDFICA  :                                       
+//* ***    CPF/CNPJ                                                     
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.ARQSAIDA,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.RDAB0900.ARQSOCIO.TEMP,                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0400),RLSE),                                 
+//       DCB=(AD.A,LRECL=0223,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(35,10,CH,A)                                               
+ END                                                                    
+//*                                                                     
+//STEP2A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA CADUV001  :                                       
+//* ***    CPF/CNPJ                                                     
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.ARQCADU.CADUV001(0),                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.ARQCADU.CADUV001.TEMP,                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0400),RLSE),                                 
+//       DCB=(AD.A,LRECL=0570,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(12,15,CH,A)                                               
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=RDAB0901                                            
+//*                                                                     
+//* ***    OBTER CPSSOA-CADTR, CPF/CNPJ E NOME SOCIO                    
+//*                                                                     
+//ARQPARVV DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//CADUV001 DD DSN=*.STEP2A.SORT.SORTOUT,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQSAIDA DD DSN=AD.BRQ.P006.RDAB0901.ARQSOCIO(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0400),RLSE),                                 
+//       DCB=(AD.A,LRECL=0223,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//*STEP4    EXEC SORTD                                                  
+//*                                                                     
+//* ***    CLASSIFICA ARQSOCIO POR :                                    
+//* ***    SOC-CPSSOA-CADTR                                             
+//*                                                                     
+//*SORTIN   DD DSN=*.STEP3.ARQSOCIO,                                    
+//*       DISP=SHR                                                      
+//*SORTOUT  DD DSN=AD.BRQ.P006.RDAB0032.ARQSOCIO.CLAS(+1),              
+//*       DISP=(,CATLG,DELETE),                                         
+//*       UNIT=DISCO,                                                   
+//*       SPACE=(TRK,(01000,0400),RLSE),                                
+//*       DCB=(AC.A,LRECL=0223,RECFM=FB)                                
+//*SYSIN    DD *                                                        
+//* SORT FIELDS=(1,26,CH,A)                                             
+//* END                                                                 
+//*                                                                     
+//*STEP5    EXEC PGM=RDAB0033                                           
+//*                                                                     
+//* ***    FORMATAR DADOS CADASTRAIS DO SOCIO                           
+//*                                                                     
+//*ENTSOCIO DD DSN=*.STEP4.SORT.SORTOUT,                                
+//*       DISP=SHR                                                      
+//*PENDFICA DD DSN=AD.BRQ.P006.ARQFICA.FICAV001(0),                     
+//*       DISP=SHR                                                      
+//*SAISOCIO DD DSN=AD.BRQ.P006.RDAB0033.ARQSOCIO(+1),                   
+//*       DISP=(,CATLG,DELETE),                                         
+//*       UNIT=DISCO,                                                   
+//*       SPACE=(TRK,(01000,0400),RLSE),                                
+//*       DCB=(AC.A,LRECL=0223,RECFM=FB)                                
+//*RELATO   DD SYSOUT=(W,,AM19),                                        
+//*       DCB=(LRECL=080,RECFM=FBA)                                     
+//*PRINTER  DD SYSOUT=*                                                 
+//*SYSOUT   DD SYSOUT=*                                                 
+//*SYSUDUMP DD SYSOUT=Y                                                 
+//*                                                                     
+//STEP6    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQSOCIO POR:                                     
+//* ***    SOC-CGCNUM E SOC-CGCFIL                                      
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3.ARQSAIDA,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.RDAB0033.ARQSOCIO.CLAS(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0400),RLSE),                                 
+//       DCB=(AC.A,LRECL=0223,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(35,5,PD,A,40,3,PD,A)                                      
+ END                                                                    
+//*                                                                     
+//STEP7    EXEC PGM=RDAB0034                                            
+//*                                                                     
+//* ***    FORMATAR RATING                                              
+//*                                                                     
+//ENTSOCIO DD DSN=*.STEP6.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//PENDIRES DD DSN=AD.BRQ.P006.ARQIRES.IRESB018(0),                      
+//       DISP=SHR                                                       
+//SAISOCIO DD DSN=AD.BRQ.P006.RDAB0034.ARQSOCIO(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0400),RLSE),                                 
+//       DCB=(AD.A,LRECL=0223,RECFM=FB)                                 
+//RELATO   DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=080,RECFM=FBA)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQSOCIO                                          
+//*                                                                     
+//SORTIN   DD DSN=*.STEP7.SAISOCIO,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.ARQSOCIO.BASEFICA(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0400),RLSE),                                 
+//       DCB=(AD.A,LRECL=0197,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ OUTREC FIELDS=(27,197)                                                 
+ SORT FIELDS=(27,5,PD,A,32,3,PD,A,35,5,PD,A)                            
+ INCLUDE COND=(27,5,PD,GT,0,AND,32,3,PD,GT,0,AND,35,5,PD,GT,0)          
+ END                                                                    
+//*                                                                     
+//SOLTA    EXEC AV,                                                     
+//       J=CLLP0170,                                                    
+//       DS=AD.BRQ.DESAFICA.EXEC                                        
+//*                                                                     

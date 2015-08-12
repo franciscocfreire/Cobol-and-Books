@@ -1,0 +1,97 @@
+
+CLLPG637                                          BANCO BRADESCO S.A
+22/01/2015                                RELACAO DAS CARTAS DE COBRANCA EMITIDAS
+                                                  IGUAL A   08 DIAS
+ AG   CONTA      CPF/CNPJ       N O M E   D O   C L I E N T E        CAR   TIPO  VENCIMENTO      VALOR    NATUREZA
+===== ======= ================= ==================================== === ======= ========== ============= =======================
+00606 0168803 000383851/0001-60 SERTERRA TRANSPORTES ESCAV TERRAP E  621 CORREIO 04/12/2014       3793,18 FI CREDITOS E FINANC.
+                                                                                 07/12/2014       8075,18 FI CREDITOS E FINANC.
+                                                                                 09/12/2014       3249,49 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                 15117,85
+00606 0184494 003262502/0001-89 FATURETO VALIM CONFECCOES DE ROUPAS  331 CORREIO 04/12/2014       1264,37 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  1264,37
+05666 0000349 005412502/0001-43 CLEITON DE FREITAS CORREIA - ME      448 CORREIO 04/12/2014       2206,18 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  2206,18
+00073 0156331 007868447/0001-26 VIA CONTABIL LTDA - ME               379 CORREIO 04/12/2014        796,95 FI CREDITOS E FINANC.
+                                                                                 05/12/2014        259,75 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  1056,70
+00265 0168285 007926568/0001-87 CHAMOUN DESING E EVENTOS LTDA        351 CORREIO 04/12/2014       1197,23 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  1197,23
+01425 0112271 009637636/0001-13 CLINICA DE CIRURGIA PLASTICA DR. JUL 379 CORREIO 04/12/2014       1758,09 FI CREDITOS E FINANC.
+                                                                                 10/12/2014       1764,94 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  3523,03
+00482 0751359 010576774/0001-19 ARTES DE CHEF COMERCIO E REPRESENTAC 621 CORREIO 04/12/2014        981,79 FI CREDITOS E FINANC.
+                                                                                 15/12/2014       4445,30 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  5427,09
+00129 0183388 010668211/0001-50 ODONTO CLINICA JR LTDA               621 CORREIO 04/12/2014        319,77 FI CREDITOS E FINANC.
+                                                                                 10/12/2014       1683,43 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  2003,20
+01383 0022026 011977336/0001-25 MARTINS E MONTEIRO                   227 CORREIO 04/12/2014      17725,96 EC EMPRESTIMOS EM CONTA
+                                                                                 07/12/2014        113,68 TD TITULOS DESCONTADOS
+                                                                                 07/12/2014        227,40 TD TITULOS DESCONTADOS
+                                                                                 07/12/2014        458,50 TD TITULOS DESCONTADOS
+                                TOTAL DO CLIENTE                                                 18525,54
+00140 0237366 014259982/0001-45 JATO FORTE LAVAJATO LTDA             621 CORREIO 04/12/2014       1021,65 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  1021,65
+00406 0189501 015354314/0001-60 D&G COMERCIO E SERVICOS DE EQUIPAMEN 379 CORREIO 04/12/2014       2280,10 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  2280,10
+03726 0047966 015805492/0001-60 CONSTRUTORA ALMEIDA LTDA             385 CORREIO 04/12/2014       1084,20 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  1084,20
+03123 0014784 016509700/0001-46 ACOS TRIANGULO LTDA - ME             448 CORREIO 04/12/2014       2023,75 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  2023,75
+00064 0005102 016708549/0001-75 TOLINI E SOUZA BUGIGANGA LTDA - ME   842 CORREIO 04/12/2014       1200,00 TD TITULOS DESCONTADOS
+                                                                                 05/12/2014        156,34 TD TITULOS DESCONTADOS
+                                                                                 10/12/2014        847,58 FI CREDITOS E FINANC.
+                                                                                 10/12/2014        257,00 TD TITULOS DESCONTADOS
+                                                                                 10/12/2014        176,00 TD TITULOS DESCONTADOS
+                                                                                 10/12/2014        135,00 TD TITULOS DESCONTADOS
+                                                                                 12/12/2014        103,00 TD TITULOS DESCONTADOS
+                                TOTAL DO CLIENTE                                                  2874,92
+00523 0505456 017661081/0001-73 DISTRIBUIDORA E PRESTADORA DE SE     722 CORREIO 04/12/2014       1038,92 FI CREDITOS E FINANC.
+                                                                                 10/12/2014        939,06 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  1977,98
+00321 0137908 024288314/0000-10 FREDERICO ALEXANDRE DE SOUZA ALVES L 444 CORREIO 04/12/2014        413,20 FI CREDITOS E FINANC.
+                                                                                 12/12/2014        905,21 RE OPERAC. DE REPASSES
+                                TOTAL DO CLIENTE                                                  1318,41
+01420 0011908 028942622/0000-72 MANOEL ANTONIO VALE DA SILVA         346 CORREIO 04/12/2014        122,77 EC EMPRESTIMOS EM CONTA
+                                                                                 08/12/2014         44,53 EC EMPRESTIMOS EM CONTA
+                                                                                 15/12/2014       1352,42 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  1519,72
+
+CLLPG637                                          BANCO BRADESCO S.A
+22/01/2015                                RELACAO DAS CARTAS DE COBRANCA EMITIDAS
+                                                  IGUAL A   08 DIAS
+ AG   CONTA      CPF/CNPJ       N O M E   D O   C L I E N T E        CAR   TIPO  VENCIMENTO      VALOR    NATUREZA
+===== ======= ================= ==================================== === ======= ========== ============= =======================
+00406 0115792 030230377/0000-44 ALEXANDRE MARTINS SILVA              260 CORREIO 04/12/2014         94,81 FI CREDITOS E FINANC.
+                                                                                 15/12/2014       1038,39 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  1133,20
+05899 0532758 182878832/0000-53 JANIRA DA COSTA LIMA                 408 CORREIO 04/12/2014       1861,74 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  1861,74
+00215 0203327 188106258/0000-97 FABIANA ARANHA NOGUEIRA              532 CORREIO 04/12/2014       1615,43 IM OPERAC. IMOBILIARIAS
+                                TOTAL DO CLIENTE                                                  1615,43
+00073 0155235 321821801/0000-25 PEDRO FENELON PEDROSO                348 CORREIO 04/12/2014       2088,12 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  2088,12
+00396 0095870 336957926/0000-04 PAULO ROBERTO PEREIRA DE MELO        348 CORREIO 04/12/2014        224,00 EC EMPRESTIMOS EM CONTA
+                                                                                 05/12/2014         86,85 EC EMPRESTIMOS EM CONTA
+                                                                                 05/12/2014         91,98 FI CREDITOS E FINANC.
+                                                                                 06/12/2014         36,87 EC EMPRESTIMOS EM CONTA
+                                                                                 15/12/2014        648,23 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  1087,93
+00064 0331549 417958058/0000-62 NATALIA DOS SANTOS MAGALHAES         348 CORREIO 04/12/2014        378,39 EC EMPRESTIMOS EM CONTA
+                                                                                 05/12/2014         30,23 FI CREDITOS E FINANC.
+                                                                                 14/12/2014        489,23 FI CREDITOS E FINANC.
+                                                                                 15/12/2014        109,11 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  1006,96
+00239 0069284 594663165/0000-91 ELAINE BATISTA PEREIRA               444 CORREIO 04/12/2014       1356,72 FI CREDITOS E FINANC.
+                                TOTAL DO CLIENTE                                                  1356,72
+00265 0107143 640772336/0000-15 PAULO SERGIO FERREIRA                346 CORREIO 04/12/2014        335,92 EC EMPRESTIMOS EM CONTA
+                                                                                 04/12/2014        241,53 EC EMPRESTIMOS EM CONTA
+                                                                                 08/12/2014       1050,83 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  1628,28
+00320 0657481 677896172/0000-49 SEVERINO JAILSON MENDES DE CASTRO    346 CORREIO 04/12/2014        165,97 EC EMPRESTIMOS EM CONTA
+                                                                                 05/12/2014        208,56 EC EMPRESTIMOS EM CONTA
+                                                                                 09/12/2014       1042,77 EC EMPRESTIMOS EM CONTA
+                                TOTAL DO CLIENTE                                                  1417,30
+                TOTAL         :           26   CARTAS                                            77617,60
+                TOTAL  GERAL  :           26   CARTAS                                            77617,60

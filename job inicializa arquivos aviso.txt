@@ -1,0 +1,36 @@
+//CLLPX004 JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z          
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                        
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                   
+//STEP1    EXEC PGM=PLAN7220                                  
+//*                                                           
+//* ***    INICIALIZA ARQUIVO                                 
+//*                                                           
+//ZERA001  DD DSN=MX.CLLP.PRV.CONTMVTO.CORREIO.LE(+1),               
+//       DISP=(,CATLG,DELETE),                                
+//       UNIT=DISCO,                                          
+//       SPACE=(TRK,(020000,4000),RLSE),                      
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)       
+//ZERA002  DD DSN=MX.CLLP.PRV.MVAVISO.DEVEDOR.LEI(+1),               
+//       DISP=(,CATLG,DELETE),                                
+//       UNIT=DISCO,                                          
+//       SPACE=(TRK,(020000,4000),RLSE),                      
+//       DCB=(MX.A,LRECL=0104,RECFM=FB)    
+//ZERA003  DD DSN=MX.CLLP.PRV.AGACUMES.LEI(+1),               
+//       DISP=(,CATLG,DELETE),                                
+//       UNIT=DISCO,                                          
+//       SPACE=(TRK,(020000,4000),RLSE),                      
+//       DCB=(MX.A,LRECL=0050,RECFM=FB)    
+//ZERA004  DD DSN=MX.CLLP.PRV.CONTMVTO.CORREIO.ACUM.L(+1),               
+//       DISP=(,CATLG,DELETE),                                
+//       UNIT=DISCO,                                          
+//       SPACE=(TRK,(020000,4000),RLSE),                      
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)    
+//ZERA005  DD DSN=MX.CLLP.PRV.MVAVISO.AVAL.LEI(+1),               
+//       DISP=(,CATLG,DELETE),                                
+//       UNIT=DISCO,                                          
+//       SPACE=(TRK,(020000,4000),RLSE),                      
+//       DCB=(MX.A,LRECL=0104,RECFM=FB)                    
+//PRINTER  DD SYSOUT=*                                        
+//SYSOUT   DD SYSOUT=*                                        
+//SYSUDUMP DD SYSOUT=Y                                        
+//*                                                           

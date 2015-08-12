@@ -1,0 +1,128 @@
+529131398
+226829648
+697046433
+756989432
+18660893 
+471199696
+692023625
+146030618
+724765409
+864680907
+MX.RDAB.LOGDR.ENDERECO.AVAL
+
+MX.CLLP.PRV.AVALISTA.ZCAF.G0349V00
+
+
+00029 00005 PD   EQ   952795803                        OR    
+00029 00005 PD   EQ   12744208                         OR    
+00029 00005 PD   EQ   11615362                         OR    
+00029 00005 PD   EQ   52568755                         OR    
+00029 00005 PD   EQ   7015154                          OR    
+00029 00005 PD   EQ   97535533                         OR    
+00029 00005 PD   EQ   14794866                         OR    
+00029 00005 PD   EQ   1432363                          OR    
+00029 00005 PD   EQ   199590522                        OR    
+00029 00005 PD   EQ   12260338                               
+
+
+AVI-CGC     AVI-FIL     AVI-CTR      AVI-EMPRESA   AVI-AGENCIA   AVI-NUM
+P(9) (1-5)  P(5) (6-8)  P(3) (9-10)  P(5) (11-13)  P(5) (14-16)  P(7) (1
+----------  ----------  -----------  ------------  ------------  -------
+************************** TOP OF DATA *********************************
+1432363     1           69           4120          1986          47675  
+7015154     1           4            4120          95            5956   
+11615362    1           3            4120          127           524631 
+12260338    1           61           4120          2751          32570  
+14794866    1           26           4120          456           67000  
+52568755    1           90           4120          1382          72150  
+97535533    1           0            4120          1652          46270  
+199590522   0           49           4120          522           52384  
+952795803   0           25           4120          937           549506 
+
+
+AVI-NOME-AVAL                             AVI-CGC-AVAL  AV
+C(40) (21-60)                             P(9) (61-65)  P(
+----------------------------------------  ------------  --
+************ TOP OF DATA *********************************
+CICERO VIEIRA DA SILVA                    724765409     0 
+ANNA MARIA SANTOS BRASIL                  529131398     0 
+MARCIO FELIPE DO CARMO                    226829648     0 
+VANIA DIAS DE PINHO                       864680907     0 
+ZUILA FRANCA SOBREIRA DA COSTA            697046433     0 
+WALTER CASAGRANDE JUNIOR E OU             471199696     0 
+ADECIO ALVES LEAL                         692023625     0 
+DEUSIMAR PESSOA NASCIMENTO                756989432     0 
+VALKECIA DOS SANTOS RAMOS                 18660893      0 
+
+AVI-CTR-AVA
+P(3) (69-70
+-----------
+***********
+0          
+68         
+26         
+25         
+49         
+68         
+72         
+49         
+40         
+AVI-CCEP        AVI-CCEP-COMPL
+Z(5) (190-194)  Z(3) (195-197)
+--------------  --------------
+ *****************************
+02866           000           
+01220           020           
+03477           000           
+23073           250           
+17511           360           
+06544           045           
+45990           111           
+69303           467           
+64675           000           
+
+SELECT                                             
+      CCEP,                                        
+      CCEP_COMPL,                                  
+      CSGL_UF,                                     
+      IMUN                                                                     
+FROM   DB2PRD.V01CEP                               
+WHERE                                              
+      CCEP               = :CEPNV003.CCEP       AND
+      CCEP_COMPL         = :CEPNV003.CCEP-COMPL    
+
+
+V01CTA_CORRENTE
+V01CLIENTE_AGENCIA
+
+
+
+1432363 	CEARA GOVERNO EST000000100
+724765409
+
+FROM   DB2PRD.V01CTA_CORRENTE                          
+WHERE                                                  
+    CID_CLI          = 'CEARA GOVERNO EST000000100'    
+
+   CJUNC        CCTA  DULT      
+   DEPDC        CLI   ACERT     
+--------  ----------  ----------
+     643         100  06.10.2005
+    1986       47675  19.05.2014
+
+
+
+12260338	CEARA GOVERNO EST000003497
+864680907
+
+FROM   DB2PRD.V01CTA_CORRENTE                        
+WHERE                                                
+    CID_CLI          = 'CEARA GOVERNO EST000003497'  
+
+    CJUNC        CCTA  DULT       
+    DEPDC        CLI   ACERT      
+ --------  ----------  ---------- 
+     2751       32570  18.09.2013 
+
+
+

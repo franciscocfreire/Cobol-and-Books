@@ -1,0 +1,223 @@
+//CLLP2220 JOB 'CLLP,4120,PR32','I311083',MSGCLASS=Z,REGION=8192K,      
+//       SCHENV=DB2                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTGZ28                 
+//*                                                                     
+//STEP0    EXEC PGM=ATSOAC01,                                           
+//       PARM='00-IKJEFT01',                                            
+//       DYNAMNBR=20                                                    
+//*                                                                     
+//* ***    DESCARREGA A TABELA DB2PRD.TPO_BAIXA_CONTR   (LPCLB051)      
+//* ***    EM ARQUIVO SEQUENCIAL.                                       
+//*                                                                     
+//SYSTSPRT DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//LISTING  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSPUNCH DD DSN=MX.DBAS.CLLPB051(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A)                                                     
+//SYSREC00 DD DSN=MX.CLLP.TABELA51(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,RECFM=FB,LRECL=078)                                  
+//SYSTSIN  DD DSN=DB2M1.R2.SYSIN(DSNTIAUL),                             
+//       DISP=SHR                                                       
+//SYSIN    DD *                                                         
+DB2PRD.TPO_BAIXA_CONTR                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//*                                                                     
+//STEP1    EXEC PGM=CLLP0001,                                           
+//       PARM='DISPLAY'                                                 
+//*                                                                     
+//* ***    ESTE JOB SERA' EXECUTADO SEMPRE NA PRIMEIRA SEXTA FEIRA      
+//* ***    DO MES,PORTANTO A DATA A SER TECLADA SERA' A DATA DA SEXTA   
+//* ***    FEIRA.                                                       
+//* ***    CASO SEJA EXECUTADO NA SEGUNDA SEXTA FEIRA DO MES, A DATA A  
+//* ***    SER TECLADA DEVERA' SER DA SEXTA FEIRA EM QUE ESTA'          
+//* ***    SENDO PROCESSADO 'DDMMAAAA'                                  
+//* ***    CASO SEJA NECESSÁRIO INFORMAR UMA OUTRA DATA, ALTERAR O      
+//* ***    PARM PARA DISPLAY                                            
+//*                                                                     
+//ARQDATAE DD DSN=MX.CLLP.PRV.DATA.DIADA.SEXTA(0),                      
+//       DISP=SHR                                                       
+//ARQDTANT DD DUMMY,                                                    
+//       DCB=(BLKSIZE=00060,LRECL=60,RECFM=F)                           
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATBAIXA(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//*DCB NOCHECK                                                          
+//       DCB=(MX.A,BLKSIZE=00060,LRECL=00060,RECFM=F)                   
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA O ARQUIVO 'MX.CLLP.PRV.TABELA51'                  
+//*                                                                     
+//SORTIN   DD DSN=*.STEP0.SYSREC00,                                     
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.TABELA51.CLAS2(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0079,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,1,CH,A,2,1,CH,A)                                        
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=CLLP6560                                            
+//*                                                                     
+//* ***    BAIXAS TRANSF. DOS ULTIMOS 3 MESES P/ MAIS DE 3 MESES        
+//*                                                                     
+//BAIXAEXC DD DSN=MX.CLLP.CADBAIXA.TOTAL2(0),                           
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQDATAS DD DSN=*.STEP1.ARQDATA,                                      
+//       DISP=OLD                                                       
+//TABBAIXA DD DSN=*.STEP1A.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.COPIA(0),                            
+//       DISP=SHR                                                       
+//LPCLB008 DD DSN=MX.CLLP.D0PRVMZ.PRV.BAIX3MES.LEI(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300000,050000),RLSE),                              
+//       DCB=(MX.A,LRECL=0414,RECFM=FB,BUFNO=50),                       
+//       DATACLAS=PRODX37                                               
+//LPCLB045 DD DSN=MX.CLLP.D0PRVMZ.PRV.BXMAIS3M.LEI(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300000,050000),RLSE),                              
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#GZ28,                                       
+//       DCB=(LRECL=080,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE BAIXADOS (MAIS DE 3 MESES)             
+//*                                                                     
+//* ***    POR: AGENCIA / CONTA / CARTEIRA / CONTRATO - ASCENDENTE      
+//*                                                                     
+//* ***         DATA DA BAIXA                         - DESCENDENTE     
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.LPCLB045,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.PRV.BXMAIS3M.CLLP4700(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,06),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0030,RECFM=FB)                                 
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                         
+//       DISP=SHR                                                       
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSIN    DD *                                                         
+ SORT FIELDS=(04,03,PD,A,26,4,PD,A,31,3,CH,A,34,4,PD,A,                 
+              22,04,CH,D,19,02,CH,D,16,02,CH,D)                         
+ INCLUDE COND=(22,4,CH,GT,C'2002')                                      
+ OUTREC FIELDS=(4,3,26,4,31,3,34,4,16,10)                               
+ END                                                                    
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CONVERTER O ARQUIVO RECEBIDO DO DCIR                         
+//* ***    INCLUINDO OS CAMPOS DA LEI DA TRANSPARENCIA                  
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.LPCLB008,                                     
+//       DISP=SHR                                                       
+//SORTOUT1 DD DSN=MX.CLLP.D0PRVMZ.PRV.BAIX3MES(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000020,0004),RLSE),                                
+//       DCB=(MX.A,LRECL=0314,RECFM=FB)                                 
+//SORTOUT2 DD DSN=MX.CLLP.D0PRVMZ.PRV.BX3MREES(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000020,0004),RLSE),                                
+//       DCB=(MX.A,LRECL=0414,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTFIL FNAMES=SORTOUT1,                                                
+ OUTREC=(1,314)                                                         
+ OUTFIL FNAMES=SORTOUT2,                                                
+ OUTREC FIELDS=(01,375,376,8,PD,TO=PD,LENGTH=7,384,8,PD,TO=PD,LENGTH=7, 
+                392,8,PD,TO=PD,LENGTH=7,400,02,PD,TO=ZD,LENGTH=02,      
+                16C' ')                                                 
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  

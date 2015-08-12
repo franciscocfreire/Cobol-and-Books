@@ -1,0 +1,283 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 1 B  --  N O D E
+
+09.19.02 JOB40396 ---- WEDNESDAY, 23 JUL 2014 ----
+09.19.02 JOB40396  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+09.19.02 JOB40396  ICH70001I PRODSTR  LAST ACCESS AT 09:19:02 ON WEDNESDAY, JULY
+09.19.02 JOB40396  $HASP373 CLLP0180 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+09.19.02 JOB40396  IEF403I CLLP0180 - STARTED - TIME=09.19.02
+09.19.02 JOB40396  BUFL004I   ENT00001  Bufno=005  Dataset  menor  que 045 TRKS
+09.19.02 JOB40396  BUFL002I   ENT00001  AC.CLLP.PESSJURI.CARGFICA.G0001V00
+09.19.02 JOB40396  BUFL013I   SAI00001  Nao Bufferizado. Alcancado Limite de Mem
+09.19.02 JOB40396  BUFL011I   SAI00001  Memoria Solicitada(00409K)  Usada(000016
+09.19.02 JOB40396  BUFL012I   SAI00001  Memoria Reservada (04096K)  Total(000409
+09.19.02 JOB40396  BUFL002I   SAI00001  TM.CLLP.RDAB.PESSJURI.CARGFICA
+09.19.03 JOB40396  -                                                --TIMINGS (M
+09.19.03 JOB40396  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+09.19.03 JOB40396  -CLLP0180 STEP1                00   3857    494    .00    .00
+09.19.03 JOB40396  IEF404I CLLP0180 - ENDED - TIME=09.19.03
+09.19.03 JOB40396  -CLLP0180 ENDED.  NAME-B771551              TOTAL TCB CPU TIM
+09.19.03 JOB40396  $HASP395 CLLP0180 ENDED
+------ JES2 JOB STATISTICS ------
+  23 JUL 2014 JOB EXECUTION DATE
+           56 CARDS READ
+          277 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           18 SYSOUT SPOOL KBYTES
+         0.02 MINUTES EXECUTION TIME
+
+        1 //CLLP0180 JOB 'CLLP,4120,PR32','B771551',MSGCLASS=1,REGION=4M,
+          //       MSGLEVEL=(1,1)
+          //*---- SUBMITTED BY CONTROL-M (FROM MEMLIB)      ODATE=140723
+          //*---- SCHEDULE AC.CTMR.PUB.PR32.CARGAS.CTM93207.G0001V00(+1)
+          //*---- SCHEDULED DUE TO RBC:
+          //*---- JCL      AC.JCLFILE(CLLP0180)
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=LJDZZ  RUN NO.=00001
+        2 //JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR
+        3 //         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR
+        4 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        5 //STEP1    EXEC PGM=PLAN2440,
+          //       PARM=006
+          //*
+          //* ***    GRAVA ARQUIVOS TRANSITO PARA A  ROTINA (RDAB).
+          //*
+        6 //ENT00001 DD DSN=AC.CLLP.PESSJURI.CARGFICA(0),
+          //       DISP=OLD
+        7 //SAI00001 DD DSN=TM.CLLP.RDAB.PESSJURI.CARGFICA,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,15),
+          //       SPACE=(TRK,(015000,1500),RLSE)
+        8 //ENT00002 DD DSN=AC.CLLP.PESSFISI.CARGFICA(0),
+          //       DISP=OLD
+        9 //SAI00002 DD DSN=TM.CLLP.RDAB.PESSFISI.CARGFICA,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,15),
+          //       SPACE=(TRK,(015000,1500),RLSE)
+       10 //ENT00003 DD DSN=AC.CLLP.CTACORR.BASEFICA(0),
+          //       DISP=OLD
+       11 //SAI00003 DD DSN=TM.CLLP.RDAB.CTACORR.BASEFICA,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,15),
+          //       SPACE=(TRK,(015000,1500),RLSE)
+       12 //ENT00004 DD DSN=AC.CLLP.ARQLOGRD.BASEFICA(0),
+          //       DISP=OLD
+       13 //SAI00004 DD DSN=TM.CLLP.RDAB.ARQLOGRD.BASEFICA,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,15),
+          //       SPACE=(TRK,(015000,1500),RLSE)
+       14 //ENT00005 DD DSN=AC.CLLP.ARQFONES.BASEFICA(0),
+          //       DISP=OLD
+       15 //SAI00005 DD DSN=TM.CLLP.RDAB.ARQFONES.BASEFICA,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,15),
+          //       SPACE=(TRK,(015000,1500),RLSE)
+       16 //ENT00006 DD DSN=AC.CLLP.ARQSOCIO.BASEFICA(0),
+          //       DISP=OLD
+       17 //SAI00006 DD DSN=TM.CLLP.RDAB.ARQSOCIO.BASEFICA,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,15),
+          //       SPACE=(TRK,(015000,1500),RLSE)
+       18 //PRINTER  DD SYSOUT=*
+       19 //SYSOUT   DD SYSOUT=*
+       20 //SYSUDUMP DD SYSOUT=Y
+          //*
+
+       21 //
+
+ICH70001I PRODSTR  LAST ACCESS AT 09:19:02 ON WEDNESDAY, JULY 23, 2014
+IEF236I ALLOC. FOR CLLP0180 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I A302 ALLOCATED TO
+IEF237I 634C ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ENT00001
+IGD101I SMS ALLOCATED TO DDNAME (SAI00001)
+        DSN (TM.CLLP.RDAB.PESSJURI.CARGFICA              )
+        STORCLAS (STANDARD) MGMTCLAS (GN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1S16
+IGD103I SMS ALLOCATED TO DDNAME ENT00002
+IGD101I SMS ALLOCATED TO DDNAME (SAI00002)
+        DSN (TM.CLLP.RDAB.PESSFISI.CARGFICA              )
+        STORCLAS (STANDARD) MGMTCLAS (GN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1S18
+IGD103I SMS ALLOCATED TO DDNAME ENT00003
+IGD101I SMS ALLOCATED TO DDNAME (SAI00003)
+        DSN (TM.CLLP.RDAB.CTACORR.BASEFICA               )
+        STORCLAS (STANDARD) MGMTCLAS (GN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1S17
+IGD103I SMS ALLOCATED TO DDNAME ENT00004
+IGD101I SMS ALLOCATED TO DDNAME (SAI00004)
+        DSN (TM.CLLP.RDAB.ARQLOGRD.BASEFICA              )
+        STORCLAS (STANDARD) MGMTCLAS (GN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1S05
+IGD103I SMS ALLOCATED TO DDNAME ENT00005
+IGD101I SMS ALLOCATED TO DDNAME (SAI00005)
+        DSN (TM.CLLP.RDAB.ARQFONES.BASEFICA              )
+        STORCLAS (STANDARD) MGMTCLAS (GN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1S19
+IGD103I SMS ALLOCATED TO DDNAME ENT00006
+IGD101I SMS ALLOCATED TO DDNAME (SAI00006)
+        DSN (TM.CLLP.RDAB.ARQSOCIO.BASEFICA              )
+        STORCLAS (STANDARD) MGMTCLAS (GN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM1S21
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL004I   ENT00001  Bufno=005  Dataset  menor  que 045 TRKS
+BUFL002I   ENT00001  AC.CLLP.PESSJURI.CARGFICA.G0001V00
+BUFL013I   SAI00001  Nao Bufferizado. Alcancado Limite de Memoria
+BUFL011I   SAI00001  Memoria Solicitada(00409K)  Usada(0000168K) Below
+BUFL012I   SAI00001  Memoria Reservada (04096K)  Total(0004096K) Below
+BUFL002I   SAI00001  TM.CLLP.RDAB.PESSJURI.CARGFICA
+IEF142I CLLP0180 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AC.CLLP.PESSJURI.CARGFICA.G0001V00           RETAINED,  DDNAME=ENT00001
+IGD104I TM.CLLP.RDAB.PESSJURI.CARGFICA               RETAINED,  DDNAME=SAI00001
+IGD104I AC.CLLP.PESSFISI.CARGFICA.G0001V00           RETAINED,  DDNAME=ENT00002
+IGD104I TM.CLLP.RDAB.PESSFISI.CARGFICA               RETAINED,  DDNAME=SAI00002
+IGD104I AC.CLLP.CTACORR.BASEFICA.G0001V00            RETAINED,  DDNAME=ENT00003
+IGD104I TM.CLLP.RDAB.CTACORR.BASEFICA                RETAINED,  DDNAME=SAI00003
+IGD104I AC.CLLP.ARQLOGRD.BASEFICA.G0001V00           RETAINED,  DDNAME=ENT00004
+IGD104I TM.CLLP.RDAB.ARQLOGRD.BASEFICA               RETAINED,  DDNAME=SAI00004
+IGD104I AC.CLLP.ARQFONES.BASEFICA.G0001V00           RETAINED,  DDNAME=ENT00005
+IGD104I TM.CLLP.RDAB.ARQFONES.BASEFICA               RETAINED,  DDNAME=SAI00005
+IGD104I AC.CLLP.ARQSOCIO.BASEFICA.G0001V00           RETAINED,  DDNAME=ENT00006
+IGD104I TM.CLLP.RDAB.ARQSOCIO.BASEFICA               RETAINED,  DDNAME=SAI00006
+IEF285I   PRODSTR.CLLP0180.JOB40396.D0000101.?         SYSOUT
+IEF285I   PRODSTR.CLLP0180.JOB40396.D0000102.?         SYSOUT
+IEF285I   PRODSTR.CLLP0180.JOB40396.D0000103.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 23-Jul-2014 09:19:02 AM
+Step  Num: 1              PGM  Name: PLAN2440     End:   23-Jul-2014 09:19:03 AM
+CPU (TCB): 00:00:00.04                            Storage below 16M:        300k
+CPU (SRB): 00:00:00.01                            Storage above 16M:          4k
+Trans Act: 00:00:01.02                            Service Units:           4,737
+Tape Mnts: 0                                      Total EXCPs:             3,857
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+CD08 D JOBLIB              1  23,476        632E D ENT00001           17  27,945
+7198 D SAI00001           16  27,945        68A4 D ENT00002        1,017  27,810
+7139 D SAI00002        1,016  27,810        631E D ENT00003          420  27,930
+71B8 D SAI00003          419  27,930        A36F D ENT00004          329  27,886
+71BE D SAI00004          328  27,886        6498 D ENT00005           83  27,984
+7159 D SAI00005           82  27,984        6B50 D ENT00006           22  27,974
+7199 D SAI00006           21  27,974
+
+Total DASD EXCPs:              3,771        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014204.0919
+IEF032I STEP/STEP1   /STOP  2014204.0919
+        CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+        VIRT:   300K  SYS:   364K  EXT:        4K  SYS:    10460K
+IGD104I AC.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   DB2A1.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= DB2A11.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13AL1.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP0180       System ID: AL1A        Submit: 23-Jul-2014 09:19:02 AM
+Job JESID: JOB40396       MVS level: SP7.1.3     Start:  23-Jul-2014 09:19:02 AM
+Job Class: A                                     End:    23-Jul-2014 09:19:03 AM
+CPU (TCB): 00:00:00.04                           Storage below 16M:         300k
+CPU (SRB): 00:00:00.01                           Storage above 16M:           4k
+Trans Act: 00:00:01.02                           Service Units:            4,737
+Tape Mnts: 0                                     Total EXCPs:              3,857
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: B771551
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP0180/START 2014204.0919
+IEF033I  JOB/CLLP0180/STOP  2014204.0919
+        CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+
+
+
+* CLLP0180 * PLANEJ. E CONTROLE DA PRODUCAO      *
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=23/07/2014   *
+* LABEL=001/006  REGS.=00000005510 HORA=09.19.02 *
+* BLKSIZE=27945     LRECL=00081     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.PESSJURI.CARGFICA.G0001V00             *
+* VOLSER=SA1049                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.PESSJURI.CARGFICA                 *
+* VOLSER=SM1S16                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=23/07/2014   *
+* LABEL=002/006  REGS.=00000104610 HORA=09.19.03 *
+* BLKSIZE=27810     LRECL=00270     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.PESSFISI.CARGFICA.G0001V00             *
+* VOLSER=SA13A8                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.PESSFISI.CARGFICA                 *
+* VOLSER=SM1S18                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=23/07/2014   *
+* LABEL=003/006  REGS.=00000119245 HORA=09.19.03 *
+* BLKSIZE=27930     LRECL=00098     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.CTACORR.BASEFICA.G0001V00              *
+* VOLSER=SA1045                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.CTACORR.BASEFICA                  *
+* VOLSER=SM1S17                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=23/07/2014   *
+* LABEL=004/006  REGS.=00000062537 HORA=09.19.03 *
+* BLKSIZE=27886     LRECL=00146     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.ARQLOGRD.BASEFICA.G0001V00             *
+* VOLSER=SA12LA                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQLOGRD.BASEFICA                 *
+* VOLSER=SM1S05                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=23/07/2014   *
+* LABEL=005/006  REGS.=00000051942 HORA=09.19.03 *
+* BLKSIZE=27984     LRECL=00044     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.ARQFONES.BASEFICA.G0001V00             *
+* VOLSER=SA1040                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQFONES.BASEFICA                 *
+* VOLSER=SM1S19                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=23/07/2014   *
+* LABEL=006/006  REGS.=00000002845 HORA=09.19.03 *
+* BLKSIZE=27974     LRECL=00197     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.ARQSOCIO.BASEFICA.G0001V00             *
+* VOLSER=SA1240                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQSOCIO.BASEFICA                 *
+* VOLSER=SM1S21                                  *
+**************************************************

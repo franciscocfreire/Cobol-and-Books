@@ -1,0 +1,198 @@
+//CLLP0535 JOB 'CLLP,4120,PR32','B752247',MSGCLASS=Z                    
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTGG12                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA  O ARQUIVO  DE ENTRADAS EM CL DO DIA              
+//* ***    EM ORDEM DE: AGENCIA, CONTA CORRENTE E CONTRATO.             
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.ARQENTC2.LEI(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQETEMP(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,A,16,4,A,29,4,A),FORMAT=BI                            
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=LPCL6070                                            
+//*                                                                     
+//* ***    ATUALIZA A PARTE DOS ADVOGADOS NO ARQUIVO DE                 
+//* ***    ENTRADAS EM CL DO DIA.                                       
+//*                                                                     
+//CADLPADV DD DSN=MX.CLLP.CADLPADV(0),                                  
+//       DISP=SHR                                                       
+//ARQENTCL DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQENATU DD DSN=MX.CLLP.ARQENATU(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA O ARQUIVO DE ENTRADAS EM CL DO DIA                
+//* ***    ATUALIZADO NA  ORDEM DE: EMPRESA, AGENCIA   E                
+//* ***    NUMERO DO CL.                                                
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3.ARQENATU,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQNTEMP(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,14,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=LPCL6080                                            
+//*                                                                     
+//* ***    ATUALIZA O CADASTRO CLLP, COM AS ENTRADAS EM                 
+//* ***    CL DO DIA ATUALIZADAS.                                       
+//*                                                                     
+//CADALPCL DD DSN=MX.CLLP.CADALPCL.LEI(0),                              
+//       DISP=SHR                                                       
+//ARQENATU DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//CADLPATU DD DSN=MX.CLLP.CADALPCL.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,59),                                               
+//       SPACE=(TRK,(020000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//RELATO   DD SYSOUT=%%FORM#GG12,                                       
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6    EXEC PGM=POOL0262                                            
+//*                                                                     
+//* ***    DESCOMPRIME O ARQUIVO CADALPCL E SELECIONA DO ARQUIVO:       
+//* ***    FORMATA AG-CONTA-GRUPO-SUBGRUPO-POSTO-TIPO                   
+//*                                                                     
+//SORTIN   DD DSN=*.STEP5.CADLPATU,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CLLPETIQ(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0014,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+SORT FIELDS=(4,3,PD,A,16,4,PD,A)                                        
+OUTREC FIELDS=(4,3,16,4,X'007F005F000F',600,1)                          
+SUM FIELDS=NONE                                                         
+END                                                                     
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7    EXEC SORTD                                                   
+//*                                                                     
+//* ***    SELECIONA TIPO  1 OU 7                                       
+//* ***    CONTAS PENDENTES QUE NAO CONSTAM NO CLIE                     
+//* ***    FORMATA AG-CONTA-GRUPO-SUBGRUPO-POSTO                        
+//*                                                                     
+//* ***    GRAVA ARQUIVO TRANSITO P/ ROTINA - ETIQ                      
+//*                                                                     
+//SORTIN   DD DSN=*.STEP6.SORTOUT,                                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ETIQ.CADALPCL,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0013,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT    FIELDS=COPY                                                    
+ INCLUDE COND=(14,1,ZD,EQ,1,OR,14,1,ZD,EQ,7)                            
+ OUTREC  FIELDS=(1,13)                                                  
+ END                                                                    
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPY    EXEC PGM=IEFBR14                                             
+//*                                                                     
+//* ***    **********************************************************   
+//* ***    * DELECOES DOS ARQUIVOS P/ LIBERACAO DOS SPACES EM DISCOS*   
+//* ***    *   -  ESTES ARQUIVOS ERAM GRAVADOS COMO TEMPORARIOS -   *   
+//* ***    **********************************************************   
+//*                                                                     
+//DD1      DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//DD2      DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//DD3      DD DSN=*.STEP6.SORTOUT,                                      
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

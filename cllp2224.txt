@@ -1,0 +1,92 @@
+//CLLP2224 JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z,REGION=8192K,      
+//       SCHENV=DB2                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTCATG                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTCATH                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHBGM                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIVAR MVSEGPRE P/ AGENCIA , CONTA - ASCENDENTE -         
+//* ***    DATA DA BAIXA , CONTRATO E DATA DE VENCIMENTO - DESCENDENTE -
+//*                                                                     
+//SORTIN   DD DSN=MX.LPCL.PRV.MOVLPCL.SEGURO(0),                        
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.LPCL.MOVLPCL.CLASSIF(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(002400,0480),RLSE),                                
+//       DCB=(MX.A,LRECL=036,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,3,PD,A,04,4,PD,A,33,4,ZD,D,30,2,ZD,D,27,2,ZD,D,         
+              11,4,PD,D,21,4,CH,D,18,2,CH,D,15,2,CH,D),FORMAT=BI        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP2734                                            
+//*                                                                     
+//* ***    ATUALIZAR BAIXAS  COM TIPO E ESTATUS DO SEGURO PRESTAMISTA   
+//*                                                                     
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATBAIXA(0),                              
+//       DISP=SHR                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.NOVO(0),                             
+//       DISP=SHR                                                       
+//MVSEGPRE DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//MVBAIXAE DD DSN=MX.CLLP.D0PRVMZ.CGMAIS3X(0),                          
+//       DISP=SHR                                                       
+//MVBAIXAS DD DSN=MX.CLLP.D0PRVMZ.CGTEMP3M(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=VTSLG,                                                    
+//       VOL=(,,,255),                                                  
+//       DCB=(MX.A,LRECL=0437,RECFM=FB)                                 
+//RELSELE  DD SYSOUT=%%FORM#CATG,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//RELNSEL  DD SYSOUT=%%FORM#CATH,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP0513,                                           
+//       PARM='IS3M'                                                    
+//*                                                                     
+//* ***    CONSISTIR ARQUIVOS DE AGENCIAS OPERADORAS                    
+//*                                                                     
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.NOVO(0),                             
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATAMOV(0),                               
+//       DISP=SHR                                                       
+//ARQOPER  DD DSN=MX.LPCL.PRV.AGRELAC(0),                               
+//       DISP=SHR                                                       
+//ARQTB08E DD DSN=*.STEP2.MVBAIXAS,                                     
+//       DISP=OLD                                                       
+//ARQTB08S DD DSN=MX.CLLP.CGMAIS3M(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0437,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELAT01  DD SYSOUT=%%FORM#HBGM,                                       
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

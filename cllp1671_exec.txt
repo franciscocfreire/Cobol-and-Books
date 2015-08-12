@@ -1,0 +1,150 @@
+//CLLP1671 JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z,REGION=8096K,      
+//       SCHENV=DB2                                                     
+//JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP01   EXEC PGM=CLLP7161                                            
+//STEPLIB  DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//* ***    SEPARA INFORMACOES DE AVALISTAS/DEVEDORES                    
+//*                                                                     
+//*CADSESPC DD DSN=AD.BRQ.A144.CADSESPC.CLLP7117.T16(0),                
+//CADSESPC DD DSN=AD.BRQ.P141.CADSESPC.CLLP7117.T16(0),                 
+//       DISP=SHR                                                       
+//CADDEVES DD DSN=AD.BRQ.P141.CADSESPC.P7161.DEV.T16(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AD.A,LRECL=072,RECFM=FB)                                  
+//*      DCB=(AD.A,LRECL=071,RECFM=FB)                                  
+//CADAVALS DD DSN=AD.BRQ.P141.CADSESPC.P7161.AVAL.T16(+1),              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(009830,1966),RLSE),                                
+//       DCB=(AD.A,LRECL=072,RECFM=FB)                                  
+//*      DCB=(AD.A,LRECL=071,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP02   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQ DEVEDOR POR: CPF/CNPJ DEV, CPF/CNPJ AVAL,     
+//* ***    NATUREZA, AGENCIA E CARTEIRA                                 
+//*                                                                     
+//SORTIN   DD DSN=*.STEP01.CADDEVES,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P141.CADDEVES.CLLP7161.T16(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AD.A,LRECL=072,RECFM=FB)                                  
+//*      DCB=(AD.A,LRECL=071,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,12,A,26,3,A,13,3,A),FORMAT=BI                           
+ SUM FIELDS=NONE                                                        
+ END                                                                    
+//*                                                                     
+//STEP03   EXEC PGM=ICETOOL                                             
+//*                                                                     
+//* ***    LISTA CPF/CNPJ DOS DEVEDORES PARA INCLUSAO NO SERASA/SPC     
+//*                                                                     
+//ENTRADA  DD DSN=*.STEP02.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//TEMP     DD DSN=AD.BRQ.P141.LISTA.CADDEVES.T16(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AD.A,LRECL=072,RECFM=FB)                                  
+//*      DCB=(AD.A,LRECL=071,RECFM=FB)                                  
+//*SAIDA    DD SYSOUT=(,,HUQF),                                         
+//SAIDA    DD SYSOUT=(W,,AM71),                                         
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SRT1CNTL DD *                                                         
+ SORT FIELDS=COPY                                                       
+//TOOLIN   DD *                                                         
+ SORT FROM(ENTRADA) TO(TEMP) USING(SRT1)                                
+         DISPLAY FROM(TEMP) LIST(SAIDA) BLANK -                         
+           TITLE(' ** CPF/CNPJ - DEVEDORES P/ INCLUSAO SERASA/SPC **') -
+           DATE(DM4/) TIME PAGE -                                       
+           HEADER('NUM DEV')      ON(16,5,PD) -                         
+           HEADER('FIL DEV')      ON(21,3,PD) -                         
+           HEADER('CTR DEV')      ON(24,2,PD) -                         
+           HEADER('NATUREZA')     ON(11,2,CH) -                         
+           HEADER('AGENCIA')      ON(26,3,PD) -                         
+           HEADER('CARTEIRA')     ON(13,3,CH) -                         
+           HEADER('CONTA')        ON(29,4,PD) -                         
+           HEADER('NOME')         ON(33,20,CH) -                        
+           INDENT(10) BETWEEN(1)                                        
+//SYSOUT   DD SYSOUT=*                                                  
+//DFSMSG   DD SYSOUT=*                                                  
+//TOOLMSG  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP04   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQ AVALISTA POR: CPF/CNPJ AVAL, CPF/CNPJ DEV,    
+//* ***    NATUREZA, AGENCIA E CARTEIRA                                 
+//*                                                                     
+//SORTIN   DD DSN=*.STEP01.CADAVALS,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P141.CADAVALS.CLLP7161.T16(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000690,0138),RLSE),                                
+//       DCB=(AD.A,LRECL=072,RECFM=FB)                                  
+//*      DCB=(AD.A,LRECL=071,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,10,A,16,10,A,11,2,A,26,3,A,13,3,A),FORMAT=BI            
+ SUM FIELDS=NONE                                                        
+ END                                                                    
+//*                                                                     
+//STEP05   EXEC PGM=ICETOOL                                             
+//*                                                                     
+//* ***    LISTA CPF/CNPJ DOS AVALISTAS PARA INCLUSAO NO SERASA/SPC     
+//*                                                                     
+//ENTRADA  DD DSN=*.STEP04.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//TEMP     DD DSN=AD.BRQ.P141.LISTA.CADAVALS.T16(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000690,0138),RLSE),                                
+//       DCB=(AD.A,LRECL=072,RECFM=FB)                                  
+//*      DCB=(AD.A,LRECL=071,RECFM=FB)                                  
+//SAIDA    DD SYSOUT=(,,AM71),                                          
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SRT1CNTL DD *                                                         
+ SORT FIELDS=COPY                                                       
+//TOOLIN   DD *                                                         
+ SORT FROM(ENTRADA) TO(TEMP) USING(SRT1)                                
+         DISPLAY FROM(TEMP) LIST(SAIDA) BLANK -                         
+           TITLE(' ** CPF/CNPJ - AVALISTAS P/ INCLUSAO SERASA/SPC **') -
+           DATE(DM4/) TIME PAGE -                                       
+           HEADER('NUM AVAL')     ON(1,5,PD) -                          
+           HEADER('FIL AVAL')     ON(6,3,PD) -                          
+           HEADER('CTR AVAL')     ON(9,2,PD) -                          
+           HEADER('NUM DEV')      ON(16,5,PD) -                         
+           HEADER('FIL DEV')      ON(21,3,PD) -                         
+           HEADER('CTR DEV')      ON(24,2,PD) -                         
+           HEADER('NATUREZA')     ON(11,2,CH) -                         
+           HEADER('AGENCIA')      ON(26,3,PD) -                         
+           HEADER('CARTEIRA')     ON(13,3,CH) -                         
+           HEADER('CONTA')        ON(29,4,PD) -                         
+           HEADER('NOME')         ON(33,20,CH) -                        
+           INDENT(10) BETWEEN(1)                                        
+//SYSOUT   DD SYSOUT=*                                                  
+//DFSMSG   DD SYSOUT=*                                                  
+//TOOLMSG  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//                                                                      
+//*                                                                     
+//SOLTA    EXEC AV,                                                     
+//       J=CLLP1675,                                                    
+//       DS=AD.BRQ.CLLP1600.EXEC                                        
+//*                                                                     

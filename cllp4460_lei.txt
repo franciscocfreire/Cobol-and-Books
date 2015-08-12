@@ -1,0 +1,212 @@
+//CLLP4460 JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z,REGION=4096K       
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTAXE5                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTAXE6                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTAXE7                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTAXE8                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP0    EXEC PGM=CLLP2360                                            
+//*                                                                     
+//* ***    ATUALIZA O CADASTRO COM RELACAO AO CODIGO DE CRITERIO        
+//* ***    DE ENQUADRAMENTO OU NAO PARA LP                              
+//*                                                                     
+//CADASTRO DD DSN=MX.CLLP.CADFIMES.CLASS(0),                            
+//       DISP=SHR                                                       
+//MOVTOLP  DD DSN=MX.CLLP.GERTRACP(0),                                  
+//       DISP=SHR                                                       
+//CADATUAL DD DSN=MX.CLLP.CADFIMES.CLLP2360(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(CYL,(001210,0242),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//RELINCON DD SYSOUT=%%FORM#AXE5,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//TABULA   DD SYSOUT=%%FORM#AXE6,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1    EXEC PGM=CLLP2390,                                           
+//       PARM='FIMES'                                                   
+//*                                                                     
+//* ***    ATUALIZA O CADASTRO COM RELACAO AO CODIGO DE CRITERIO        
+//* ***    DE ENQUADRAMENTO OU NAO PARA LP                              
+//*                                                                     
+//ARQDATA  DD DSN=MX.CLLP.DATFIMES.CLLP4410(0),                         
+//       DISP=SHR                                                       
+//CADANT   DD DSN=*.STEP0.CADATUAL,                                     
+//       DISP=OLD                                                       
+//ARQTABCL DD DSN=MX.CLLP.ARQTABCL.CLLP2390(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(019880,3976),RLSE),                                
+//       DCB=(MX.A,LRECL=0041,RECFM=FB)                                 
+//CADATU   DD DSN=MX.CLLP.CADFIMES.CLLP2390(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,06),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//*DCB   NOCHECK                                                        
+//       DCB=(MX.A,BLKSIZE=32064,LRECL=0668,RECFM=FB)                   
+//ARQAUDI  DD DSN=MX.CLLP.ARQAUDI.CLLP2390(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                                 
+//ARQTRAN  DD DSN=MX.CLLP.ARQTRAN.CLLP2390(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(CYL,(000001,0001),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//ARQNTRAN DD DSN=MX.CLLP.ARQNTRAN.CLLP2390(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//RELTRAN  DD SYSOUT=%%FORM#AXE7,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//RELNTRAN DD SYSOUT=%%FORM#AXE8,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=BRAD0002                                            
+//ENTRA    DD DSN=*.STEP1.CADATU,                                       
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.CADFIMES.CLLP2390(+2),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,06),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//*DCB   NOCHECK                                                        
+//       DCB=(MX.A,LRECL=668,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=Y                                                  
+//SYSABOUT DD SYSOUT=Y                                                  
+//SYSDUMP  DD SYSOUT=Y                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=BRAD0002                                            
+//ENTRA    DD DSN=*.STEP1.ARQAUDI,                                      
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.ARQAUDI.CLLP2390(+2),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSABOUT DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    EXPANSAO DE ARQUIVO                                          
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.ARQTRAN,                                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQTRAN.CLLP2390.LEI(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(CYL,(000002,0001),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTFIL OUTREC=(1,668,X'000000000C',X'000000000000000C',                
+                X'000000000000000C',X'000000000000000C',                
+                X'0000000000000C',X'0000000000000C',                    
+                X'00000000000000000C',X'00000000000000000C',39C' ')     
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3B   EXEC PGM=BRAD0002                                            
+//ENTRA    DD DSN=*.STEP3A.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.ARQTRAN.CLLP2390.LEI(+2),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(CYL,(000002,0001),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSABOUT DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC PGM=BRAD0002                                            
+//ENTRA    DD DSN=*.STEP1.ARQTRAN,                                      
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.ARQTRAN.CLLP2390(+2),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,0100),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSABOUT DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    EXPANSAO DE ARQUIVO                                          
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.ARQNTRAN,                                     
+//       DISP=SHR                                                       
+//SORTOUT DD DSN=MX.CLLP.ARQNTRAN.CLLP2390.LEI(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(CYL,(002000,0500),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTFIL OUTREC=(1,668,X'000000000C',X'000000000000000C',                
+                X'000000000000000C',X'000000000000000C',                
+                X'0000000000000C',X'0000000000000C',                    
+                X'00000000000000000C',X'00000000000000000C',39C' ')     
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4B   EXEC PGM=BRAD0002                                            
+//ENTRA    DD DSN=*.STEP4A.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//SAI     DD DSN=MX.CLLP.ARQNTRAN.CLLP2390.LEI(+2),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(CYL,(002000,0500),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSABOUT DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC PGM=BRAD0002                                            
+//ENTRA    DD DSN=*.STEP1.ARQNTRAN,                                     
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.ARQNTRAN.CLLP2390(+2),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSABOUT DD SYSOUT=*                                                  
+//SYSDUMP  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

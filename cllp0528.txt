@@ -1,0 +1,35 @@
+//CLLP0528 JOB 'CLLP,4120,PR32','A468162',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP0    EXEC PGM=CLLP0245                                            
+//*                                                                     
+//* ***     SUMARIZAR VALOR DE COBRANCA E QTDE. DE                      
+//* ***     PARCELAS PARA A ROTINA EMPF.                                
+//*                                                                     
+//ENTRA    DD DSN=MX.CLLP.CADALPCL.LEI(0),                              
+//       DISP=SHR                                                       
+//CADEMPF  DD DSN=MX.CLLP.COBRSUM(+1),                                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0120,RECFM=FBA)                                
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    ENVIO 'TA.CLLP.EMPX.COBRSUM', PARA EMPXRECE-EMPXR054         
+//*                                                                     
+//* ***    IMPLANTACAO DO PROJETO INTER_SITE EM 31/08/2002              
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP0.CADEMPF,                                      
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSUT2   DD DSN=TA.CLLP.EMPX.COBRSUM,                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(012000,4000),RLSE),                                
+//       DCB=(LRECL=0120,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

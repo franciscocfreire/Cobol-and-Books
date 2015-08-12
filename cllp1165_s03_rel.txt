@@ -1,0 +1,8 @@
+
+REES5115               SISTEMA DE REMESSA PARA ESCRITORIO              PAG.   1
+04/03/2015                   RELATORIO DE TOTALIZACAO                  13:30:01
+                             - TOTAIS - DADOS DO CEP
+                   LIDOS DO CADASTRO DE CLIENTES .............            1
+                   LIDOS DO CADASTRO DE CONTA CORRENTE .......           14
+                   CLIENTES COM CEP ..........................            0
+                   CLIENTES SEM CEP ..........................            1

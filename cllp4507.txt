@@ -1,0 +1,160 @@
+//CLLP4507 JOB 'CLLP,4120,PR32','C085384',MSGCLASS=Z                    
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHDE6                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHDE7                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHDE8                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=POOL0262                                            
+//*                                                                     
+//* ***    CLASSIFICA POR AGENCIA/CC/CARTEIRA/CONTRATO                  
+//* ***    SELECIONANDO CAMPOS E DESCOMPRIME O ARQUIVO                  
+//* ***    CASO O ARQ. ABAIXO NAO ESTEJA EM DISCO, LER COFRE' 077443 '  
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CADRETOR.LEI(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CADA4507(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,12),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=028,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ INREC FIELDS=(4,3,16,4,33,3,29,4,1,3,7,8,15,1,586,1,600,1)             
+ SORT FIELDS=(1,3,A,4,4,A,8,3,A,11,4,A),FORMAT=BI                       
+ END                                                                    
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                         
+//       DISP=SHR                                                       
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(TRK,(10000))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(TRK,(10000))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(TRK,(10000))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(TRK,(10000))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(TRK,(10000))                                            
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR AGENCIA E CONTRATO                            
+//*                                                                     
+//SORTIN   DD DSN=MX.TRCL.CLLP.TRANSFLP,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=MX.CLLP.TRAN4507(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=050,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(5,3,A,15,9,A),FORMAT=BI                                   
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=CLLP4905                                            
+//*                                                                     
+//* ***    SELECIONA PENDENCIAS DA EMPRESA 4900 (CAMBIO)                
+//*                                                                     
+//CADALPCL DD DSN=MX.CLLP.CADRETOR.LEI(0),                              
+//       DISP=SHR                                                       
+//ARQSEL   DD DSN=MX.CLLP.ARQS4900(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000020,0004),RLSE),                                
+//       DCB=(MX.A,LRECL=600,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA PEND DO CAMBIO POR AGENCIA E CONTRATO             
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3.ARQSEL,                                       
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.P4900CLA(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000020,0004),RLSE),                                
+//       DCB=(MX.A,LRECL=600,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,PD,A,29,4,PD,A)                                       
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=CLLP4910                                            
+//*                                                                     
+//* ***    OBTER NUMERO DE C/C DO CADASTRO DE LPCL                      
+//*                                                                     
+//ARQTRCL  DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQCLLP  DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQATUAL DD DSN=MX.CLLP.AQAT4900(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=050,RECFM=FB)                                  
+//ARQACER  DD DSN=MX.CLLP.AQAC4900(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=050,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQ TRANSF PARA CL2 DO CAMBIO POR AG, C/C,        
+//* ***                           CARTEIRA E CONTRATO                   
+//*                                                                     
+//SORTIN   DD DSN=*.STEP5.ARQATUAL,                                     
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.P4900CL2(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=050,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(5,3,A,8,4,A,12,3,A,15,9,A),FORMAT=BI                      
+ END                                                                    
+//*                                                                     
+//STEP7    EXEC PGM=CLLP5725                                            
+//*                                                                     
+//* ***    OBTER CONTRATOS PARA TRANSFERENCIA DE LP DO SISTEMA CLLP     
+//*                                                                     
+//ARQTRANS DD DSN=*.STEP6.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//CADALPCL DD DSN=*.STEP1.SORTOUT,                                      
+//       DISP=SHR                                                       
+//TRANCLLP DD DSN=MX.CLLP.TRANCLLP(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=027,RECFM=FB)                                  
+//RELATO1  DD SYSOUT=%%FORM#HDE6,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//RELATO2  DD SYSOUT=%%FORM#HDE7,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//RELATO3  DD SYSOUT=%%FORM#HDE8,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

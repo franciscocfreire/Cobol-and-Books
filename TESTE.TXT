@@ -1,0 +1,8 @@
+                                                   --- INICIO DO RELATORIO ---                                                     --
+                                                                                                                                     
+RDABB006 - MOVIMENTO DE ATUALIZACAO        19/11/2014        13:41:19        - 1                                                     
+                                                                                                                                     
+ BCO AGENCIA          CONTA IND-ORI TPO-LOGR ENDERECO                                     CEP CEP COMPL UF CIDADE                    
+---- ------- -------------- ------- -------- ----------------------------------------- ------ --------- -- ------------------------- 
+ 237     140         232778 1       1        R SP 15 - DE 1 ATE 99998                   74580       765 GO GOIANIA                   
+ 237     460          67242 1       1        CORONEL MANOEL BANDEIRA                    65900        10 MA IMPERATRIZ                

@@ -1,0 +1,8 @@
+
+ARQUIVO RDAB0020.VRFAJUR        29/10/2014        09:42:26        - 1 -
+
+       CCLUB        CPF FILIAL NOME
+------------ ---------- ------ ----------------------------------------
+    15607860     107434      1 SILVER BLUE COMERCIO LTDA
+    30698260     108217      1 MITRA ARQUIDIOCESANA DE BRASILIA
+  1245314936     122703      1 AKIPECAS DI MARCON LTDA

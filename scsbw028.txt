@@ -1,0 +1,90 @@
+      *================================================================*
+      * NOME BOOK  : SCSBW028                                          *
+      * DESCRICAO  : INCLUIR RVS                                       *
+      * COMUNICACAO: FRAMEWORK X COORDENADOR                           *
+      * DATA       : 02/03/2013                                        *
+      * AUTOR      : FERNANDA CARUSO                                   *
+      * EMPRESA    : BRQ IT SERVICES                                   *
+      * GRUPO      : 17 - CONTABILIDADE E IMPOSTOS                     *
+      * COMPONENTE : SCSB - SISCOSERV BRADESCO                         *
+      *================================================================*
+      *                                                                *
+      * SCSBW028-HEADER.                                               *
+      *   SCSBW028-COD-LAYOUT            = CODIGO DO LAYOUT            *
+      *   SCSBW028-TAM-LAYOUT            = TAMANHO DO LAYOUT           *
+      * SCSBW028-REGISTRO.                                             *
+      *   SCSBW028-BLOCO-ENTRADA.                                      *
+      *     SCSBW028-E-ANO               = ANO RVS                     *
+      *     SCSBW028-E-NREG              = NUMERO DO REGISTRO RVS      *
+      *     -> CAMPOS ACIMA NAO OBRIGATORIOS, SOMENTE SERAO            *
+      *        PREENCHIDOS QUANDO EXISTIREM MAIS DO QUE 20 OPERACOES   *
+      *     SCSBW028-E-EMPR-USUAR        = EMPRESA DO USUARIO          *
+      *     SCSBW028-E-DEPEND-USUAR      = DEPENDENCIA DO USUARIO      *
+      *     SCSBW028-E-EMPR-RVS          = EMPRESA DO REGISTRO RVS     *
+      *     SCSBW028-E-NOME-ADQUIR       = NOME DO ADQUIRENTE          *
+      *     SCSBW028-E-END-ADQUIR        = ENDERECO DO ADQUIRENTE      *
+      *     SCSBW028-E-CD-PAIS-ADQUIR    = CODIGO DO PAIS ADQUIRENTE   *
+      *     SCSBW028-E-NIF               = NUMERO IDENTIFICACAO FISCAL *
+      *     SCSBW028-E-CD-MOEDA          = CODIGO DA MOEDA             *
+      *     SCSBW028-E-VLR-TOT-CONVERT   = VALOR TOTAL CONVERTIDO REAL *
+      *     SCSBW028-E-INF-COMPLEM       = INFORMACOES COMPLEMENTARES  *
+      *     SCSBW028-E-QTD-REG-OPER      = QTDE REGISTROS DE OPERACOES *
+      *     SCSBW028-E-LISTA-OPER.                                     *
+      *       SCSBW028-E-CD-NBS          = CODIGO NBS                  *
+      *       SCSBW028-E-CD-PAIS-DESTNO  = CODIGO PAIS DE DESTINO      *
+      *       SCSBW028-E-CD-MODO-PREST   = CODIGO MODO DE PRESTACAO    *
+      *       SCSBW028-E-DT-INICIO       = DATA DE INICIO              *
+      *       SCSBW028-E-DT-CONCLUSAO    = DATA DE CONCLUSAO           *
+      *       SCSBW028-E-VALOR           = VALOR DA OPERACAO           *
+      *       SCSBW028-E-QTD-REG-ENQUA   = QTDE REG'S DE ENQUADRAMENTO *
+      *       SCSBW028-E-LISTA-ENQUA.                                  *
+      *         SCSBW028-E-CD-ENQUA      = CODIGO DO ENQUADRAMENTO     *
+      *         SCSBW028-E-RC            = REGISTRO DE CREDITO         *
+      *   SCSBW028-BLOCO-SAIDA.                                        *
+      *     SCSBW028-S-ANO               = ANO RVS                     *
+      *     SCSBW028-S-NREG              = NUMERO DO REGISTRO RVS      *
+      *                                                                *
+      *----------------------------------------------------------------*
+      * DATA       AUTOR             ALTERACAO                         *
+      * ---------- ----------------- --------------------------------- *
+      * 15/12/2014 FERNANDA CARUSO   EXCLUSAO DOS CAMPOS SCSBW028-E-   *
+      *                              EMPRESA/DEPEND/SECAO/CPF-CNPJ.    *
+      *                              ALTERACAO DO CAMPO SCSBW028-E-RC  *
+      *                              DE X(06) PARA 9(08).              *
+      *                              INCLUSAO DOS CAMPOS SCSBW028-E-   *
+      *                              EMPR-USUAR/DEPEND-USUAR/EMPR-RVS/ *
+      *                              VLR-TOT-CONVERT.                  *
+      *================================================================*
+                                                                        
+          05 SCSBW028-HEADER.                                           
+             10 SCSBW028-COD-LAYOUT         PIC X(008) VALUE 'SCSBW028'.
+             10 SCSBW028-TAM-LAYOUT         PIC 9(005) VALUE 24453.     
+          05 SCSBW028-REGISTRO.                                         
+             10 SCSBW028-BLOCO-ENTRADA.                                 
+                15 SCSBW028-E-ANO                PIC 9(004).            
+                15 SCSBW028-E-NREG               PIC 9(009).            
+                15 SCSBW028-E-EMPR-USUAR         PIC 9(010).            
+                15 SCSBW028-E-DEPEND-USUAR       PIC 9(008).            
+                15 SCSBW028-E-EMPR-RVS           PIC 9(010).            
+                15 SCSBW028-E-NOME-ADQUIR        PIC X(150).            
+                15 SCSBW028-E-END-ADQUIR         PIC X(150).            
+                15 SCSBW028-E-CD-PAIS-ADQUIR     PIC 9(003).            
+                15 SCSBW028-E-NIF                PIC X(040).            
+                15 SCSBW028-E-CD-MOEDA           PIC 9(005).            
+                15 SCSBW028-E-VLR-TOT-CONVERT    PIC 9(013)V99.         
+                15 SCSBW028-E-INF-COMPLEM        PIC X(5000).           
+                15 SCSBW028-E-QTD-REG-OPER       PIC 9(003).            
+                15 SCSBW028-E-LISTA-OPER         OCCURS 020 TIMES.      
+                   20 SCSBW028-E-CD-NBS          PIC X(009).            
+                   20 SCSBW028-E-CD-PAIS-DESTNO  PIC 9(003).            
+                   20 SCSBW028-E-CD-MODO-PREST   PIC 9(001).            
+                   20 SCSBW028-E-DT-INICIO       PIC X(010).            
+                   20 SCSBW028-E-DT-CONCLUSAO    PIC X(010).            
+                   20 SCSBW028-E-VALOR           PIC 9(013)V99.         
+                   20 SCSBW028-E-QTD-REG-ENQUA   PIC 9(003).            
+                   20 SCSBW028-E-LISTA-ENQUA     OCCURS 050 TIMES.      
+                      25 SCSBW028-E-CD-ENQUA     PIC 9(010).            
+                      25 SCSBW028-E-RC           PIC 9(008).            
+             10 SCSBW028-BLOCO-SAIDA.                                   
+                15 SCSBW028-S-ANO                PIC 9(004).            
+                15 SCSBW028-S-NREG               PIC 9(009).            

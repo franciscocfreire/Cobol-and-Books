@@ -1,0 +1,30 @@
+//RDABX005 JOB 'RDAB,4120,PR32','A299565',MSGCLASS=Z,SCHENV=DB2         
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    RECEPCIONA ARQUIVO AL1 PARA UPDATE RDABB008                  
+//*                                                                     
+//SYSUT1   DD DSN=TM.CLLP.RDAB.CADURDAB.CORR,                           
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSUT2   DD DSN=MX.RDAB.JX003S01.CADURDAB.CORR(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(030000,3000),RLSE),                                
+//       DCB=(LRECL=0130,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0253                                            
+//*                                                                     
+//* ***    ATUALIZACAO DO RDABB008                                      
+//*                                                                     
+//ARQATUAL DD DSN=*.STEP1.SYSUT2,                                       
+//       DISP=SHR                                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

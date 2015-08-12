@@ -1,0 +1,582 @@
+//CLLP2320 JOB 'CLLP,4120,PR32','A66413',MSGCLASS=Z,REGION=6144K,       
+//       SCHENV=DB2                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTCZ03                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTCZ04                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=CLLP5850,                                           
+//       PARM=14111996                                                  
+//*                                                                     
+//* ***    CRIA ARQUIVO CADASTRO LPCL PARA FAZER A CARGA (ON-LINE)      
+//* ***    DD=SORTOUT ( ARQUIVO ADABAS )                                
+//* ***    DD=ARQDB2  ( TABELA 'DB2' )                                  
+//*                                                                     
+//ARQTAXA  DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//RELCALC  DD DUMMY,                                                    
+//       DCB=(LRECL=0157,RECFM=FBA)                                     
+//RELNCALC DD DUMMY,                                                    
+//       DCB=(LRECL=0157,RECFM=FBA)                                     
+//CADALPCL DD DSN=MX.CLLP.CADACALC.C2310NEW(0),                         
+//       DISP=SHR                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTLPCL(0),                                  
+//       DISP=SHR                                                       
+//CADOCOR  DD DSN=MX.CLLP.PRV.TABOCORR(0),                              
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATFIMES(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DUMMY,                                                    
+//       DCB=(LRECL=0541,RECFM=FB)                                      
+//TAB081   DD DSN=MX.APMO.PRV.TEMPRESA.SCRTZ(0),                        
+//       DISP=SHR                                                       
+//ARQDB2   DD DSN=MX.CLLP.ARQVODB2.CLLP2320(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(030000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0690,RECFM=FB)                                 
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK25 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK26 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK27 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK28 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK29 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK30 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK31 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK32 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK33 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK34 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK35 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK36 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK37 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK38 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK39 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK40 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK41 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK42 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK43 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK44 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK45 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK46 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK47 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK48 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK49 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK50 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK51 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK52 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK53 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK54 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK55 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK56 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK57 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK58 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK59 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK60 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK61 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK62 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK63 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK64 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK65 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK66 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK67 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK68 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK69 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK70 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK71 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK72 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK73 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK74 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK75 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK76 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK77 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK78 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK79 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK80 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP5840                                            
+//*                                                                     
+//* ***    AGRUPA ARQUIVOS DAS ROTINAS: CLLP, COMO E DESCONTOS          
+//* ***    PARA CRIACAO DO ARQUIVO PARA CARGA DA TABELA DB2.            
+//* ***         -------  MOVIMENTO  FIM DE MES  --------                
+//*                                                                     
+//ARQLPCL  DD DSN=*.STEP1.ARQDB2,                                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQCOMO  DD DUMMY                                                     
+//ARQDB2   DD DSN=MX.CLLP.TEMPODB2.CLLP2320(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(030000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0690,RECFM=FB)                                 
+//ARQMUTI  DD DUMMY,                                                    
+//       DCB=(LRECL=0054,RECFM=FB)                                      
+//ARQPRESI DD DUMMY,                                                    
+//       DCB=(LRECL=0033,RECFM=FB)                                      
+//RELATO   DD SYSOUT=%%FORM#CZ03,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK25 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK26 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK27 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK28 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK29 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK30 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK31 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK32 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK33 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK34 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK35 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK36 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK37 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK38 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK39 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK40 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK41 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK42 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK43 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK44 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK45 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK46 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK47 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK48 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK49 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK50 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK51 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK52 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK53 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK54 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK55 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK56 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK57 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK58 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK59 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK60 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK61 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK62 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK63 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK64 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK65 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK66 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK67 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK68 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK69 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK70 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK71 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK72 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK73 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK74 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK75 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK76 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK77 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK78 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK79 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK80 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP5740                                            
+//*                                                                     
+//* ***    OBTEM NO MESTRE DE ESTATISTICA,                              
+//* ***    EMPRESA E NATUREZA DA OPERACAO.                              
+//* ***      SORT INTERNO POR CARTEIRA.                                 
+//* ***           --- MOVIMENTO  FIM DE MES ----                        
+//*                                                                     
+//MESTEST  DD DSN=MX.RESP.PRP.RQESTAT.CONV(0),                          
+//       DISP=SHR                                                       
+//ARQPREV  DD DSN=*.STEP2.ARQDB2,                                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQDB2   DD DSN=MX.CLLP.TEMPCARG.CLLP2320.LEI(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(030000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0677,RECFM=FB)                                 
+//RELATO   DD SYSOUT=%%FORM#CZ04,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK25 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK26 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK27 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK28 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK29 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK30 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK31 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK32 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK33 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK34 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK35 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK36 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK37 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK38 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK39 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK40 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK41 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK42 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK43 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK44 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK45 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK46 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK47 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK48 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK49 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK50 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK51 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK52 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK53 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK54 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK55 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK56 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK57 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK58 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK59 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK60 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK61 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK62 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK63 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK64 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK65 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK66 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK67 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK68 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK69 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK70 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK71 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK72 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK73 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK74 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK75 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK76 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK77 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK78 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK79 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK80 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

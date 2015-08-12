@@ -1,0 +1,11 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+*CLLP8885*   CAMPANHA CLLP - PENDBLOQ SEM CORRESPONDENTES    EM 06/03/2015  AS  12:46:28 HS                                                                     
+             CONTRATOS EXCLUIDOS DO ARQUIVO DE BLOQUEIO DE CONSULTA DE SALDO EM C/C                                                                             
+             AGENCIA          C/C    CART      CONTRATO                                                                                                         
+TOTAIS DE REGISTROS -             10-PENDBLOQ LIDOS                                                                                                             
+                                  10-PENDACUM LIDOS                                                                                                             
+                                   0-PENDBLOQ EXCLUIDOS                                                                                                         
+                                  10-PENDBLOQ REGRAVADOS                                                                                                        

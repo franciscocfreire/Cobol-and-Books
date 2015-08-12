@@ -1,0 +1,145 @@
+                         ----INICIO DO RELATORIO ---                            
+                                                                                
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E
+                                                                                
+16.14.55 JOB48017 ---- MONDAY,    15 SEP 2014 ----                              
+16.14.55 JOB48017  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.            
+16.14.55 JOB48017  $EXIT006A  Job CLLP2830 Jobid(JOB48017) alterado para CLASS=E
+16.15.03 JOB48017  ICH70001I M67777   LAST ACCESS AT 15:52:32 ON MONDAY, SEPTEMB
+16.15.03 JOB48017  $HASP373 CLLP2830 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+16.15.03 JOB48017  IEF403I CLLP2830 - STARTED - TIME=16.15.03                   
+16.17.56 JOB48017  -                                                --TIMINGS (M
+16.17.56 JOB48017  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+16.17.56 JOB48017  -CLLP2830 STEP1                04     82     12    .00    .00
+16.17.56 JOB48017  IEF404I CLLP2830 - ENDED - TIME=16.17.56                     
+16.17.56 JOB48017  -CLLP2830 ENDED.  NAME-H45086               TOTAL TCB CPU TIM
+16.17.56 JOB48017  $HASP395 CLLP2830 ENDED                                      
+------ JES2 JOB STATISTICS ------                                               
+  15 SEP 2014 JOB EXECUTION DATE                                                
+           32 CARDS READ                                                        
+          141 SYSOUT PRINT RECORDS                                              
+            0 SYSOUT PUNCH RECORDS                                              
+            9 SYSOUT SPOOL KBYTES                                               
+         2.89 MINUTES EXECUTION TIME                                            
+                                                                                
+        1 //CLLP2830 JOB 'CLLP,4120,PR32','H45086',MSGCLASS=Z                   
+        2 //JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR                                
+        3 //         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                    
+        4 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                  
+        5 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                           
+        6 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                           
+        7 //STEP1    EXEC PGM=CLLP3052                                          
+        8 //STEPLIB  DD DSN=AV.BIBGERTT,DISP=SHR                                
+        9 //         DD DSN=AV.BIBGERAL,DISP=SHR                                
+       10 //         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                    
+       11 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                  
+       12 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                           
+       13 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                           
+          //*                                                                   
+          //* ***    REDUZ CADASTRO LPCL                                        
+          //* ***    ARQDATA DATA PARA DESPREZAR VINCENDAS DA EMPRESA 5240 - LSN
+          //*                                                                   
+          //*CADALPCL DD DSN=AD.C87.CLLP144.S074711.CADALPCL.COMPRIM,           
+          //*       DISP=SHR                                                    
+          //*ADALPCL DD DSN=AD.C87.CLLP144.APMO.CADALPCL.COMPRIM.V4,            
+       14 //CADALPCL DD DSN=AD.BRQ.CLLP144.S074711.CADALPCL.COMPRIM,            
+          //       DISP=SHR                                                     
+          //*RQDATA  DD DSN=AD.C87.CLLP144.PRP.DTCOMPET,                        
+       15 //ARQDATA  DD DSN=AD.BRQ.P141.PRP.DTCOMPET,                           
+          //       DISP=SHR                                                     
+       16 //LPCLREDU DD DSN=AD.BRQ.P144.CADALPCL.LPCLREDU.IGC(+1),              
+          //       DISP=(,CATLG,DELETE),                                        
+          //       UNIT=(DISCO,50),                                             
+          //       SPACE=(TRK,(020000,4000),RLSE),                              
+          //       DCB=(AD.A,LRECL=163,RECFM=FB)                                
+       17 //SYSOUT   DD SYSOUT=*                                                
+       18 //SYSUDUMP DD SYSOUT=Y                                                
+                                                                                
+ICH70001I M67777   LAST ACCESS AT 15:52:32 ON MONDAY, SEPTEMBER 15, 2014        
+IEF236I ALLOC. FOR CLLP2830 STEP1                                               
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                          
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IEF237I D905 ALLOCATED TO                                                       
+IEF237I D036 ALLOCATED TO                                                       
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB                                         
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IGD103I SMS ALLOCATED TO DDNAME                                                 
+IEF237I D905 ALLOCATED TO                                                       
+IEF237I D036 ALLOCATED TO                                                       
+IGD103I SMS ALLOCATED TO DDNAME CADALPCL                                        
+IGD103I SMS ALLOCATED TO DDNAME ARQDATA                                         
+IGD101I SMS ALLOCATED TO DDNAME (LPCLREDU)                                      
+        DSN (AD.BRQ.P144.CADALPCL.LPCLREDU.IGC.G0013V00  )                      
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)             
+        VOL SER NOS= SA2DA5                                                     
+IEF237I JES2 ALLOCATED TO SYSOUT                                                
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                              
+IEF142I CLLP2830 STEP1 - STEP WAS EXECUTED - COND CODE 0004                     
+IGD104I AV.BIBGERTT                                  RETAINED,  DDNAME=STEPLIB  
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=         
+IGD104I AV.CHGM.LOADLIB.BSL.LOB                      RETAINED,  DDNAME=         
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=         
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT                     
+IEF285I   VOL SER NOS= ST2AL2.                                                  
+IEF285I   SYS1.CEE.SCEERUN                             KEPT                     
+IEF285I   VOL SER NOS= R13A2A.                                                  
+IGD104I AD.BRQ.CLLP144.S074711.CADALPCL.COMPRIM      RETAINED,  DDNAME=CADALPCL 
+IGD104I AD.BRQ.P141.PRP.DTCOMPET                     RETAINED,  DDNAME=ARQDATA  
+IGD107I AD.BRQ.P144.CADALPCL.LPCLREDU.IGC.G0013V00   ROLLED IN, DDNAME=LPCLREDU 
+IEF285I   M67777.CLLP2830.JOB48017.D0000101.?          SYSOUT                   
+IEF285I   M67777.CLLP2830.JOB48017.D0000102.?          SYSOUT                   
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s                    
+                                                                                
+Step Name: STEP1          Cond Code: 0004         Start: 15-Sep-2014 04:15:03 PM
+Step  Num: 1              PGM  Name: CLLP3052     End:   15-Sep-2014 04:17:56 PM
+CPU (TCB): 00:00:00.03                            Storage below 16M:      1,424k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      2,676k
+Trans Act: 00:00:00.08                            Service Units:           1,397
+Tape Mnts: 0                                      Total EXCPs:                82
+                                                                                
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D STEPLIB            29  23,200        D9CC D STEPLIB            15  23,200
+D624 D CADALPCL            2  27,600        D064 D ARQDATA             2  27,920
+D1DB D LPCLREDU            2  27,873                                            
+                                                                                
+Total DASD EXCPs:                 50        Total Tape EXCPs:                  0
+                                                                                
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014258.1615                                        
+IEF032I STEP/STEP1   /STOP  2014258.1617                                        
+        CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+        VIRT:  1424K  SYS:   396K  EXT:     2676K  SYS:    10036K               
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB   
+IGD104I AV.CHGM.LOADLIB.BSL.LOB                      RETAINED,  DDNAME=         
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=         
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT                     
+IEF285I   VOL SER NOS= ST2AL2.                                                  
+IEF285I   SYS1.CEE.SCEERUN                             KEPT                     
+IEF285I   VOL SER NOS= R13A2A.                                                  
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s                     
+                                                                                
+Job  Name: CLLP2830       System ID: AL2C        Submit: 15-Sep-2014 04:14:55 PM
+Job JESID: JOB48017       MVS level: SP7.1.3     Start:  15-Sep-2014 04:15:03 PM
+Job Class: E                                     End:    15-Sep-2014 04:17:56 PM
+CPU (TCB): 00:00:00.03                           Storage below 16M:       1,424k
+CPU (SRB): 00:00:00.00                           Storage above 16M:       2,676k
+Trans Act: 00:00:00.08                           Service Units:            1,397
+Tape Mnts: 0                                     Total EXCPs:                 82
+                                                                                
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+                                                                                
+RACF User: M67777                           Programmer: H45086                  
+Acct Info: CLLP,4120,PR32                                                       
+                                                                                
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP2830/START 2014258.1615                                        
+IEF033I  JOB/CLLP2830/STOP  2014258.1617                                        
+        CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC    

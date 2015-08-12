@@ -1,0 +1,10 @@
+
+RDAB0034              B A N C O   B R A D E S C O    S / A              PAG.  1
+27/06/2014                F O R M A T A R   R A T I N G                11:37:49
+                 ARQUIVO  ENTSOCIO
+                          REGISTROS LIDOS      :                6
+                 ARQUIVO  PENDIRES
+                          REGISTROS LIDOS      :            1.000
+                 ARQUIVO  SAISOCIO
+                          REGISTROS GRAVADOS   :                6
+                          REG. ATUALIZADOS     :                6

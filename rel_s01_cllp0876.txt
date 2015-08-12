@@ -1,0 +1,10 @@
+
+CLLP7680                    BANCO BRADESCO S/A.                      FL.    1
+16/01/2015         TOTAIS DE MOVIMENTO DE PENDENCIAS BAIXADAS       13:08:46
+
+
+                MOVIMENTO DE PENDENCIAS     - LIDOS  :      1.000
+                MOV. DE PENDENCIAS S/ CORRESPONDENTE :      1.000
+                CADASTRO DE BAIXADOS DO CLLP - LIDOS :        124
+                MOVIMENTO DE PENDENCIAS DO DIA       :          0
+                CADASTRO DE BAIXADOS ATUAL - GRAVADOS:        124

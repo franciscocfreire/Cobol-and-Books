@@ -1,0 +1,1869 @@
+      *===============================================================* 
+       IDENTIFICATION DIVISION.                                         
+      *===============================================================* 
+      *                                                                 
+       PROGRAM-ID. CLLP7656.                                            
+       AUTHOR.     TARITA.                                              
+      *===============================================================* 
+      *                   C P M   S I S T E M A S                     * 
+      *---------------------------------------------------------------* 
+      *                                                               * 
+      *      PROGRAMA     : CLLP7656                                  * 
+      *      PROGRAMADORA : TARITA          -    CPM                  * 
+      *      ANALISTA     : LOURIVAL        -    GP.82                * 
+      *      SUPERVISORA  : CRIS            -    CPM                  * 
+      *      DATA         : 10/10/1997                                * 
+      *                                                               * 
+      *      OBJETIVO     :                                           * 
+      *        LER ARQUIVO DE SPC E SELECIONAR REGISTROS COM TEMPO    * 
+      *            DE VENCIDO IGUAL A 40 OU 20 OU 5 DIAS UTEIS.       * 
+      *                                                               * 
+      *                                                               * 
+      *      ARQUIVOS:                                                * 
+      *         DDNAME                           INCLUDE/BOOK         * 
+      *         TABELAL                                               * 
+      *         CADSPC                             I#CLLPCI           * 
+      *         PARMCLLP                                              * 
+      *         ARQDATA                                               * 
+      *         CADCARTA                                              * 
+      *         RELATO                                                * 
+      *         SORTWK01                                              * 
+      *                                                               * 
+      *      BANCO DE DADOS:                                          * 
+      *         DB2                                                   * 
+      *           TABLE                          INCLUDE/BOOK         * 
+      *           DB2PRD.V01LPCL_NATUREZ           LPCLV009           * 
+      *                                                               * 
+      *                                                               * 
+      *      MODULOS CHAMADOS:                                        * 
+      *                                                               * 
+      *        POOL7600                                               * 
+      *                                                               * 
+      *        POOL1050                                               * 
+      *                                                               * 
+      *        POOL1285                                               * 
+      *                                                               * 
+      ************************************************                  
+      *                    ALTERACAO                 *                  
+      ************************************************                  
+      *                                              *                  
+      *  PROGRAMADORA -  DENISE         - C.P.M.     *                  
+      *  SUPERVISOR   -  TESTA          - C.P.M.     *                  
+      *  ANALISTA     -  TOMOKO         - CPM/GP.82  *                  
+      *  DATA         -  MARCO   /1998               *                  
+      *                                              *                  
+      *  OBJETIVOS    :                              *                  
+      *  ==============                              *                  
+      *                                              *                  
+      *  - CONTROLE DE NEGATIVACOES                  *                  
+      *    INCLUIR O PROCESSAMENTO DA TABELA LPCLB037*                  
+      *                                              *                  
+      ************************************************                  
+      *                 ALTERACAO                    *                  
+      ************************************************                  
+      *                                              *                  
+      *  PROGRAMADORA -  ANDREA  - STEFANINI         *                  
+      *  SUPERVISOR   -  RICARDO - STEFANINI         *                  
+      *  ANALISTA     -  VALDIR  - ORIGIN            *                  
+      *  DATA         -  MAIO    /2000               *                  
+      *                                              *                  
+      *  OBJETIVOS    :                              *                  
+      *  ==============                              *                  
+      *                                              *                  
+      *  - ADEQUACAO A TABELA LPCLB037               *                  
+      *                                              *                  
+      ************************************************                  
+      *                                                                 
+      *** ==================== ULTIMA  ALTERACAO ================== *** 
+      *                                                               * 
+      *   PROGRAMADOR.: MAURICIO - CPM.                               * 
+      *   ANALISTAS...: ARMANDO/MAURICIO - CPM.                       * 
+      *   DATA........: MAIO/2001.                                    * 
+      *                                                               * 
+      *   OBJETIVO....: ESTA SENDO INCLUIDO O ARQUIVO PARMCLLP.       * 
+      *                 PARA PARAMETRIZACAO DO SISTEMA.               * 
+      *                                                               * 
+      *===============================================================* 
+                                                                        
+BRQ141*---------------------------------------------------------------* 
+BRQ141* MAIO/2012 - (BRQ) - TRATAMENTO DE CARTEIRA  ALFANUMERICA      * 
+BRQ141*---------------------------------------------------------------* 
+                                                                        
+           EJECT                                                        
+      *===============================================================* 
+       ENVIRONMENT DIVISION.                                            
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       CONFIGURATION SECTION.                                           
+      *---------------------------------------------------------------* 
+                                                                        
+       SPECIAL-NAMES.                                                   
+           DECIMAL-POINT IS COMMA.                                      
+                                                                        
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       INPUT-OUTPUT SECTION.                                            
+      *---------------------------------------------------------------* 
+                                                                        
+       FILE-CONTROL.                                                    
+                                                                        
+           SELECT  TABELAL ASSIGN TO UT-S-TABELAL                       
+                      FILE STATUS IS WRK-FS-TABELAL.                    
+                                                                        
+           SELECT PARMCLLP ASSIGN TO UT-S-PARMCLLP                      
+                      FILE STATUS IS WRK-FS-PARMCLLP.                   
+                                                                        
+           SELECT CADSPC   ASSIGN TO UT-S-CADSPC                        
+                      FILE STATUS IS WRK-FS-CADSPC.                     
+                                                                        
+           SELECT ARQDATA  ASSIGN TO UT-S-ARQDATA                       
+                      FILE STATUS IS WRK-FS-ARQDATA.                    
+                                                                        
+           SELECT CADCARTA ASSIGN TO UT-S-CADCARTA                      
+                      FILE STATUS IS WRK-FS-CADCARTA.                   
+                                                                        
+           SELECT BLQREST  ASSIGN TO UT-S-BLQREST                       
+                      FILE STATUS IS WRK-FS-BLQREST.                    
+                                                                        
+           SELECT   RELATO ASSIGN TO UT-S-RELATO                        
+                      FILE STATUS IS WRK-FS-RELATO.                     
+                                                                        
+                                                                        
+           SELECT SORTWK01 ASSIGN TO UT-S-SORTWK01.                     
+           EJECT                                                        
+      *===============================================================* 
+       DATA DIVISION.                                                   
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       FILE SECTION.                                                    
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+      *    INPUT   :  ARQUIVO DE ENTRADA TABELAL                      * 
+      *               ORG. SEQUENCIAL   -   LRECL  =  043             * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  TABELAL                                                      
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       01  REG-TABELAL.                                                 
+           03  B037-CCGC-CPF           PIC S9(09) COMP-3.               
+           03  B037-CFLIAL-CGC         PIC S9(05) COMP-3.               
+           03  B037-CCTRL-CPF-CGC      PIC S9(02) COMP-3.               
+           03  B037-CREST-BLOQ-OPER    PIC S9(01) COMP-3.               
+           03  B037-CJUNC-DEPDC-BDSCO  PIC S9(05) COMP-3.               
+           03  B037-CCTA-CORR          PIC S9(07) COMP-3.               
+           03  B037-CTPO-NATUZ-OPER    PIC S9(03) COMP-3.               
+           03  B037-CCART              PIC  X(03).                      
+           03  B037-CSGL-UF            PIC  X(02).                      
+           03  B037-CINDCD-AVISO-COBR  PIC  X(01).                      
+           03  B037-CINDCD-IMPED-REST  PIC  X(01).                      
+           03  B037-CINDCD-SERASA-SPC  PIC  X(01).                      
+           03  B037-DULT-ATULZ         PIC  X(10).                      
+           03  B037-CFUNC-BDSCO        PIC S9(09) COMP-3.               
+                                                                        
+      *---------------------------------------------------------------* 
+      *    INPUT:     ORG. SEQUENCIAL   -   LRECL = 250               * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  PARMCLLP                                                     
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       01  REG-PARAMETRO.                                               
+           05  PARM-TAREFA.                                             
+               10  PARM-CCUSTO-1       PIC X(04).                       
+               10  PARM-CODIGO-1       PIC 9(04).                       
+               10  PARM-CCUSTO-2       PIC X(04).                       
+               10  PARM-CODIGO-2       PIC 9(04).                       
+           05  PARM-SEQUENCIA          PIC 9(07).                       
+           05  PARM-NR-DIAS            PIC 9(03).                       
+           05  PARM-VL-CORTE           PIC 9(15).                       
+           05  FILLER                  PIC X(209).                      
+                                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+      *    INPUT:     ORG. SEQUENCIAL   -   LRECL = 600               * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  CADSPC                                                       
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+-INC I#CLLPCO                                                           
+                                                                        
+      *---------------------------------------------------------------* 
+      *    INPUT:     ORG. SEQUENCIAL   -   LRECL = 060               * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  ARQDATA                                                      
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+-INC I#CLLPGA                                                           
+                                                                        
+      *---------------------------------------------------------------* 
+      *    OUTPUT:    ORG. SEQUENCIAL   -   LRECL = 840               * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  CADCARTA                                                     
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       01  CADCARTA-REGTO              PIC X(840).                      
+                                                                        
+      *---------------------------------------------------------------* 
+      *    OUTPUT:    ORG. SEQUENCIAL   -   LRECL = 840               * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  BLQREST                                                      
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       01  FD-BLQREST.                                                  
+           05  FD-EMPRESA   PIC 9(05)    COMP-3.                        
+           05  FD-AGENCIA   PIC 9(05)    COMP-3.                        
+           05  FD-CONTA     PIC 9(07)    COMP-3.                        
+           05  FD-CARTEIRA  PIC X(03).                                  
+           05  FD-CONTRATO  PIC 9(07)    COMP-3.                        
+           05  FD-IND-BLOQ  PIC 9(02)    COMP-3.                        
+           05  FD-INDICADOR PIC X(01).                                  
+           05  FD-CPF       PIC 9(09)    COMP-3.                        
+           05  FD-FILIAL    PIC 9(05)    COMP-3.                        
+           05  FD-CTRL      PIC 9(03)    COMP-3.                        
+           05  FILLER       PIC X(10).                                  
+                                                                        
+      *---------------------------------------------------------------* 
+      *    OUTPUT:    ORG. SEQUENCIAL   -   LRECL = 132               * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  RELATO                                                       
+           RECORDING MODE IS F                                          
+           LABEL RECORD IS STANDARD                                     
+           BLOCK CONTAINS 0 RECORDS.                                    
+                                                                        
+       01  REG-REL                     PIC X(132).                      
+                                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+      *    I-O:       ARQUIVO TEMPORARIO DE SORT                      * 
+      *               ORG. SEQUENCIAL   -   LRECL = 600               * 
+      *---------------------------------------------------------------* 
+                                                                        
+       SD  SORTWK01.                                                    
+                                                                        
+       01  REG-SORT.                                                    
+           02  SORT-CGC.                                                
+               03  SORT-NUMCGC          PIC 9(09) COMP-3.               
+               03  SORT-FILCGC          PIC 9(05) COMP-3.               
+               03  SORT-DIGCGC          PIC 9(02).                      
+               03  SORT-NATURE          PIC X(02).                      
+           02  SORT-VCMTO               PIC 9(09) COMP-3.               
+           02  FILLER                   PIC X(17).                      
+           02  SORT-VALOR-RESGATE       PIC 9(11)V99 COMP-3.            
+           02  FILLER                   PIC X(559).                     
+                                                                        
+      *---------------------------------------------------------------* 
+       WORKING-STORAGE SECTION.                                         
+      *---------------------------------------------------------------* 
+                                                                        
+       77  FILLER                      PIC X(32)        VALUE           
+           '* INICIO DA WORKING CLLP7656 *'.                            
+                                                                        
+       77  WRK-IND                     PIC 9(02)   VALUE ZEROS.         
+                                                                        
+       77  WRK-BATCH                   PIC X(08)        VALUE 'BATCH'.  
+       77  WRK-ABEND                   PIC S9(04) COMP  VALUE +1111.    
+                                                                        
+       77  CD-PARM-DIA1                PIC 9(02)        VALUE ZEROS.    
+       77  WRK-DIA-AUX                 PIC 9(02)        VALUE ZEROS.    
+       77  ACU-LIDOS-CADSPC            PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  ACU-LIDOS-TABELAL           PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  ACU-GRAV-CADCARTA           PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  ACU-GRAV-BLQREST            PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  ACU-EXCLUIDOS               PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  ACU-DESPREZADO              PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  WRK-CONTA-99                PIC 9(07) COMP-3 VALUE ZEROS.    
+       77  WRK-DIA-PARM                PIC 9(03).                       
+                                                                        
+       77  WRK-FIM-CADSPC              PIC X(01)        VALUE  'N'.     
+       77  WRK-FIM-ARQSORT             PIC X(01)        VALUE  'N'.     
+                                                                        
+       77  WRK-PRIMEIRA-VEZ            PIC X(01)        VALUE  'S'.     
+       77  WRK-MOV-REG                 PIC X(01)        VALUE  'N'.     
+       77  WRK-TEM-05-20-40            PIC X(01)        VALUE  'N'.     
+                                                                        
+       77  WRK-SORT-RETURN             PIC 9(04)        VALUE  ZEROS.   
+       77  WRK-FS-TABELAL              PIC X(02)        VALUE  SPACES.  
+       77  WRK-FS-CADSPC               PIC X(02)        VALUE  SPACES.  
+       77  WRK-FS-ARQDATA              PIC X(02)        VALUE  SPACES.  
+       77  WRK-FS-CADCARTA             PIC X(02)        VALUE  SPACES.  
+       77  WRK-FS-BLQREST              PIC X(02)        VALUE  SPACES.  
+       77  WRK-FS-RELATO               PIC X(02)        VALUE  SPACES.  
+       77  WRK-FS-PARMCLLP             PIC X(02)        VALUE  SPACES.  
+                                                                        
+       77  WRK-OPERACAO                PIC X(13) VALUE  SPACES.         
+       77  WRK-ABERTURA                PIC X(13) VALUE  'NA ABERTURA'.  
+       77  WRK-LEITURA                 PIC X(13) VALUE  'NA LEITURA'.   
+       77  WRK-GRAVACAO                PIC X(13) VALUE  'NA GRAVACAO'.  
+       77  WRK-FECHAMENTO              PIC X(13) VALUE  'NO FECHAMENTO'.
+                                                                        
+       77  WRK-BLOQ-OPER           PIC 9(01)    VALUE ZEROS.            
+       77  WRK-UF-ALFA             PIC X(02)    VALUE SPACES.           
+       77  WRK-UF-NUM              PIC 9(02)    VALUE ZEROS.            
+       77  WRK-PESQ                PIC 9(03)    VALUE ZEROS.            
+       77  WRK-PESQ-DEVEDOR        PIC 9(03)    VALUE 063.              
+                                                                        
+       01  WRK-DIAS1                   PIC S9(03)         VALUE  ZEROS. 
+       01  WRK-DIAS2                   PIC S9(03)         VALUE  ZEROS. 
+       01  WRK-DIAS3                   PIC S9(03)         VALUE  ZEROS. 
+       01  WRK-DIAS4                   PIC S9(03)         VALUE  ZEROS. 
+                                                                        
+       01  WRK-VL-CORTE1               PIC S9(15)         VALUE  ZEROS. 
+       01  WRK-VL-CORTE2               PIC S9(15)         VALUE  ZEROS. 
+       01  WRK-VL-CORTE3               PIC S9(15)         VALUE  ZEROS. 
+       01  WRK-VL-CORTE4               PIC S9(15)         VALUE  ZEROS. 
+                                                                        
+                                                                        
+       01  WRK-MENSAGEM-AUX            PIC X(21) VALUE SPACES.          
+                                                                        
+       01  WRK-NATURE.                                                  
+           02  FILLER                  PIC X(01) VALUE  '0'.            
+           02  WRK-NATURE-NUMERIC      PIC X(02).                       
+                                                                        
+       01  WRK-DATA-AUX                PIC 9(08).                       
+       01  FILLER REDEFINES WRK-DATA-AUX.                               
+           02  WRK-DT-AAAA             PIC 9(04).                       
+           02  WRK-DT-MM               PIC 9(02).                       
+           02  WRK-DT-DD               PIC 9(02).                       
+                                                                        
+       01  SORT-CGC-ATU.                                                
+           02  SORT-NUMCGC-ATU         PIC 9(09) COMP-3.                
+           02  SORT-FILCGC-ATU         PIC 9(05) COMP-3.                
+           02  SORT-DIGCGC-ATU         PIC 9(02).                       
+                                                                        
+       01  SORT-CGC-ANT.                                                
+           02  SORT-NUMCGC-ANT         PIC 9(09) COMP-3.                
+           02  SORT-FILCGC-ANT         PIC 9(05) COMP-3.                
+           02  SORT-DIGCGC-ANT         PIC 9(02).                       
+                                                                        
+       01  WS-CHAVE-480-ATU.                                            
+           02  WS-480-NUMCGC-ATU       PIC 9(09) COMP-3    VALUE ZEROS. 
+           02  WS-480-FILCGC-ATU       PIC 9(05) COMP-3    VALUE ZEROS. 
+           02  WS-480-CTRCGC-ATU       PIC 9(02)           VALUE ZEROS. 
+           02  WS-480-AGEN-ATU         PIC 9(05) COMP-3    VALUE ZEROS. 
+           02  WS-480-CTA-ATU          PIC 9(07) COMP-3    VALUE ZEROS. 
+           02  WS-480-NAT-ATU          PIC 9(03)           VALUE ZEROS. 
+                                                                        
+       01  WS-CHAVE-480-ANT.                                            
+           02  WS-480-NUMCGC-ANT       PIC 9(09) COMP-3    VALUE ZEROS. 
+           02  WS-480-FILCGC-ANT       PIC 9(05) COMP-3    VALUE ZEROS. 
+           02  WS-480-CTRCGC-ANT       PIC 9(02)           VALUE ZEROS. 
+           02  WS-480-AGEN-ANT         PIC 9(05) COMP-3    VALUE ZEROS. 
+           02  WS-480-CTA-ANT          PIC 9(07) COMP-3    VALUE ZEROS. 
+           02  WS-480-NAT-ANT          PIC 9(03)           VALUE ZEROS. 
+                                                                        
+      *---------------------------------------------------------------* 
+      *                  AREA PARA ACUMULAR CGC.                      * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  WRK-REG.                                                     
+           02  WRK-CAMPO1              PIC X(600).                      
+           02  WRK-IDENT               PIC 9(002).                      
+           02  WRK-OCORRENCIAS OCCURS 7 INDEXED BY IND.                 
+               03  WRK-NATUREZA        PIC X(002).                      
+               03  WRK-VCMTO           PIC 9(009)    COMP-3.            
+               03  WRK-RESGATE         PIC 9(011)V99 COMP-3.            
+               03  WRK-DESCRIC         PIC X(020).                      
+                                                                        
+      *---------------------------------------------------------------* 
+      *                 CAMPOS UTILIZADOS NA POOL7600                 * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  WRK-AREA-POOL7600.                                           
+           02  WRK-DT-JULIANA          PIC 9(05) COMP-3.                
+           02  WRK-DT-AAMMDD           PIC 9(07) COMP-3.                
+           02  WRK-DT-AAAAMMDD         PIC 9(09) COMP-3.                
+           02  WRK-TI-HHMMSS           PIC 9(07) COMP-3.                
+           02  WRK-TI-HHMMSSMMMMMM     PIC 9(13) COMP-3.                
+           02  WRK-TIMESTAMP           PIC X(20).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      *                 CAMPOS UTILIZADOS NA POOL1285                 * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  WRK-AREA-POOL1285.                                           
+           02  WRK-DT-ENTRADA          PIC  9(08) COMP-3 VALUE ZEROS.   
+           02  WRK-NUM-DIAS            PIC S9(05) COMP-3 VALUE ZEROS.   
+           02  WRK-DATA-SAIDA          PIC  9(08) COMP-3 VALUE ZEROS.   
+           02  WRK-MENSAGEM            PIC  X(50)        VALUE SPACES.  
+                                                                        
+       01  WRK-RETURN-CODE             PIC S9(05)        VALUE ZEROS.   
+                                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+      *             DEFINICAO DAS DATAS DE VENCIMENTO                 * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  WRK-DATA-1A-CARTA           PIC 9(09).                       
+       01  WRK-DATA-08                 PIC 9(09).                       
+       01  WRK-DATA-2A-CARTA           PIC 9(09).                       
+       01  WRK-DATA-21                 PIC 9(09).                       
+       01  WRK-DATA-3A-CARTA           PIC 9(09).                       
+       01  WRK-DATA-41                 PIC 9(09).                       
+                                                                        
+       01  DT-MOV-AAAAMMDD             PIC 9(08).                       
+       01  FILLER REDEFINES DT-MOV-AAAAMMDD.                            
+        03 DT-MOV-SS                   PIC 9(02).                       
+        03 DT-MOV-AA                   PIC 9(02).                       
+       01  FILLER REDEFINES DT-MOV-AAAAMMDD.                            
+        03 FILLER                      PIC 9(02).                       
+        03 DT-MOV-AAMMDD               PIC 9(06).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      * INC P/ COVERTER UF ALFA P/ NUMERICA P/ ENVIO A POOL0480       * 
+      *---------------------------------------------------------------* 
+                                                                        
+-INC I#LPCLUF                                                           
+                                                                        
+      *---------------------------------------------------------------* 
+      *    AREA PARA POOL0480                                         * 
+      *---------------------------------------------------------------* 
+                                                                        
+       77  WRK-480-CODIGO1             PIC 9(01) VALUE 1.               
+       77  WRK-480-CODIGO2             PIC 9(01) VALUE 2.               
+       77  WRK-480-CODIGO3             PIC 9(01) VALUE 3.               
+       77  WRK-480-TAM-CHAVE           PIC 9(02) VALUE 37.              
+       77  WRK-480-NOME-TABELA         PIC X(08) VALUE 'TABCONTR'.      
+       77  WRK-480-TAM-OCORRENC        PIC 9(03) VALUE 37.              
+                                                                        
+       77  WRK-MODULO                  PIC X(08) VALUE 'POOL0482'.      
+                                                                        
+       01  WRK-480-REGISTRO.                                            
+           03  WRK-480-CHAVE.                                           
+               05 WRK-480-CCGC-CPF         PIC 9(09).                   
+               05 WRK-480-CFLIAL-CGC       PIC 9(05).                   
+               05 WRK-480-CCTRL-CGC        PIC 9(02).                   
+               05 WRK-480-AGENCIA          PIC 9(05).                   
+               05 WRK-480-CONTA            PIC 9(07).                   
+               05 WRK-480-NATUREZA         PIC 9(03).                   
+BRQ141*........05.WRK-480-CCART............PIC.9(03).                   
+BRQ141         05 WRK-480-CCART            PIC X(03).                   
+               05 WRK-480-BLOQ-OPER        PIC 9(01).                   
+               05 WRK-480-UF               PIC 9(02).                   
+                                                                        
+       01  WRK-480-RETORNO.                                             
+           03  WRK-480-RETORNO-CHAVE.                                   
+               05 WRK-480-RET-CCGC-CPF     PIC 9(09).                   
+               05 WRK-480-RET-CFLIAL-CGC   PIC 9(05).                   
+               05 WRK-480-RET-CCTRL-CGC    PIC 9(02).                   
+               05 WRK-480-RET-AGENCIA      PIC 9(05).                   
+               05 WRK-480-RET-CONTA        PIC 9(07).                   
+               05 WRK-480-RET-NATUREZA     PIC 9(03).                   
+BRQ141*........05.WRK-480-RET-CCART........PIC.9(03).                   
+BRQ141         05 WRK-480-RET-CCART        PIC X(03).                   
+               05 WRK-480-RET-BLOQ-OPER    PIC 9(01).                   
+               05 WRK-480-RET-UF           PIC 9(02).                   
+                                                                        
+      *---------------------------------------------------------------* 
+      *                            CABECALHOS                         * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  CB-CARRO                    PIC X(132) VALUE SPACES.         
+                                                                        
+       01  CABEC1.                                                      
+           03  CB1-CARRO               PIC X(01) VALUE '1'.             
+           03  FILLER                  PIC X(36) VALUE 'CLLP7656'.      
+           03  FILLER                  PIC X(41) VALUE                  
+               'BANCO  BRADESCO S.A.'.                                  
+                                                                        
+       01  CABEC2.                                                      
+           03  CB2-CARRO               PIC X(01) VALUE '0'.             
+           03  FILLER.                                                  
+               05  CB2-DATA-DD         PIC 9(02)/.                      
+               05  CB2-DATA-MM         PIC 9(02)/.                      
+               05  CB2-DATA-AAAA       PIC 9(04).                       
+           03  FILLER                  PIC X(16) VALUE SPACES.          
+           03  FILLER                  PIC X(50) VALUE                  
+               'SELECAO PARA A EMISSAO DE CARTAS COBRANCA'.             
+                                                                        
+       01  CABEC3.                                                      
+           03  CB3-CARRO               PIC X(01) VALUE '-'.             
+           03  FILLER                  PIC X(33) VALUE SPACES.          
+           03  FILLER                  PIC X(80) VALUE                  
+               'T O T A L I Z A D O R E S'.                             
+                                                                        
+      *---------------------------------------------------------------* 
+      *                         LINHAS DETALHE                        * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  LINDET1.                                                     
+           03  FILLER                  PIC X(01) VALUE '0'.             
+           03  FILLER                  PIC X(25) VALUE SPACES.          
+           03  FILLER                  PIC X(33) VALUE                  
+               'TOTAL DE REGISTROS LIDOS      :'.                       
+           03  LD1-TOT-LIDOS           PIC ZZZ.ZZZ.ZZ9.                 
+                                                                        
+       01  LINDET2.                                                     
+           03  FILLER                  PIC X(01) VALUE '0'.             
+           03  FILLER                  PIC X(25) VALUE SPACES.          
+           03  FILLER                  PIC X(33) VALUE                  
+               'TOTAL DE REGISTROS EXCLUIDOS  :'.                       
+           03  LD2-TOT-EXCL            PIC ZZZ.ZZZ.ZZ9.                 
+                                                                        
+       01  LINDET3.                                                     
+           03  FILLER                  PIC X(01) VALUE '0'.             
+           03  FILLER                  PIC X(25) VALUE SPACES.          
+           03  FILLER                  PIC X(33) VALUE                  
+               'TOTAL DE REGISTROS GRAVADOS   :'.                       
+           03  LD3-TOT-GRAV            PIC ZZZ.ZZZ.ZZ9.                 
+                                                                        
+       01  LINDET4.                                                     
+           03  FILLER                  PIC X(01) VALUE '0'.             
+           03  FILLER                  PIC X(25) VALUE SPACES.          
+           03  FILLER                  PIC X(33) VALUE                  
+               'TOTAL DE REG.DESPR.BLOQ.RESTR.:'.                       
+           03  LD4-TOT-DESP            PIC ZZZ.ZZZ.ZZ9.                 
+                                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+      *   PARAMETRO A SER PASSADO P/ A POOL7100 (MODULO TRATA/ ERRO)  * 
+      *                    (-INC POL7100C)                            * 
+      *---------------------------------------------------------------* 
+       01  ERRO-AREA.                                                   
+           05  ERR-TIPO-ACESSO        PIC X(03).                        
+           05  ERR-PGM                PIC X(08).                        
+           05  ERR-DADOS-IMS-DB2.                                       
+               07  ERR-DBD-TAB        PIC X(18).                        
+               07  ERR-FUN-COMANDO    PIC X(10).                        
+               07  ERR-STA-CODE       PIC X(04).                        
+               07  ERR-SQL-CODE  REDEFINES                              
+                   ERR-STA-CODE       PIC S9(09) COMP-4.                
+               07  ERR-LOCAL          PIC X(04).                        
+               07  ERR-SEGM           PIC X(08).                        
+               07  FILLER             PIC X(31).                        
+                                                                        
+           05  ERR-TEXTO  REDEFINES  ERR-DADOS-IMS-DB2                  
+                                      PIC X(75).                        
+      *---------------------------------------------------------------* 
+      *  OS CPOS ABAIXO DEVEM SER INICIALIZADOS SO' QDO O APLICATIVO  * 
+      *  USAR O SISTEMA DE SENHAS (POOL1000).                         * 
+      *---------------------------------------------------------------* 
+           05  ERR-DADOS-SENHAS.                                        
+               07  ERR-COD-USER       PIC X(07).                        
+               07  ERR-COD-DEPTO      PIC X(06).                        
+               07  ERR-MODULO         PIC X(08)  VALUE SPACES.          
+           EJECT                                                        
+           EXEC SQL                                                     
+                INCLUDE SQLCA                                           
+           END-EXEC.                                                    
+                                                                        
+           EXEC SQL                                                     
+                INCLUDE LPCLV009                                        
+           END-EXEC.                                                    
+                                                                        
+       01  FILLER                      PIC X(32)        VALUE           
+           '*  FIM DA WORKING CLLP7656 *'.                              
+           EJECT                                                        
+      *===============================================================* 
+       PROCEDURE DIVISION.                                              
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       00000-INICIAR SECTION.                                           
+      *---------------------------------------------------------------* 
+                                                                        
+           CALL 'POOL1050'.                                             
+                                                                        
+           OPEN INPUT   TABELAL                                         
+                        PARMCLLP                                        
+                        CADSPC                                          
+                        ARQDATA                                         
+                OUTPUT  CADCARTA                                        
+                        BLQREST                                         
+                        RELATO.                                         
+                                                                        
+           MOVE   SPACES   TO   WRK-REG.                                
+                                                                        
+           MOVE ZEROS  TO  WRK-VCMTO   (1)    WRK-VCMTO   (2)           
+                           WRK-VCMTO   (3)    WRK-VCMTO   (4)           
+                           WRK-VCMTO   (5)    WRK-VCMTO   (6)           
+                           WRK-VCMTO   (7)                              
+                           WRK-RESGATE (1)    WRK-RESGATE (2)           
+                           WRK-RESGATE (3)    WRK-RESGATE (4)           
+                           WRK-RESGATE (5)    WRK-RESGATE (6)           
+                           WRK-RESGATE (7).                             
+                                                                        
+           MOVE    WRK-ABERTURA            TO   WRK-OPERACAO.           
+           PERFORM 100000-TESTAR-FILE-STATUS.                           
+                                                                        
+           PERFORM CARREGA-POOL0480    THRU  FIM-CARREGA-POOL0480.      
+                                                                        
+           PERFORM 666666-LER-PARMCLLP.                                 
+                                                                        
+           PERFORM   777777-TRATA-PARMCLLP                              
+               UNTIL  WRK-FS-PARMCLLP   EQUAL   '10'                    
+                                                                        
+           CALL    'POOL7600'        USING  WRK-AREA-POOL7600           
+                                                                        
+           DISPLAY 'CLLP7656 - DATA DE HOJE = ' WRK-DT-AAAAMMDD.        
+                                                                        
+           PERFORM 150000-CALC-1A-2A-3A-CARTA.                          
+                                                                        
+                                                                        
+           SORT SORTWK01  ASCENDING   KEY  SORT-NUMCGC                  
+                                           SORT-FILCGC                  
+                                           SORT-DIGCGC                  
+                                           SORT-VCMTO                   
+                INPUT  PROCEDURE  300000-ENTRADA-DO-SORT                
+                OUTPUT PROCEDURE  400000-SAIDA-DO-SORT.                 
+                                                                        
+           IF SORT-RETURN   NOT      EQUAL   ZEROS                      
+              MOVE    SORT-RETURN    TO      WRK-SORT-RETURN            
+              DISPLAY '************** CLLP7656 *************'           
+              DISPLAY '*   ERRO NO PROCESSAMENTO DO SORT   *'           
+              DISPLAY '*         SORT-RETURN  = ' WRK-SORT-RETURN       
+                                                   '       *'           
+              DISPLAY '************** CLLP7656 *************'           
+              CALL    'ILBOABN0'     USING   WRK-ABEND.                 
+                                                                        
+                                                                        
+       000000-FINALIZAR.                                                
+      *---------------*                                                 
+                                                                        
+           CLOSE  TABELAL                                               
+                  PARMCLLP                                              
+                  CADSPC                                                
+                  ARQDATA                                               
+                  CADCARTA                                              
+                  BLQREST                                               
+                  RELATO.                                               
+                                                                        
+           MOVE    WRK-FECHAMENTO    TO     WRK-OPERACAO.               
+           PERFORM 100000-TESTAR-FILE-STATUS.                           
+                                                                        
+           MOVE    ZEROS             TO     RETURN-CODE.                
+                                                                        
+           STOP RUN.                                                    
+                                                                        
+      *---------------------------------------------------------------* 
+       000000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1001-TESTAR-FS-BLQREST  SECTION.                                 
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-BLQREST  NOT EQUAL '00'                            
+              DISPLAY '************** CLLP7656 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              BLQREST              *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-BLQREST        
+                                                 '         *'           
+              DISPLAY '************** CLLP7656 *************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND                       
+           END-IF.                                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       1001-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1002-GRAVA-BLQREST  SECTION.                                     
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE SPC-EMPRESA-CATU   TO FD-EMPRESA.                       
+           MOVE SPC-AGENCIA-CATU   TO FD-AGENCIA.                       
+           MOVE SPC-NUM-CC-CATU    TO FD-CONTA.                         
+           MOVE SPC-CARTEIRA-CATU  TO FD-CARTEIRA.                      
+           MOVE SPC-CONTRATO-CATU  TO FD-CONTRATO.                      
+           MOVE 2                  TO FD-IND-BLOQ.                      
+           MOVE 'D'                TO FD-INDICADOR.                     
+           MOVE SPC-NUMCGC-CATU    TO FD-CPF.                           
+           MOVE SPC-FILCGC-CATU    TO FD-FILIAL.                        
+           MOVE SPC-CTRCGC-CATU    TO FD-CTRL.                          
+                                                                        
+           WRITE  FD-BLQREST.                                           
+                                                                        
+           MOVE    WRK-GRAVACAO  TO  WRK-OPERACAO                       
+           PERFORM 1001-TESTAR-FS-BLQREST.                              
+                                                                        
+           ADD      1      TO   ACU-GRAV-BLQREST.                       
+                                                                        
+      *---------------------------------------------------------------* 
+       1002-99-FIM. EXIT.                                               
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       100000-TESTAR-FILE-STATUS SECTION.                               
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 110000-TESTAR-FS-CADSPC.                             
+                                                                        
+           PERFORM 120000-TESTAR-FS-CADCARTA.                           
+                                                                        
+           PERFORM 1001-TESTAR-FS-BLQREST.                              
+                                                                        
+           PERFORM 130000-TESTAR-FS-RELATO.                             
+                                                                        
+           PERFORM 140000-TESTAR-FS-ARQDATA.                            
+                                                                        
+           PERFORM 170000-TESTAR-FS-TABELAL.                            
+                                                                        
+           PERFORM 888888-TESTAR-FS-PARMCLLP.                           
+                                                                        
+      *---------------------------------------------------------------* 
+       100000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       110000-TESTAR-FS-CADSPC SECTION.                                 
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-CADSPC NOT EQUAL '00'                              
+              DISPLAY '************** CLLP7656 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              CADSPC               *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-CADSPC         
+                                                 '         *'           
+              DISPLAY '************** CLLP7656 *************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       110000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       120000-TESTAR-FS-CADCARTA SECTION.                               
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-CADCARTA NOT EQUAL '00'                            
+              DISPLAY '************** CLLP7656 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              CADCARTA             *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-CADCARTA       
+                                                 '         *'           
+              DISPLAY '************** CLLP7656 *************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       120000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       130000-TESTAR-FS-RELATO SECTION.                                 
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-RELATO NOT EQUAL '00'                              
+              DISPLAY '************** CLLP7656 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              RELATO               *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-RELATO         
+                                                 '         *'           
+              DISPLAY '************** CLLP7656 *************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       130000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       140000-TESTAR-FS-ARQDATA SECTION.                                
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-ARQDATA NOT EQUAL '00'                             
+              DISPLAY '************** CLLP7656 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              ARQDATA              *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-ARQDATA        
+                                                 '         *'           
+              DISPLAY '************** CLLP7656 *************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       140000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       170000-TESTAR-FS-TABELAL SECTION.                                
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-TABELAL NOT EQUAL '00'                             
+              DISPLAY '************** CLLP7656 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              TABELAL              *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-TABELAL        
+                                                 '         *'           
+              DISPLAY '************** CLLP7656 *************'           
+              CALL 'ILBOABN0'     USING WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       170000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       150000-CALC-1A-2A-3A-CARTA  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 160000-LER-ARQDATA.                                  
+                                                                        
+           MOVE    DTMOVINV          TO     DT-MOV-AAAAMMDD.            
+                                                                        
+           DISPLAY 'DATA DO MOVIMENTO ' DT-MOV-AAAAMMDD.                
+           MOVE    DT-MOV-AAAAMMDD   TO     WRK-DT-ENTRADA.             
+                                                                        
+           COMPUTE WRK-NUM-DIAS      =       WRK-DIAS1      - 1         
+           COMPUTE WRK-NUM-DIAS      =     ( WRK-NUM-DIAS * -1)         
+      ***  MOVE    -04               TO      WRK-NUM-DIAS               
+           PERFORM 200000-POOL1285                                      
+           DISPLAY 'DATA DE -05 = ' WRK-DATA-SAIDA                      
+           MOVE    WRK-DATA-SAIDA    TO      WRK-DATA-1A-CARTA          
+                                                                        
+                                                                        
+           MOVE    WRK-DIAS1         TO      WRK-NUM-DIAS               
+           COMPUTE WRK-NUM-DIAS      =     ( WRK-NUM-DIAS * -1)         
+      ***  MOVE    -05               TO      WRK-NUM-DIAS               
+           PERFORM 200000-POOL1285                                      
+           DISPLAY 'DATA DE -06= '  WRK-DATA-SAIDA                      
+           MOVE    WRK-DATA-SAIDA    TO      WRK-DATA-08                
+                                                                        
+                                                                        
+           COMPUTE WRK-NUM-DIAS      =      WRK-DIAS2    - 1            
+           COMPUTE WRK-NUM-DIAS      =    ( WRK-NUM-DIAS * -1)          
+      ***  MOVE    -19               TO     WRK-NUM-DIAS                
+           PERFORM 200000-POOL1285                                      
+           DISPLAY 'DATA DE -20 = ' WRK-DATA-SAIDA                      
+           MOVE   WRK-DATA-SAIDA     TO     WRK-DATA-2A-CARTA           
+                                                                        
+                                                                        
+           MOVE    WRK-DIAS2         TO      WRK-NUM-DIAS               
+           COMPUTE WRK-NUM-DIAS      =     ( WRK-NUM-DIAS * -1)         
+      ***  MOVE    -20               TO      WRK-NUM-DIAS               
+           PERFORM 200000-POOL1285                                      
+           DISPLAY 'DATA DE -21 = ' WRK-DATA-SAIDA                      
+           MOVE   WRK-DATA-SAIDA     TO     WRK-DATA-21                 
+                                                                        
+                                                                        
+           COMPUTE WRK-NUM-DIAS      =       WRK-DIAS3    -  1          
+           COMPUTE WRK-NUM-DIAS      =     ( WRK-NUM-DIAS * -1)         
+      ***  MOVE   -39                TO      WRK-NUM-DIAS               
+           PERFORM 200000-POOL1285                                      
+           DISPLAY 'DATA DE -40 = ' WRK-DATA-SAIDA                      
+           MOVE   WRK-DATA-SAIDA     TO     WRK-DATA-3A-CARTA.          
+                                                                        
+                                                                        
+           MOVE    WRK-DIAS3         TO     WRK-NUM-DIAS                
+           COMPUTE WRK-NUM-DIAS      =    ( WRK-NUM-DIAS * -1)          
+      ***  MOVE   -40                TO     WRK-NUM-DIAS                
+           PERFORM 200000-POOL1285                                      
+           DISPLAY 'DATA DE -41 = ' WRK-DATA-SAIDA                      
+           MOVE   WRK-DATA-SAIDA     TO     WRK-DATA-41.                
+                                                                        
+      *---------------------------------------------------------------* 
+       150000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+       160000-LER-ARQDATA SECTION.                                      
+      *---------------------------------------------------------------* 
+                                                                        
+           READ ARQDATA.                                                
+                                                                        
+           MOVE WRK-LEITURA                TO   WRK-OPERACAO.           
+           PERFORM 140000-TESTAR-FS-ARQDATA.                            
+      *---------------------------------------------------------------* 
+       160000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+           EJECT                                                        
+      *---------------------------------------------------------------* 
+       200000-POOL1285 SECTION.                                         
+      *---------------------------------------------------------------* 
+                                                                        
+            CALL  'POOL1285' USING WRK-AREA-POOL1285                    
+                                                                        
+            IF  RETURN-CODE  NOT  EQUAL  ZEROS                          
+                MOVE  RETURN-CODE  TO   WRK-RETURN-CODE                 
+                MOVE  WRK-MENSAGEM TO   WRK-MENSAGEM-AUX                
+                DISPLAY                                                 
+                      '******************* CLLP7656 *******************'
+                DISPLAY                                                 
+                      '*   ERRO  UTILIZANDO  A  POOL1285              *'
+                DISPLAY                                                 
+                      '*   DATA-ENTRADA     =   ' WRK-DT-ENTRADA '      
+      -               '        *'                                       
+                DISPLAY                                                 
+                      '*   RETURN-CODE      =   ' WRK-RETURN-CODE '     
+      -               '           *'                                    
+                DISPLAY                                                 
+                      '*   MENSAGEM DO ERRO =   ' WRK-MENSAGEM-AUX ' *' 
+                DISPLAY                                                 
+                      '******************* CLLP7656 *******************'
+                GO   TO   000000-FINALIZAR.                             
+                                                                        
+      *---------------------------------------------------------------* 
+       200000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       300000-ENTRADA-DO-SORT SECTION.                                  
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 310000-LER-CADSPC                                    
+                                                                        
+           IF  WRK-FS-CADSPC EQUAL '10'                                 
+               DISPLAY '*****************************'                  
+               DISPLAY '**      SR. OPERADOR       **'                  
+               DISPLAY '**     ARQUIVO CADSPC      **'                  
+               DISPLAY '**         VAZIO           **'                  
+               DISPLAY '** PROCESSAMENTO ENCERRADO **'                  
+               DISPLAY '*****************************'                  
+               MOVE 'S'  TO WRK-FIM-CADSPC.                             
+                                                                        
+                                                                        
+           PERFORM 320000-MOVIMENTA-REGISTRO UNTIL                      
+                                            WRK-FIM-CADSPC  EQUAL  'S'. 
+                                                                        
+      *---------------------------------------------------------------* 
+       300000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       310000-LER-CADSPC  SECTION.                                      
+      *---------------------------------------------------------------* 
+                                                                        
+       310000-10-LE.                                                    
+                                                                        
+           READ CADSPC.                                                 
+                                                                        
+           IF  WRK-FS-CADSPC EQUAL  '10'                                
+               MOVE  'S'     TO     WRK-FIM-CADSPC                      
+               GO            TO     310000-99-FIM.                      
+                                                                        
+           MOVE WRK-LEITURA                TO   WRK-OPERACAO.           
+           PERFORM 110000-TESTAR-FS-CADSPC.                             
+                                                                        
+           ADD     1                       TO   ACU-LIDOS-CADSPC.       
+                                                                        
+           IF SPC-ID-LPCL-CATU EQUAL 'MO'                               
+              MOVE 1 TO WRK-BLOQ-OPER                                   
+           ELSE                                                         
+              IF SPC-ID-LPCL-CATU EQUAL 'CL' OR                         
+                 SPC-ID-LPCL-CATU EQUAL 'LP'                            
+                 MOVE 2 TO WRK-BLOQ-OPER                                
+              ELSE                                                      
+                 MOVE 0 TO WRK-BLOQ-OPER.                               
+                                                                        
+      * ***                                                             
+      * *** CREDITO IMOBILIARIO  DEVERA FAZER O FILTRO PELA             
+      * *** UF DO END. DO  IMOVEL E NAO DO ENDERECO CLIENTE             
+      * *** ESTA SELECAO  ESTA  SENDO  FEITA  NO  INICIO DA             
+      * *** NET CLLP1400                                                
+      * ***                                                             
+           IF  SPC-CARTEIRA-CATU  EQUAL  '502' OR '532' OR '561'        
+               OR  '572'  OR  '590'                                     
+               MOVE  ZEROS              TO    WRK-UF-ALFA               
+           ELSE                                                         
+               MOVE  SPC-DEV-UF-CATU    TO    WRK-UF-ALFA.              
+      * ***                                                             
+           PERFORM CONVERTE-UF.                                         
+                                                                        
+           PERFORM 315000-PESQUISAR-DEVEDOR                             
+                   VARYING  WRK-PESQ         FROM     1  BY  1          
+                   UNTIL    WRK-PESQ         GREATER  WRK-PESQ-DEVEDOR. 
+                                                                        
+           IF   RETURN-CODE           EQUAL   ZEROS                     
+                PERFORM 1002-GRAVA-BLQREST                              
+                ADD   1               TO      ACU-DESPREZADO            
+                GO    TO              310000-10-LE.                     
+                                                                        
+      *---------------------------------------------------------------* 
+       310000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       315000-PESQUISAR-DEVEDOR  SECTION.                               
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE  ZEROS                      TO  WRK-480-RETORNO         
+                                                                        
+           EVALUATE  WRK-PESQ                                           
+                                                                        
+           WHEN 001                                                     
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 002                                                     
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 003                                                     
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 004                                                     
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 005                                                     
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 006                                                     
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 007                                                     
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 008                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+           WHEN 009                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 010                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 011                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 012                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 013                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 014                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 015                                                     
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 016                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+           WHEN 017                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 018                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 019                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 020                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 021                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 022                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 023                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 024                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+           WHEN 025                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 026                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 027                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 028                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 029                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 030                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 031                                                     
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 032                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+           WHEN 033                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 034                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 035                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 036                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 037                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 038                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 039                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 040                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+           WHEN 041                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 042                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 043                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 044                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 045                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 046                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 047                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 048                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+           WHEN 049                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 050                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 051                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 052                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 053                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 054                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 055                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 056                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+           WHEN 057                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 058                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 059                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 060                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+           WHEN 061                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+           WHEN 062                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+           WHEN 063                                                     
+                MOVE  SPC-NUMCGC-CATU       TO  WRK-480-RET-CCGC-CPF    
+                MOVE  SPC-FILCGC-CATU       TO  WRK-480-RET-CFLIAL-CGC  
+                MOVE  SPC-CTRCGC-CATU       TO  WRK-480-RET-CCTRL-CGC   
+                MOVE  SPC-AGENCIA-CATU      TO  WRK-480-RET-AGENCIA     
+                MOVE  SPC-NUM-CC-CATU       TO  WRK-480-RET-CONTA       
+                MOVE  COD-NATUREZA-CATU     TO  WRK-480-RET-NATUREZA    
+                MOVE  SPC-CARTEIRA-CATU     TO  WRK-480-RET-CCART       
+                MOVE  WRK-BLOQ-OPER         TO  WRK-480-RET-BLOQ-OPER   
+                MOVE  WRK-UF-NUM            TO  WRK-480-RET-UF          
+                                                                        
+           END-EVALUATE.                                                
+                                                                        
+           CALL   WRK-MODULO       USING        WRK-480-CODIGO3         
+                                                WRK-480-NOME-TABELA     
+                                                WRK-480-RETORNO-CHAVE   
+                                                WRK-480-RETORNO.        
+                                                                        
+           IF   RETURN-CODE        EQUAL        ZEROS                   
+                MOVE    099                 TO  WRK-PESQ.               
+                                                                        
+      *---------------------------------------------------------------* 
+       315000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       320000-MOVIMENTA-REGISTRO SECTION.                               
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE    REG-CADSEATU   TO   REG-SORT                         
+                                                                        
+           RELEASE REG-SORT                                             
+                                                                        
+           PERFORM 310000-LER-CADSPC.                                   
+                                                                        
+      *---------------------------------------------------------------* 
+       320000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       400000-SAIDA-DO-SORT SECTION.                                    
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 410000-LER-ARQSORT                                   
+                                                                        
+           IF     WRK-FIM-ARQSORT NOT EQUAL    'S'                      
+                  MOVE   SORT-CGC-ATU  TO  SORT-CGC-ANT.                
+                                                                        
+           PERFORM 420000-PROCESSA-SORT  UNTIL                          
+                                         WRK-FIM-ARQSORT  EQUAL  'S'.   
+                                                                        
+           PERFORM 430000-GERAR-RELATORIO.                              
+                                                                        
+      *---------------------------------------------------------------* 
+       400000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       410000-LER-ARQSORT SECTION.                                      
+      *---------------------------------------------------------------* 
+                                                                        
+           RETURN   SORTWK01    AT    END                               
+                    MOVE  'S'          TO   WRK-FIM-ARQSORT             
+                    MOVE  HIGH-VALUES  TO   SORT-CGC-ATU                
+                    GO                 TO   410000-99-FIM.              
+                                                                        
+           IF     SORT-VCMTO    LESS   20000914                         
+                  GO      TO    410000-LER-ARQSORT.                     
+                                                                        
+           MOVE   SORT-CGC      TO   SORT-CGC-ATU.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       410000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       420000-PROCESSA-SORT SECTION.                                    
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 421000-QUEBRA-CGC  UNTIL                             
+                                      SORT-CGC-ATU NOT EQUAL            
+                                      SORT-CGC-ANT.                     
+           IF WRK-MOV-REG    EQUAL     'S'                              
+              IF WRK-IDENT   EQUAL     '99' AND                         
+                 WRK-TEM-05-20-40   NOT EQUAL 'S'                       
+                 ADD  WRK-CONTA-99  TO ACU-EXCLUIDOS                    
+              ELSE                                                      
+                 PERFORM 422000-GRAVA-CADCARTA.                         
+                                                                        
+           MOVE  'S'   TO  WRK-PRIMEIRA-VEZ                             
+           MOVE  'N'   TO  WRK-MOV-REG                                  
+                           WRK-TEM-05-20-40.                            
+                                                                        
+           MOVE  SORT-CGC-ATU  TO  SORT-CGC-ANT.                        
+                                                                        
+      *---------------------------------------------------------------* 
+       420000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       421000-QUEBRA-CGC SECTION.                                       
+      *---------------------------------------------------------------* 
+                                                                        
+           IF  WRK-PRIMEIRA-VEZ     EQUAL  'S'                          
+               MOVE   'N'    TO     WRK-PRIMEIRA-VEZ                    
+               MOVE  ZEROS   TO     WRK-IND                             
+               MOVE  1       TO     WRK-CONTA-99                        
+               IF  (SORT-VCMTO     GREATER WRK-DATA-08 AND              
+                    SORT-VCMTO NOT GREATER WRK-DATA-1A-CARTA ) OR       
+                   (SORT-VCMTO     GREATER WRK-DATA-21 AND              
+                    SORT-VCMTO NOT GREATER WRK-DATA-2A-CARTA ) OR       
+                   (SORT-VCMTO     GREATER WRK-DATA-41 AND              
+                    SORT-VCMTO NOT GREATER WRK-DATA-3A-CARTA ) OR       
+                    SORT-VCMTO NOT GREATER WRK-DATA-41                  
+                   MOVE   REG-SORT  TO     WRK-CAMPO1                   
+                   MOVE   'S'       TO     WRK-MOV-REG                  
+                   PERFORM 421100-ACUMULAR-OCORR                        
+                 IF (SORT-VCMTO     GREATER WRK-DATA-08 AND             
+                     SORT-VCMTO NOT GREATER WRK-DATA-1A-CARTA )         
+                      MOVE  WRK-DIAS1   TO   WRK-IDENT                  
+                  ELSE                                                  
+                  IF (SORT-VCMTO     GREATER WRK-DATA-21 AND            
+                     SORT-VCMTO NOT GREATER WRK-DATA-2A-CARTA )         
+                      MOVE  WRK-DIAS2   TO   WRK-IDENT                  
+                  ELSE                                                  
+                  IF (SORT-VCMTO     GREATER WRK-DATA-41 AND            
+                      SORT-VCMTO NOT GREATER WRK-DATA-3A-CARTA )        
+                      MOVE  WRK-DIAS3   TO   WRK-IDENT                  
+                  ELSE                                                  
+                      MOVE  WRK-DIAS4   TO   WRK-IDENT                  
+               ELSE                                                     
+                   ADD  1   TO   ACU-EXCLUIDOS                          
+           ELSE                                                         
+               IF  WRK-MOV-REG  EQUAL  'S'                              
+                   ADD       1      TO     WRK-CONTA-99                 
+                   PERFORM 421100-ACUMULAR-OCORR                        
+                   IF (SORT-VCMTO     GREATER WRK-DATA-08 AND           
+                       SORT-VCMTO NOT GREATER WRK-DATA-1A-CARTA ) OR    
+                      (SORT-VCMTO     GREATER WRK-DATA-21 AND           
+                       SORT-VCMTO NOT GREATER WRK-DATA-2A-CARTA ) OR    
+                      (SORT-VCMTO     GREATER WRK-DATA-41 AND           
+                       SORT-VCMTO NOT GREATER WRK-DATA-3A-CARTA ) OR    
+                       SORT-VCMTO NOT GREATER WRK-DATA-41               
+                       MOVE  'S'    TO     WRK-TEM-05-20-40             
+                   ELSE                                                 
+                       NEXT SENTENCE                                    
+               ELSE                                                     
+                   ADD  1   TO   ACU-EXCLUIDOS.                         
+                                                                        
+           MOVE    SORT-CGC-ATU   TO   SORT-CGC-ANT                     
+           PERFORM 410000-LER-ARQSORT.                                  
+                                                                        
+      *---------------------------------------------------------------* 
+       421000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       421100-ACUMULAR-OCORR SECTION.                                   
+      *---------------------------------------------------------------* 
+                                                                        
+           IF  WRK-IND + 1 GREATER   7                                  
+               GO   TO  421100-99-FIM.                                  
+                                                                        
+           SET IND TO 1                                                 
+                                                                        
+           SEARCH  WRK-OCORRENCIAS  AT  END                             
+                   COMPUTE WRK-IND            =    WRK-IND + 1          
+                   MOVE    SORT-VCMTO         TO   WRK-VCMTO(WRK-IND)   
+                   MOVE    SORT-NATURE        TO   WRK-NATUREZA(WRK-IND)
+                   MOVE    SORT-VALOR-RESGATE TO   WRK-RESGATE(WRK-IND) 
+                   PERFORM 421110-LER-TABELA-LPCLV009                   
+                                                                        
+           WHEN SORT-NATURE  EQUAL  WRK-NATUREZA(IND)                   
+      *---      PERFORM 421110-LER-TABELA-LPCLV009                      
+                COMPUTE WRK-RESGATE(IND)  =    WRK-RESGATE(IND)   +     
+                                               SORT-VALOR-RESGATE.      
+                                                                        
+      *---------------------------------------------------------------* 
+       421100-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       421110-LER-TABELA-LPCLV009 SECTION.                              
+      *---------------------------------------------------------------* 
+                                                                        
+           IF SORT-NATURE EQUAL 'CH'                                    
+              MOVE 'ADIANT. DEPOSITANTES' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'AD'                                    
+              MOVE 'AD. DEPOS. CLIENTES ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'AR'                                    
+              MOVE 'ARRENDAMENTOS       ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'FI'                                    
+              MOVE 'CREDITOS E FINANC.  ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'EC'                                    
+              MOVE 'EMPRESTIMOS EM CONTA' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'AG'                                    
+              MOVE 'EMPR. AGRIC. E IND. ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'CA'                                    
+              MOVE 'OPERACOES DE CAMBIO ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'RE'                                    
+              MOVE 'OPERAC. DE REPASSES ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'IM'                                    
+              MOVE 'OPERAC. IMOBILIARIAS' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'TD'                                    
+              MOVE 'TITULOS DESCONTADOS ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'DC'                                    
+              MOVE 'DESCONTO DE CUEQUES ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'CT'                                    
+              MOVE 'CARTAO DE CREDITO   ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+           IF SORT-NATURE EQUAL 'OO'                                    
+              MOVE 'OUTRAS OPERACOES    ' TO WRK-DESCRIC(WRK-IND)       
+           ELSE                                                         
+              MOVE 'OPERACOES DIVERSAS  ' TO WRK-DESCRIC(WRK-IND).      
+           GO TO 421110-99-FIM.                                         
+                                                                        
+                                                                        
+           IF SORT-NATURE  NUMERIC                                      
+              MOVE  SORT-NATURE  TO  WRK-NATURE-NUMERIC                 
+              MOVE  WRK-NATURE   TO  NTOP-COD-NAT-OPER OF LPCLV009      
+           ELSE                                                         
+              MOVE  SORT-NATURE  TO  NTOP-COD-NAT-OPER OF LPCLV009.     
+                                                                        
+           EXEC SQL                                                     
+                SELECT  NTOP_DESCRIC                                    
+                  INTO :LPCLV009.NTOP-DESCRIC                           
+                  FROM  DB2PRD.V01LPCL_NATUREZ_OP                       
+                 WHERE  NTOP_COD_NAT_OPER = :LPCLV009.NTOP-COD-NAT-OPER 
+           END-EXEC.                                                    
+                                                                        
+           IF (SQLCODE NOT EQUAL  ZEROS AND +100) OR                    
+              (SQLWARN0    EQUAL  'W')                                  
+              MOVE 'DB2'                TO ERR-TIPO-ACESSO              
+              MOVE 'V01LPCL_NATUREZ_OP' TO ERR-DBD-TAB                  
+              MOVE 'SELECT'             TO ERR-FUN-COMANDO              
+              MOVE SQLCODE              TO ERR-SQL-CODE                 
+              MOVE 0001                 TO ERR-LOCAL                    
+              MOVE SPACES               TO ERR-SEGM                     
+              PERFORM 999999-ROTINA-ERRO.                               
+                                                                        
+           IF  SQLCODE   EQUAL  +100                                    
+               MOVE  SPACES         TO   WRK-DESCRIC(WRK-IND)           
+           ELSE                                                         
+               MOVE  NTOP-DESCRIC   TO   WRK-DESCRIC(WRK-IND).          
+                                                                        
+      *---------------------------------------------------------------* 
+       421110-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       422000-GRAVA-CADCARTA SECTION.                                   
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE  WRK-REG  TO  CADCARTA-REGTO                            
+                                                                        
+           WRITE  CADCARTA-REGTO.                                       
+                                                                        
+           MOVE    WRK-GRAVACAO  TO  WRK-OPERACAO                       
+           PERFORM 120000-TESTAR-FS-CADCARTA.                           
+                                                                        
+           MOVE   SPACES   TO   WRK-REG.                                
+                                                                        
+           MOVE ZEROS  TO  WRK-VCMTO   (1)    WRK-VCMTO   (2)           
+                           WRK-VCMTO   (3)    WRK-VCMTO   (4)           
+                           WRK-VCMTO   (5)    WRK-VCMTO   (6)           
+                           WRK-VCMTO   (7)                              
+                           WRK-RESGATE (1)    WRK-RESGATE (2)           
+                           WRK-RESGATE (3)    WRK-RESGATE (4)           
+                           WRK-RESGATE (5)    WRK-RESGATE (6)           
+                           WRK-RESGATE (7).                             
+                                                                        
+           ADD      1      TO   ACU-GRAV-CADCARTA.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       422000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       430000-GERAR-RELATORIO SECTION.                                  
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE    WRK-DT-AAAAMMDD   TO     WRK-DATA-AUX                
+           MOVE    WRK-DT-AAAA       TO     CB2-DATA-AAAA               
+           MOVE    WRK-DT-MM         TO     CB2-DATA-MM                 
+           MOVE    WRK-DT-DD         TO     CB2-DATA-DD                 
+                                                                        
+           MOVE    WRK-GRAVACAO      TO     WRK-OPERACAO                
+                                                                        
+           WRITE   REG-REL           FROM   CABEC1                      
+           PERFORM 130000-TESTAR-FS-RELATO                              
+                                                                        
+           WRITE   REG-REL           FROM   CABEC2                      
+           PERFORM 130000-TESTAR-FS-RELATO                              
+                                                                        
+           WRITE   REG-REL           FROM   CB-CARRO                    
+           PERFORM 130000-TESTAR-FS-RELATO                              
+                                                                        
+           WRITE   REG-REL           FROM   CABEC3                      
+           PERFORM 130000-TESTAR-FS-RELATO                              
+                                                                        
+           MOVE    ACU-LIDOS-CADSPC  TO     LD1-TOT-LIDOS               
+           MOVE    ACU-GRAV-CADCARTA TO     LD3-TOT-GRAV                
+           MOVE    ACU-EXCLUIDOS     TO     LD2-TOT-EXCL                
+           MOVE    ACU-DESPREZADO    TO     LD4-TOT-DESP                
+                                                                        
+           WRITE   REG-REL           FROM   LINDET1                     
+           PERFORM 130000-TESTAR-FS-RELATO                              
+                                                                        
+           DISPLAY       LINDET1                                        
+           DISPLAY       LINDET4                                        
+           DISPLAY       LINDET2                                        
+           DISPLAY       LINDET3                                        
+                                                                        
+           WRITE   REG-REL           FROM   LINDET4.                    
+           PERFORM 130000-TESTAR-FS-RELATO.                             
+                                                                        
+           WRITE   REG-REL           FROM   LINDET3.                    
+           PERFORM 130000-TESTAR-FS-RELATO.                             
+                                                                        
+      *---------------------------------------------------------------* 
+       430000-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+      *         CARREGA    POOL0480                                   * 
+      *---------------------------------------------------------------* 
+                                                                        
+       CARREGA-POOL0480  SECTION.                                       
+                                                                        
+           PERFORM  LER-TABELAL                THRU   FIM-LER-TABELAL.  
+                                                                        
+           IF       WRK-FS-TABELAL EQUAL '10'                           
+                    GO   TO   FIM-CARREGA-POOL0480.                     
+                                                                        
+           PERFORM  MONTAR-TABELA            THRU     FIM-MONTAR-TABELA 
+                    UNTIL                    WRK-FS-TABELAL EQUAL '10'. 
+                                                                        
+           CALL  WRK-MODULO         USING        WRK-480-CODIGO2        
+                                                 WRK-480-NOME-TABELA.   
+                                                                        
+       FIM-CARREGA-POOL0480.                                            
+           EXIT.                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+                                                                        
+       LER-TABELAL SECTION.                                             
+                                                                        
+           READ    TABELAL.                                             
+                                                                        
+           IF  WRK-FS-TABELAL EQUAL '10'                                
+               GO               TO  FIM-LER-TABELAL.                    
+                                                                        
+ATEND      ADD   1      TO   ACU-LIDOS-TABELAL.                         
+ATEND                                                                   
+ATEND.*....IF..B037-CCART.NOT.NUMERIC                                   
+BRQ141     IF  B037-CCART EQUAL SPACES OR LOW-VALUES                    
+ATEND          DISPLAY '*** B037-CCART = ' B037-CCART '***'             
+ATEND          GO               TO  LER-TABELAL                         
+ATEND      END-IF.                                                      
+ATEND                                                                   
+           MOVE    WRK-LEITURA  TO  WRK-OPERACAO.                       
+           PERFORM 170000-TESTAR-FS-TABELAL.                            
+                                                                        
+       FIM-LER-TABELAL.                                                 
+           EXIT.                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+                                                                        
+       MONTAR-TABELA     SECTION.                                       
+                                                                        
+           MOVE   B037-CSGL-UF                   TO WRK-UF-ALFA.        
+           PERFORM  CONVERTE-UF.                                        
+                                                                        
+           MOVE   B037-CCGC-CPF                  TO WRK-480-CCGC-CPF.   
+           MOVE   B037-CFLIAL-CGC                TO WRK-480-CFLIAL-CGC. 
+           MOVE   B037-CCTRL-CPF-CGC             TO WRK-480-CCTRL-CGC   
+           MOVE   B037-CJUNC-DEPDC-BDSCO         TO WRK-480-AGENCIA.    
+           MOVE   B037-CCTA-CORR                 TO WRK-480-CONTA.      
+           MOVE   B037-CTPO-NATUZ-OPER           TO WRK-480-NATUREZA.   
+           MOVE   B037-CCART                     TO WRK-480-CCART.      
+           MOVE   B037-CREST-BLOQ-OPER           TO WRK-480-BLOQ-OPER.  
+           MOVE   WRK-UF-NUM                     TO WRK-480-UF.         
+                                                                        
+           CALL  WRK-MODULO         USING        WRK-480-CODIGO1        
+                                                 WRK-480-NOME-TABELA    
+                                                 WRK-480-TAM-CHAVE      
+                                                 WRK-480-TAM-OCORRENC   
+                                                 WRK-480-REGISTRO.      
+                                                                        
+           IF     RETURN-CODE       EQUAL    4                          
+                  DISPLAY '**************   CLLP7656   *************'   
+                  DISPLAY '*      ESTOUROU  A  REGION  POOL0482    *'   
+                  DISPLAY '*  AO CARREGAR DADOS DA TABELA LPCLB037 *'   
+                  DISPLAY '**************   CLLP7656   *************'   
+                  CALL  'ILBOABN0'  USING        WRK-ABEND.             
+                                                                        
+           PERFORM  LER-TABELAL        THRU      FIM-LER-TABELAL.       
+                                                                        
+       FIM-MONTAR-TABELA.                                               
+           EXIT.                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+                                                                        
+       CONVERTE-UF                SECTION.                              
+                                                                        
+           MOVE   ZEROS   TO  WRK-UF-NUM.                               
+                                                                        
+           IF  WRK-UF-ALFA   EQUAL  ZEROS  OR  SPACES                   
+               GO  TO   FIM-CONVERTE-UF                                 
+           END-IF.                                                      
+                                                                        
+           SET LPCL-INDX  TO  1.                                        
+                                                                        
+           SEARCH  LPCL-OCC-UF  VARYING  LPCL-INDX                      
+                   AT END   GO  TO   FIM-CONVERTE-UF                    
+                   WHEN     LPCL-OCC-UF(LPCL-INDX) = WRK-UF-ALFA        
+                            SET  WRK-UF-NUM  TO  LPCL-INDX.             
+                                                                        
+       FIM-CONVERTE-UF.                                                 
+           EXIT.                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+       666666-LER-PARMCLLP             SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           READ   PARMCLLP.                                             
+                                                                        
+           IF  WRK-FS-PARMCLLP   EQUAL   '10'                           
+               GO                TO      666666-99-FIM.                 
+                                                                        
+           DISPLAY 'PARM-CCUSTO-1 = '  PARM-CCUSTO-1.                   
+           DISPLAY 'PARM-CODIGO-1 = '  PARM-CODIGO-1.                   
+           DISPLAY 'PARM-CCUSTO-2 = '  PARM-CCUSTO-2.                   
+           DISPLAY 'PARM-CODIGO-2 = '  PARM-CODIGO-2.                   
+                                                                        
+                                                                        
+           IF  PARM-CCUSTO-1   NOT EQUAL   'CLLP'   OR                  
+               PARM-CODIGO-1   NOT EQUAL   '0002'   OR                  
+               PARM-CCUSTO-2   NOT EQUAL   'CLLP'   OR                  
+               PARM-CODIGO-2   NOT EQUAL   '7615'                       
+               DISPLAY '****************  CLLP7656  *******************'
+               DISPLAY '*           ABEND 1111 - FORCADO              *'
+               DISPLAY '*  PROGRAMA CANCELADO - PARAMETRO INVALIDO    *'
+               DISPLAY '* '  PARM-CCUSTO-1 ' / ' PARM-CODIGO-1          
+                       ' / ' PARM-CCUSTO-2 ' / ' PARM-CODIGO-2          
+               DISPLAY '*   AVISAR ANALISTA RESPONSAVEL DA ROTINA     *'
+               DISPLAY '*****************  CLLP7656  ******************'
+               CALL  'ILBOABN0'  USING  WRK-ABEND.                      
+                                                                        
+      *---------------------------------------------------------------* 
+       666666-99-FIM.                  EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       777777-TRATA-PARMCLLP           SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           IF  PARM-SEQUENCIA   EQUAL   1                               
+               MOVE  PARM-NR-DIAS    TO   WRK-DIAS1                     
+               MOVE  PARM-VL-CORTE   TO   WRK-VL-CORTE1                 
+           ELSE                                                         
+               IF  PARM-SEQUENCIA   EQUAL   2                           
+                   MOVE  PARM-NR-DIAS    TO   WRK-DIAS2                 
+                   MOVE  PARM-VL-CORTE   TO   WRK-VL-CORTE2             
+               ELSE                                                     
+                   IF  PARM-SEQUENCIA   EQUAL   3                       
+                       MOVE  PARM-NR-DIAS    TO   WRK-DIAS3             
+                       MOVE  PARM-VL-CORTE   TO   WRK-VL-CORTE3         
+                   ELSE                                                 
+                       IF  PARM-SEQUENCIA   EQUAL   4                   
+                           MOVE  PARM-NR-DIAS    TO   WRK-DIAS4         
+                           MOVE  PARM-VL-CORTE   TO   WRK-VL-CORTE4.    
+                                                                        
+           PERFORM   666666-LER-PARMCLLP.                               
+                                                                        
+      *---------------------------------------------------------------* 
+       777777-99-FIM.                  EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       888888-TESTAR-FS-PARMCLLP       SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           IF  WRK-FS-PARMCLLP   NOT EQUAL   '00'                       
+               DISPLAY '************** CLLP7656 *************'          
+               DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'      
+               DISPLAY '*              PARMCLLP             *'          
+               DISPLAY '*         FILE STATUS =  ' WRK-FS-PARMCLLP      
+                                                  '         *'          
+               DISPLAY '************** CLLP7656 *************'          
+               CALL  'ILBOABN0'   USING    WRK-ABEND.                   
+                                                                        
+      *---------------------------------------------------------------* 
+       888888-99-FIM.                  EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       999999-ROTINA-ERRO SECTION.                                      
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE 'CLLP7656'              TO   ERR-PGM.                   
+                                                                        
+           CALL 'POOL7100'   USING WRK-BATCH ERRO-AREA SQLCA.           
+                                                                        
+           GOBACK.                                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       999999-99-FIM. EXIT.                                             
+      *---------------------------------------------------------------* 
+                                                                        
+      *******TESTE***************                                       
+                                                                        
+       ROT-DISPLAY SECTION.                                             
+            DISPLAY      'CGC = '                                       
+                   SORT-NUMCGC ' '                                      
+                   SORT-FILCGC ' '                                      
+                   SORT-DIGCGC ' NAT. '                                 
+                   SORT-NATURE ' VCTO '                                 
+                   SORT-VCMTO  ' VALOR '                                
+                   SORT-VALOR-RESGATE.                                  

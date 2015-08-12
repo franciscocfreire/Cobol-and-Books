@@ -1,0 +1,121 @@
+TCONTD_LOTE_CORSP
+
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013288 
+************* PROGRAMA CLLP2955 *************     
+*                                           *     
+* REGISTROS LIDOS EMODLAVS...:           39 *     
+*                                           *     
+* REGISTROS GRAVADOS SMODLAVS:           39 *     
+*                                           *     
+* ACESSOS REALIZADOS AO ECOR.:           39 *     
+*                                           *     
+*********************************************     
+*** ECOR2912 - LOTE FINALIZADO = 000000000013288  
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000039        
+
+
+
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013279
+************* PROGRAMA CLLP7955 *************     
+*                                           *     
+* REGISTROS LIDOS EMODLAVS...:           23 *     
+*                                           *     
+* REGISTROS GRAVADOS SMODLAVS:           23 *     
+*                                           *     
+* ACESSOS REALIZADOS AO ECOR.:           23 *     
+*                                           *     
+*********************************************     
+*** ECOR2912 - LOTE FINALIZADO = 000000000013279  
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000023        
+  
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013280
+************* PROGRAMA CLLP7955 *************     
+*                                           *     
+* REGISTROS LIDOS EMODLAVS...:            2 *     
+*                                           *     
+* REGISTROS GRAVADOS SMODLAVS:            2 *     
+*                                           *     
+* ACESSOS REALIZADOS AO ECOR.:            2 *     
+*                                           *     
+*********************************************     
+*** ECOR2912 - LOTE FINALIZADO = 000000000013280  
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000002        
+  
+
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013281          
+************* PROGRAMA CLLP2955 *************              
+*                                           *              
+* REGISTROS LIDOS EMODLAVS...:           26 *              
+*                                           *              
+* REGISTROS GRAVADOS SMODLAVS:           26 *              
+*                                           *              
+* ACESSOS REALIZADOS AO ECOR.:           26 *              
+*                                           *              
+*********************************************              
+*** ECOR2912 - LOTE FINALIZADO = 000000000013281           
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000026                 
+        
+AD.BRQ.CLLP.CLLP.MVCLLPOK.LEI2
+
+MX.CLLP.ARQE1440.NCOR.CLLPA764
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************* PROGRAMA CLLP7955 *************          
+*                                           *          
+* REGISTROS LIDOS EMODLAVS...:           23 *          
+*                                           *          
+* REGISTROS GRAVADOS SMODLAVS:           23 *          
+*                                           *          
+* ACESSOS REALIZADOS AO ECOR.:           23 *          
+*                                           *          
+*********************************************          
+*** ECOR2912 - LOTE FINALIZADO = 000000000013307       
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000023             
+************* PROGRAMA CLLP7955 *************           
+*                                           *           
+* REGISTROS LIDOS EMODLAVS...:            2 *           
+*                                           *           
+* REGISTROS GRAVADOS SMODLAVS:            2 *           
+*                                           *           
+* ACESSOS REALIZADOS AO ECOR.:            2 *           
+*                                           *           
+*********************************************           
+*** ECOR2912 - LOTE FINALIZADO = 000000000013308        
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000002        
+      
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013309            
+************* PROGRAMA CLLP2955 *************                
+*                                           *                
+* REGISTROS LIDOS EMODLAVS...:           26 *                
+*                                           *                
+* REGISTROS GRAVADOS SMODLAVS:           26 *                
+*                                           *                
+* ACESSOS REALIZADOS AO ECOR.:           26 *                
+*                                           *                
+*********************************************                
+*** ECOR2912 - LOTE FINALIZADO = 000000000013309             
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000026                   
+
+************* PROGRAMA CLLP2955 *************                           
+*                                           *                           
+* REGISTROS LIDOS EMODLAVS...:           39 *                           
+*                                           *                           
+* REGISTROS GRAVADOS SMODLAVS:           39 *                           
+*                                           *                           
+* ACESSOS REALIZADOS AO ECOR.:           39 *                           
+*                                           *                           
+*********************************************                           
+*** ECOR2912 - LOTE FINALIZADO = 000000000013311                        
+*** ECOR2912 - QTD.REG.GRAVADOS = 00000039                              

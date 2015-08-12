@@ -1,0 +1,6 @@
+
+RDAB0015            B A N C O  B R A D E S C O  S / A                 27/06/2014
+                        RELATORIO DE TOTALIZACOES
+      QUANTIDADE DE REGISTROS LIDOS    DO ARQPARVV..:           7
+      QUANTIDADE DE REGISTROS LIDOS    DO PENDFICA..:          56
+      QUANTIDADE DE REGISTROS GRAVADOS DO ARQDAPES..:           7

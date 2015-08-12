@@ -1,0 +1,220 @@
+      *---------------------------------------------------------------*         
+      *  NOME INC              -DDNAME-                LENGTH   0256  *         
+      *  I#IMAG25              WIMAGECO                SISTEMA  WCAC  *         
+      *---------------------------------------------------------------*         
+      *  DESCRICAO: ARQUIVO DO FORMATADOR DA TABELA DA CONF AUTOMATICA*         
+      *---------------------------------------------------------------*         
+      *                                                                         
+      *---                                               ---*0001/0256*         
+       01      IMAG25-REG.                                                      
+      *                                                                         
+      *---     IMAGEM DA CONFERENCIA AUTOMATICA          ---*0001/0163*         
+           05  IMAG25-WIMAGE-CONFE-CHEQ.                                        
+      *                                                                         
+      *---     DOC REF NUMBER                            ---*0001/0030*         
+               10  IMAG25-DOC-REF-NUMBER           PIC X(030).                  
+               10  IMAG25-DOC-REF-NUMBER-R         REDEFINES                    
+                   IMAG25-DOC-REF-NUMBER.                                       
+      *                                                                         
+      *---     CODIGO AGENCIA DESTINATARIO CMC7          ---*0001/0004*         
+                   15  IMAG25-CAG-DSTNAT-X.                                     
+                       20  IMAG25-CAG-DSTNAT       PIC 9(004).                  
+      *                                                                         
+      *---     NR CONTA CORRENTE DESTINATARIO CMC7       ---*0005/0010*         
+                   15  IMAG25-CCTA-DSTNAT-X.                                    
+                       20  IMAG25-CCTA-DSTNAT      PIC 9(006).                  
+      *                                                                         
+      *---     PARTE FINAL DOC REF NUMBER                ---*0011/0030*         
+                   15  IMAG25-CDOC-REF-NUMBER-FINAL PIC X(020).                 
+      *                                                                         
+      *---     DATA DE PROCESSAMENTO                     ---*0031/0038*         
+      *        FORMATO = AAAAMMDD                                               
+               10  IMAG25-DPROC-CHEQ-X.                                         
+                   15  IMAG25-DPROC-CHEQ           PIC 9(008).                  
+      *                                                                         
+      *---     NR CHEQUE                                 ---*0039/0044*         
+               10  IMAG25-CREG-CHEQUE-X.                                        
+                   15  IMAG25-CREG-CHEQUE          PIC 9(006).                  
+      *                                                                         
+      *---     CODIGO BANCO SACADO                       ---*0045/0047*         
+               10  IMAG25-CBCO-SACADO-X.                                        
+                   15  IMAG25-CBCO-SACADO          PIC 9(003).                  
+      *                                                                         
+      *---     CODIGO AGENCIA DO SACADO                  ---*0048/0051*         
+               10  IMAG25-CAG-SACADO-X.                                         
+                   15  IMAG25-CAG-SACADO           PIC 9(004).                  
+      *                                                                         
+      *---     COD DA CONTA ARMAZENADA                   ---*0052/0071*         
+               10  IMAG25-CDOC-ACCOUNT             PIC X(020).                  
+               10  IMAG25-CDOC-ACCOUNT-R           REDEFINES                    
+                   IMAG25-CDOC-ACCOUNT.                                         
+      *                                                                         
+      *---     AGENCIA TRAG                              ---*0052/0061*         
+                   15  IMAG25-CAG-TRAG-X.                                       
+      *                                                                         
+      *---     VAGO                                      ---*0052/0058*         
+                       20  IMAG25-VAGO-01          PIC 9(005).                  
+      *                                                                         
+      *---     AGENCIA TRAG                              ---*0057/0061*         
+                       20  IMAG25-CAG-TRAG         PIC 9(005).                  
+      *                                                                         
+      *---     CONTA CORRENTE TRAG SEM DV                ---*0062/0071*         
+                   15  IMAG25-CCTA-CORR-TRAG-X.                                 
+                       20  IMAG25-CCTA-CORR-TRAG   PIC 9(010).                  
+      *                                                                         
+      *---     NUMERO DA CONTA DO DOCUMENTO              ---*0072/0081*         
+               10  IMAG25-NCTA-ACCOUNT             PIC X(010).                  
+               10  IMAG25-NCTA-ACCOUNT-R           REDEFINES                    
+                   IMAG25-NCTA-ACCOUNT.                                         
+      *                                                                         
+      *---     VAGO                                      ---*0072/0074*         
+                   15  IMAG25-VAGO-03              PIC X(003).                  
+      *                                                                         
+      *---     CONTA CORRENTE DA SACADA TRAG             ---*0075/0080*         
+                   15  IMAG25-CCTA-CORR-SACADA-TRAG-X.                          
+                       20  IMAG25-CCTA-CORR-SACADA-TRAG    PIC 9(006).          
+      *                                                                         
+      *---     DIGITO CONTA SACADA TRAG                  ---*0081/0081*         
+                   15  IMAG25-CDIG-CCTA-SACADA-TRAG-X.                          
+                       20  IMAG25-CDIG-CCTA-SACADA-TRAG    PIC 9(001).          
+      *                                                                         
+      *---     VALOR DO CHEQUE                           ---*0082/0094*         
+               10  IMAG25-VCHEQ-COMPE-X.                                        
+                   15  IMAG25-VCHEQ-COMPE          PIC 9(013).                  
+      *                                                                         
+      *---     DATA DO MOVIMENTO                         ---*0095/0102*         
+      *        FORMATO = AAAAMMDD                                               
+               10  IMAG25-DMOVTO-CHEQ-X.                                        
+                   15  IMAG25-DMOVTO-CHEQ          PIC 9(008).                  
+      *                                                                         
+      *---     RESULT 8 DO GETTER: NOMINATIVO            ---*0103/0103*         
+      *        '1' = DOCUMENTO SEM NOMINATIVO                                   
+      *        ' ' = NOMINATIVO OK                                              
+               10  IMAG25-GTR8-RESULT                  PIC X(001).              
+      *                                                                         
+      *---     RESULT DA VERIFICACAO AUTOMATICA ASSINATURA--*0104/0105*         
+               10  IMAG25-ASV-RESULT                   PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO CAR/LAR               ---*0106/0107*         
+               10  IMAG25-APIA1-RESULT-CAR-LAR         PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO CAR                   ---*0108/0109*         
+               10  IMAG25-APIA2-RESULT-CAR             PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO LAR                   ---*0110/0111*         
+               10  IMAG25-APIA3-RESULT-LAR             PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO DATA                  ---*0112/0113*         
+               10  IMAG25-APIA4-RESULT-DATA            PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO DO CMC7               ---*0114/0115*         
+      *        LINHA 1 - NUMERO DE CONTA                                        
+               10  IMAG25-APIA5-RESULT-LINHA1          PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO CMC7                  ---*0116/0117*         
+      *        LINHA 1 - AGENCIA                                                
+               10  IMAG25-APIA6-RESULT-AGENCIA         PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO CMC7                  ---*0118/0119*         
+      *        LINHA 1 - NUMERO DO CHEQUE                                       
+               10  IMAG25-APIA7-RESULT-CHEQUE          PIC X(002).              
+      *                                                                         
+      *---     RESULT DA VERIFICAO CPF/CNPJ              ---*0120/0121*         
+               10  IMAG25-APIA8-RESULT-CPF-CNPJ        PIC X(002).              
+      *                                                                         
+      *---     RESULTADO DE VSV1                         ---*0122/0123*         
+               10  IMAG25-RESULT-VSV1                  PIC X(002).              
+      *                                                                         
+      *---     OPERADOR DE VSV1                          ---*0124/0131*         
+               10  IMAG25-USER-VSV1                    PIC X(008).              
+      *                                                                         
+      *---     RESULTADO DE VTV4                         ---*0132/0133*         
+               10  IMAG25-RESULT-VTV4                  PIC X(002).              
+      *                                                                         
+      *---     OPERADOR DE VTV4                          ---*0134/0141*         
+               10  IMAG25-USER-VTV4                    PIC X(008).              
+      *                                                                         
+      *---     RESULTADO DE TV1                          ---*0142/0143*         
+               10  IMAG25-RESULT-TV1                   PIC X(002).              
+      *                                                                         
+      *---     OPERADOR DE TV1                           ---*0144/0151*         
+               10  IMAG25-USER-TV1                     PIC X(008).              
+      *                                                                         
+      *---     MOTIVO DE DEVOLUCAO CONF.AUTOMATICA       ---*0152/0153*         
+      *        00 = FIXO QUANDO CCLASF-DEVLC-CHEQ <> ZEROS                      
+      *        22 = DIVERGENCIA DE ASSINATURA                                   
+      *        31 = ERRO NA FORMALISTICA                                        
+      *        35 = CHEQUE FRAUDADO                                             
+      *        44 = CHEQUE PRESCRITO                                            
+      *        48 = CHEQUE SEM IDENTIFICACAO DO BENEFICIARIO                    
+               10  IMAG25-CMOTV-DVL-CONFAUTO-X.                                 
+                   15  IMAG25-CMOTV-DVL-CONFAUTO       PIC 9(002).              
+      *                                                                         
+      *---     USUARIO FINAL QUE DECIDIU O DOC NA CONF AUTO-*0154/0161*         
+               10  IMAG25-USUARIO-FINAL                PIC X(008).              
+      *                                                                         
+      *---     CODIGO DE SERVICO CONFERENCIA AUTOMATICA  ---*0162/0163*         
+      *        00 = CHEQUE COM MOTIVACAO DEFINITIVA                             
+      *        01 = CHEQUE SEM CARTAO DE ASSINATURA                             
+      *        02 = CHEQUE COM DIVERGENCIA DE ASSINATURA OU ILEGIVEL            
+      *        03 = CHEQUE SUPERIOR PARA CONFIRMACAO EMISSAO                    
+      *        04 = CHEQUE PASSIVEL DE FRAUDE                                   
+      *        05 = CHEQUE VLB PARA CONFIRMACAO - SUPERIOR 250 MIL              
+      *        06 = LISTA TODAS AS CONTAS                                       
+      *        07 = DECISAO POR CONTA                                           
+      *        08 = LOG DA DEVOLUCAO                                            
+               10  IMAG25-CCLASF-DEVLC-CHEQ-X.                                  
+                   15  IMAG25-CCLASF-DEVLC-CHEQ        PIC 9(002).              
+      *                                                                         
+      *---     RESULTADO VERIFICACAO VERSO CHEQUE        ---*0164/0165*         
+      *        '  ' = VERIFICACAO NAO REALIZADA                                 
+      *        '00' = VERIFICACAO OK                                            
+      *        '02' = CPF/CNPJ NAO DISPONIVEL                                   
+      *        '06' = FUNCAO DESABILITADA PARA ESTA CONTA                       
+      *        '07' = FUNCAO DESABILITADA PARA ESTA REFERENCIA                  
+      *        '09' = CONTA CORRENTE FECHADA                                    
+      *        '14' = ERRO NO ENGINE AUTOMATICO                                 
+      *        '15' = FALHA NA LEITURA                                          
+      *        '16' = OUTRAS RAZOES PARA NAO PROCESSAR O DOCUMENTO              
+      *        '91' = ERRO NA TABELA DE DADOS OU NA REDE                        
+      *        '92' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-BASE             
+      *        '93' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-CHECK            
+      *        '99' = OUTROS ERROS (RESERVADO)                                  
+               10  IMAG25-APIA9-RESULT                 PIC X(002).              
+      *                                                                         
+      *---     QUALIDADE VERIFICACAO AUTOMAT VERSO CHEQ  ---*0166/0167*         
+               10  IMAG25-APIA9-RATE                   PIC X(002).              
+      *                                                                         
+      *---     TEXTO DESCREVENDO O CODIGO LIDO (PARCIAL) ---*0168/0207*         
+               10  IMAG25-APIA9-COMMENT                PIC X(040).              
+      *                                                                         
+      *---     RESULTADO VERIFICACAO XXX - XXXX          ---*0208/0209*         
+      *        '  ' = VERIFICACAO NAO REALIZADA                                 
+      *        '00' = VERIFICACAO OK                                            
+      *        '02' = CPF/CNPJ NAO DISPONIVEL                                   
+      *        '06' = FUNCAO DESABILITADA PARA ESTA CONTA                       
+      *        '07' = FUNCAO DESABILITADA PARA ESTA REFERENCIA                  
+      *        '09' = CONTA CORRENTE FECHADA                                    
+      *        '14' = ERRO NO ENGINE AUTOMATICO                                 
+      *        '15' = FALHA NA LEITURA                                          
+      *        '16' = OUTRAS RAZOES PARA NAO PROCESSAR O DOCUMENTO              
+      *        '91' = ERRO NA TABELA DE DADOS OU NA REDE                        
+      *        '92' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-BASE             
+      *        '93' = ERRO DE CONSISTENCIA NAS TABELAS DO SIGN-CHECK            
+      *        '99' = OUTROS ERROS (RESERVADO)                                  
+               10  IMAG25-APIA10-RESULT                PIC X(002).              
+      *                                                                         
+      *---     QUALIDADE VERIFICACAO AUTOMAT XXX - XXXX  ---*0210/0211*         
+               10  IMAG25-APIA10-RATE                  PIC X(002).              
+      *                                                                         
+      *---     TEXTO DESCREVENDO O RESULTADO XXX PARCIAL ---*0212/0251*         
+               10  IMAG25-APIA10-COMMENT               PIC X(040).              
+      *                                                                         
+      *---     FILLER CRIADO PARA EXPANSAO DO BOOK       ---*0252/0256*         
+      *---     NOVOS CAMPOS DEVEM SER CRIADO DENTRO DO                *         
+      *---     ITEM DE GRUPO WIMAGE-CONFE-CHEQ                        *         
+           05  IMAG25-CAMPO-FILLER                     PIC X(005).              
+      *                                                                         
+      *---------------------------------------------------------------*         
+      *                    FIM  DO BOOK I#IMAG25                      *         
+      *---------------------------------------------------------------*         

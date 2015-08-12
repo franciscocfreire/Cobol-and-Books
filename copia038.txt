@@ -1,0 +1,216 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 C  --  N O D E
+
+14.57.48 JOB73611 ---- FRIDAY,    27 JUN 2014 ----
+14.57.48 JOB73611  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+14.57.48 JOB73611  $EXIT006A  Job CLLPA160 Jobid(JOB73611) alterado para CLASS=E
+14.57.49 JOB73611  ICH70001I M67777   LAST ACCESS AT 14:57:45 ON FRIDAY, JUNE 27
+14.57.49 JOB73611  $HASP373 CLLPA160 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+14.57.49 JOB73611  IEF403I CLLPA160 - STARTED - TIME=14.57.49
+14.57.50 JOB73611  -                                                --TIMINGS (M
+14.57.50 JOB73611  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+14.57.50 JOB73611  -CLLPA160 STEP1                00     93     23    .00    .00
+14.57.50 JOB73615  $HASP100 CLLPA162 ON INTRDR      A172212               FROM J
+14.57.50 JOB73615  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+14.57.50 JOB73611  -CLLPA160 SOLTA    AV          00     27     17    .00    .00
+14.57.50 JOB73611  IEF404I CLLPA160 - ENDED - TIME=14.57.50
+14.57.50 JOB73611  -CLLPA160 ENDED.  NAME-D81645               TOTAL TCB CPU TIM
+14.57.50 JOB73611  $HASP395 CLLPA160 ENDED
+------ JES2 JOB STATISTICS ------
+  27 JUN 2014 JOB EXECUTION DATE
+           39 CARDS READ
+          360 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           33 SYSOUT SPOOL KBYTES
+         0.01 MINUTES EXECUTION TIME
+
+        1 //CLLPA160 JOB 'CLLP,4120,PR32','D81645',MSGCLASS=Z,REGION=4M,
+          //       SCHENV=DB2
+        2 //JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR
+        3 //         DD DSN=AV.BIBGERAL,DISP=SHR
+        4 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        5 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+          //*
+        6 //STEP1    EXEC PGM=RDAB0001
+          //*
+          //* ***    OBTER CPESSOA
+          //*
+        7 //ARQPARVV DD DSN=AD.BRQ.A006.CPFCNPJ.CLAS(0),
+          //       DISP=SHR
+        8 //PENDIRES DD DSN=AD.BRQ.A006.ARQIRES.IRESV001(0),
+          //       DISP=SHR
+        9 //SAICOMCR DD DSN=AD.BRQ.A006.SAICOMCR.IRES(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,02),
+          //       SPACE=(TRK,(001670,0334),RLSE),
+          //       DCB=(AC.A,LRECL=150,RECFM=FB)
+       10 //SAISEMCR DD DSN=AD.BRQ.A006.SAISEMCR.IRES(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000410,0082),RLSE),
+          //       DCB=(AD.A,LRECL=150,RECFM=FB)
+       11 //RELENCVV DD SYSOUT=(W,,AM19),
+          //       DCB=(LRECL=0132,RECFM=FBA)
+       12 //RELTOTAL DD SYSOUT=(W,,AM19),
+          //       DCB=(LRECL=0081,RECFM=FBA)
+       13 //RELNENCO DD SYSOUT=(W,,AM19),
+          //       DCB=(LRECL=0132,RECFM=FBA)
+       14 //SYSOUT   DD SYSOUT=*
+       15 //SYSPRINT DD SYSOUT=*
+       16 //SYSUDUMP DD SYSOUT=Y
+          //*
+       17 //SOLTA    EXEC AV,
+          //       J=CLLP0162,
+          //       DS=AD.BRQ.DESAFICA.PROD
+       18 XXAV       PROC DS='AV.JCLFILE',J=,JOB=
+       19 XXAV       EXEC PGM=PLAN4100,PARM=&JOB
+          IEFC653I SUBSTITUTION JCL - PGM=PLAN4100,PARM=
+       20 XXSTEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+       21 XXSYSPRINT DD DUMMY
+       22 XXSYSUT1   DD DSN=&DS(&J),DISP=SHR
+          IEFC653I SUBSTITUTION JCL - DSN=AD.BRQ.DESAFICA.PROD(CLLP0162),DISP=SH
+       23 XXSYSUT2   DD SYSOUT=(A,INTRDR),DCB=(BLKSIZE=80,LRECL=80,RECFM=F)
+       24 XXSYSIN    DD DUMMY
+          //*
+
+ STMT NO. MESSAGE
+       17 IEFC001I PROCEDURE AV WAS EXPANDED USING SYSTEM LIBRARY SUOP.PRD.PROCL
+ICH70001I M67777   LAST ACCESS AT 14:57:45 ON FRIDAY, JUNE 27, 2014
+IEF236I ALLOC. FOR CLLPA160 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D5C2 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ARQPARVV
+IGD103I SMS ALLOCATED TO DDNAME PENDIRES
+IGD101I SMS ALLOCATED TO DDNAME (SAICOMCR)
+        DSN (AD.BRQ.A006.SAICOMCR.IRES.G0024V00          )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DD3
+IGD101I SMS ALLOCATED TO DDNAME (SAISEMCR)
+        DSN (AD.BRQ.A006.SAISEMCR.IRES.G0024V00          )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DFB
+IEF237I JES2 ALLOCATED TO RELENCVV
+IEF237I JES2 ALLOCATED TO RELTOTAL
+IEF237I JES2 ALLOCATED TO RELNENCO
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLPA160 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERTT                                  PASSED,    DDNAME=JOBLIB
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST1AL2.
+IGD104I AD.BRQ.A006.CPFCNPJ.CLAS.G0022V00            RETAINED,  DDNAME=ARQPARVV
+IGD104I AD.BRQ.A006.ARQIRES.IRESV001.G0023V00        RETAINED,  DDNAME=PENDIRES
+IGD103I SMS ALLOCATED TO DDNAME SYS00001
+IGD104I SYS14178.T145750.RA000.CLLPA160.R0146565     RETAINED,  DDNAME=SYS00001
+IGD107I AD.BRQ.A006.SAICOMCR.IRES.G0024V00           ROLLED IN, DDNAME=SAICOMCR
+IGD103I SMS ALLOCATED TO DDNAME SYS00002
+IGD104I SYS14178.T145750.RA000.CLLPA160.R0146566     RETAINED,  DDNAME=SYS00002
+IGD107I AD.BRQ.A006.SAISEMCR.IRES.G0024V00           ROLLED IN, DDNAME=SAISEMCR
+IEF285I   M67777.CLLPA160.JOB73611.D0000101.?          SYSOUT
+IEF285I   M67777.CLLPA160.JOB73611.D0000102.?          SYSOUT
+IEF285I   M67777.CLLPA160.JOB73611.D0000103.?          SYSOUT
+IEF285I   M67777.CLLPA160.JOB73611.D0000104.?          SYSOUT
+IEF285I   M67777.CLLPA160.JOB73611.D0000105.?          SYSOUT
+IEF285I   M67777.CLLPA160.JOB73611.D0000106.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 27-Jun-2014 02:57:49 PM
+Step  Num: 1              PGM  Name: RDAB0001     End:   27-Jun-2014 02:57:50 PM
+CPU (TCB): 00:00:00.04                            Storage below 16M:        472k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      6,340k
+Trans Act: 00:00:00.29                            Service Units:           1,498
+Tape Mnts: 0                                      Total EXCPs:                93
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB             25  23,200        D782 D ARQPARVV            2  27,900
+D0FE D PENDIRES            4  27,885        D6DB D SAICOMCR            1  27,900
+D0D2 D SAISEMCR            1  27,900
+
+Total DASD EXCPs:                 33        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014178.1457
+IEF032I STEP/STEP1   /STOP  2014178.1457
+        CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   472K  SYS:   400K  EXT:     6340K  SYS:    10028K
+IEF236I ALLOC. FOR CLLPA160 AV SOLTA
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D5C2 ALLOCATED TO
+IEF237I D805 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I DMY  ALLOCATED TO SYSPRINT
+IGD103I SMS ALLOCATED TO DDNAME SYSUT1
+IEF237I JES2 ALLOCATED TO SYSUT2
+IEF237I DMY  ALLOCATED TO SYSIN
+IEF142I CLLPA160 AV SOLTA - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IGD104I AD.BRQ.DESAFICA.PROD                         RETAINED,  DDNAME=SYSUT1
+IEF285I   M67777.CLLPA160.JOB73611.D0000107.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: AV             Cond Code: 0000         Start: 27-Jun-2014 02:57:50 PM
+Step  Num: 2              PGM  Name: PLAN4100     End:   27-Jun-2014 02:57:50 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:         64k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k
+Trans Act: 00:00:00.07                            Service Units:             342
+Tape Mnts: 0                                      Total EXCPs:                27
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D STEPLIB             1  23,476        D4DB D SYSUT1              5  32,720
+
+
+Total DASD EXCPs:                  6        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/AV      /START 2014178.1457
+IEF032I STEP/AV      /STOP  2014178.1457
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:    64K  SYS:   328K  EXT:        8K  SYS:    10840K
+IGD104I AV.BIBGERTT                                  RETAINED,  DDNAME=JOBLIB
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13A2A.
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST1AL2.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLPA160       System ID: AL2A        Submit: 27-Jun-2014 02:57:46 PM
+Job JESID: JOB73611       MVS level: SP7.1.3     Start:  27-Jun-2014 02:57:49 PM
+Job Class: E                                     End:    27-Jun-2014 02:57:50 PM
+CPU (TCB): 00:00:00.05                           Storage below 16M:         472k
+CPU (SRB): 00:00:00.00                           Storage above 16M:       6,340k
+Trans Act: 00:00:00.36                           Service Units:            1,840
+Tape Mnts: 0                                     Total EXCPs:                120
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer: D81645
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLPA160/START 2014178.1457
+IEF033I  JOB/CLLPA160/STOP  2014178.1457
+        CPU:     0 HR  00 MIN  00.05 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+
+******************** RDAB0001 ********************
+*                                                *
+*  TOTAL REG. LIDOS    - ARQPARVV :          27  *
+*  TOTAL REG. LIDOS    - PENDIRES :         150  *
+*  TOTAL REG. GRAVADOS - SAICOMCR :         128  *
+*  TOTAL REG. GRAVADOS - SAISEMCR :           6  *
+*                                                *
+******************** RDAB0001 ********************

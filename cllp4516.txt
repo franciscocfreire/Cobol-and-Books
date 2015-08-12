@@ -1,0 +1,102 @@
+//CLLP4516 JOB 'CLLP,4120,PR32','B706725',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP0    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    ***********************************************************  
+//* ***    DESCARREGA BACKUP DO ARQUIVO MOVNROCL                        
+//* ***    ***********************************************************  
+//*                                                                     
+//ENT00001 DD DSN=MX.CLLP.S073105.PRV.MOVNROCL.ACUM.C(0),               
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=MX.CLLP.PRV.MOVNROCL.ACUM.CL.ANT(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    COMENTARIO                                                   
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.MOVNROCL.CLLP4515(0),                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.MOVNROCL.CLASS.CLLP4515(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(005190,1038),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(7,5,A,52,7,A,135,3,A,138,7,A),FORMAT=BI                   
+ SUM FIELDS=(NONE)                                                      
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=CLLP9258                                            
+//*                                                                     
+//* ***    EXTRAI ARQUIVO QUE SERA LIDO NA TAB/NET (MX.)                
+//* ***    CLLP1190 QUE TEM START LIMITE AS 20:00 HS.                   
+//*                                                                     
+//MOVIMENT DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQGBEL  DD DSN=MX.CLLP.MOVNROCL.GBEL.CLLP4515(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001790,0358),RLSE),                                
+//       DCB=(MX.A,LRECL=0200,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    ORDENA POR AGENCIA/CONTA/CARTEIRA/CONTRATO                   
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.ARQGBEL,                                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.MOVNROCL.GBEL.CLASS.CL4515(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001790,0358),RLSE),                                
+//       DCB=(MX.A,LRECL=0200,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(11,5,A,16,8,A,24,3,A,27,17,A),FORMAT=BI                   
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=CLLP9267                                            
+//*                                                                     
+//* ***    EXTRAI ARQUIVO QUE SERA LIDO NA TAB/NET (MX.)                
+//* ***    CLLP1190 QUE TEM START LIMITE AS 20:00 HS.                   
+//*                                                                     
+//ARQGBEL  DD DSN=*.STEP2A.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQACUM  DD DSN=*.STEP0.SAI00001,                                     
+//       DISP=SHR                                                       
+//ARQGBES  DD DSN=MX.CLLP.PRV.J0072S01.MOVNROCL.C4515(+1),              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001790,0358),RLSE),                                
+//       DCB=(MX.A,LRECL=0200,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    RECRIA ARQUIVO ATRAVES DE MERGE ORDENADO                     
+//* ***    POR AGENCIA/CONTA/CARTEIRA/CONTRATO                          
+//*                                                                     
+//SORTIN01 DD DSN=*.STEP0.SAI00001,                                     
+//       DISP=SHR                                                       
+//SORTIN02 DD DSN=*.STEP2A.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.PRV.MOVNROCL.ACUM.CLLP4515(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,10),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0200,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ MERGE FIELDS=(11,5,A,16,8,A,24,3,A,27,17,A),FORMAT=BI                  
+ END                                                                    
+//*                                                                     

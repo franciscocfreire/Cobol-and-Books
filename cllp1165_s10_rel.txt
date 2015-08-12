@@ -1,0 +1,9 @@
+
+REES5130               SISTEMA DE REMESSA PARA ESCRITORIO              PAG.   1
+04/03/2015                   RELATORIO DE TOTALIZACAO                  13:35:48
+                            - TOTAIS - DADOS FAMILIARES
+                   LIDOS DO CADASTRO DE CLIENTES .............            1
+                   LIDOS DO CADASTRO DE CONTA CORRENTE .......            4
+                   GRAVADOS NO CADASTRO DE CLIENTES ATUAL ....            1
+                   CLIENTES COM DADOS FAMILIARES .............            1
+                   CLIENTES SEM DADOS FAMILIARES .............            0

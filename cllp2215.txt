@@ -1,0 +1,80 @@
+//CLLP2215 JOB 'CLLP,4120,PR32','I12808',MSGCLASS=Z,REGION=4M,          
+//       SCHENV=IMS                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHD95                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP0    EXEC PGM=ATSOAC01,                                           
+//       PARM='00-IKJEFT01',                                            
+//       DYNAMNBR=20                                                    
+//*                                                                     
+//* ***    DESCARREGA A TABELA DB2PRD.TPO_BAIXA_CONTR   (LPCLB051)      
+//* ***    EM ARQUIVO SEQUENCIAL.                                       
+//*                                                                     
+//SYSTSPRT DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//LISTING  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSPUNCH DD DSN=MX.DBAS.CLLPB051(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A)                                                     
+//SYSREC00 DD DSN=MX.CLLP.TABELA51(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,RECFM=FB,LRECL=078)                                  
+//SYSTSIN  DD DSN=DB2M1.R2.SYSIN(DSNTIAUL),                             
+//       DISP=SHR                                                       
+//SYSIN    DD *                                                         
+DB2PRD.TPO_BAIXA_CONTR                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//*                                                                     
+//STEP1    EXEC PGM=CLLP6550                                            
+//*                                                                     
+//* ***    CRIA CADASTRO DE EXCLUIDOS 3 ANOS.                           
+//*                                                                     
+//BAIXTOT  DD DSN=MX.CLLP.CADBAIXA.TOTAL(0),                            
+//       DISP=(OLD,DELETE,KEEP)                                         
+//BAIXTGNA DD DSN=MX.CLLP.BAIXEXCL(0),                                  
+//       DISP=SHR                                                       
+//TABBAIX  DD DSN=*.STEP0.SYSREC00,                                     
+//       DISP=OLD                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.COPIA(0),                            
+//       DISP=SHR                                                       
+//CADBAIXA DD DSN=MX.CLLP.CADBAIXA.TOTAL2(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//BAIXEXCL DD DSN=MX.CLLP.BAIX2215(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0314,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#HD95,                                       
+//       DCB=(LRECL=080,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

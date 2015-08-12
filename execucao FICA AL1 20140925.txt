@@ -1,0 +1,216 @@
+* CLLP0155 * PLANEJ. E CONTROLE DA PRODUCAO      *
+**************************************************
+* JOB=CLLP0155  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=001/003  REGS.=00000118803 HORA=08.55.44 *
+* BLKSIZE=27900     LRECL=00150     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TA.RDAB.CLLP.CPFCNPJ                           *
+* VOLSER=SA1S06                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* AC.CLLP.CPFCNPJ.CLAS.G0001V00                  *
+* VOLSER=SA11R3                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0155  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=002/003  REGS.=00000000019 HORA=08.55.44 *
+* BLKSIZE=27900     LRECL=00150     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TA.RDAB.CLLP.AGCONTA                           *
+* VOLSER=SA1S12                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* AC.CLLP.AGCONTA.G0001V00                       *
+* VOLSER=SA1055                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0155  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=003/003  REGS.=00000006052 HORA=08.55.44 *
+* BLKSIZE=27900     LRECL=00150     RECFM=FB     *
+*------------------------------------------------*
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TA.RDAB.CLLP.CPFEXIST                          *
+* VOLSER=SA1S12                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* AC.CLLP.CPFEXIST.RDAB0105.G0001V00             *
+* VOLSER=SA1073                                  *
+**************************************************
+
+
+CLLP0161
+
+************************ RDAB0030 ***********************
+**                                                     **
+**    REGISTROS LIDOS     - ARQPARVV:        118.803   **
+**                                                     **
+**    REGISTROS LIDOS     - PENDIRES:     61.823.873   **
+**                                                     **
+**    REGISTROS GRAVADOS  - ARQDAPES:        105.541   **
+**                                                     **
+************************ RDAB0030 ***********************
+
+cllp0160
+
+******************** RDAB0001 ********************
+*                                                *
+*  TOTAL REG. LIDOS    - ARQPARVV :     118.803  *
+*  TOTAL REG. LIDOS    - PENDIRES : 175.075.049  *
+*  TOTAL REG. GRAVADOS - SAICOMCR :     193.540  *
+*  TOTAL REG. GRAVADOS - SAISEMCR :       2.377  *
+*                                                *
+******************** RDAB0001 ********************
+
+******************** RDAB0010 ******************** 
+*                                                * 
+*  TOTAL REG. LIDOS    - ARQPARVV :       2.396  * 
+*  TOTAL REG. LIDOS    - PENDFICA : 211.441.315  * 
+*  TOTAL REG. GRAVADOS - ARQPEFIS :           9  * 
+*  TOTAL REG. GRAVADOS - ARQPEJUR :          11  * 
+*  TOTAL REG. GRAVADOS - ARQDAPES :       2.396  * 
+*                                                * 
+******************** RDAB0010 ******************** 
+
+
+cllp0162
+
+******************** RDAB0007 ******************** 
+*                                                * 
+*  TOTAL REG. LIDOS    - ARQPARVV :     193.540  * 
+*  TOTAL REG. GRAVADOS - ARQPEFIS :      59.895  * 
+*  TOTAL REG. GRAVADOS - ARQPEJUR :       2.409  * 
+*  TOTAL REG. GRAVADOS - ARQDAPES :     116.426  * 
+*                                                * 
+******************** RDAB0007 ******************** 
+                                             
+RECORDS - IN: 2409, OUT: 2409
+      
+
+cllp0164
+
+******************** RDAB0020 ********************
+*                                                *
+*  TOTAL REG. LIDOS    - ARQPARVV :       2.420  *
+*  TOTAL REG. LIDOS    - PENDFICA :  36.376.274  *
+*  TOTAL REG. GRAVADOS - ARQDAPES :       2.418  *
+*                                                *
+******************** RDAB0020 ********************
+
+
+cllp0165
+
+***************** RDAB0028 ***************** 
+*                                          * 
+*  REG. LIDOS    EM ARQPARVV:       4.231  * 
+*  REG. LIDOS    EM ARQUIRES: 175.055.486  * 
+*  REG. GRAVADOS EM ARQDAPES:       4.231  * 
+*  REG. GRAVADOS EM RELNENCO:           0  * 
+*                                          * 
+***************** RDAB0028 ***************** 
+
+cllp0166
+
+IN MAIN STORAGE SORT         
+INSERT 0, DELETE 13          
+RECORDS - IN: 2562, OUT: 2549
+
+
+cllp0230
+
+****************** RDAB0230 ******************   
+*                                            *   
+* REGISTROS LIDOS    PESSFISI..:     110.282 *   
+* REGISTROS LIDOS    PESSJURI..:       6.027 *   
+* REGISTROS LIDOS    DOCEXIST..:       6.052 *   
+* REGISTROS GRAVADOS PFINEXIS..:     105.098 *   
+* REGISTROS GRAVADOS PJINEXIS..:       5.199 *   
+*                                            *   
+****************** RDAB0230 ******************   
+
+cllp0180
+
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=001/006  REGS.=00000005199 HORA=09.18.43 *
+* BLKSIZE=27945     LRECL=00081     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.PESSJURI.CARGFICA.G0001V00             *
+* VOLSER=SA1027                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.PESSJURI.CARGFICA                 *
+* VOLSER=SM1S21                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=002/006  REGS.=00000105098 HORA=09.18.44 *
+* BLKSIZE=27810     LRECL=00270     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.PESSFISI.CARGFICA.G0001V00             *
+* VOLSER=SA12LE                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.PESSFISI.CARGFICA                 *
+* VOLSER=SM1S16                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=003/006  REGS.=00000118822 HORA=09.18.44 *
+* BLKSIZE=27930     LRECL=00098     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.CTACORR.BASEFICA.G0001V00              *
+* VOLSER=SA1058                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.CTACORR.BASEFICA                  *
+* VOLSER=SM1S13                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=004/006  REGS.=00000062279 HORA=09.18.45 *
+* BLKSIZE=27886     LRECL=00146     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.ARQLOGRD.BASEFICA.G0001V00             *
+* VOLSER=SA11A5                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQLOGRD.BASEFICA                 *
+* VOLSER=SM1S15                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=005/006  REGS.=00000051338 HORA=09.18.45 *
+* BLKSIZE=27984     LRECL=00044     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.ARQFONES.BASEFICA.G0001V00             *
+* VOLSER=SA1032                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQFONES.BASEFICA                 *
+* VOLSER=SM1S18                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0180  STEP=STEP1     DATA=25/09/2014   *
+* LABEL=006/006  REGS.=00000002549 HORA=09.18.45 *
+* BLKSIZE=27974     LRECL=00197     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* AC.CLLP.ARQSOCIO.BASEFICA.G0001V00             *
+* VOLSER=SA11U8                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* TM.CLLP.RDAB.ARQSOCIO.BASEFICA                 *
+* VOLSER=SM1S09                                  *
+
+
+
+
+

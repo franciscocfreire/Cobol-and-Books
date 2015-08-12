@@ -1,0 +1,62 @@
+//CLLP2312 JOB 'CLLP,4120,PR32','D030591',MSGCLASS=Z,REGION=8192K       
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=POOL0002                                            
+//*                                                                     
+//* ***     COMPRIME ARQUIVO CADASTRO DE CLLP, SOMENTE COM REGISTROS    
+//* ***     ATIVOS.                                                     
+//*                                                                     
+//ENTRA    DD DSN=MX.CLLP.FITAPEND.CLLP2310(0),                         
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI      DD DSN=MX.CLLP.CADATIVO.CLLP2310(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=LPCL5710                                            
+//*                                                                     
+//* ***     AGRUPA CADASTRO.                                            
+//*                                                                     
+//CADLPCL  DD DSN=*.STEP1.SAI,                                          
+//       DISP=OLD                                                       
+//CADAGR   DD DSN=MX.CLLP.CADAGR.CLLP2310(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,12),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=LPCL5860                                            
+//*                                                                     
+//* ***    INCLUSAO DO CAMPO VALOR TOTAL DO CONTRATO.                   
+//*                                                                     
+//CADANGR  DD DSN=MX.CLLP.CADACALC.C2310NEW(0),                         
+//       DISP=SHR                                                       
+//CADAGR   DD DSN=*.STEP2.CADAGR,                                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//CADASTRO DD DSN=MX.CLLP.CADTOTAL.CLLP2310(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//RELATO   DD DUMMY,                                                    
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00084))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00084))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00084))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00084))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00084))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00084))                                            
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

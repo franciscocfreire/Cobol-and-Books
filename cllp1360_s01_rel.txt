@@ -1,0 +1,12 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+               BATIMENTO DO ARQUIVO ARQENTRA COM ARQUIVO TRAG  C/CORRESPONDENTES                        PAG.:         1                                         
+                                                                                                             05/03/2015                                         
+                                                                                                                                                                
+           CONTA  CARTEIRA            CONTRATO    AG. ANTERIOR   CTA. ANTERIOR      DATA DA TRASFERENCIA                                                        
+                                         TOTALIZACAO                                                                                                            
+                            -------------------------------------------------------                                                                             
+                            REGISTROS LIDOS NO ARQENTRA ...........:         710                                                                                
+                            REGISTROS LIDOS NO ARQTRAG ...........:          277                                                                                
+                            REGISTROS C/ CORRESPONDENTES...........:           0                                                                                
+                            REGISTROS GRAVADOS.....................:         710                                                                                

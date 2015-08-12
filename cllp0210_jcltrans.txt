@@ -1,0 +1,135 @@
+// REP CLLP0210                                                         
+//CLLP0210 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=IMS                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTDX79                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTJH65                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE MESTRES DE ESTATISTICA                 
+//* ***    POR ORDEM DE CARTEIRA DE ORIGEM.                             
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRP.ARQESTAT(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CLASESTA(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0080,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(5,3,CH,A)                                                 
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=CLLP6010                                            
+//*                                                                     
+//* ***    ATUALIZA CAMPO DE NATUREZA DE OPERACAO.                      
+//*                                                                     
+//ARQESTAT DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADANT   DD DSN=MX.CLLP.CADALPCL(0),                                  
+//       DISP=SHR                                                       
+//CADRED   DD DUMMY,                                                    
+//       DCB=(LRECL=0050,RECFM=FB)                                      
+//CADATU   DD DSN=MX.CLLP.CADATU.CLLP0210(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,020000),RLSE),                              
+//*DCB   NOCHECK                                                        
+//       DCB=(MX.A,BLKSIZE=32064,LRECL=0668,RECFM=FB),                  
+//       DATACLAS=PRODX37                                               
+//CADCPF   DD DSN=MX.CLLP.CADCPF.CLLP0210(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,020000),RLSE),                              
+//       DCB=(MX.A,LRECL=0060,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#DX79,                                       
+//       DCB=(LRECL=0080,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,20)'                                     
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO MESTRES DE PENDENCIAS 2 POR               
+//* ***               - EMPRESA                                         
+//* ***               - TIPO DE PENDENCIA                               
+//* ***               - CARTEIRA                                        
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PENDCLAS.CLLP8910(0),                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CADAPEND.CLLP8910(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(003000,0800),RLSE),                                
+//       DCB=(MX.A,LRECL=0168,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,3,PD,A,4,3,PD,A,7,3,CH,A,168,1,CH,A)                    
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=CLLP7650                                            
+//*                                                                     
+//* ***    ATUALIZA CAMPOS REFERENTES A RAZAO E CONTA DE DEBITO         
+//* ***    DE ENTRADAS EM CL E RENDAS A APROPRIAR, NO  CADASTRO         
+//* ***    OBS.- AS PENDENCIAS EM CL DE CONCORDATARIOS TERAO OS         
+//* ***          CAMPOS DE RAZAO E CONTA ATUALIZADOS COM BASE NO        
+//* ***          NO ARQUIVO DD=ARQPEND2  (MESTRE DE PENDENCIAS 2)       
+//* ***                                                                 
+//* ***    LE E GRAVA ARQUIVO COMPRIMIDO.                               
+//*                                                                     
+//CADALPCL DD DSN=*.STEP2.CADATU,                                       
+//       DISP=OLD                                                       
+//ARQPEND  DD DSN=MX.CLLP.PRV.CADAPEND(0),                              
+//       DISP=SHR                                                       
+//ARQPEND2 DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADATU   DD DSN=MX.CLLP.CADALPCL(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(090000,0030000),RLSE),                             
+//*DCB   NOCHECK                                                        
+//       DCB=(MX.A,BLKSIZE=32064,LRECL=0668,RECFM=FB),                  
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#JH65,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC PGM=CLLP0175                                            
+//*                                                                     
+//* ***    BALANCE LINE ENTRE ARQUIVO EXPANDIDO E NORMAL                
+//* ***    (CHAVE: EMPRESA, AGENCIA, NUMCL, TP REG (D), DT.PGTO (D))    
+//*                                                                     
+//ARQENT01 DD DSN=*.STEP4.CADATU,                                       
+//       DISP=SHR                                                       
+//ARQENT02 DD DSN=MX.CLLP.CADALPCL.LEI(0),                              
+//       DISP=SHR                                                       
+//ARQEXP01 DD DSN=MX.CLLP.CADALPCL.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0768,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

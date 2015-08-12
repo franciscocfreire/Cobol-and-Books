@@ -1,0 +1,1736 @@
+      *------------------------*                                        
+       IDENTIFICATION DIVISION.                                         
+      *------------------------*                                        
+       PROGRAM-ID.   CLLP9163.                                          
+      **--------------------------------------------------------------* 
+      *                        C P M    SISTEMAS                      * 
+      *---------------------------------------------------------------* 
+      *  PROGRAMADOR : HOMERO - CPM                                   * 
+      *  DATA        : SETEMBRO / 1999                                * 
+      *  ANALISTA    : HOMERO - CPM                                   * 
+      *                                                               * 
+      *  OBJETIVO    : CRIAR FITA 4 - CLLP   REF. BAIXAS BX COMANDADA * 
+      *---------------------------------------------------------------* 
+      *                    ARQUIVOS                                   * 
+      *                                                               * 
+      *  INPUT  :      ARQBASF4  CADAPEND  ARQDATAS                   * 
+      *  OUTPUT :      FIT4CLLP  RELINCON                             * 
+      *---------------------------------------------------------------* 
+      *---------------------*                                           
+       ENVIRONMENT DIVISION.                                            
+      *---------------------*                                           
+       CONFIGURATION SECTION.                                           
+       SPECIAL-NAMES.                                                   
+           DECIMAL-POINT IS COMMA.                                      
+                                                                        
+       INPUT-OUTPUT SECTION.                                            
+       FILE-CONTROL.                                                    
+           SELECT  ARQBASF4 ASSIGN TO  UT-S-ARQBASF4.                   
+           SELECT  CADAPEND ASSIGN TO  UT-S-CADAPEND.                   
+           SELECT  ARQDATAS ASSIGN TO  UT-S-ARQDATAS.                   
+           SELECT  FIT4CLLP ASSIGN TO  UT-S-FIT4CLLP.                   
+           SELECT  ARQSORT  ASSIGN TO  UT-S-ARQSORT.                    
+           SELECT  RELINCON ASSIGN TO  UT-S-RELINCON.                   
+                                                                        
+      *--------------*                                                  
+       DATA DIVISION.                                                   
+      *--------------*                                                  
+       FILE SECTION.                                                    
+                                                                        
+      *---------------------------------------------------------------* 
+      *   INPUT :   ARQUIVO  ARQBASF4                   LRECL= 0083     
+      *---------------------------------------------------------------* 
+       FD  ARQBASF4                                                     
+           LABEL RECORD IS STANDARD                                     
+           RECORDING F                                                  
+           BLOCK 0.                                                     
+                                                                        
+******** -INC I#REESFC                                                  
+-INC I#CLLPK3                                                           
+                                                                        
+      *---------------------------------------------------------------* 
+      *   INPUT :   ARQUIVO  CADAPEND                   LRECL= 0168     
+      *---------------------------------------------------------------* 
+       FD  CADAPEND                                                     
+           LABEL RECORD IS STANDARD                                     
+           RECORDING F                                                  
+           BLOCK 0.                                                     
+                                                                        
+       01  REG-CADAPEND                PIC X(168).                      
+                                                                        
+      *---------------------------------------------------------------* 
+      *   INPUT :   ARQUIVO  ARQDATAS                   LRECL= 047      
+      *---------------------------------------------------------------* 
+       FD  ARQDATAS                                                     
+           LABEL RECORD IS STANDARD                                     
+           RECORDING F                                                  
+           BLOCK 0.                                                     
+                                                                        
+-INC I#REESAI                                                           
+                                                                        
+      *---------------------------------------------------------------* 
+      *  OUTPUT :   ARQUIVO  FIT4CLLP                   LRECL= 100      
+      *---------------------------------------------------------------* 
+       FD  FIT4CLLP                                                     
+           LABEL RECORD IS STANDARD                                     
+           RECORDING F                                                  
+           BLOCK 0.                                                     
+                                                                        
+       01  REG-FIT4CLLP                PIC X(100).                      
+                                                                        
+      *---------------------------------------------------------------* 
+      *  ARQUIVO DE SORT                                LRECL= 074      
+      *---------------------------------------------------------------* 
+       SD  ARQSORT.                                                     
+                                                                        
+       01  REG-ARQSORT.                                                 
+           03  SRT-AGENCIA             PIC 9(05).                       
+           03  SRT-EMPRESA             PIC 9(05).                       
+           03  SRT-NUMERO-CLLP         PIC 9(15).                       
+           03  SRT-DIGITO-CLLP         PIC X.                           
+           03  SRT-CONTA               PIC 9(07).                       
+           03  SRT-CARTEIRA            PIC X(03).                       
+           03  SRT-VENCIMENTO          PIC 9(08).                       
+           03  SRT-VALOR               PIC 9(13)V99.                    
+           03  SRT-ID                  PIC X(02).                       
+           03  SRT-RAZAO               PIC 9(05)  COMP-3.               
+           03  SRT-CONTAPEND           PIC 9(07)  COMP-3.               
+           03  SRT-PRESTACAO-CONTA     PIC 9(06).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      *  OUTPUT :   ARQUIVO  RELINCON                   LRECL= 133      
+      *---------------------------------------------------------------* 
+       FD  RELINCON                                                     
+           LABEL RECORD IS OMITTED                                      
+           RECORDING F                                                  
+           BLOCK 0.                                                     
+                                                                        
+       01  REG-RELINCON                PIC X(133).                      
+                                                                        
+      *------------------------*                                        
+       WORKING-STORAGE SECTION.                                         
+      *------------------------*                                        
+                                                                        
+       77  FILLER                      PIC X(030) VALUE                 
+           '*** INICIO DA WORKING *** '.                                
+                                                                        
+       77  WRK-FIM-ARQBASF4            PIC X(01)     VALUE SPACES.      
+       77  WRK-FIM-CADAPEND            PIC X(01)     VALUE SPACES.      
+       77  WRK-FIM-ARQSORT             PIC X(01)     VALUE SPACES.      
+       77  WRK-FIM-ARQDATAS            PIC X(01)     VALUE SPACES.      
+       77  WRK-ACHOU                   PIC X(01)     VALUE 'N'.         
+       77  ACU-LINHAS                  PIC 9(02)     VALUE 60.          
+       77  ACU-PAGINA                  PIC 9(05)     VALUE ZEROS.       
+       77  WRK-AGENCIA-ANT             PIC 9(05)     VALUE ZEROS.       
+       77  WRK-TAMANHO                 PIC 9(02)     VALUE 4.           
+       77  ACU-CLLP-CL-7000            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CL-7351            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CL-7881            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CL-7830            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CL-7883            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-LP-7000            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-LP-7351            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-LP-7881            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-LP-7830            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-LP-7883            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CL-4120            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-LP-4120            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CL-4025            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-LP-4025            PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CLLP-5150          PIC 9(13)V99  VALUE ZEROS.       
+       77  ACU-CLLP-CLLP-5240          PIC 9(13)V99  VALUE ZEROS.       
+       77  WRK-DATA-JULIANA            PIC 9(07)  COMP-3.               
+                                                                        
+       01  WRK-DOCTO                   PIC 9(07).                       
+       01  FILLER     REDEFINES    WRK-DOCTO.                           
+           03  WRK-DOCTO-PARTE1        PIC 9(03).                       
+           03  WRK-DOCTO-PARTE2        PIC 9(04).                       
+                                                                        
+       01  WRK-CHAVEA-CAD.                                              
+           03  WRK-CHAVEB-CAD.                                          
+               05  WRK-EMPRESA-CAD     PIC 9(05).                       
+               05  WRK-TIPO-CAD        PIC 9(05).                       
+           03  WRK-CARTEIRA-CAD        PIC X(03).                       
+                                                                        
+       01  WRK-CHAVEA-FTC.                                              
+           03  WRK-CHAVEB-FTC.                                          
+               05  WRK-EMPRESA-FTC     PIC 9(05).                       
+               05  WRK-TIPO-FTC        PIC 9(05).                       
+           03  WRK-CARTEIRA-FTC        PIC X(03).                       
+                                                                        
+       01  WRK-RAZAO4                  PIC 9(05).                       
+       01  FILLER  REDEFINES  WRK-RAZAO4.                               
+           03  WRK-GRUPO               PIC 9(02).                       
+           03  WRK-SUBGP               PIC 9(02).                       
+           03  FILLER                  PIC X(01).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      *          AREA PARA TRABALHO COM DATAS                           
+      *---------------------------------------------------------------* 
+       01  WK-DATA-FITA4                PIC  9(008)  VALUE ZEROES.      
+                                                                        
+       01  WK-DATA-INV.                                                 
+           03  WK-SEC-INV               PIC 9(02).                      
+           03  WK-ANO-INV               PIC 9(02).                      
+           03  WK-MES-INV               PIC 9(02).                      
+           03  WK-DIA-INV               PIC 9(02).                      
+       01  WK-DATA-INV-R REDEFINES WK-DATA-INV PIC 9(08).               
+                                                                        
+       01  WK-MENSAGEM                  PIC  X(050)  VALUE SPACES.      
+       01  DATA-HORA.                                                   
+           03  DT-JULIANA              PIC 9(05)  COMP-3.               
+           03  DT-AAMMDD               PIC 9(07)  COMP-3.               
+           03  DT-AAAAMMDD             PIC 9(09)  COMP-3.               
+           03  TI-HHMMSS               PIC 9(07)  COMP-3.               
+           03  TI-HHMMSSMMMMMM         PIC 9(13)  COMP-3.               
+           03  TIMESTAMP               PIC X(20).                       
+                                                                        
+       01  WRK-DATA-SIST.                                               
+           03  WRK-ANO-SIST            PIC 9(04).                       
+           03  WRK-MES-SIST            PIC 9(02).                       
+           03  WRK-DIA-SIST            PIC 9(02).                       
+       01  WRK-DATA-SIST-R REDEFINES WRK-DATA-SIST PIC 9(08).           
+                                                                        
+       01  WRK-DATA-EDIT.                                               
+           03  WRK-DIA-EDIT            PIC 9(02).                       
+           03  FILLER                  PIC X(01)  VALUE '/'.            
+           03  WRK-MMAA-EDIT.                                           
+               05  WRK-MES-EDIT        PIC 9(02).                       
+               05  FILLER              PIC X(01)  VALUE '/'.            
+               05  WRK-ANOINT-EDIT.                                     
+                   07  WRK-ANO-EDIT    PIC 9(04).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      *        DEFINICAO DE AREA AUXILIAR PARA GRAVACAO DE ARQSORT      
+      *---------------------------------------------------------------* 
+       01  AUX-ARQSORT.                                                 
+           03  AUX-AGENCIA             PIC 9(05).                       
+           03  AUX-EMPRESA             PIC 9(05).                       
+           03  AUX-NUMERO-CLLP         PIC 9(15).                       
+           03  AUX-DIGITO-CLLP         PIC X.                           
+           03  AUX-CONTA               PIC 9(07).                       
+           03  AUX-CARTEIRA            PIC X(03).                       
+           03  AUX-VENCIMENTO          PIC 9(08).                       
+           03  AUX-VALOR               PIC 9(13)V99.                    
+           03  AUX-VALOR-R  REDEFINES  AUX-VALOR    PIC 9(15).          
+           03  AUX-CLLP                PIC X(02).                       
+           03  AUX-RAZAO               PIC 9(05)  COMP-3.               
+           03  AUX-CONTAPEND           PIC 9(07)  COMP-3.               
+           03  AUX-PRESTACAO-CONTA     PIC 9(06).                       
+           03  AUX-ADVO-AG             PIC 9(05).                       
+           03  AUX-ADVO-CCORR          PIC 9(07).                       
+                                                                        
+      *---------------------------------------------------------------* 
+      *        DEFINICAO DE AREA AUXILIAR PARA O ARQUIVO CADAPEND       
+      *---------------------------------------------------------------* 
+       01  WRK-CADAPEND.                                                
+FMP        03  PENDEMP                 PIC 9(05)  COMP-3.               
+FMP        03  PENDTP                  PIC 9(05)  COMP-3.               
+FMP        03  PENDCART                PIC X(03).                       
+FMP        03  PENDSIG                 PIC X(04).                       
+FMP        03  FILLER                  PIC X(31).                       
+FMP        03  PENDRZ1                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT1                 PIC 9(07)  COMP-3.               
+FMP        03  PENDRZ2                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT2                 PIC 9(07)  COMP-3.               
+FMP        03  PCONTAB                 PIC X.                           
+FMP        03  PRESUMOE                PIC 9(05)  COMP-3.               
+FMP        03  PRESTRI                 PIC X(02).                       
+FMP        03  PENDRZ3                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT3                 PIC 9(07)  COMP-3.               
+FMP        03  PENDRZ4                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT4                 PIC 9(07)  COMP-3.               
+FMP        03  PENDRZ5                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT5                 PIC 9(07)  COMP-3.               
+FMP        03  PENDRZ6                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT6                 PIC 9(07)  COMP-3.               
+FMP        03  PENDRZ7                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT7                 PIC 9(07)  COMP-3.               
+FMP        03  PENDRZ8                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT8                 PIC 9(07)  COMP-3.               
+FMP        03  PENDRZ9                 PIC 9(05)  COMP-3.               
+FMP        03  PENDCT9                 PIC 9(07)  COMP-3.               
+FMP        03  PRESUMOB                PIC 9(05)  COMP-3.               
+FMP        03  FILLER                  PIC X(51).                       
+FMP        03  PENDPREL                PIC X.                           
+                                                                        
+      *---------------------------------------------------------------* 
+      *        AREAS UTILIZADAS PARA SUMARIZACAO P/ AGNC E CONTA      * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  WRK-ABEND                   PIC S9(04) COMP  VALUE +1111.    
+                                                                        
+       01  WRK-INDICES.                                                 
+           03  WRK-IND                 PIC 9(05)  COMP-3 VALUE ZEROS.   
+                                                                        
+       01  TABELA-FITA4-SUMARIZADA.                                     
+           03  TAB-AGENCIA             OCCURS          1000 TIMES.      
+               05  WRK-AGENC-CONT.                                      
+                   07  WRK-AGENCIA     PIC 9(05).                       
+                   07  WRK-CONTA       PIC 9(07).                       
+                   07  WRK-PRESTACAO   PIC 9(06).                       
+               05  WRK-EMPRESA         PIC 9(05).                       
+               05  WRK-ID              PIC X(02).                       
+               05  WRK-VALOR           PIC 9(15)V9(02)  COMP-3.         
+                                                                        
+       01  WRK-AGENC-CONT-SORT.                                         
+           03  WRK-AGENCIA-SORT        PIC 9(05)     VALUE ZEROS.       
+           03  WRK-CONTA-SORT          PIC 9(07)     VALUE ZEROS.       
+           03  WRK-PREST-CONTA-SORT    PIC 9(06)     VALUE ZEROS.       
+                                                                        
+      *---------------------------------------------------------------* 
+      *        DEFINICAO DE AREA AUXILIAR PARA O ARQUIVO FITA4          
+      *---------------------------------------------------------------* 
+-INC I#CCFCCG                                                           
+                                                                        
+      *---------------------------------------------------------------* 
+      *        DEFINICAO DAS AREAS DO RELINCON                          
+      *---------------------------------------------------------------* 
+                                                                        
+       01  CAB-1-INCON.                                                 
+           03  FILLER             PIC X(01)  VALUE '1'.                 
+           03  FILLER             PIC X(25)  VALUE  ' * CLLP9163 *'.    
+           03  FILLER             PIC X(45)  VALUE                      
+               'RELATORIO DE CARTEIRAS INCONSISTENTES '.                
+           03  FILLER             PIC X(06)  VALUE 'DATA: '.            
+           03  CB1-DATA-1-INCON.                                        
+               05  CB1-INC-DD     PIC 9(02).                            
+               05  FILLER         PIC X(01)  VALUE '/'.                 
+               05  CB1-INC-MM     PIC 9(02).                            
+               05  FILLER         PIC X(01)  VALUE '/'.                 
+               05  CB1-INC-AA     PIC 9(04).                            
+           03  FILLER             PIC X(03)  VALUE SPACES.              
+           03  CB1-PAG-INCON      PIC Z.ZZ9.                            
+                                                                        
+       01  CAB-2-INCON.                                                 
+           03  FILLER             PIC X(001) VALUE '-'.                 
+           03  FILLER             PIC X(050) VALUE                      
+           ' EMPRESA  NUMERO DO CLLP   AGENCIA  NUMERO C/C  '.          
+           03  FILLER             PIC X(052) VALUE                      
+           'CARTEIRA    TP PENDENCIA    MENSAGEM'.                      
+                                                                        
+       01  LINDET-INCON.                                                
+           03  FILLER             PIC X(01)  VALUE ' '.                 
+           03  FILLER             PIC X(02)  VALUE SPACES.              
+FMP        03  DET1-EMPRESA-INCON PIC 9(05).                            
+           03  FILLER             PIC X(04)  VALUE SPACES.              
+FMP        03  DET1-CLLP-INCON    PIC 9(12).                            
+           03  FILLER             PIC X(05)  VALUE SPACES.              
+FMP        03  DET1-AGENC-INCON   PIC 9(05).                            
+           03  FILLER             PIC X(06)  VALUE SPACES.              
+FMP        03  DET1-CONTA-INCON   PIC ZZZZZZ9.                          
+           03  FILLER             PIC X(07)  VALUE SPACES.              
+FMP        03  DET1-CART-INCON    PIC X(03).                            
+           03  FILLER             PIC X(11)  VALUE SPACES.              
+FMP        03  DET1-TP-PEND       PIC X(02).                            
+           03  FILLER             PIC X(09)  VALUE SPACES.              
+FMP        03  DET1-MENSAGEM      PIC X(42).                            
+                                                                        
+       01  BRANCOS.                                                     
+           03  FILLER             PIC X(133) VALUE SPACES.              
+                                                                        
+       01  WRK-FIM                     PIC X(30) VALUE                  
+           '*****  FIM  DA  WORKING  *****'.                            
+           EJECT                                                        
+      *-------------------*                                             
+       PROCEDURE DIVISION.                                              
+      *-------------------*                                             
+                                                                        
+           OPEN  INPUT   ARQBASF4  CADAPEND  ARQDATAS                   
+                 OUTPUT  FIT4CLLP  RELINCON.                            
+                                                                        
+           PERFORM 0100-PROCESSAMENTO-INICIAL.                          
+                                                                        
+           IF (WRK-FIM-ARQBASF4        EQUAL  HIGH-VALUES)  OR          
+              (WRK-FIM-CADAPEND        EQUAL  HIGH-VALUES)  OR          
+              (WRK-FIM-ARQDATAS        EQUAL  HIGH-VALUES)              
+              NEXT  SENTENCE                                            
+           ELSE                                                         
+              SORT  ARQSORT  ASCENDING  SRT-AGENCIA                     
+                                        SRT-EMPRESA                     
+                                        SRT-NUMERO-CLLP                 
+                    INPUT  PROCEDURE    0200-INICIO-SORT                
+                    OUTPUT PROCEDURE    0500-SAIDA-SORT.                
+                                                                        
+           PERFORM 3000-GRAVAR-SUMARIZ-AGE-CTA.                         
+                                                                        
+           CLOSE  ARQBASF4   CADAPEND    ARQDATAS                       
+                  FIT4CLLP   RELINCON.                                  
+                                                                        
+           GOBACK.                                                      
+      *---------------------------------------------------------------* 
+       0100-PROCESSAMENTO-INICIAL  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           CALL  'POOL7600'  USING  DATA-HORA.                          
+           MOVE  DT-AAAAMMDD  TO  WRK-DATA-SIST-R.                      
+                                                                        
+           MOVE WRK-DIA-SIST           TO     WRK-DIA-EDIT              
+                                              CB1-INC-DD.               
+           MOVE WRK-MES-SIST           TO     WRK-MES-EDIT              
+                                              CB1-INC-MM.               
+           MOVE WRK-ANO-SIST           TO     WRK-ANO-EDIT              
+                                              CB1-INC-AA.               
+                                                                        
+           PERFORM 2100-LER-ARQDATAS.                                   
+           IF WRK-FIM-ARQDATAS     NOT EQUAL  HIGH-VALUES               
+              MOVE DTMOVINV            TO     WK-DATA-FITA4             
+                                              WK-DATA-INV-R.            
+                                                                        
+           PERFORM 1900-LER-ARQBASF4.                                   
+                                                                        
+           PERFORM 2000-LER-CADAPEND.                                   
+                                                                        
+      * *** INICIALIZACAO DA TABELA UTILIZADA PARA SUMARIZACAO COM ZEROS
+                                                                        
+           INITIALIZE TABELA-FITA4-SUMARIZADA.                          
+                                                                        
+      *---------------------*                                           
+       0100-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0200-INICIO-SORT  SECTION.                                       
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 0210-ENTRADA-SORT                                    
+                           UNTIL   WRK-FIM-ARQBASF4 EQUAL  HIGH-VALUES. 
+                                                                        
+      *---------------------*                                           
+       0200-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0210-ENTRADA-SORT  SECTION.                                      
+      *---------------------------------------------------------------* 
+           MOVE FTC-EMPRESA            TO     WRK-EMPRESA-FTC.          
+           MOVE FTC-CART-ORIG          TO     WRK-CARTEIRA-FTC.         
+           MOVE FTC-TIPO-PEND          TO     WRK-TIPO-FTC.             
+                                                                        
+           MOVE PENDEMP                TO     WRK-EMPRESA-CAD.          
+           MOVE PENDCART               TO     WRK-CARTEIRA-CAD.         
+           MOVE PENDTP                 TO     WRK-TIPO-CAD.             
+                                                                        
+           IF  WRK-CHAVEA-FTC          LESS   WRK-CHAVEA-CAD OR         
+               WRK-FIM-CADAPEND        EQUAL  HIGH-VALUES               
+               PERFORM 0750-IMPRIMIR-RELINCON                           
+               IF WRK-ACHOU            EQUAL  'S'                       
+                  RELEASE REG-ARQSORT  FROM   AUX-ARQSORT               
+                  MOVE 'N'             TO     WRK-ACHOU                 
+                  PERFORM 1900-LER-ARQBASF4                             
+               ELSE                                                     
+                  IF WRK-CHAVEB-FTC    EQUAL  WRK-CHAVEB-CAD            
+                     PERFORM 0400-GRAVAR-SORT-ARQ                       
+                     PERFORM 1900-LER-ARQBASF4                          
+                  ELSE                                                  
+                     IF WRK-FIM-CADAPEND      EQUAL  HIGH-VALUES        
+                        MOVE HIGH-VALUES      TO     WRK-FIM-ARQBASF4   
+                        GO     TO     0200-99-FIM                       
+                     ELSE                                               
+                        PERFORM 1900-LER-ARQBASF4.                      
+                                                                        
+           IF WRK-CHAVEA-FTC           EQUAL  WRK-CHAVEA-CAD            
+              PERFORM 0400-GRAVAR-SORT-ARQ                              
+              MOVE 'N'    TO     WRK-ACHOU                              
+              PERFORM 1900-LER-ARQBASF4.                                
+                                                                        
+           IF (WRK-CHAVEA-FTC          GREATER  WRK-CHAVEA-CAD)   AND   
+              (WRK-FIM-CADAPEND   NOT  EQUAL    HIGH-VALUES)            
+              IF WRK-CHAVEB-FTC        EQUAL    WRK-CHAVEB-CAD          
+                 MOVE 'S'              TO       WRK-ACHOU               
+                 PERFORM 0300-MONTAR-AREA-AUX                           
+                 PERFORM 2000-LER-CADAPEND                              
+              ELSE                                                      
+                 MOVE 'N'    TO     WRK-ACHOU                           
+                 PERFORM 2000-LER-CADAPEND.                             
+                                                                        
+      *---------------------*                                           
+       0210-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0300-MONTAR-AREA-AUX  SECTION.                                   
+      *---------------------------------------------------------------* 
+           MOVE FTC-AGENCIA            TO     AUX-AGENCIA.              
+           MOVE FTC-EMPRESA            TO     AUX-EMPRESA.              
+           MOVE FTC-NUMERO             TO     AUX-NUMERO-CLLP.          
+           MOVE FTC-DIGITO             TO     AUX-DIGITO-CLLP.          
+           MOVE FTC-CC                 TO     AUX-CONTA.                
+           MOVE FTC-CART-ORIG          TO     AUX-CARTEIRA.             
+           MOVE FTC-DTVENC             TO     AUX-VENCIMENTO.           
+           MOVE FTC-VLR-BAI            TO     AUX-VALOR.                
+           MOVE FTC-ID                 TO     AUX-CLLP.                 
+           MOVE PENDRZ3                TO     AUX-RAZAO.                
+           MOVE PENDCT3                TO     AUX-CONTAPEND.            
+           MOVE FTC-PRESTACAO-CONTA    TO     AUX-PRESTACAO-CONTA.      
+                                                                        
+      *---------------------*                                           
+       0300-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0400-GRAVAR-SORT-ARQ  SECTION.                                   
+      *---------------------------------------------------------------* 
+           MOVE FTC-AGENCIA            TO     SRT-AGENCIA.              
+           MOVE FTC-EMPRESA            TO     SRT-EMPRESA.              
+           MOVE FTC-NUMERO             TO     SRT-NUMERO-CLLP.          
+           MOVE FTC-DIGITO             TO     SRT-DIGITO-CLLP.          
+           MOVE FTC-CC                 TO     SRT-CONTA.                
+           MOVE FTC-CART-ORIG          TO     SRT-CARTEIRA.             
+           MOVE FTC-DTVENC             TO     SRT-VENCIMENTO.           
+           MOVE FTC-VLR-BAI            TO     SRT-VALOR.                
+           MOVE FTC-ID                 TO     SRT-ID.                   
+           MOVE PENDRZ3                TO     SRT-RAZAO.                
+           MOVE PENDCT3                TO     SRT-CONTAPEND.            
+           MOVE FTC-PRESTACAO-CONTA    TO     SRT-PRESTACAO-CONTA.      
+                                                                        
+           RELEASE REG-ARQSORT.                                         
+                                                                        
+           IF  FTC-EMPRESA             =     4120 OR 4025 OR 5150 OR    
+                                             5240 OR 7000 OR 7830 OR    
+                                             7352 OR 7351 OR 7883 OR    
+                                             7881                       
+               NEXT SENTENCE                                            
+            ELSE                                                        
+               PERFORM 0750-IMPRIMIR-RELINCON.                          
+                                                                        
+      *---------------------*                                           
+       0400-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0500-SAIDA-SORT  SECTION.                                        
+      *---------------------------------------------------------------* 
+           MOVE WK-DATA-FITA4          TO     MCTE-DAT-MOV-AAAAMMDD.    
+           MOVE ZEROS                  TO     MCTE-DIA-VINCULO.         
+           MOVE 'CLLP'                 TO     MCTE-CTRO-CUSTO.          
+           MOVE 04499                  TO     MCTE-COD-ORIGEM.          
+           MOVE 'LA'                   TO     MCTE-SERVICO.             
+           MOVE 'N'                    TO     MCTE-SN.                  
+           MOVE SPACES                 TO     MCTE-TIPO-ENTRADA         
+                                              MCTE-HIST-CPL             
+                                              MCTE-MARCA-EX             
+                                              MCTE-NRO-SEQ-LA.          
+           MOVE ZEROS                  TO     MCTE-DATA-ORIGINAL        
+                                              MCTE-PRODUTO              
+                                              MCTE-OPERACAO.            
+                                                                        
+           PERFORM 2200-LER-ARQSORT.                                    
+                                                                        
+           MOVE SRT-AGENCIA            TO     WRK-AGENCIA-ANT           
+                                                                        
+           PERFORM 0600-PROCESSA-ARQSORT                                
+                   UNTIL WRK-FIM-ARQSORT  EQUAL  HIGH-VALUES.           
+                                                                        
+           PERFORM 1100-GRAVAR-CL-DEBITO.                               
+           PERFORM 1105-GRAVAR-CL-DEBITO-7000.                          
+           PERFORM 1106-GRAVAR-CL-DEBITO-7830.                          
+           PERFORM 1107-GRAVAR-CL-DEBITO-7883.                          
+           PERFORM 1108-GRAVAR-CL-DEBITO-7351.                          
+           PERFORM 1109-GRAVAR-CL-DEBITO-7881.                          
+           PERFORM 1110-GRAVAR-CL-4025-DEBITO.                          
+           PERFORM 1200-GRAVAR-CL-CREDITO.                              
+           PERFORM 1205-GRAVAR-CL-CREDITO-7000.                         
+           PERFORM 1206-GRAVAR-CL-CREDITO-7830.                         
+           PERFORM 1207-GRAVAR-CL-CREDITO-7883.                         
+           PERFORM 1208-GRAVAR-CL-CREDITO-7351.                         
+           PERFORM 1209-GRAVAR-CL-CREDITO-7881.                         
+           PERFORM 1210-GRAVAR-CL-4025-CREDITO.                         
+           PERFORM 1300-GRAVAR-LP-DEBITO.                               
+           PERFORM 1305-GRAVAR-LP-DEBITO-7000.                          
+           PERFORM 1306-GRAVAR-LP-DEBITO-7830.                          
+           PERFORM 1307-GRAVAR-LP-DEBITO-7883.                          
+           PERFORM 1308-GRAVAR-LP-DEBITO-7351.                          
+           PERFORM 1309-GRAVAR-LP-DEBITO-7881.                          
+           PERFORM 1310-GRAVAR-LP-4025-DEBITO.                          
+           PERFORM 1400-GRAVAR-LP-CREDITO.                              
+           PERFORM 1405-GRAVAR-LP-CREDITO-7000.                         
+           PERFORM 1406-GRAVAR-LP-CREDITO-7830.                         
+           PERFORM 1407-GRAVAR-LP-CREDITO-7883.                         
+           PERFORM 1408-GRAVAR-LP-CREDITO-7351.                         
+           PERFORM 1409-GRAVAR-LP-CREDITO-7881.                         
+           PERFORM 1405-GRAVAR-LP-4025-CREDITO.                         
+                                                                        
+           PERFORM 1410-GRAVAR-AGEN-1103-CR-5150.                       
+           PERFORM 1420-GRAVAR-0001-1103-DB-5150.                       
+           PERFORM 1430-GRAVAR-0001-1136-CR-5150.                       
+           PERFORM 1440-GRAVAR-5150-1106-DB-5150.                       
+           PERFORM 1450-GRAVAR-AGEN-1103-CR-5240.                       
+           PERFORM 1460-GRAVAR-0001-1103-DB-5240.                       
+           PERFORM 1470-GRAVAR-0001-0753-CR-5240.                       
+           PERFORM 1480-GRAVAR-5240-0104-DB-5240.                       
+                                                                        
+      *---------------------*                                           
+       0500-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0600-PROCESSA-ARQSORT  SECTION.                                  
+      *---------------------------------------------------------------* 
+           IF SRT-AGENCIA     NOT      EQUAL  WRK-AGENCIA-ANT           
+              PERFORM 1100-GRAVAR-CL-DEBITO                             
+              PERFORM 1105-GRAVAR-CL-DEBITO-7000                        
+              PERFORM 1106-GRAVAR-CL-DEBITO-7830                        
+              PERFORM 1107-GRAVAR-CL-DEBITO-7883                        
+              PERFORM 1108-GRAVAR-CL-DEBITO-7351                        
+              PERFORM 1109-GRAVAR-CL-DEBITO-7881                        
+              PERFORM 1110-GRAVAR-CL-4025-DEBITO                        
+              PERFORM 1200-GRAVAR-CL-CREDITO                            
+              PERFORM 1205-GRAVAR-CL-CREDITO-7000                       
+              PERFORM 1206-GRAVAR-CL-CREDITO-7830                       
+              PERFORM 1207-GRAVAR-CL-CREDITO-7883                       
+              PERFORM 1208-GRAVAR-CL-CREDITO-7351                       
+              PERFORM 1209-GRAVAR-CL-CREDITO-7881                       
+              PERFORM 1210-GRAVAR-CL-4025-CREDITO                       
+              PERFORM 1300-GRAVAR-LP-DEBITO                             
+              PERFORM 1305-GRAVAR-LP-DEBITO-7000                        
+              PERFORM 1306-GRAVAR-LP-DEBITO-7830                        
+              PERFORM 1307-GRAVAR-LP-DEBITO-7883                        
+              PERFORM 1308-GRAVAR-LP-DEBITO-7351                        
+              PERFORM 1309-GRAVAR-LP-DEBITO-7881                        
+              PERFORM 1310-GRAVAR-LP-4025-DEBITO                        
+              PERFORM 1400-GRAVAR-LP-CREDITO                            
+              PERFORM 1405-GRAVAR-LP-CREDITO-7000                       
+              PERFORM 1406-GRAVAR-LP-CREDITO-7830                       
+              PERFORM 1407-GRAVAR-LP-CREDITO-7883                       
+              PERFORM 1408-GRAVAR-LP-CREDITO-7351                       
+              PERFORM 1409-GRAVAR-LP-CREDITO-7881                       
+              PERFORM 1405-GRAVAR-LP-4025-CREDITO                       
+                                                                        
+              PERFORM 1410-GRAVAR-AGEN-1103-CR-5150                     
+              PERFORM 1420-GRAVAR-0001-1103-DB-5150                     
+              PERFORM 1430-GRAVAR-0001-1136-CR-5150                     
+              PERFORM 1440-GRAVAR-5150-1106-DB-5150                     
+              PERFORM 1450-GRAVAR-AGEN-1103-CR-5240                     
+              PERFORM 1460-GRAVAR-0001-1103-DB-5240                     
+              PERFORM 1470-GRAVAR-0001-0753-CR-5240                     
+              PERFORM 1480-GRAVAR-5240-0104-DB-5240                     
+              MOVE ZEROS               TO     ACU-CLLP-CL-4120          
+                                              ACU-CLLP-LP-4120          
+                                              ACU-CLLP-CL-4025          
+                                              ACU-CLLP-LP-4025          
+                                              ACU-CLLP-CLLP-5150        
+                                              ACU-CLLP-CLLP-5240        
+                                              ACU-CLLP-CL-7000          
+                                              ACU-CLLP-CL-7351          
+                                              ACU-CLLP-CL-7881          
+                                              ACU-CLLP-CL-7830          
+                                              ACU-CLLP-CL-7883          
+                                              ACU-CLLP-LP-7000          
+                                              ACU-CLLP-LP-7351          
+                                              ACU-CLLP-LP-7881          
+                                              ACU-CLLP-LP-7830          
+                                              ACU-CLLP-LP-7883          
+              MOVE SRT-AGENCIA         TO     WRK-AGENCIA-ANT.          
+                                                                        
+           PERFORM 0800-MONTAR-CAMPOS-FIXOS.                            
+           PERFORM 0900-GRAVAR-FITA4-TIPO1.                             
+           PERFORM 1000-GRAVAR-FITA4-TIPO2.                             
+                                                                        
+           IF SRT-EMPRESA         EQUAL  7000                           
+                  IF SRT-ID       EQUAL  'CL'                           
+                  ADD SRT-VALOR            TO     ACU-CLLP-CL-7000      
+                  ELSE                                                  
+                      ADD SRT-VALOR        TO     ACU-CLLP-LP-7000.     
+                                                                        
+           IF SRT-EMPRESA         EQUAL  7351                           
+                  IF SRT-ID       EQUAL  'CL'                           
+                  ADD SRT-VALOR            TO     ACU-CLLP-CL-7351      
+                  ELSE                                                  
+                      ADD SRT-VALOR        TO     ACU-CLLP-LP-7351.     
+                                                                        
+           IF SRT-EMPRESA         EQUAL  7881                           
+                  IF SRT-ID       EQUAL  'CL'                           
+                  ADD SRT-VALOR            TO     ACU-CLLP-CL-7881      
+                  ELSE                                                  
+                      ADD SRT-VALOR        TO     ACU-CLLP-LP-7881.     
+                                                                        
+           IF SRT-EMPRESA         EQUAL  7830                           
+                  IF SRT-ID       EQUAL  'CL'                           
+                  ADD SRT-VALOR            TO     ACU-CLLP-CL-7830      
+                  ELSE                                                  
+                      ADD SRT-VALOR        TO     ACU-CLLP-LP-7830.     
+                                                                        
+           IF SRT-EMPRESA         EQUAL  7883                           
+                  IF SRT-ID       EQUAL  'CL'                           
+                  ADD SRT-VALOR            TO     ACU-CLLP-CL-7883      
+                  ELSE                                                  
+                      ADD SRT-VALOR        TO     ACU-CLLP-LP-7883.     
+                                                                        
+           IF SRT-EMPRESA         EQUAL  4120                           
+                  IF SRT-ID       EQUAL  'CL'                           
+                  ADD SRT-VALOR            TO     ACU-CLLP-CL-4120      
+                  ELSE                                                  
+                      ADD SRT-VALOR        TO     ACU-CLLP-LP-4120.     
+                                                                        
+           IF SRT-EMPRESA         EQUAL  4025                           
+                  IF SRT-ID       EQUAL  'CL'                           
+                  ADD SRT-VALOR            TO     ACU-CLLP-CL-4025      
+                  ELSE                                                  
+                      ADD SRT-VALOR        TO     ACU-CLLP-LP-4025.     
+                                                                        
+           IF SRT-EMPRESA         EQUAL  5150                           
+                  ADD SRT-VALOR        TO     ACU-CLLP-CLLP-5150.       
+                                                                        
+           IF SRT-EMPRESA         EQUAL  5240                           
+                  ADD SRT-VALOR        TO     ACU-CLLP-CLLP-5240.       
+                                                                        
+           PERFORM 2200-LER-ARQSORT.                                    
+                                                                        
+      *---------------------*                                           
+       0600-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0750-IMPRIMIR-RELINCON      SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF ACU-LINHAS               GREATER  55                      
+              PERFORM 1650-IMPRIMIR-CABEC-INCON.                        
+                                                                        
+           MOVE  WRK-EMPRESA-FTC              TO   DET1-EMPRESA-INCON   
+           MOVE  FTC-NUMERO                   TO   DET1-CLLP-INCON      
+           MOVE  FTC-AGENCIA                  TO   DET1-AGENC-INCON     
+           MOVE  FTC-CC                       TO   DET1-CONTA-INCON     
+           MOVE  WRK-CARTEIRA-FTC             TO   DET1-CART-INCON      
+           MOVE  WRK-TIPO-FTC                 TO   DET1-TP-PEND         
+           MOVE 'REGISTRO SEM CORRENPONDENTE' TO   DET1-MENSAGEM.       
+                                                                        
+           WRITE REG-RELINCON          FROM   LINDET-INCON.             
+           ADD 1                       TO     ACU-LINHAS.               
+                                                                        
+      *---------------------*                                           
+       0750-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+      *---------------------------------------------------------------* 
+       0800-MONTAR-CAMPOS-FIXOS  SECTION.                               
+      *---------------------------------------------------------------* 
+           CALL 'POOL1210'             USING  SRT-VENCIMENTO            
+                                              WRK-DATA-JULIANA          
+                                              WK-MENSAGEM.              
+                                                                        
+           MOVE WRK-DATA-JULIANA       TO     WRK-DOCTO-PARTE2.         
+                                                                        
+           IF SRT-EMPRESA              EQUAL  7000                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 001                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 310                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  7351                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 001                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 310                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  7881                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 001                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 310                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  7830                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 001                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 310                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  7883                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 001                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 310                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  4120                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 001                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 310                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  4025                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 300                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 600                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  5150                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 301                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 453                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           IF SRT-EMPRESA              EQUAL  5240                      
+              IF SRT-ID                   EQUAL  'CL'                   
+                 MOVE 808                 TO     MCTE-LANCAMENTO        
+                 MOVE 007                 TO     WRK-DOCTO-PARTE1       
+              ELSE                                                      
+                 MOVE 810                 TO     MCTE-LANCAMENTO        
+                 MOVE 850                 TO     WRK-DOCTO-PARTE1.      
+                                                                        
+           MOVE WRK-DOCTO              TO     MCTE-NUMERO-DOC.          
+                                                                        
+      *---------------------*                                           
+       0800-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       0900-GRAVAR-FITA4-TIPO1  SECTION.                                
+      *---------------------------------------------------------------* 
+                                                                        
+      * ***  SUMARIZAR O VALOR POR AGENCIA E CONTA                      
+      * ***  NA TABELA INTERNA - TABELA-FITA4-SUMARIZADA                
+                                                                        
+           IF SRT-VALOR                   GREATER ZEROS                 
+              MOVE SRT-AGENCIA            TO  WRK-AGENCIA-SORT          
+              MOVE SRT-CONTA              TO  WRK-CONTA-SORT            
+              MOVE SRT-PRESTACAO-CONTA    TO  WRK-PREST-CONTA-SORT      
+              PERFORM                                                   
+              VARYING WRK-IND  FROM    1 BY 1                           
+                UNTIL WRK-IND  GREATER 1000                             
+                   OR WRK-AGENC-CONT-SORT EQUAL WRK-AGENC-CONT(WRK-IND) 
+                   OR WRK-AGENC-CONT(WRK-IND)   EQUAL ZEROS             
+              END-PERFORM                                               
+                                                                        
+              IF  WRK-IND         GREATER   1000                        
+                  DISPLAY '*************** CLLP9163 ***************'    
+                  DISPLAY '*                                      *'    
+                  DISPLAY '*       ESTOURO DA TABELA INTERNA      *'    
+                  DISPLAY '*                                      *'    
+                  DISPLAY '*       MAIS DE 1000 AGENCIA-CONTA     *'    
+                  DISPLAY '*                                      *'    
+                  DISPLAY '*************** CLLP9163 ***************'    
+                  CALL 'ILBOABN0'   USING   WRK-ABEND                   
+              END-IF                                                    
+                                                                        
+              MOVE SRT-AGENCIA            TO  WRK-AGENCIA  (WRK-IND)    
+              MOVE SRT-CONTA              TO  WRK-CONTA    (WRK-IND)    
+              MOVE SRT-PRESTACAO-CONTA    TO  WRK-PRESTACAO(WRK-IND)    
+              MOVE SRT-EMPRESA            TO  WRK-EMPRESA  (WRK-IND)    
+              MOVE SRT-ID                 TO  WRK-ID       (WRK-IND)    
+              ADD  SRT-VALOR              TO  WRK-VALOR    (WRK-IND)    
+           END-IF.                                                      
+                                                                        
+      *---------------------*                                           
+       0900-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1000-GRAVAR-FITA4-TIPO2  SECTION.                                
+      *---------------------------------------------------------------* 
+           IF SRT-EMPRESA              EQUAL  7000                      
+              MOVE 7369                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  7351                      
+              MOVE 7042                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  7881                      
+              MOVE 7369                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  7830                      
+              MOVE 7838                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  7881                      
+              MOVE 7881                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  7883                      
+              MOVE 7883                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  4120                      
+              MOVE 4120                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  4025                      
+              MOVE 4025                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  5150                      
+              MOVE 70                  TO     MCTE-LANCAMENTO           
+              MOVE 5150                TO     MCTE-AGENCIA.             
+           IF SRT-EMPRESA              EQUAL  5240                      
+              MOVE 5240                TO     MCTE-AGENCIA.             
+           MOVE SRT-RAZAO              TO     WRK-RAZAO4.               
+           MOVE WRK-GRUPO              TO     MCTE-GRUPO.               
+           MOVE WRK-SUBGP              TO     MCTE-SUBGP.               
+           IF   SRT-RAZAO              EQUAL  08450                     
+                COMPUTE MCTE-CONTA     =     (WK-DIA-INV * 10000 +      
+                                              WK-MES-INV * 100   +      
+                                              WK-ANO-INV)               
+                PERFORM 1500-CALCULA-DIGITO                             
+           ELSE                                                         
+                MOVE SRT-CONTAPEND     TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO.                            
+           IF   SRT-VALOR             GREATER ZEROS                     
+                MOVE SRT-AGENCIA       TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE SRT-VALOR         TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1000-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1100-GRAVAR-CL-DEBITO  SECTION.                                  
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CL-4120       GREATER ZEROS                    
+                MOVE 4120               TO     MCTE-AGENCIA             
+                MOVE 011                TO     MCTE-GRUPO               
+                MOVE 003                TO     MCTE-SUBGP               
+                MOVE 1                  TO     MCTE-CONTA               
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808                TO     MCTE-LANCAMENTO          
+                MOVE 4120               TO     MCTE-NUMERO-DOC          
+                MOVE 1                  TO     MCTE-DEB-CRED            
+                MOVE ACU-CLLP-CL-4120   TO     MCTE-VALOR               
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1100-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1105-GRAVAR-CL-DEBITO-7000  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7000       GREATER ZEROS                    
+                MOVE 7369               TO     MCTE-AGENCIA             
+                MOVE 011                TO     MCTE-GRUPO               
+                MOVE 003                TO     MCTE-SUBGP               
+                MOVE 1                  TO     MCTE-CONTA               
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808                TO     MCTE-LANCAMENTO          
+                MOVE 7000               TO     MCTE-NUMERO-DOC          
+                MOVE 1                  TO     MCTE-DEB-CRED            
+                MOVE ACU-CLLP-CL-7000   TO     MCTE-VALOR               
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1105-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1106-GRAVAR-CL-DEBITO-7830  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7830       GREATER ZEROS                    
+                MOVE 7838               TO     MCTE-AGENCIA             
+                MOVE 011                TO     MCTE-GRUPO               
+                MOVE 003                TO     MCTE-SUBGP               
+                MOVE 1                  TO     MCTE-CONTA               
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808                TO     MCTE-LANCAMENTO          
+                MOVE 7838               TO     MCTE-NUMERO-DOC          
+                MOVE 1                  TO     MCTE-DEB-CRED            
+                MOVE ACU-CLLP-CL-7830   TO     MCTE-VALOR               
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1106-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1107-GRAVAR-CL-DEBITO-7883  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7883       GREATER ZEROS                    
+                MOVE 7883               TO     MCTE-AGENCIA             
+                MOVE 011                TO     MCTE-GRUPO               
+                MOVE 003                TO     MCTE-SUBGP               
+                MOVE 1                  TO     MCTE-CONTA               
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808                TO     MCTE-LANCAMENTO          
+                MOVE 7883               TO     MCTE-NUMERO-DOC          
+                MOVE 1                  TO     MCTE-DEB-CRED            
+                MOVE ACU-CLLP-CL-7883   TO     MCTE-VALOR               
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1107-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1108-GRAVAR-CL-DEBITO-7351  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7351       GREATER ZEROS                    
+                MOVE 7042               TO     MCTE-AGENCIA             
+                MOVE 011                TO     MCTE-GRUPO               
+                MOVE 003                TO     MCTE-SUBGP               
+                MOVE 1                  TO     MCTE-CONTA               
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808                TO     MCTE-LANCAMENTO          
+                MOVE 7042               TO     MCTE-NUMERO-DOC          
+                MOVE 1                  TO     MCTE-DEB-CRED            
+                MOVE ACU-CLLP-CL-7351   TO     MCTE-VALOR               
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1108-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1109-GRAVAR-CL-DEBITO-7881  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7881       GREATER ZEROS                    
+                MOVE 7881               TO     MCTE-AGENCIA             
+                MOVE 011                TO     MCTE-GRUPO               
+                MOVE 003                TO     MCTE-SUBGP               
+                MOVE 1                  TO     MCTE-CONTA               
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808                TO     MCTE-LANCAMENTO          
+                MOVE 7881               TO     MCTE-NUMERO-DOC          
+                MOVE 1                  TO     MCTE-DEB-CRED            
+                MOVE ACU-CLLP-CL-7881   TO     MCTE-VALOR               
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1109-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+       1110-GRAVAR-CL-4025-DEBITO  SECTION.                             
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CL-4025      GREATER ZEROS                     
+                MOVE 4025              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 4025              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-4025  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1110-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1200-GRAVAR-CL-CREDITO  SECTION.                                 
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CL-4120      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 4120              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-4120  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1200-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1205-GRAVAR-CL-CREDITO-7000  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7000      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 7000              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-7000  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1205-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1206-GRAVAR-CL-CREDITO-7830  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7830      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 7838              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-7830  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1206-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1207-GRAVAR-CL-CREDITO-7883  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7883      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 7883              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-7883  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1207-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1208-GRAVAR-CL-CREDITO-7351  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7351      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 7351              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-7351  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1208-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1209-GRAVAR-CL-CREDITO-7881  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-CL-7881      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 7881              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-7881  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1209-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1210-GRAVAR-CL-4025-CREDITO  SECTION.                            
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CL-4025      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 808               TO     MCTE-LANCAMENTO           
+                MOVE 4025              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CL-4025  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1210-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1300-GRAVAR-LP-DEBITO  SECTION.                                  
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-LP-4120      GREATER ZEROS                     
+                MOVE 4120              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 4120              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-4120  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1300-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1305-GRAVAR-LP-DEBITO-7000  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7000      GREATER ZEROS                     
+                MOVE 7000              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7000              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7000  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1305-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+       1306-GRAVAR-LP-DEBITO-7830  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7830      GREATER ZEROS                     
+                MOVE 7838              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7838              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7830  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1306-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1307-GRAVAR-LP-DEBITO-7883  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7883      GREATER ZEROS                     
+                MOVE 7883              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7883              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7883  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1307-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1308-GRAVAR-LP-DEBITO-7351  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7351      GREATER ZEROS                     
+                MOVE 7042              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7042              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7351  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1308-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1309-GRAVAR-LP-DEBITO-7881  SECTION.                             
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7881      GREATER ZEROS                     
+                MOVE 7881              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7881              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7881  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1309-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1310-GRAVAR-LP-4025-DEBITO  SECTION.                             
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-LP-4025      GREATER ZEROS                     
+                MOVE 4025              TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 4025              TO     MCTE-NUMERO-DOC           
+                MOVE 1                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-4025  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1310-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1400-GRAVAR-LP-CREDITO  SECTION.                                 
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-LP-4120      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 4120              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-4120  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1400-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1405-GRAVAR-LP-CREDITO-7000  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7000      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7000              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7000  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1405-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1406-GRAVAR-LP-CREDITO-7830  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7830      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7838              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7830  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1406-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1407-GRAVAR-LP-CREDITO-7883  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7883      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7883              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7883  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1407-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1408-GRAVAR-LP-CREDITO-7351  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7351      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7042              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7351  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1408-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1409-GRAVAR-LP-CREDITO-7881  SECTION.                            
+      *---------------------------------------------------------------* 
+                                                                        
+           IF   ACU-CLLP-LP-7881      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 7881              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-7881  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1409-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1405-GRAVAR-LP-4025-CREDITO  SECTION.                            
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-LP-4025      GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT   TO     MCTE-AGENCIA              
+                MOVE 011               TO     MCTE-GRUPO                
+                MOVE 003               TO     MCTE-SUBGP                
+                MOVE 1                 TO     MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 810               TO     MCTE-LANCAMENTO           
+                MOVE 4025              TO     MCTE-NUMERO-DOC           
+                MOVE 2                 TO     MCTE-DEB-CRED             
+                MOVE ACU-CLLP-LP-4025  TO     MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1405-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1410-GRAVAR-AGEN-1103-CR-5150 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5150    GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT    TO    MCTE-AGENCIA              
+                MOVE 011                TO    MCTE-GRUPO                
+                MOVE 003                TO    MCTE-SUBGP                
+                MOVE 1                  TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5150               TO    MCTE-NUMERO-DOC           
+                MOVE 2                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5150 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1410-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1420-GRAVAR-0001-1103-DB-5150 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5150    GREATER ZEROS                     
+                MOVE 0001               TO    MCTE-AGENCIA              
+                MOVE 011                TO    MCTE-GRUPO                
+                MOVE 003                TO    MCTE-SUBGP                
+                MOVE 1                  TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5150               TO    MCTE-NUMERO-DOC           
+                MOVE 1                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5150 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1420-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1430-GRAVAR-0001-1136-CR-5150 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5150    GREATER ZEROS                     
+                MOVE 0001               TO    MCTE-AGENCIA              
+                MOVE 011                TO    MCTE-GRUPO                
+                MOVE 036                TO    MCTE-SUBGP                
+                MOVE 2                  TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5150               TO    MCTE-NUMERO-DOC           
+                MOVE 2                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5150 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1430-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1440-GRAVAR-5150-1106-DB-5150 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5150    GREATER ZEROS                     
+                MOVE 5150               TO    MCTE-AGENCIA              
+                MOVE 011                TO    MCTE-GRUPO                
+                MOVE 006                TO    MCTE-SUBGP                
+                MOVE 1                  TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5150               TO    MCTE-NUMERO-DOC           
+                MOVE 1                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5150 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1440-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1450-GRAVAR-AGEN-1103-CR-5240 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5240    GREATER ZEROS                     
+                MOVE WRK-AGENCIA-ANT    TO    MCTE-AGENCIA              
+                MOVE 011                TO    MCTE-GRUPO                
+                MOVE 003                TO    MCTE-SUBGP                
+                MOVE 1                  TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5240               TO    MCTE-NUMERO-DOC           
+                MOVE 2                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5240 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1450-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1460-GRAVAR-0001-1103-DB-5240 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5240    GREATER ZEROS                     
+                MOVE 0001               TO    MCTE-AGENCIA              
+                MOVE 011                TO    MCTE-GRUPO                
+                MOVE 003                TO    MCTE-SUBGP                
+                MOVE 1                  TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5240               TO    MCTE-NUMERO-DOC           
+                MOVE 1                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5240 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1460-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1470-GRAVAR-0001-0753-CR-5240 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5240    GREATER ZEROS                     
+                MOVE 0001               TO    MCTE-AGENCIA              
+                MOVE 007                TO    MCTE-GRUPO                
+                MOVE 053                TO    MCTE-SUBGP                
+                MOVE 163354             TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5240               TO    MCTE-NUMERO-DOC           
+                MOVE 2                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5240 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1470-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1480-GRAVAR-5240-0104-DB-5240 SECTION.                           
+      *---------------------------------------------------------------* 
+           IF   ACU-CLLP-CLLP-5240    GREATER ZEROS                     
+                MOVE 5240               TO    MCTE-AGENCIA              
+                MOVE 001                TO    MCTE-GRUPO                
+                MOVE 004                TO    MCTE-SUBGP                
+                MOVE 1                  TO    MCTE-CONTA                
+                PERFORM 1500-CALCULA-DIGITO                             
+                MOVE 070                TO    MCTE-LANCAMENTO           
+                MOVE 5240               TO    MCTE-NUMERO-DOC           
+                MOVE 1                  TO    MCTE-DEB-CRED             
+                MOVE ACU-CLLP-CLLP-5240 TO    MCTE-VALOR                
+                WRITE REG-FIT4CLLP      FROM  REG-WORK-MCTE.            
+                                                                        
+      *---------------------*                                           
+       1480-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1500-CALCULA-DIGITO           SECTION.                           
+      *---------------------------------------------------------------* 
+           MOVE '7'                     TO    MCTE-DIGITO.              
+           CALL 'POOL0431'           USING    MCTE-CONTA                
+                                              MCTE-DIGITO               
+                                              WRK-TAMANHO.              
+                                                                        
+      *---------------------*                                           
+       1500-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1650-IMPRIMIR-CABEC-INCON     SECTION.                           
+      *---------------------------------------------------------------* 
+           ADD 1                       TO     ACU-PAGINA.               
+           MOVE ACU-PAGINA             TO     CB1-PAG-INCON.            
+                                                                        
+           WRITE REG-RELINCON          FROM   CAB-1-INCON               
+           WRITE REG-RELINCON          FROM   CAB-2-INCON               
+           WRITE REG-RELINCON          FROM   BRANCOS.                  
+           MOVE  5                     TO     ACU-LINHAS.               
+                                                                        
+      *---------------------*                                           
+       1650-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       1900-LER-ARQBASF4 SECTION.                                       
+      *---------------------------------------------------------------* 
+           READ ARQBASF4  AT END                                        
+                             MOVE HIGH-VALUES  TO  WRK-FIM-ARQBASF4     
+                             GO   TO   1900-99-FIM.                     
+                                                                        
+      *---------------------*                                           
+       1900-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       2000-LER-CADAPEND  SECTION.                                      
+      *---------------------------------------------------------------* 
+           READ CADAPEND  INTO   WRK-CADAPEND                           
+                          AT END                                        
+                             MOVE HIGH-VALUES  TO  WRK-FIM-CADAPEND.    
+                                                                        
+      *---------------------*                                           
+       2000-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       2100-LER-ARQDATAS  SECTION.                                      
+      *---------------------------------------------------------------* 
+           READ ARQDATAS  AT END                                        
+                             MOVE HIGH-VALUES  TO  WRK-FIM-ARQDATAS.    
+                                                                        
+      *---------------------*                                           
+       2100-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+                                                                        
+      *---------------------------------------------------------------* 
+       2200-LER-ARQSORT  SECTION.                                       
+      *---------------------------------------------------------------* 
+           RETURN ARQSORT AT END                                        
+                             MOVE HIGH-VALUES  TO  WRK-FIM-ARQSORT.     
+                                                                        
+      *---------------------*                                           
+       2200-99-FIM.  EXIT.                                              
+      *---------------------*                                           
+           EJECT                                                        
+      *----------------------------------------------------------------*
+       3000-GRAVAR-SUMARIZ-AGE-CTA     SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           PERFORM                                                      
+           VARYING WRK-IND  FROM 1 BY 1                                 
+             UNTIL WRK-IND  GREATER 1000                                
+                                                                        
+               IF  WRK-VALOR(WRK-IND)  NOT EQUAL ZEROS                  
+                   MOVE 008                                             
+                     TO MCTE-GRUPO                                      
+                   MOVE 045                                             
+                     TO MCTE-SUBGP                                      
+                   MOVE WRK-AGENCIA(WRK-IND)                            
+                     TO MCTE-AGENCIA                                    
+                   MOVE WRK-CONTA(WRK-IND)                              
+                     TO MCTE-CONTA                                      
+                   PERFORM 1500-CALCULA-DIGITO                          
+                   MOVE 1                                               
+                     TO MCTE-DEB-CRED                                   
+                   MOVE WRK-PRESTACAO(WRK-IND)                          
+                     TO MCTE-NUMERO-DOC                                 
+                   MOVE WRK-VALOR(WRK-IND)                              
+                     TO MCTE-VALOR                                      
+                   MOVE WK-DATA-FITA4                                   
+                     TO MCTE-DAT-MOV-AAAAMMDD                           
+                   MOVE ZEROS                                           
+                     TO MCTE-DIA-VINCULO                                
+                   MOVE 'CLLP'                                          
+                     TO MCTE-CTRO-CUSTO                                 
+                   MOVE 04499                                           
+                     TO MCTE-COD-ORIGEM                                 
+                   MOVE 'LA'                                            
+                     TO MCTE-SERVICO                                    
+                   MOVE 'N'                                             
+                     TO MCTE-SN                                         
+                   MOVE SPACES                                          
+                     TO MCTE-TIPO-ENTRADA                               
+                        MCTE-HIST-CPL                                   
+                        MCTE-MARCA-EX                                   
+                        MCTE-NRO-SEQ-LA                                 
+                   MOVE ZEROS                                           
+                     TO MCTE-DATA-ORIGINAL                              
+                        MCTE-PRODUTO                                    
+                        MCTE-OPERACAO                                   
+                                                                        
+      *            IF WRK-EMPRESA(WRK-IND) EQUAL  4120                  
+      *               IF WRK-ID  (WRK-IND) EQUAL  'CL'                  
+      *                  MOVE 808        TO   MCTE-LANCAMENTO           
+      *               ELSE                                              
+      *                  MOVE 810        TO  MCTE-LANCAMENTO            
+      *               END-IF                                            
+      *            END-IF                                               
+                                                                        
+      *            IF WRK-EMPRESA(WRK-IND) EQUAL  4025                  
+      *               IF WRK-ID  (WRK-IND) EQUAL  'CL'                  
+      *                  MOVE 808        TO  MCTE-LANCAMENTO            
+      *               ELSE                                              
+      *                  MOVE 810        TO  MCTE-LANCAMENTO            
+      *               END-IF                                            
+      *            END-IF                                               
+                                                                        
+      *            IF WRK-EMPRESA(WRK-IND) EQUAL  5150                  
+      *               IF WRK-ID  (WRK-IND) EQUAL  'CL'                  
+      *                  MOVE 808        TO  MCTE-LANCAMENTO            
+      *               ELSE                                              
+      *                  MOVE 810        TO  MCTE-LANCAMENTO            
+      *               END-IF                                            
+      *            END-IF                                               
+                                                                        
+      *            IF WRK-EMPRESA(WRK-IND) EQUAL  5240                  
+      *               IF WRK-ID  (WRK-IND) EQUAL  'CL'                  
+      *                  MOVE 808        TO  MCTE-LANCAMENTO            
+      *               ELSE                                              
+      *                  MOVE 810        TO  MCTE-LANCAMENTO            
+      *               END-IF                                            
+      *            END-IF                                               
+                   MOVE 838              TO  MCTE-LANCAMENTO            
+                                                                        
+                   WRITE REG-FIT4CLLP  FROM  REG-WORK-MCTE              
+               END-IF                                                   
+           END-PERFORM.                                                 
+                                                                        
+      *----------------------------------------------------------------*
+       3000-99-FIM.                     EXIT.                           
+      *----------------------------------------------------------------*

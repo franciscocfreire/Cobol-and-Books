@@ -1,0 +1,9 @@
+
+CLLP7127-A                                     B R A D E S C O   L E A S I N G   S / A                                    PAG. 00001
+12/11/2014                                     AVALISTAS CADASTRADOS NO CLIE                                                07:42:11
+CPF/CGC AVALISTA    NOME DO AVALISTA                         ENDERECO AVALISTA                    NUMERO
+ AG(DEV) CONTA(DEV) COMPLEMENTO          BAIRRO              CIDADE                           UF CEP
+
+085.066.778-0000/07 ROSANA BEATRIZ VIEIRA HUMMEL             AV SELIM JOSE DE SALES                   196
+ 0195    0174349                         CANAA                IPATINGA                       MG 35164-504
+

@@ -1,0 +1,151 @@
+//CLLP0877 JOB 'CLLP,4120,PR32','D336356',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=IMS                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEI51                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP0    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICA POR AGENCIA E CONTA                               
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CADBAIXA.LEI(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CADBAIXA.CLAS(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+  SORT FIELDS=(4,3,PD,A,26,4,PD,A,31,3,CH,A,34,4,PD,A,97,4,CH,A,        
+               94,2,CH,A,91,2,CH,A,22,4,CH,A,19,2,CH,A,16,2,CH,A,       
+               161,8,PD,A)                                              
+  SUM  FIELDS=NONE                                                      
+  END                                                                   
+//*                                                                     
+//STEP1    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE PRESTACAO DE CONTAS                    
+//*                                                                     
+//SORTIN   DD DSN=MX.REES.PRV.PRESTCTA.REES0545(0),                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.PRESTCTA.CLASS(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0070,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+  SORT FIELDS=(10,4,ZD,A,14,7,ZD,A,21,5,CH,A,26,9,ZD,A,41,4,CH,A,       
+               38,2,CH,A,35,2,CH,A,51,4,CH,A,48,2,CH,A,45,2,CH,A)       
+  END                                                                   
+//*                                                                     
+//STEP2    EXEC PGM=CLLP9008                                            
+//*                                                                     
+//* ***    INCLUIR DADOS DA PRESTACAO DE CONTAS NO ARQUIVO QUE VAI      
+//* ***    DAR CARGA NA TABELA LPCLB008 (ATE 3 MESES)                   
+//*                                                                     
+//BAIXAENT DD DSN=*.STEP0.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//PRESTCTA DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//BAIXASAI DD DSN=MX.CLLP.CADBAIXA.CLLP9008(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#EI51,                                       
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    GRAVA ARQUIVO TRANSITO DE BAIXAS DO DIA PARA O CACS          
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP2.BAIXASAI,                                     
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=MX.CLLP.CACS.BAIXADIA,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    DIARIA 3 MESES + 3 MESES                                     
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP2.BAIXASAI,                                     
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.D0PRVMZ.PRV.BAIX3MES.LEI(0),                  
+//       DISP=OLD                                                       
+//SYSUT2   DD DSN=MX.CLLP.D0PRVMZ.PRV.BAIX3MES.LEI(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    EXPANDE EM 100 BYTES PARA LEI DA TRANSPARENCIA               
+//*                                                                     
+//SORTIN   DD DSN=*.STEP4.SYSUT2,                                       
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.D0PRVMZ.PRV.BX3MREES(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0414,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTREC FIELDS=(01,375,376,8,PD,TO=PD,LENGTH=7,384,8,PD,TO=PD,LENGTH=7, 
+                392,8,PD,TO=PD,LENGTH=7,400,02,PD,TO=ZD,LENGTH=02,      
+                16C' ')                                                 
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    GRAVA ARQUIVO TRANSITO DE BAIXAS DO DIA PARA                 
+//* ***    O RECR (RECUPERACAO DE CREDITO - NAS)                        
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP2.BAIXASAI,                                     
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=MX.CLLP.CMRE.BAIXADIA,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

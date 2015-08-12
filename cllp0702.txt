@@ -1,0 +1,20 @@
+//CLLP0702 JOB 'CLLP,4120,PR32','B706725',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    CATALOGADO NA JCLFILE  RS088772 - 16/01/2012                 
+//*                                                                     
+//* ***    RETORNA PARA DISCO O CADASTRO DO LPCL.                       
+//*                                                                     
+//SYSUT1   DD DSN=MX.CLLP.S077443.CADALPCL.LEI(0),                      
+//       DISP=OLD                                                       
+//SYSUT2   DD DSN=MX.CLLP.CADRETAN.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(050000,9000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=(Z,,AN01)                                          
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

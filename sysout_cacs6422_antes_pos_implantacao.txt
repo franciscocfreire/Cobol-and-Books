@@ -1,0 +1,167 @@
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@##########################################################################@
+@#                   DIA 29/05/2014                                       #@
+@##########################################################################@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** INATIVAR CONTAS QUE APRESENTEM O ERRO 260 NO BDRPTRAN            **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7480 | CACS6422  |  28/05/2014 23:43:43  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |         2.398.603 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |                12 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |                12 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |         2.398.603 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |                12 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** INATIVAR CONTAS QUE APRESENTEM O ERRO 260 NO BDRPTRAN            **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7480 | CACS6422  |  28/05/2014 23:44:12  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |           233.431 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |                 2 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |                 2 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |           233.431 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |                 2 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** GERAR EXTRACT COM ERRO ZERADO A PARTIR DO BATIMENTO COM O CACS   **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7482 | CACS6422  |  28/05/2014 23:44:15  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |         3.669.594 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |             3.827 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |             3.827 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |         3.669.594 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |             3.827 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@##########################################################################@
+@#                   DIA 28/05/2014                                       #@
+@##########################################################################@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** INATIVAR CONTAS QUE APRESENTEM O ERRO 260 NO BDRPTRAN            **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7480 | CACS6422  |  28/05/2014 01:32:20  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |         2.422.276 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |            10.090 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |            13.021 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |         2.422.276 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |            10.090 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** INATIVAR CONTAS QUE APRESENTEM O ERRO 260 NO BDRPTRAN            **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7480 | CACS6422  |  28/05/2014 01:32:51  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |           200.147 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |            39.325 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |            40.735 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |           200.147 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |            39.325 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** GERAR EXTRACT COM ERRO ZERADO A PARTIR DO BATIMENTO COM O CACS   **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7482 | CACS6422  |  28/05/2014 01:49:48  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |         3.266.056 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |           363.414 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |           363.414 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |         3.266.056 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |           363.414 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+

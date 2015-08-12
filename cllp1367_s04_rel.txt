@@ -1,0 +1,256 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP2576                                ARQUIVO COM OS DADOS DO CADASTRO DE GARANTIA                                 PAG.:         1                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+                                              CODIGO      DESCRICAO                                                                                             
+                                                   1      DUPLICATA                                                                                             
+                                                   2      ALIENACAO DE BENS USADOS                                                                              
+                                                   3      HIPOTECA                                                                                              
+                                                   4      FIANCA                                                                                                
+                                                   5      PENHOR MERCANTIL                                                                                      
+                                                   6      WARRANT                                                                                               
+                                                   7      LETRA DE CAMBIO                                                                                       
+                                                   8      ACOES                                                                                                 
+                                                   9      OUTRAS GARANTIAS                                                                                      
+                                                  10      NP C/ PENHORA SUFICIENTE                                                                              
+                                                  11      NP C/ PENHORA INSUFICIENTE                                                                            
+                                                  12      AL C/ PENHORA SUFICIENTE                                                                              
+                                                  13      AL C/ PENHORA INSUFICIENTE                                                                            
+                                                  14      PENHOR C/ PENHORA SUFICIENTE                                                                          
+                                                  15      PENHOR C/ PENHORA INSUFICIENTE                                                                        
+                                                  16      FIANCA C/ PENHORA SUFICIENTE                                                                          
+                                                  17      FIANCA C/ PENHORA INSUFICIENTE                                                                        
+                                                  18      WARRANT C/ PENHORA SUFICIENTE                                                                         
+                                                  19      WARRANT C/ PENHORA INSUFICIENTE                                                                       
+                                                  20      LETRA DE CAMBIO C/ PENHORA SUFICIENTE                                                                 
+                                                  21      LETRA DE CAMBIO C/ PENHORA INSUFICIENTE                                                               
+                                                  22      NOTA PROMISSORIA                                                                                      
+                                                  23      AVAL                                                                                                  
+                                                  24      PENHOR RURAL                                                                                          
+                                                  25      NOTA PROMISSORIA RURAL                                                                                
+                                                  26      PENHOR "CAUCAO"                                                                                       
+                                                  27      PENHOR E HIPOTECA                                                                                     
+                                                  28      ORPAGS                                                                                                
+                                                  29      CHEQUES                                                                                               
+                                                  30      VENDOR                                                                                                
+                                                  31      ALIENACAO DE BENS NOVOS FINANCIADOS                                                                   
+                                                  32      APLICACAO FINANCEIRA                                                                                  
+                                                  33      ARRENDAMENTO MERCANTIL                                                                                
+                                                  34      CESSAO DE DIREITOS CREDITORIOS                                                                        
+                                                  35      ALIENACAO DE BENS USADOS FINANCIADOS                                                                  
+                                                  36      HIPOTECA - SECURITIZACAO                                                                              
+                                                  37      NP DE FUNCIONARIOS DA ORGANIZACAO                                                                     
+                                                  38      ALIENACAO DE AUTOMOVEIS/VEICULOS USADOS                                                               
+                                                  39      ALIEN.DE AUTOM.VEIC.USADOS FINANCIAVEIS                                                               
+                                                  40      ALIEN.DE AUTOM./VEIC.NOVOS FINANCIAVEIS                                                               
+                                                  41      ALIENACAO DE MAQUINAS/EQUIPAMENTOS                                                                    
+                                                  42      TD - TIME DEPOSIT                                                                                     
+                                                  43      ALIENACAO DE MAQ./EQUIPTOS.FINANCIAVEIS                                                               
+                                                  44      ARRENDTO.DE AUTOM./VEICULOS USADOS                                                                    
+                                                  45      ARRENDTO.DE AUTOM./VEICULOS NOVOS                                                                     
+                                                  46      ARRENDTO.DE MAQUINAS/EQUIPAMENTOS                                                                     
+                                                  47      COBRANCA SIMPLES                                                                                      
+                                                  48      CD - CERTIFICADO DE DEPOSITO                                                                          
+                                                  49      MONEY MARKET                                                                                          
+                                                  50      TITS.DE CREDIT DE MERC.DE CAP.DOMESTICOS                                                              
+                                                  51      ADR'S - AMERICAN DEPOSITARY RECEIPTS.                                                                 
+                                                                                                                                                                
+CLLP2576                                ARQUIVO COM OS DADOS DO CADASTRO DE GARANTIA                                 PAG.:         2                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+                                              CODIGO      DESCRICAO                                                                                             
+                                                  52      RECEBIVEIS DE EXPORT. CESSAO FIDUCIARIA                                                               
+                                                  53      RECEBIVEIS DE EXPORTACAO - PENHOR                                                                     
+                                                  54      TITULOS SOBERANOS                                                                                     
+                                                  55      TITULOS PRIVADOS                                                                                      
+                                                  56      DEBENTURES CONVERSIVEIS EM ACOES                                                                      
+                                                  57      DEBENTURES NAO CONVERSIVEIS EM ACOES                                                                  
+                                                  58      COLLECTION ACCOUNT NO EXTERIOR                                                                        
+                                                  59      BANK GUARANTEES                                                                                       
+                                                  60      CONTINUING GUARANTEES / UNDERTAKING                                                                   
+                                                  61      SAQUES DE IMPORT. / EXPORTACAO COM AVAL                                                               
+                                                  62      SAQUES DE IMPORTACAO/EXPORTACAO SEM AVAL                                                              
+                                                  63      PENHOR DE APLIC.FINANCEIRA BRADESCO-CDB                                                               
+                                                  64      CES.FIDUCIARIA DE APL.FIN.BRADESCO-CDB                                                                
+                                                  65      PENHOR DE APL.FIN.OUTRAS INSTIT.-CDB                                                                  
+                                                  66      CES.FIDUCIARIA DE APL.OUTRAS INSTIT.-CDB                                                              
+                                                  67      PENHOR DE C.DE CRD.MASTERCARD PERFORMADO                                                              
+                                                  68      CES.FIDUC.DE C.CR.MASTERCARD PERFORMADO                                                               
+                                                  69      PENHOR DE C.CR.MARTERCARD A PERFORMAR                                                                 
+                                                  70      CES.FIDUC.DE C.CR.MARTERCARD A PERFORMAR                                                              
+                                                  71      PENHOR DE C.CRED.AMEX PERFORMADO                                                                      
+                                                  72      CES.FIDUC.DE C.CR.AMEX PERFORMADO                                                                     
+                                                  73      PENHOR DE C.CRED.AMEX A PERFORMAR                                                                     
+                                                  74      CES.FIUD.DE C.CRED.AMEX A PERFORMAR                                                                   
+                                                  75      PENHOR DE C.CRED.VISA PERFORMADO                                                                      
+                                                  76      CES.FIUD.DE C.CRED.VISA PERFORMADO                                                                    
+                                                  77      PENHOR DE C.CRED.VISA A PERFORMAR                                                                     
+                                                  78      CES.FIDUC.DE C.CRED.VISA A PERFORMAR                                                                  
+                                                  79      PENHOR DE APL.FIN.ORG.BRADESCO-FUNDOS                                                                 
+                                                  80      PENHOR DE APL.FIN.ORG.BRADESCO-POUPANCA                                                               
+                                                  81      PENHOR DE APL.FIN.ORG.BRA.L.HIPOTECARIAS                                                              
+                                                  82      PENHOR DE APL.FIN.ORG.BRAD.-DEBENTURES                                                                
+                                                  83      PENHOR DE APL.FIN.ORG.BRAD.-OUTRAS                                                                    
+                                                  84      CES.FIDUC.DE APL.FIN.ORG.BRAD-FUNDOS                                                                  
+                                                  85      CES.FIDUC.DE APL.FIN.ORG.BRAD.-POUPANCA                                                               
+                                                  86      CES.FID.DE AP.FIN.ORG.BRD.L.HIPOTECARIAS                                                              
+                                                  87      CES.FIDUCIARIA DEBENTURES ORG.BRADESCO                                                                
+                                                  88      SEM GARANTIAS                                                                                         
+                                                  89      OMISSAO DE GARANTIA                                                                                   
+                                                  90      PESSOAL                                                                                               
+                                                  91      REAL                                                                                                  
+                                                  92      SEM GARANTIA CONSIGNAÇÃO                                                                              
+                                                  93      CESSAO DIREITOS CREDIT.P/FORNEC.ESTADO                                                                
+                                                  94      RECOMPRA ESPECIFICA                                                                                   
+                                                  95      CESSAO FIDUCIARIA DE DUPLICATAS                                                                       
+                                                  96      CESSAO FIDUCIARIA DE ORPAGS                                                                           
+                                                  97      CESSAO FIDUCIARIA DE CHEQUES                                                                          
+                                                  98      CESSAO FIDUCIARIA DE APLIC.FINANCEIRA                                                                 
+                                                  99      CESSAO FIDUCIARIA DIREITOS CREDITORIOS                                                                
+                                                 100      CESSAO FID.DIR.CR.DEC.CR.CTA.DEPOSITO                                                                 
+                                                 101      CDA-WA CERTIFICADO DE DEPOS.AGROPECUARIO                                                              
+                                                 102      CES.FID.DE APL.FIN.ORG.BRADESCO-OUTROS                                                                
+                                                                                                                                                                
+CLLP2576                                ARQUIVO COM OS DADOS DO CADASTRO DE GARANTIA                                 PAG.:         3                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+                                              CODIGO      DESCRICAO                                                                                             
+                                                 103      PENHOR DE APL.FIN.OUTRAS INST.-FUNDOS                                                                 
+                                                 104      PENHOR DE APL.FIN.OUTRAS INST.-POUPANCA                                                               
+                                                 105      PENHOR DE APL.FIN.OUTS INST.-L.HIPOTECAR                                                              
+                                                 106      PENHOR DE APL.FIN.OUTRAS INST.-OUTROS                                                                 
+                                                 107      CES.FIDUC.DE APL.OUTRAS INST.-FUNDOS                                                                  
+                                                 108      CES.FIDUC.DE APL.OUTRAS INST.-POUPANCA                                                                
+                                                 109      CES.FIDUC.DE APL.OUTS INST.-L.HIPOETACAR                                                              
+                                                 110      CES.FIDUC.DE APL.OUTRAS INST.-OUTROS                                                                  
+                                                 111      BOLSA DE MERCADOS FUTUROS                                                                             
+                                                 112      DERIVATIVO DE CREDITO(SWAP DE CREDITO)                                                                
+                                                 113      ALIENACAO AERONAVE NOVA                                                                               
+                                                 114      ALIENACAO AERONAVE USADA                                                                              
+                                                 115      ALIENACAO AERONAVE NOVAS FINANCIAVEIS                                                                 
+                                                 116      ALIENACAO AERONAVE USADAS FINANCIAVEIS                                                                
+                                                 117      ALIENACAO FIDUCIARIA IMOVEIS RESIDENCIAL                                                              
+                                                 118      ALIENACAO FIDUCIARIA OUTROS IMOVEIS                                                                   
+                                                 119      HIPOTECA RESIDENCIAL                                                                                  
+                                                 120      HIPOTECA OUTROS                                                                                       
+                                                 121      ARRENDAMENTO AERONAVE NOVA                                                                            
+                                                 122      ARRENDAMENTO AERONAVE USADA                                                                           
+                                                 123      HIPOTECA AERONAVE NOVA                                                                                
+                                                 124      HIPOTECA AERONAVE USADA                                                                               
+                                                 125      ALIENACAO EMBARCACAO NOVA                                                                             
+                                                 126      ALIENACAO EMBARCACAO USADA                                                                            
+                                                 127      ALIENACAO EMBARCACAO NOVA FINANCIAVEIS                                                                
+                                                 128      ALIENACAO EMBARCACAO USADA FINANCIAVEIS                                                               
+                                                 129      ARRENDAMENTO EMBARCACAO NOVA                                                                          
+                                                 130      ARRENDAMENTO EMBARCACAO USADA                                                                         
+                                                 131      HIPOTECA EMBARCACAO NOVA                                                                              
+                                                 132      HIPOTECA EMBACACAO USADA                                                                              
+                                                 133      NOTA PROMISSORIA EM MOEDA ESTRANGEIRA                                                                 
+                                                 134      PENHOR DE COBRANCA SIMPLES ESCRITURAL                                                                 
+                                                 135      PENHOR DE COBRANCA SIMPLES NORMAL                                                                     
+                                                 136      PENHOR DE DUPLICATA - ESCRITURAL                                                                      
+                                                 137      PENHOR DE DUPLICATA NORMAL                                                                            
+                                                 138      NOTA PROMISSORIA DE TERCEIROS                                                                         
+                                                 139      ALIEN DE AUT VEIC SEMINOVOS FINANCIAVEIS                                                              
+                                                 140      ALIENACAO DE AUTOM VEIC SEMINOVOS                                                                     
+                                                 141      ARRENDTO DE AUTOM VEIC SEMINOVOS                                                                      
+                                                 142      ALIEN DE MAQ E EQUIP NOVOS                                                                            
+                                                 143      ALIEN DE MAQUINAS E EQUIPAMENTOS USADOS                                                               
+                                                 144      ALIEN DE MAQ E EQUIPS NOVOS FINANCIAVEIS                                                              
+                                                 145      ALIEN DE MAQ E EQUIP USADOS FINANCIAVEIS                                                              
+                                                 146      ARRENDTO DE MAQ E EQUIPAMENTOS NOVOS                                                                  
+                                                 147      ARRENDTO.DE MAQ.E EQUIPAMENTOS USADOS                                                                 
+                                                 148      ALIENACAO FIDUCIARIA E IMOVEIS RURAL                                                                  
+                                                 149      HIPOTECA RURAL                                                                                        
+                                                 150      PENHOR DE CHEQUES                                                                                     
+                                                 151      ACOES SEM COTACAO EM BOLSA                                                                            
+                                                 152      ACOES COM COTACAO EM BOLSA                                                                            
+                                                 153      CES.FIDUC. DE DIR.CREDIT.PERFORM C/ANUEN                                                              
+                                                                                                                                                                
+CLLP2576                                ARQUIVO COM OS DADOS DO CADASTRO DE GARANTIA                                 PAG.:         4                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+                                              CODIGO      DESCRICAO                                                                                             
+                                                 154      CES.FID. DE DIR.CREDIT.PERFORM.S/ANUENCI                                                              
+                                                 155      CES.FID. DE DIR.CRED.A PERFORM C/ANUENCI                                                              
+                                                 156      CES.FID. DE DIR.CRED.A PERFORM S/ANUENCI                                                              
+                                                 157      CES.FID. DE DIR.CRED.DE CONTRS.BRADESCO                                                               
+                                                 158      PENHOR DE DIR.CRED. DE CONTRS.BRADESCO                                                                
+                                                 159      PENHOR DE DIR.CREDITORIOS BOLETOS                                                                     
+                                                 160      PENHOR DE DIR.CREDITORIOS BRADESCO SAUDE                                                              
+                                                 161      PENHOR DE DIR.CRED.PERFORMADOS C/ANUENCI                                                              
+                                                 162      PENHOR DE DIR.CRED.PERFORMADOS S/ANUENCI                                                              
+                                                 163      PENHOR DE DIR.CRED.A PERFORM C/ANUENCIA                                                               
+                                                 164      PENHOR DE DIR.CRED. A PERFORMAR S/ANUENC                                                              
+                                                 165      CES.FIDUC. VISA ELECTRON A PERFORMAR                                                                  
+                                                 166      CES.FIDUCIARIA VISA ELECTRON PERFORMADO                                                               
+                                                 167      PENHOR VISA ELECTRON A PERFORMAR                                                                      
+                                                 168      PENHOR VISA ELECTRON PERFORMADO                                                                       
+                                                 169      PENHOR AGRICOLA                                                                                       
+                                                 170      PENHOR PECUARIO                                                                                       
+                                                 171      GUARANTEE LETTER                                                                                      
+                                                 172      COTAS DE FUNDOS DE INVESTIMENTO                                                                       
+                                                 173      BDRS BRAZILIAN DEPOSITARY RECEIPTS                                                                    
+                                                 174      UNITS                                                                                                 
+                                                 175      TDA - TITULOS DA DIVIDA AGRARIA                                                                       
+                                                 176      LTN - LETRA DO TESOURO NACIONAL                                                                       
+                                                 177      LFT - LETRA FINANCEIRAS DO TESOURO                                                                    
+                                                 178      PENHOR DE APL.FIN.OUTS.INST.DEBENTURES                                                                
+                                                 179      CES.FIDUCIARIA-DEBENTURES-OUTS.INSTIT.                                                                
+                                                 180      CREDIT LINKED NOTES - CLN                                                                             
+                                                 181      FINASA AL.BENS VEIC.NOV.AUTOS SEMI-NOVO                                                               
+                                                 182      FINASA ALIEN.DE BENS VEIC.USADOS E AUTOS                                                              
+                                                 322      ALIEN DE MAQ E EQUIP USADOS FINANCIAVEIS                                                              
+                                                 369      Teste catalogo TU                                                                                     
+                                                 398      GARANTIA SEGUROS DIVERSOS CAMBIO - 1                                                                  
+                                                 399      GARANTIA SEGUROS DIVERSOS CAMBIO - 2                                                                  
+                                                 412      GARANTIA 412                                                                                          
+                                                 413      COMFORT LETTER                                                                                        
+                                                 414      GARANTIA 414                                                                                          
+                                                 416      GARANTIA 416                                                                                          
+                                                 417      COMFORT LETTER(STRONG)                                                                                
+                                                 425      ARREND.1 -VEICULOS NOVOS E AUT.SEMI-NOVO                                                              
+                                                 426      ARRENDAMENTO 3 - DEMAIS BENS                                                                          
+                                                 428      FIANCA BANCARIA                                                                                       
+                                                 430      STAND BY LETTER OF CREDIT                                                                             
+                                                 431      TESTE RO - 19/07                                                                                      
+                                                 432      TESTES DE RO                                                                                          
+                                                 433      ALIENACAO FIDUCIARIA IMOVEIS-PREDIOS VER                                                              
+                                                 454      ARRENDAMENTO 2 - VEICULOS USADOS E AUTOS                                                              
+                                                 455      ACORDO DE RECOMPRA                                                                                    
+                                                 501      TESTE GART                                                                                            
+                                                 511      GARANTIA 511                                                                                          
+                                                 512      GARANTIA 512                                                                                          
+                                                 517      GARANTIA 517                                                                                          
+                                                                                                                                                                
+CLLP2576                                ARQUIVO COM OS DADOS DO CADASTRO DE GARANTIA                                 PAG.:         5                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+                                              CODIGO      DESCRICAO                                                                                             
+                                                 522      GARANTIA 522                                                                                          
+                                                 530      APOLICE DE SEGURO GARANTIA                                                                            
+                                                 531      CESSAO FIDUCIARIA APLIC.FINANCEIRA ORGAN                                                              
+                                                 666      Teste_v2                                                                                              
+                                                 679      GARANTIA 679                                                                                          
+                                                 705      Garantia 705                                                                                          
+                                                 719      Teste Debentures                                                                                      
+                                                 734      garantia 734                                                                                          
+                                                 851      ddd                                                                                                   
+                                                 854      teste para ativação                                                                                   
+                                                 917      PENHOR PECUÁRIO - GRUPO 17                                                                            
+                                                 986      TESTE DDS                                                                                             
+                                                 987      Teste inclusão DDS                                                                                    
+                                                 988      Teste                                                                                                 
+                                                 990      Teste de reativação / Exclusão                                                                        
+                                                 993      COBRANÇA SIMPLES                                                                                      
+                                                 994      Garantia de Teste Unitário                                                                            
+                                                 995      Catalogo de Teste                                                                                     
+                                                 996      TESTE FEMP                                                                                            
+                                                 997      CATALOGO DO MARCELO 2                                                                                 
+                                                 998      CATALOGO DO MARCELO                                                                                   
+                                                      TOTALIZACAO                                                                                               
+                                         -------------------------------------------------------                                                                
+                                         REGISTROS LIDOS NO CADAGART............:         225                                                                   
+                                         REGISTROS GRAVADOS NO ARQSAIDA.........:         225                                                                   
+                                         REGISTROS GRAVADOS NO RELATORIO........:         225                                                                   

@@ -1,0 +1,152 @@
+//T7WPX010 JOB 'PEAT,4510,PR41','G00347',MSGCLASS=Z,SCHENV=TEST         
+//JOBLIB   DD DSN=AP.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AP.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2CA.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***   AGENCIA, CONTA, DATA MOV, CRED/DEB, VALOR                     
+//*                                                                     
+//SORTIN   DD DSN=AP.T7WP.S052851.MOVCONTB.CONV,                        
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=AP.T7WP.MOVCONTB.CONV.TEMP,                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0020000,08000),RLSE),                              
+//       DCB=(AP.A,LRECL=0102,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(3,3,A,10,4,A,15,5,A,27,1,D,28,8,D),                       
+         FORMAT=BI                                                      
+ OUTFIL OUTREC=(1,102),                                                 
+       INCLUDE=((3,3,PD,EQ,00002,AND,10,4,PD,EQ,0037960),OR,            
+                (3,3,PD,EQ,00002,AND,10,4,PD,EQ,0051409),OR,            
+                (3,3,PD,EQ,00002,AND,10,4,PD,EQ,0063692))               
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    AGENCIA, CONTA                                               
+//*                                                                     
+//SORTIN   DD DSN=AP.T7WP.S052851.J43S04.ARQSLDOS.ATU,                  
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=AP.T7WP.J43S04.ARQSLDOS.ATU.TEMP,                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0020000,08000),RLSE),                              
+//       DCB=(AP.A,LRECL=0050,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,3,A,4,4,A),                                             
+         FORMAT=BI                                                      
+ OUTFIL OUTREC=(1,50),                                                  
+       INCLUDE=((1,3,PD,EQ,00002,AND,4,4,PD,EQ,0037960),OR,             
+                (1,3,PD,EQ,00002,AND,4,4,PD,EQ,0051409),OR,             
+                (1,3,PD,EQ,00002,AND,4,4,PD,EQ,0063692))                
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//* ***   AGENCIA, CONTA, DATA MOV, CRED/DEB, VALOR                     
+//*                                                                     
+//SORTIN   DD DSN=AP.T7WP.S052851.MVTODIAS.J0043,                       
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=AP.T7WP.MVTODIAS.J0043.TEMP,                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0020000,08000),RLSE),                              
+//       DCB=(AP.A,LRECL=0102,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(3,3,A,10,4,A,15,5,A,27,1,D,28,8,D),                       
+         FORMAT=BI                                                      
+ OUTFIL OUTREC=(1,102),                                                 
+       INCLUDE=((3,3,PD,EQ,00002,AND,10,4,PD,EQ,0037960),OR,            
+                (3,3,PD,EQ,00002,AND,10,4,PD,EQ,0051409),OR,            
+                (3,3,PD,EQ,00002,AND,10,4,PD,EQ,0063692))               
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=ICETOOL                                             
+//IN       DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//*      DISP=SHR                                                       
+//LISTA    DD SYSOUT=%%FORM#LUFG,                                       
+//DFSMSG   DD SYSOUT=*                                                  
+//TOOLMSG  DD SYSOUT=*                                                  
+//TOOLIN   DD *                                                         
+ DISPLAY FROM(IN) LIST(LISTA) -                                         
+ BLANK -                                                                
+ BETWEEN(1) -                                                           
+ TITLE('CONTAS SELECIONADAS DO MOVIMENTO DIARIO') -                     
+ DATE(DM4/)   TIME   PAGE -                                             
+ HEADER('BCO')             ON(001,02,PD,E'999',NOST) -                  
+ HEADER('AG')              ON(003,03,PD,E'99999',NOST) -                
+ HEADER('GRP')             ON(006,02,PD,E'999',NOST) -                  
+ HEADER('SGRP')            ON(008,02,PD,E'999',NOST) -                  
+ HEADER('CONTA')           ON(010,04,PD,E'9999999',NOST) -              
+ HEADER('DIG')             ON(014,01,CH) -                              
+ HEADER('DT MOV')          ON(015,05,PD,E'999999999',NOST) -            
+ HEADER('LANC')            ON(020,03,PD,E'99999',NOST) -                
+ HEADER('N DOC')           ON(023,04,PD,E'9999999',NOST) -              
+ HEADER('DEB','CRED')      ON(027,01,CH) -                              
+ HEADER('VALOR')           ON(028,08,PD,C2,N15) -                       
+ HEADER('DIA','VIN')       ON(036,02,PD,E'999',NOST) -                  
+ HEADER('CENT','CUST')     ON(038,04,CH) -                              
+ HEADER('SUBC','CRS')      ON(042,03,PD,E'99999',NOST) -                
+ HEADER('SERV')            ON(045,02,CH) -                              
+ HEADER('TP','ENT')        ON(047,01,CH) -                              
+ HEADER('SN')              ON(048,01,CH) -                              
+ HEADER('DIA','LA')        ON(081,02,ZD,E'99',NOST) -                   
+ HEADER('DT ORI')          ON(083,05,PD,E'999999999',NOST)              
+//*                                                                     
+//STEP5    EXEC PGM=ICETOOL                                             
+//IN       DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//*      DISP=SHR                                                       
+//LISTA    DD SYSOUT=%%FORM#LUFH,                                       
+//DFSMSG   DD SYSOUT=*                                                  
+//TOOLMSG  DD SYSOUT=*                                                  
+//TOOLIN   DD *                                                         
+ DISPLAY FROM(IN) LIST(LISTA) -                                         
+ BLANK -                                                                
+ BETWEEN(1) -                                                           
+ TITLE('SALDO DAS CONTAS SELECIONADAS') -                               
+ DATE(DM4/)   TIME   PAGE -                                             
+ HEADER('AG ESTOQUE')      ON(001,03,PD,E'99999',NOST) -                
+ HEADER('CONTA ESTOQUE')   ON(004,04,PD,E'9999999',NOST) -              
+ HEADER('SALDO ESTOQUE')   ON(008,08,PD,C2,N15) -                       
+ HEADER('AG MP')           ON(016,03,PD,E'99999',NOST) -                
+ HEADER('CONTA MP')        ON(019,04,PD,E'9999999',NOST) -              
+ HEADER('SALDO MP')        ON(023,08,PD,C2,N15) -                       
+ HEADER('OPCAO')           ON(031,01,CH)                                
+//*                                                                     
+//STEP6    EXEC PGM=ICETOOL                                             
+//IN       DD DSN=*.STEP3.MVTODIAS,                                     
+//       DISP=(OLD,DELETE,KEEP)                                         
+//*      DISP=SHR                                                       
+//LISTA    DD SYSOUT=%%FORM#LUFW,                                       
+//DFSMSG   DD SYSOUT=*                                                  
+//TOOLMSG  DD SYSOUT=*                                                  
+//TOOLIN   DD *                                                         
+ DISPLAY FROM(IN) LIST(LISTA) -                                         
+ BLANK -                                                                
+ BETWEEN(1) -                                                           
+ TITLE('CONTAS SELECIONADAS SENSIBILIZADAS') -                          
+ DATE(DM4/)   TIME   PAGE -                                             
+ HEADER('BCO')             ON(001,02,PD,E'999',NOST) -                  
+ HEADER('AG')              ON(003,03,PD,E'99999',NOST) -                
+ HEADER('GRP')             ON(006,02,PD,E'999',NOST) -                  
+ HEADER('SGRP')            ON(008,02,PD,E'999',NOST) -                  
+ HEADER('CONTA')           ON(010,04,PD,E'9999999',NOST) -              
+ HEADER('DIG')             ON(014,01,CH) -                              
+ HEADER('DT MOV')          ON(015,05,PD,E'999999999',NOST) -            
+ HEADER('LANC')            ON(020,03,PD,E'99999',NOST) -                
+ HEADER('N DOC')           ON(023,04,PD,E'9999999',NOST) -              
+ HEADER('DEB','CRED')      ON(027,01,CH) -                              
+ HEADER('VALOR')           ON(028,08,PD,C2,N15) -                       
+ HEADER('DIA','VIN')       ON(036,02,PD,E'999',NOST) -                  
+ HEADER('CENT','CUST')     ON(038,04,CH) -                              
+ HEADER('SUBC','CRS')      ON(042,03,PD,E'99999',NOST) -                
+ HEADER('SERV')            ON(045,02,CH) -                              
+ HEADER('TP','ENT')        ON(047,01,CH) -                              
+ HEADER('SN')              ON(048,01,CH) -                              
+ HEADER('DIA','LA')        ON(081,02,ZD,E'99',NOST) -                   
+ HEADER('DT ORI')          ON(083,05,PD,E'999999999',NOST)              
+//*                                                                     

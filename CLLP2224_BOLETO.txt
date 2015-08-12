@@ -1,0 +1,37 @@
+      =====================================================        
+      FAVOR ALTERAR O JOB CLLP2224, CONFORME INDICA ABAIXO:        
+      =====================================================        
+
+	(1) -  ALTERAR O STEP2:
+DE:
+//MVBAIXAS DD DSN=MX.CLLP.D0PRVMZ.CGTEMP3M(+1),           
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=VTSLG,                                      
+//       VOL=(,,,255),                                    
+//       DCB=(MX.A,LRECL=0345,RECFM=FB)                   
+
+PARA:
+
+//MVBAIXAS DD DSN=MX.CLLP.D0PRVMZ.CGTEMP3M(+1),           
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=VTSLG,                                      
+//       VOL=(,,,255),                                    
+//       DCB=(MX.A,LRECL=0411,RECFM=FB)                   
+
+	(2) -  ALTERAR O STEP3:
+DE:
+//ARQTB08S DD DSN=MX.CLLP.CGMAIS3M(+1),   
+//       DISP=(,CATLG,DELETE),            
+//       UNIT=(DISCO,50),                 
+//       SPACE=(TRK,(020000,4000),RLSE),  
+//       DCB=(MX.A,LRECL=0350,RECFM=FB),  
+//       DATACLAS=PRODX37                 
+
+PARA:
+
+//ARQTB08S DD DSN=MX.CLLP.CGMAIS3M(+1),   
+//       DISP=(,CATLG,DELETE),            
+//       UNIT=(DISCO,50),                 
+//       SPACE=(TRK,(020000,4000),RLSE),  
+//       DCB=(MX.A,LRECL=0411,RECFM=FB),  
+//       DATACLAS=PRODX37                 

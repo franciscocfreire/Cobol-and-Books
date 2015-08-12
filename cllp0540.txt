@@ -1,0 +1,212 @@
+//CLLP0540 JOB 'CLLP,4120,PR32','E304946',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=IMS                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTATWH                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTATWC                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTATWD                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTATWE                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTATWF                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTATWG                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=CLLP9220                                            
+//*                                                                     
+//* ***    CRIA ARQUIVO BASE PARA CALCULO COM                           
+//* ***    65 POSICOES A PARTIR DO DATAMOV                              
+//*                                                                     
+//DATAMOV  DD DSN=MX.CLLP.PRV.DATAMOV(0),                               
+//       DISP=SHR                                                       
+//DATACALI DD DSN=MX.CLLP.PRV.DATACALC.ANT(0),                          
+//       DISP=SHR                                                       
+//DATACALS DD DSN=MX.CLLP.PRV.DATACALC.CLLP0540(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0065,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP1005,                                           
+//       COND=(789,EQ,STEP1)                                            
+//*                                                                     
+//* ***     ESTE STEP SERA EXECUTADO SE O STEP1 TERMINAR COM COND       
+//* ***     IGUAL A 000 - DIFERENTE DE 789                              
+//* ***                                                                 
+//* ***     CALCULA VALOR DE COBRANCA ATE DATA DO MOVTO MAIS 1 DIA UTIL 
+//*                                                                     
+//CADANT   DD DSN=MX.CLLP.CADALPCL.LEI(0),                              
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=*.STEP1.DATACALS,                                     
+//       DISP=OLD                                                       
+//ARQTAXA2 DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//CADATU   DD DSN=MX.CLLP.CADATU.CLLP0540.LEI(+1),                      
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(600000,200000),RLSE),                              
+//       DCB=(MX.A,LRECL=0768,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//FITAPEND DD DUMMY,                                                    
+//       DCB=(LRECL=0668,RECFM=FB)                                      
+//RELCAL2  DD SYSOUT=%%FORM#ATWH,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELNCAL2 DD SYSOUT=%%FORM#ATWC,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP1006,                                           
+//       PARM=02,                                                       
+//       COND=(789,EQ,STEP1)                                            
+//*                                                                     
+//* ***     CRIA CADASTRO COM IOF COMPLEMENTAR                          
+//* ***     QUANDO COND IGUAL 000                                       
+//*                                                                     
+//CADANT   DD DSN=*.STEP2.CADATU,                                       
+//       DISP=OLD                                                       
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATAMOV(0),                               
+//       DISP=SHR                                                       
+//CADATU   DD DSN=MX.CLLP.CADALPCL.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(600000,200000),RLSE),                              
+//       DCB=(MX.A,LRECL=0768,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO1  DD SYSOUT=%%FORM#ATWD,                                       
+//       DCB=(LRECL=0180,RECFM=FBA)                                     
+//RELATO2  DD SYSOUT=%%FORM#ATWE,                                       
+//       DCB=(LRECL=0180,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3A   EXEC PGM=CLLP0139,                                           
+//       COND=(789,EQ,STEP1)                                            
+//*                                                                     
+//* ***    FORCA CRIACAO DOS CAMPOS DA LT                               
+//*                                                                     
+//ARQEXP01 DD DSN=*.STEP3.CADATU,                                       
+//       DISP=SHR                                                       
+//ARQSAI01 DD DSN=MX.CLLP.CADALPCL(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       SPACE=(TRK,(020000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//*                                                                     
+//STEP4    EXEC PGM=CLLP7004,                                           
+//       COND=(789,EQ,STEP1)                                            
+//*                                                                     
+//* ***     GRAVA SOMENTE PENDENCIAS ATIVAS                             
+//* ***     QUANDO COND IGUAL A 000                                     
+//*                                                                     
+//CADALPCL DD DSN=*.STEP3A.ARQSAI01,                                    
+//       DISP=SHR                                                       
+//ARQDCIP  DD DSN=MX.CLLP.D0PRVMZ.FITAPEND(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0300000,0100000),RLSE),                            
+//       DCB=(MX.A,LRECL=0668,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//CADATIVO DD DSN=MX.CLLP.CADATIVO(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0300000,0100000),RLSE),                            
+//       DCB=(MX.A,LRECL=0668,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//CADA0600 DD DSN=MX.CLLP.CADA0600(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0300000,0100000),RLSE),                            
+//       DCB=(MX.A,LRECL=0600,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC PGM=CLLP1006,                                           
+//       PARM=02,                                                       
+//       COND=(789,NE,STEP1)                                            
+//*                                                                     
+//* ***     CRIA CADASTRO COM IOF COMPLEMENTAR                          
+//* ***     QUANDO COND IGUAL 789                                       
+//*                                                                     
+//CADANT   DD DSN=MX.CLLP.CADALPCL.LEI(0),                              
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATAMOV(0),                               
+//       DISP=SHR                                                       
+//CADATU   DD DSN=MX.CLLP.CADALPCL.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(600000,200000),RLSE),                              
+//       DCB=(MX.A,LRECL=0768,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO1  DD SYSOUT=%%FORM#ATWF,                                       
+//       DCB=(LRECL=0180,RECFM=FBA)                                     
+//RELATO2  DD SYSOUT=%%FORM#ATWG,                                       
+//       DCB=(LRECL=0180,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5A   EXEC PGM=CLLP0139,                                           
+//       COND=(789,NE,STEP1)                                            
+//*                                                                     
+//* ***    RETIRA CAMPOS DA LT                                          
+//*                                                                     
+//ARQEXP01 DD DSN=*.STEP5.CADATU,                                       
+//       DISP=SHR                                                       
+//ARQSAI01 DD DSN=MX.CLLP.CADALPCL(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       SPACE=(TRK,(020000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6    EXEC PGM=CLLP7004,                                           
+//       COND=(789,NE,STEP1)                                            
+//*                                                                     
+//* ***     GRAVA SOMENTE PENDENCIAS ATIVAS                             
+//* ***     QUANDO COND IGUAL A 789                                     
+//*                                                                     
+//CADALPCL DD DSN=*.STEP5A.ARQSAI01,                                    
+//       DISP=SHR                                                       
+//ARQDCIP  DD DSN=MX.CLLP.D0PRVMZ.FITAPEND(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0100000,060000),RLSE),                             
+//       DCB=(MX.A,LRECL=0668,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//CADATIVO DD DSN=MX.CLLP.CADATIVO(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(600000,200000),RLSE),                              
+//       DCB=(MX.A,LRECL=0668,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//CADA0600 DD DSN=MX.CLLP.CADA0600(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,0100000),RLSE),                            
+//       DCB=(MX.A,LRECL=0600,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

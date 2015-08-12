@@ -1,0 +1,979 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      1                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+          1     338.016  0001   09       2     94.206 SHIMADA SEMENZATO MRL LTDA I                  0                                                           
+          2     409.698  0000   35       2    152.339 JOSE MAURICIO BONATO                          0                                                           
+          3     588.360  0001   56       2    123.324 S H DA COSTA ME                               0                                                           
+          4     731.878  0001   05       2    155.757 REPUBLICA DISTRIBUIDORA D                     0                                                           
+          5     931.978  0001   77       2    106.511 CONFIANCA PRESTADORA DE SERVIC                0                                                           
+          6   1.102.049  0001   18      64    254.260 ROSELI MATIUSSE FURUZAWA DROGA                0                                                           
+          7   1.135.511  0001   83      23    116.244 EDUARDO CABRAIA GAFFOEIO RP                   0                                                           
+          8   1.237.103  0001   32       2    171.065 SERGIO ANTONIO RODRIGUES                      0                                                           
+          9   1.314.369  0001   31      23    149.026 PRISMA PRODUCAO E EDICAO DE TE                0                                                           
+         10   1.391.047  0001   96       2    156.104 CARLOS EDUARDO PAES DE OL                     0                                                           
+         11   1.599.082  0001   03       3    179.883 AROEIRA TRATAMENTO DE MADEIRAS                0                                                           
+         12   1.830.620  0001   10       2    158.153 SHOW BYKE DE MARILIA LTDA                     0                                                           
+         13   1.849.378  0000   50       2     94.855 JOAO A RODRIGUES                              0                                                           
+         14   1.850.648  0000   84       2        268 ALCIDES NIVALDO PERES                         0                                                           
+         15   1.968.588  0000   28       2        364 AURELINO RODRIGUES MESQUITA                   0                                                           
+         16   1.969.338  0000   97       2    117.733 IOLANDO DE LIMA                               0                                                           
+         17   2.039.120  0001   28      46    582.593 EXTRATO FLORA INDUSTRIA DE COS                0                                                           
+         18   2.374.739  0001   99      64    252.259 EMPRESA URBANA DE INCORPORACOE                0                                                           
+         19   2.438.527  0001   28       2    580.100 RIO BRANCO IMPORTS DE MARILIA                 0                                                           
+         20   2.591.035  0001   78       2    127.288 STUDIO LASER LTDA ME                          0                                                           
+         21   2.669.929  0001   33      54    146.651 EDIVAR DOS SANTOS SILVA CALCAD                0                                                           
+         22   3.104.043  0001   05       3    197.913 AIRTON DUO - ME                               0                                                           
+         23   3.222.685  0001   09       2    110.720 VIA NORTE COMERCIAL DE VEICULO                0                                                           
+         24   3.541.131  0001   74      44     88.508 CARLOS EDUARDO DIAS TRANSPORTE                0                                                           
+         25   3.553.896  0001   24       2    152.740 AUTO MECANICA ZANETTI LTDA ME                 0                                                           
+         26   3.602.269  0001   36     121    143.682 INDUSTRIA E COMERCIO DE PECAS                 0                                                           
+         27   3.617.804  0001   22      54    148.178 JACIRA PINHEIRO KIKUGAWA BORDA                0                                                           
+         28   3.638.352  0001   65      46    400.110 IGNIS SERV MAO DE OBRA TEMPORA                0                                                           
+         29   3.755.695  0001   00      23    500.495 K. P. RIO PRETO EDITORA LTDA M                0                                                           
+         30   3.779.715  0001   82      23    157.179 R A ESTEVAN GASQUES                           0                                                           
+         31   4.016.047  0001   02      54    150.625 RHR COMERCIO DE MATERIAIS E SU                0                                                           
+         32   4.061.798  0001   32       3    180.911 TRANSPORTADORA LATERA LTDA ME                 0                                                           
+         33   4.160.209  0001   73       2    112.092 CARLAO REPRESENTACOES S/C LTDA                0                                                           
+         34   4.185.309  0001   54      25     79.211 MAZZON S. O. S. 24 HS. LTDA -                 0                                                           
+         35   4.190.396  0001   38       2    123.372 ART PARK LAZER E DIVERSOES LTD                0                                                           
+         36   4.250.892  0001   30      64    253.815 RIO DA PRATA S/C LTDA                         0                                                           
+         37   4.409.288  0000   18   2.501      5.890 OSVALDO APARECIDO VIEIRA TELLE                0                                                           
+         38   4.647.823  0001   64       2    124.572 ROSEMEIRE HORTOLANI BARROS ME                 0                                                           
+         39   4.647.823  0001   64       2    172.983 ROSEMEIRE HORTOLANI BARROS ME                 0                                                           
+         40   4.661.060  0001   06      64    302.387 DANIEL ALEXANDRE CABRAL ME                    0                                                           
+         41   4.695.927  0001   44      54    148.503 LOOK JEANS MODA JOVEM LTDA ME                 0                                                           
+         42   4.865.243  0001   43      23    148.474 LOBATO E SILVA COM E MATERIAIS                0                                                           
+         43   4.866.902  0001   66      46    447.686 CASA DE CARNES DOIS BOIADEIROS                0                                                           
+         44   4.866.902  0001   66      46    462.986 CASA DE CARNES DOIS BOIADEIROS                0                                                           
+         45   4.951.998  0000   00       2    119.064 JOAO VIEIRA CELIO                             0                                                           
+         46   5.011.153  0001   58      94     93.572 CARRYON VEICULOS ESPECIAIS LTD                0                                                           
+         47   5.033.894  0001   30       2    152.239 BENEDITA ROSA MARIANO TER                     0                                                           
+         48   5.050.388  0001   59       3    171.434 TRANSPORTADORA PEIXOTO LTDA ME                0                                                           
+         49   5.069.332  0001   46       3    172.993 SILVIA APARECIDA SONEGO                       0                                                           
+         50   5.095.111  0001   42      54    136.939 LAMI CABRAL COMERCIAL TEXTIL                  0                                                           
+         51   5.108.904  0001   59       3    172.565 ALDO A J DE ALVARENGA & CIA LT                0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      2                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+         52   5.126.605  0002   28      44     88.228 CONCRENORTE COMERCIAL LTDA EPP                0                                                           
+         53   5.208.770  0001   48      23    194.806 TREND BADY CONSULTORIA E ASSES                0                                                           
+         54   5.244.783  0001   72       2    117.580 IND OPTICA ANGERMAM VISION LTD                0                                                           
+         55   5.270.799  0001   50      54    234.894 HUSSEIN KHALIL IBRAHIM ME                     0                                                           
+         56   5.349.969  0001   96      64    252.668 AILA CRISTINA DE FREITAS PEREI                0                                                           
+         57   5.372.087  0001   41       7     83.706 WANDERLEY DE OLIVEIRA SANTOS -                0                                                           
+         58   5.544.691  0001   08      64    309.898 JMW TELECOMUNICACOES LTDA - ME                0                                                           
+         59   5.578.285  0001   66      46    448.720 ANDROMEDA ENGENHARIA LTDA                     0                                                           
+         60   5.902.850  0001   07      46    586.130 APRECCIA INDUSTRIA QUIMICA E F                0                                                           
+         61   6.088.366  0001   40      25     65.962 PEREIRA DUARTE E PINTO HORTIFR                0                                                           
+         62   6.373.837  0001   62       3    187.317 KANTU SOLUCOES PERSONALIZADAS                 0                                                           
+         63   6.677.287  0000   75     309    155.214 JOSE ALEXANDRE SILVA DOS SANTO                0                                                           
+         64   6.754.921  0000   73     249     20.060 LANY FRANCIELY DA SILVA FIGUEI                0                                                           
+         65   6.788.746  0001   98      46    564.192 ONIX ESTETICA AUTOMOTIVA LTDA                 0                                                           
+         66   6.788.746  0001   98      46    597.531 ONIX ESTETICA AUTOMOTIVA LTDA                 0                                                           
+         67   7.026.916  0001   60      64    302.869 CICI & CICI BAR E PIZZARIA LTD                0                                                           
+         68   7.036.975  0001   19       2    154.519 M. DAS GRACAS F. POLASSE                      0                                                           
+         69   7.156.728  0000   35       2    157.086 VALDIR ELIAS DE MOURA                         0                                                           
+         70   7.175.333  0001   09       3    178.761 FAVERO & GALEAZZI LTDA ME                     0                                                           
+         71   7.184.939  0001   00       2    180.002 REVMAX INDUSTRIA DE MASSA DE T                0                                                           
+         72   7.212.521  0001   51      23    195.470 ASSIS & ASSIS EMPREENDIMENTOS                 0                                                           
+         73   7.221.508  0001   69       2    123.122 MARINO MORGATO                                0                                                           
+         74   7.350.203  0001   57      64    250.169 L K MAQUINAS DE COSTURA LTDA M                0                                                           
+         75   7.426.228  0001   97       2    123.318 NOBRE TRANSPORTES DE MARILIA L                0                                                           
+         76   7.436.428  0001   20      46    455.178 ALTEX COM DE CALCADOS LTDA ME                 0                                                           
+         77   7.500.678  0000   29   2.065     30.582 SEBASTIAO DONIZETE MELCHIORI                  0                                                           
+         78   7.520.601  0001   74       3    180.046 TRANS NELORE TRANSPORTES LTDA                 0                                                           
+         79   7.545.451  0001   53      23    182.698 VITOR DOS SANTOS & SILVA LTDA                 0                                                           
+         80   7.545.451  0001   53      23    182.853 VITOR DOS SANTOS & SILVA LTDA                 0                                                           
+         81   7.654.754  0001   04      64    330.926 INSTITUTO DE BELEZA PRATYAN LT                0                                                           
+         82   7.719.930  0000   80   3.277     45.854 MAURICIO FRIZO                                0                                                           
+         83   7.728.401  0001   01      54    143.686 M CARMO SILVA CALCADOS - EPP                  0                                                           
+         84   7.786.180  0001   28       3    179.415 G K MASCARO BUFFET ME                         0                                                           
+         85   7.820.349  0001   19      25     67.930 PERES RIBEIRO & PERES LTDA -ME                0                                                           
+         86   7.976.530  0001   19      23    181.184 CIRURGICA IMAGEM DISTRIBUIDORA                0                                                           
+         87   8.150.041  0001   76       2    124.023 R C COMERCIO DE EQUIPAMEN                     0                                                           
+         88   8.182.296  0001   10      25     75.287 DEBORA CRISTINA ALVES & CIA LT                0                                                           
+         89   8.657.290  0001   52      23    196.833 LOPES & CAOS COMERCIO ATACADIS                0                                                           
+         90   8.713.310  0001   65      54    144.925 DANIELLE VIEIRA NEIVA CONFECCO                0                                                           
+         91   8.728.433  0001   70       2    124.747 NEUZA BETTIO DA COSTA ME                      0                                                           
+         92   8.805.549  0001   65      54    149.483 MARINALVA REGINA SILVA EMBALAG                0                                                           
+         93   8.843.828  0001   13       2    125.194 EDITORA DIARIO CORREIO DE MARI                0                                                           
+         94   8.875.498  0000   70   2.422      1.179 CHRISTINO MACHADO VIANA                       0                                                           
+         95   8.942.778  0001   21      54    145.845 LORA BAR & DRINK S LTDA ME                    0                                                           
+         96   8.945.622  0001   02       2    125.288 DORABELLE CHOCOLATES LTDA                     0                                                           
+         97   8.946.616  0001   61      43     30.270 SERRARIA E MADEIREIRA 5 IRMAOS                0                                                           
+         98   8.962.021  0000   60   1.456     22.240 PABLO MAZIERO POZZOBON                        0                                                           
+         99   9.103.281  0001   82       2    126.976 QUATRO CANTOS INDUSTRIA E                     0                                                           
+        100   9.189.750  0001   28       2    152.847 MARCELO LUIZ DIAS - ME                        0                                                           
+        101   9.190.332  0001   50      64    308.850 ATUAL CLEAN SERVICOS LTDA - ME                0                                                           
+        102   9.266.098  0001   06      46    574.642 FAG RECURSOS HUMANOS E TERCEIR                0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      3                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        103   9.266.098  0001   06      46    601.634 FAG RECURSOS HUMANOS E TERCEIR                0                                                           
+        104   9.282.185  0001   49       2    126.154 MATILDE ELIZABETH CAMPASSI MOR                0                                                           
+        105   9.480.611  0001   59      64    312.574 G R PEREIRA COMERCIO E REPRESE                0                                                           
+        106   9.613.966  0001   79      46    587.234 PROJLAB COMERCIO DE MOVEIS PAR                0                                                           
+        107   9.687.397  0001   06       2    128.545 KEMPE E FERNANDES IMPORTACAO E                0                                                           
+        108  10.213.236  0001   60       3    185.521 R F DUARTE DE SOUZA                           0                                                           
+        109  10.219.188  0001   17       2    129.540 TERUEL COMERCIO DE VEICUL                     0                                                           
+        110  10.221.821  0001   01       2    129.432 PERSOBALL PRODUTOS PROMOC                     0                                                           
+        111  10.229.878  0001   57      44    139.607 A. C. VIZOTO & CIA LTDA - ME                  0                                                           
+        112  10.239.018  0001   02       2    154.508 MZX ICE COMERCIO DE ALIMENTOS                 0                                                           
+        113  10.314.189  0001   40      64    314.811 ALEXANDRE LUIS DE SOUZA EQUIPA                0                                                           
+        114  10.314.189  0001   40      64    316.661 ALEXANDRE LUIS DE SOUZA EQUIPA                0                                                           
+        115  10.363.775  0001   85       2    151.470 A. FAWZI CHAABAN VESTUARI                     0                                                           
+        116  10.456.149  0001   33      23    185.770 DANIELE CASSIA TELATIN - ME                   0                                                           
+        117  10.472.631  0001   67       2    154.506 COMPLETA MOVEIS LTDA-EPP                      0                                                           
+        118  10.492.559  0001   30       2    156.318 IRMAOS CABRINI MARMORES E                     0                                                           
+        119  10.672.767  0001   10      23    194.780 PAVAO ENSINOS PREPARATORIOS LT                0                                                           
+        120  10.681.791  0001   16      23    193.540 BRANDAO PARTICIPACOES AGROPECU                0                                                           
+        121  10.800.935  0000   16       2    125.853 ADRIANO F SALVA                               0                                                           
+        122  10.829.084  0001   24       2    152.380 LUCIDIO CANDIDO MELO - ME                     0                                                           
+        123  10.914.035  0001   90       2    152.513 GUERINO ROBERTO VICENZOTO   ME                0                                                           
+        124  10.928.148  0001   44      46    591.518 ELEGANCE C C DE ROUPAS LT                     0                                                           
+        125  11.091.093  0001   23      23    190.450 FERNANDINHO VEICULOS LTDA                     0                                                           
+        126  11.218.528  0000   23       2        324 HELENO DE SOUZA                               0                                                           
+        127  11.231.637  0001   05       2    157.098 MANOEL NOVAES DE OLIVEIRA                     0                                                           
+        128  11.243.715  0001   91      23    193.560 MACAUBA CONSULTORIA, ADMINISTR                0                                                           
+        129  11.366.404  0001   10       3    195.940 ROBERTO PEIXOTO DOS SANTOS ME                 0                                                           
+        130  11.471.934  0001   28       3    195.522 TRC ARACOARA TRANSPORTES LTDA.                0                                                           
+        131  11.493.544  0001   59      46    604.123 CALIPO & CRUZ TRANSPORTE E AUT                0                                                           
+        132  11.625.828  0001   51      54    149.035 SOLUTION BLINDAGEM DE VEICULOS                0                                                           
+        133  11.690.636  0001   29      25     77.347 MELARA & BALASTEGUIN LTDA - ME                0                                                           
+        134  11.841.527  0001   65       2    580.092 ANTONIO ROBERTO DOS SANTO          3          0                                                           
+        135  11.886.718  0000   04       2    125.187 HELENA MELO DA SILVA                          0                                                           
+        136  11.895.580  0001   49      64    325.689 TWF COMERCIO DE PLASTICOS LTDA                0                                                           
+        137  12.054.328  0001   70       3    196.910 TERESA SMIRNE - MODA E ACESSOR                0                                                           
+        138  12.147.916  0001   58      54    150.372 AA.DD. COMERCIO DE CALCADOS LT                0                                                           
+        139  12.212.070  0001   92      23    193.930 CON SOFTER - PROCESSAMENTO DE                 0                                                           
+        140  12.420.570  0001   10       3    197.710 N.J. MOURA ENTREGAS - ME                      0                                                           
+        141  12.469.965  0001   07       2    156.321 APARECIDA JOSE SANTIAGO NICRIT                0                                                           
+        142  12.520.168  0000   08      94    120.819 LUIZ CARLOS MONTEIRO                          0                                                           
+        143  12.668.735  0001   77      25     78.546 FERRARI COSTA CONSTRUCOES LTDA                0                                                           
+        144  12.842.765  0001   58       2    157.108 CAROLINA GARCIA CIRINO -                      0                                                           
+        145  12.854.758  0000   87       2      1.185 AKIRA NAKADAIRA                               0                                                           
+        146  12.880.830  0001   30       2    580.170 LUCIMAR F. G. PADOVAN - M                     0                                                           
+        147  12.908.940  0000   00   3.277     31.889 LUIZ MORARI                                   0                                                           
+        148  12.912.388  0000   91       2     11.460 MOACYR DUTRA                                  0                                                           
+        149  13.031.981  0001   86      44    142.869 E F R CARRILLO TRANSPORTES                    0                                                           
+        150  13.071.193  0001   13      44    136.609 UNIDAPE - UNIDADE DE DESENVOLV                0                                                           
+        151  13.086.510  0001   75       3    199.218 ALUMINIOS SAFRA INDUSTRIA E CO                0                                                           
+        152  13.092.260  0000   91   3.277     32.123 NELSON CORREA LEITE                           0                                                           
+        153  13.406.819  0001   03       2    157.101 GOMES & ANDRADE OPTICA FRANCA                 0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      4                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        154  13.480.982  0002   99       2    156.720 R.N. REZANO NETO - EPP             2          0                                                           
+        155  13.492.679  0001   25      54    150.388 DONNA VICTORIA COMERCIO E CONF                0                                                           
+        156  13.617.656  0001   08       2    157.113 OSMAR DIAS DOCES - ME                         0                                                           
+        157  13.714.808  0000   93   3.267    121.131 JOSE ROBERTO FRESCHI OLIVEIRA                 0                                                           
+        158  13.873.912  0001   10       2    158.162 FURLANETO BOMBAS INJETORA                     0                                                           
+        159  13.918.539  0001   76      23    196.924 DAMA DO BRASIL INDUSTRIA E COM                0                                                           
+        160  14.091.909  0001   07      46    606.939 ONIX LANCHES LTDA                             0                                                           
+        161  14.211.945  0001   67       2    157.282 OFICINA RP DE MARILIA LTDA ME                 0                                                           
+        162  14.238.153  0001   86      64    333.104 WM COMERCIO DE FERRAGENS E SER                0                                                           
+        163  14.251.619  0001   83       3    203.263 ANA MARIA MARTINS SILVA - EPP                 0                                                           
+        164  14.439.373  0001   78       2    157.397 ISABEL CRISTINA VIEIRA REIS                   0                                                           
+        165  14.468.640  0001   35       2    157.377 SOLANGE APARECIDA DE SOUZ                     0                                                           
+        166  14.487.158  0000   06   3.114    157.120 ROGERIO SANDER ASSI                           0                                                           
+        167  15.126.118  0000   08       2    560.098 SERGIO MURILO DOS REIS                        0                                                           
+        168  15.349.078  0000   07       2    119.574 JOSE LELIO RIBEIRO                            0                                                           
+        169  15.373.038  0000   21       2    513.236 MARIA HELENA ZAVAN                            0                                                           
+        170  15.493.548  0000   41       2        387 CELIO MORAES                                  0                                                           
+        171  15.496.668  0000   19       2    150.346 JOSE EDUARDO REGUINI                          0                                                           
+        172  15.800.428  0000   05       2    160.488 MANOEL TITO SOUZA                             0                                                           
+        173  15.809.088  0000   88       2     57.446 AMARILDO MASSOTI GUIMARAES                    0                                                           
+        174  17.281.551  0001   73     466    140.000 CARTOGRAFICA FENIX LTDA                       0                                                           
+        175  18.311.468  0000   00     176     23.988 FABIO SATORU SHIMIZU                          0                                                           
+        176  20.122.378  0000   35     680     73.769 NIETH PERAL ALECI                             0                                                           
+        177  20.924.109  0000   89       2    155.758 RICARDO RINALDI PUSCH                         0                                                           
+        178  21.749.458  0000   78       2    153.741 JOAO FERREIRA DE OLIVEIRA                     0                                                           
+        179  22.457.529  0000   53     973     20.996 OSVALDO TAKEMOTO                              0                                                           
+        180  23.260.998  0000   50       2    550.262 PAULO PEREIRA DE OLIVEIRA                     0                                                           
+        181  24.246.898  0000   57       2    518.984 AMAURY DE DEUS CORREA                         0                                                           
+        182  24.272.719  0000   00       2    150.768 NILTON AMANCIO MORAES JUNIOR                  0                                                           
+        183  24.918.188  0000   68       2     27.409 OSWALDO TEIXEIRA DA SILVA                     0                                                           
+        184  26.243.388  0000   53       3    185.935 NARCISO ANTONIO ZANIN                         0                                                           
+        185  26.319.309  0000   83       2    107.969 EZEQUIEL FIRMINO DA SILVA                     0                                                           
+        186  27.074.978  0000   00       2      8.691 ORLANDO MARTINS                               0                                                           
+        187  29.259.388  0000   09      46    348.759 EDUARDO JOSE LEONESSA                         0                                                           
+        188  29.355.720  0000   92   3.277    512.794 ITALO REUS RIBEIRO NARDES                     0                                                           
+        189  30.349.648  0000   70       2    104.266 JADIR GIROTTO                                 0                                                           
+        190  32.360.958  0000   90       2    107.767 CELSO LUIS POCO DE OLIVEIRA                   0                                                           
+        191  32.924.438  0000   81       2    117.963 ABILIO ANTONIO                                0                                                           
+        192  33.461.368  0000   09     198    180.263 MARCIO FERREIRA DE MEDEIROS                   0                                                           
+        193  33.555.858  0000   58       2    110.068 MARINEUZA S G CARID                           0                                                           
+        194  33.796.189  0000   18       2    111.035 ELISANGELA CRISTINE DOS SANTOS                0                                                           
+        195  33.826.088  0000   98       2    121.230 LEONOR ALEXANDRE P SILVA                      0                                                           
+        196  33.961.088  0000   33   1.445     19.564 ANA MARIA IMPERIO                             0                                                           
+        197  34.691.218  0000   00       2    514.062 ANGELA MARIA MARTINIANO                       0                                                           
+        198  35.506.728  0000   53       2        386 MITIOU NAKAGAWA                               0                                                           
+        199  35.940.786  0000   20   2.132     72.834 SORAYA LOBO RODRIGUES                         0                                                           
+        200  36.210.618  0000   51   3.114    160.597 VERA LUCIA DA SILVA                           0                                                           
+        201  38.263.788  0000   73       2    154.787 ANTONIO JOSE MELLO                            0                                                           
+        202  38.440.398  0000   05      18     26.015 MARIA EMILIA DE GODOY BERTOLUI                0                                                           
+        203  38.495.778  0000   13       2    131.285 CIMEY NALON ALVES                             0                                                           
+        204  39.015.573  0001   24      25     77.550 VALDIR DE SOUZA SANTA RITA ME                 0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      5                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        205  40.814.708  0000   39       2     53.183 RICARDO SUSSUMU OKUDA                         0                                                           
+        206  42.232.418  0000   34       2     15.703 ANTONIO MARTINEZ ROMERO                       0                                                           
+        207  43.087.923  0001   35      54     27.998 MAGAZINE ELEGANTE LTDA ME                     0                                                           
+        208  43.643.845  0000   34     708     18.856 MIGUEL CAGE DE OLIVEIRA                       0                                                           
+        209  43.960.970  0001   41       3    195.512 CLUBE 22 DE AGOSTO                            0                                                           
+        210  44.234.003  0001   65      64    329.231 TEEL - TRANSPORTADORA E ENTREG                0                                                           
+        211  45.101.714  0001   24      23     37.040 SILVA & EDUARDO LTDA                          0                                                           
+        212  45.672.518  0000   06      84     71.016 .UCIA AGATA                                   0                                                           
+        213  45.993.037  0001   04      46     17.484 ORIENTAL JOIAS E RELOGIOS LTDA                0                                                           
+        214  46.872.418  0000   40       2    151.277 PALMIRA MOTA DOS SANTOS                       0                                                           
+        215  46.936.696  0001   63      64     45.147 SOMAR COMPUTADORES E PROCESSAM                0                                                           
+        216  47.408.608  0000   99   1.918     11.297 LEONILDO CARLOS DE ABREU                      0                                                           
+        217  47.530.698  0000   85       2    120.295 ANTONIO DE MEDEIRAS                           0                                                           
+        218  48.275.908  0000   93       2        245 PAULO ROBERTO H GARCIA                        0                                                           
+        219  48.290.588  0000   38       2     55.556 ELCI KLEM DE ALMEIDA                          0                                                           
+        220  49.637.994  0001   40     176     33.357 LAVIZOO LABORATORIO VITAMINICO                0                                                           
+        221  49.882.814  0001   96       2     49.102 POSTO DE MOLAS MARILIA LT                     0                                                           
+        222  49.957.948  0000   83       2    513.992 SERGIO AUGUSTO PINTO                          0                                                           
+        223  50.750.278  0000   73       2    127.985 JOSE LUIS DE CARVALHO                         0                                                           
+        224  51.083.288  0000   18       2    109.465 MARIA ROSANGELA ESTEVES                       0                                                           
+        225  51.125.138  0000   61       2    540.013 MARIO FRANCISCO COSTA E SILVA                 0                                                           
+        226  51.508.828  0001   96       2    580.060 PRIMEIRO TABELIAO DE NOTAS DE                 0                                                           
+        227  51.880.714  0001   72      46    563.295 3 CARTORIO DE NOTAS DE CAMPINA                0                                                           
+        228  51.882.199  0001   60       2     20.246 I R MONTEIRO CIA LTDA                         0                                                           
+        229  52.048.279  0001   87       2     10.825 IHARA LTDA IND COM DE PROD AL                 0                                                           
+        230  52.052.834  0001   44       2        142 GURILAR PRODUTOS ALIMENTARES L                0                                                           
+        231  52.052.834  0001   44       2     26.850 GURILAR PRODUTOS ALIMENTARES L     2          0                                                           
+        232  52.060.951  0001   50       2     23.238 MARIBRINDES INDUSTRIA E COMERC                0                                                           
+        233  52.282.708  0000   09       2    155.121 HELENA MEZEI DA SILVA                         0                                                           
+        234  52.309.758  0000   14       2    155.154 LAERCIO DINIZ                                 0                                                           
+        235  54.021.298  0000   94       2    116.906 CELIA MF RODRIGUES                            0                                                           
+        236  54.078.268  0000   87       2     15.687 JOSE NUNES DE FARIAS                          0          9                                                
+        237  54.314.935  0001   71       3    194.772 MARIA TERESA SMIRNE ME                        0                                                           
+        238  54.349.378  0000   48       2    517.297 LUZIA DE FATIMA S DA COSTA                    0                                                           
+        239  54.418.066  0001   25       2    105.950 RADIO DIARIO FM DE MARILIA LTD                0                                                           
+        240  54.575.238  0000   88       2    151.829 LIVALDO AKIO KANZAKI                          0                                                           
+        241  54.771.126  0001   99       2    127.069 TELEMACO FERNANDES ASSESSORIA                 0                                                           
+        242  55.164.644  0001   07   2.044      5.419 SEMENTES OESTE PAULISTA IMP. E                0                                                           
+        243  55.305.536  0001   07      54    144.212 JMKMK INDUSTRIA E COMERCIODE C                0                                                           
+        244  56.255.688  0000   55       2    118.181 EDMERSON RODRIGUES VIANA                      0                                                           
+        245  56.356.413  0001   68      23    190.414 ASSOC.REGIONAL DOS APOSENTADOS                0                                                           
+        246  56.589.018  0000   20       2    117.874 ROSA ALVES SANTOS                             0                                                           
+        247  56.683.088  0000   47     115    110.488 AGOSTINHO PACIOS                              0                                                           
+        248  56.733.038  0000   90   1.432     45.872 MESSIAS VIEIRA DE OLIVEIRA                    0                                                           
+        249  57.169.104  0001   41       2    126.959 OESTE PLAST INDUSTRIA E C                     0                                                           
+        250  57.265.977  0001   58       2    122.101 ACACIA INFORMATICA LTDA                       0                                                           
+        251  57.340.994  0001   02      18     21.138 ROBERTO DAL VESCO ME                          0                                                           
+        252  58.332.966  0001   06      54    106.216 MARIA APRECIDA DOS SANTOS PAPE                0                                                           
+        253  58.403.410  0000   53   3.277     31.951 LOURENCO CEZAR PEREIRA DE MENE                0                                                           
+        254  58.497.798  0000   09       2    100.917 VALMIR MARTINS                                0                                                           
+        255  59.613.612  0001   00      25     49.628 R C C  NOGUEIRA                               0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      6                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        256  60.662.863  0001   56     114      4.742 COMERCIAL JARDIM IMP. EXP. LTD                0                                                           
+        257  61.175.212  0001   02      46    285.145 AMPLINOX COMERCIAL DE ACOS LTD                0                                                           
+        258  61.277.851  0001   70      54    115.377 HELANTEXTIL INDUSTRI E COMERCI                0                                                           
+        259  61.543.790  0000   72   3.277      2.457 MILTON CRUZ MARCONDES                         0                                                           
+        260  61.778.318  0000   77       2    105.795 ROSEMARY DE ALMEIDA                           0                                                           
+        261  61.896.924  0001   02       7     69.804 PAIVA & CASTELLANI LTDA ME                    0                                                           
+        262  62.327.747  0001   06       2     89.927 BECA REPRESENTACOES COMERCIAIS                0                                                           
+        263  62.929.294  0001   98       3    199.453 RESENDE MODA MASCULINA E FEMIN                0                                                           
+        264  63.439.468  0000   10       2    122.549 EDSON FERREIRA DA SILVA                       0                                                           
+        265  64.133.044  0001   72       2    171.058 FERRARI PISOS E AZULEJOS LTDA                 0                                                           
+        266  64.331.608  0000   67       2    128.034 ELEONORA MARIA DE JESUS                       0                                                           
+        267  64.413.918  0000   80       2     97.156 JOAO VIDAL RONDON                             0                                                           
+        268  64.598.618  0001   88       2    157.510 JAIR CARDOSO DE MENEZES M                     0                                                           
+        269  65.466.625  0001   99       2    127.427 BARATA COMERCIO E REPRESENTACO                0                                                           
+        270  65.597.817  0001   34      46    450.389 RAEL DE REZENDE ME                            0                                                           
+        271  65.930.008  0000   76       2    101.399 FATIMA D DANTAS                               0                                                           
+        272  66.483.538  0000   48       2    105.808 MARCIO L. SILVA                               0                                                           
+        273  66.588.195  0001   40      23    184.900 BUFFETT E DECORACAO DAIR DE FA                0                                                           
+        274  66.951.757  0002   50       2     95.600 CMN CENTRAL MARILIA NOTICIAS L                0                                                           
+        275  67.831.438  0000   13       2    126.168 MARIA AP ANDRADE                              0                                                           
+        276  67.974.858  0000   00       2     90.105 MARCIA REGINA ROCHA ALVES                     0                                                           
+        277  67.980.678  0000   40       2    151.112 EDIVALDO JOSE DA SILVA                        0                                                           
+        278  67.981.308  0000   01       2    110.969 EDSON AP LIMAO                                0                                                           
+        279  68.890.038  0000   02       2    550.040 MILTON PERES VILCHES                          0                                                           
+        280  69.318.648  0000   82       2    122.319 JOAO CARLOS RIBEIRO                           0                                                           
+        281  69.844.618  0000   63     120    141.689 MARIA STELLA BRAS BITTENCOURT                 0                                                           
+        282  70.834.988  0000   90       2    127.781 ANA MOREIRA NOGUEIR                           0                                                           
+        283  70.929.098  0000   56   2.501      5.334 JORDAO FIORANI                                0                                                           
+        284  71.906.036  0001   87       3    128.577 DISK AGUA ARARAQUARACOMERCIO D                0                                                           
+        285  72.026.560  0001   26       3    193.755 ARCA INDUSTRIA E COMERCIO DE R                0                                                           
+        286  72.703.069  0001   92       2    152.403 MARCOS ANTONIO GOMES VAZ ME                   0                                                           
+        287  73.276.178  0000   68       2     15.237 ARCHIMEDES LIBERALI                           0                                                           
+        288  73.434.318  0000   38       2    155.631 ANA REGINA GUERREIRO                          0                                                           
+        289  73.558.438  0000   93     449     69.678 KATARY ELIANE NASCIMENTO                      0                                                           
+        290  73.957.108  0000   78       2        304 RUY ALBERTO MUNHOZ                            0                                                           
+        291  74.461.229  0001   60      25     51.690 FARMASHOPP VOTUP COMERCIAL LTD                0                                                           
+        292  74.601.865  0001   40      23    158.944 JOAQUIM CLAUDINO JR RIO PRETO                 0                                                           
+        293  75.281.718  0000   32       2    107.470 EVA R O FERREIRA                              0                                                           
+        294  76.071.378  0000   23       2    110.274 EVA MARIA DE FIGUEIREDO                       0                                                           
+        295  76.420.348  0000   73     115     64.275 ESTER LONGHI RUBINHO                          0                                                           
+        296  77.071.368  0000   88       2    200.681 ARMANDARECS PEDROSO ROMAO                     0                                                           
+        297  77.742.468  0000   19       2    545.028 MARIA APARECIDA ROCHA                         0                                                           
+        298  81.980.698  0000   60       2     96.843 ANTONIO MANOEL G TEIXEIRA                     0                                                           
+        299  82.756.118  0000   06       2    545.019 ADENILSON MARTINEZ LARIOS                     0                                                           
+        300  83.248.278  0000   11       2     97.163 IVANILDO BEZERRA DA SILVA                     0                                                           
+        301  84.076.608  0000   41   2.065     30.472 MARCELO ROCHA LOUREIRO DA SILV                0                                                           
+        302  84.303.648  0000   62       2    130.132 FLORISVALDO PEREIRA DA SILVA                  0                                                           
+        303  85.700.275  0000   91   1.200     42.924 CARLOS ALBERTO SANTANA SILVA                  0                                                           
+        304  86.347.848  0000   43     297     59.748 MARCOS DE OLIVEIRA LEMOS                      0                                                           
+        305  87.046.016  0000   10       2    517.604 EDMAR DA SILVA COSTA                          0                                                           
+        306  87.461.148  0000   23       2    540.333 LAUDECI FERREIRA                              0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      7                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        307  88.480.238  0000   86     423    110.688 MARIA DE FATIMA PIRES                         0                                                           
+        308  88.707.598  0000   30       2    126.127 SELMA DE F SANTOS                             0                                                           
+        309  89.832.818  0000   71       2    560.192 OSMAR VAZ                                     0                                                           
+        310  90.491.000  0000   82   3.277     32.255 NESLIO KAIPPER BITTENCOURTT                   0                                                           
+        311  91.113.907  0000   94       2          2 JOAO EMILIANO                                 0                                                           
+        312  91.113.907  0000   94       2          2 JOAO EMILIANO                                 0                                                           
+        313  93.097.748  0000   35       2    109.539 AMERICO BERTOZO DE LIMA                       0                                                           
+        314  93.306.938  0000   30       2    121.336 ADEILDO DANTAS DE SOUSA                       0                                                           
+        315  93.947.548  0000   06       2    521.156 LUIZ SARMENTO PEREIRA                         0                                                           
+        316  94.012.198  0000   00       2    119.374 ILSON PASCOAL DE OLIVEIRA                     0                                                           
+        317  94.844.478  0000   99   2.501      5.455 DENILSON CARLOS RANIERI                       0                                                           
+        318  96.091.398  0000   09       2     97.497 MARCOS JUSTINO                                0                                                           
+        319  96.100.768  0000   07       2    100.044 FABIO TERCIOTTI                               0                                                           
+        320  96.156.718  0000   00       2    125.339 CELSO OLIV SILVA                              0                                                           
+        321  96.157.798  0000   30       2    151.361 CLAUDIA ALVES PINHEIRO DE ALME                0                                                           
+        322  96.166.528  0000   93       2        298 ROSIMEIRE DE OLIVEIRA                         0                                                           
+        323  96.176.568  0000   25       2    127.328 MARLI CAMARGO                                 0                                                           
+        324  96.179.098  0000   98       2    515.518 RICARDO EVANGELISTA DA SILVA                  0                                                           
+        325  96.297.708  0000   06     450    132.159 LUCIANA ZIMMERMAM                             0                                                           
+        326  96.317.278  0000   66       2    540.407 APARECIDA PEREIRA DA SILVA                    0                                                           
+        327  96.357.838  0000   33       2    550.208 OSORIO VIEIRA                                 0                                                           
+        328  96.381.878  0000   32       2    116.772 LUIZ ANTONIO SERAFIM                          0                                                           
+        329  96.425.558  0000   83   1.998    100.230 ELIANE GOMES TOME ROMERO                      0                                                           
+        330  99.137.458  0000   45   2.019      7.804 MARIA BENEDITA SOARES VIEIRA T                0                                                           
+        331 100.018.338  0000   63     114     66.004 CLAUDIO ANTONIO DA SILVA                      0                                                           
+        332 103.741.178  0000   10       2    128.108 ANDRE LUIS MARQUES GIACOMINI                  0                                                           
+        333 104.789.618  0000   47     114     73.500 JEFFERSON SCANDIUZZI CAUDURO                  0                                                           
+        334 110.555.668  0000   99       2    152.446 ADEMIR BATISTA PEREIRA                        0                                                           
+        335 110.563.868  0000   51       2    550.011 DOMINGOS ROBERTO EVARISTO                     0                                                           
+        336 110.570.288  0000   00       2    125.781 EDSON DOMINGOS DE OLIVEIRA                    0                                                           
+        337 110.647.888  0000   66       2    123.176 INI A DOS REIS                                0                                                           
+        338 111.391.528  0000   58       2    123.945 ADELINA MARIA NUNES DOS SANTOS                0                                                           
+        339 111.745.378  0000   25       2     97.678 JOSE BENEDITO DE MELO                         0                                                           
+        340 113.089.128  0000   38   1.445     19.777 MAURICIO MARTINS                              0                                                           
+        341 114.089.378  0000   59       2    126.868 MARCIA DOS SANTOS GIACOMINI                   0                                                           
+        342 114.420.798  0000   35       2    124.075 MARCIO GIMENES RUIZ                           0                                                           
+        343 114.944.678  0000   10       2    510.538 APARECIDA DA SILVA M DUTRA                    0                                                           
+        344 114.945.168  0000   88       2    129.333 MARIA DE LOURDES IZIDORO                      0                                                           
+        345 115.754.618  0000   89       2    110.553 ANILTON ALEXANDRE DOS SANTOS                  0                                                           
+        346 117.232.518  0000   95       2    511.727 MARCOS CANDIDO DA SILVA                       0                                                           
+        347 117.809.928  0000   82       2    121.918 ERIVALDO DOS SANTOS                           0                                                           
+        348 120.045.858  0000   38       2        341 ILKA MUNHAE                        2          0                                                           
+        349 120.063.968  0000   54       2    128.065 JAQUELINE MARY MENDES                         0                                                           
+        350 120.065.838  0000   83       2    101.111 ROSANGELA DE SIQUEIRA STROPPA                 0                                                           
+        351 120.070.778  0000   84       2    172.501 DONIZETI APARECIDO ALVES                      0                                                           
+        352 120.072.018  0000   01       2    517.285 TANIA MARA MARTINS BATISTA                    0                                                           
+        353 120.159.878  0000   86       2    107.657 CLAUDIA D PEREIRA                             0                                                           
+        354 120.162.548  0000   31       2    540.242 EDNALDO ANTONIO MALDONADO                     0                                                           
+        355 120.164.338  0000   41       2    118.634 EDVALDO ZAFRA                                 0                                                           
+        356 121.142.938  0000   58       2    119.648 EVELLYN ARCANJO PASSOS                        0                                                           
+        357 123.969.660  0000   49     268    538.607 IVALINO BULLE                                 0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      8                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        358 125.571.718  0000   16   2.520     60.413 ALCINDO TAVARES CORDEIRO DE CA                0                                                           
+        359 129.237.608  0000   24       2    129.902 MARCOS MARIANO DA SILVA                       0                                                           
+        360 130.900.258  0000   41       2     15.037 JAIME DA SILVA BARATA                         0          9                                                
+        361 130.916.818  0000   07       2    512.341 ANTONIO LEOCADIO DOS SANTOS                   0                                                           
+        362 132.661.478  0000   98       2    519.194 PAULO SERGIO ALVES DA SILVA                   0                                                           
+        363 136.778.108  0000   68       2     17.613 VICENTE ARMENTANO                             0                                                           
+        364 137.263.368  0000   50       2     87.188 APARECIDA FRANCISCO DA SILVA                  0                                                           
+        365 137.265.338  0000   42       2    126.332 LUIS SILVA                                    0                                                           
+        366 138.174.158  0000   42       2    515.147 CRISTIANO TADEU DE CARVALHO                   0                                                           
+        367 138.907.378  0000   54       2      1.284 NESTOR RIBEIRO MAURICIO                       0                                                           
+        368 139.908.888  0000   20       2      6.011 JOSE SIMOES NETTO                             0                                                           
+        369 140.853.304  0000   97   1.628     19.938 ADALMIRA DE FREITAS MAIA BIANC                0                                                           
+        370 141.213.348  0000   33       2    129.323 MARTA APARECIDA JANUARIO DA SI                0                                                           
+        371 141.284.128  0000   30       2    118.233 VALDEIR GOMES                                 0                                                           
+        372 141.284.888  0000   10       2    110.427 GEOVANA L DA SILVA                            0                                                           
+        373 141.292.948  0000   22       2    111.783 JOSUE LUIS DA SILVA                           0                                                           
+        374 141.294.068  0000   09       2    515.243 SERGIO TONETO                                 0                                                           
+        375 141.330.798  0000   17       2    550.028 CICERO BARBOSA DA SILVA                       0                                                           
+        376 141.386.348  0000   51       2    154.580 EDUARDO ANDRADE REIS JUNIOR                   0                                                           
+        377 141.389.608  0000   13       2    123.165 MARIA APARECIDA LEITE DE SOUZA                0                                                           
+        378 142.532.588  0000   24       2    154.423 SIMONE DA SILVA                               0                                                           
+        379 145.349.628  0000   94   2.501      5.483 CIDALIO MARCELO TEIXEIRA                      0                                                           
+        380 145.702.108  0000   05       2    101.206 MARCOS RIBEIRO DA SILVA                       0                                                           
+        381 145.704.448  0000   06       2    121.452 ERONDINA DE CASTRO                            0                                                           
+        382 145.705.618  0000   61       2    124.222 SIRLENE ZONTA MARINHO                         0                                                           
+        383 145.708.268  0000   30       2    515.814 EDMUNDO RENATO DE ANTONI                      0                                                           
+        384 145.718.508  0000   32       2    153.666 EDNEUSA DOMINGUES CALIXTO                     0                                                           
+        385 145.724.808  0000   50       2    130.263 ALEX PAULO DOS SANTOS                         0                                                           
+        386 145.736.548  0000   01       2    110.062 HELOISA C COLOMBO                             0                                                           
+        387 145.736.588  0000   07       2    540.241 DARCI MACEDO                                  0                                                           
+        388 145.878.898  0000   90       2    123.254 MARCELLO SOMACAL                              0                                                           
+        389 145.884.678  0000   40       2    157.025 EVERALDO TAVARES DOS SANTOS                   0                                                           
+        390 145.920.858  0000   76       2    112.010 CLAUDIO H YAMAUCHI                            0                                                           
+        391 146.127.918  0000   60     120    111.815 ALEXANDRE JOSE MARIANO                        0                                                           
+        392 147.491.088  0000   20       2     95.584 EDNALDO DOS SANTOS COSTA                      0                                                           
+        393 147.491.478  0000   00       2    119.373 MARIA APARECIDA SOARES                        0                                                           
+        394 148.356.358  0000   84       2     93.158 MARIA ARAUJO DE SOUSA                         0                                                           
+        395 150.481.958  0000   68       2     13.945 CLER DE SOUZA E OU                            0          9                                                
+        396 151.652.828  0000   05       2    173.008 ROGERIO GUSTAVO CARMONA DE AMO                0                                                           
+        397 153.745.988  0000   05       2    110.802 EDILSON SAEZ                                  0                                                           
+        398 154.468.078  0000   39   2.501    140.499 KARLLA GONCALVES TAMBELLINI                   0                                                           
+        399 154.644.820  0000   91   3.277      2.461 ATAIDES REIS BRUM                             0                                                           
+        400 157.486.228  0000   66       2    103.473 EDSON APARECIDO RODRIGUES                     0                                                           
+        401 157.700.795  0000   68   3.001    116.265 JOSE MAURICIO BRAGA DA SILVA                  0                                                           
+        402 158.142.298  0000   96       2    106.835 LUIS CARLOS MARTINS DE ANDREDE                0                                                           
+        403 158.152.018  0000   20       2    545.003 EMERENCIANA DE FATIMA COSTA E                 0                                                           
+        404 158.156.708  0000   12       2    108.491 ANTONIO A COSTA                               0                                                           
+        405 158.161.428  0000   44       2    152.010 VALDIR CUSTODIO DE OLIVEIRA                   0                                                           
+        406 158.163.538  0000   96       2    129.049 MARCOS ROGERIO RIBEIRO DA SILV                0                                                           
+        407 158.683.958  0000   67       2    157.155 FRANCISCA AGOSTINHO DA SILVA                  0                                                           
+        408 159.432.698  0000   35     225    172.387 ALEXANDRA DOS SANTOS                          0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      9                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        409 160.203.478  0000   85   1.628      6.049 MARCELO ANTONIO NEGRAO GUSMAO                 0                                                           
+        410 161.784.368  0000   74       2     95.336 ADILSON DOS SANTOS                            0                                                           
+        411 161.879.968  0000   10       2    122.461 PAULINO BARBOSA DE SOUZA                      0                                                           
+        412 161.883.588  0000   25       2    112.180 DAMARES FERREIRA DOS SANTOS                   0                                                           
+        413 161.953.498  0000   36       2    154.890 ELISANDRO APARECIDO SILVA                     0                                                           
+        414 162.411.428  0000   87       2     35.268 YOSHITERU NAGAISHI                            0                                                           
+        415 164.290.959  0000   91   1.482     21.330 MARNY ERICO KUCK                              0                                                           
+        416 167.095.338  0000   67       2    125.952 ADRIANA C LOPES                               0                                                           
+        417 167.468.768  0000   02      91    211.069 RICARDO DA SILVA CAIRO                        0                                                           
+        418 170.385.238  0000   99       2    155.470 MARLON VINICIUS RAMOS BETINE                  0                                                           
+        419 170.385.808  0000   50       2    121.048 ROGERIO FERNANDES                             0                                                           
+        420 170.390.138  0000   00       2    105.400 JANDIRA JOSE SANTOS                           0                                                           
+        421 170.557.938  0000   82       2    512.903 MARCIO ANDRE MONTEIRO                         0                                                           
+        422 170.590.738  0000   50       2    515.549 PAULO INACIO DONEGA                           0                                                           
+        423 170.671.428  0000   90       2    118.935 ARMANDO GIROTTO                               0                                                           
+        424 170.677.508  0000   30       2     93.420 MARCOS JOSE DE ANDRADE                        0                                                           
+        425 170.678.778  0000   22       2    510.189 ROBERTA CRISTINA OLIVETTI                     0                                                           
+        426 170.679.008  0000   24       2    102.922 SALES VITURINO DA SILVA                       0                                                           
+        427 171.468.288  0000   91       2    120.562 ALBINO DE SOUZA                               0                                                           
+        428 171.709.418  0000   05       2    155.560 MARCELO DE MORAES SANTOS                      0                                                           
+        429 173.029.758  0000   76   2.505     11.710 EDUARDO PERUSSO RIERA                         0                                                           
+        430 173.965.650  0000   49   3.277     37.958 LEONIR ANTONIO VENDRUSCOLO                    0                                                           
+        431 174.059.348  0000   03       2    107.114 AILTON A MARINHO                              0                                                           
+        432 174.094.138  0000   16       2    121.748 MARCOS MARTINS                                0                                                           
+        433 174.094.428  0000   32       2    128.076 CRISTINA DE OLIVEIR                           0                                                           
+        434 174.427.098  0000   85       2    155.686 MARCOS VALENTE LUIZ                           0                                                           
+        435 176.440.668  0000   02   2.019      8.879 MONICA DE OLIVEIRA                            0                                                           
+        436 176.859.829  0000   00   1.456     22.522 ILO POZZOBON                                  0                                                           
+        437 177.080.008  0000   58   3.084    115.840 CHRISTIANE AZEVEDO MOURA                      0                                                           
+        438 180.791.418  0000   60       2     90.207 IRENE BOAVENTURA                              0                                                           
+        439 180.797.348  0000   44       2     96.734 MARCELO L SILVA                               0                                                           
+        440 180.916.158  0000   41       2     95.737 CRISTIANO A LEMES                             0                                                           
+        441 183.568.018  0000   69      94    120.699 RICARDO SPANGUERO MARIANO                     0                                                           
+        442 189.516.208  0000   40     120    141.847 CARLO DE OLIVEIRA MARTINS                     0                                                           
+        443 190.394.718  0000   94       2    124.925 NIVANIA ALMEIDA FERREIRA LIMA                 0                                                           
+        444 190.870.408  0000   06       2    116.569 ANDREA PAULA ROLDON MARTINS                   0                                                           
+        445 190.870.488  0000   82       2    510.048 SERGIO APARECIDO MACHADO                      0                                                           
+        446 190.879.868  0000   82       2    154.420 VALDELICE DA SILVA MONTORO DE                 0                                                           
+        447 190.974.058  0000   66       2    101.411 HELDER RODRIGO MARQUES MATTAR                 0                                                           
+        448 190.976.078  0000   17       2    540.011 ROBSON RICARDO CICILIATO                      0                                                           
+        449 191.474.288  0000   56       2    127.954 ADEMIR P CASTRO                               0                                                           
+        450 191.475.138  0000   88       2    131.165 PAULO JOSE DA PAIXAO                          0                                                           
+        451 192.655.908  0000   82       2    150.732 MARIO FELICIO BERNARDES                       0                                                           
+        452 196.345.286  0000   00   1.200     41.632 EDSON RIBEIRO DO CARMO                        0                                                           
+        453 200.122.188  0000   63       2    518.988 JOSE CARLOS DA SILVA                          0                                                           
+        454 200.127.418  0000   17       2    560.048 SEBASTIAO LUIS GOMES                          0                                                           
+        455 200.245.918  0000   58       2    540.356 MARLENE VIDAL DA SILVA                        0                                                           
+        456 200.785.928  0000   95       2    157.080 EDNILZA KATIA DOS SANTOS                      0                                                           
+        457 201.984.000  0000   63   3.277     43.674 JORGE LUIS PILLATT                            0                                                           
+        458 204.042.538  0000   14       2    115.353 EDILSON ANTONIO                               0                                                           
+        459 213.034.388  0000   01       2        391 SANDRA PERPETUA PEREIRA                       0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     10                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        460 214.192.888  0000   57       2    109.256 EDIVALDO DE OLIVEIRA DOS SANTO                0                                                           
+        461 214.464.278  0000   89       2    120.475 ADRIANO RODRIGUES DE SOUZA                    0                                                           
+        462 214.867.248  0000   76       2    117.614 THIAGO F ZANI                                 0                                                           
+        463 216.229.798  0000   18       2    104.979 SIMONE G LIBONI                               0                                                           
+        464 216.839.538  0000   19       2    155.770 JOSE ROBERTO ALVES JUNIOR                     0                                                           
+        465 216.939.098  0000   71       2    131.606 JOSE LUIS MODESTO                             0                                                           
+        466 217.070.238  0000   59       2    157.134 ANDREIA APARECIDA DE OLIVEIRA                 0                                                           
+        467 217.517.218  0000   09       2    100.771 VALNUZIA D SOARES                             0                                                           
+        468 218.483.688  0000   52       2    107.811 JACQUELINE COSTA ARAUJO                       0                                                           
+        469 218.706.218  0000   08       2    128.109 MARCELO CAETANO                               0                                                           
+        470 218.742.908  0000   30       2    123.767 KLEBER AUGUSTO RODRIGUES                      0                                                           
+        471 220.415.238  0000   24       2    112.124 JEFFERSON C MOREIRA                           0                                                           
+        472 220.545.368  0000   81       2    172.312 JADER BORGES DE CARVALHO                      0                                                           
+        473 220.755.118  0000   02       2    113.221 ROGERIO ANTONIO VALERIO                       0                                                           
+        474 220.945.098  0000   50       2    580.074 MARA ANDRADE PEREIRA                          0                                                           
+        475 221.518.578  0000   32       2    112.554 VIVIANE APARECIDA MIRANDA                     0                                                           
+        476 222.047.918  0000   81       2    124.068 REINALDO FORNEL MARTINS                       0                                                           
+        477 222.190.148  0000   78       2    155.632 VLADIMIR DA SILVA                             0                                                           
+        478 222.360.198  0000   74       2    127.969 VANESSA SAAD GALANT                           0                                                           
+        479 222.410.338  0000   71       2    107.250 RAFAEL REPETTI                                0                                                           
+        480 222.957.498  0000   16       2    128.302 FERNANDO AP. PIGA                             0                                                           
+        481 223.050.218  0000   28      54    141.188 JEFERSON GONCALVES DE RESENDE                 0                                                           
+        482 223.921.898  0000   38       2    154.014 GRAZIELA NICOLETTI GOMES                      0                                                           
+        483 224.135.608  0000   58       2    156.475 MARISTELA FERREIRA DOS SANTOS                 0                                                           
+        484 224.587.288  0000   63       2    108.578 LEANDRO P FARIAS                              0                                                           
+        485 224.648.908  0000   39       2    108.663 ADRIANA LIMA DE BARROS                        0                                                           
+        486 224.684.548  0000   39       2    113.131 NELSON BATISTA DO AMARAL                      0                                                           
+        487 224.685.098  0000   38       2    114.758 EVERSON R MACEDO                              0                                                           
+        488 224.862.558  0000   85       2    114.523 EMERSON MIGUEL DOS SANTOS                     0                                                           
+        489 224.888.708  0000   62       2    400.799 VINICIUS ALEXANDRE MARCIANO DE                0                                                           
+        490 225.179.248  0000   13       2    118.446 ANDERSOM R RODRIGUE                           0                                                           
+        491 225.212.118  0000   18       2    500.123 ANDERSON APARECIDO RODRIGUES P                0                                                           
+        492 225.237.698  0000   83       2    120.878 ANDRE JOSE SILVA                              0                                                           
+        493 225.940.288  0000   78       2    116.540 ERIKA MICHELE DOS SANTOS FERRE                0                                                           
+        494 226.397.438  0000   56       2    514.057 ELISANGELA DE OLIVEIRA PEDROSO                0                                                           
+        495 227.171.558  0000   05       2    126.286 SERGIO ANTONIO AMARTIELLO                     0                                                           
+        496 227.200.848  0000   83       2    120.022 JOSE ALEXANDRE DE SOUZA DOS SA                0                                                           
+        497 228.900.558  0000   41       2    121.622 ANDREZA AP ALVES                              0                                                           
+        498 229.666.348  0000   63       2    150.800 ANDERSON ALVES DA SILVA                       0                                                           
+        499 229.689.428  0000   32       2    129.677 MARTA SALOMAO OKADA                           0                                                           
+        500 229.939.968  0000   27       2    124.883 MAIRA T S MONTEIRO                            0                                                           
+        501 230.212.868  0000   01       2    106.513 ANDRESSA P GARCIA                             0                                                           
+        502 231.058.188  0000   71       2    125.925 JULIANA P SILVA                               0                                                           
+        503 234.091.028  0000   50       2    154.808 MARWEN BEN HAMOUDA                            0                                                           
+        504 234.353.228  0000   10       2    521.188 MARCEL IGARASHI MARTINS                       0                                                           
+        505 234.585.180  0000   53   3.277     44.160 PLINIO CESAR SANTOS DE BITTENC                0                                                           
+        506 234.777.648  0000   70       2    156.545 ALEX MARQUES DE SOUSA                         0                                                           
+        507 236.320.469  0000   72       2    125.280 ELISEU G. LEONEL                              0                                                           
+        508 246.407.998  0000   70       2     97.713 CLAUDIO DE SOUZA                              0                                                           
+        509 246.578.808  0000   61       2    129.690 SILVIO SERGIO FERREIRA                        0                                                           
+        510 247.265.138  0000   42       2    117.457 EDUARDO MOURA CRUZ                            0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     11                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        511 247.753.298  0000   71       2    114.918 JOAO D SANTOS                                 0                                                           
+        512 247.782.668  0000   97       2    128.098 CRISTIANA PIMENTEL                            0                                                           
+        513 250.214.438  0000   87       2     26.675 JAIR GUIZARDI                                 0                                                           
+        514 250.397.578  0000   08       2    152.718 MARIO ALDO NERIS                              0                                                           
+        515 251.055.668  0000   15       2     29.137 SERGIO APARECIDO DO AMARAL                    0                                                           
+        516 251.137.688  0000   12       2     97.649 JONATH RICHARD RODRIGUES                      0                                                           
+        517 251.195.698  0000   54       2    126.853 ROSALINA SILVA LOPE                           0                                                           
+        518 251.314.648  0000   46       2    500.132 ELIAS OZORIO DE SOUZA                         0                                                           
+        519 252.705.448  0000   06       2    105.846 ARNALDO A. MOURA                              0                                                           
+        520 253.320.868  0000   06       2    124.641 CHARLES R ZANOTTI                             0                                                           
+        521 253.627.058  0000   06       2    119.140 MARCOS PEREIRA DA COSTA                       0                                                           
+        522 253.634.998  0000   51       2    545.057 MARIA APARECIDA MEIRA                         0                                                           
+        523 255.044.708  0000   54       2    117.589 MARIA NATALINA MALAQUIAS                      0                                                           
+        524 255.555.718  0000   01      54    141.415 CLEBER DA SILVA CARDOSO                       0                                                           
+        525 256.061.008  0000   60       2    157.780 ANDRE LUIS PIRES DA SILVA                     0                                                           
+        526 257.065.428  0000   05       2    124.959 MARIA DE L HAYASHID                           0                                                           
+        527 257.111.438  0000   75       2     99.246 SIDNEI SANTANA                                0                                                           
+        528 257.392.198  0000   09   2.959        109 ALESSANDRA VALLIM GONCALVES NU                0                                                           
+        529 257.699.101  0000   78       2    115.760 VRELIA LUCINDA ZANGIROLAMI                    0                                                           
+        530 258.885.708  0000   69       2    103.016 GIOVANA SILVA DOS SANTOS                      0                                                           
+        531 263.981.718  0000   37       2    109.693 WANDELEIA EVARISTO DOS SANTOS                 0                                                           
+        532 264.865.628  0000   62       2    103.926 LUCIANA SOARES DE OLIVEIRA                    0                                                           
+        533 264.889.978  0000   23       2     95.004 ANDERSON ROBERT R DE OLIVEIRA                 0                                                           
+        534 265.107.740  0000   20   3.250    190.751 ROSANE APARECIDA CORREA                       0                                                           
+        535 265.890.168  0000   28       2    126.761 TATHIANA DE OLIVEIRA CAMARGO                  0                                                           
+        536 265.959.168  0000   78       2    125.543 JOSE ED BISSOLI                               0                                                           
+        537 265.998.738  0000   63       2    111.372 RAMON B FRANCO                                0                                                           
+        538 266.848.228  0000   36       2     96.472 RENATO S OLIVEIRA                             0                                                           
+        539 267.212.728  0000   06       2    116.487 ELTON SIVIERO                                 0                                                           
+        540 268.142.148  0000   90       2    109.624 LEANDRO DE SOUZA EUGENIO                      0                                                           
+        541 268.760.668  0000   51       2    154.244 ERMES CANDIDO DA SILVA                        0                                                           
+        542 269.266.208  0000   30       2    121.709 JOSE LUIZ DOS SANTOS                          0                                                           
+        543 269.366.278  0000   89       2    130.892 FABIANO PIRES                                 0                                                           
+        544 270.034.918  0000   00       2    128.346 FRANKLIN ROSSI AZEV                           0                                                           
+        545 271.824.598  0000   09       2    130.404 WELLINGTON GOMES LEITE                        0                                                           
+        546 272.352.578  0000   30       2    155.918 JOSICLER SANTANA PIRES DA SILV                0                                                           
+        547 272.516.738  0000   86       2    120.339 LEONARDO COELHO                               0                                                           
+        548 272.666.738  0000   44       2    125.820 RENATO JOSE SOUZA                             0                                                           
+        549 273.136.838  0000   12       2    108.430 RICARDO PEREIRA                               0                                                           
+        550 273.465.358  0000   39       2    129.676 MIRIAM OKADA CASADEI                          0                                                           
+        551 273.504.068  0000   27       2    519.195 TEOFILO OLIVEIRA FAGUNDES                     0                                                           
+        552 273.641.528  0000   06       2    108.185 ANTONIO DONIZETI DE ALCANTARA                 0                                                           
+        553 274.629.248  0000   38       2    157.524 IGNEZ COLODETTI DA SILVA                      0                                                           
+        554 275.088.368  0000   71       2    130.595 RISOMAR  ALVES MONTEIRO                       0                                                           
+        555 276.546.188  0000   08       2    130.781 ANTONIO MARCOS CORDEIRO                       0                                                           
+        556 278.806.748  0000   88       2    172.409 JEFFERSON LEITE DE CARVALHO                   0                                                           
+        557 280.415.018  0000   69       2    154.647 SOLANGE CRISTINA ROCHA LEITE B                0                                                           
+        558 281.191.658  0000   02       2    512.354 ROSANGELA CRISTINA PEREIRA                    0                                                           
+        559 281.314.758  0000   32       2    118.969 GETULIO DA SILVA FILHO                        0                                                           
+        560 281.469.478  0000   24       2    153.825 WILDENER HENRIQUE PECO SOARES                 0                                                           
+        561 283.563.258  0000   11       2    112.535 KAMILLA N PILLA                               0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     12                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        562 283.623.388  0000   57       2    517.860 NIVALDO APARECIDO DOS SANTOS L                0                                                           
+        563 283.768.858  0000   47       2    155.604 CLEMENTINO PEREIRA DA COSTA                   0                                                           
+        564 283.842.918  0000   37       2    117.646 FERNANDO ROSSMAN COELHO                       0                                                           
+        565 284.140.748  0000   98       2    515.747 EDSON FERREIRA DA SILVA                       0                                                           
+        566 285.495.408  0000   46       2    514.522 VIVIANE ALVES DA SILVA                        0                                                           
+        567 286.023.428  0000   45       2    517.856 LUCIANE RIBEIRO FARIAS                        0                                                           
+        568 286.108.868  0000   08       2    518.937 ELIZABETH DA SILVA                            0                                                           
+        569 286.209.358  0000   01       2    114.805 REINALDO PEREIRA DA SILVA                     0                                                           
+        570 286.426.258  0000   48       2    550.295 CARLOS HENRIQUE GOMES                         0                                                           
+        571 286.917.708  0000   99       2    111.536 OSMAR DIAS                                    0                                                           
+        572 287.209.318  0000   40       2    152.443 LUIS SILVIO DA SILVA                          0                                                           
+        573 287.281.238  0000   59       2    110.499 ALESSANDRA DANIELI RUEDA                      0                                                           
+        574 287.376.488  0000   02       2    101.988 DANIELE AUGUSTA DO AMARAL PIAC                0                                                           
+        575 287.468.668  0000   92       2    545.087 ALEXANDRE CANDIDO DOS SANTOS                  0                                                           
+        576 287.722.428  0000   76       2    104.648 ALINE DOS REISMASON BETIME                    0                                                           
+        577 288.339.148  0000   36       2    128.840 EVERTON CUPAIOL BRITO                         0                                                           
+        578 289.249.518  0000   07       2    151.726 LILIAN DE CASSIA RIBEIRO                      0                                                           
+        579 290.133.168  0000   83       2    103.948 PATRICIA ALVES                     2          0                                                           
+        580 290.569.438  0000   63       2    129.352 ELAINE CRISTINA PEREIRA DE OLI                0                                                           
+        581 290.570.718  0000   60       2    123.423 ELIEZER ANDRADE REIS                          0                                                           
+        582 291.473.788  0000   24       2    106.304 SHIRLEY BRUNO NASCIMENTO GALIN                0                                                           
+        583 292.433.398  0000   93       2    127.408 SORAIA VIEIRA ROSA                            0                                                           
+        584 292.711.758  0000   67       2    151.883 ALESSANDRO RODRIGUES                          0                                                           
+        585 293.284.890  0000   91     324    252.718 LUIS PINTO BEAL                               0                                                           
+        586 293.393.178  0000   82       2    560.152 ROSELI APARECIDA DE SOUZA SANT                0                                                           
+        587 293.948.458  0000   95       2    113.183 VANDERLEY C MELO                              0                                                           
+        588 294.747.788  0000   09       2    123.053 RODRIGO JOSE FOSSALUZA                        0                                                           
+        589 294.932.818  0000   09       2    560.155 JOCELINA GREGORIO MIRANDA                     0                                                           
+        590 295.098.568  0000   86       2    131.828 ZULEIDE LOURENCO BRUNO                        0                                                           
+        591 295.201.368  0000   35       2    125.344 LEANDRO M FONSECA                             0                                                           
+        592 295.381.868  0000   50       2    129.627 JEAN CESAR TEIXEIRA                           0                                                           
+        593 295.637.768  0000   01       2    105.868 JULIANO JOCA DA SILVA                         0                                                           
+        594 296.980.758  0000   01       2    118.074 LEANDRO RODRIGUES GATTO                       0                                                           
+        595 297.178.458  0000   40       2    117.317 ELISANGELA DE OLIVEIRA DOS SAN                0                                                           
+        596 300.469.298  0000   86       2    155.166 ADRIANO SAMARITANO                            0                                                           
+        597 301.415.578  0000   00       2    120.192 ELLEN CASTRO SARMENTO                         0                                                           
+        598 302.099.918  0000   95       2    111.117 ROBERTO FERREIRA DOS SANTOS                   0                                                           
+        599 302.600.238  0000   09       2    154.652 ALESANDRA GOMES LUIZ                          0                                                           
+        600 303.188.008  0000   02       2    122.432 LEANDRO R AZEVEDO                             0                                                           
+        601 303.519.318  0000   56       2    540.348 NILZA BATISTA ESPIN MOREIRA                   0                                                           
+        602 303.702.538  0000   76       2    105.539 JOAQUIM FLORENTINO PEREIRA JUN                0                                                           
+        603 304.055.958  0000   32       2    130.417 DANIEL MEDEIROS MOURA DE PAULA                0                                                           
+        604 304.206.078  0000   03       2    127.963 TIAGO DEMETRIO                                0                                                           
+        605 304.277.678  0000   65       2    201.579 LUIS VICENTE DE OLIVEIRA                      0                                                           
+        606 305.513.078  0000   20       2     24.893 CARLOS MUNHOZ                                 0                                                           
+        607 305.517.428  0000   36       2        338 MOACIR JANUARIO NETO                          0                                                           
+        608 305.639.508  0000   97       2    152.420 AGUSTINHO RIBEIRO SILVA                       0                                                           
+        609 305.923.727  0000   15     309    161.477 REGINALDO DE BETHENCOURT CARVA                0                                                           
+        610 307.236.568  0000   78       2    510.121 EDER EVANGELISTA DA COSTA                     0                                                           
+        611 307.412.328  0000   12       2    560.287 ELIANE CRISTINA LEMES DE ARAUJ                0                                                           
+        612 307.503.388  0000   06       2    128.405 MARCIO M ANDRADE                              0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     13                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        613 308.190.322  0000   04       2        142 VALDIR DE MARCHI                              0                                                           
+        614 309.833.288  0000   38       2    127.267 ERICA C A BARBOSA                             0                                                           
+        615 310.478.648  0000   86       2    120.995 VERONICA LUCENA SANT ANA                      0                                                           
+        616 310.623.688  0000   43       2    128.412 FABIO LOPES                                   0                                                           
+        617 311.246.128  0000   23       2    118.077 CLODOALDO AP ALEXAN                           0                                                           
+        618 311.451.668  0000   81       2    113.748 NELSON ITO SANTANNA                           0                                                           
+        619 311.972.368  0000   13       2    200.416 LILIAN CANDIDO DA SILVA                       0                                                           
+        620 312.095.561  0000   20   2.254      2.910 SERGIO ANCELMO DA SILVA                       0                                                           
+        621 312.104.108  0000   85       2    513.509 JOSE EVANGELISTA DA SILVA NETO                0                                                           
+        622 312.666.758  0000   92       2    515.900 PAULO ENRIQUE PEREIRA DOS SANT                0                                                           
+        623 312.801.768  0000   90       2    101.183 WILSON JOSE GUIMARAES REIS                    0                                                           
+        624 314.389.158  0000   02       2    125.657 GRECIELI DE JESUS FERRAZ                      0                                                           
+        625 315.076.738  0000   50       2    118.532 JOSIELI FONTOLAN                              0                                                           
+        626 315.177.618  0000   32     127    244.041 PRISCILA SARAIVA CORREIA                      0                                                           
+        627 315.179.928  0000   00       2    121.562 FABIO JUNIOR ALVES                            0                                                           
+        628 315.367.838  0000   38       2    515.598 ELCIO DA SILVA                                0                                                           
+        629 315.456.048  0000   35       2    113.687 JOSIANE FERNANDES FRANCO                      0                                                           
+        630 316.127.288  0000   98       2    115.809 EMANUEL A SILVA                               0                                                           
+        631 316.368.738  0000   55       2    156.821 WELLINGTON RAMOS DO NASCIMENTO                0                                                           
+        632 317.700.808  0000   64       2    156.836 GUILHERME DE OLIVEIRA TAKEUTI                 0                                                           
+        633 321.096.298  0000   78       2    155.268 LEANDRO APARECIDO CORDEIRO DOS                0                                                           
+        634 321.247.398  0000   32       2    116.735 ACACIO CARDOSO DE SA                          0                                                           
+        635 321.365.558  0000   98       2    128.163 ROSENILDA APARECIDA DA SILVA                  0                                                           
+        636 321.505.688  0000   70       2    154.425 ERICA CRISTINA DE SOUSA MENDES                0                                                           
+        637 321.506.168  0000   66       2    517.022 ALDO DOMINGOS DOS SANTOS                      0                                                           
+        638 321.509.418  0000   56       2    120.625 JONATHAN COSME DA SILVA CAVALH                0                                                           
+        639 321.756.248  0000   89       2    122.499 EMERSON R B SANTOS                            0                                                           
+        640 322.103.208  0000   01       2    513.893 GILMAR ANTONIO DOS SANTOS                     0                                                           
+        641 323.485.841  0000   15   3.346        785 ALVARO ALVARES                                0                                                           
+        642 323.538.948  0000   28       2    152.242 FRANCISCO CORDEIRO DE LIMA                    0                                                           
+        643 323.691.638  0000   95       2    129.642 BRUNA FERNANDA EVANGELISTA                    0                                                           
+        644 324.625.618  0000   70       2    102.167 JAIR L SILVA JR                               0                                                           
+        645 325.779.178  0000   05       2    127.235 JEFERSON WILLIAN DOS SANTOS                   0                                                           
+        646 327.415.738  0000   40       2    122.455 FABIANO DAVID PEREIRA                         0                                                           
+        647 327.982.098  0000   70       2    120.977 KAREN LUCY SANTANA                            0                                                           
+        648 328.453.488  0000   19       2    152.132 KLEBER FINASSI BUENO                          0                                                           
+        649 328.722.588  0000   09       2    116.602 EDNILSON JOSE DOS REIS                        0                                                           
+        650 329.018.908  0000   22       2    124.175 MARIANA M ALMEIDA                             0                                                           
+        651 329.032.918  0000   61       2    117.826 MARCIO SOUZA BARBOZA                          0                                                           
+        652 329.173.478  0000   56       2    118.716 MARCOS AURELIO FERREIRA                       0                                                           
+        653 330.861.478  0000   22       2    128.021 MARCUS VINICIUS SOUZA NEVES                   0                                                           
+        654 331.642.388  0000   51       2    515.593 BEATRIZ ZAGO SANTORO                          0                                                           
+        655 331.783.758  0000   64       2    512.860 BRUNO PEREIRA DA SILVA                        0                                                           
+        656 331.966.638  0000   09       2    128.156 TIAGO GIRALDI                                 0                                                           
+        657 332.245.668  0000   41       2    560.137 DANIEL ODILON                                 0                                                           
+        658 332.585.338  0000   22       2    153.374 VALERIA ALVES DE SOUZA                        0                                                           
+        659 332.718.198  0000   58       2    101.454 ALEXANDRE APARECIDO PEREIRA DO                0                                                           
+        660 333.217.568  0000   89       2    540.282 TATIANE SANTANA DA SILVA                      0                                                           
+        661 333.439.998  0000   22       2    121.542 PATRICIA S MESSIAS                            0                                                           
+        662 334.194.728  0000   03       2    126.019 WILSON R CASTRO                               0                                                           
+        663 334.937.198  0000   17       2    512.463 GUILHERME CULURA NEVES                        0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     14                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        664 335.326.698  0000   46       2    153.875 RAFAEL HENRIQUE RODRIGUES                     0                                                           
+        665 335.420.788  0000   40       2    172.570 WAGNER PEREIRA DA SILVA                       0                                                           
+        666 336.046.308  0000   00       2      8.969 JOSE GONZALES CASTELLON                       0          9                                                
+        667 336.330.768  0000   32       2    540.005 FABIANO MARCELO DA SILVA                      0                                                           
+        668 336.953.468  0000   17       2    517.117 MARCIO ROGERIO FERRARO DOS SAN                0                                                           
+        669 337.428.448  0000   57       2    128.293 EDSON S XAVIER                                0                                                           
+        670 337.515.818  0000   12       2    155.655 CRISTIELLEN RODRIGUES ZEQUINI                 0                                                           
+        671 337.737.948  0000   78       2    127.151 AMANDA REGINA JANUARIO                        0                                                           
+        672 337.812.428  0000   89       2    127.802 RAFAEL DE SOUZA SANTOS                        0                                                           
+        673 338.199.878  0000   19       2    127.120 EVERTON ROBERTO SOU                           0                                                           
+        674 339.259.548  0000   99       2    127.796 FRANCINI DE OLIVEIR                           0                                                           
+        675 339.271.808  0000   40       2    545.049 IVONE FERREIRA DA SILVA                       0                                                           
+        676 339.449.308  0000   00       2    120.523 MAURICIO RIBEIRO DOS SANTOS                   0                                                           
+        677 339.790.708  0000   08       2    124.061 LAIS AP F LIMA                                0                                                           
+        678 339.947.008  0000   84       2    125.508 CRISTIANE C ROSA                              0                                                           
+        679 340.570.168  0000   64       2    129.708 DIEGO DE OLIVEIRA DA SILVA                    0                                                           
+        680 342.206.958  0000   50       2    540.304 DEBORA MARTINS RIBEIRO                        0                                                           
+        681 342.568.518  0000   01       2    550.298 FERNANDO BRITO DA SILVA                       0                                                           
+        682 342.644.658  0000   85       2    156.824 ROSEMIR DA SILVA                              0                                                           
+        683 343.636.628  0000   59       2    128.622 ADRIANA PEREIRA DA SILVA                      0                                                           
+        684 344.206.628  0000   08       2    128.550 IDIONACIO JUNIOR CANDIDO ARRUD                0                                                           
+        685 344.642.188  0000   22       2    585.027 JONAS ALVES DE LIMA JUNIOR                    0                                                           
+        686 346.853.308  0000   03       2    200.600 NATALIA JACQUELINE DE SOUZA SI                0                                                           
+        687 347.087.088  0000   82       2    152.915 PAULA ANDRESSA DE OLIVEIRA BON                0                                                           
+        688 347.087.348  0000   83       2    129.717 GLAUCIA GODOI DE OLIVEIRA                     0                                                           
+        689 347.124.290  0000   20   1.252     12.110 ANDRE RAMGRAB                                 0                                                           
+        690 347.183.048  0000   06       2    152.247 MARLON MARTINS                                0                                                           
+        691 347.518.138  0000   03       2    121.546 ELIS REGINA FERREIR                           0                                                           
+        692 347.807.628  0000   55       2    121.954 BRUNO DE LIMA BERNARDO                        0                                                           
+        693 347.808.048  0000   76       2    517.348 ANA CAROLINA BIFFI                            0                                                           
+        694 348.015.368  0000   24       2    585.002 JOSE APARECIDO DA SILVA                       0                                                           
+        695 348.169.458  0000   06       2    545.034 SUSANA GOMES DA SILVA                         0                                                           
+        696 348.430.208  0000   93       2    120.460 ANDRE REDONDO PEIXOTO                         0                                                           
+        697 348.653.048  0000   86       2    131.570 WELLINGTON FERNANDO EURIMIDIO                 0                                                           
+        698 348.671.508  0000   94       2    121.249 ELVIS MARTINS FERREIRA                        0                                                           
+        699 349.867.328  0000   97       2    510.266 LUIS ANTONIO BALBINO DE JESUS                 0                                                           
+        700 351.011.248  0000   26       2    153.533 FABIO RODRIGO DE OLIVEIRA                     0                                                           
+        701 351.363.078  0000   62       2    128.471 JOAO P BARBOSA                                0                                                           
+        702 352.067.528  0000   51       2    127.877 CARINA DA SILVA CAETANO                       0                                                           
+        703 352.502.038  0000   41       2    121.335 MARILENE A CALIXTO                            0                                                           
+        704 352.682.588  0000   26       2    131.465 WILLIAM RODRIGUES SOUZA                       0                                                           
+        705 353.411.718  0000   29       2    513.345 DAIANE DOS SANTOS LOUREIRO                    0                                                           
+        706 354.090.709  0000   25       2    154.127 DARCY DA CONCEICAO D AMICO                    0                                                           
+        707 354.508.838  0000   38       2    151.715 MICHELE CRISTINA DA SILVA DE O                0                                                           
+        708 356.349.138  0000   02       2    156.461 JEAN CARLOS DE OLIVEIRA                       0                                                           
+        709 357.341.068  0000   52       2    540.395 ADRIANA INACIO                                0                                                           
+        710 357.800.978  0000   44       2    129.372 MARCOS HENRIQUE AMANCIO DEMORI                0                                                           
+        711 358.188.228  0000   00       2    124.309 DAIANE VIANA DE SOUZA                         0                                                           
+        712 358.267.138  0000   01       2    127.761 MARCELA MONTEIRO                              0                                                           
+        713 358.286.718  0000   80       2    152.496 DANILO DA SILVA                               0                                                           
+        714 358.670.538  0000   73       2    131.805 GUILHERME PEREIRA DA SILVA                    0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     15                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        715 358.907.258  0000   07       2    130.799 GIOVANI PEREIRA DE MORAES                     0                                                           
+        716 358.929.318  0000   70       2    126.871 PATRICIA R DE MELO                            0                                                           
+        717 359.457.718  0000   05       2    155.183 JONATHAN BRUNO VIEIRA DOS SANT                0                                                           
+        718 361.218.658  0000   22       2    540.362 VALQUIRIO FERREIRA DO N FILHO                 0                                                           
+        719 363.302.878  0000   13       2    125.712 PAULO S SANTOS JR                             0                                                           
+        720 364.242.758  0000   86       2    127.050 FABIO F NAGARINI                              0                                                           
+        721 364.389.198  0000   96       2    154.347 ALINE MARTINS ARANHA                          0                                                           
+        722 365.199.078  0000   80       2    516.908 SERGIO ALEXANDRE BETTI                        0                                                           
+        723 365.805.128  0000   06       2    514.266 WESLEY CESAR QUIRINO DA CRUZ                  0                                                           
+        724 365.924.088  0000   55       2    131.404 WAGNER WILLIAM GONZALES GOMES                 0                                                           
+        725 366.242.638  0000   22       2    156.261 ALEX GERACINO ROSA                            0                                                           
+        726 367.192.918  0000   90       2    128.196 FABIANA MANOEL                                0                                                           
+        727 367.247.568  0000   80       2    126.160 MANUELA MARIA PEREIRA LEITE                   0                                                           
+        728 367.338.948  0000   31       2    125.714 TATHIANE M VISINUME                           0                                                           
+        729 367.857.928  0000   00       2     97.736 JOSE LONCAROVICH                              0                                                           
+        730 369.194.478  0000   78       2    123.942 MAYARA CRISTINA PERTINHES VOSS                0                                                           
+        731 370.480.660  0000   91     324    252.283 PAULO DE TARSO VERNET NOT                     0                                                           
+        732 370.560.548  0000   89       2    151.869 ADRIEL GERALDO FRANCA DA SILVA                0                                                           
+        733 371.382.148  0000   80       2    127.590 WELLINGTON C SANTOS                           0                                                           
+        734 372.062.268  0000   17       2    151.608 DIEGO FRANCISCO DOS SANTOS BUE                0                                                           
+        735 375.572.678  0000   50       2    152.989 JONES DA SILVA MOURA                          0                                                           
+        736 376.217.000  0000   25   3.277     32.200 MARIA MARILEIA PIZZOLOTTO BITT                0                                                           
+        737 376.435.760  0000   68   3.277     40.534 MARIA SELONI BITTENCOURT MORAR                0                                                           
+        738 377.935.418  0000   71       2    150.661 JAQUELINE DE BARROS TAVARES                   0                                                           
+        739 378.567.928  0000   92       2    129.006 LUIS FERNANDO ALVES MARQUES                   0                                                           
+        740 378.686.638  0000   47       2    153.312 REGINALDO APARECIDO DOS SANTOS                0                                                           
+        741 379.277.548  0000   40       2    153.024 VANESSA FOGACA DE OLIVEIRA                    0                                                           
+        742 379.277.588  0000   37       2    155.603 JOHNNY RAMOS                                  0                                                           
+        743 379.631.438  0000   47       2    151.250 EMERSON DA SILVA                              0                                                           
+        744 381.026.038  0000   01       2    580.033 LARISSA DE LARA PEREIRA                       0                                                           
+        745 381.189.118  0000   96       2    124.480 VERA NUBIA DE OLIVEIRA                        0                                                           
+        746 381.255.508  0000   52       2    128.107 JULIANA PEREIRA                               0                                                           
+        747 381.313.648  0000   52       2    126.467 LEILA OLIVIERA                                0                                                           
+        748 383.410.398  0000   50       2    127.832 MAICON DOS SANTOS TONEZI                      0                                                           
+        749 384.190.008  0000   92       2    560.235 ALDINEIA DE SOUZA MARTINS                     0                                                           
+        750 385.239.888  0000   66       2    540.387 EDMAR JOSE BATISTA                            0                                                           
+        751 385.516.538  0000   65       2    156.646 JESSICA ALMEIDA DINIZ                         0                                                           
+        752 385.516.558  0000   09       2    155.503 RENATO SOUZA DE LIMA                          0                                                           
+        753 385.593.398  0000   76       2    153.288 BRUNA FREITAS DIAS DE OLIVEIRA                0                                                           
+        754 385.855.290  0000   91   3.277     40.527 DARI JOSE CAVALHEIRO                          0                                                           
+        755 386.075.574  0000   91   3.001    155.565 JOSE LAMARTINE MONTEIRO BERNAD                0                                                           
+        756 386.736.438  0000   99       2    151.591 JAIR GOMES JUNIOR                             0                                                           
+        757 387.046.228  0000   04       2    517.839 PEDRO HENRIQUE FERNANDES                      0                                                           
+        758 387.234.158  0000   86       2    128.048 JONATHAN E FARIAS                             0                                                           
+        759 388.758.148  0000   21       2    154.429 RENATA DOS SANTOS NUNES                       0                                                           
+        760 389.544.848  0000   67       2    156.030 HEITOR DOS SANTOS PEREIRA NETO                0                                                           
+        761 390.944.558  0000   62       2    131.620 GUILHERME UMBELINO DE SOUZA                   0                                                           
+        762 391.397.328  0000   19       2    545.104 LETICIA DONATO DA SILVA                       0                                                           
+        763 391.449.108  0000   60       2    550.249 JOSE SANTOS DE FREITAS BARBOSA                0                                                           
+        764 392.317.598  0000   17       2    129.337 MARLON ANDERSON MAGALHAES                     0                                                           
+        765 393.207.968  0000   07       2    517.430 ALAN PETERSON BUGULA                          0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     16                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        766 393.361.278  0000   02       2    151.877 LIGIA NOVAES BAPTISTA                         0                                                           
+        767 395.268.978  0000   54       2    154.579 TAMYRIS CRISTINA ARIAS                        0                                                           
+        768 395.275.528  0000   18       2    154.723 WILLIAM NASCIMENTO                            0                                                           
+        769 395.751.908  0000   07       2    156.264 MAYCON VIEIRA GUIMARAES                       0                                                           
+        770 395.898.148  0000   83       2    560.161 NELSON DE OLIVEIRA JUNIOR                     0                                                           
+        771 396.056.758  0000   89       2    151.051 PATRICIA MOREIRA PAULINO                      0                                                           
+        772 396.776.128  0000   24       2    126.339 CAMILA F B MEDEIROS                           0                                                           
+        773 396.895.368  0000   18       2    154.178 JOAO CLAUDIO ZEFERINO                         0                                                           
+        774 398.521.938  0000   99       2    111.126 JESSICA FIAMA LUCAS DA SILVA S                0                                                           
+        775 400.338.158  0000   01       2    126.886 KELVIN G MARQUES                              0                                                           
+        776 401.052.548  0000   78       2    156.213 AMANDA AZEVEDO                                0                                                           
+        777 401.515.488  0000   62       2    156.171 CRISTIANE RAMOS CARDOSO                       0                                                           
+        778 404.132.588  0000   90       2    156.663 RENATA ANDRESSA REVERSI                       0                                                           
+        779 405.793.728  0000   55       2    155.906 EDUARDO HENRIQUE DIAS DOS SANT                0                                                           
+        780 407.155.218  0000   29       2    131.871 DENIS APARECIDO LEITE DOS SANT                0                                                           
+        781 407.345.578  0000   84       2    128.282 LUIS RIBEIRO                                  0                                                           
+        782 408.142.540  0000   04       2    160.037 LAZARO MARQUES CARRIJO                        0                                                           
+        783 408.342.508  0000   37       2    154.788 ALEX DA SILVA SOUZA                           0                                                           
+        784 408.698.438  0000   50       2    200.685 RAFAELA APARECIDA ROCHA ASSIS                 0                                                           
+        785 409.347.878  0000   32       2    156.315 VINICIUS HENRIQUE DOS SANTOS F                0                                                           
+        786 410.395.210  0000   53   3.277     20.849 JOAO ALBINO DE MEDEIROS FARIAS                0                                                           
+        787 410.508.838  0000   61       2    153.744 NAIARA CRISTINA GALHARDI                      0                                                           
+        788 411.643.078  0000   19       2    155.123 MARCUS VINICIUS MALDONADO JUNI                0                                                           
+        789 414.737.607  0000   04     309    141.081 TANIA GENILDA DA CRUZ GONCALVE                0                                                           
+        790 415.283.048  0000   45       2    560.223 FERNANDO LUIZ SOUZA RAMALHO                   0                                                           
+        791 416.098.028  0000   70       2    157.537 RAQUEL MAGNA DE LIMA                          0                                                           
+        792 417.404.798  0000   74       2    201.226 JOSE GUILHERME DE OLIVEIRA SOU                0                                                           
+        793 417.954.378  0000   80       2    155.826 DIEGO HENRIQUE LOPES RIBEIRO                  0                                                           
+        794 418.322.238  0000   92       2    154.308 THAIS ROBERTA ESTELLA SANTOS                  0                                                           
+        795 418.332.698  0000   29       2    540.302 JONATAN BASTOS DA CUNHA                       0                                                           
+        796 420.684.959  0000   53   1.109     50.801 ADIR VEIGA                                    0                                                           
+        797 426.687.758  0000   76       2    155.965 SERGIO DA SILVA DOS SANTOS                    0                                                           
+        798 427.218.338  0000   98       2    585.041 JOSE ROBERTO CAETANO VIEIRA                   0                                                           
+        799 438.440.728  0000   96       2    156.896 INAYA SILVA FERREIRA                          0                                                           
+        800 460.942.020  0000   15   3.277     39.734 LEANDRO FRIZO                                 0                                                           
+        801 461.078.940  0000   04   3.277     39.532 FABIO ROGERIO SELI                            0                                                           
+        802 462.370.890  0000   04   3.277     32.345 ELSO LUIS EVERLING                            0                                                           
+        803 470.993.566  0000   15   2.146     30.094 ROGERIO BATISTA DE SOUZA                      0                                                           
+        804 479.506.928  0000   04     115     64.251 OSWALDO APARECIDO DRUDI                       0                                                           
+        805 483.108.160  0000   49   2.276     21.592 ANDRE DIAS BUENO                              0                                                           
+        806 484.965.029  0000   53      73    153.450 JARBAS LEAO CALHEIROS MAGRO                   0                                                           
+        807 489.872.988  0000   68       2     27.317 MANOEL MESSIAS DOS SANTOS I                   0                                                           
+        808 490.210.441  0000   53       2    151.791 EDSON PEREIRA DA SILVA                        0                                                           
+        809 495.735.948  0000   20       2     22.546 OSVALDO BIDOIA FILHO                          0                                                           
+        810 503.349.300  0000   06     268     91.323 JULIO CESAR RODRIGUES DO AMARA                0                                                           
+        811 511.023.908  0000   87       2     14.646 CARMO FIDELCINO MADUREIRA                     0                                                           
+        812 516.517.778  0000   53       2     31.411 ARNALDO MENDES DE OLIVEIRA FIL     2          0                                                           
+        813 523.032.416  0000   34   2.638    141.584 MARLON PEREIRA PRADO                          0                                                           
+        814 527.475.906  0000   82   2.638     37.541 CLAUDIO SOARES DE SOUZA                       0                                                           
+        815 531.846.887  0000   04     606    145.579 JOSE MARCOS MAIA NEVES                        0                                                           
+        816 538.940.818  0000   72       2     21.403 EDUARDO ROBERTO MOURA COSTA                   0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     17                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        817 550.254.390  0000   00   3.250        129 EDUARDO GUIMARAES                             0                                                           
+        818 551.542.390  0000   91   3.277     42.565 ROSELAINE MARIA EVERLING RIBAS                0                                                           
+        819 551.542.470  0000   00   3.277     42.789 ROSELI TERESINHA EVERLING PETR                0                                                           
+        820 554.391.798  0000   87       2          2 SERGIO A VENDRAMINI                           0                                                           
+        821 554.391.798  0000   87       2          2 SERGIO A VENDRAMINI                           0                                                           
+        822 554.391.798  0000   87       2          2 SERGIO A VENDRAMINI                           0                                                           
+        823 558.542.658  0000   34       2        246 FLORISVALDO APARECIDO GARCIA                  0                                                           
+        824 558.681.508  0000   72       2     27.299 SIDNEI BONATTO                                0                                                           
+        825 559.006.401  0000   59       2    105.903 ANDREIA APARECIDA MOREIRA GONC                0                                                           
+        826 574.536.757  0000   15   1.200     39.816 MARGARETH NOGUEIRA                            0                                                           
+        827 591.420.908  0000   06     895     19.572 PAULO TUNEHITO HAMADA                         0                                                           
+        828 601.449.208  0000   91       2    155.444 CALIXTO ARCHANJO DA SILVA                     0                                                           
+        829 609.710.708  0000   06       2        206 WILSON NOVAES MATOS                           0                                                           
+        830 609.812.456  0000   68       2    125.930 JOSE G MOREIRA                                0                                                           
+        831 614.989.208  0000   53       2     12.408 ALCIDES RODRIGUES DA SILVA                    0                                                           
+        832 631.986.576  0000   87   1.200     29.963 VIRGINIA PERTENCE COUTO                       0                                                           
+        833 636.226.888  0000   15      94    120.455 JURANDIR LUIZ DA SILVA                        0                                                           
+        834 638.040.508  0000   91     450    112.146 EDSON VANDENBRANDE POPPE                      0                                                           
+        835 639.882.838  0000   00      84     75.279 ANTONIO GRECO NETO                            0                                                           
+        836 649.113.905  0000   06       2    101.483 JOSE EDUARDO T ANDR                           0                                                           
+        837 657.732.090  0000   04   3.277     32.095 LEANDRO FARIAS ESCOBAR                        0                                                           
+        838 667.631.004  0000   00   3.267    121.013 FLAVIO BARBOSA NETO                           0                                                           
+        839 670.208.608  0000   34       2     73.469 CARLOS GAVIOLI                                0                                                           
+        840 675.412.400  0000   87   3.277     32.178 CLAUDIO LUIZ BITTENCOURT MORAR                0                                                           
+        841 685.602.810  0000   53   3.277     32.055 ISAMARA MORARI                                0                                                           
+        842 692.565.278  0000   04      94     75.010 VILMA APARECIDA PEREIRA                       0                                                           
+        843 696.604.258  0000   72       2    104.079 JOSE RODRIGUES DA SILVA                       0                                                           
+        844 701.567.431  0000   91       2    126.300 MARINICE JORGE MUNIZ DIAS                     0                                                           
+        845 706.866.378  0000   87       2     17.516 CARLOS AUGUSTO MARTINEZ ROMER                 0                                                           
+        846 706.907.158  0000   20       2     28.194 PEDRO APARECIDO MONTENEGRO                    0                                                           
+        847 725.383.178  0000   00       2    512.850 MARIA DO CARMO RODRIGUES MARTE                0                                                           
+        848 736.322.879  0000   53       2    151.107 MEIRE DE FARIAS BARBOSA MENEA                 0                                                           
+        849 743.607.445  0000   87       2    514.498 LUCINEIDE MATOS DE ARAUJO                     0                                                           
+        850 753.118.957  0000   72   1.200     39.152 ROBERTO LUIS SOUZA LOYOLA                     0                                                           
+        851 762.171.591  0000   04       2    173.252 VALDIR DOMINGUES DA SILVA                     0                                                           
+        852 769.414.696  0000   68       2    120.284 GILSON LOURENCO DA SILVA                      0                                                           
+        853 770.305.758  0000   49      94    120.446 ADALBERTO ABRANTES                            0                                                           
+        854 783.991.657  0000   00     309    160.120 SANDRA REGINA RODRIGUES DOWSLE                0                                                           
+        855 786.933.495  0000   20       2    157.090 DIONE OLIVEIRA PEREIRA DA SILV                0                                                           
+        856 791.898.908  0000   25       2     71.022 JAIR SAGIORATTO                               0                                                           
+        857 792.337.758  0000   87       2      8.789 MARCELO PEREIRA GIMENES E OU                  0                                                           
+        858 792.983.541  0000   34   1.456     22.405 FERNANDO MAZIERO POZZOBON                     0                                                           
+        859 798.093.598  0000   53       2     29.008 JOSE ROBERTO MACHADO                          0                                                           
+        860 799.219.908  0000   10       2     29.910 MARIA TEREZINHA SANTOS                        0                                                           
+        861 812.319.890  0000   68   3.277     44.088 LOURENCO PIZZOLOTTO BITTENCOUR                0                                                           
+        862 818.339.110  0000   91   3.277     33.892 DANIEL MASSAFRA MIRON                         0                                                           
+        863 821.010.350  0000   49       2    200.581 MORALINA ESCOUTO DE CARVALHO                  0                                                           
+        864 824.919.928  0000   68       2    112.201 AGOSTINHO M RAMOS                             0                                                           
+        865 825.034.008  0000   68       2    560.206 WALDEMAR RODRIGUES                            0                                                           
+        866 825.548.708  0000   53       2    560.092 LUIZ CARLOS COUTINHO                          0                                                           
+        867 825.548.898  0000   72       2     89.940 UBIRAJARA EVANDRO DEVECHI ORDO                0                                                           
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     18                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+     REG.    CPF/CNPJ   FILIAL CTRL AGENCIA   CONTA                NOME              EXTR.BLOQ. DADOS INC. SPC/SERASA RESTR.IRES                                
+        868 844.601.646  0000   04   2.638    141.583 NIVIA MARIA DA SILVA                          0                                                           
+        869 856.254.507  0000   49   1.200     42.100 GILSON MORAIS DE FRANCA                       0                                                           
+        870 856.285.498  0000   00       2    511.865 MANOEL LUIZ ALVES                             0                                                           
+        871 864.638.299  0000   00       2    120.819 VANDERLEI R BESERRA                           0                                                           
+        872 871.056.756  0000   91     462    271.091 ALFREDO JULIO BALLESTEROS                     0                                                           
+        873 888.391.178  0000   49      25     73.212 DONIZETI ANDRE DE LIMA                        0                                                           
+        874 916.437.758  0000   04      90    111.852 MILTON CARLOS TIAGO                           0                                                           
+        875 921.126.338  0000   72       2    154.899 ADAGIZA AMALIA COLOMBO VITAL                  0                                                           
+        876 924.456.758  0000   04       2    511.194 WANDERLIN FRANCISCO DE SOUZA                  0                                                           
+        877 924.733.508  0000   68       2        159 CICERO ROSSATTO                               0                                                           
+        878 924.738.498  0000   20       2    160.133 MARIA THEREZA GONCALVES                       0                                                           
+        879 935.246.848  0000   15       2     82.295 PEDRO FALZONE NETO                            0                                                           
+        880 938.582.130  0000   04   3.277     35.818 MELISSA MACHT DOS REIS                        0                                                           
+        881 940.465.738  0000   72       2    511.918 JOSE BRAGANCA VINDOR                          0                                                           
+        882 954.144.798  0000   87     451     63.483 MAURO GUGLIELMO PICCININI                     0                                                           
+        883 957.247.106  0000   68     121    148.385 ADIMAR JOSE SILVA                             0                                                           
+        884 966.886.961  0000   34       2    155.565 FLAVIO HENRIQUE DE SOUZA                      0                                                           
+        885 967.568.617  0000   00     309    149.066 DENISE BRAGA DE CASTRO                        0                                                           
+        886 980.419.918  0000   15     680    110.342 RICARDO CERBINO DEPS                          0                                                           
+        887 987.097.123  0000   72       2    127.215 EVANILDO S ANDRADE                            0                                                           
+        888 999.463.781  0000   91     244    400.777 GRACY KELLY FERREIRA E SILVA                  0                                                           

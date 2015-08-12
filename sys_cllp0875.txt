@@ -1,0 +1,185 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E  A L N J E 0 2
+
+13.10.44 JOB19810 ---- FRIDAY,    16 JAN 2015 ----
+13.10.44 JOB19810  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+13.10.44 JOB19810  $EXIT006A  Job CLLP0875 Jobid(JOB19810) alterado para CLASS=E
+13.10.45 JOB19810  $HASP373 CLLP0875 STARTED - WLM INIT  - SRVCLASS BATCH_01 - SYS AL2C
+13.10.45 JOB19810  IEF403I CLLP0875 - STARTED - TIME=13.10.45
+13.10.45 JOB19810  -                                                --TIMINGS (MINS.)--                   ----PAGING COUNTS---
+13.10.45 JOB19810  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  SRVCLASS  PAGE  SWAP   VIO SWAPS
+13.10.45 JOB19810  -CLLP0875 STEP1                00     30      7    .00    .00     .0    942  BATCH_01     0     0     0     0
+13.10.45 JOB19810  -CLLP0875 STEP2                00     40      9    .00    .00     .0    303  BATCH_01     0     0     0     0
+13.10.45 JOB19810  IEF404I CLLP0875 - ENDED - TIME=13.10.45
+13.10.45 JOB19810  -CLLP0875 ENDED.  NAME-A299565              TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+13.10.45 JOB19810  $HASP395 CLLP0875 ENDED
+------ JES2 JOB STATISTICS ------
+  16 JAN 2015 JOB EXECUTION DATE
+           31 CARDS READ
+          180 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           12 SYSOUT SPOOL KBYTES
+         0.00 MINUTES EXECUTION TIME
+
+        1 //CLLP0875 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z,REGION=2048K       JOB19810
+        2 //JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR                                  00000020
+        3 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             00000030
+        4 //STEP1    EXEC PGM=PLAN1010                                            00000040
+        5 //SYSUT1   DD DSN=AD.BRQ.A358.CADBAIX.PROD,                             00000050
+          //       DISP=SHR                                                       00000060
+        6 //SYSUT2   DD DSN=AD.BRQ.PROD.CADBAIX.CLLP0875(+1),                     00000070
+          //       DISP=(,CATLG,DELETE),                                          00000080
+          //       UNIT=(DISCO,02),                                               00000090
+          //       SPACE=(TRK,(002430,0486),RLSE),                                00000100
+          //       DCB=(MX.A,LRECL=0314,RECFM=FB)                                 00000110
+        7 //PRINTER  DD SYSOUT=*                                                  00000120
+        8 //SYSOUT   DD SYSOUT=*                                                  00000130
+        9 //SYSUDUMP DD SYSOUT=Y                                                  00000140
+          //*                                                                     00000150
+       10 //STEP2    EXEC PGM=PLAN1010                                            00000160
+          //*                                                                     00000170
+          //* ***    COPIAR ARQUIVO PARA UTILIZAR COM CAMPOS                      00000180
+          //* ***  LEI DA TRANSPARENCIA                                           00000190
+          //*                                                                     00000200
+       11 //SYSUT1   DD DSN=AD.BRQ.A358.PRV.CADBAIX.CLLP280.EXP(0),               00000210
+          //       DISP=SHR                                                       00000220
+       12 //SYSUT2   DD DSN=AD.BRQ.PROD.CADBAIX.CLLP0875.LEI(+1),                 00000230
+          //       DISP=(,CATLG,DELETE),                                          00000240
+          //       UNIT=(DISCO,02),                                               00000250
+          //       SPACE=(TRK,(003230,0646),RLSE),                                00000260
+          //       DCB=(MX.A,LRECL=0414,RECFM=FB)                                 00000270
+       13 //PRINTER  DD SYSOUT=*                                                  00000280
+       14 //SYSOUT   DD SYSOUT=*                                                  00000290
+       15 //SYSUDUMP DD SYSOUT=Y                                                  00000300
+          //*                                                                     00000310
+
+IEF236I ALLOC. FOR CLLP0875 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I D036 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME SYSUT1
+IGD101I SMS ALLOCATED TO DDNAME (SYSUT2  )
+        DSN (AD.BRQ.PROD.CADBAIX.CLLP0875.G0004V00       )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DBJ
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLP0875 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13A2A.
+IGD104I AD.BRQ.A358.CADBAIX.PROD                     RETAINED,  DDNAME=SYSUT1
+IGD103I SMS ALLOCATED TO DDNAME SYS00001
+IGD104I SYS15016.T131045.RA000.CLLP0875.R0260570     RETAINED,  DDNAME=SYS00001
+IGD107I AD.BRQ.PROD.CADBAIX.CLLP0875.G0004V00        ROLLED IN, DDNAME=SYSUT2
+IEF285I   M67777.CLLP0875.JOB19810.D0000101.?          SYSOUT
+IEF285I   M67777.CLLP0875.JOB19810.D0000102.?          SYSOUT
+IEF285I   M67777.CLLP0875.JOB19810.D0000103.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 16-Jan-2015 01:10:45 PM
+Step  Num: 1              PGM  Name: PLAN1010     End:   16-Jan-2015 01:10:45 PM
+CPU (TCB): 00:00:00.02                            Storage below 16M:        320k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.04                            Service Units:             942
+Tape Mnts: 0                                      Total EXCPs:                30
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D JOBLIB              1  23,476        D29E D SYSUT1              2  27,946
+D9D1 D SYSUT2              1  27,946
+
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2015016.1310
+IEF032I STEP/STEP1   /STOP  2015016.1310
+        CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   320K  SYS:   376K  EXT:        4K  SYS:    10352K
+IEF236I ALLOC. FOR CLLP0875 STEP2
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I D036 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME SYSUT1
+IGD101I SMS ALLOCATED TO DDNAME (SYSUT2  )
+        DSN (AD.BRQ.PROD.CADBAIX.CLLP0875.LEI.G0004V00   )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2D8E
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLP0875 STEP2 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AD.BRQ.A358.PRV.CADBAIX.CLLP280.EXP.G0126V00 RETAINED,  DDNAME=SYSUT1
+IGD103I SMS ALLOCATED TO DDNAME SYS00002
+IGD104I SYS15016.T131045.RA000.CLLP0875.R0260571     RETAINED,  DDNAME=SYS00002
+IGD107I AD.BRQ.PROD.CADBAIX.CLLP0875.LEI.G0004V00    ROLLED IN, DDNAME=SYSUT2
+IEF285I   M67777.CLLP0875.JOB19810.D0000104.?          SYSOUT
+IEF285I   M67777.CLLP0875.JOB19810.D0000105.?          SYSOUT
+IEF285I   M67777.CLLP0875.JOB19810.D0000106.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP2          Cond Code: 0000         Start: 16-Jan-2015 01:10:45 PM
+Step  Num: 2              PGM  Name: PLAN1010     End:   16-Jan-2015 01:10:45 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:        288k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.03                            Service Units:             303
+Tape Mnts: 0                                      Total EXCPs:                40
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D JOBLIB              1  23,476        D4FA D SYSUT1              8  27,738
+D3FB D SYSUT2              8  27,738
+
+Total DASD EXCPs:                 17        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP2   /START 2015016.1310
+IEF032I STEP/STEP2   /STOP  2015016.1310
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   288K  SYS:   380K  EXT:        4K  SYS:    10452K
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13A2A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP0875       System ID: AL2C        Submit: 16-Jan-2015 01:10:44 PM
+Job JESID: JOB19810       MVS level: SP7.1.3     Start:  16-Jan-2015 01:10:45 PM
+Job Class: E                                     End:    16-Jan-2015 01:10:45 PM
+CPU (TCB): 00:00:00.03                           Storage below 16M:         320k
+CPU (SRB): 00:00:00.00                           Storage above 16M:           4k
+Trans Act: 00:00:00.07                           Service Units:            1,245
+Tape Mnts: 0                                     Total EXCPs:                 70
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer: A299565
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP0875/START 2015016.1310
+IEF033I  JOB/CLLP0875/STOP  2015016.1310
+        CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+
+*-----------------------------------------------------------------------------*
+* CLLP0875/STEP1    BRADESCO-DPD-PCP-SISTEMAS ESPECIAIS 16/01/2015 - 13.10 H  *
+*-----------------------------------------------------------------------------*
+* QTDE REGS BLKSI LRECL FM VOLSER END        D S N A M E                      *
+* 000000050 27946 00314 FB SA2D87 UCB L AD.BRQ.A358.CADBAIX.PROD              *
+* 000000050 27946 00314 FB SA2DBJ UCB G BRQ.PROD.CADBAIX.CLLP0875.G0004V0     *
+*-----------------------------------------------------------------------------*
+* CLLP0875/STEP1    BRADESCO-DPD-PCP-SISTEMAS ESPECIAIS 16/01/2015 - 13.10 H  *
+*-----------------------------------------------------------------------------*
+
+*-----------------------------------------------------------------------------*
+* CLLP0875/STEP2    BRADESCO-DPD-PCP-SISTEMAS ESPECIAIS 16/01/2015 - 13.10 H  *
+*-----------------------------------------------------------------------------*
+* QTDE REGS BLKSI LRECL FM VOLSER END        D S N A M E                      *
+* 000000501 27738 00414 FB SA2DAT UCB L 58.PRV.CADBAIX.CLLP280.EXP.G0126V     *
+* 000000501 27738 00414 FB SA2D8E UCB G PROD.CADBAIX.CLLP0875.LEI.G0004V0     *
+*-----------------------------------------------------------------------------*
+* CLLP0875/STEP2    BRADESCO-DPD-PCP-SISTEMAS ESPECIAIS 16/01/2015 - 13.10 H  *
+*-----------------------------------------------------------------------------*

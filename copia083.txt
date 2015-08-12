@@ -1,0 +1,279 @@
+
+CLLPG127-A                                     B A N C O  B R A D E S C O  S / A                                          PAG. 00001
+12/11/2014                                     AVALISTAS CADASTRADOS NO CLIE                                                07:42:11
+CPF/CGC AVALISTA    NOME DO AVALISTA                         ENDERECO AVALISTA                    NUMERO
+ AG(DEV) CONTA(DEV) COMPLEMENTO          BAIRRO              CIDADE                           UF CEP
+
+707.176.808-0000/00 OSVALDO RODRIGUES DE SOUZA               R GODOFREDO FRAGA                        30
+ 0002    0116989                         MARAPE               SANTOS                         SP 11070-400
+
+001.964.718-0000/26 CELSO RODRIGUES GARCIA                   R JOAQUIM FARIA SALGADO                  592
+ 0002    0157289                         MORADA DO VALE       GOVERNADOR VALADARES           MG 35057-400
+
+065.022.548-0000/10 JOAO VICENTE FERREIRA FILHO              R ANDRE MIGUEZ                           17
+ 0002    0157289    CS 2                 REALENGO             RIO DE JANEIRO                 RJ 21730-210
+
+798.966.938-0000/20 TELMA M B C DE PADUA                     AV WALDEMAR CARLOS PEREIRA               784
+ 0002    0157291    SL 12                VILA TALARICO        SAO PAULO                      SP 03533-000
+
+255.060.708-0000/29 RAFAEL BARION CASTRO DE PADUA            R 19 DE DEZEMBRO                         50
+ 0002    0157291    CS                   CENTRO               GUAPIRAMA                      PR 86465-000
+
+386.169.838-0000/21 GISLAINE BENITEZ CAMILO                  R DES LAURO LOPES                        3691
+ 0046    0006233    SL I                 ZONA I               UMUARAMA                       PR 87501-210
+
+055.806.878-0000/26 JOSE WALTER FRATONI                      R S PAULO                                16
+ 0046    0564150                         CENTRO               PEQUIZEIRO                     TO 77730-000
+
+061.880.008-0000/58 JOSE AUGUSTO FINARDI                     R ENG SILVIO TEIXEIRA PINTO              304
+ 0046    0608236                         ATUBA                PINHAIS                        PR 83326-210
+
+079.676.338-0000/06 LAERTE PASCHOAL JUNIOR                   R I                                      5
+ 0046    0448742    AP 2                 UNIAO                PARAUAPEBAS                    PA 68515-000
+
+055.806.878-0000/26 JOSE WALTER FRATONI                      R S PAULO                                16
+ 0046    0569096                         CENTRO               PEQUIZEIRO                     TO 77730-000
+
+055.806.878-0000/26 JOSE WALTER FRATONI                      R S PAULO                                16
+ 0046    0003385                         CENTRO               PEQUIZEIRO                     TO 77730-000
+
+120.347.888-0000/77 ROSANA CELIA SCARANI MONEZZI             R VINTE E QUATRO                         1266
+ 0046    0605335                         CENTRO               ITUIUTABA                      MG 38300-078
+
+055.806.878-0000/26 JOSE WALTER FRATONI                      R S PAULO                                16
+ 0046    0564151                         CENTRO               PEQUIZEIRO                     TO 77730-000
+
+033.895.408-0000/22 FLAVIO DA SILVA                          R STA CATARINA                           101
+ 0095    0277488    APTO 1306            AGUA VERDE           CURITIBA                       PR 80620-100
+
+071.831.248-0000/19 ANDERSON H G MONTECINOS                  R DO COMERCIO Q1 L11                     812
+ 0095    0262531                         VILA NOVA            CRIXAS                         GO 76510-000
+
+146.627.618-0000/59 ANTONIO MARCOS PEREIRA MENDES            VL PAIOL NOVO                            1
+ 0127    0590569                         INTERIOR             TAPEJARA                       RS 99950-000
+
+148.201.588-0000/99 NEIDE OLIVEIRA GOMES                     AL ENOCK PINTO                           17
+ 0127    0590569                         SAO JOAO DO OUTEIRO  BELEM                          PA 66840-310
+
+871.566.528-0000/34 EDUARDO BEZERRA DE MELO                  PC EX COMB EMILIO LUCIO                  46
+ 0127    0102737                         CENTRO               ONCA DE PITANGUI               MG 35655-000
+
+
+CLLPG127-A                                     B A N C O  B R A D E S C O  S / A                                          PAG. 00002
+12/11/2014                                     AVALISTAS CADASTRADOS NO CLIE                                                07:42:11
+CPF/CGC AVALISTA    NOME DO AVALISTA                         ENDERECO AVALISTA                    NUMERO
+ AG(DEV) CONTA(DEV) COMPLEMENTO          BAIRRO              CIDADE                           UF CEP
+
+041.752.128-0000/68 OTACILIO SOARES BARBOSA                  R JOSE BENTO MORAES                      514
+ 0127    0256895                         CAMPINHO             PINHEIRO                       MA 65200-000
+
+284.022.678-0000/23 PAULO S AMORIN                           R ARTHUR EDGAR BAUER                     381
+ 0163    0017502                         CENTRO               ROLANTE                        RS 95690-000
+
+085.066.778-0000/07 ROSANA BEATRIZ VIEIRA                    AV SELIM JOSE DE SALES                   196
+ 0195    0174349                         CANAA                IPATINGA                       MG 35164-504
+
+830.988.958-0000/53 JOSE CARLOS DE CARVALHO                  R AIMBERE                                559
+ 0195    0000565                         VILA CURUCA          SANTO ANDRE                    SP 09291-210
+
+015.887.619-0000/91 ABRELINO DALLA ROSA                      R F                                      35
+ 0195    0081062                         BOM GOSTO            GRAO MOGOL                     MG 39570-000
+
+044.790.358-0000/69 GILBERTO PEREIRA DE BARROS               AV PRUDENTE DE MORAIS                    842
+ 0195    0165410                         ZONA 07              MARINGA                        PR 87020-010
+
+109.957.768-0000/30 PAULO CESAR SIMAO                        R ADEODATO JOSE DOS REIS                 1100
+ 0215    0211546                         NOVA PARNAMIRIM      PARNAMIRIM                     RN 59152-820
+
+204.514.128-0000/42 Sueli Danezia Osteti                     R PEDRO PALERMO                          179
+ 0215    0212681                         PQ DA FIGUEIRA       ESPIRITO SANTO DO PINHAL       SP 13990-000
+
+292.601.888-0000/65 MARCELO FAE SARRI                        R 2
+ 0215    0206472    QD 9 LT 6            ESTACAO DOS BURITIS  CALDAS NOVAS                   GO 75690-000
+
+347.928.298-0000/95 ROSELANE ROCHA TOFANELLI DE LACERDA      R DR PEDRO AUGUSTO MENNA BARRETO MONCLAR 4583
+ 0215    0205580    63                   AGUA VERDE           CURITIBA                       PR 80250-040
+
+123.580.868-0000/86 CLAUDIA REGINA DA SILVA RABELO           AV MARIA THEODORO                        369
+ 0215    0162027                         CENTRO               MANTENOPOLIS                   ES 29770-000
+
+449.578.230-0000/49 FATIMA BARP                              AV 30                                    981
+ 0269    0211927                         VILA APARECIDA       RIO CLARO                      SP 13500-550
+
+312.374.520-0000/15 MARTINS BORGES FERREIRA                  R PROFESSOR PEDRO VIRIATO PARIGOT DE SOU 2581
+ 0269    0222446    AP 92                MOSSUNGUE            CURITIBA                       PR 81200-100
+
+969.153.150-0000/04 MARCIANO HOSZCZARUK                      R JOSE DOS SANTOS VILELA                 76
+ 0269    0250045                         PLATINA              ITUIUTABA                      MG 38307-036
+
+175.371.260-0000/20 PEDRO ALCEU BARP                         PC STO ANTONIO                           150
+ 0269    0211927    CS                   TIMBO                ESPLANADA                      BA 48370-000
+
+328.376.159-0000/00 VILMAR VEIBER                            R TIBURCIO SILVEIRA                      46
+ 0427    0094501                         VILA ADELIA          OURINHOS                       SP 19905-495
+
+926.383.762-0000/72 HALINE TONELLO AMARAL                    R SIAO                                   140
+ 0427    0069754                         LAMENHA GRANDE       ALMIRANTE TAMANDARE            PR 83511-320
+
+116.066.733-0000/00 FRANCISCO SIQUEIRA DE MORAES             R ODETE LAURA FOGGIATO                   1035
+ 0427    0061745    SB 3                 ATUBA                CURITIBA                       PR 82630-040
+
+
+CLLPG127-A                                     B A N C O  B R A D E S C O  S / A                                          PAG. 00003
+12/11/2014                                     AVALISTAS CADASTRADOS NO CLIE                                                07:42:11
+CPF/CGC AVALISTA    NOME DO AVALISTA                         ENDERECO AVALISTA                    NUMERO
+ AG(DEV) CONTA(DEV) COMPLEMENTO          BAIRRO              CIDADE                           UF CEP
+
+003.779.942-0000/86 SAUL SOUZA MARANHA                       ESTR DO RIO JEQUIA                       1492
+ 0427    0068640    CS 1                 PITANGUEIRAS         RIO DE JANEIRO                 RJ 21930-365
+
+005.195.453-0000/20 GLAIDSTON GONCALVES DE LUCENA            R XAVANTES                               64
+ 0456    0002330                         PARQUE INDIANO       RIO BONITO                     RJ 28800-000
+
+031.868.103-0000/02 CICERO RONIELY PEREIRA                   R GAL CAMARA                             338
+ 0456    0055585    AP 701               JARDIM VINTE E CINCO DUQUE DE CAXIAS                RJ 25070-340
+
+919.247.582-0000/53 VINICIUS MILITAO BECKHAUSER              R ALFIDES MARANGON                       740
+ 0457    0058998    CS                   CENTRO               SAUDADE DO IGUACU              PR 85568-000
+
+788.542.962-0000/87 LUZIVANE BRITO LABORDA                   R RAMOS BATISTA                          168
+ 0457    0528180                         VILA OLIMPIA         SAO PAULO                      SP 04552-020
+
+325.598.362-0000/20 PEDRO PAULO SODRE                        R DAS AVENCAS                            3279
+ 0457    0528180    N LT 7 QD D          DAS PALMEIRAS        NOVA MUTUM                     MT 78450-000
+
+985.711.252-0000/87 LARIESSA CELLA DE CASTRO                 AV PE PE EUSTAQUIO                       505
+ 0457    0058998    CS                   CENTRO               ROMARIA                        MG 38520-000
+
+408.401.742-0000/68 RAQUEL VALERIA VICTORIANO DE CARVALHO    R DECA MARQUES                           55
+ 0483    0000291                         CENTRO               TABIRA                         PE 56780-000
+
+296.837.898-0000/89 JONATAN DE PAULA ALVES                   R TENENTE FRANCISCO MEGA                 190
+ 0483    0023285                         GAVEA                RIO DE JANEIRO                 RJ 22451-250
+
+074.356.437-0000/50 ALEX NASCIMENTO DOS SANTOS               R DR ARMANDO ANJO CORREA FILHO           73
+ 0522    0074452                         JARDIM PAULISTA      OSASCO                         SP 06150-500
+
+382.344.912-0000/53 ANTONIO MELO COSTA                       R BASILIO POLISTCHUK SOBRINHO            67
+ 0522    0065134                         CANTAGALO            CASTRO                         PR 84178-450
+
+383.805.282-0000/04 GERALDO SOARES AZEVEDO                    VICENTE JACQUES                         1394
+ 0522    0545150    CS                   VILA DONARIA         BONITO                         MS 79290-000
+
+003.386.211-0000/72 NERLI DE FARIA ALBERNAZ                  AV CANAVIEIRAS                           275
+ 0522    0076497    CENTRO               BOA VISTA            ILHEUS                         BA 45652-476
+
+323.415.392-0000/20 MARIA DO DESTERRO PALHARES AZEVEDO       R COSTA CARVALHO                         1150
+ 0522    0545150                         CENTRO               ITAIOPOLIS                     SC 89340-000
+
+270.178.182-0000/53 VALTER COIMBRA DE ARAUJO                 AV LUCIANO FONSECA                       593
+ 0661    0034782    LT DE FREITAS        LUIZOTE DE FREITAS   UBERLANDIA                     MG 38414-321
+
+750.277.472-0000/68 EDILENE MARIA GOMES ARAUJO               AL JAU                                   1477
+ 0661    0034782    AP 162               JARDIM PAULISTA      SAO PAULO                      SP 01420-005
+
+000.024.142-0000/36 JULIO CEZAR CHAVES                       R ACILIO VIEIRA                          308
+ 0661    0043963    AP 12                CENTRO               VACARIA                        RS 95200-000
+
+037.223.479-0000/80 ALEXANDRE BASTIANI DOS SANTOS            R OSORIO DE PRADO FERNANDES              125
+ 0923    0022082    CS                   MATO VERDE           RIACHO DE SANTANA              BA 46470-000
+
+
+CLLPG127-A                                     B A N C O  B R A D E S C O  S / A                                          PAG. 00004
+12/11/2014                                     AVALISTAS CADASTRADOS NO CLIE                                                07:42:11
+CPF/CGC AVALISTA    NOME DO AVALISTA                         ENDERECO AVALISTA                    NUMERO
+ AG(DEV) CONTA(DEV) COMPLEMENTO          BAIRRO              CIDADE                           UF CEP
+
+878.886.108-0000/20 ADALBERTO GONCALVES DE BRITO             R DRA DAYSE LINS BREDA                   201
+ 1231    0059530                         BARRO DURO           MACEIO                         AL 57045-390
+
+507.804.841-0000/34 ADAO RODRIGUES PIMHEIRO                  R LEALDADE                               516
+ 1245    0021404                         JAGUARE              SAO PAULO                      SP 05333-090
+
+891.309.101-0000/10 MARCOS DA COSTA TOME                     TV ALVARO MEDINA                         14
+ 1245    0021404                         AGUA BRANCA          SAO PAULO                      SP 05033-120
+
+515.137.492-0000/34 LUIS MIGUEL ABAD TOVAR                   R CNSO GALVAO                            68
+ 1294    0069815    602                  SANTA ROSA           BELO HORIZONTE                 MG 31255-750
+
+691.701.856-0000/20 LUIZ ANTONIO VASCONCELOS FILHO           R DR GONCALVES LIMA                      1164
+ 1294    0046835    CA 1                 MARECHAL HERMES      RIO DE JANEIRO                 RJ 21555-500
+
+272.255.772-0000/04 ELINEIDE MARIA DE FIGUEIREDO             AV BELMONTE                              889
+ 1294    0046835                         CONQUISTA            ILHEUS                         BA 45650-040
+
+746.425.882-0000/72 NELSON SATOSHI KURODA                    R OSORIO PRADO FERNANDES                 125
+ 1294    0057246    CS                   MATO VERDE           RIACHO DE SANTANA              BA 46470-000
+
+714.975.522-0000/49 EMERSON THIAGO FERREIRA DA SILVA         R ALEXANDRE FLEMING                      479
+ 1294    0057246    AP 33                APARECIDA            SANTOS                         SP 11040-010
+
+027.366.105-0000/12 TIAGO FERREIRA DE ALENCAR                AV DR ANTONIO AUGUSTO JUNQUEIRA          111
+ 1301    0006748    AP 202               JAQUEIRA             ALEM PARAIBA                   MG 36660-000
+
+008.752.055-0000/93 LUCIANO SANTIAGO SANTOS                  AV RIO BRANCO                            225
+ 1301    0006748                                              SANTA ROSA                     RS 98900-000
+
+279.029.436-0000/49 ELMO TORQUETTE JUNIOR                    R ALICE GONSALVES                        30
+ 1382    0159955    1 9 AND BROOKLYN     RESIDENCIAL MORUMBI  SAO PAULO                      SP 05745-170
+
+970.904.176-0000/20 KATIA RESENDE RIBEIRO                    AV ANTONIO SYLVIO CUNHA BUENO            1072
+ 1382    0159955                         INAMAR               DIADEMA                        SP 09970-160
+
+041.383.611-0000/89 JAIME DE MELO REIS                       AV JURUBATUBA                            237
+ 1469    0017760                         VILA CORDEIRO        SAO PAULO                      SP 04583-100
+
+710.370.049-0000/49 GABRIEL DA SILVA BUENO                   R BELMONTE                               633
+ 1553    0011886    CS                   VILA ANCHIETA        SAO JOSE DO RIO PRETO          SP 15050-260
+
+283.870.235-0000/15 TADEU DE OLIVEIRA                        AV ADEMIR DE JESUS RIBEIRO               2255
+ 1652    0045419                         JARDIM DAS PAINEIRAS RONDONOPOLIS                   MT 78750-000
+
+547.524.345-0000/04 NAGIL GOMES MEDEIROS                     R JORGE WARD                             229
+ 1652    0024552                         RIO PEQUENO          SAO PAULO                      SP 05386-160
+
+106.887.815-0000/00 VALDECI LOPES DE ANDRADE                 R RAMOS BOTELHO                          129
+ 1652    0017415    APTO 702             PAPICU               FORTALEZA                      CE 60175-265
+
+975.307.005-0000/53 ELIENE CALDEIRA SANTOS DE OLIVEIRA       AV PRUDENTE DE MORAIS                    842
+ 1652    0045419                         ZONA 07              MARINGA                        PR 87020-010
+
+
+CLLPG127-A                                     B A N C O  B R A D E S C O  S / A                                          PAG. 00005
+12/11/2014                                     AVALISTAS CADASTRADOS NO CLIE                                                07:42:11
+CPF/CGC AVALISTA    NOME DO AVALISTA                         ENDERECO AVALISTA                    NUMERO
+ AG(DEV) CONTA(DEV) COMPLEMENTO          BAIRRO              CIDADE                           UF CEP
+
+603.311.435-0000/34 MIRELLA COSTA BONFIM DE ANDRADE          R JOSE RAMON URTIZA                      965
+ 1652    0017415    AP 43                VILA ANDRADE         SAO PAULO                      SP 05717-270
+
+688.543.317-0000/91 ADELSO FERRARI                           PAS DOS JEQUITIBAS                       440
+ 1652    0030388                         RSL MOD SETE         BERTIOGA                       SP 11250-000
+
+167.531.098-0000/03 GILMARQUES FERREIRA BRITO                R 8                                      S/N
+ 1652    0024552    LT 13 QD 6           RESIDENCIAL ALTO BEL ITABERAI                       GO 76630-000
+
+035.699.586-0000/04 EDSON PIRES DO COUTO                     AV FONSECA RODRIGUES                     399
+ 1940    0541010                         ALTO DE PINHEIROS    SAO PAULO                      SP 05461-010
+
+035.618.398-0000/00 WALDEMIR VIEIRA PIMENTEL                 R URUGUAI                                150
+ 1986    0052910    AP C 33              JARDIM TERRA BRANCA  BAURU                          SP 17054-150
+
+305.753.218-0000/73 CINTIA MOREIRA PIMENTEL                  R LUIS GOIS                              1710
+ 1986    0052910                         MIRANDOPOLIS         SAO PAULO                      SP 04043-200
+
+468.093.840-0000/49 VILMAR NATAL COLOMBO                     R AJAX CORREA RABELLO                    330
+ 1986    0057325                         MANGABEIRAS          BELO HORIZONTE                 MG 30210-040
+
+699.204.196-0000/72 MARLI DE LURDES PINTO                    R FALCHI GIANINI                         247
+ 1994    0021778    AP 61 A              VILA PRUDENTE        SAO PAULO                      SP 03136-040
+
+000.852.565-0000/01 JOLVINO DE MELO ALVES                    R ERNESTO DE PAULA SANTOS                275
+ 3045    0077110    AP 602               BOA VIAGEM           RECIFE                         PE 51021-330
+
+883.203.323-0000/20 ALESSANDRA VIEIRA DOS SANTOS             AV JOAO PALMEIRAS                        1971
+ 5264    0000660                         VILA NOVA            IMPERATRIZ                     MA 65912-000
+
+103.871.453-0000/20 MARIA ALICE SILVA BRITO                  R TURIBIO MENDONCA                       1068
+ 5264    0500014                         BANDEIRANTES         VIRGEM DA LAPA                 MG 39630-000
+

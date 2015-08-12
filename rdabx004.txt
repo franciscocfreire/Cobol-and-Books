@@ -1,0 +1,35 @@
+//RDABX004 JOB 'RDAB,4120,PR32','A299565',MSGCLASS=Z,SCHENV=DB2         
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP01   EXEC PGM=PLAN2440,                                           
+//       PARM=003                                                       
+//*                                                                     
+//* ***    TRANSMITE ARQUIVO PARA AL1                                   
+//*                                                                     
+//ENT00001 DD DSN=MX.RDAB.PRV.CPFCNPJ.CORR(0),                          
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=TA.RDAB.CLLP.CPFCNPJ.CORR,                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(003800,0760),RLSE),                                
+//       DCB=(LRECL=150,RECFM=FB)                                       
+//ENT00002 DD DSN=MX.RDAB.JM005S01.RDABB008.CORR(0),                    
+//       DISP=SHR                                                       
+//SAI00002 DD DSN=TA.RDAB.CLLP.RDABB008.CORR,                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(003800,0760),RLSE),                                
+//       DCB=(LRECL=080,RECFM=FB)                                       
+//ENT00003 DD DSN=MX.RDAB.JM006S01.RDABB009.CORR(0),                    
+//       DISP=SHR                                                       
+//SAI00003 DD DSN=TA.RDAB.CLLP.RDABB009.CORR,                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(003800,0760),RLSE),                                
+//       DCB=(LRECL=080,RECFM=FB)                                       
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

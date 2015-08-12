@@ -1,0 +1,39 @@
+//POUPN400 JOB 'POUP,4510,PR41','G00347',MSGCLASS=Z,SCHENV=DB2          
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    ***********************************************************  
+//* ***                                                                 
+//* ***    CRIA ARQUIVO COM OS VALORES DE FAIXA DE RENDA     
+//* ***    P/ O ARQUIVO BACEN - DEPOSITOS E SAQUES POR FAIXA DE RENDA                                        
+//* ***                                                                 
+//* ***    FORMATO: 
+//* ***       FAIXA-RENDA-DE  -> 9(015) - 13 INTEIROS E 2 DECIMAIS     
+//* ***       FAIXA-RENDA-ATE -> 9(015) - 13 INTEIROS E 2 DECIMAIS              
+//* ***
+//* ***    EXEMPLO: 000000000000001000000000250000   
+//* ***       FAIXA-RENDA-DE  (0,01)
+//* ***       FAIXA-RENDA-ATE (2.500,00)                        
+//* ***  
+//* ***    OBS.: QUANTIDADE MAXIMA DE REGISTROS = 20
+//* ***                                                               
+//* ***    ***********************************************************  
+//*                                                                     
+//SYSUT1   DD *                                                         
+000000000000001000000000250000        
+000000000250100000000000500000        
+000000000500100000000000750000
+000000000750100000000001000000
+000000001000100999999999999999
+//SYSUT2   DD DSN=AC.POUP.JN400S01.FAIXREND(+1),                      
+//       DISP=(,CATLG,DELETE),                                    
+//       UNIT=DISCO,                                              
+//       SPACE=(TRK,(000010,0002),RLSE),                          
+//       DCB=(AC.A,LRECL=0030,RECFM=FB)                            
+//PRINTER  DD SYSOUT=*                                            
+//SYSOUT   DD SYSOUT=*                                            
+//SYSUDUMP DD SYSOUT=Y                                            
+//*

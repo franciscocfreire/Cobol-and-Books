@@ -1,0 +1,7 @@
+                                                   --- INICIO DO RELATORIO ---  
+                                                                                
+CLLP7370             B A N C O  B R A D E S C O  S / A                06/03/2015
+                   TABULACAO DE CLIENTES QUE NAO PAGARAM                10:40:33
+                          A 1a. PARCELA DO CONTRATO                             
+       QTDE DE CLIENTES       VALOR DE COBRANCA           VALOR LIQUIDO         
+             001434                90.670.507,63             84.420.948,60      

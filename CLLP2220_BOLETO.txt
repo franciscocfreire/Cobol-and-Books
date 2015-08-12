@@ -1,0 +1,46 @@
+      =====================================================        
+      FAVOR INCLUIR O JOB CLLP2220, CONFORME INDICA ABAIXO:        
+      =====================================================        
+
+	(1) -  Incluir O STEP4 apos o STEP3:
+	
+//STEP4    EXEC SORTD                                                 
+//*                                                                   
+//* ***    CLASSIFICACAO DO CADASTRO DE BAIXAS POR AG.CONTA CARTEIRA  
+//* ***    CONTRATO E VECTO DESC PARA BALANCE LINE                    
+//*                                                                   
+//SORTIN   DD DSN=*.STEP2.LPCLB008,                                   
+//       DISP=SHR                                                     
+//SORTOUT  DD DSN=MX.CLLP.D0PRVMZ.BAIX3MES.CLA(+1),               
+//       DISP=(,CATLG,DELETE),                                        
+//       UNIT=(DISCO,50),                                             
+//       SPACE=(TRK,(020000,4000),RLSE),                              
+//       DCB=(MX.A,LRECL=0314,RECFM=FB),                              
+//       DATACLAS=PRODEXT                                             
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                       
+//       DISP=SHR                                                     
+//SYSIN    DD *                                                       
+ SORT FIELDS=(4,3,A,26,4,A,31,3,A,34,4,A,97,4,D,94,2,D,91,2,D),       
+             FORMAT=BI                                                
+ END                                                                  
+//*                                                                  
+//STEP5    EXEC PGM=CLLP0145                                                              
+//*                                                                  
+//* ***    BAL.LINE ENTRE BAIX3MES(314) STEP4 E CADBAIXA.TOTAL.EXP   
+//* ***    JOB CLLP2205 PARA ATUALIZAR CAMPOS DA LT NA SAIDA         
+//* ***    EMPRESA/AGENCIA/CONTA/CARTEIRA/CONTRATO/VENCIMENTO        
+//*                                                                  
+//ARQENT01 DD DSN=MX.CLLP.CADBAIXA.TOTAL.LEI.CLA(0),             
+//       DISP=SHR                                                    
+//ARQENT02 DD DSN=*.STEP4.SORT.SORTOUT,                              
+//       DISP=SHR                                                    
+//ARQEXP01 DD DSN=MX.CLLP.PRV.BAIX3MES.LEI(+1),                  
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=(DISCO,50),                                 
+//       SPACE=(TRK,(020000,4000),RLSE),                  
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                  
+//       DATACLAS=PRODEXT                                 
+//SYSOUT   DD SYSOUT=*                                    
+//SYSUDUMP DD SYSOUT=Y                                    
+//*                                                       
+	

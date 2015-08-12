@@ -1,0 +1,73 @@
+//SORT258  JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z,REGION=2048K,      
+//         NOTIFY=&SYSUID                                               
+//JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR BANCO, AGENCIA E CONTA                        
+//*        ARQUIVO COM TAMANHO 44 BYTES                                 
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.RDAB.ARQFONE.BASEATU,                          
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.RDAB258.ARQFONE.TESTE,                         
+//       DISP=(OLD,CATLG,DELETE),                                       
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000840,0168),RLSE),                                
+//       DCB=(AD.A,LRECL=0044,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,2,PD,A,3,3,PD,A,6,7,PD,A)                               
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR BANCO, AGENCIA E CONTA                        
+//*        ARQUIVO COM TAMANHO 150 BYTES                                
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.RDAB.AGCTCLIE,                                 
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.RDAB258.AGCTCLIE.TESTE,                        
+//       DISP=(OLD,CATLG,DELETE),                                       
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000840,0168),RLSE),                                
+//       DCB=(AD.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,2,PD,A,3,3,PD,A,6,7,PD,A)                               
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=RDAB0258                                            
+//*                                                                     
+//*                                                                     
+//ENTRAD1  DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//         DISP=SHR                                                     
+//ENTRAD2  DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//         DISP=SHR                                                     
+//ACEITE   DD DSN=AD.BRQ.RDAB258.ACEITE,                                
+//*       DISP=(OLD,CATLG,DELETE),                                      
+//       DISP=(OLD,CATLG,DELETE),                                       
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(10000,2000),RLSE),                                 
+//       DCB=(AV.A,LRECL=0044,RECFM=FB)                                 
+//DESPZD   DD DSN=AD.BRQ.RDAB258.DESPZD,                                
+//*       DISP=(OLD,CATLG,DELETE),                                      
+//       DISP=(OLD,CATLG,DELETE),                                       
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(10000,2000),RLSE),                                 
+//       DCB=(AV.A,LRECL=0044,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSABOUT DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC PGM=RDAB0259                                            
+//*                                                                     
+//*                                                                     
+//ARQTEL   DD DSN=*.STEP3.ACEITE,                                       
+//         DISP=SHR                                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSABOUT DD SYSOUT=Y                                                  
+//*                                                                     

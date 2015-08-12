@@ -1,0 +1,16 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP7394                                      B A N C O   B R A D E S C O   S / A                                      PAG.:       1                            
+06/03/2015                                       RELACAO DE PENDENCIAS BAIXADAS                                             12:46:27                            
+        DIRETORIA REGINAL: 4651/D.R. SP INTERIOR 2                                                                                                              
+        AGENCIA   CONTA   CARTEIRA  CONTRATO      VALOR LIQUIDO     VALOR COBRANCA   NOME DO CLIENTE                                                            
+         00002   0029910    A01      4830929               0,70               0,70                                                                              
+         00002   0031102    A01       111026               0,70               0,70                                                                              
+         00002   0031102    A01       111031               0,70               0,70                                                                              
+         00002   0037236    A01      1829370               0,70               0,70                                                                              
+         00002   0044355    A01      1967280               0,70               0,70                                                                              
+         00002   0048651    A01           72               0,70               0,70                                                                              
+         00002   0048651    A01           74               0,70               0,70                                                                              
+         00002   0048651    A01       100625               0,70               0,70                                                                              
+         00002   0048651    A01      2943524               0,70               0,70                                                                              
+         00002   0048651    A01      6816617               0,70               0,70                                                                              

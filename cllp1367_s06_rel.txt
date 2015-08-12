@@ -1,0 +1,919 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         1                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4025         CPK            64     CARTAO                                                                                                         
+              4025         0115           64     PARCELADO EMISS.CT.CRED.BRAD.EMPRESARIA                                                                        
+              4025         0312           64     CARTAO BNDES                                                                                                   
+              4025         0399           64     CARTAO BNDES                                                                                                   
+              4025         0401           64     GASTOS CARTAO COMPRA A VISTA                                                                                   
+              4025         0404           64     CARTAO BRADESCO - DEB. RENEG.                                                                                  
+              4025         0426           64     TELECOMPRAS PRE-DATADAS                                                                                        
+              4025         0435           73     CREDTCCRE CR ATRSO-CART CRED ORIGEM B2K                                                                        
+              4025         0443           64     CARTAO PROTEGIDO/SUPER PROTEGIDO                                                                               
+              4025         0466           64     C.A. - CARTAO PRIVATE LABEL                                                                                    
+              4025         0474           72     ATRCCRE ATRASO ANUIDADE C.CREDITO - B2K                                                                        
+              4025         0585           25     MESALIDADE VISA EMPRESARIAL                                                                                    
+              4025         0611           64     CARTAO PLATIUM                                                                                                 
+              4025         0627           64     CARTAO BRADESCO                                                                                                
+              4120         A               3     DDS                                                                                                            
+              4120         B               3     DDS                                                                                                            
+              4120         BBZ            65     SALDO POS VENDA VEICULOS                                                                                       
+              4120         C              42     DESCONTO DE CHEQUES                                                                                            
+              4120         CGA            12     CONTA GARANTIDA                                                                                                
+              4120         CGC            12     CONTA GARANTIDA                                                                                                
+              4120         CGP            12     CONTA GARANTIDA                                                                                                
+              4120         CGT            12     CONTA GARANTIDA                                                                                                
+              4120         CGV            12     CONTA GARANTIDA                                                                                                
+              4120         CHE            93     DESC.C/CORRENTE                                                                                                
+              4120         COM             5     RURAL                                                                                                          
+              4120         CST             5     RURAL                                                                                                          
+              4120         D               6     EMPRESTIMOS COM GARANTIA DE ORPAG                                                                              
+              4120         DCC            93     DESC.C/CORRENTE                                                                                                
+              4120         DIV            99     DIVERSAS                                                                                                       
+              4120         DRA             5     EMPR RURAIS                                                                                                    
+              4120         DRC             5     EMPR RURAIS                                                                                                    
+              4120         DRP             5     EMPR RURAIS                                                                                                    
+              4120         DRR             5     EMPR RURAIS                                                                                                    
+              4120         DRV             5     EMPR RURAIS                                                                                                    
+              4120         DVS            99     DIVERSOS                                                                                                       
+              4120         E               2     PCDS                                                                                                           
+              4120         ECH            90     ENCARGOS - CHEQUE ESPECIAL                                                                                     
+              4120         ECL            93     EXCESSO DE CONTA CORRENTE COM LIMITE                                                                           
+              4120         ECR            90     ENCARGOS DE LIMITE DE CREDITO                                                                                  
+              4120         EDC            91     ENCARGOS DESC C/C  EM ABERTO                                                                                   
+              4120         ER              5     RURAL                                                                                                          
+              4120         ES             99     DIVERSOS                                                                                                       
+              4120         F               3     DDS                                                                                                            
+              4120         FIAN           15     RESP P/ FIANCA                                                                                                 
+              4120         G               2     PCDS                                                                                                           
+              4120         H               6     EMPRESTIMOS COM GARANTIA DE ORPAG                                                                              
+              4120         INV             5     RURAL                                                                                                          
+              4120         J              23     CRDA/CRGH/LRCP                                                                                                 
+              4120         K               5     EMPR RURAIS                                                                                                    
+              4120         L               5     CREDITO RURAL                                                                                                  
+              4120         LCH            90     LIMITE - CHEQUE ESPECIAL                                                                                       
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         2                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         LCR            90     LIMITE DE CREDITO                                                                                              
+              4120         LDF            58     LIMITE DESCONTO A FORNECEDORES                                                                                 
+              4120         LGR            99     LIMITE CAPITAL DE GIRO ROTATIVO                                                                                
+              4120         M               5     CREDITO RURAL                                                                                                  
+              4120         N               5     EMPR RURAIS                                                                                                    
+              4120         P               2     PCDS                                                                                                           
+              4120         POCF           54     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         PROC           54     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         PRON           55     PRONAGRI                                                                                                       
+              4120         Q              23     CRDA/CRGH/LRCP                                                                                                 
+              4120         R               3     DDS                                                                                                            
+              4120         RESO            9     RESOLUCAO 695                                                                                                  
+              4120         RUR             5     EMPR RURAIS                                                                                                    
+              4120         S               2     PCDS                                                                                                           
+              4120         T               3     DDS                                                                                                            
+              4120         TRAN                  TRANSITORIA (04-45)                                                                                            
+              4120         TRAZ                  TRANSITORIA (04-21)                                                                                            
+              4120         U              99     DIVERSOS                                                                                                       
+              4120         VDA            99     VENDA DE ATIVOS - CONTADORIA GERAL                                                                             
+              4120         W               2     TITULO DESCONTADO GARANTIA DE NOTECA                                                                           
+              4120         0CAU            1     CAPITAL DE GIRO COBRANCA CAUCIONADA                                                                            
+              4120         0000           98     CESSAO-INSTITUICOES FINANCEIRAS                                                                                
+              4120         0002           99     CL - CAMBIO                                                                                                    
+              4120         0003           99     LP BANEB/BEA/EX FINANCIADORA BBD                                                                               
+              4120         0006           99     CL-DCIP EXTRA JUDICIAL                                                                                         
+              4120         0008           99     LP-CAMBIO                                                                                                      
+              4120         0010            5     REF.DOS JUROS DAS OPER.SECURIT.-RES.247                                                                        
+              4120         0011            5     A.M.REF.DOS JRS DAS OP.SECURIT.RES.2471                                                                        
+              4120         0012           99     OUTRAS OPERACOES                                                                                               
+              4120         0014           99     OUTRAS OPERACOES                                                                                               
+              4120         0015           99     OUTRAS OPERACOES                                                                                               
+              4120         0016            5     C.R.P. ESTOCAGEM-RPL                                                                                           
+              4120         0017            5     C.R.P. ESTOCAGEM-RPL -MORA                                                                                     
+              4120         0018            5     RECURSOS OBRIGATORIOS EM MORA                                                                                  
+              4120         0019            5     CUSTEIO. AGRICOLA. - CESSAO COMMODITIES                                                                        
+              4120         0020            5     CUSTEIO. PECUARIO. - CESSAO COMMODITIES                                                                        
+              4120         0021            5     INVEST. AGRICOLA.. - CESSAO COMMODITIES                                                                        
+              4120         0022            5     INVEST. PECUARIO.. - CESSAO COMMODITIES                                                                        
+              4120         0023            5     COMERC. AGRICOLA.. - CESSAO COMMODITIES                                                                        
+              4120         0024            5     PROGRAMA PECUARIO RURAL/BNDES                                                                                  
+              4120         0025            5     CUSTEIO AGRICOLA - POUP-LIVRE                                                                                  
+              4120         0026            5     CUSTEIO PECUARIA - POUP- LIVRE                                                                                 
+              4120         0027            5     INVESTIMENTO AGRICOLA-CESSAO COMMOD                                                                            
+              4120         0028            5     INVESTIMENTO PECUARIO-CESSAO. COMMOD                                                                           
+              4120         0029            5     COMERCIALIZACAO AGRICOLA-CESSAO COMMOD                                                                         
+              4120         0030            5     COMERCIALIZACAO PECUARIO-CESSAO COMMOD                                                                         
+              4120         0031           99     PROAGRO                                                                                                        
+              4120         0032            5     CUSTEIO AGRIC.CRED.LIQUIDACAO                                                                                  
+              4120         0033            5     CUSTEIO PECUA.REC.POUP.LIVRE                                                                                   
+              4120         0034            5     INVEST.AGRICOLA-REC.POUP.LIVRE                                                                                 
+              4120         0035            5     INVEST.PECUA.REC.POUP.LIVRE                                                                                    
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         3                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0036            5     COMERC.AGRIC.REC.POUP.LIVRE                                                                                    
+              4120         0037            5     COMERC.AGRIC.REC.POUP.LIVRE                                                                                    
+              4120         0038            5     MANUTENCAO DE LAVOURAS RPL                                                                                     
+              4120         0039            5     CUSTEIO PECUARIO-RPL/BBD POS FIXADO                                                                            
+              4120         0040            5     INVEST.AGRICOLA-RPL/BBD/POS FIXADO                                                                             
+              4120         0041            5     INV.PECUARIO-RPL/BBD-POS FIXADO                                                                                
+              4120         0042            5     COM.PEC.AD.COOP-RPL/BBD POS FIXADO                                                                             
+              4120         0043           51     MANUTENCAO DE LAVOURAS R O                                                                                     
+              4120         0044            5     CUSTEIO PECUARIO - ROB                                                                                         
+              4120         0045           51     INVEST.AGRICOLA-REC.OBRIGATORIOS                                                                               
+              4120         0046           51     INVEST.PECUARIO-REC.OBRIGATORIOS                                                                               
+              4120         0047            5     R.O.A COOP PRODS PEC ENTREGUES A VENDA                                                                         
+              4120         0048            5     EMP.CONTA - OPERACOES RURAIS                                                                                   
+              4120         0049            1     AQ. CREDITOS OP. CAP. GIRO S/COOBRIGACAO                                                                       
+              4120         0050           13     RENEG.DE DIVIDA ACORDO NOS AUTOS LP PJ                                                                         
+              4120         0051            5     COM.AGRIC.WARRANT-REC-OBRG.                                                                                    
+              4120         0052            5     COM.AGRIC.WARRANT-REC-RPL                                                                                      
+              4120         0053            5     CUSTEIO AGR COLA PROGER                                                                                        
+              4120         0054            5     CUSTEIO PECU RIO PROGER                                                                                        
+              4120         0055            5     INVEST. PECUARIO REP-REF                                                                                       
+              4120         0056           51     ESTOCAGEM DE PRODUTOS EGF                                                                                      
+              4120         0057            5     COMERCIALIZACAO PECUARIA EGF/LEC                                                                               
+              4120         0058            5     CUSTEIO AGRIC.RPL                                                                                              
+              4120         0059            5     CUSTEIO AGRICOLA - R.P.L. BBD POS                                                                              
+              4120         0060            5     COMERC.AGRICOLA-DEP.ESP.REMUN.                                                                                 
+              4120         0061            5     INVESTIMENTO PECU RIO PROGER                                                                                   
+              4120         0062            5     MANUTENCAO DE LAVOURAS DOLAR                                                                                   
+              4120         0063            5     CUSTEIO AG.RPL-BBD-PRE                                                                                         
+              4120         0064            5     CUSTEIO PEC.RPL                                                                                                
+              4120         0065            5     CUSTEIO PECUARIO - R.P.L. BBD-POS                                                                              
+              4120         0066           51     INVESTIMENTO AGR COLA PROGER                                                                                   
+              4120         0067            5     C.R.P. ESTOCAGEM-DER-MORA                                                                                      
+              4120         0068            5     AM.CUSTEIO AGRICOLA-RES.2148                                                                                   
+              4120         0069            5     RECURSOS OBRIGATORIOS RENEGOCIADO                                                                              
+              4120         0070            5     INVEST.AGRIC.RPL                                                                                               
+              4120         0071            5     INVEST.AGRIC.RPL-BBD-POS                                                                                       
+              4120         0072            5     INVEST.AGRIC.RPL-BBI-POS                                                                                       
+              4120         0073            5     EMPR.RUR.CUST.AGRICOLA DER-MORA                                                                                
+              4120         0074            5     EMPR.RUR.CUST.PECUARIO DER-MORA                                                                                
+              4120         0075            5     INVEST.AGRIC.RPL-BBD-PRE                                                                                       
+              4120         0076            5     MANUT DA ATIV PECUARIA DOLAR                                                                                   
+              4120         0077            5     INVEST.PEC.RPL-BBD-POS                                                                                         
+              4120         0078            5     INVEST.PEC.RPL-BBI-POS                                                                                         
+              4120         0079            5     INVEST.PECUARIO.RPL-FBI-POS                                                                                    
+              4120         0080            5     INVEST.PEC.RPL-BBI-PRE                                                                                         
+              4120         0081            5     INVEST.PEC.RPL-BBD-PRE                                                                                         
+              4120         0082            5     COMERC.AG.RPL-BBD-POS                                                                                          
+              4120         0083            5     COMERC.AGRICOLA. - R.P.L. - BBD POS                                                                            
+              4120         0084           45     CONTA GRAFICA GREENVILLE                                                                                       
+              4120         0085           45     CONTA GRAFICA CONVENIOS                                                                                        
+              4120         0086            5     RECURSOS DER RENEGOCIADO                                                                                       
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         4                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0087            5     RECURSOS PROPRIOS LIVRES RENEGOCIADO                                                                           
+              4120         0088            1     CAPITAL DE GIRO PJ - CIDADETRAN                                                                                
+              4120         0089            5     EMPR.RUR.COMERC.PECUARIA DER-MORA                                                                              
+              4120         0090            5     COMERC.AGR.REC.FDO.INV.COMMODITIES-MORA                                                                        
+              4120         0091            5     RECURSOS FUNDO COMMODITIES RENEGOCIADO                                                                         
+              4120         0092            5     CUSTEIO AGRICOLA-REC.OBRIGATORIOS                                                                              
+              4120         0093            5     CUSTEIO PECUARIO-REC.OBRIGATORIOS                                                                              
+              4120         0094            5     INVEST.AGRICOLA-REC.OBRIGATORIOS                                                                               
+              4120         0095            5     INVEST.PECUARIO-REC.OBRIGATORIOS                                                                               
+              4120         0096            5     COMERC.AGRICOLA-REC.OBRIGATORIOS                                                                               
+              4120         0097            5     RECURSOS PROPRIOS LIVRES EM MORA                                                                               
+              4120         0098            5     EMPR RURAIS                                                                                                    
+              4120         0099            5     CUSTEIO PEC.REP-REF                                                                                            
+              4120         0100            5     RECURSOS FUNDO DE COMMODITIES EM MORA                                                                          
+              4120         0101            5     FINANCIAMENTO DE ESTOQUE RURAL                                                                                 
+              4120         0102           14     CDC ALCADA ESPECIAL                                                                                            
+              4120         0104            5     COMERC.PEC.REC.FDO INV.COMMODITIES                                                                             
+              4120         0105           99     OUTRAS OPERACOES                                                                                               
+              4120         0107           99     OUTRAS OPERACOES                                                                                               
+              4120         0108           99     OUTRAS OPERACOES                                                                                               
+              4120         0109           99     OUTRAS OPERACOES                                                                                               
+              4120         0110           64     GOLD CARD GASTOS NO BRASIL                                                                                     
+              4120         0111           64     GOLD CARD SAQUES EFET.BDN                                                                                      
+              4120         0112           64     GOLD CARD GASTOS EXTER.BACC                                                                                    
+              4120         0113           64     GOLD CARD GASTOS BRAS. BACC                                                                                    
+              4120         0114           99     OUTRAS OPERACOES                                                                                               
+              4120         0115           64     CARTAO BRADESCO-SAQUES                                                                                         
+              4120         0116           64     GOLD CARD GASTOS EXTERIOR                                                                                      
+              4120         0117            1     CAPITAL DE GIRO FRANQUIAS                                                                                      
+              4120         0118           64     FINANCIAMENTO ROT.CT.VISAFACIL                                                                                 
+              4120         0119           64     CA CARTAO CRED MAIS                                                                                            
+              4120         0120           64     CARTAO BRADESCO-VISA BACC                                                                                      
+              4120         0121           64     WORLD CARD GASTOS EXTER-BAC                                                                                    
+              4120         0122           64     WORLD CARD GASTOS BRAS.BACC                                                                                    
+              4120         0124           12     CONTA GARANTIDA                                                                                                
+              4120         0125           56     PROMISSORIA CAMBIAL                                                                                            
+              4120         0126           12     CONTA GARANTIDA                                                                                                
+              4120         0128           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0129           58     DESCONTO DE RECEBIVEIS                                                                                         
+              4120         0130           99     OUTRAS OPERACOES                                                                                               
+              4120         0131            7     CREDITO PESSOAL                                                                                                
+              4120         0132           56     PROMISSORIA CAMBIAL                                                                                            
+              4120         0133           66     MORA CONSIGNADO VLRS N/REPASS - PRIVADO                                                                        
+              4120         0135           66     MORA CONSIGNADO VLRS N/REPASS - PUBLICO                                                                        
+              4120         0136           58     DESCONTO A FORNECEDOR                                                                                          
+              4120         0137           67     MORA CONSIGNADO VLRS N/REPAS PRIV GEREN                                                                        
+              4120         0138           59     NOTA PROMISSORIA RURAL RPL                                                                                     
+              4120         0139           68     MORA CONSIGNADO VLRS N/REPASS-PUB GEREN                                                                        
+              4120         0140           59     NOTA PROMISSORIA RURAL RPL                                                                                     
+              4120         0141           64     CARTAO CREDITO - FIN PARC LOJISTA                                                                              
+              4120         0142           13     RENEG.DIVIDAS DCC-MORA E C.A. PF                                                                               
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         5                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0143           13     RENEG.DIVIDAS DCC - LP - PF                                                                                    
+              4120         0144           13     RENEG.DIVIDAS DCC - MORA E CA PJ                                                                               
+              4120         0145           13     RENEG.DIVIDAS DCC - LP - PJ                                                                                    
+              4120         0146           90     ENCARGOS LIM. CREDITO                                                                                          
+              4120         0147            7     CREDITO PESSOAL                                                                                                
+              4120         0148            7     CREDITO PESSOAL                                                                                                
+              4120         0149            5     EMPR. RURAIS                                                                                                   
+              4120         0150            5     COMERCIALIZACAO AGRICOLA-CCI-RPL                                                                               
+              4120         0151            5     COMERCIALIZACAO PECUARIA-CCI-RPL                                                                               
+              4120         0152            5     COMERC.AGRICOLA-CCI-COMMODITIES-MORA                                                                           
+              4120         0153           51     COMERC.PECUARIA-CCI-COMMODITIES-MORA                                                                           
+              4120         0154            5     COMERC.AGRICOLA-CCI-FUNDO COMMODIT-MORA                                                                        
+              4120         0155           90     EXCESSO DE LIMITE DE CHEQUE ESPECIAL                                                                           
+              4120         0156            5     COMERC.AGRICOLA-CCI-RPL                                                                                        
+              4120         0157            5     COMERC.PECUARIA-CCI-RPL                                                                                        
+              4120         0158           23     MICROCREDITO                                                                                                   
+              4120         0159           46     CIA SECURITIZADORA CREDITOS FINANCEIROS                                                                        
+              4120         0160            5     INVESTIMENTO AGRICOLA ACORDOS                                                                                  
+              4120         0161            5     INVESTIMENTO PECUARIO ACORDOS                                                                                  
+              4120         0162            5     CUSTEIO AGRICOLA COMMODITIES-MORA                                                                              
+              4120         0163            5     CUSTEIO PECUARIO COMMODITIES-MORA                                                                              
+              4120         0164            5     INVESTIMENTO AGRICOLA COMMODITIES-MORA                                                                         
+              4120         0165            5     INVESTIMENTO PECUARIO COMMODITIES-MORA                                                                         
+              4120         0166           14     CDC VEIC-INCORP PARC CONTRATO                                                                                  
+              4120         0167            5     APL.MORA EMPRESTIMO EM CONTA-CIRC.2499                                                                         
+              4120         0168           14     CDC VEIC-INCORP PARC CONTRATO                                                                                  
+              4120         0169            7     CP ORIG LIM CP-INCORP PARC CONTRATO                                                                            
+              4120         0170            5     EMPR RURAIS                                                                                                    
+              4120         0171            5     CUSTEIO AGRICOLA - RES.2080 - MORA                                                                             
+              4120         0172            5     RURAL                                                                                                          
+              4120         0173            5     RURAL                                                                                                          
+              4120         0174            5     RURAL-ESTOCAGEM                                                                                                
+              4120         0175            5     RURAL                                                                                                          
+              4120         0176            5     RURAL                                                                                                          
+              4120         0178            5     RURAL                                                                                                          
+              4120         0179            5     RURAL                                                                                                          
+              4120         0180            5     RURAL ESTOCAGEM - FUNCAFE                                                                                      
+              4120         0181            5     RURAL CUSTEIO - FUNCAFE                                                                                        
+              4120         0182            5     RURAL FUNDO CENTRO OESTE                                                                                       
+              4120         0183            5     MORA-COMERC.PEC.COMM.CRP/NCR-CIRC.2499                                                                         
+              4120         0184            5     MODERINFRA MAQUINAS E EQUIPAMENTOS                                                                             
+              4120         0185            5     REPASSE AGROPECUARIO                                                                                           
+              4120         0186            5     FUNCAF. INVESTIMENTO                                                                                           
+              4120         0187            5     PROGRAMA AGRICOLA RURAL/BNDES                                                                                  
+              4120         0188            5     A.M.CUSTEIO PECUARIO-RES.2148                                                                                  
+              4120         0189           69     CP APOSENTADO INCORP PARC CONTR                                                                                
+              4120         0190           19     FINAME                                                                                                         
+              4120         0191           35     PRIVATIZACAO USIMINAS                                                                                          
+              4120         0192           37     CONV. DIVIDA - DOE                                                                                             
+              4120         0199           64     CARTAO BRADESCO                                                                                                
+              4120         0200           64     CARTAO BRADESCO                                                                                                
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         6                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0201            5     EMPR.RURAIS ESTOCAGEM-MORA                                                                                     
+              4120         0202           90     CHEQUE ESPECIAL                                                                                                
+              4120         0204           64     CARTAO BRADESCO                                                                                                
+              4120         0205           64     CARTAO BRADESCO                                                                                                
+              4120         0206           64     CARTAO BRADESCO-SAQUES                                                                                         
+              4120         0207           64     CARTAO BRADESCO-SAQUES                                                                                         
+              4120         0208           64     CARTAO BRADESCO                                                                                                
+              4120         0209            2     PCDS                                                                                                           
+              4120         0210           64     CARTAO BRADESCO                                                                                                
+              4120         0213           90     ENCEXCHESP ENCARGOS SOBRE EXCESSO LIMIT                                                                        
+              4120         0214           18     RECON                                                                                                          
+              4120         0215           19     FINAME                                                                                                         
+              4120         0216           19     FINAME                                                                                                         
+              4120         0217            8     RESOLUCAO 63                                                                                                   
+              4120         0218            8     RESOLUCAO 63                                                                                                   
+              4120         0220           19     FINAME                                                                                                         
+              4120         0221            8     RESOLUCAO 63                                                                                                   
+              4120         0222           10     NOTA DE CREDITO DE EXPORTACAO                                                                                  
+              4120         0223            9     RESOLUCAO 695                                                                                                  
+              4120         0224           12     CONTA GARANTIDA                                                                                                
+              4120         0225            5     EMPR RURAIS                                                                                                    
+              4120         0226           12     CONTA GARANTIDA                                                                                                
+              4120         0227           12     CONTA GARANTIDA                                                                                                
+              4120         0228           12     CONTA GARANTIDA                                                                                                
+              4120         0229           12     CONTA GARANTIDA                                                                                                
+              4120         0230           12     CONTA GARANTIDA                                                                                                
+              4120         0231           12     CONTA GARANTIDA                                                                                                
+              4120         0232           22     DESCONTO FORNECEDORES POS FIXADA                                                                               
+              4120         0233            5     EMPR. RURAIS                                                                                                   
+              4120         0235           99     TARIFA EXCESSO DE LIMITE CH ESPECIAL                                                                           
+              4120         0237           21     AQUISICAO DE RECEBIVEIS COM COOBRIGACAO                                                                        
+              4120         0238           12     CONTA GARANTIDA                                                                                                
+              4120         0239           12     CONTA GARANTIDA                                                                                                
+              4120         0240           17     CDCI - OPERACOES VINCULADAS                                                                                    
+              4120         0241            5     A.M.ESTOC.AGRIC.-RES.2148                                                                                      
+              4120         0242            7     CREDITO PESSOAL - OPERACOES VINCULADA                                                                          
+              4120         0243            5     RURAL                                                                                                          
+              4120         0244           14     RENEG. OUTROS BENS - MORA/CA                                                                                   
+              4120         0245            7     CREDITO PESSOAL - SERVIDORES RJ                                                                                
+              4120         0246            5     INVEST.PECUARIO-RES.2148                                                                                       
+              4120         0247            5     A.M.INVEST.PECUARIO-RES.2148                                                                                   
+              4120         0248           14     RENEG.CDC OUTROS BENS - LP                                                                                     
+              4120         0249            5     A.M.COMERC.AGRIC.EGF-RES.2148                                                                                  
+              4120         0250            5     COMERC.PEC.EGF-RES.2148                                                                                        
+              4120         0251            5     RURAL                                                                                                          
+              4120         0252            5     ESTOCAGEM PEC. RPL-PRE                                                                                         
+              4120         0253            5     APL.MORA ESTOCAGEM PEC.RPL-PRE                                                                                 
+              4120         0254            5     EMPRESTIMOS RURAIS AGRICOLAS                                                                                   
+              4120         0255            5     EMPRESTIMOS RURAIS PECUARIAS                                                                                   
+              4120         0256            5     EMPRESTIMOS RURAIS COOPERATIVAS                                                                                
+              4120         0257            5     EMPR RURAIS                                                                                                    
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         7                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0258           19     FINAME                                                                                                         
+              4120         0259            5     CUSTEIO AGRICOLA CREDITO COMPLEMENTAR                                                                          
+              4120         0260           90     PEINCIPAL - CHEQUE ESPECIAL                                                                                    
+              4120         0261           90     ENCARGOS - CHEQUE ESPECIAL                                                                                     
+              4120         0262           12     CONTA GARANTIDA                                                                                                
+              4120         0263           12     CONTA GARANTIDA                                                                                                
+              4120         0264           19     FINAME                                                                                                         
+              4120         0265           19     FINAME                                                                                                         
+              4120         0266           33     POC                                                                                                            
+              4120         0267           33     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0268           19     FINAME SECURITIZACAO                                                                                           
+              4120         0269           12     CONTA GARANTIDA                                                                                                
+              4120         0270            5     CRED.RURAL REC.PROPRIOS LIVRES-C.857BBD                                                                        
+              4120         0271            5     COMERC.AGRIC.CESSAO CCI-CIRC.2499                                                                              
+              4120         0272            5     MORA-COMERC.AGRIC.CESSAO-CCI-CIRC.2499                                                                         
+              4120         0273            5     RURAL                                                                                                          
+              4120         0275           19     FINAME REVITALIZA - TAXA VARIAVEL                                                                              
+              4120         0278           46     CREDITOS DE TERCEIROS - EX BCN                                                                                 
+              4120         0279           12     CONTA GARANTIDA                                                                                                
+              4120         0280           46     SECURITIZADORA FINASA                                                                                          
+              4120         0281           46     SECURITIZADORA FINASA PJ                                                                                       
+              4120         0282           19     RECOMPRA FINAME                                                                                                
+              4120         0283           19     FINAME LEASING COM GARANTIA DE RECOMPRA                                                                        
+              4120         0284            5     ESTOCAGEM AGRIC. COMM-PRE                                                                                      
+              4120         0285            5     APL.MORA ESTOCAGEM AGRIC.COMM-PRE                                                                              
+              4120         0286            5     ESTOCAGEM PEC. COMM-PRE                                                                                        
+              4120         0287            5     APL.MORA ESTOCAGEM PEC. COMM-PRE                                                                               
+              4120         0288           13     RENEG CARTAO CREDITO OPER ATIVAS PF                                                                            
+              4120         0289           28     TIT DESENV ECONOMICO                                                                                           
+              4120         0290           19     FINAME                                                                                                         
+              4120         0291           33     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0292           63     AQ. RECEBIVEIS CREDIT.IMOBILIARIO                                                                              
+              4120         0293           12     CONTA GARANTIDA                                                                                                
+              4120         0294            1     CREDITO INSTATANEO - GIRO                                                                                      
+              4120         0296           19     CDC COM GARANTIA DE RECOMPRA                                                                                   
+              4120         0297           70     CP GARANT VEIC_INCORP PARC                                                                                     
+              4120         0298            5     APL.MORA ESTOCAGEM AGRIC. RPL-PRE                                                                              
+              4120         0299            7     CREDITO PESSOAL MICRO CREDITO                                                                                  
+              4120         0300           64     CARTAO BRADESCO                                                                                                
+              4120         0301           64     CL/LP NAO CORRENTISTA                                                                                          
+              4120         0302           38     FIANCA NAO HONRADA                                                                                             
+              4120         0303           99     RESP P/ FIANCA                                                                                                 
+              4120         0304            1     CAPITAL DE GIRO ANTECIPACAO PAC                                                                                
+              4120         0305            8     RESOLUCAO 63                                                                                                   
+              4120         0306            8     RESOLUCAO 63                                                                                                   
+              4120         0307            3     DDS                                                                                                            
+              4120         0308            2     PCDS                                                                                                           
+              4120         0309            1     CAPITAL DE GIRO FRANQUIAS                                                                                      
+              4120         0310           99     LP - CL BBD                                                                                                    
+              4120         0312           64     CARTAO BNDES                                                                                                   
+              4120         0314           16     REF MICRO EMPR                                                                                                 
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         8                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0315           16     REF MICRO EMPR                                                                                                 
+              4120         0316           16     REF MICRO EMPR                                                                                                 
+              4120         0318           16     REF MICRO EMPR                                                                                                 
+              4120         0319           16     REF MICRO EMPR                                                                                                 
+              4120         0320           16     REF MICRO EMPR                                                                                                 
+              4120         0321           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0322            2     PCDS                                                                                                           
+              4120         0323           30     LINHA DE APOIO AO DESENVOLVIMENTO                                                                              
+              4120         0324           19     FINAME                                                                                                         
+              4120         0325           76     DCIP- MUTUARIO FINAL                                                                                           
+              4120         0326           19     FINAME                                                                                                         
+              4120         0327           19     FINAME                                                                                                         
+              4120         0330           16     REF MICRO EMPR                                                                                                 
+              4120         0331           16     REF MICRO EMPR                                                                                                 
+              4120         0332           16     REF MICRO EMPR                                                                                                 
+              4120         0333           16     REF MICRO EMPR                                                                                                 
+              4120         0334           16     REF MICRO EMPR                                                                                                 
+              4120         0335           13     COMPOSICAO DIVIDA                                                                                              
+              4120         0336           16     REF MICRO EMPR                                                                                                 
+              4120         0337           16     REF MICRO EMPR                                                                                                 
+              4120         0338           16     REF MICRO EMPR                                                                                                 
+              4120         0340           92     DEB.AUTOM.CONTAS CONSUMO                                                                                       
+              4120         0346            7     CRED. PESSOAL INSTANTANEO                                                                                      
+              4120         0347            7     CREDITO PESSOAL                                                                                                
+              4120         0348            7     CREDITO PESSOAL                                                                                                
+              4120         0349            1     CAP.GIRO C/COBR. SIMPLES                                                                                       
+              4120         0350            7     CREDITO PESSOAL                                                                                                
+              4120         0351            1     CAPITAL DE GIRO FRANQUIAS                                                                                      
+              4120         0352           24     HOT MONEY                                                                                                      
+              4120         0353           24     HOT MONEY                                                                                                      
+              4120         0354           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0355           13     RENEGOCIACAO DE DIVIDAS PESSOAS FISICAS                                                                        
+              4120         0359            7     CREDITO PESSOAL                                                                                                
+              4120         0361           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0368            3     DDS                                                                                                            
+              4120         0370            2     PCDS                                                                                                           
+              4120         0371            2     PCDS                                                                                                           
+              4120         0372            3     DDS                                                                                                            
+              4120         0373            3     DDS                                                                                                            
+              4120         0374            3     DDS                                                                                                            
+              4120         0375           91     DESC. C/CORRENTES                                                                                              
+              4120         0376            3     DDS                                                                                                            
+              4120         0377            3     DDS                                                                                                            
+              4120         0378           42     DESCONTO DE CHEQUES                                                                                            
+              4120         0379            1     CAP.GIRO MIC.E PEQ.EMPRESA                                                                                     
+              4120         0381            7     C. PESSOAL - ELO PARCELADO                                                                                     
+              4120         0382            7     CREDITO PESSOAL                                                                                                
+              4120         0383            1     EMPR. CAP.GIRO POS-FIXADO                                                                                      
+              4120         0384           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0385           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0387           21     AQ.CRED. CONSIGNADO                                                                                            
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:         9                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0388            7     CREDITO CONSIGNADO - LIMITE AQUISICAO                                                                          
+              4120         0389            1     EMPRESTIMO CAGIRO-SALDO ROTATIVO                                                                               
+              4120         0390            2     PCDS                                                                                                           
+              4120         0391            2     PCDS                                                                                                           
+              4120         0392           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0393           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0394           29     FIN LINHA TELEFONICA                                                                                           
+              4120         0395           29     FIN. LINHA TELEFONICA                                                                                          
+              4120         0396           41     CDC - FINANCIAMENTO DE SERVICOS                                                                                
+              4120         0397            7     CDC - FINANCIAMENTO DE SERVICOS                                                                                
+              4120         0401           64     GASTOS CARTAO COMPRA A VISTA                                                                                   
+              4120         0403            6     AQUIS. RECEB. COM COOBR - ORPAG                                                                                
+              4120         0406           99     MORA DCC                                                                                                       
+              4120         0407            1     CAPITAL DE GIRO - MICROCREDITO P.J.                                                                            
+              4120         0408            7     CREDITO PESSOAL IRPF                                                                                           
+              4120         0409           23     LUCROS E PERDAS -DIVERSOS BCN                                                                                  
+              4120         0411           66     VENDA ATIVOS-PART. BCO EM ACOES EMPRESA                                                                        
+              4120         0412            7     CREDITO PESSOAL                                                                                                
+              4120         0414           13     RENEG DE DIVIDA ACORDO NOS AUTOS MORA P                                                                        
+              4120         0415           13     RENG.DE DIVIDA ACORDO NOS AUTOS MORA PJ                                                                        
+              4120         0416           64     CARTAO BRADESCO                                                                                                
+              4120         0418           64     CARTAO BRADESCO                                                                                                
+              4120         0419           64     CARTAO BRADESCO                                                                                                
+              4120         0422           64     CARTAO BRADESCO                                                                                                
+              4120         0426           64     TELECOMPRAS PRE-DATADA                                                                                         
+              4120         0427           64     CARTAO BRADESCO                                                                                                
+              4120         0428           21     AQCRD GMAC AQUISICAO CREDITO COM COOBR                                                                         
+              4120         0429            1     OPERACOES EX-CONTROLADORES MUTUO                                                                               
+              4120         0431           13     OPERACOES EX-CONTROLADORES RENEG. PF/PJ                                                                        
+              4120         0432           17     OPERACOES LEASING /FIANCA                                                                                      
+              4120         0433           17     OPERACOES CDC/FIANCA                                                                                           
+              4120         0434           45     LIMITE CONTA GRAFICA BOA VISTA                                                                                 
+              4120         0436            8     RESOLUCAO 63                                                                                                   
+              4120         0437           14     AQUISICAO CDC/VEICULOS                                                                                         
+              4120         0440            6     EMPRESTIMOS COM GARANTIA DE ORPAG                                                                              
+              4120         0443           64     CARTAO PROTEGIDO/SUPER PROTEGIDO                                                                               
+              4120         0444           13     RENEGOCIACAO AUTOMATICA DE DIVIDAS PF                                                                          
+              4120         0445           73     EMPR.PES. - CARTAO CRED. PAG. PARCELADO                                                                        
+              4120         0446           40     TELECOMPRAS PRE-DATADO                                                                                         
+              4120         0447           99      CESSAO CREDITO                                                                                                
+              4120         0449           90     UTILIZACAO DO LIMITE                                                                                           
+              4120         0450           71     EMP.PE.GAR.AL.FD.IMO                                                                                           
+              4120         0451            1     CAP. GIRO - ANTEC. FORN. SETOR PUBLICO                                                                         
+              4120         0452           17     CDC C/INTERVENIENCIA                                                                                           
+              4120         0455           90     MORA - CHEQUE ESPCIAL - PJ                                                                                     
+              4120         0456            1     ADIANT. CESSAO DE CREDITO CONDICIONADA                                                                         
+              4120         0460           21     AQUISICAO DE CREDITO OPER.ESTRUTURADA                                                                          
+              4120         0461           38     FIANCA NAO HONRADA                                                                                             
+              4120         0462           15     RESP P/ FIANCAS                                                                                                
+              4120         0464           41     CDC - FINANCIAMENTO DE SERVICOS                                                                                
+              4120         0466           64     C.A. - CARTAO PRIVATE LABEL                                                                                    
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:        10                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0467           99     CESSAO DE CREDITO                                                                                              
+              4120         0469           13     RENEGOCIACAO AUTOMATICA PREJUIZO PJ                                                                            
+              4120         0470           46     SECURITIZADORA EX-BBV PJ                                                                                       
+              4120         0471           12     CONTA GARANTIDA                                                                                                
+              4120         0472            7     CP RESERVA CREDITO PESSOAL RESERVA                                                                             
+              4120         0473           46     SECURITIZADORA EX-BBV                                                                                          
+              4120         0476           99     FIN. DE VEICULOS                                                                                               
+              4120         0479           99     CAP. DE GIRO                                                                                                   
+              4120         0489            8     RESOLUCAO 63                                                                                                   
+              4120         0494           19     FINAME SECURITIZACAO                                                                                           
+              4120         0501           14     RENEG.CDC VEICULOS-LP                                                                                          
+              4120         0507            7     EMPRESTIMO PESSOAL VINCULADO ST PUBLICO                                                                        
+              4120         0508            7     EMPRESTIMO PESSOAL VINCULADO ST.PRIVADO                                                                        
+              4120         0510           14     RENEG.CDC VEICULOS-MO/CA                                                                                       
+              4120         0511           13     RENEG.CRED.PESSOAL-GAR.BENS IMOV-MO/CA                                                                         
+              4120         0514           13     RENEG.CRED.PESSOAL-GAR.VEIC-MO/CA                                                                              
+              4120         0517           90     CHEQUE ESPECIAL                                                                                                
+              4120         0518           90     ENCARGOS LIM. CREDITO                                                                                          
+              4120         0519           90     ENCARGOS DE LIMITE CREDITO                                                                                     
+              4120         0520           12     CONTA GARANTIDA - LIMITE                                                                                       
+              4120         0530           13     RENEG AUTOMATICA DE DIVIDAS PJ                                                                                 
+              4120         0533            1     CAPITAL DE GIRO - DCIP                                                                                         
+              4120         0540           99     DIVERSOS                                                                                                       
+              4120         0542           13     RENEG.CRED.PESSOAL-GAR.BENS IMOV-LP                                                                            
+              4120         0543            5     APLIC.MORA AGRIC.CART.N - PJ                                                                                   
+              4120         0544            5     APLIC.MORA PECUARIA CART. N - PJ                                                                               
+              4120         0550           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0551           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0554           68     CONSIGNADO PUBLICO COBRANCA COM MORA                                                                           
+              4120         0555           68     CONSIGNADO PUBLICO COBRANCA SEM MORA                                                                           
+              4120         0556           67     CONSIGNADO PUBLICO NOTIFICACAO COM MORA                                                                        
+              4120         0557           67     CONSIGNADO PUBLICO NOTIFICACAO SEM MORA                                                                        
+              4120         0558           69     CONSIGNADO PUBLICO ACORDOS                                                                                     
+              4120         0559           69     CONSIGNADO PUBLICO ACORDOS                                                                                     
+              4120         0578           19     BNDES PROSOFT                                                                                                  
+              4120         0580           61     VENDA DE BENS-LEILAO                                                                                           
+              4120         0585           25     MESALIDADE VISA EMPRESARIAL                                                                                    
+              4120         0586           16     CAGIRO C/GAR CARTOES_INCORP PARC                                                                               
+              4120         0587            5     MORA-AM PROR PARC OP.SECURIT RES.2238RPL                                                                       
+              4120         0589           13     RENEG.CRED.PESSOAL-GAR.VEIC-LP                                                                                 
+              4120         0600           99     LP - FB                                                                                                        
+              4120         0601           25     CARTAO BRADESCO                                                                                                
+              4120         0602           32     C.P.M.F                                                                                                        
+              4120         0603           14     CDC CONSIGNADO VEICULO PUBLICO                                                                                 
+              4120         0604           41     CDC CONSIGNADO BENS PUBLICO                                                                                    
+              4120         0605           64     CARTAO BRADESCO                                                                                                
+              4120         0606           41     CDC CONSIGNADO SERVICOS PUBLICO                                                                                
+              4120         0610                  MORA - DCC ATE CR$ 2.000,00                                                                                    
+              4120         0611           64     CARTAO BRADESCO                                                                                                
+              4120         0612           17     CDC C/INTERVENIENCIA                                                                                           
+              4120         0613           21     CESSAO DE CREDITO                                                                                              
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:        11                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0614           17     CDC NAO CORRENTISTA                                                                                            
+              4120         0615           17     CDC NAO CORRENTISTA                                                                                            
+              4120         0616           17     CDC NAO CORRENTISTA                                                                                            
+              4120         0617           17     CDC NAO CORRENTISTA                                                                                            
+              4120         0618           95     DESC C/C ORIGINADOS P/ COBRANÁA TARIFAS                                                                        
+              4120         0619           99     LIMITE DE SAQUE - CCC MB.                                                                                      
+              4120         0620           14     FIN. DE VEICULOS                                                                                               
+              4120         0621           14     FIN. DE VEICULOS                                                                                               
+              4120         0622           17     CDC C/INTERVENIENCIA                                                                                           
+              4120         0624           14     FIN. DE VEICULOS                                                                                               
+              4120         0625           19     FINAME                                                                                                         
+              4120         0626           64     CARTAO BRADESCO-VISA FACIL CART DOURADO                                                                        
+              4120         0627           64     CARTAO BRADESCO                                                                                                
+              4120         0628           70     EMP.PES.GARANT.VEIC.                                                                                           
+              4120         0629           17     CDC C/INTERVENIENCIA                                                                                           
+              4120         0630           99     LIMITE DE CREDITO ESPECIAL                                                                                     
+              4120         0631           43     FIN. MAT. DE CONSTRUCAO                                                                                        
+              4120         0632           14     FIN. DE VEICULOS                                                                                               
+              4120         0633           91     DESC. CONTA CORRENTE                                                                                           
+              4120         0634           90     CHEQUE ESPECIAL                                                                                                
+              4120         0635           19     FINAME                                                                                                         
+              4120         0636           91     DESC. C/C ORIGINADOS POR COBRAN«A DE TA                                                                        
+              4120         0637           13     RENEG. SECURITIZADOS PJ                                                                                        
+              4120         0638           46     SEC. FINANCEIRA - EX-BBV                                                                                       
+              4120         0639            5     APLICACAO EM MORA AGRIC.CART.N-PJ                                                                              
+              4120         0640            5     APLICACAO EM MORA PEC.. CART.N-PJ                                                                              
+              4120         0641            5     REP. PRONAF                                                                                                    
+              4120         0644           21     AQUIS.DE CRED.C/COOB.-FIN.PRE.FIX.                                                                             
+              4120         0645           21     CESSAO DE CREDITO                                                                                              
+              4120         0647           21     AQUISICAO DE CREDITO                                                                                           
+              4120         0648           21     CESSAO DE CREDITO                                                                                              
+              4120         0649           23     CRDA/CRGH/LRCP                                                                                                 
+              4120         0651           14     FIN. DE VEICULOS                                                                                               
+              4120         0652           21     AQ.CRED.FIN.VEIC./OUTROS BENS USAD.-PF                                                                         
+              4120         0653           21     AQUISICAO DE CREDITO                                                                                           
+              4120         0654           46     SEC. FINANCEIRA - EX-BBV                                                                                       
+              4120         0655           14     FIN. DE VEICULOS                                                                                               
+              4120         0656           14     FIN. DE VEICULOS                                                                                               
+              4120         0657            7     CREDITO PESSOAL                                                                                                
+              4120         0658           17     CDC NAO CORRENTISTA                                                                                            
+              4120         0659           13     FINAN COMPOSICAO DE DIVIDA - PF                                                                                
+              4120         0660           14     CDC-UNIVERSITARIO                                                                                              
+              4120         0661           14     FIN. DE VEICULOS                                                                                               
+              4120         0662           14     FIN. DE VEICULOS                                                                                               
+              4120         0664           14     FIN. DE VEICULOS                                                                                               
+              4120         0665           14     FIN. DE VEICULOS                                                                                               
+              4120         0666           14     FIN. DE VEICULOS                                                                                               
+              4120         0667            1     AQ.CRED.FINANC.CAP.DE GIRO C/VAR.BTN                                                                           
+              4120         0668            1     FINANC.CAP. GIRO C-VAR.OTN-PJC                                                                                 
+              4120         0669            1     FINANC.CAP. GIRO C-VAR.OTN-PJ OU AT                                                                            
+              4120         0670           13     RENEG. SECURITIZADOS PF                                                                                        
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:        12                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0671           22     VENDOR/COMPROR BRADESCO                                                                                        
+              4120         0672           22     VENDOR/COMPROR BRADESCO                                                                                        
+              4120         0673           22     VENDOR/COMPROR BRADESCO                                                                                        
+              4120         0674           22     VENDOR/COMPROR                                                                                                 
+              4120         0681           99     OUTRAS OPERACOES                                                                                               
+              4120         0682           14     FIN. DE VEICULOS                                                                                               
+              4120         0683           14     FIN. DE VEICULOS                                                                                               
+              4120         0684           14     FIN. DE VEICULOS                                                                                               
+              4120         0685           14     FIN. DE VEICULOS                                                                                               
+              4120         0686           14     FIN. DE VEICULOS                                                                                               
+              4120         0688           14     FIN. DE VEICULOS                                                                                               
+              4120         0694           90     CHEQUE ESPECIAL - UTILIZACAO                                                                                   
+              4120         0695            1     CIDADE DETRAN PJ - GIRO                                                                                        
+              4120         0697            7     CREDITO PESSOAL                                                                                                
+              4120         0698            7     CREDITO PESSOAL                                                                                                
+              4120         0699            7     CREDITO PESSOAL                                                                                                
+              4120         0700            7     CREDITO PESSOAL CONSIGNADO                                                                                     
+              4120         0702           45     CREDITOS DE TERCEIROS - EX BBV                                                                                 
+              4120         0703           60     IND. FUMAGEIRA                                                                                                 
+              4120         0704           15     RESP P/ FIANCA                                                                                                 
+              4120         0705           19     FINAME                                                                                                         
+              4120         0706           33     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0707           20     IFC-REPASSE/RECURSO EXTRANGEIRO                                                                                
+              4120         0708            7     CREDITO PESSOAL CONSIG. SETOR PRIVADO                                                                          
+              4120         0709            8     RESOLUCAO 63                                                                                                   
+              4120         0710           31     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0711           33     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0712            1     CAGIRO ANTEC.RECEBIVEIS ORGAN.BRADESCO                                                                         
+              4120         0713            1     FIN.CAP.GIRO C/VARIACAO EM LBC.BBI                                                                             
+              4120         0715           19     REPASSE OPERACOES FINAME - FINANSA                                                                             
+              4120         0716           23     CRDA/CRGH/LRCP                                                                                                 
+              4120         0719           12     CONTA GARANTIDA                                                                                                
+              4120         0720           14     FIN. DE VEICULOS                                                                                               
+              4120         0721           14     FIN.VEICULOS                                                                                                   
+              4120         0722            1     UTILIZACAO LIMITE ROTATIVO FLEX PJ                                                                             
+              4120         0723            1     FINANC.CAPITAL DE GIRO ESPECIAL-C/NP                                                                           
+              4120         0725           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0726           19     FINAME                                                                                                         
+              4120         0727           19     FINAME                                                                                                         
+              4120         0728           13     RENEGOCIACAO AUTOMATICA PESSOA FISICA                                                                          
+              4120         0729           13     COMPOSICAO DE DIVIDA                                                                                           
+              4120         0730           36     PRONAGRI                                                                                                       
+              4120         0731           33     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0732           33     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0733           19     PROSOLO                                                                                                        
+              4120         0735           14     CDC CONSIGNADO - VEICULOS-PRIVADO                                                                              
+              4120         0736           19     FINAME                                                                                                         
+              4120         0737           53     FINAME                                                                                                         
+              4120         0738           19     FINAME                                                                                                         
+              4120         0739            8     RESOLUCAO 63                                                                                                   
+              4120         0740           19     FINAME                                                                                                         
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:        13                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0741           19     FINAME                                                                                                         
+              4120         0742           31     EXIMBANK                                                                                                       
+              4120         0743           31     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0744           16     REF MICRO EMPR                                                                                                 
+              4120         0746           27     FINANCIAMENTO BNDES                                                                                            
+              4120         0747           33     POC/FINAC/PROCAP/PROINFO                                                                                       
+              4120         0749           23     CRDA/CRGH/LRCP                                                                                                 
+              4120         0752           19     FINAME                                                                                                         
+              4120         0755            5     FINANC. RURAIS ALONGADAS - RO                                                                                  
+              4120         0756            5     MORA-FINANC. RURAIS ALONGADAS - RO                                                                             
+              4120         0757            5     FINANC. RURAIS RENEGOCIADAS - RO                                                                               
+              4120         0758            5     MORA-FINANC. RURAIS RENEGOCIADAS - RO                                                                          
+              4120         0759            5     FINANC. RURAIS ALONGADAS - RPL                                                                                 
+              4120         0760            5     MORA-FINANC. RURAIS ALONGADAS - RPL                                                                            
+              4120         0761           79     CAPITAL DE GIRO - GARANTIA DE IMOVEIS                                                                          
+              4120         0762            1     CAP. DE GIRO                                                                                                   
+              4120         0763            1     CAP. DE GIRO                                                                                                   
+              4120         0765            5     FINANC. RURAIS RENEGOCIADAS - RPL                                                                              
+              4120         0766            5     MORA-FINANC.RURAIS RENEGOCIADAS - RPL                                                                          
+              4120         0769            5     FINANC.RURAIS ALONGADAS EM ATRASO-RO                                                                           
+              4120         0770            5     AM-FINANC.RURAIS ALONGADAS EM ATRASO-RO                                                                        
+              4120         0771            1     MICROCRED.PROD.ORIENT.FINANC.PJ                                                                                
+              4120         0772           23     MICROCRED.PROD.ORIENT.FINANC. PF                                                                               
+              4120         0773            1     MICROCRED.PROD.ORIENT. GIRO PJ                                                                                 
+              4120         0774           23     MICROCRED.PROD.ORIENT. GIRO PF                                                                                 
+              4120         0775            5     FINANC.RURAIS RENEGOCIADAS EM ATRASO-RPL                                                                       
+              4120         0776            5     AM-FINANC.RURAIS RENEGOCIADAS/ATRASO-RPL                                                                       
+              4120         0777            8     RESOLUCAO 63                                                                                                   
+              4120         0778            5     FINANC.RURAIS ALONGADAS EM CL - RO                                                                             
+              4120         0779            5     AM-FINANC.RURAIS ALONGADAS EM CL - RO                                                                          
+              4120         0780            5     FINANC. RURAIS RENEGOCIADAS EM CL - RO                                                                         
+              4120         0781            5     AM-FINANC.RURAIS RENEGOCIADAS EM CL - RO                                                                       
+              4120         0782            5     FINANC. RURAIS ALONGADAS EM CL - RPL                                                                           
+              4120         0783            5     AM-FINANC.RURAIS ALONGADAS EM CL - RPL                                                                         
+              4120         0784            5     FINANC.RURAIS RENEGOCIADAS EM CL - RPL                                                                         
+              4120         0785            5     AM-FINANC.RURAIS RENEGOCIADAS EM CL-RPL                                                                        
+              4120         0786            5     FINANC.RURAIS ALONGADAS SECURITIZADAS-RO                                                                       
+              4120         0787            5     AM-FINANC.RURAIS ALONGADAS SECURIT. - RO                                                                       
+              4120         0788            5     FINAN.RURAIS ALONGADAS SECURITIZADAS-RPL                                                                       
+              4120         0789            5     AM-FINANC.RURAIS ALONGADAS SECURIT.-RPL                                                                        
+              4120         0790            5     FINANC.RURAIS ALONG.SECURIT.EM ATRASO-RO                                                                       
+              4120         0791            5     AM-FIN.RURAIS ALONG.SECURIT./ATRASO-RO                                                                         
+              4120         0792            5     FINAN.RURAIS ALONG.SECURIT.EM ATRASO-RPL                                                                       
+              4120         0793            5     AM-FIN.RURAIS ALONG.SECURIT./ATRASO-RPL                                                                        
+              4120         0794            5     FINANC.RURAIS ALONG.SECURIT. EM CL - RO                                                                        
+              4120         0795            5     AM-FINAN.RURAIS ALONG.SECURIT./ CL - RO                                                                        
+              4120         0796            5     FINANC.RURAIS ALONG.SECURIT./CL - RPL                                                                          
+              4120         0797            5     AM-FINANC.RURAIS ALONG.SECURIT./CL-RPL                                                                         
+              4120         0798            5     EMP RURAIS                                                                                                     
+              4120         0799           41     CDC CONSIGNADO OUTROS BENS PRIVADO                                                                             
+              4120         0800           10     CAMBIO                                                                                                         
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:        14                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              4120         0802           10     CAMBIO                                                                                                         
+              4120         0803           10     CAMBIO                                                                                                         
+              4120         0804           10     CAMBIO                                                                                                         
+              4120         0805           10     CAMBIO                                                                                                         
+              4120         0806           10     CAMBIO                                                                                                         
+              4120         0809           58     DESCONTO DE CHEQUES                                                                                            
+              4120         0810           10     CAMBIO                                                                                                         
+              4120         0811           10     CAMBIO                                                                                                         
+              4120         0812           10     CAMBIO                                                                                                         
+              4120         0813           10     CAMBIO                                                                                                         
+              4120         0814           10     CAMBIO                                                                                                         
+              4120         0815           10     CAMBIO                                                                                                         
+              4120         0816           10     CAMBIO                                                                                                         
+              4120         0820           10     CAMBIO                                                                                                         
+              4120         0823           21     AQUISICAO DE CREDITOS S/COOBRIGACAO                                                                            
+              4120         0825           10     EXIMBANK                                                                                                       
+              4120         0828           10     CAMBIO                                                                                                         
+              4120         0829           10     CAMBIO                                                                                                         
+              4120         0831           10     CAMBIO                                                                                                         
+              4120         0832           10     CAMBIO                                                                                                         
+              4120         0833           10     CAMBIO                                                                                                         
+              4120         0834           10     CAMBIO                                                                                                         
+              4120         0836           10     CAMBIO                                                                                                         
+              4120         0837           10     CAMBIO                                                                                                         
+              4120         0838           10     CAMBIO                                                                                                         
+              4120         0841           57     DESCONTO DE DUPLICATAS                                                                                         
+              4120         0842           57     DUPLICATAS DESCONTADAS ESCRITURAL                                                                              
+              4120         0847           10     CAMBIO                                                                                                         
+              4120         0863           95     LEASING BANCO ALVORADA                                                                                         
+              4120         0865           10     CAMBIO                                                                                                         
+              4120         0867           10     CAMBIO                                                                                                         
+              4120         0889           19     FINAME                                                                                                         
+              4120         0892           19     FINAME                                                                                                         
+              4120         0893           19     FINAME                                                                                                         
+              4120         0894           19     FINAME                                                                                                         
+              4120         0896           19     FINAME                                                                                                         
+              4120         0900            7     CREDITO PESSOAL                                                                                                
+              4120         0929            1     CAPITAL DE GIRO                                                                                                
+              4120         0934           99     CAPITAL DE GIRO ESPECIAL                                                                                       
+              4120         0937           99     CREDITO DIRETO AO CONSUMIDOR - LIMITE                                                                          
+              4120         0938            7     CREDITO PESSOAL                                                                                                
+              4120         0943           99     OUTRAS OPERACOES                                                                                               
+              4120         0943           99     OUTRAS OPERACOES                                                                                               
+              4120         0951           19     FINAME                                                                                                         
+              4120         0951           19     FINAME                                                                                                         
+              4120         0966           42     DESCONTO DE CHEQUES                                                                                            
+              4120         0966           42     DESCONTO DE CHEQUES                                                                                            
+              4160         EXT            98     OPERACOES QUE COMPOE O "EXTRA TETO"                                                                            
+              4160         TET            98     OPERACOES QUE COMPOE O "TETO"                                                                                  
+              4900         0767           99     CAMBIO                                                                                                         
+              4900         0826                  CL - CAMBIO                                                                                                    
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:        15                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              5150         VISA           64     CARTAO BRADESCO                                                                                                
+              5150         0004           99     CL EX CREDIREAL                                                                                                
+              5150         0115           64     PARCELADO EMISS.CT.CRED.BRAD.EMPRESARIA                                                                        
+              5150         0193           64     CARTAO BRADESCO                                                                                                
+              5150         0194           64     CARTAO BRADESCO-SAQUES                                                                                         
+              5150         0195           64     CARTAO BRADESCO                                                                                                
+              5150         0196           64     CARTAO BRADESCO                                                                                                
+              5150         0197           13     CARTAO BRADESCO                                                                                                
+              5150         0198           64     CARTAO BRADESCO                                                                                                
+              5150         0399           64     CARTAO BNDES                                                                                                   
+              5150         0400           99     LP - BT                                                                                                        
+              5150         0401           64     GASTOS CARTAO COMPRA A VISTA                                                                                   
+              5150         0413           64     CARTAO BRADESCO                                                                                                
+              5150         0417           64     CARTAO BRADESCO                                                                                                
+              5150         0420           64     CARTAO BRADESCO                                                                                                
+              5150         0421           64     CARTAO BRADESCO                                                                                                
+              5150         0423           64     CARTAO BRADESCO-ROTATIVO                                                                                       
+              5150         0424           64     CARTAO BRADESCO                                                                                                
+              5150         0426           64     TELECOMPRAS PRE-DATADAS                                                                                        
+              5150         0435           73     CREDTCCRE CR ATRSO-CART CRED ORIGEM B2K                                                                        
+              5150         0438           64     CARTAO BRADESCO                                                                                                
+              5150         0439           73     CREDTCCRE CR ATRSO-CART CRED ORIGEM B2K                                                                        
+              5150         0441           64     CARTAO BRADESCO                                                                                                
+              5150         0443           64     CARTAO BRADESCO                                                                                                
+              5150         0453           46     SECURITIZADORA EX-BBV                                                                                          
+              5150         0474           72     ATRCCRE ATRASO ANUIDADE C.CREDITO - B2K                                                                        
+              5150         0475           64     CARTAO BRADESCO                                                                                                
+              5150         0477           64     CARTAO BRADESCO-SAQUES                                                                                         
+              5150         0478           64     CARTAO BRADESCO-SAQUES                                                                                         
+              5150         0491           64     CARTAO BRADESCO-SAQUES                                                                                         
+              5150         0492           64     CARTAO BRADESCO                                                                                                
+              5150         0493           64     CARTAO BRADESCO                                                                                                
+              5150         0495           64     CARTAO BRADESCO                                                                                                
+              5150         0585           25     TAXA ANUIDADE CARTAO PROTEGIDO                                                                                 
+              5150         0611           64     CARTAO BRADESCO                                                                                                
+              5150         0626           64     CARTAO BRADESCO                                                                                                
+              5150         0627           64     CARTAO BRADESCO                                                                                                
+              5150         0678           64     CARTAO BRADESCO                                                                                                
+              5150         0679           64     CARTAO BRADESCO                                                                                                
+              5170         0014           99     EMPREST.CAIXA BENEFICENTE NORMAL                                                                               
+              5190         0001           99     PREJUIZO CASTROCLINICA                                                                                         
+              5190         0004           99     PREJUIZO CASTROCLINICA                                                                                         
+              5201         0013           73     CARTAO DE CREDITO PARCELADO LOJISTAS                                                                           
+              5201         0288           13     RENEG CARTAO CREDITO OPER ATIVAS PF                                                                            
+              5201         0312           64     CARTAO BNDES                                                                                                   
+              5201         0399           64     CARTAO BNDES                                                                                                   
+              5201         0439           73      CREDATCCRE CRED ATRASO-CARTAO CRED                                                                            
+              5201         0474           72     ATRCCRE ATRASO ANUIDADE C.CREDITO - B2K                                                                        
+              5240         0007           99     CL - LEASING VR. PRINCIPAL                                                                                     
+              5240         0009           99     CL - LEASING VR. RESIDUAL                                                                                      
+              5240         0103           50     LEASING ALCADA ESPECIAL                                                                                        
+                                                                                                                                                                
+CLLP2574                                ARQUIVO COM OS DADOS DE MESTRE DE ESTATISTICAS                               PAG.:        16                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+           EMPRESA     CARTEIRA     NATUREZA     DESCRICAO                                                                                                      
+              5240         0283           50     RECOMPRA LEASING                                                                                               
+              5240         0405           99     APLIC MORA - LEASING                                                                                           
+              5240         0643           50     RECOMPRA LEASING                                                                                               
+              5240         0846           50     LEASING                                                                                                        
+              5240         0848           50     LEASING BRADESCO-DIVERSOS                                                                                      
+              5240         0850           99     LP - LEASING                                                                                                   
+              5240         0851           50     LEASING BRADESCO-DIVERSOS                                                                                      
+              5240         0852           50     LEASING TRD RES 140                                                                                            
+              5240         0853           50     LSG-VAR.LBC                                                                                                    
+              5240         0854           50     LSG-VAR.LBC                                                                                                    
+              5240         0855           50     LSG-VAR.LBC                                                                                                    
+              5240         0856           50     LEASING OPERACIONAL - DOLAR                                                                                    
+              5240         0857           50     LEASING  RENEGOCIACAO CIR. 2686                                                                                
+              5240         0858           50     LEASING RENEG. VALOR RESID. CIR. 2686                                                                          
+              5240         0859           50     LSG VAR POUPANCA                                                                                               
+              5240         0860           50     LSG DOLLAR                                                                                                     
+              5240         0861           50     LSG PRE-FIXADA                                                                                                 
+              5240         0862           50     LSG DOLLAR                                                                                                     
+              5240         0863           50     LSG VAR POUPANCA                                                                                               
+              5240         0864           50     LSG - DIVERSOS                                                                                                 
+              5240         0868           50     MORA - LEASING                                                                                                 
+              5310         0883           99     CONTA DE APOSENTADORIA BRADESCO                                                                                
+              6500         C58            94     COTA CONSORCIO ATRASO AUTOMOVEL                                                                                
+              6500         C59            94     COTA CONSORCIO MORA IMOVEL                                                                                     
+              6500         C60            94     COTA CONSORCIO MORA CAMINHAO/TRATOR                                                                            
+              6500         0005           99     CL - BCI                                                                                                       
+              6500         0500           99     LP - D.C.I.P.(CRED. IMOBILIARIO)                                                                               
+              6500         0502           76     DCIP- MUTUARIO FINAL                                                                                           
+              6500         0503           76     DCIP- CAUCAO DE TITULOS                                                                                        
+              6500         0509           76     DCIP- MUTUARIO FINAL                                                                                           
+              6500         0512           76     DCIP- MUTUARIO FINAL                                                                                           
+              6500         0513           76     DCIP- MUTUARIO FINAL                                                                                           
+              6500         0522           76     DCIP- CONSTR ENC. MORA                                                                                         
+              6500         0531           75     DCIP MUTUARIO RESIDUO                                                                                          
+              6500         0532           78     DCIP - F. IMOBILIARIO EMPRESARIAL                                                                              
+              6500         0561           78     DCIP - F.IMOBILIARIO EM LUCROS E PERDAS                                                                        
+              6500         0572           76     DCIP-ACAO JUDICIAL                                                                                             
+              6500         0576           99     DCIP- ACAO JUDICIAL                                                                                            
+              6500         0577           99     DCIP- ACAO JUDICIAL                                                                                            
+              6500         0579           99     DCIP- ACAO JUDICIAL                                                                                            
+              6500         0581           76     DCIP CESSAO DE CREDITOS                                                                                        
+              6500         0582           89     DCIP- FUNDO FIEL                                                                                               
+              6500         0590           84     DCIP- EMPRES HIPOTECARIO                                                                                       
+              7000         BBT            10     PREJUIZO CAMBIO BAHAMAS                                                                                        
+              7000         Y              62     CRDA                                                                                                           
+              7000         0351            1     CAGIRO                                                                                                         
+              7000         0801           95     LEASING BANCO ALVORADA                                                                                         
+              7000         0807           95     LEASING BANCO ALVORADA                                                                                         
+              7000         0808           95     RENEG.C.A.LEASING BCO ALVORADA                                                                                 
+              7000         0863           95     RENEG LP LEASING BCO ALVORADA                                                                                  
+                                                      TOTALIZACAO                                                                                               
+                                         -------------------------------------------------------                                                                
+                                         REGISTROS LIDOS NO ARQESTAT............:         815                                                                   
+                                         REGISTROS GRAVADOS NO ARQSAIDA.........:         815                                                                   
+              6500         0572           76     DCIP-ACAO JUDICIAL                                                                                             
+              6500         0576           99     DCIP- ACAO JUDICIAL                                                                                            
+              6500         0577           99     DCIP- ACAO JUDICIAL                                                                                            
+              6500         0579           99     DCIP- ACAO JUDICIAL                                                                                            
+              6500         0581           76     DCIP CESSAO DE CREDITOS                                                                                        
+              6500         0582           89     DCIP- FUNDO FIEL                                                                                               
+              6500         0590           84     DCIP- EMPRES HIPOTECARIO                                                                                       
+              7000         BBT            10     PREJUIZO CAMBIO BAHAMAS                                                                                        
+              7000         Y              62     CRDA                                                                                                           
+              7000         0351            1     CAGIRO                                                                                                         
+              7000         0801           95     LEASING BANCO ALVORADA                                                                                         
+              7000         0807           95     LEASING BANCO ALVORADA                                                                                         
+              7000         0808           95     RENEG.C.A.LEASING BCO ALVORADA                                                                                 
+              7000         0863           95     RENEG LP LEASING BCO ALVORADA                                                                                  
+                                                      TOTALIZACAO                                                                                               
+                                         -------------------------------------------------------                                                                
+                                         REGISTROS LIDOS NO ARQESTAT............:         815                                                                   
+                                         REGISTROS GRAVADOS NO ARQSAIDA.........:         815                                                                   
+                                         REGISTROS GRAVADOS NO RELATORIO........:         815                                                                   

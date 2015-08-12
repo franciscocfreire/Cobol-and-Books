@@ -1,0 +1,42 @@
+//CLLP7003 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    **********************************************************   
+//* ***     RECEPCIONA VIA BDT ALPHAVILLE:                              
+//* ***    'TM.FBNH.CLLP.MVCLLPOK' * GERADO PELO JOB FBNH0387 - ALPHA   
+//* ***    **********************************************************   
+//*                                                                     
+//SYSUT1   DD DSN=TM.FBNH.CLLP.MVCLLPOK,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSUT2   DD DSN=MX.CLLP.CLLP.MVCLLPOK,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(003140,0628),RLSE),                                
+//       DCB=(LRECL=0500,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    **********************************************************   
+//* ***     RECEPCIONA VIA BDT ALPHAVILLE:                              
+//* ***    'TM.FBNH.CLLP.ENDERECO' * GERADO PELO JOB FBNH1922 - ALPHA   
+//* ***    **********************************************************   
+//*                                                                     
+//SYSUT1   DD DSN=TM.FBNH.CLLP.ENDERECO,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSUT2   DD DSN=MX.CLLP.CLLP.ENDFBNH,                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(LRECL=0130,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

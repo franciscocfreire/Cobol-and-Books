@@ -1,0 +1,26 @@
+      =====================================================        
+      FAVOR INCLUIR O JOB CLLP2205, CONFORME INDICA ABAIXO:        
+      =====================================================        
+
+	(1) -  Incluir O STEP3:			
+
+//STEP3    EXEC SORTD                                                
+//*                                                                  
+//* ***    CLASSIFICACAO DO CADASTRO DE BAIXAS POR AG.CONTA CARTEIRA 
+//* ***    CONTRATO E VECTO DESC PARA BALANCE LINE                   
+//*                                                                  
+//SORTIN   DD DSN=MX.CLLP.D0MZ.PRV.BAIX3M.LEI(0),                
+//       DISP=SHR                                                                                                   
+//SORTOUT  DD DSN=MX.CLLP.CADBAIXA.TOTAL.LEI.CLA(+1),            
+//       DISP=(,CATLG,DELETE),                                       
+//       UNIT=(DISCO,50),                                            
+//       SPACE=(TRK,(020000,4000),RLSE),                             
+//       DCB=(AD.A,LRECL=0414,RECFM=FB),                             
+//       DATACLAS=PRODEXT                                            
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                      
+//       DISP=SHR                                                    
+//SYSIN    DD *                                                      
+ SORT FIELDS=(4,3,A,26,4,A,31,3,A,34,4,A,97,4,D,94,2,D,91,2,D),      
+             FORMAT=BI                                               
+ END                                                                 
+//*                                                                  

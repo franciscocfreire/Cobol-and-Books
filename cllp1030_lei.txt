@@ -1,0 +1,633 @@
+1) SUBSTITUIR JOB CLLP1030  CONFORME SEGUE:                             
+                                                                        
+                                                                        
+//CLLP1030 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z,SCHENV=IMS         
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTCARF                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTQWG2                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTQWG3                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTQWG4                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTQWG5                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTQWG6                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTQWG7                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLEOX                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLEOY                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHO35                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHO36                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHO37                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP0    EXEC PGM=ATSOAC01,                                           
+//       PARM='00-IKJEFT01',                                            
+//       DYNAMNBR=20                                                    
+//*                                                                     
+//* ***    DESCARREGA A TABELA DB2PRD.REST_NEGATIVACAO (LPCLB037)       
+//* ***    EM ARQUIVO SEQUENCIAL.                                       
+//*                                                                     
+//SYSTSPRT DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//LISTING  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSPUNCH DD DSN=MX.DBAS.LPCLB037.J1030(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A),                                                    
+//       DATACLAS=PRODX37                                               
+//SYSREC00 DD DSN=MX.CLLP.LPCLB037.J1030(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A),                                                    
+//       DATACLAS=PRODX37                                               
+//SYSTSIN  DD DSN=DB2M1.R2.SYSIN(DSNTIAUL),                             
+//       DISP=SHR                                                       
+//SYSIN    DD *                                                         
+DB2PRD.REST_NEGATIVACAO                                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//*                                                                     
+//STEP0A   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASS.REST_NEGATIVACAO (SEQUENCIAL) POR AG/CONTA/NATUREZA    
+//*                                                                     
+//SORTIN   DD DSN=*.STEP0.SYSREC00,                                     
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.PRV.LPCLB037.SA(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+  SORT FIELDS=(1,5,PD,A,6,3,PD,A,9,2,PD,A,11,1,PD,A,12,3,PD,A,          
+               15,4,PD,A,19,2,PD,A,21,3,CH,A)                           
+  INCLUDE COND=(28,1,CH,EQ,C'X')                                        
+  END                                                                   
+/*                                                                      
+//*                                                                     
+//STEP1    EXEC PGM=CLLP0037                                            
+//*                                                                     
+//* ***    SEPARA TABELA LPCLB037 EM 2 ARQUIVOS:                        
+//* ***      -ARQSEL   =  COM SOMENTE CPF PREENCHIDO                    
+//* ***      -ARQNSEL  =  COM CPF OU OUTROS DADOS PREENCHIDOS           
+//*                                                                     
+//LPCLB037 DD DSN=*.STEP0A.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQSEL   DD DSN=MX.CLLP.ARQSEL.CLLP0037(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//ARQNSEL  DD DSN=MX.CLLP.ARQNSEL.CLLP0037(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP2710                                            
+//*                                                                     
+//* ***    EXCLUI DO MOVIMENTO SERSA / SPC PENDENCIAS COM SEGURO        
+//* ***    DE VIDA OU PRESTAMISTA                                       
+//* ***                                                                 
+//* ***    SELECIONA: CGC.CPF DEV./COD.NAT./CONTRATO/DT.VCTO/EMPRESA    
+//* ***          AGENCIA/CONTA/CARTEIRA/ID/MOEDA/TIPO PEND/COD.OCORR    
+//* ***          VR.PRINCIPAL/VR.VENCIDOS/VR.VINCENDOS/NOME DEV         
+//* ***          NOME AVAL1/CPF AVAL1/NOME AVAL2/CPF AVAL2/COD.EMPRESA  
+//* ***                                                                 
+//* ***    OBS.-  EXCLUI OS REGISTROS MIGRADOS DO BANCO ZOGBI           
+//* ***           E PENDENCIAS DE CARTAO DE CREDITO                     
+//* ***                                                                 
+//*                                                                     
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.NOVO(0),                             
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=MX.CLLP.DATAMOV.CLLP1000(0),                          
+//       DISP=SHR                                                       
+//MVATIVOE DD DSN=MX.LPCL.ARQDB22S.SPRIVATE(0),                         
+//       DISP=SHR                                                       
+//MVATIVOS DD DSN=MX.CLLP.DBSECARG.SEMSEG(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELNSER  DD SYSOUT=%%FORM#CARF,                                       
+//       DCB=(LRECL=133,RECFM=FBM)                                      
+//RELSERA  DD DUMMY,                                                    
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIF.ASCEND. POR CGC.CPF/COD.NAT./CONTRATO/DT.VCTO/       
+//* ***                        AGENCIA/CONTA/ID                         
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.MVATIVOS,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.DB2LPSUM.CLLP1000(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+  SORT FIELDS=(1,17,BI,A,18,8,BI,A,29,3,BI,A,32,4,BI,A,39,2,BI,A)       
+  END                                                                   
+//*                                                                     
+//STEP4    EXEC PGM=CLLP7103,                                           
+//       PARM='DEVEDOR  '                                               
+//*                                                                     
+//* ***    EXCLUSAO DOS DEVEDORES COM RESTRICAO DE ENVIO PARA SERASA    
+//*                                                                     
+//LPCLB037 DD DSN=*.STEP1.ARQSEL,                                       
+//       DISP=SHR                                                       
+//ARQDB22  DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU.CLLP7103(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//BLQREST  DD DSN=MX.CLLP.J1030S4.BLQREST(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0040,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#QWG2,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//RELATO2  DD SYSOUT=%%FORM#QWG3,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICA EM ORDEM DE CPF DO AVALISTA 1                     
+//*                                                                     
+//SORTIN   DD DSN=*.STEP4.ARQATU,                                       
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQDEVED.CLLP7103(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+  SORT FIELDS=(152,10,BI,A)                                             
+  END                                                                   
+//*                                                                     
+//STEP6    EXEC PGM=CLLP7103,                                           
+//       PARM='AVALISTA1'                                               
+//*                                                                     
+//* ***    EXCLUSAO DOS AVALISTA1 COM RESTRICAO DE ENVIO PARA SERASA    
+//*                                                                     
+//LPCLB037 DD DSN=*.STEP1.ARQSEL,                                       
+//       DISP=SHR                                                       
+//ARQDB22  DD DSN=*.STEP5.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU2.CLLP7103(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//BLQREST  DD DSN=MX.CLLP.J1030S6.BLQREST(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0040,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#QWG4,                                       
+//       DCB=(LRECL=133,RECFM=FBM)                                      
+//RELATO2  DD SYSOUT=%%FORM#QWG5,                                       
+//       DCB=(LRECL=133,RECFM=FBM)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICA EM ORDEM DE CPF DO AVALISTA 2                     
+//*                                                                     
+//SORTIN   DD DSN=*.STEP6.ARQATU,                                       
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQAVAL2.CLLP7103(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+  SORT FIELDS=(202,10,BI,A)                                             
+  END                                                                   
+//*                                                                     
+//STEP8    EXEC PGM=CLLP7103,                                           
+//       PARM='AVALISTA2'                                               
+//*                                                                     
+//* ***    EXCLUSAO DOS AVALISTA2 COM RESTRICAO DE ENVIO PARA SERASA    
+//*                                                                     
+//LPCLB037 DD DSN=*.STEP1.ARQSEL,                                       
+//       DISP=SHR                                                       
+//ARQDB22  DD DSN=*.STEP7.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQATU   DD DSN=MX.CLLP.ARQATU3.CLLP7103(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//BLQREST  DD DSN=MX.CLLP.J1030S8.BLQREST(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0040,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#QWG6,                                       
+//       DCB=(LRECL=133,RECFM=FBM)                                      
+//RELATO2  DD SYSOUT=%%FORM#QWG7,                                       
+//       DCB=(LRECL=133,RECFM=FBM)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8A   EXEC PGM=PLAN6130,                                           
+//       PARM='SOCAT'                                                   
+//*                                                                     
+//* ***    RECEBE ARQUIVO DE ACORDOS SEM PAGAMENTO DE 1A PARCELA        
+//* ***    GERADO NO JOB REES0677  - MX.REES.CLLP.ACORNPGO              
+//*                                                                     
+//TABELA   DD *                                                         
+D DSN=MX.REES.CLLP.ACORNPGO                                             
+//DDOUT    DD DSN=MX.CLLP.J1030S8A.ACORNPGO(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=116,RECFM=FB)                                  
+//COPIAOUT DD DUMMY,                                                    
+//       DCB=(LRECL=0110,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8B   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIF.ASCEND. POR AGENCIA / CONTA / CARTEIRA E             
+//* ***                        CONTRATO                                 
+//*                                                                     
+//SORTIN   DD DSN=*.STEP8.ARQATU,                                       
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1030S8B.ARQATU(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0213,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(29,3,PD,A,32,4,PD,A,36,3,CH,A,14,4,PD,A,18,8,ZD,A)        
+ END                                                                    
+//*                                                                     
+//STEP8C   EXEC PGM=CLLP0616,                                           
+//       PARM='20130719'                                                
+//*                                                                     
+//* ***     INCLUI INFORMACAO DE ACORDO SEM PAGAMENTO DE 1A PARC.       
+//* ***     PARAMETROS:  DATA DE VIGENCIA (SOMENTE A PARTIR DESTA       
+//* ***                  DATA SERA FEITA A VERIFICACAO).                
+//* ***     FORMATO: AAAAMMDD                                           
+//*                                                                     
+//ARQATUA  DD DSN=*.STEP8B.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//MVTSERA  DD DSN=*.STEP8A.DDOUT,                                       
+//       DISP=SHR                                                       
+//ARQPROCE DD DSN=MX.CLLP.J1030S8C.ARQPROCE(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0214,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#LEOX,                                       
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8D   EXEC PGM=PLAN6130,                                           
+//       PARM='SOCAT'                                                   
+//*                                                                     
+//* ***    RECEBE ARQUIVO DE ACORDOS COM PAGAMENTO DE 1A PARCELA        
+//* ***    GERADO NO JOB REES0677 - MX.REES.CLLP.ACORPAGO               
+//*                                                                     
+//TABELA   DD *                                                         
+D DSN=MX.REES.CLLP.ACORPAGO                                             
+//DDOUT    DD DSN=MX.CLLP.J1030S8D.ACORPAGO(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=116,RECFM=FB)                                  
+//COPIAOUT DD DUMMY,                                                    
+//       DCB=(LRECL=0110,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8E   EXEC PGM=CLLP0617,                                           
+//       PARM='20130719'                                                
+//*                                                                     
+//* ***     GERA RELATORIO DOS REGISTROS REFERENTES A ACORDO QUE        
+//* ***     POSSUEM PAGAMENTO DE 1A PARC.                               
+//* ***     PARAMETROS:  DATA DE VIGENCIA (SOMENTE A PARTIR DESTA       
+//* ***                  DATA SERA FEITA A VERIFICACAO).                
+//* ***     FORMATO: AAAAMMDD                                           
+//*                                                                     
+//ARQATUA  DD DSN=*.STEP8B.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//MVTSERA  DD DSN=*.STEP8D.DDOUT,                                       
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LEOY,                                       
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8F   EXEC PGM=PLAN6130,                                           
+//       PARM='SOCAT'                                                   
+//*                                                                     
+//* ***    RECEBE ARQUIVO DE ACORDOS SEM PAGAMENTO DE 1A PARCELA        
+//* ***    GERADO NO JOB REES0677  - MX.REES.CLLP.ACORNPGO              
+//*                                                                     
+//TABELA   DD *                                                         
+D DSN=MX.REES.CLLP.ACORNPGO                                             
+//DDOUT    DD DSN=MX.CLLP.J1030S8A.ACORNPGO.LEI(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=210,RECFM=FB)                                  
+//COPIAOUT DD DUMMY,                                                    
+//       DCB=(LRECL=0210,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP8G   EXEC PGM=PLAN6130,                                           
+//       PARM='SOCAT'                                                   
+//*                                                                     
+//* ***    RECEBE ARQUIVO DE ACORDOS SEM PAGAMENTO DE 1A PARCELA        
+//* ***    GERADO NO JOB REES0677  - MX.REES.CLLP.ACORNPGO              
+//*                                                                     
+//TABELA   DD *                                                         
+D DSN=MX.REES.CLLP.ACORNPGO                                             
+//DDOUT    DD DSN=MX.CLLP.J1030S8D.ACORPGO.LEI(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.A,LRECL=210,RECFM=FB)                                  
+//COPIAOUT DD DUMMY,                                                    
+//       DCB=(LRECL=0210,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP9    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIF.ASCEND. POR CGC.CPF/COD.NAT./CONTRATO/DT.VCTO/       
+//* ***                        AGENCIA/CONTA/ID                         
+//*                                                                     
+//SORTIN   DD DSN=*.STEP8C.ARQPROCE,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQATU3.CLLP7103.CLAS(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0214,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,17,BI,A,18,8,BI,A,29,3,BI,A,32,4,BI,A,39,2,BI,A)        
+ END                                                                    
+//*                                                                     
+//STEP10   EXEC PGM=CLLP7105,                                           
+//       PARM='PF00350050PJ00210030'                                    
+//*                                                                     
+//* ***    *************************************************************
+//* ***    GERA ARQLPCL DOS ID='MO'                                     
+//* ***    SELECIONA TODOS OS ID='CL' OU 'LP'                           
+//* ***    OS REGISTROS SERAO SELECIONADOS CONFORME CONFIGURADO NO PARM 
+//* ***    *************************************************************
+//* ***    PARM='PFXXXXYYYYPJWWWWZZZZ'                                  
+//* ***    *************************************************************
+//* ***    PF (GERAL)        VENCIDOS A MAIS DE XXXX DIAS UTEIS         
+//* ***    PF (CART 25 E 64) VENCIDOS A MAIS DE YYYY DIAS CORRIDOS      
+//* ***    PJ (GERAL)        VENCIDOS A MAIS DE WWWW DIAS UTEIS         
+//* ***    PJ (CART 25 E 64) VENCIDOS A MAIS DE ZZZZ DIAS CORRIDOS      
+//* ***    *************************************************************
+//*                                                                     
+//ARQDB2   DD DSN=*.STEP9.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//ARQLPCL  DD DSN=MX.CLLP.ARQLPCL.CLLP1000(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0285,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//ARQINCON DD DSN=MX.CLLP.INCO7105(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0215,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//TOTAIS   DD SYSOUT=%%FORM#HO35,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP11   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICAR POR EMPRESA E CARTEIRA                           
+//*                                                                     
+//SORTIN   DD DSN=*.STEP10.ARQLPCL,                                     
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=MX.CLLP.ARQSELEC.CLLP1000(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0285,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(232,3,PD,A,219,3,CH,A)                                    
+ END                                                                    
+//*                                                                     
+//STEP12   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICAR POR EMPRESA/CARTEIRA E SUMARIZA CADPENDE         
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRV.CADAPEND(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.PEND1030(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0008,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ INREC FIELDS=(1,3,7,3,63,2)                                            
+ SORT FIELDS=(1,6,BI,A)                                                 
+ END                                                                    
+//*                                                                     
+//STEP13   EXEC PGM=CLLP7642                                            
+//*                                                                     
+//* ***      COMPLETA O ARQLPCL COM A RESTRICAO DO CADPENDE             
+//*                                                                     
+//ARQLPCL  DD DSN=*.STEP11.SORT.SORTOUT,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//CADPENDE DD DSN=*.STEP12.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//CADSELEC DD DSN=MX.CLLP.ARQSESPC.CLLP1000(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0285,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#HO36,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//TOTAIS   DD SYSOUT=%%FORM#HO37,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP14   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    SEPARAR DO ARQUIVO SEQUENCIAL DA TABELA 37                   
+//* ***    QUEM TEM UNIDADE FEDERAL E CREDITO IMOBILIARIO               
+//*                                                                     
+//SORTIN   DD DSN=*.STEP0A.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//SORTOUT1 DD DSN=MX.CLLP.LPCLB037.UFCATCI.J1030(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SORTOUT2 DD DSN=MX.CLLP.LPCLB037.UFNATCI.J1030(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SORTOUT3 DD DSN=MX.CLLP.LPCLB037.COMUF.J1030(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTFIL OUTREC=(1,43),                                                  
+        INCLUDE=(24,2,CH,NE,C'00',AND,(21,3,CH,EQ,C'502',OR,            
+                 21,3,CH,EQ,C'572',OR,21,3,CH,EQ,C'590',OR,             
+                 21,3,CH,EQ,C'532',OR,                                  
+                 21,3,CH,EQ,C'561')),FNAMES=SORTOUT1                    
+ OUTFIL OUTREC=(1,43),                                                  
+        INCLUDE=(24,2,CH,NE,C'00',AND,(19,2,PD,EQ,75,OR,                
+                 19,2,PD,EQ,76,OR,19,2,PD,EQ,78,OR,19,2,PD,EQ,84,OR,    
+                 19,2,PD,EQ,88,OR,19,2,PD,EQ,89)),FNAMES=SORTOUT2       
+ OUTFIL OUTREC=(1,43),                                                  
+        INCLUDE=(24,2,CH,NE,C'00',AND,(21,3,CH,EQ,C'000',AND,           
+                 19,2,PD,EQ,00)),FNAMES=SORTOUT3                        
+ END                                                                    
+//*                                                                     
+//STEP15   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***     JUNTAR QUEM TEM UF E CLASSIFICAR POR UF / NAT / CART        
+//*                                                                     
+//SORTIN   DD DSN=*.STEP14.SORT.SORTOUT1,                               
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP14.SORT.SORTOUT2,                               
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP14.SORT.SORTOUT3,                               
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.LPCLB037.J1030CI(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(24,2,CH,A,19,2,PD,A,21,3,CH,A)                            
+ END                                                                    
+//*                                                                     
+//STEP16   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    SEPARAR UF E JOGAR BRANCOS QUANDO ZERADO                     
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.ARQNSEL,                                      
+//       DISP=SHR                                                       
+//SORTOUT1 DD DSN=MX.CLLP.ARQNSEL.SEMUF(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SORTOUT2 DD DSN=MX.CLLP.ARQNSEL.COMUF(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTFIL OUTREC=(1,23,C'  ',26,18),                                      
+        INCLUDE=(24,2,CH,EQ,C'00',AND,28,1,CH,EQ,C'X'),FNAMES=SORTOUT1  
+ OUTFIL OUTREC=(1,43),                                                  
+        INCLUDE=(24,2,CH,NE,C'00',AND,28,1,CH,EQ,C'X'),FNAMES=SORTOUT2  
+ END                                                                    
+//*                                                                     
+//STEP17   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    JUNTA UF E CLASSIFICA POR CGC-CPF-NUM,FIL,CTR /              
+//* ***    AGENCIA / CONTA / NATUREZA / CARTEIRA / BLOQ / UF            
+//*                                                                     
+//SORTIN   DD DSN=*.STEP16.SORT.SORTOUT1,                               
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP16.SORT.SORTOUT2,                               
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQNSEL.CLLP0037.CLAS(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(050000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=0043,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,5,PD,A,6,3,PD,A,9,2,PD,A,12,3,PD,A,15,4,PD,A,           
+           19,2,PD,A,21,3,CH,A,11,1,PD,A,24,2,CH,A)                     
+ END                                                                    
+//*                                                                     

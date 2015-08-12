@@ -1,0 +1,105 @@
+//CLLP0494 JOB 'CLLP,4120,PR32','B430134',MSGCLASS=Z                    
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEN20                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA  O ARQUIVO  DE ENTRADAS EM CL DO DIA              
+//* ***    EM ORDEM DE: AGENCIA, CONTA CORRENTE E CONTRATO.             
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.ARQENTC2.LEI(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQETEMP.CLLP0494(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000040,0008),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,A,16,4,A,29,4,A),FORMAT=BI                            
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=LPCL6070                                            
+//*                                                                     
+//* ***    ATUALIZA A PARTE DOS ADVOGADOS NO ARQUIVO DE                 
+//* ***    ENTRADAS EM CL DO DIA.                                       
+//*                                                                     
+//CADLPADV DD DSN=MX.CLLP.CADLPADV(0),                                  
+//       DISP=SHR                                                       
+//ARQENTCL DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQENATU DD DSN=MX.CLLP.ARQENATU.CLLP0494(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA O ARQUIVO DE ENTRADAS EM CL DO DIA                
+//* ***    ATUALIZADO NA  ORDEM DE: EMPRESA, AGENCIA   E                
+//* ***    NUMERO DO CL.                                                
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3.ARQENATU,                                     
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQNTEMP.CLLP0494(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,14,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=LPCL6080                                            
+//*                                                                     
+//* ***    ATUALIZA O CADASTRO CLLP, COM AS ENTRADAS EM                 
+//* ***    CL DO DIA ATUALIZADAS.                                       
+//*                                                                     
+//CADALPCL DD DSN=MX.CLLP.CADATIVO.CLLP0493.LEI(0),                     
+//       DISP=SHR                                                       
+//ARQENATU DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADLPATU DD DSN=MX.CLLP.CADATIVO.CLLP0494(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//       DCB=(MX.ALRECL=0768,RECFM=FB)                                  
+//RELATO   DD SYSOUT=%%FORM#EN20,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPY    EXEC PGM=IEFBR14                                             
+//*                                                                     
+//* ***    **********************************************************   
+//* ***    * DELECOES DOS ARQUIVOS P/ LIBERACAO DOS SPACES EM DISCOS*   
+//* ***    *   -  ESTES ARQUIVOS ERAM GRAVADOS COMO TEMPORARIOS -   *   
+//* ***    **********************************************************   
+//*                                                                     
+//DD1      DD DSN=*.STEP2.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//DD2      DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*

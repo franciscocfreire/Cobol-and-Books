@@ -1,0 +1,979 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      1                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+             1          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+             2          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+             3          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+             4          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+             5          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+             6            0,00 00.00.0000                                                                              02534                                    
+             7            0,00 00.00.0000                                                                              04714                                    
+             8          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+             9            0,00 00.00.0000                                                                              04714                                    
+            10          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            11           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            12          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            13          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            14          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            15          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            16          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            17            0,00 00.00.0000                                                                              04133                                    
+            18            0,00 00.00.0000                                                                              02534                                    
+            19          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            20          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            21            0,00 00.00.0000                                                                              04331                                    
+            22           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            23          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            24           20,00 12.05.1994           ALCEBIADES RIBEIRO             APARECIDA TORRES                    04269                                    
+            25          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            26            0,00 00.00.0000                                                                              04114                                    
+            27            0,00 00.00.0000                                                                              04331                                    
+            28            0,00 00.00.0000                                                                              04133                                    
+            29            0,00 00.00.0000                                                                              04714                                    
+            30            0,00 00.00.0000                                                                              04714                                    
+            31            0,00 00.00.0000                                                                              04331                                    
+            32           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            33          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            34            0,00 00.00.0000                                                                          F   00713                                    
+            35          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            36            0,00 00.00.0000                                                                              02534                                    
+            37            0,00 00.00.0000                                                                              04318                                    
+            38          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            39          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            40            0,00 00.00.0000                                                                              02534                                    
+            41            0,00 00.00.0000                                                                              04331                                    
+            42            0,00 00.00.0000                                                                              04714                                    
+            43            0,00 00.00.0000                                                                              04133                                    
+            44            0,00 00.00.0000                                                                              04133                                    
+            45          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            46            0,00 00.00.0000                                                                              05572                                    
+            47          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            48           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            49           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            50            0,00 00.00.0000                                                                              04331                                    
+            51           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      2                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+            52           20,00 12.05.1994           ALCEBIADES RIBEIRO             APARECIDA TORRES                    04269                                    
+            53            0,00 00.00.0000                                                                              04714                                    
+            54          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            55            0,00 00.00.0000                                                                              04331                                    
+            56            0,00 00.00.0000                                                                              02534                                    
+            57           49,00 31.08.1974           MANOEL REZENDE                 MARTA APARECIDA DA CONCEICAO        05571                                    
+            58            0,00 00.00.0000                                                                              02534                                    
+            59            0,00 00.00.0000                                                                              04133                                    
+            60            0,00 00.00.0000                                                                              04133                                    
+            61            0,00 00.00.0000                                                                          F   00713                                    
+            62           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            63           30,00 15.10.1960           EDGARD MONTEIRO                ZILAY LOUVAIN MONTEIRO          F   00403                                    
+            64            5,40 02.05.1979           JOSE RABELO SOBRINHO           LOURDES JUSTINA DE SOUZA        F   00999                                    
+            65            0,00 00.00.0000                                                                              04133                                    
+            66            0,00 00.00.0000                                                                              04133                                    
+            67            0,00 00.00.0000                                                                              02534                                    
+            68          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            69          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            70           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            71          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            72            0,00 00.00.0000                                                                              04714                                    
+            73          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            74            0,00 00.00.0000                                                                              02534                                    
+            75          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            76            0,00 00.00.0000                                                                              04133                                    
+            77            0,00 00.00.0000                                                                          M   00549                                    
+            78           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            79            0,00 00.00.0000                                                                              04714                                    
+            80            0,00 00.00.0000                                                                              04714                                    
+            81            0,00 00.00.0000                                                                              02534                                    
+            82            0,00 00.00.0000                                                                          M   00601                                    
+            83            0,00 00.00.0000                                                                              04331                                    
+            84           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+            85            0,00 00.00.0000                                                                          F   00713                                    
+            86            0,00 00.00.0000                                                                              04714                                    
+            87          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            88            0,00 00.00.0000                                                                          F   00713                                    
+            89            0,00 00.00.0000                                                                              04714                                    
+            90            0,00 00.00.0000                                                                              04331                                    
+            91          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            92            0,00 00.00.0000                                                                              04331                                    
+            93          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            94            0,00 00.00.0000                                                                              04181                                    
+            95            0,00 00.00.0000                                                                              04331                                    
+            96          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+            97            0,00 00.00.0000                                                                              04335                                    
+            98            0,00 00.00.0000                                                                          F   00999                                    
+            99          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           100          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           101            0,00 00.00.0000                                                                              02534                                    
+           102            0,00 00.00.0000                                                                              04133                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      3                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           103            0,00 00.00.0000                                                                              04133                                    
+           104          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           105            0,00 00.00.0000                                                                              02534                                    
+           106            0,00 00.00.0000                                                                              04133                                    
+           107          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           108           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           109          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           110          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           111           20,00 12.05.1994           ALCEBIADES RIBEIRO             APARECIDA TORRES                    04269                                    
+           112          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           113            0,00 00.00.0000                                                                              02534                                    
+           114            0,00 00.00.0000                                                                              02534                                    
+           115          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           116            0,00 00.00.0000                                                                              04714                                    
+           117          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           118          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           119            0,00 00.00.0000                                                                              04714                                    
+           120            0,00 00.00.0000                                                                              04714                                    
+           121          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           122          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           123          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           124            0,00 00.00.0000                                                                              04133                                    
+           125            0,00 00.00.0000                                                                              04714                                    
+           126          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           127          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           128            0,00 00.00.0000                                                                              04714                                    
+           129           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           130           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           131            0,00 00.00.0000                                                                              04133                                    
+           132            0,00 00.00.0000                                                                              04331                                    
+           133            0,00 00.00.0000                                                                          F   00713                                    
+           134          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           135          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           136            0,00 00.00.0000                                                                              02534                                    
+           137           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           138            0,00 00.00.0000                                                                              04331                                    
+           139            0,00 00.00.0000                                                                              04714                                    
+           140           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           141          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           142            0,00 00.00.0000                                                                              05572                                    
+           143            0,00 00.00.0000                                                                          F   00713                                    
+           144          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           145          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           146          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           147            0,00 00.00.0000                                                                          M   00601                                    
+           148          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           149           20,00 12.05.1994           ALCEBIADES RIBEIRO             APARECIDA TORRES                    04269                                    
+           150           20,00 12.05.1994           ALCEBIADES RIBEIRO             APARECIDA TORRES                    04269                                    
+           151           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           152            0,00 00.00.0000                                                                          M   00601                                    
+           153          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      4                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           154          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           155            0,00 00.00.0000                                                                              04331                                    
+           156          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           157            0,00 00.00.0000                                                                              01611                                    
+           158          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           159            0,00 00.00.0000                                                                              04714                                    
+           160            0,00 00.00.0000                                                                              04133                                    
+           161          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           162            0,00 00.00.0000                                                                              02534                                    
+           163           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           164          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           165          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           166            0,00 00.00.0000                                                                          M   00301                                    
+           167          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           168          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           169          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           170          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           171          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           172          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           173          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           174            0,00 00.00.0000                                                                          M   00999                                    
+           175           20,00 25.02.1956           ANTONIO FINOTTI                IDALINA FINOTTI MANTOVANI           05542                                    
+           176            0,00 00.00.0000                                                                              01612                                    
+           177          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           178          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           179            0,00 00.00.0000                                                                          M   00719                                    
+           180          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           181          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           182          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           183          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           184           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           185          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           186          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           187            0,00 00.00.0000                                                                              04133                                    
+           188            0,00 00.00.0000                                                                          M   00601                                    
+           189          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           190          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           191          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           192           25,00 06.01.1947                                          MARIA LUZIA DOS SANTOS              04269                                    
+           193          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           194          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           195          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           196            0,00 00.00.0000                                                                              04133                                    
+           197          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           198          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           199            6,11 26.11.1974           ADIEL FRANCISCO VIEIRA         CARMEM MARIA VIEIRA             M   00394                                    
+           200            0,00 00.00.0000                                                                          M   00301                                    
+           201          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           202            0,00 00.00.0000                                                                              02603                                    
+           203          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           204            0,00 00.00.0000                                                                          F   00713                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      5                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           205          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           206          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           207            0,00 00.00.0000                                                                              04331                                    
+           208            0,00 00.00.0000                                                                          F   00403                                    
+           209           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           210            0,00 00.00.0000                                                                              02534                                    
+           211            0,00 00.00.0000                                                                              04714                                    
+           212            0,00 00.00.0000                                                                              04441                                    
+           213            0,00 00.00.0000                                                                              04133                                    
+           214          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           215            0,00 00.00.0000                                                                              02534                                    
+           216            0,00 00.00.0000                                                                              05919                                    
+           217          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           218          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           219          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           220           20,00 25.02.1956           ANTONIO FINOTTI                IDALINA FINOTTI MANTOVANI           05542                                    
+           221          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           222          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           223          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           224          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           225          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           226          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           227            0,00 00.00.0000                                                                              04133                                    
+           228          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           229          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           230          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           231          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           232          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           233          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           234          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           235          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           236          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           237           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           238          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           239          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           240          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           241          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           242            0,00 00.00.0000                                                                          M   00902                                    
+           243            0,00 00.00.0000                                                                              04331                                    
+           244          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           245            0,00 00.00.0000                                                                              04714                                    
+           246          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           247            0,00 00.00.0000                                                                              09999                                    
+           248            0,00 00.00.0000                                                                              01929                                    
+           249          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           250          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           251            0,00 00.00.0000                                                                              02603                                    
+           252            0,00 00.00.0000                                                                              04331                                    
+           253            0,00 00.00.0000                                                                          M   00601                                    
+           254          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           255            0,00 00.00.0000                                                                          F   00713                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      6                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           256            0,00 00.00.0000                                                                              04331                                    
+           257            0,00 00.00.0000                                                                              04133                                    
+           258            0,00 00.00.0000                                                                              04331                                    
+           259            0,00 00.00.0000                                                                          M   00601                                    
+           260          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           261           49,00 31.08.1974           MANOEL REZENDE                 MARTA APARECIDA DA CONCEICAO        05571                                    
+           262          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           263           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           264          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           265          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           266          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           267          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           268          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           269          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           270            0,00 00.00.0000                                                                              04133                                    
+           271          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           272          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           273            0,00 00.00.0000                                                                              04714                                    
+           274          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           275          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           276          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           277          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           278          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           279          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           280          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           281            0,00 00.00.0000                                                                              05578                                    
+           282          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           283            0,00 00.00.0000                                                                              04318                                    
+           284           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           285           26,00 22.02.1947           ROQUE MOREIRA DA SILVA         BELARMINA E DA SILVA                02001                                    
+           286          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           287          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           288          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           289            0,00 00.00.0000                                                                              01741                                    
+           290          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           291            0,00 00.00.0000                                                                          F   00713                                    
+           292            0,00 00.00.0000                                                                              04714                                    
+           293          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           294          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           295            0,00 00.00.0000                                                                              09999                                    
+           296          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           297          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           298          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           299          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           300          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           301            0,00 00.00.0000                                                                          M   00549                                    
+           302          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           303            0,00 00.00.0000                                                                              00000                                    
+           304            0,00 00.00.0000                                                                              04262                                    
+           305          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           306          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      7                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           307            0,00 00.00.0000                                                                              00000                                    
+           308          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           309          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           310            0,00 00.00.0000                                                                          M   00601                                    
+           311          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           312          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           313          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           314          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           315          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           316          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           317            0,00 00.00.0000                                                                              04318                                    
+           318          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           319          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           320          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           321          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           322          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           323          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           324          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           325            0,00 00.00.0000                                                                              01432                                    
+           326          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           327          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           328          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           329            0,00 00.00.0000                                                                              05219                                    
+           330            0,00 00.00.0000                                                                          M   00902                                    
+           331            0,00 00.00.0000                                                                              04331                                    
+           332          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           333            0,00 00.00.0000                                                                              04331                                    
+           334          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           335          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           336          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           337          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           338          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           339          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           340            0,00 00.00.0000                                                                              04133                                    
+           341          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           342          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           343          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           344          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           345          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           346          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           347          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           348          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           349          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           350          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           351          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           352          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           353          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           354          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           355          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           356          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           357            5,00 04.10.1981           JOAO CARLOS DA SILVA NUNES     ENI OLIVEIRA DA CRUZ            M   00394                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      8                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           358            0,00 00.00.0000                                                                          F   00298                                    
+           359          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           360          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           361          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           362          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           363          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           364          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           365          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           366          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           367          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           368          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           369            0,00 00.00.0000                                                                          M   00124                                    
+           370          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           371          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           372          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           373          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           374          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           375          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           376          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           377          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           378          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           379            0,00 00.00.0000                                                                              04318                                    
+           380          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           381          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           382          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           383          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           384          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           385          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           386          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           387          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           388          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           389          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           390          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           391            0,00 00.00.0000                                                                              05578                                    
+           392          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           393          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           394          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           395          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           396          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           397          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           398            0,00 00.00.0000                                                                              04318                                    
+           399            0,00 00.00.0000                                                                          M   00601                                    
+           400          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           401            6,00 22.03.1980           VALDIR EDUARDO DOS SANTOS      NAINDA CEDRO DOS SANTOS         M   00394                                    
+           402          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           403          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           404          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           405          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           406          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           407          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           408            0,00 00.00.0000                                                                              03051                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      9                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           409            0,00 00.00.0000                                                                          M   00124                                    
+           410          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           411          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           412          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           413          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           414          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           415            0,00 00.00.0000                                                                          M   00597                                    
+           416          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           417            0,00 00.00.0000                                                                              09999                                    
+           418          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           419          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           420          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           421          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           422          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           423          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           424          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           425          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           426          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           427          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           428          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           429            0,00 00.00.0000                                                                              04163                                    
+           430            0,00 00.00.0000                                                                          M   00601                                    
+           431          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           432          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           433          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           434          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           435            0,00 00.00.0000                                                                          M   00902                                    
+           436            0,00 00.00.0000                                                                          F   00999                                    
+           437            0,00 00.00.0000                                                                              09999                                    
+           438          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           439          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           440          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           441            0,00 00.00.0000                                                                              05572                                    
+           442            0,00 00.00.0000                                                                              05578                                    
+           443          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           444          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           445          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           446          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           447          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           448          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           449          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           450          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           451          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           452            0,00 00.00.0000                                                                              00000                                    
+           453          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           454          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           455          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           456          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           457            0,00 00.00.0000                                                                          M   00601                                    
+           458          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           459          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     10                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           460          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           461          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           462          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           463          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           464          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           465          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           466          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           467          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           468          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           469          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           470          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           471          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           472          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           473          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           474          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           475          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           476          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           477          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           478          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           479          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           480          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           481            0,00 00.00.0000                                                                              04331                                    
+           482          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           483          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           484          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           485          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           486          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           487          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           488          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           489          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           490          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           491          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           492          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           493          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           494          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           495          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           496          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           497          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           498          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           499          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           500          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           501          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           502          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           503          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           504          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           505            0,00 00.00.0000                                                                          M   00601                                    
+           506          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           507          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           508          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           509          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           510          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     11                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           511          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           512          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           513          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           514          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           515          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           516          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           517          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           518          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           519          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           520          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           521          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           522          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           523          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           524            0,00 00.00.0000                                                                              04331                                    
+           525          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           526          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           527          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           528            0,00 00.00.0000                                                                              05578                                    
+           529          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           530          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           531          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           532          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           533          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           534            0,00 00.00.0000                                                                          F   00923                                    
+           535          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           536          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           537          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           538          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           539          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           540          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           541          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           542          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           543          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           544          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           545          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           546          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           547          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           548          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           549          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           550          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           551          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           552          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           553          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           554          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           555          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           556          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           557          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           558          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           559          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           560          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           561          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     12                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           562          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           563          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           564          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           565          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           566          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           567          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           568          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           569          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           570          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           571          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           572          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           573          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           574          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           575          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           576          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           577          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           578          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           579          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           580          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           581          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           582          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           583          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           584          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           585            0,00 00.00.0000                                                                          M   00394                                    
+           586          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           587          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           588          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           589          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           590          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           591          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           592          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           593          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           594          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           595          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           596          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           597          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           598          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           599          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           600          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           601          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           602          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           603          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           604          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           605          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           606          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           607          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           608          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           609           30,00 15.10.1960           EDGARD MONTEIRO                ZILAY LOUVAIN MONTEIRO          F   00403                                    
+           610          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           611          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           612          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     13                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           613          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           614          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           615          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           616          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           617          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           618          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           619          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           620            8,50 20.09.1988           JOEL SOARES DE LIMA            ALMERINDA MAGGIONI LIMA         M   00701                                    
+           621          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           622          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           623          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           624          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           625          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           626            0,00 00.00.0000                                                                              04714                                    
+           627          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           628          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           629          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           630          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           631          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           632          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           633          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           634          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           635          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           636          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           637          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           638          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           639          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           640          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           641           20,00 18.02.1983           MANOEL PAIVA DA SILVA          MARIA LUCIENE XAVIER DA SILVA   M   00999                                    
+           642          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           643          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           644          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           645          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           646          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           647          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           648          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           649          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           650          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           651          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           652          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           653          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           654          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           655          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           656          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           657          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           658          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           659          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           660          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           661          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           662          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           663          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     14                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           664          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           665          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           666          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           667          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           668          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           669          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           670          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           671          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           672          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           673          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           674          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           675          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           676          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           677          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           678          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           679          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           680          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           681          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           682          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           683          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           684          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           685          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           686          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           687          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           688          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           689            0,00 00.00.0000                                                                          F   00303                                    
+           690          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           691          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           692          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           693          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           694          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           695          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           696          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           697          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           698          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           699          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           700          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           701          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           702          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           703          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           704          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           705          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           706          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           707          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           708          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           709          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           710          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           711          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           712          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           713          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           714          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     15                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           715          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           716          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           717          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           718          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           719          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           720          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           721          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           722          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           723          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           724          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           725          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           726          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           727          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           728          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           729          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           730          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           731            0,00 00.00.0000                                                                          M   00394                                    
+           732          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           733          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           734          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           735          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           736            0,00 00.00.0000                                                                          M   00601                                    
+           737            0,00 00.00.0000                                                                          M   00601                                    
+           738          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           739          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           740          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           741          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           742          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           743          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           744          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           745          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           746          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           747          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           748          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           749          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           750          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           751          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           752          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           753          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           754            0,00 00.00.0000                                                                          M   00601                                    
+           755            6,00 22.03.1980           VALDIR EDUARDO DOS SANTOS      NAINDA CEDRO DOS SANTOS         M   00394                                    
+           756          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           757          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           758          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           759          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           760          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           761          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           762          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           763          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           764          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           765          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     16                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           766          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           767          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           768          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           769          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           770          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           771          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           772          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           773          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           774          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           775          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           776          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           777          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           778          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           779          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           780          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           781          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           782          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           783          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           784          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           785          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           786            0,00 00.00.0000                                                                          M   00601                                    
+           787          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           788          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           789           30,00 15.10.1960           EDGARD MONTEIRO                ZILAY LOUVAIN MONTEIRO          F   00403                                    
+           790          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           791          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           792          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           793          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           794          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           795          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           796            6,50 12.05.1979           EUDORO PAULO ALVES             ALAIDE CRUZ DOS SANTOS          M   00131                                    
+           797          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           798          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           799          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           800            0,00 00.00.0000                                                                          M   00601                                    
+           801            0,00 00.00.0000                                                                          M   00601                                    
+           802            0,00 00.00.0000                                                                          M   00601                                    
+           803            0,00 00.00.0000                                                                          M   00156                                    
+           804            0,00 00.00.0000                                                                              09999                                    
+           805            0,00 00.00.0000                                                                          F   00411                                    
+           806            0,00 00.00.0000                                                                          F   00599                                    
+           807          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           808          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           809          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           810            5,00 04.10.1981           JOAO CARLOS DA SILVA NUNES     ENI OLIVEIRA DA CRUZ            M   00394                                    
+           811          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           812          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           813            0,00 00.00.0000                                                                          M   00531                                    
+           814            0,00 00.00.0000                                                                          M   00531                                    
+           815            0,00 00.00.0000                                                                          F   00111                                    
+           816          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     17                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           817            0,00 00.00.0000                                                                          F   00923                                    
+           818            0,00 00.00.0000                                                                          M   00601                                    
+           819            0,00 00.00.0000                                                                          M   00601                                    
+           820          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           821          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           822          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           823          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           824          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           825          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           826            0,00 00.00.0000                                                                              00000                                    
+           827            0,00 00.00.0000                                                                              05573                                    
+           828          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           829          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           830          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           831          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           832            0,00 00.00.0000                                                                              00000                                    
+           833            0,00 00.00.0000                                                                              05572                                    
+           834            0,00 00.00.0000                                                                              01432                                    
+           835            0,00 00.00.0000                                                                              04441                                    
+           836          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           837            0,00 00.00.0000                                                                          M   00601                                    
+           838            0,00 00.00.0000                                                                              01611                                    
+           839          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           840            0,00 00.00.0000                                                                          M   00601                                    
+           841            0,00 00.00.0000                                                                          M   00601                                    
+           842            0,00 00.00.0000                                                                              05572                                    
+           843          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           844          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           845          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           846          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           847          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           848          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           849          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           850            0,00 00.00.0000                                                                              00000                                    
+           851          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           852          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           853            0,00 00.00.0000                                                                              05572                                    
+           854           30,00 15.10.1960           EDGARD MONTEIRO                ZILAY LOUVAIN MONTEIRO          F   00403                                    
+           855          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           856          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           857          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           858            0,00 00.00.0000                                                                          F   00999                                    
+           859          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           860          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           861            0,00 00.00.0000                                                                          M   00601                                    
+           862            0,00 00.00.0000                                                                          M   00601                                    
+           863          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           864          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           865          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           866          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           867          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     18                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+        REG.    RENDA MENSAL   DATA NASC.    RG                  PAI                            MAE               SEXO RAMO                                     
+           868            0,00 00.00.0000                                                                          M   00531                                    
+           869            0,00 00.00.0000                                                                              00000                                    
+           870          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           871          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           872            0,00 00.00.0000                                                                          F   00399                                    
+           873            0,00 00.00.0000                                                                          F   00713                                    
+           874            0,00 00.00.0000                                                                              04113                                    
+           875          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           876          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           877          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           878          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           879          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           880            0,00 00.00.0000                                                                          M   00601                                    
+           881          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           882            0,00 00.00.0000                                                                              04472                                    
+           883            0,00 00.00.0000                                                                              04114                                    
+           884          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           885           30,00 15.10.1960           EDGARD MONTEIRO                ZILAY LOUVAIN MONTEIRO          F   00403                                    
+           886            0,00 00.00.0000                                                                              01612                                    
+           887          250,00 26.07.1946           AGOSTINHO GOMES                MAXIMINA GOMES                  M   00909                                    
+           888            0,00 00.00.0000                                                                          F   00712                                    

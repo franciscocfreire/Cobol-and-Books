@@ -1,0 +1,315 @@
+*/********************************************************************/ 
+*/*                                                                  */ 
+*/* $MAC(IHADCBE) COMP(28414):                                       */ 
+*/*                                                                  */ 
+*/*  MACRO NAME: IHADCBE                                             */ 
+*/*                                                                  */ 
+*/*  DESCRIPTION: Maps the DCB Extension (DCBE)                      */ 
+*/*                                                                  */ 
+*/*  STATUS: z/OS 1.7 DFSMS                                          */ 
+*/*                                                                  */ 
+*/*PROPRIETARY V3 STATEMENT                                          */ 
+*/*Licensed Materials - Property of IBM                              */ 
+*/*"Restricted Materials of IBM"                                     */ 
+*/*5694-A01                                                          */ 
+*/*Copyright IBM Corp. 1993,2010                                     */ 
+*/*END PROPRIETARY V3 STATEMENT                                      */ 
+*/*                                                                  */ 
+*/*  FUNCTION: The IHADCBE macro defines fields and flags within     */ 
+*/*            the DCBE which is expanded by the DCBE macro          */ 
+*/*            instruction.                                          */ 
+*/*                                                                  */ 
+*/*  NOTES:                                                          */ 
+*/*                                                                  */ 
+*/*    DEPENDENCIES: None                                            */ 
+*/*    RESTRICTIONS: None                                            */ 
+*/*                                                                  */ 
+*/*  MACRO:                                                          */ 
+*/*                                                                  */ 
+*/*    PROCESSOR: Assembler and PL/X.                                */ 
+*/*    DISTRIBUTION LIBRARY: AMACLIB                                 */ 
+*/*    ATTRIBUTES: INCLUDE                                           */ 
+*/*                                                                  */ 
+*/*  ENTRY POINT: IHADCBE                                            */ 
+*/*                                                                  */ 
+*/*    LINKAGE:                                                      */ 
+*/*        ASSEMBLER :                                               */ 
+*/*            IHADCBE                                               */ 
+*/*            USING  DCBE,DCBEPTR                                   */ 
+*/*        PLAS :                                                    */ 
+*/*            %DCBE_BASE = 'BASED(DCBDCBE)'                         */ 
+*/*            %INCLUDE SYSLIB(IHADCBE)                              */ 
+*/*                                                                  */ 
+*/*  EXIT NORMAL:                                                    */ 
+*/*                                                                  */ 
+*/*    No errors detected, mapping macro only.                       */ 
+*/*                                                                  */ 
+*/*  EXTERNAL REFERENCES:                                            */ 
+*/*                                                                  */ 
+*/*    MACROS:                                                       */ 
+*/*      None                                                        */ 
+*/*                                                                  */ 
+*/*  CHANGE ACTIVITY:                                                */ 
+*/*                                                                  */ 
+*/* $L0=STRIPE,JDZ1110,920107,SJPLCC: Striping support               */ 
+*/* $L1=XSAM,HDZ11C0,951108,SJPLCC: Support 8 byte DCBESIZE value@L1A*/ 
+*/* $L2=GT32K,HDZ11E0,971209,SJPLRK: BLOCK SIZE (DCBEBLKSI)      @L2A*/ 
+*/* $L3=OW49831,HDZ11F0,010720,SJPLWER: IBM 3590 capacity, perf. @L3A*/ 
+*/* $00=UNDERSC,HDZ11G0,010928,SJPLWER: Underscore in IHADCBE    @00A*/ 
+*/* $L4=EDI    ,HDZ11H0,020507,SJPLREB: EXTENDED DATA INTEGRITY  @L4A*/ 
+*/* $L5=LARGFMT,HDZ11K0,031203,SJPLWER: Large format data sets   @L5A*/ 
+*/* $01=OA08360,HDZ11J0,040620,SJPLCC: Support DCBE FIXED parm   @01A*/ 
+*/* $L6=BAMPERF,HDZ1190,060501,SVLPF: Support DCBE FIXED parm    @L6A*/ 
+*/* $LV=EAV    ,JDZ1A10,060234,SJPLJBC: Extended Address Vol. OK @P1C*/ 
+*/* $P0=K190263,HDZ1190,060821,SVLPF: Correct location of BENEFIX@P0A*/ 
+*/* $P1=K1A0560,HDZ1A10,070426,SVLPF: Correct change activity    @P1A*/ 
+*/* $L7=XTIOT,HDZ1C10,090311,SJPLLM: Add LOC=ANY bit             @L7A*/ 
+*/* $PU=PDSEVAL,HDZ1C10,100326,SJPLLM: PDSE Validation           @PUA*/ 
+*/* $03=OA35999,HDZ1D10,20110406,sjpllm:                         @03A*/ 
+*/*   1. DCBE_CONCURRENTRW                                           */ 
+*/********************************************************************/ 
+*      %GOTO DCBEPLAS;                                                  
+               MACRO                                                    
+               IHADCBE                                                  
+DCBE     DSECT                                                          
+         DS    0D                                                       
+DCBEID   DS    CL4            DCBE eyecatcher 'DCBE'.                   
+DCBELEN  DS    H              Length of DCBE.                           
+DCBERSV1 DS    XL2            Reserved.                                 
+DCBEDCB  DS    A              DCB address. Set by system.               
+*                              Must be zero when OPEN is                
+*                              issued. Set to zero at CLOSE.            
+DCBERELA DS    CL4            Partitioned data set - Address            
+*                              (in the form TTRN) of member             
+*                              currently used.                          
+DCBEFLG1 DS    B              Flags set by system.                      
+DCBEOPEN EQU   X'80'          DCBE has been successfully                
+*                              opened.                                  
+DCBEMD31 EQU   X'40'          User may call access method in            
+*                              31-bit mode and, if QSAM, system         
+*                              will honor DCBEBU31. Set by              
+*                              system before DCB OPEN exit.             
+DCBESLBI EQU   X'20'          Before DCB OPEN exit: SAM supports   @L2A*
+                               large block interface if requested. @L3C*
+                               After OPEN: User requested LBI and  @L3C*
+                               SAM supports it.                    @L3C 
+DCBE_32BIT_INUSE EQU X'10'    Device using 32-bit block numbers,   @L3A*
+                               maybe due to CAPACITYMODE=XCAP      @L3A 
+DCBEBENEFIX EQU   X'08'       Performance would be benefited if    @L6A*
+                               the application program were to set @L6A*
+                               DCBEBFXU and fix all data pages.    @L6A*
+                               Requires authorization.  Set by     @L6A*
+                               system before DCB OPEN exit         @L6A 
+DCBEFLG2 DS    B              Flags set by user.                        
+DCBEBU31 EQU   X'80'          RMODE31=BUFF.                             
+*                              QSAM buffers may be above 16MB           
+*                              line and CLOSE will free them.           
+*                              System may test this during              
+*                              concatenation. This will be              
+*                              ignored for BSAM and user                
+*                              supplied buffers.                        
+DCBENEOD EQU   X'40'          PASTEOD=YES.                              
+*                              The HWM of the data set is to            
+*                              be ignored on input for striped          
+*                              data sets.                               
+DCBE_CONCURRENTRW EQU X'20'   CONCURRENTRW=YES                     @03A 
+*                              The data set may be read at the     @03A 
+*                              same time it is being written       @03A 
+DCBENVER EQU   X'10'          NOVER=YES.                                
+*                              OPEN is to bypass the verifica-          
+*                              tion of consistent stripes of a          
+*                              striped data set.                        
+DCBEGSIZ EQU   X'08'          GETSIZE=YES.                              
+*                              OPEN is to calculate the size of         
+*                              the data set (RBNs) and store            
+*                              this number in DCBESIZE.                 
+DCBEULBI EQU   X'04'          BLKSIZE specified on DCBE.  User     @L2A*
+                               requests SAM large block interface. @L2A 
+DCBE_REQST_XCAP EQU X'02'     CAPACITYMODE=XCAP.  Extended         @L3A*
+                               capacity.  Device to use 32-bit     @L3A*
+                               block identifiers if supported.     @L3A 
+DCBEEXPS EQU   X'01'          Bypass extended data integrity       @L4A*
+                               checking. user must be system key,  @L4A*
+                               supervisor state, or apf authorized @L4A*
+                               for this to have effect.            @L4A 
+DCBENSTR DS    H              The number of stripes for a               
+*                              striped data set. Zero if data           
+*                              set is not striped. Set by OPEN          
+*                              or when switching between data           
+*                              sets in a concatenation. Set             
+*                              before OPEN or EOV exit is               
+*                              called.                                  
+DCBEFLG3 DS    B              Flags set by user                    @L3A 
+DCBELARGE EQU  X'80'          BLOCKTOKENSIZE=LARGE.  BSAM/BPAM:    @L5A*
+                               NOTE/POINT use 4 bytes, not 3.      @L5A*
+                               EXCP: Program can handle >64 K trks @L5A 
+DCBEBFXU EQU   X'40'          FIXED=USER                                
+*                              No I/O pagefixing needed. User           
+*                              is responsible for passing               
+*                              fixed buffers. Auth callers only.   @L6C 
+DCBEEADSCBOK EQU X'20'        User supports 28-bit cylinder             
+*                              addressing/extended attributes      @LVA 
+DCBELOCANY EQU X'10'          User allows XTIOT and allows DSABs and    
+*                              UCBs to be in 31-bit storage        @L7A 
+DCBE_PDSEEXT_VALID EQU X'08'  DCBE_PDSEEXT is valid                @PUA 
+DCBESYNC_NONE   EQU X'07'     SYNC=NONE if all three bits are 1    @L3A 
+DCBESYNC_SYSTEM EQU X'01'     SYNC=SYSTEM if low 3 bits are 001.   @L3A*
+                              Other combinations are reserved.     @L3A 
+DCBERSV3 DS    XL3            Reserved.                            @L2C 
+DCBEBLKSI8 DS  0XL8           Block size in 8 bytes                @L2A 
+         DS    F              Hi-order half of Block size          @L2A 
+DCBEBLKSI DS   F              Block size, valid only if            @L2A 
+*                              DCBESLBI is set.                    @L2A 
+DCBEXSIZ DS    0XL8           Number of blocks in current               
+*                              data set. Set by system when             
+*                              DCBEGSIZ is set.                    @L1A 
+DCBESIZ0 DS    F              High order word of DCBEXSIZ.         @L1C 
+DCBESIZE DS    F              Number of blocks in current               
+*                              data set. Set by system when             
+*                              DCBEGSIZ is set.                         
+DCBEEODA DS    A              Address of user provided end-             
+*                              of-data routine. May reside              
+*                              above or below the line. Used            
+*                              instead of DCBEODAD. Will be             
+*                              zero if no address is given.             
+DCBESYNA DS    A              Address of user provided SYNAD            
+*                              routine. May reside above or             
+*                              below the line. Used instead of          
+*                              DCBSYNAD. Will be zero if no address     
+*                              is given.                                
+DCBE_PDSEEXT   DS A           Address of PDSE DCBE extension       @PUA 
+DCBERSV4 DS    XL2            Reserved.                            @PUC 
+DCBEMACC DS    XL1            Accumulation number multiplier.           
+DCBEMSDN DS    XL1            Multiplier of System Determined NCP.      
+DCBEMINL EQU   *-DCBE         Minimum length of DCBE.  This label       
+*                              should never be moved.                   
+DCBEEND  EQU   *              End of DCBE. this label shows             
+*                              the current length of a DCBE.            
+         MEND                                                           
+*%DCBEPLAS:;                                                            
+*DECLARE  /*Data control block extension. Can be above 16 MB line.@L3C*/
+*  1  DCBE BASED(DCBDCBE) BDY(WORD),                                    
+*    3  DCBEID    CHAR(4),          /* DCBE eyecatcher 'DCBE'.       */ 
+*    3  DCBELEN   FIXED(16),        /* Length of DCBE.               */ 
+*    3  DCBERSV1  CHAR(2),          /* Reserved.                     */ 
+*    3  DCBEDCB   PTR(31),          /* DCB address. Set by system.      
+*                                      Must be zero when OPEN is        
+*                                      issued. Set to zero at CLOSE. */ 
+*    3  DCBERELA  CHAR(4),          /* Partitioned data set - Address   
+*                                      (in the form TTRN) of member     
+*                                      currently used.               */ 
+*    3  DCBEFLG1  CHAR(1),          /* Flags set by system.          */ 
+*      5  DCBEOPEN BIT(1),          /* DCBE has been successfully       
+*                                      opened.                       */ 
+*      5  DCBEMD31 BIT(1),          /* User may call access method in   
+*                                      31-bit mode and, if QSAM, system 
+*                                      will honor DCBEBU31. Set by      
+*                                      system before DCB OPEN exit.  */ 
+*      5  DCBESLBI BIT(1),          /* Before DCB OPEN exit: SAM sup-   
+*                                      ports large block interface if   
+*                                      requested.  After OPEN: LBI  @L2A
+*                                      requested and supported.   @L3C*/
+*      5 DCBE_32BIT_INUSE BIT(1),   /* Device using 32-bit block   @L3A 
+*                                      numbers, maybe due to       @L3A 
+*                                      CAPACITYMODE=XCAP.         @L3A*/
+*      5  DCBEBENEFIX BIT(1),  /*Performance would be benefited if@P0M  
+*                              the application program were to set@P0M  
+*                              DCBEBFXU and fix all data pages.   @P0M  
+*                              Requires authorization.  Set by    @P0M  
+*                              system before DCB OPEN exit       @P0M*/ 
+*    3  DCBEFLG2  CHAR(1),          /* Flags set by user.            */ 
+*      5  DCBEBU31 BIT(1),          /* RMODE31=BUFF.                    
+*                                      QSAM buffers may be above 16MB   
+*                                      line and CLOSE will free them.   
+*                                      System may test this during      
+*                                      concatenation. This will be      
+*                                      ignored for BSAM and user        
+*                                      supplied buffers.             */ 
+*      5  DCBENEOD BIT(1),          /* PASTEOD=YES.                     
+*                                      The HWM of the data set is to    
+*                                      be ignored on input for striped  
+*                                      data sets.                    */ 
+*      5  DCBE_CONCURRENTRW Bit(1), /* The data set may be read at the  
+*                                      same time it is being written    
+*                                                                @03A*/ 
+*      5  DCBENVER BIT(1),          /* NOVER=YES.                       
+*                                      OPEN is to bypass the verifica-  
+*                                      tion of consistent stripes of a  
+*                                      striped data set.             */ 
+*      5  DCBEGSIZ BIT(1),          /* GETSIZE=YES.                     
+*                                      OPEN is to calculate the size of 
+*                                      the data set (RBNs) and store    
+*                                      this number in DCBESIZE.      */ 
+*      5  DCBEULBI BIT(1),          /* BLKSIZE specified on DCBE.       
+*                                      The application can use the SAM  
+*                                      large block interface.     @L2A*/
+*      5 DCBE_REQST_XCAP BIT(1),    /* CAPACITYMODE=XCAP.  Extended @L3A
+*                                    capacity. Device to use 32-bit @L3A
+*                                    block numbers if supported.  @L3A*/
+*      5 DCBEEXPS BIT(1),           /* Bypass extended data integrity   
+*                                      checking. User must be system key
+*                                      supervisor stage, or apf         
+*                                      authorized for this to have      
+*                                      effect.                    @L4A*/
+*    3  DCBENSTR  FIXED(16),        /* The number of stripes for a      
+*                                      striped data set. Zero if data   
+*                                      set is not striped. Set by OPEN  
+*                                      or when switching between data   
+*                                      sets in a concatenation. Set     
+*                                      before OPEN or EOV exit is       
+*                                      called.                       */ 
+*    3 DCBEFLG3 BIT(8),             /* Flags set by user          @L3A*/
+*      5 DCBELARGE BIT(1),          /*BLOCKTOKENSIZE=LARGE.  BSAM/BPAM  
+*                                      NOTE/POINT use 4 bytes, not 3.   
+*                                      EXCP: Pgm supports>64K trks@L5A*/
+*      5  DCBEBFXU BIT(1),          /* FIXED=USER                       
+*                                      No I/O pagefixing needed. User   
+*                                      is responsible for passing       
+*                                      fixed buffers. Auth callers only 
+*                                                                @L6C*/ 
+*      5  DCBEEADSCBOK BIT(1),      /* User supports 28-bit cylinder    
+*                                      addr/extended attributes   @LVA*/
+*      5  DCBELOCANY BIT(1),        /* User allows XTIOT and allows     
+*                                      DSABs and UCBs to be             
+*                                      in 31-bit storage          @L7A*/
+*      5 DCBE_PDSEEXT_VALID BIT(1), /* DCBE_PDSEEXT is valid      @PUA*/
+*      5 DCBESYNC BIT(3),           /* SYNC=. See constants below @L3A*/
+*    3  DCBERSV3  CHAR(3),          /* Reserved.                  @L2C*/
+*    3  DCBEBLKSI8 CHAR(8) BDY(WORD), /* Block size in 8 bytes   @L2A*/ 
+*       5 *       CHAR(4),          /* Block size hi-order word   @L2A*/
+*       5 DCBEBLKSI  FIXED(31),     /* Block size.  Valid only if       
+*                                       OPEN set DCBESLBI         @L2A*/
+*    3  DCBEXSIZ  CHAR(8) BDY(WORD),/* Number of blocks in current      
+*                                      data set. Set by system when     
+*                                      DCBEGSIZ is set.          @L1A*/ 
+*       5 DCBESIZ0 FIXED(31),       /* High order word of DCBEXSIZ.     
+*                                                                @L1C*/ 
+*       5 DCBESIZE FIXED(31),       /* Number of blocks in current      
+*                                      data set. Set by system when     
+*                                      DCBEGSIZ is set.              */ 
+*    3  DCBEEODA  PTR(31),          /* Address of user provided end-    
+*                                      of-data routine. May reside      
+*                                      above or below the line. Used    
+*                                      instead of DCBEODAD. Will be     
+*                                      zero if no address is given.  */ 
+*    3  DCBESYNA  PTR(31),          /* Address of user provided SYNAD   
+*                                      routine. May reside above or     
+*                                      below the line. Used instead of  
+*                                      DCBSYNAD. Will be zero if        
+*                                      no address is given.          */ 
+*    3  DCBE_PDSEEXT PTR(31),       /* Address of PDSE DCBE             
+*                                      extension                 @PUA*/ 
+*    3  DCBERSV4  CHAR(2),          /* Reserved.                 @PUC*/ 
+*    3  DCBEMACC  FIXED(8),         /* Accumulation number multiplier*/ 
+*    3  DCBEMSDN  FIXED(8),         /* Multiplier of System determined  
+*                                      NCP.                          */ 
+*    3  DCBEEND   CHAR(0);          /* Current end of DCBE.          */ 
+*                                                                       
+*/* Constants for DCBE.                                           @L3A*/
+*                                                                       
+*/* Constants for DCBESYNC.  Other values are reserved for other  @L3A  
+*   types of synchronization.  000 means not coded.               @L3A*/
+ DECLARE                                                        /*@L3A*/
+    (DCBESYNC_SYSTEM CONSTANT('001'B), /*SYNC=SYSTEM              @L3A*/
+     DCBESYNC_NONE   CONSTANT('111'B)) /*SYNC=NONE                @L3A*/
+         BIT(3);                                                        

@@ -1,0 +1,28 @@
+      =====================================================        
+      FAVOR ALTERAR O JOB CLLP5795, CONFORME INDICA ABAIXO:        
+      =====================================================        
+
+	(1) -  ALTERAR O STEP0:
+
+DE:
+
+//SYSUT2   DD DSN=MX.CLLP.MORA.CLIQFECH, 
+//       DISP=(,CATLG,DELETE),           s
+//       UNIT=DISCO,                     
+//       SPACE=(TRK,(000820,0164),RLSE), 
+//       DCB=(LRECL=0301,RECFM=FB)       
+//PRINTER  DD SYSOUT=(Z,,AN02)           
+//SYSOUT   DD SYSOUT=*                   
+//SYSUDUMP DD SYSOUT=Y                   
+
+
+PARA:
+
+//SYSUT2   DD DSN=MX.CLLP.MORA.CLIQFECH, 
+//       DISP=(,CATLG,DELETE),           
+//       UNIT=DISCO,                     
+//       SPACE=(TRK,(000820,0164),RLSE), 
+//       DCB=(LRECL=0343,RECFM=FB)       
+//PRINTER  DD SYSOUT=(Z,,AN02)           
+//SYSOUT   DD SYSOUT=*                   
+//SYSUDUMP DD SYSOUT=Y                   

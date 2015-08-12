@@ -1,0 +1,10 @@
+
+CLLPG121                                          BRADESCO LEASING S/A
+12/11/2014                 RELACAO DAS CARTAS DE COBRANCA EMITIDAS PARA AVALISTAS  - CORRENTISTA
+                                                  IGUAL A   16 DIAS
+ AG   CONTA      CPF/CNPJ       N O M E   D O   A V A L I S T A      CAR   TIPO  VENCIMENTO      VALOR    NATUREZA
+===== ======= ================= ==================================== === ======= ========== ============= =======================
+00195 0174349 085066778/0000-07 ROSANA BEATRIZ VIEIRA HUMMEL         855 CORREIO 15/10/2014        538,89 AR ARRENDAMENTOS
+                                TOTAL DO AVALISTA                                                  538,89
+                TOTAL         :            1   CARTAS                                              538,89
+                TOTAL  GERAL  :            1   CARTAS                                              538,89

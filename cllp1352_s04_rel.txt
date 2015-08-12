@@ -1,0 +1,169 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP2568                RELACAO DAS PENDENCIAS NAO SELECIONADAS                                                      PAG.:         1                            
+                                                                                                                          04/03/2015                            
+                                                                                                                                                                
+AGENCIA    CONTA  CARTEIRA  CONTRATO  PRODUTO SPRODUTO   CONVENIO  GARANTIA  NATUREZA  PARAMETRO NAO SELECIONADO                                                
+-------  -------  --------  --------  ------- --------  ---------  --------  --------  ---------------------------------------------                            
+      2   113748    855      1201495    900        0            0      0               PRAZO DE VENCIMENTO:                 -    591                            
+      2   117580    855      1124714    900        0            0      0               PRAZO DE VENCIMENTO:                 -    572                            
+      2   117580    855      1136549    900        0            0      0               PRAZO DE VENCIMENTO:                 -    570                            
+      2   123318    215       778341      0        0            0      0               PRAZO DE VENCIMENTO:                 -    554                            
+      2   123318    215       778347      0        0            0      0               PRAZO DE VENCIMENTO:                 -    522                            
+      2   123318    258       786291      0        0            0      0               PRAZO DE VENCIMENTO:                 -    522                            
+      2   123372    855      1321234    900        0            0      0               PRAZO DE VENCIMENTO:                 -    597                            
+      2   124442    215       729255      0        0            0      0               PRAZO DE VENCIMENTO:                 -    614                            
+      2   127069    855      1203346    900        0            0      0               PRAZO DE VENCIMENTO:                 -    599                            
+      2   127288    855      1235908    900        0            0      0               PRAZO DE VENCIMENTO:                 -    597                            
+      2   152380    855      1188722    900        0            0      0               PRAZO DE VENCIMENTO:                 -    604                            
+      2   152740    855      1227788    900        0            0      0               PRAZO DE VENCIMENTO:                 -    585                            
+      2   152847    855      1226649    900        0            0      0               PRAZO DE VENCIMENTO:                 -    489                            
+      3   171434    215       693969      0        0            0      0               PRAZO DE VENCIMENTO:                 -    583                            
+      3   173424    740      5176274      0        0            0      0               PRAZO DE VENCIMENTO:                 -    583                            
+      3   195411    215       771471      0        0            0      0               PRAZO DE VENCIMENTO:                 -    522                            
+      4    70597    258       394643      0        0            0      0               PRAZO DE VENCIMENTO:                 -    583                            
+      4    70597    258       395311      0        0            0      0               PRAZO DE VENCIMENTO:                 -    583                            
+      4    73379    215       718275      0        0            0      0               PRAZO DE VENCIMENTO:                 -    614                            
+      4    81775    215       779018      0        0            0      0               PRAZO DE VENCIMENTO:                 -    493                            
+      4    81775    215       780822      0        0            0      0               PRAZO DE VENCIMENTO:                 -    493                            
+      4    81780    215       780470      0        0            0      0               PRAZO DE VENCIMENTO:                 -    614                            
+      4    81780    215       780474      0        0            0      0               PRAZO DE VENCIMENTO:                 -    614                            
+      4    87634    282       813326      0        0            0      0               PRAZO DE VENCIMENTO:                 -    614                            
+      4   500913    282       803709      0        0            0      0               PRAZO DE VENCIMENTO:                 -    614                            
+      5    40261    733       197660      0        0            0      0               PRAZO DE VENCIMENTO:                 -    583                            
+     13   166177    C59         6166      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    488                            
+     22    49910    C59         2274      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+     87   142967    C59         4052      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+     92    89971    C59         7274      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    304                            
+    115    64275    C59         7300      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+    118   110003    C59        12104      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+    121   148385    C59        10337      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    337                            
+    138   152829    C59        12184      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    176    23988    C59         2161      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    180   102909    C59         3098      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    214    54169    C59         3288      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    222    16613    C59         2053      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+    226    92737    C59         6183      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    548                            
+    263    78111    C59        10343      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    268    91323    C59        11188      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    297    59748    C59        10102      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    310    89949    C59        11122      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    322   102920    C59        12137      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    488                            
+    337    65712    C59        10287      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    396    54904    C59         7165      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    428                            
+    398  2712504    C59        11238      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    444    63780    C59         2308      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+    450   112146    C59         4112      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    504   109533    C59         6069      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    519                            
+    527    40525    C59        10145      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+                                                                                                                                                                
+CLLP2568                RELACAO DAS PENDENCIAS NAO SELECIONADAS                                                      PAG.:         2                            
+                                                                                                                          04/03/2015                            
+                                                                                                                                                                
+AGENCIA    CONTA  CARTEIRA  CONTRATO  PRODUTO SPRODUTO   CONVENIO  GARANTIA  NATUREZA  PARAMETRO NAO SELECIONADO                                                
+-------  -------  --------  --------  ------- --------  ---------  --------  --------  ---------------------------------------------                            
+    547    42111    C59         4209      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+    574     3231    C59         3196      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    585    48798    C59        12262      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    519                            
+    620    22419    C59        12105      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+    821     1963    C59         7252      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+    926    20681    C59         2315      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+    939      780    C59         4241      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    519                            
+   1039    43385    C59         5227      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    548                            
+   1106    10447    C59         1072      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    519                            
+   1228    51692    C59         7156      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1263    48575    C59        11350      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+   1376   100201    C59         1126      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1438     2084    C59        10048      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    457                            
+   1445    19777    C59         3190      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1461    44550    C59         7026      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -     61                            
+   1514       37    C59         5089      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1561     7875    C59         3215      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1628     6049    C59         6011      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1706   220741    C59        11166      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1708    36564    C59         5065      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1747       22    C59         7148      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    519                            
+   1788    23540    C59         2179      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    519                            
+   1875      193    C59         4085      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   1908     4722    C59         3206      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   1916    10515    C59         6127      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+   1938   512805    C59         1300      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   2046     6806    C59         6140      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    457                            
+   2136    23746    C59        10119      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   2231   124610    C59         4066      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   2286    18169    C59        10136      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   2335   202133    C59         5237      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   2356      942    C59        12233      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   2407     6606    C59        12150      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   2413     6180    C59         2291      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   2423     7694    C59         5164      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   2439     4743    C59         7178      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+   2449     3030    C59         4269      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+   2457     2793    C59        11259      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    548                            
+   2473     4077    C59         5184      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    548                            
+   2621    15646    C59         4002      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   2667      555    C59         4206      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   2753     1741    C59         6319      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    457                            
+   2810     5998    C59         4286      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   2820    17403    C59         4229      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    548                            
+   3001   155565    C59         4316      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   3016   116511    C59         3114      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   3069    20994    C59         7132      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   3132     6998    C59         6248      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   3244    13718    C59         4297      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   3268    24307    C59        12021      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   3280    36775    C59        12301      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+                                                                                                                                                                
+CLLP2568                RELACAO DAS PENDENCIAS NAO SELECIONADAS                                                      PAG.:         3                            
+                                                                                                                          04/03/2015                            
+                                                                                                                                                                
+AGENCIA    CONTA  CARTEIRA  CONTRATO  PRODUTO SPRODUTO   CONVENIO  GARANTIA  NATUREZA  PARAMETRO NAO SELECIONADO                                                
+-------  -------  --------  --------  ------- --------  ---------  --------  --------  ---------------------------------------------                            
+   3504    15680    C59         6025      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    304                            
+   3520    30391    C59         5259      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   3550    17755    C59         7203      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   3621      746    C59         2109      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   3648   315572    C59         2194      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565       43    C59         1203      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565       87    C59         2049      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565       94    C59         2081      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565      222    C59         3128      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      227    C59         3152      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      231    C59         3163      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565      286    C59         3336      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    488                            
+   6565      402    C59         4332      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      442    C59         5095      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+   6565      494    C59         5250      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565      503    C59         5281      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      592    C59         6205      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      623    C59         6339      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      631    C59         6287      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      635    C59         6300      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565      646    C59         6334      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      729    C59         7202      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565      744    C59         7241      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    457                            
+   6565      881    C59        10084      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565      893    C59        10143      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    578                            
+   6565      961    C59        11082      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565     1001    C59        11316      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565     1002    C59        11317      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565     1021    C59        12020      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565     1030    C59        12043      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565     1040    C59        12069      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565     1069    C59        12164      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    519                            
+   6565    74437    C59         2021      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565    74508    C59         6272      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565    94609    C59         1252      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    488                            
+   6565    94623    C59         5042      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565   103518    C59         2275      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565   113733    C59         2104      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565   113756    C59         5150      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565   113761    C59         5249      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    610                            
+   6565   113793    C59        11015      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565   180510    C59         3208      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+   6565   180524    C59         7243      0        0            0      0        094    PRAZO DE VENCIMENTO:                 -    639                            
+                                                      TOTALIZACAO                                                                                               
+                                         -------------------------------------------------------                                                                
+                                         REGISTROS LIDOS NO ARQDB22 ...........:        4.589                                                                   
+                                         REGISTROS DESPREZADOS.................:            3                                                                   
+                                         REGISTROS GRAVADOS NO RELATORIO.......:          145                                                                   

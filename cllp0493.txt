@@ -1,0 +1,209 @@
+1) SUBSTITUIR JOB CLLP0493 DA MX.JCLFILE.MZ01 CONFORME SEGUE:           
+                                                                        
+RESUMO DAS ALTERACOES EFETUADAS:                                        
+                                                                        
+ 1 - STEP1 RENOMEADO PARA STEP0A                                        
+                                                                        
+ 2 - STEP1 INCLUIDO PARA PROG CLLP0138                                  
+                                                                        
+ 3 - STEP1A:                                                            
+     ALTERADO DSNAME:                                                   
+        DE:   //ARQMOV   DD DSN=MX.APMO.CLLP.CDJOB225,                  
+        PARA: //ARQMOV   DD DSN=*.STEP1.ARQEXP01,                       
+     ALTERADO LREC DE CADATU PARA 768                                   
+                                                                        
+ 4 - STEP1B ALTERADO LREC DE SAI PARA 768                               
+                                                                        
+ 5 - STEP2:                                                             
+     ALTERADO DSNAME:                                                   
+        DE:   //CADATU   DD DSN=MX.CLLP.CADATIVO.CLLP0493(+1),          
+        PARA: //CADATU   DD DSN=MX.CLLP.CADATIVO.CLLP0493.LEI(+1),      
+     ALTERADO LREC DE CADATU PARA 768                                   
+                                                                        
+                                                                        
+//CLLP0493 JOB 'CLLP,4120,PR32','I12808',MSGCLASS=Z,REGION=4M,          
+//       SCHENV=IMS                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEN22                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEN23                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEN24                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//* ***    CATALOGADO NA JCLFILE - RS 887243 - 13/01/2012               
+//*                                                                     
+//STEP0    EXEC PGM=PLAN6130,                                           
+//       PARM='SOCAT'                                                   
+//*                                                                     
+//* ***    RECEBE ARQUIVO SPJ - AVALISTA CL                             
+//*                                                                     
+//TABELA   DD *                                                         
+D DSN=MX.CLLP.CLLP.OCOR0493                                             
+//DDOUT    DD DSN=MX.CLLP.OCOR0493(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001080,0216),RLSE),                                
+//       DCB=(MX.A,LRECL=0165,RECFM=FB)                                 
+//COPIAOUT DD DUMMY,                                                    
+//       DCB=(LRECL=0165,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP0A   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICACAO DO ARQUIVO DE OCORRENCIAMENTO  MORA            
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.ACEROCOR(0),                                  
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.CLLP.ACOC0493,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//         DD DSN=*.STEP0.DDOUT,                                        
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.ACERTOS.CLLP0493(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(080000,030000),RLSE),                              
+//       DCB=(MX.A,LRECL=0152,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,3,PD,A,4,3,PD,A,7,8,PD,A,35,3,PD,D,38,4,PD,D)           
+ INCLUDE COND=(164,2,CH,EQ,C'CL',OR,164,2,CH,EQ,C'LP')                  
+ END                                                                    
+//*                                                                     
+//STEP1    EXEC PGM=CLLP0138                                            
+//*                                                                     
+//* ***    FORCA CRIACAO DOS CAMPOS DA LT                               
+//*                                                                     
+//ARQENT01 DD DSN=MX.APMO.CLLP.CDJOB225,                                
+//       DISP=SHR                                                       
+//ARQEXP01 DD DSN=MX.CLLP.APMO.CDJOB225.LEI(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(020000,6000),RLSE),                                
+//       DCB=(MX.A,LRECL=0768,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//*                                                                     
+//STEP1A   EXEC PGM=CLLP1174                                            
+//*                                                                     
+//* ***    *----------------------------------------------------------  
+//* ***    *  - MERGE DO CADASTRO DO CLLP                               
+//* ***    *----------------------------------------------------------  
+//*                                                                     
+//ARQMOV   DD DSN=*.STEP1.ARQEXP01,                                     
+//       DISP=(OLD,DELETE,KEEP)                                         
+//CADANT   DD DSN=MX.CLLP.CLLP.CDJOB225,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//CADATU   DD DSN=MX.CLLP.CADATU.CLLP0493.ANTE(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,080000),RLSE),                             
+//*DCB   NOCHECK                                                        
+//       DCB=(MX.A,BLKSIZE=32064,LRECL=0768,RECFM=FB),                  
+//       DATACLAS=PRODX37                                               
+//ARQENTRA DD DUMMY,                                                    
+//       DCB=(LRECL=0668,RECFM=FB)                                      
+//RELATO   DD DUMMY,                                                    
+//       DCB=(LRECL=0080,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1B   EXEC PGM=BRAD0002                                            
+//*                                                                     
+//* ***    COMPRIME ARQUIVO                                             
+//*                                                                     
+//ENTRA    DD DSN=*.STEP1A.CADATU,                                      
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.CADATU.CLLP0493(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0768,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP5420                                            
+//*                                                                     
+//* ***    LE ARQUIVO DE ACERTOS DAS OCORRENCIAS ON-LINE.               
+//* ***    LE E ATUALIZA CADASTRO CLLP BATCH.                           
+//* ***    LISTA REGISTROS ACERTADOS.                                   
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADANT   DD DSN=*.STEP1B.SAI,                                         
+//       DISP=OLD                                                       
+//CADATU   DD DSN=MX.CLLP.CADATIVO.CLLP0493.LEI(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0200000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0768,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//ARQACE   DD DSN=MX.CLLP.ARQACERT.CLLP0493(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000740,0148),RLSE),                                
+//       DCB=(MX.A,LRECL=0104,RECFM=FB)                                 
+//LISTACE  DD SYSOUT=%%FORM#EN22,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELATO   DD DSN=MX.CLLP.CERTLI24.CLLP0493(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(00020,0002),RLSE),                                 
+//       DCB=(MX.A,LRECL=0133,RECFM=FBA)                                
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2A   EXEC PGM=PLAN1970,                                           
+//       PARM='02'                                                      
+//*                                                                     
+//* ***    GERA LISTAGENS COM DESTINOS DISTINTOS.                       
+//*                                                                     
+//ENT00001 DD DSN=*.STEP2.RELATO,                                       
+//       DISP=OLD                                                       
+//SAI00001 DD DUMMY                                                     
+//SAI00002 DD SYSOUT=%%FORM#EN23,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP6506                                            
+//*                                                                     
+//* ***    EMITE LISTAGEM DAS PENDENCIAS COM ATUALIZACOES DAS           
+//* ***    OCORRENCIAS REFERENTES AOS ADVOGADOS FUNCIONARIOS.           
+//*                                                                     
+//ARQACE   DD DSN=*.STEP2.ARQACE,                                       
+//       DISP=OLD                                                       
+//CADADV   DD DSN=MX.CLLP.PRV.CADADVOG(0),                              
+//       DISP=SHR                                                       
+//MESTRE   DD DSN=MX.CLLP.MESTLPCL(0),                                  
+//       DISP=SHR                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.COPIA(0),                            
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#EN24,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

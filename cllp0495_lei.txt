@@ -1,0 +1,598 @@
+//CLLP0495 JOB 'CLLP,4120,PR32','A299565',MSGCLASS=Z,TIME=1440,         
+//       REGION=8M,SCHENV=DB2                                           
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEQ35                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEZ34                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTFMG1                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTFMG2                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEQ38                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEQ39                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEQ40                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEZ61                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTFMH4                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTFMH5                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTDZTI                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=CLLP0001,                                           
+//       PARM='ARQUIVO'                                                 
+//*                                                                     
+//* ***    CRIA ARQUIVO DE DATAS PARA A ROTINA DIARIA.                  
+//* ***    ATENCAO:  SR. OPERADOR                                       
+//*                                                                     
+//* ***    PARM DISPLAY = TECLAR A DATA DO PROXIMO MOVIMENTO            
+//* ***    DO DIA DDMMAAAA                                              
+//* ***    PARM ARQUIVO = OBTEM A DATA DO PROXIMO MOVTO NO ARQUIVO      
+//*                                                                     
+//ARQDATAE DD DSN=MX.CLLP.PRV.DATA.ATUAL(0),                            
+//       DISP=SHR                                                       
+//ARQDTANT DD DSN=MX.CLLP.PRV.DATAMOV(0),                               
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATAPROX(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0060,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1A   EXEC PGM=CLLP9220                                            
+//*                                                                     
+//* ***    CRIA ARQUIVO BASE PARA CALCULO COM                           
+//* ***    65 POSICOES A PARTIR DO DATACALC                             
+//*                                                                     
+//DATAMOV  DD DSN=*.STEP1.ARQDATA,                                      
+//       DISP=OLD                                                       
+//DATACALI DD DSN=MX.CLLP.PRV.DATACALC(0),                              
+//       DISP=SHR                                                       
+//DATACALS DD DSN=MX.CLLP.PRV.DATAPROX.DATACALC(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0065,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE  MOVIMENTO PARA  ENTRADA DO            
+//* ***    LPCL1001 TIPO/EMPRESA/AGENCIA/NRO CL/PARC/ACERTO/            
+//* ***    TP BAIXA/QUANTIDADE DE REGISTROS = (5.000).                  
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRV.MOVCLASS(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.MOVCLASS.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(002050,0410),RLSE),                                
+//       DCB=(MX.A,LRECL=0575,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,26,A,565,3,A,448,1,D,63,4,A,                            
+            61,2,A,59,2,A),FORMAT=BI                                    
+ END                                                                    
+//*                                                                     
+//STEP2A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE  MOVIMENTO PARA  ENTRADA DO            
+//* ***    LPCL1001 TIPO/EMPRESA/AGENCIA/NRO CL/PARC/ACERTO/            
+//* ***    TP BAIXA/QUANTIDADE DE REGISTROS = (5.000).                  
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRV.MOVCLASS.LEI(+1),                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.MOVCLASS.CLLP0495.LEI(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001490,0298),RLSE),                                
+//       DCB=(MX.A,LRECL=0675,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,26,A,565,3,A,448,1,D,63,4,A,                            
+            61,2,A,59,2,A),FORMAT=BI                                    
+ END                                                                    
+//*                                                                     
+//STEP2B   EXEC PGM=BRAD0002                                            
+//*                                                                     
+//* ***    COMPRIMIR ARQUIVO QUE VEM DO JOB CLLP0494                    
+//*                                                                     
+//ENTRA    DD DSN=MX.CLLP.CADATIVO.CLLP0494.LEI(0),                     
+//        DISP=SHR                                                      
+//SAI      DD DSN=MX.CLLP.CADATIVO.CLLP0494.LEI(+1),                    
+//        DISP=(,CATLG,DELETE),                                         
+//        UNIT=DISCO,                                                   
+//        SPACE=(TRK,(001490,0298),RLSE),                               
+//        DCB=(LRECL=0768,RECFM=FB)                                     
+//SYSOUT   DD SYSOUT=T                                                  
+//SYSUDUMP DD SYSOUT=T                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP1001                                            
+//*                                                                     
+//* ***    ATUALIZACAO DO CADASTRO DA ROTINA 'CLLP'.                    
+//* ***    - SOMENTE COM MOVIMENTO DE BAIXA COMANDADA E BAIXAS VIA      
+//* ***      CORREIO COM OPCAO DE DEBITO EM C/C                         
+//*                                                                     
+//MESTRE   DD DSN=MX.CLLP.PRV.MESTUPCO(0),                              
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=*.STEP1A.DATACALS,                                    
+//       DISP=OLD                                                       
+//ARQLOCAL DD DSN=MX.CLLP.PRV.CADLOCAL(0),                              
+//       DISP=SHR                                                       
+//MOVTO    DD DSN=*.STEP2A.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//CADANT   DD DSN=*.STEP2B.SAI,                                         
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQTAXA  DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//ARQTAXA2 DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//ARQTPBX  DD DSN=MX.CLLP.PRV.TABELA51.CLAS(0),                         
+//       DISP=SHR                                                       
+//ARQTABCL DD DSN=MX.CLLP.ARQTABCL.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,18),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0041,RECFM=FB)                                 
+//ARQCONT  DD DSN=MX.CLLP.ARQVCONT.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000410,0082),RLSE),                                
+//       DCB=(MX.A,LRECL=0116,RECFM=FB)                                 
+//CADATU   DD DSN=MX.CLLP.CADALPCL.CLLP0495.LEI(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(CYL,(001333,0266),RLSE),                                
+//*DCB   NOCHECK                                                        
+//       DCB=(MX.A,BLKSIZE=32064,LRECL=0768,RECFM=FB)                   
+//ARQIOF   DD DSN=MX.CLLP.MVTOIOFC.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0218,RECFM=FB)                                 
+//CLATIVO  DD DUMMY,                                                    
+//       DCB=(LRECL=0600,RECFM=FB)                                      
+//ARQTABU2 DD DUMMY,                                                    
+//       DCB=(LRECL=0095,RECFM=FB)                                      
+//CADATUES DD DUMMY,                                                    
+//       DCB=(LRECL=0600,RECFM=FB)                                      
+//LISTIMAG DD DSN=MX.CLLP.IMAGIMPR.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(004560,0912),RLSE),                                
+//       DCB=(MX.A,LRECL=0650,RECFM=FB)                                 
+//ARQBAIXA DD DSN=MX.CLLP.CADBAIXA.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000150,0030),RLSE),                                
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                                 
+//MORAMEC  DD DUMMY,                                                    
+//       DCB=(LRECL=0152,RECFM=FB)                                      
+//ARQCLDIA DD DUMMY,                                                    
+//       DCB=(LRECL=0600,RECFM=FB)                                      
+//TRANSLP  DD DUMMY,                                                    
+//       DCB=(LRECL=0575,RECFM=FB)                                      
+//RELCALC  DD SYSOUT=%%FORM#EQ35,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELNCALC DD SYSOUT=%%FORM#EZ34,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELCAL2  DD SYSOUT=%%FORM#FMG1,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELNCAL2 DD SYSOUT=%%FORM#FMG2,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPA3   EXEC PGM=BRAD0003                                            
+//*                                                                     
+//* ***    DESCOMPRIMIR ARQUIVO                                         
+//*                                                                     
+//ENTRA    DD DSN=*.STEP3.CADATU,                                       
+//        DISP=SHR                                                      
+//SAI      DD DSN=MX.CLLP.CADALPCL.CLLP0495.DES(+1),                    
+//        DISP=(,CATLG,DELETE),                                         
+//        UNIT=DISCO,                                                   
+//        SPACE=(TRK,(1000,200),RLSE),                                  
+//        DCB=(LRECL=0768,RECFM=FB)                                     
+//SYSOUT   DD SYSOUT=T                                                  
+//SYSUDUMP DD SYSOUT=T                                                  
+//*                                                                     
+//STEPB3   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE  MOVIMENTO PARA  ENTRADA DO            
+//* ***    LPCL1001 TIPO/EMPRESA/AGENCIA/NRO CL/PARC/ACERTO/            
+//* ***    TP BAIXA/QUANTIDADE DE REGISTROS = (5.000).                  
+//*                                                                     
+//SORTIN   DD DSN=*.STEPA3.SAI,                                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CADALPCL.CLLP0495.TRUN(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001490,0298),RLSE),                                
+//       DCB=(MX.A,LRECL=0668,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTREC FIELDS=(1,668)                                                  
+ END                                                                    
+//*                                                                     
+//STEPC3   EXEC PGM=BRAD0002                                            
+//*                                                                     
+//* ***    COMPRIMIR ARQUIVO                                            
+//*                                                                     
+//ENTRA    DD DSN=*.STEPB3.SORT.SORTOUT,                                
+//        DISP=SHR                                                      
+//SAI      DD DSN=MX.CLLP.CADALPCL.CLLP0495(+1),                        
+//        DISP=(,CATLG,DELETE),                                         
+//        UNIT=DISCO,                                                   
+//        SPACE=(TRK,(1002,201),RLSE),                                  
+//        DCB=(LRECL=0668,RECFM=FB)                                     
+//SYSOUT   DD SYSOUT=T                                                  
+//SYSUDUMP DD SYSOUT=T                                                  
+//*                                                                     
+//STEP3A   EXEC PGM=CLLP1201                                            
+//*                                                                     
+//* ***    LISTA VALORES BAIXADOS COM RECEBIMENTO A MENOR               
+//*                                                                     
+//ARQDATA  DD DSN=*.STEP1.ARQDATA,                                      
+//       DISP=OLD                                                       
+//CADACLLP DD DSN=*.STEP3.CADATU,                                       
+//       DISP=SHR                                                       
+//RELVALBX DD SYSOUT=%%FORM#EQ38,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC PGM=CLLP1200,                                           
+//       PARM='NORMAL  0'                                               
+//*                                                                     
+//* ***    EMITE OCORRENCIAS DE ATUALIZACAO DO CADASTRO DE CLLP         
+//* ***    COM MOVIMENTO DE BAIXAS (BX COMANDADA)                       
+//*                                                                     
+//ARQLOCAL DD DSN=MX.CLLP.PRV.CADLOCAL(0),                              
+//       DISP=SHR                                                       
+//CADASTRO DD DSN=*.STEP3.LISTIMAG,                                     
+//       DISP=OLD                                                       
+//MESTAG   DD DSN=MX.MESTAGT(0),                                        
+//       DISP=SHR                                                       
+//MAT6161  DD DUMMY,                                                    
+//       DCB=(LRECL=0144,RECFM=FB)                                      
+//DCL6161  DD DUMMY,                                                    
+//       DCB=(LRECL=0144,RECFM=FB)                                      
+//AGETRAN  DD DUMMY,                                                    
+//*DCB   NOCHECK                                                        
+//       DCB=(BLKSIZE=27846,LRECL=0153,RECFM=FB)                        
+//DCLTRAN  DD DUMMY,                                                    
+//       DCB=(LRECL=0153,RECFM=FB)                                      
+//DPD6005  DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6109  DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6161  DD DUMMY,                                                    
+//*DCB   NOCHECK                                                        
+//       DCB=(BLKSIZE=32718,LRECL=0133,RECFM=FB)                        
+//DPD6161C DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6164  DD SYSOUT=%%FORM#EQ39,                                       
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6164A DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6164C DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6203  DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6164D DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//DPD6164P DD DUMMY,                                                    
+//       DCB=(LRECL=0150,RECFM=FBM)                                     
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00020))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00020))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00020))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00020))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00020))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00020))                                            
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5    EXEC PGM=CLLP5780,                                           
+//       PARM='CLLP2000CLLP7700'                                        
+//*                                                                     
+//* ***    GERA ARQUIVO PARA CARGA DOS BAIXADOS SOMENTE COM AS          
+//* ***    BAIXAS DO DIA.                                               
+//*                                                                     
+//CADLPCL  DD DSN=*.STEP3.ARQBAIXA,                                     
+//       DISP=OLD                                                       
+//ARQTAXA  DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//ARQTAXA2 DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.COPIA(0),                            
+//       DISP=SHR                                                       
+//CADBAIXA DD DSN=MX.CLLP.ARQBAIXA.CLLP5780.LEI(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001110,0222),RLSE),                                
+//       DCB=(MX.A,LRECL=0414,RECFM=FB)                                 
+//RELCALC  DD SYSOUT=%%FORM#EQ40,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELNCALC DD SYSOUT=%%FORM#EZ61,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELCAL2  DD SYSOUT=%%FORM#FMH4,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELNCAL2 DD SYSOUT=%%FORM#FMH5,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELATO   DD SYSOUT=%%FORM#DZTI,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPA5   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE  MOVIMENTO PARA  ENTRADA DO            
+//* ***    LPCL1001 TIPO/EMPRESA/AGENCIA/NRO CL/PARC/ACERTO/            
+//* ***    TP BAIXA/QUANTIDADE DE REGISTROS = (5.000).                  
+//*                                                                     
+//SORTIN   DD DSN=*.STEP5.CADBAIXA,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CADBAIXA.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001490,0298),RLSE),                                
+//       DCB=(MX.A,LRECL=0314,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=COPY                                                       
+ OUTREC FIELDS=(1,314)                                                  
+ END                                                                    
+//*                                                                     
+//*                                                                     
+//STEP5A   EXEC PGM=CLLP5786                                            
+//*                                                                     
+//* ***    ATUALIZA CADASTRO DE BAIXA COM INFORMACOES DO IOF            
+//* ***    COMPLEMENTAR.                                                
+//*                                                                     
+//ARQIOF   DD DSN=*.STEP3.ARQIOF,                                       
+//       DISP=SHR                                                       
+//BAIXANT  DD DSN=*.STEPA5.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//BAIXATU  DD DSN=MX.CLLP.ARQBAIXA.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001110,0222),RLSE),                                
+//       DCB=(MX.A,LRECL=0314,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6    EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    COPIA ARQUIVO DE ACERTOS DE OCORRENCIA, PARA                 
+//* ***    LISTAGEM DOS ACERTOS.                                        
+//* ***    ARQUIVO DE SAIDA SERA LIDO NO CLLP0879  - TAB. CLLP0870      
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP5A.BAIXATU,                                     
+//       DISP=OLD                                                       
+//SYSUT2   DD DSN=MX.CLLP.CLLP.BXCOMAND,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000080,0016),RLSE),                                
+//       DCB=(LRECL=0314,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=(Z,,AN01)                                          
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE BLOQUEIO POR AGENCIA/CONTA/CONTRATO    
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRV.PARCLASS.REES5497(0),                     
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.PRV.PARCLASS.CLLP5495(0),                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.PARCLASS.CLLP0495(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0590,RECFM=FB)                                 
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK25 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK26 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK27 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK28 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK29 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK30 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK31 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK32 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK33 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK34 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK35 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK36 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK37 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK38 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK39 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK40 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK41 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK42 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK43 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK44 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK45 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK46 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK47 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK48 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,3,PD,A,4,3,PD,A,7,8,PD,A)                               
+ END                                                                    
+//*                                                                     
+//STEP7    EXEC PGM=CLLP1881                                            
+//*                                                                     
+//* ***    SEPARA CADASTRO POR FAIXA DE AGENCIA                         
+//*                                                                     
+//CADALPCL DD DSN=*.STEP3.CADATU,                                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//BLOQUEIO DD DSN=*.STEP6A.SORT.SORTOUT,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//CADASEP1 DD DSN=MX.CLLP.CADASEP1(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=668,RECFM=FB)                                  
+//CADASEP2 DD DSN=MX.CLLP.CADASEP2(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=668,RECFM=FB)                                  
+//CADASEP3 DD DSN=MX.CLLP.CADASEP3(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=668,RECFM=FB)                                  
+//RELATO   DD DUMMY,                                                    
+//       DCB=(LRECL=80,RECFM=FBA)                                       
+//*#RELATO   DD SYSOUT=(,,HT50),                                        
+//*#       DCB=(LRECL=80,RECFM=FBA),                                    
+//*#       OUTPUT=(*.OUT2,*.OUT3)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7A   EXEC PGM=BRAD0002                                            
+//*                                                                     
+//* ***    COMENTARIO????????????                                       
+//*                                                                     
+//ENTRA    DD DSN=*.STEP7.CADASEP1,                                     
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.CADASEP1(+2),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(060000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=668,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7B   EXEC PGM=BRAD0002                                            
+//*                                                                     
+//* ***    COMENTARIO????????????                                       
+//*                                                                     
+//ENTRA    DD DSN=*.STEP7.CADASEP2,                                     
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.CADASEP2(+2),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(060000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=668,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7C   EXEC PGM=BRAD0002                                            
+//*                                                                     
+//* ***    COMENTARIO????????????                                       
+//*                                                                     
+//ENTRA    DD DSN=*.STEP7.CADASEP3,                                     
+//       DISP=SHR                                                       
+//SAI      DD DSN=MX.CLLP.CADASEP3(+2),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(060000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=668,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPY    EXEC PGM=IEFBR14                                             
+//*                                                                     
+//* ***    **********************************************************   
+//* ***    * DELECOES DOS ARQUIVOS P/ LIBERACAO DOS SPACES EM DISCOS*   
+//* ***    **********************************************************   
+//*                                                                     
+//DD1      DD DSN=*.STEP3.ARQTABCL,                                     
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSOUT   DD SYSOUT=Y                                                  
+//*                                                                     

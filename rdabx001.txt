@@ -1,0 +1,69 @@
+//RDABX001 JOB 'RDAB,4120,PR32','A299565',MSGCLASS=Z,SCHENV=DB2         
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP01   EXEC PGM=RDAB0105                                            
+//*                                                                     
+//* ***    BALANCE LINE ENTRE OS ARQUIVOS DO DIA E DIA ANTERIOR         
+//*                                                                     
+//CLIENTE  DD DSN=MX.RDAB.S073941.CLIENTE.RDB110.CL(0),                 
+//       DISP=SHR                                                       
+//CLIEANT  DD DSN=MX.RDAB.S073941.CLIENTE.RDB110.CL(-1),                
+//       DISP=SHR                                                       
+//CPFEXIST DD DSN=MX.RDAB.CPFEXIST.RDAB0105.CORR(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000470,0094),RLSE),                                
+//       DCB=(MX.A,LRECL=150,RECFM=FB)                                  
+//ATUALTAB DD DSN=MX.RDAB.TABATUAL.CORR(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000190,0038),RLSE),                                
+//       DCB=(MX.A,LRECL=150,RECFM=FB)                                  
+//AGCONTA  DD DSN=MX.RDAB.AGCONTA.CORR(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=150,RECFM=FB)                                  
+//CPFCNPJ  DD DSN=MX.RDAB.CPFCNPJ.CORR(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001280,0256),RLSE),                                
+//       DCB=(MX.A,LRECL=150,RECFM=FB)                                  
+//RELATO   DD DSN=MX.RDAB.J0080S01.RELATO.CORR(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001280,0256),RLSE),                                
+//       DCB=(MX.A,LRECL=116,RECFM=FB)                                  
+//RELATO1  DD DSN=MX.RDAB.J0080S01.RELATO1.CORR(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001280,0256),RLSE),                                
+//       DCB=(MX.A,LRECL=080,RECFM=FB)                                  
+//RELATO2  DD DSN=MX.RDAB.J0080S01.RELATO2.CORR(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001280,0256),RLSE),                                
+//       DCB=(MX.A,LRECL=081,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP02   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR CPF/CNPJ                                      
+//*                                                                     
+//SORTIN   DD DSN=*.STEP01.CPFCNPJ,                                     
+//       DISP=SHR                                                       
+//         DD DSN=MX.RDAB.PRV.CPFCNPJ.CORR(0),                          
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.RDAB.PRV.CPFCNPJ.CORR(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001280,0256),RLSE),                                
+//       DCB=(MX.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(25,5,PD,A,30,3,PD,A)                                      
+ END                                                                    
+//*                                                                     

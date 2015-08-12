@@ -1,0 +1,59 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP2573                                ARQUIVO COM DADOS DE BENS EM GARANTIA                                        PAG.:         1                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+AGENCIA   CONTA CART CONTRATO PLACA          RENAVAN  MARCA                                    COR                  ANO FAB  ANO MOD                            
+CHASSI                 MODELO                                                   SALDO DEVEDOR  TOTAL DA GARANTIA   VALOR DO VEICULO                             
+OUTORGANTE        CIDADE                         UF ESPECIE         TIPO            COMBUSTIVEL         BF CATEGORIA      DTULT.ATU                             
+------------------------------------------------------------------------------------------------------------------------------------                            
+                                                                                                                                                                
+      2     159 Z2    4040702 E569658                 GM                                       AZUL                    2009     2010                            
+9BGTU75C0AC163225       ZAFIRA ELE                                                   7.949,14          55.798,08          55.798,08                             
+01406243100001097 SAO PAULO                      SP -               -               -                    N -               17022012                             
+                                                                                                                                                                
+      2     206 A01   4492034 DMQ1967                 VOLKSWAGEN                               PRATA                   2005     2006                            
+9BWCB05W56T038955       GOL (GER.4) (TOTALFLEX) POWER                                3.114,14          24.061,80          24.061,80                             
+33604754800000087 MARILIA                        SP -               -               -                    S -               25032011                             
+                                                                                                                                                                
+      2     245 A01   4041995 DNW1104                 FIAT                                     PRATA                   2005     2006                            
+9BD15822764756447       UNO MILLE FIRE FLEX                                        181.681,70           9.125,28           9.125,28                             
+27636046800000049 MARILIA                        SP -               -               -                    S -               03022012                             
+                                                                                                                                                                
+      2     246 Z2    4005053 ERD5912                 VOLKSWAGEN                               CINZA                   2010     2011                            
+9BWAA05U5BT120543       NOVO GOL 1.0                                                31.607,22          21.159,84          21.159,84                             
+26637529800000034 MARILIA                        SP -               -               -                    S -               20092010                             
+                                                                                                                                                                
+      2     298 Z2    4008356 DMQ1009                 TOYOTA                                   PRETA                   2005     2005                            
+9BR53ZEC258590377       COROLLA SEDAN SE-G 1.8 16V(N.S                               3.081,66          42.283,68          42.283,68                             
+03550663800000062 MARILIA                        SP -               -               -                    S -               18102012                             
+                                                                                                                                                                
+      2     304 A01   4026882 BWC9185                 M BENZ L 1418                            LARANJA                 1989     1989                            
+9BM384024KB859413       L 1418                                                     107.579,36          47.847,89          47.847,89                             
+04081470800000039 SAO PAULO                      SP -               -               -                    N -               03092012                             
+                                                      TOTALIZACAO                                                                                               
+                                         -------------------------------------------------------                                                                
+                                         REGISTROS LIDOS NO ARQSELE ............:          19                                                                   
+                                         REGISTROS LIDOS NO ARQGART.............:       1.000                                                                   
+                                         REGISTROS DESPREZADOS NO ARQGART.......:         993                                                                   
+                                         REGISTROS GRAVADOS NO ARQBENS..........:           6                                                                   
+                                         REGISTROS GRAVADOS NO RELATORIO........:           6                                                                   
+                                                                                                                                                                
+      2     246 Z2    4005053 ERD5912                 VOLKSWAGEN                               CINZA                   2010     2011                            
+9BWAA05U5BT120543       NOVO GOL 1.0                                                31.607,22          21.159,84          21.159,84                             
+26637529800000034 MARILIA                        SP -               -               -                    S -               20092010                             
+                                                                                                                                                                
+      2     298 Z2    4008356 DMQ1009                 TOYOTA                                   PRETA                   2005     2005                            
+9BR53ZEC258590377       COROLLA SEDAN SE-G 1.8 16V(N.S                               3.081,66          42.283,68          42.283,68                             
+03550663800000062 MARILIA                        SP -               -               -                    S -               18102012                             
+                                                                                                                                                                
+      2     304 A01   4026882 BWC9185                 M BENZ L 1418                            LARANJA                 1989     1989                            
+9BM384024KB859413       L 1418                                                     107.579,36          47.847,89          47.847,89                             
+04081470800000039 SAO PAULO                      SP -               -               -                    N -               03092012                             
+                                                      TOTALIZACAO                                                                                               
+                                         -------------------------------------------------------                                                                
+                                         REGISTROS LIDOS NO ARQSELE ............:          19                                                                   
+                                         REGISTROS LIDOS NO ARQGART.............:       1.000                                                                   
+                                         REGISTROS DESPREZADOS NO ARQGART.......:         993                                                                   
+                                         REGISTROS GRAVADOS NO ARQBENS..........:           6                                                                   
+                                         REGISTROS GRAVADOS NO RELATORIO........:           6                                                                   

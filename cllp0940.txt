@@ -1,0 +1,311 @@
+//CLLP0940 JOB 'CLLP,4120,PR32','D115848',MSGCLASS=Z,SCHENV=DB2         
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA PENDENCIA COM DADOS CADASTRAIS POR:               
+//* ***    CPF/AGENCIA/CONTA/CARTEIRA/CONTRATO                          
+//*                                                                     
+//SORTIN   DD DSN=AC.CLLP.PENDEMPF(0),                                  
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.PNDEMPFC(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,18),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AC.A,LRECL=0180,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(1,3,PD,A,4,4,PD,A)                                       
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//*                                                                     
+//STEP2    EXEC PGM=CLLP7345                                            
+//*                                                                     
+//* ***    OBTEM DADOS CADASTRAIS DO CLIE                               
+//*                                                                     
+//PENDENCI DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//CADACLIE DD DSN=AF.CLIE.PRP.CADNGERA(0),                              
+//       DISP=SHR                                                       
+//PENDCLIE DD DSN=AC.CLLP.PENDCLIE(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AC.A,LRECL=0480,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE DADOS PRINCIPAIS AGENCIA E CONTA       
+//*                                                                     
+//SORTIN   DD DSN=AC.PSDC.PRV.CADUB0A4(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.CADUB0A4.AGCTA(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(525,3,PD,A,528,7,PD,A),FORMAT=BI                         
+  END                                                                   
+//*                                                                     
+//STEP3B   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE PENDENCIAS RENEGOCIADAS AGENCIA E CTA  
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.PENDCLIE,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.PENDCLIE.CLAS(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=0480,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(1,7,A),FORMAT=BI                                         
+  END                                                                   
+//*                                                                     
+//STEP3C   EXEC PGM=RDAB0890                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO DE PENDENCIAS RENEGOCIADAS COM CLUB, DNASC
+//* ***                                                                 
+//*                                                                     
+//CADUB0A4 DD DSN=*.STEP3A.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//REGPENDF DD DSN=*.STEP3B.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=AC.CLLP.RDAB0890(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3D   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE PENDENCIAS RENEGOCIADAS POR CLUB       
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3C.ARQSAIDA,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.RDAB0890.CLAS(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=0500,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(481,10,ZD,A),FORMAT=BI                                   
+  END                                                                   
+//*                                                                     
+//STEP3E   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE ENDERECOS POR CLUB                     
+//*                                                                     
+//SORTIN   DD DSN=AC.PSDC.PRV.CADUB018(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.CADUB018.CLLP0940.CL(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(11,6,PD,A),FORMAT=BI                                     
+  END                                                                   
+//*                                                                     
+//STEP3F   EXEC PGM=RDAB0895                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO DE PENDENCIAS RENEGOCIADAS COM ENDERECO   
+//* ***                                                                 
+//*                                                                     
+//REGPENDF DD DSN=*.STEP3D.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//CADUB018 DD DSN=*.STEP3E.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=AC.CLLP.RDAB0895(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3G   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE TELEFONES                              
+//*                                                                     
+//SORTIN   DD DSN=AC.PSDC.PRV.CADUB006(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.CADUB006.CLLP0940.CL(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(11,6,PD,A),FORMAT=BI                                     
+  END                                                                   
+//*                                                                     
+//STEP3H   EXEC PGM=RDAB0896                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO DE PENDENCIAS RENEGOCIADAS COM ENDERECO   
+//* ***                                                                 
+//*                                                                     
+//REGPENDF DD DSN=*.STEP3F.ARQSAIDA,                                    
+//       DISP=SHR                                                       
+//CADUB006 DD DSN=*.STEP3G.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=AC.CLLP.RDAB0896(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3I   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE INFORMACOES FAMILIARES                 
+//*                                                                     
+//SORTIN   DD DSN=AC.PSDC.PRV.CADUB065(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.CADUB065.CLLP0940.CL(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(11,6,PD,A),FORMAT=BI                                     
+  END                                                                   
+//*                                                                     
+//STEP3J   EXEC PGM=RDAB0897                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO DE PENDENCIAS RENEGOCIADAS COM PAI E MAE  
+//* ***                                                                 
+//*                                                                     
+//REGPENDF DD DSN=*.STEP3H.ARQSAIDA,                                    
+//       DISP=SHR                                                       
+//CADUB065 DD DSN=*.STEP3I.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=AC.CLLP.RDAB0897(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3L   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE INFORMACOES PROFISSIONAIS              
+//*                                                                     
+//SORTIN   DD DSN=AC.PSDC.PRV.CADUB067(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.CADUB067.CLLP0940.CL(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(11,6,PD,A),FORMAT=BI                                     
+  END                                                                   
+//*                                                                     
+//STEP3M   EXEC PGM=RDAB0898                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO DE PENDENCIAS RENEGOCIADAS COM RENDA      
+//* ***    MENSAL                                                       
+//*                                                                     
+//REGPENDF DD DSN=*.STEP3J.ARQSAIDA,                                    
+//       DISP=SHR                                                       
+//CADUB067 DD DSN=*.STEP3L.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=AC.CLLP.RDAB0898(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(010000,2000),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA PENDENCIA POR PRODUTO, FAMILIA E CONTRATO         
+//* ***    PARA PESQUISA NO EMPF                                        
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3M.ARQSAIDA,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.PENDCADA(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(AC.A,LRECL=0480,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(105,5,PD,A,110,3,PD,A,113,2,ZD,A,1,3,PD,A,4,4,PD,A,      
+               9,3,CH,A,12,4,PD,A)                                      
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0550))                                             
+//*                                                                     
+//STEP5    EXEC PGM=PLAN2440,                                           
+//       PARM='001'                                                     
+//*                                                                     
+//* ***    ENVIA ARQUIVO PENDENCIAS COM DADOS CADASTRAIS PARA MATRIZ    
+//*                                                                     
+//ENT00001 DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=TM.CLLP.CLLP.PENDCADA,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(030000,6000),RLSE)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

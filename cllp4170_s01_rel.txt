@@ -1,0 +1,10 @@
+                         --- INICIO DO RELATORIO ---                            
+                                                                                
+CLLP7386             B A N C O   B R A D E S C O  S / A           PAG.:       1 
+06/03/2015   BLOQUEIOS NAO ENCONTRADOS NO ARQUIVO PENDENCIA ANTERIOR   12:38:53 
+AGENCIA  CONTA CART CONTRATO      VR.LIQUIDO     VR.COBRANCA     VR.A VENCER    
+     2  151250 348   9404461          530,35          640,42          603,95    
+     2  151361 348   6438861          399,55          491,12            0,00    
+     2  152718 348   6942261        1.208,00        1.554,48            0,00    
+     2  153024 348   7750865          914,35        1.203,70            0,00    
+     2  153374 348   3961799          503,53          664,06            0,00    

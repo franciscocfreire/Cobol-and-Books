@@ -1,0 +1,42 @@
+//CLLP3410 JOB 'CLLP,4120,PR32','B048990',MSGCLASS=Z,REGION=4096K,      
+//       SCHENV=DB2                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA ARQUIVOS RECEBIDOS DA ROTINA TRCL.                     
+//*                                                                     
+//ENT00001 DD DSN=MX.TRCL.CLLP.VENCBVCB,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00001 DD DSN=MX.CLLP.VENCBVCB(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=160,RECFM=FB)                                  
+//ENT00002 DD DSN=MX.TRCL.CLLP.VENCBVCB.LEI,                            
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00002 DD DSN=MX.CLLP.VENCBVCB.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=160,RECFM=FB)                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP6470                                            
+//*                                                                     
+//* ***    GERAR ARQUIVO P/SUMARIZAR PARCELAS VENCIDAS                  
+//*                                                                     
+//VENCIDAS DD DSN=*.STEP1.SAI00001,                                     
+//       DISP=OLD                                                       
+//CLLPCARG DD DSN=MX.CLLP.BVCBCARG(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=152,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

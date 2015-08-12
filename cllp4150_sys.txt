@@ -1,0 +1,167 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 C  --  N O D E
+
+15.18.56 JOB50556 ---- WEDNESDAY, 04 MAR 2015 ----
+15.18.56 JOB50556  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+15.18.56 JOB50556  $EXIT006A  Job CLLP4150 Jobid(JOB50556) alterado para CLASS=E
+15.18.56 JOB50556  $HASP373 CLLP4150 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+15.18.56 JOB50556  IEF403I CLLP4150 - STARTED - TIME=15.18.56
+15.18.56 JOB50556  -                                                --TIMINGS (M
+15.18.56 JOB50556  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+15.18.56 JOB50556  -CLLP4150 STEP0                00      6      1    .00    .00
+15.18.56 JOB50557  $HASP100 CLLP4160 ON INTRDR      C089177               FROM J
+15.18.56 JOB50557  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+15.18.56 JOB50556  -CLLP4150 SOLTA    AV          00     22     15    .00    .00
+15.18.56 JOB50556  IEF404I CLLP4150 - ENDED - TIME=15.18.56
+15.18.56 JOB50556  -CLLP4150 ENDED.  NAME-F589359              TOTAL TCB CPU TIM
+15.18.56 JOB50556  $HASP395 CLLP4150 ENDED
+------ JES2 JOB STATISTICS ------
+  04 MAR 2015 JOB EXECUTION DATE
+           20 CARDS READ
+          164 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           10 SYSOUT SPOOL KBYTES
+         0.00 MINUTES EXECUTION TIME
+
+        1 //CLLP4150 JOB 'CLLP,4120,PR32','F589359',MSGCLASS=Z
+        2 //JOBLIB   DD DSN=AV.BIBGERAL,DISP=SHR
+        3 //         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR
+        4 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR
+        5 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+        6 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        7 //STEP0    EXEC PGM=IEFBR14
+          //*
+          //* ***
+          //* ***    ANTIGA NET
+          //* ***
+          //*
+        8 //SYSOUT   DD SYSOUT=*
+        9 //SYSUDUMP DD SYSOUT=Y
+          //*
+          //*
+       10 //SOLTA    EXEC AV,
+          //       J=CLLP4160,
+          //       DS=AD.BRQ.CLLP4150.LEI2
+       11 XXAV       PROC DS='AV.JCLFILE',J=,JOB=
+       12 XXAV       EXEC PGM=PLAN4100,PARM=&JOB
+          IEFC653I SUBSTITUTION JCL - PGM=PLAN4100,PARM=
+       13 XXSTEPLIB  DD DSN=AV.BIBGERAL,DISP=SHR
+       14 XXSYSPRINT DD DUMMY
+       15 XXSYSUT1   DD DSN=&DS(&J),DISP=SHR
+          IEFC653I SUBSTITUTION JCL - DSN=AD.BRQ.CLLP4150.LEI2(CLLP4160),DISP=SH
+       16 XXSYSUT2   DD SYSOUT=(A,INTRDR),DCB=(BLKSIZE=80,LRECL=80,RECFM=F)
+       17 XXSYSIN    DD DUMMY
+          //*
+
+ STMT NO. MESSAGE
+       10 IEFC001I PROCEDURE AV WAS EXPANDED USING SYSTEM LIBRARY SUOP.PRD.PROCL
+IEF236I ALLOC. FOR CLLP4150 STEP0
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D905 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLP4150 STEP0 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IGD106I AV.CHGM.LOADLIB.BSL.LOB                      PASSED,    DDNAME=
+IGD106I SA.RDG2.SREST.AL2.DCALOAD                    PASSED,    DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST2AL2.
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R21A2A.
+IEF285I   M67777.CLLP4150.JOB50556.D0000101.?          SYSOUT
+IEF285I   M67777.CLLP4150.JOB50556.D0000102.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP0          Cond Code: 0000         Start: 04-Mar-2015 03:18:56 PM
+Step  Num: 1              PGM  Name: IEFBR14      End:   04-Mar-2015 03:18:56 PM
+CPU (TCB): 00:00:00.00                            Storage below 16M:          8k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.00                            Service Units:              92
+Tape Mnts: 0                                      Total EXCPs:                 6
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D JOBLIB              1  23,476        D9CC D JOBLIB              1  23,476
+
+
+Total DASD EXCPs:                  2        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP0   /START 2015063.1518
+IEF032I STEP/STEP0   /STOP  2015063.1518
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     8K  SYS:   396K  EXT:        4K  SYS:     9904K
+        ATB- REAL:                    32K  SLOTS:                     0K
+             VIRT- ALLOC:       4M SHRD:       0M
+IEF236I ALLOC. FOR CLLP4150 AV SOLTA
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D905 ALLOCATED TO
+IEF237I D270 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I DMY  ALLOCATED TO SYSPRINT
+IGD103I SMS ALLOCATED TO DDNAME SYSUT1
+IEF237I JES2 ALLOCATED TO SYSUT2
+IEF237I DMY  ALLOCATED TO SYSIN
+IEF142I CLLP4150 AV SOLTA - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IGD104I AD.BRQ.CLLP4150.LEI2                         RETAINED,  DDNAME=SYSUT1
+IEF285I   M67777.CLLP4150.JOB50556.D0000103.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: AV             Cond Code: 0000         Start: 04-Mar-2015 03:18:56 PM
+Step  Num: 2              PGM  Name: PLAN4100     End:   04-Mar-2015 03:18:56 PM
+CPU (TCB): 00:00:00.02                            Storage below 16M:        168k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k
+Trans Act: 00:00:00.08                            Service Units:           1,352
+Tape Mnts: 0                                      Total EXCPs:                22
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D2E3 D STEPLIB             1  23,476        D424 D SYSUT1              2  27,920
+
+
+Total DASD EXCPs:                  3        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/AV      /START 2015063.1518
+IEF032I STEP/AV      /STOP  2015063.1518
+        CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   168K  SYS:   400K  EXT:        8K  SYS:    10048K
+        ATB- REAL:                   952K  SLOTS:                     0K
+             VIRT- ALLOC:       6M SHRD:       0M
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IGD104I AV.CHGM.LOADLIB.BSL.LOB                      RETAINED,  DDNAME=
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST2AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R21A2A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP4150       System ID: AL2C        Submit: 04-Mar-2015 03:18:56 PM
+Job JESID: JOB50556       MVS level: SP7.2.1     Start:  04-Mar-2015 03:18:56 PM
+Job Class: E                                     End:    04-Mar-2015 03:18:56 PM
+CPU (TCB): 00:00:00.02                           Storage below 16M:         168k
+CPU (SRB): 00:00:00.00                           Storage above 16M:           8k
+Trans Act: 00:00:00.08                           Service Units:            1,444
+Tape Mnts: 0                                     Total EXCPs:                 28
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer: F589359
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP4150/START 2015063.1518
+IEF033I  JOB/CLLP4150/STOP  2015063.1518
+        CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC

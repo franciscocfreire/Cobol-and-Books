@@ -1,0 +1,89 @@
+
+ARQUIVO CADUV001        05/11/2014        12:52:28        - 1 -
+
+      CCLUB        CPF FILIAL ENDERECO                                                               NRO     COMPL ENDERECO
+----------- ---------- ------ ---------------------------------------------------------------------- ------- -----------------------
+  922656908        463      0 860                                                                    120     3 ETAPA
+ 1763451876        463      1
+  955157714        463      1 SIA SUL TRECHO 03 LOTE 520
+  955157722        463      1 SIA TRECHO 3 - LOTE 520
+     539732        463      1 R ALBA GONZAGA                                                         461
+   21870985        463      6 AV ARMANDO DE GODOY                                                        204
+ 1838640409        463      8
+  421855665       2348      0 R ANTONIO AQUINO MENDES                                                10
+   12073148       2348      1 R. CESAR DE MENESES                                                    00052
+   19153678       2348      1 R CESAR DE MENEZES                                                     00050
+  257846581       2641      0 CONDE DE BONFIM                                                        193     AP 1303
+  954715411       2641      0 PORTARIA BRADESCO   ACIONISTAS
+ 1397755030       2641      0 CONDE DE BONFIM              193APT 1303
+ 1017896442       3252      0 RUA PASSEIO N500 TAQUARI                                               500
+  969772220       3252      1 RUA CRATO 1065                                                         01065
+   11315873       3252      1 AV ANDROMEDA                                                           02911
+    4073479       3252      1 AV ANDROMEDA                                                           2911
+   14474484       3252      1 RUA CRATO                                                              1065
+  905301242       3252      1 AV   ANDROMEDA                                                         2911
+  574394176       4365      0 RUA VALDIVINO BRITO                                                    8       CASA
+ 1108531900       5947      0 R MONSENHOR RAEDER 225
+ 1684085362       5947      0 SITIO VISTA ALEGRE                                                     000002  ZONA RURAL
+  957751176       5947      1 AV AMADOR BUENO VEIGA 1065 S PAULO SP                                  1066
+ 1076735891       5947      1 AV AMADOR BUENO DA VEIGA                                               1066
+   15999564       5947      1 AV AMADOR BUENO DA VEIGA                                               1066
+   31686583       5947      1 AV AMADOR BUENO DA VEIGA                                               1066
+ 1296523893      10872      0 RUA TABAJARA                                                           144     CONDOMINIO MEIRA
+ 1343068522      10872      1 RUA MONSENHOR IGNACIO GIOIA                                            0000310 LOJA
+ 1628892924      11095      0 DOS PALMARES                                                           000014
+ 1677650505      11471      1 AV SARGENTO DA AERONAUTICA PLINIO F. GONCALVES                         409
+  264728157      11726      0 RUA LUIZA LUCINDA                                                      0000406
+ 1283046153      13032      0 AV COARACY NUNES                                                       00900
+   22943765      13141      1 AV PADRE ANCHIETA                                                      00622
+ 1048701449      16370      0 RUA IVO LESSA SILVEIRA, 542 CHACARA DAS PAINEIRAS                      542
+  355125927      17163      0 R PEREIRA VALENTE                                                      0666    AP 400
+   31363385      17332      1 ALAMEDA ARAGUAIA                                                       3842
+  224177192      18054      0 CARLOS PORTO CARREIRO                                                  00193   SL 501 ED
+ 1702038570      18054      1
+ 1646391591      18781      0
+  601633792      18781      0 TEREZINHA CANDIDA                                                      294
+ 1200717861      18781   7484 RUA OTAVIANO NEVES, 123
+  117320536      19459      0 DOM PEDRO II                                                           00571   AP 201 EDI
+ 1259546214      19940      1 RODOVIA DEP VICTOR MAIDA                                               S/N
+ 1748901742      20282      0 SAO SEBASTIAO                                                          2513
+   20304250      20282      1 RUA ERICO VERISSIMO                                                    17
+  910591989      21271      1 R ARANDU - DE 1 ATE 400                                                57      APT 43
+  910591997      21271      1 AVENIDA EVARISTO DELFINO PINTO                                         00701
+ 1115447685      21771      0 PA150                                                                  00001   KM 07
+  954720733      21864      0 R AMELIA527 AFLITOS
+  321803639      21864      0 RUA AMELIA                                                             327
+    1735284      21864      1 R MEDINA                                                               121
+ 1017898224      22128      0 AV NOSSA SENHORA DA CONSOLACAO                                             296
+   18788750      22128      1 ESTRADA DA AGUA LIMPA S/N KM 5                                         00005   ZO RURAL
+    4898460      22128      1 ESTRADA AGUA LIMPA  KM 05                                              S/N     CX POSTAL 227
+
+ARQUIVO CADUV001        05/11/2014        12:52:28        - 2 -
+
+      CCLUB        CPF FILIAL ENDERECO                                                               NRO     COMPL ENDERECO
+----------- ---------- ------ ---------------------------------------------------------------------- ------- -----------------------
+    5832551      22128      1 RUA NESTOR GUISSO                                                      304
+ 1355274211      23240      0 GONCALVES DIAS                                                         170     APTO 408
+   31329004      24238      1 R QUINTANA                                                             159
+  107955385      25025      0 RUA EPIFANIO SOUZA MAIA                                                00143   CASA
+ 1226397287      25025      1 R ABILIO CAMPOS N 95 AP 5 MACEDO GRS SP                                95      AP 5
+  954721802      26413      0
+   18443176      26413      1 RUA MAESTRO CARDIM.                                                    407     CONJ 1102
+   93298021      26897      0 R GAVIAO PEIXOTO                                                       13      AP 1202
+ 1835856028      26897      0 PRACA DA PAZ                                                           130
+ 1031490377      26897      1 AV JULIO MESQUITA                                                      196
+  182204405      26985      0 RUA DO PREDIO                                                          S/N
+   27870430      27385      1 AVENIDA LIDER                                                          02794
+  961787473      27385      1 RUA MAESTRO JORGE GALATI                                                   329
+   22357025      27385      1 R MAESTRO J GALATTI                                                    329
+   26440717      27385      1 AV LIDER                                                               02794
+   65194055      27391      0 SHIN QI 2 CONJUNTO 10                                                  00020   CASA 20
+   67151841      27391      0 SHIN QI 2 CONJUNTO 10                                                          CS 20
+   71164782      27391      0 SHIN QI 2 CONJUNTO 10                                                          CS 20
+   72082020      27391      0
+   77295803      27391      0
+   77554205      27391      0 SQN                                                                    312     BL A AP 403 BSB DF
+ 1076368376      28852      0 TV JOSE RODRIGUES QD 13                                                30
+ 1074518885      29491      0 DO BRONZE                                                              S/N     QD160 LT14
+   24320811      29614      1 R TERESINHA GONCALVES                                                  302
+   16700082      29614      1 RUA TEREZINHA GONCALVES                                                302

@@ -1,0 +1,197 @@
+HX0292945 - CLLPY6BX
+
+(1) - CLLPA761
+DE:
+
+//AVISOSAI DD DSN=MX.CLLP.CLLPA761.AVISOSAI(+1),          
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=DISCO,                                      
+//       SPACE=(TRK,(010000,2000),RLSE),                  
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                   
+
+PARA:
+
+//AVISOSAI DD DSN=MX.CLLP.CLLPA761.AVISOSAI(+1),         
+//       DISP=(,CATLG,DELETE),                           
+//       UNIT=DISCO,                                     
+//       SPACE=(TRK,(010000,2000),RLSE),                 
+//       DCB=(MX.A,LRECL=01290,RECFM=FB)                  
+
+
+(2) - CLLPA763
+
+Alterar STEP02A
+
+DE
+//STEP02A  EXEC PGM=CLLP0792                             
+//*                                                      
+//* ***    IDENTIFICA QUAIS AVISOS NAO DEVERAO SER       
+//* ***     IMPRESSOS APOS TRATAMENTO CEDD/CORREIO       
+//*                                                      
+//AVISOENT DD DSN=*.STEP01.SORT.SAIDA2,                  
+//       DISP=SHR                                        
+//AVISOSAI DD DSN=MX.CLLP.CLLPA763.AVISOSAI(+1),         
+//       DISP=(,CATLG,DELETE),                           
+//       UNIT=DISCO,                                     
+//       SPACE=(TRK,(010000,2000),RLSE),                 
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                  
+
+PARA
+
+//STEP02A  EXEC PGM=CLLPJ792                             
+//*                                                      
+//* ***    IDENTIFICA QUAIS AVISOS NAO DEVERAO SER       
+//* ***     IMPRESSOS APOS TRATAMENTO CEDD/CORREIO       
+//*                                                      
+//AVISOENT DD DSN=*.STEP01.SORT.SAIDA2,                  
+//       DISP=SHR                                        
+//AVISOSAI DD DSN=MX.CLLP.CLLPA763.AVISOSAI(+1),         
+//       DISP=(,CATLG,DELETE),                           
+//       UNIT=DISCO,                                     
+//       SPACE=(TRK,(010000,2000),RLSE),                 
+//       DCB=(MX.A,LRECL=1290,RECFM=FB)                 
+
+
+(3) - CLLPA764
+
+Alterar STEP1A
+
+DE
+//STEP1A   EXEC PGM=CLLP0792                              
+//*                                                       
+//* ***    IDENTIFICA QUAIS AVISOS NAO DEVERAO SER        
+//* ***     IMPRESSOS APOS TRATAMENTO CEDD/CORREIO        
+//*                                                       
+//AVISOENT DD DSN=MX.CLLP.CORRE01.NCOR.CLLPA763.LEAS(0),  
+//       DISP=SHR                                         
+//AVISOSAI DD DSN=MX.CLLP.CLLPA764.AVISOSAI(+1),          
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=DISCO,                                      
+//       SPACE=(TRK,(010000,2000),RLSE),                  
+//       DCB=(MX.A,LRECL=0600,RECFM=FB)                   
+
+
+PARA
+//STEP1A   EXEC PGM=CLLPJ792                              
+//*                                                       
+//* ***    IDENTIFICA QUAIS AVISOS NAO DEVERAO SER        
+//* ***     IMPRESSOS APOS TRATAMENTO CEDD/CORREIO        
+//*                                                       
+//AVISOENT DD DSN=MX.CLLP.CORRE01.NCOR.CLLPA763.LEAS(0),  
+//       DISP=SHR                                         
+//AVISOSAI DD DSN=MX.CLLP.CLLPA764.AVISOSAI(+1),          
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=DISCO,                                      
+//       SPACE=(TRK,(010000,2000),RLSE),                  
+//       DCB=(MX.A,LRECL=1290,RECFM=FB)                   
+
+(4) - CLLPA768 - 
+
+DE:
+//JOBLIB   DD DSN=MX.BIBGERAL.BIBGERAL,DISP=SHR                    
+            
+
+PARA:
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                           
+                 
+
+(5) - CLLPA774 - ALTERAR JOBLIB
+
+DE
+//JOBLIB   DD DSN=MX.BIBGERAL.BIBGERAL,DISP=SHR       
+//         DD DSN=MJ.BIBGERAL,DISP=SHR                
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR           
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR           
+
+PARA
+
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR        
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR   
+
+(6) - CLLPA780 
+
+STEP1
+DE
+
+//STEP1    EXEC SORTD,                                           
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                 
+//*                                                              
+//* ***    CLASSIFICA ARQUIVO PARA EMISSAO DE RELATORIO          
+//*                                                              
+//SORTIN   DD DSN=MX.CLLP.JA030S4.BLQREST(0),                    
+//       DISP=SHR                                                
+//         DD DSN=MX.CLLP.JA030S6.BLQREST(0),                    
+//       DISP=SHR                                                
+//         DD DSN=MX.CLLP.JA030S8.BLQREST(0),                    
+//       DISP=SHR                                                
+//         DD DSN=MX.CLLP.JA035S0E.BLQREST(0),                   
+//       DISP=SHR                                                
+//         DD DSN=MX.CLLP.JA635S5.BLQREST(0),                    
+//       DISP=SHR                                                
+//         DD DSN=MX.CLLP.JA270S14.BLQREST(0),                   
+//       DISP=SHR                                                
+//         DD DSN=MX.CLLP.JA285S2.BLQREST(0),                    
+//       DISP=SHR                                                
+//         DD DSN=MX.CLLP.JA288S6.BLQREST(0),                    
+//       DISP=SHR                                         
+//         DD DSN=MX.CLLP.JA288S8.BLQREST(0),             
+//       DISP=SHR                                         
+//         DD DSN=MX.CLLP.JA288S10.BLQREST(0),            
+//       DISP=SHR                                         
+
+PARA:
+
+//STEP1    EXEC SORTD,                                              
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                    
+//*                                                                 
+//* ***    CLASSIFICA ARQUIVO PARA EMISSAO DE RELATORIO             
+//*                                                                 
+//SORTIN   DD DSN=MX.CLLP.S029249.J1030S4.BLQREST(0),                       
+//       DISP=SHR                                                   
+//         DD DSN=MX.CLLP.S029249.J1030S6.BLQREST(0),                       
+//       DISP=SHR                                                   
+//         DD DSN=MX.CLLP.S029249.J1030S8.BLQREST(0),                       
+//       DISP=SHR                                                   
+//         DD DSN=MX.CLLP.S029249.J1035S0E.BLQREST(0),                      
+//       DISP=SHR                                                   
+//         DD DSN=MX.CLLP.S052987.J1635S5.BLQREST(0),                       
+//       DISP=SHR                                                   
+//         DD DSN=MX.CLLP.S033021.J1270S14.BLQREST(0),                      
+//       DISP=SHR                                                   
+//         DD DSN=MX.CLLP.S033021.J1285S2.BLQREST(0),                       
+//       DISP=SHR                                                   
+//         DD DSN=MX.CLLP.S033021.J1288S6.BLQREST(0),                       
+//       DISP=SHR                                        
+//         DD DSN=MX.CLLP.S033021.J1288S8.BLQREST(0),            
+//       DISP=SHR                                        
+//         DD DSN=MX.CLLP.S033021.J1288S10.BLQREST(0),           
+//       DISP=SHR                                        
+
+
+
+
+(7) - EXCLUIR O JOB CLLPA756 DA TABELA CLLPA700
+(8) - EXCLUIR O JOB CLLPA762 DA TABELA CLLPA700
+(9) - RETIRAR DO JOB CLLPA765 O DJ DO JOB CLLPA762
+
+
+
+HX0358600 - CLLPV64C
+(10) -  CLLPA437
+
+DE:
+
+//AVISOSEG DD DSN=MX.CLLP.CORR1L1.CORREN.CLLPK430(+1),      
+//       DISP=(,CATLG,DELETE),                              
+//       UNIT=DISCO,                                        
+//       SPACE=(TRK,(000660,0132),RLSE),                    
+//       DCB=(MX.A,LRECL=569,RECFM=FB)                      
+
+PARA:
+//AVISOSEG DD DSN=MX.CLLP.CORR1L1.CORREN.CLLPK430(+1),      
+//       DISP=(,CATLG,DELETE),                              
+//       UNIT=DISCO,                                        
+//       SPACE=(TRK,(000660,0132),RLSE),                    
+//       DCB=(MX.A,LRECL=1290,RECFM=FB)                      
+
+

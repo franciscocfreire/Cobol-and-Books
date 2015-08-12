@@ -1,0 +1,166 @@
+//CLLP0708 JOB 'CLLP,4120,PR32','I12808',MSGCLASS=Z,REGION=4M,          
+//       SCHENV=IMS                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTAN63                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTEZ33                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTFMZ1                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTFMZ2                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTDZTK                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTAN64                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTKB47                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE MOVIMENTO DE BAIXA COMANDADA           
+//* ***    POR:  EMPRESA, AGENCIA, NUMERO DO CL, TIPO BX,  E            
+//* ***    VENCIMENTO.                                                  
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.MTOGBCOM.LEI(0),                              
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CLLP.GBCOMCLA.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,0030000),RLSE),                            
+//       DCB=(MX.A,LRECL=0675,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,23,A,24,3,A,565,3,A,448,1,D,63,4,A,                     
+              61,2,A,59,2,A),FORMAT=BI                                  
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=CLLP1001                                            
+//*                                                                     
+//* ***    ATUALIZACAO DO CADASTRO DA ROTINA 'CLLP' SOMENTE             
+//* ***    COM MOVIMENTO DE BAIXAS ' BAIXA COMANDADA'                   
+//*                                                                     
+//MESTRE   DD DSN=MX.CLLP.PRV.MESTUPCO(0),                              
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATACALC(0),                              
+//       DISP=SHR                                                       
+//ARQTPBX  DD DSN=MX.CLLP.PRV.TABELA51.CLAS(0),                         
+//       DISP=SHR                                                       
+//ARQLOCAL DD DSN=MX.CLLP.PRV.CADLOCAL(0),                              
+//       DISP=SHR                                                       
+//MOVTO    DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADPOSTO DD DSN=MJ.MSPO.PRP.CADASTRO(0),                              
+//       DISP=SHR                                                       
+//CADANT   DD DSN=MX.CLLP.CADARETO.LEI(0),                              
+//       DISP=SHR                                                       
+//ARQTAXA  DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//ARQTAXA2 DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//ARQBAIXA DD DUMMY,                                                    
+//       DCB=(LRECL=0600,RECFM=FB)                                      
+//TAXA1010 DD DSN=MX.CLLP.PRP.ARQNTAX(0),                               
+//       DISP=SHR                                                       
+//CADADV   DD DSN=MX.CLLP.PRV.CADADVOG(0),                              
+//       DISP=SHR                                                       
+//ARQTABCL DD DSN=MX.CLLP.TABCL700(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,0030000),RLSE),                            
+//       DCB=(MX.A,LRECL=0041,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//ARQCONT  DD DSN=MX.CLLP.VCONT700(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000890,0178),RLSE),                                
+//       DCB=(MX.A,LRECL=0116,RECFM=FB)                                 
+//CADATU   DD DSN=MX.CLLP.CLPCL700.LEI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,0030000),RLSE),                            
+//       DCB=(MX.A,LRECL=0768,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//CLATIVO  DD DUMMY,                                                    
+//       DCB=(LRECL=0600,RECFM=FB)                                      
+//ARQTABU2 DD DSN=MX.CLLP.TABU2700(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0095,RECFM=FB)                                 
+//LISTIMAG DD DSN=MX.CLLP.IMAGI700(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,0030000),RLSE),                            
+//       DCB=(MX.A,LRECL=0650,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//ARQIOF   DD DSN=MX.CLLP.MIOFC700(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A,LRECL=0218,RECFM=FB)                                 
+//MORAMEC  DD DUMMY,                                                    
+//       DCB=(LRECL=0152,RECFM=FB)                                      
+//ARQCLDIA DD DUMMY,                                                    
+//       DCB=(LRECL=0768,RECFM=FB)                                      
+//TRANSLP  DD DUMMY,                                                    
+//       DCB=(LRECL=0675,RECFM=FB)                                      
+//CADATUES DD DUMMY,                                                    
+//       DCB=(LRECL=0600,RECFM=FB)                                      
+//RELCALC  DD SYSOUT=%%FORM#AN63,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELNCALC DD SYSOUT=%%FORM#EZ33,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELCAL2  DD SYSOUT=%%FORM#FMZ1,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//RELNCAL2 DD SYSOUT=%%FORM#FMZ2,                                       
+//       DCB=(LRECL=0150,RECFM=FBA)                                     
+//REL1010  DD SYSOUT=%%FORM#DZTK,                                       
+//       DCB=(LRECL=0080,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP1201                                            
+//*                                                                     
+//* ***    LISTA VALORES BAIXADOS COM RECEBIMENTO A MENOR               
+//*                                                                     
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATAPROX(0),                              
+//       DISP=SHR                                                       
+//CADACLLP DD DSN=*.STEP2.CADATU,                                       
+//       DISP=SHR                                                       
+//RELVALBX DD DSN=MX.CLLP.RELVALBX(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,0030000),RLSE),                            
+//       DCB=(MX.A,LRECL=0133,RECFM=FBA),                               
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC PGM=PLAN1970,                                           
+//       PARM='02'                                                      
+//*                                                                     
+//* ***    GERA LISTAGENS COM DESTINOS DISTINTOS.                       
+//*                                                                     
+//ENT00001 DD DSN=*.STEP3.RELVALBX,                                     
+//       DISP=OLD                                                       
+//SAI00001 DD SYSOUT=%%FORM#AN64,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SAI00002 DD SYSOUT=%%FORM#KB47,                                       
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

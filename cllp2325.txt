@@ -1,0 +1,192 @@
+//CLLP2325 JOB 'CLLP,4120,PR32','B274272',MSGCLASS=Z                    
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHBGN                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHBGO                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTHBGP                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    AGRUPA OS ARQUIVOS COM EXPANSAO DE MORA E CLLP               
+//* ***    CLASSIFICA POR EMPRESA, AG, CTA, CARTEIRA E DATA VCTO        
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.MORASEP.CLLP2315.LEI(0),                      
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.TEMPCARG.P2320.LEI(0),                        
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.ARQDB22.T2325.CLAS(+1),                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0677,RECFM=FB,BUFNO=40)                        
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,A,16,5,A,21,3,A,24,4,A,34,4,A,31,2,A,28,2,A,140,8,A), 
+ FORMAT=BI                                                              
+ END                                                                    
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK25 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK26 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK27 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK28 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK29 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK30 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK31 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK33 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK34 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK35 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK36 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK37 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK38 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK39 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK40 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK41 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//SORTWK42 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(01080))                                            
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=CLLP0512                                            
+//*                                                                     
+//* ***    CONFRONTA ARQUIVO DE GERENTE E PAB COM                       
+//* ***    ARQUIVO COPIA DA TABELA LPCLB000.                            
+//*                                                                     
+//GERENPAB DD DSN=MX.LPCL.GERENPAB(0),                                  
+//       DISP=SHR                                                       
+//ARQDB22  DD DSN=*.STEP1A.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.NOVO(0),                             
+//       DISP=SHR                                                       
+//ARQDB22S DD DSN=MX.CLLP.CLLP2325.GERPAB(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0684,RECFM=FB,BUFNO=40)                        
+//RELATO   DD SYSOUT=%%FORM#HBGN,                                       
+//       DCB=(LRECL=081,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=CLLP0011                                            
+//*                                                                     
+//* ***    ATUALIZA INFORMACAO DE:                                      
+//* ***      - CODIGO DE JUNCAO DE GERENCIA REGIONAL                    
+//*                                                                     
+//AQGERREG DD DSN=MX.LPCL.PRV.AQGERREG(0),                              
+//       DISP=SHR                                                       
+//ARQDBANT DD DSN=*.STEP2.ARQDB22S,                                     
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQDBATU DD DSN=MX.CLLP.TEMCLLP.CLLP2325(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,50),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0689,RECFM=FB,BUFNO=40)                        
+//RELATO   DD SYSOUT=%%FORM#HBGO,                                       
+//       DCB=(LRECL=0133,RECFM=FBM)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP4    EXEC PGM=CLLP0514,                                           
+//       PARM='MOCL'                                                    
+//*                                                                     
+//* ***    CONSISTIR ARQUIVOS DE AGENCIAS OPERADORAS                    
+//*                                                                     
+//MESTAG   DD DSN=MX.CLLP.MESTAGEN.NOVO(0),                             
+//       DISP=SHR                                                       
+//ARQDATA  DD DSN=MX.CLLP.PRV.DATAMOV(0),                               
+//       DISP=SHR                                                       
+//ARQOPER  DD DSN=MX.LPCL.PRV.AGRELAC(0),                               
+//       DISP=SHR                                                       
+//ARQDB22E DD DSN=*.STEP3.ARQDBATU,                                     
+//       DISP=OLD                                                       
+//ARQDB22S DD DSN=MX.CLLP.D0PRVMZ.ARQDB22.CLLP2325.LEI(+1),             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=VTSLG,                                                    
+//       VOL=(,,,255),                                                  
+//       DCB=(MX.A,LRECL=0694,RECFM=FB)                                 
+//RELAT01  DD SYSOUT=%%FORM#HBGP,                                       
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

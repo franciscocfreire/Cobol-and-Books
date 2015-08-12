@@ -1,0 +1,113 @@
+//CLLP8036 JOB 'CLLP,4120,PR32','B706725',MSGCLASS=Z                    
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*#STEP1    EXEC PGM=PLAN1010                                          
+//*#                                                                    
+//*# ***    CRIACAO DO ARQ. BXCMMORA, QUE SERA LIDO NO ALPHAVILLE,      
+//*# ***    NO JOB MRCC0060 AC, VIA CANAL ESCON.                        
+//*#                                                                    
+//*#SYSUT1   DD DSN=MX.CLLP.BXCMMORA.CLLP8035(0),                       
+//*#       DISP=SHR                                                     
+//*#SYSUT2   DD DSN=TA.CLLP.MRCC.BXCMMORA,                              
+//*#       DISP=(,CATLG,DELETE),                                        
+//*#       UNIT=DISCO,                                                  
+//*#       SPACE=(TRK,(0100,0100),RLSE),                                
+//*#       DCB=(LRECL=0126,RECFM=FB)                                    
+//*#PRINTER  DD SYSOUT=*                                                
+//*#SYSOUT   DD SYSOUT=*                                                
+//*#SYSUDUMP DD SYSOUT=Y                                                
+//*#                                                                    
+//STEP1A   EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    CRIACAO DO ARQ. BXCMMORA, QUE SERA LIDO NO ALPHAVILLE,       
+//* ***    NO JOB MRCC0060 AC, VIA CANAL ESCON.                         
+//*                                                                     
+//SYSUT1   DD DSN=MX.CLLP.BXCMMORA.CLLP8035(0),                         
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=TA.CLLP.MOCC.BXCMMORA,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0100,0100),RLSE),                                  
+//       DCB=(LRECL=0128,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1B   EXEC SORTD                                                   
+//*                                                                     
+//* ***    SEPARAR AS CARTEIRAS NUMERICAS DAS ALFANUMERICAS             
+//* ***    CARTEIRA X(3) POSICAO 12                                     
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.BXCMLSNG.CLLP8035(0),                         
+//       DISP=SHR                                                       
+//SORTOUT1 DD DSN=MX.CLLP.BXCMLSNG.CARTALF1(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,01),                                               
+//       SPACE=(TRK,(000100,0010),RLSE),                                
+//       DCB=(MX.A,LRECL=0054,RECFM=FB)                                 
+//SORTOUT2 DD DSN=AD.BRQ.CLLP.BXCMLSNG.CARTNUM1(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,01),                                               
+//       SPACE=(TRK,(000100,0010),RLSE),                                
+//       DCB=(MX.A,LRECL=0054,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ OUTFIL INCLUDE=(12,3,ZD,NE,NUM),FNAMES=SORTOUT1                        
+ OUTFIL SAVE,FNAMES=SORTOUT2                                            
+ SORT FIELDS=COPY                                                       
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP1C   EXEC SORTD                                                   
+//*                                                                     
+//* ***    COMPACTAR AS CARTEIRAS                                       
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1B.SORT.SORTOUT2,                               
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.BXCMLSNG.CARTPAC1(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,01),                                               
+//       SPACE=(TRK,(000100,0010),RLSE),                                
+//       DCB=(MX.A,LRECL=0054,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ OUTFIL OUTREC=(1,11,12,3,ZD,TO=PDF,LENGTH=3,15,40)                     
+ SORT FIELDS=COPY                                                       
+ END                                                                    
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2    EXEC PGM=PLAN1010                                            
+//*                                                                     
+//* ***    CRIACAO DO ARQ. BXCMLSNG, QUE SERA LIDO                      
+//* ***    NO JOB LSNG0125 MX.                                          
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP1C.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=MX.CLLP.LSNG.BXCMLSNG,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0100,0100),RLSE),                                  
+//       DCB=(LRECL=0102,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC PGM=PLAN1010,                                           
+//       PARM=SIM                                                       
+//*                                                                     
+//* ***    CRIACAO DO ARQ. BXCMSCON, QUE SERA LIDO                      
+//* ***    NO JOB SCON1129 (ALPHAVILLE)                                 
+//*                                                                     
+//SYSUT1   DD DSN=MX.CLLP.BXCMSCON.CLLP8035(0),                         
+//       DISP=SHR                                                       
+//SYSUT2   DD DSN=TA.CLLP.SCON.BXCMCONS,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0100,0100),RLSE),                                  
+//       DCB=(LRECL=0044,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

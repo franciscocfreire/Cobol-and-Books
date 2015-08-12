@@ -1,0 +1,15 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP2568                SELECAO DAS PENDENCIAS A SEREM ENVIADAS PARA ADVOGADOS                                       PAG.:         1                            
+                                                                                                                          05/03/2015                            
+                                                                                                                                                                
+ AGEN   CONTA CART CONTRATO DATA VCTO. ID U.OCOR. NAT.  ADVOGADO      VR.CONTABIL   VR.ENC.VENCIDO     VR.CONT.LIQ.      VR.DE COBR.                            
+----- -------  ---  ------- ---------- -- ---    ---   --------- ---------------- ---------------- ---------------- ----------------                            
+  127  244041  C59     5138 10.03.2009 MO  96    094   529969998             0,00             0,00        161871,24        196564,98                            
+                                                      TOTALIZACAO                                                                                               
+                                         -------------------------------------------------------                                                                
+                                         REGISTROS LIDOS NO ARQDB22 ...........:        4.589                                                                   
+                                         REGISTROS GRAVADOS NO ARQSEL..........:            1                                                                   
+                                         REGISTROS GRAVADOS NO AQLSNGER........:            0                                                                   
+                                         REGISTROS GRAVADOS NO AQLSNSEL........:            0                                                                   
+                                         REGISTROS GRAVADOS NO RELATORIO.......:            1                                                                   

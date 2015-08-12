@@ -1,0 +1,77 @@
+//CLLP0163 JOB 'CLLP,4120,PR32','D81645',MSGCLASS=Z,REGION=4M,          
+//       SCHENV=DB2                                                     
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=MZNJE01,CLASS=E                                  
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=MZNJE01,CLASS=J                                  
+//OUTM     OUTPUT DEST=MZNJE01,CLASS=M                                  
+//OUTN     OUTPUT DEST=ANYLOCAL,CLASS=N                                 
+//OUTO     OUTPUT DEST=MZNJE01,CLASS=O                                  
+//OUTP     OUTPUT DEST=ANYLOCAL,CLASS=P                                 
+//OUTQ     OUTPUT DEST=ANYLOCAL,CLASS=Q                                 
+//OUTR     OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTRR    OUTPUT DEST=MZNJE01,CLASS=R                                  
+//OUTV     OUTPUT DEST=MZNJE01,CLASS=V                                  
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAC2                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAC3                 
+//* ***    %%LIBSYM AC.EVTA.PRV.CAFORM %%MEMSYM OUTIAC4                 
+//*                                                                     
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA POR AG - C/C                                      
+//*                                                                     
+//SORTIN   DD DSN=AC.CLLP.SAISEMCR.IRES(0),                             
+//       DISP=SHR                                                       
+//         DD DSN=AC.CLLP.AGCONTA(0),                                   
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.SAISEMCR.IRESCLAS(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000410,0082),RLSE),                                
+//       DCB=(AC.A,LRECL=0150,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(3,3,PD,A,6,7,PD,A)                                        
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0010                                            
+//*                                                                     
+//* ***    OBTEM CPSSOA, CPSSOA-CADTR E DADOS DE PJ.QUANDO NAO          
+//* ***    ENCONTRADOS, EST„O NAS TABS C/BCO, AG E CTA                  
+//*                                                                     
+//ARQPARVV DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//PENDFICA DD DSN=AC.CLLP.ARQFICA.FICAV000.CLASFI(0),                   
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQPEFIS DD DSN=AC.CLLP.RDAB0010.PEFIS(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AC.A,LRECL=150,RECFM=FB)                                  
+//ARQPEJUR DD DSN=AC.CLLP.RDAB0010.PEJUR(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AC.A,LRECL=150,RECFM=FB)                                  
+//ARQDAPES DD DSN=AC.CLLP.LOGRJUR.RDAB0010(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001390,0278),RLSE),                                
+//       DCB=(AC.A,LRECL=500,RECFM=FB)                                  
+//RELVAZIO DD SYSOUT=%%FORM#IAC2,                                       
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELTOTAL DD SYSOUT=%%FORM#IAC3,                                       
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELNENCO DD SYSOUT=%%FORM#IAC4,                                       
+//       DCB=(LRECL=0132,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

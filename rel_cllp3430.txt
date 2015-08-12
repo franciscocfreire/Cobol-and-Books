@@ -1,0 +1,19 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO --- 
+                                                                                                                                     
+CLLP6472                                        B A N C O   B R A D E S C O   S / A                                      PAG.:     1 
+                                                -----------------------------------                                                  
+11/09/2014                                           RELATORIO DE TOTALIZACAO                                         HORA: 15:25:41 
+                                                     ------------------------                                                        
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                 TOTAL DE REGISTROS LIDOS    NO ARQUIVO CONTRAT  :       1.000                                       
+                                                                                                                                     
+                                 TOTAL DE REGISTROS DESPREZADOS ARQUIVO CONTRAT  :         863                                       
+                                                                                                                                     
+                                 TOTAL DE REGISTROS LIDOS    NO ARQUIVO PARCELAS :          49                                       
+                                                                                                                                     
+                                 TOTAL DE REGISTROS LIDOS    NO ARQUIVO CONTACOR :         296                                       
+                                                                                                                                     
+                                 TOTAL DE REGISTROS GRAVADOS NO ARQUIVO SDOCONTR :         137                                       

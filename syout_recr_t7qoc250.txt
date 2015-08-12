@@ -1,0 +1,228 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 2 A  --  N O D E
+
+17.17.53 JOB57736 ---- WEDNESDAY, 10 SEP 2014 ----
+17.17.53 JOB57736  IRR010I  USERID M67777   IS ASSIGNED TO THIS JOB.
+17.17.53 JOB57736  $EXIT006A  Job T7QOC250 Jobid(JOB57736) alterado para CLASS=E
+17.17.53 JOB57736  ICH70001I M67777   LAST ACCESS AT 16:11:47 ON WEDNESDAY, SEPT
+17.17.53 JOB57736  $HASP373 T7QOC250 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+17.17.53 JOB57736  IEF403I T7QOC250 - STARTED - TIME=17.17.53
+17.17.54 JOB57736  -                                                --TIMINGS (M
+17.17.54 JOB57736  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+17.17.54 JOB57736  -T7QOC250 STEP1                00    231     30    .00    .00
+17.17.54 JOB57736  -T7QOC250 STEP2                00    217     17    .00    .00
+17.17.54 JOB57736  IEF404I T7QOC250 - ENDED - TIME=17.17.54
+17.17.54 JOB57736  -T7QOC250 ENDED.  NAME-                     TOTAL TCB CPU TIM
+17.17.54 JOB57736  $HASP395 T7QOC250 ENDED
+------ JES2 JOB STATISTICS ------
+  10 SEP 2014 JOB EXECUTION DATE
+           45 CARDS READ
+          223 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           15 SYSOUT SPOOL KBYTES
+         0.00 MINUTES EXECUTION TIME
+
+        1 //T7QOC250 JOB 'DECR,4252,BN,DECR5010',MSGCLASS=Z,CLASS=O,PRTY=14
+        2 //JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR
+        3 //         DD DSN=AV.BIBGERAL,DISP=SHR
+        4 //         DD DSN=MQ2A2.QSA2.USERAUTH,DISP=SHR
+        5 //         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR
+        6 //         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR
+        7 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        8 //STEP1    EXEC PGM=RECR2IJF
+          //*
+          //* ***    *********************************************************
+          //* ***    FORMATAR ARQUIVO DE AVISO DE COBRANCA INCLUINDO OS DADOS
+          //* ***    NECESSARIOS PARA COMPOR O FORMULARIO.
+          //* ***    *********************************************************
+          //*
+        9 //EMODLAVS DD DSN=AD.BRQ.RECR.T7QO.JC247S0B.SCOBNOVO,
+          //       DISP=SHR
+       10 //SMODLAVS DD DSN=AD.BRQ.JC250S01.SMODLAVS,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,40),
+          //       SPACE=(TRK,(25000,7500),RLSE),
+          //       DCB=(AD.A,LRECL=4000,RECFM=FB)
+       11 //SYSOUT   DD SYSOUT=*
+       12 //SYSUDUMP DD SYSOUT=Y
+          //*
+       13 //STEP2    EXEC PGM=RECR2IHV
+          //*
+          //* ***    ********************************************************
+          //* ***    ACESSAR O MODULO DO ECOR PARA ENVIAR O ARQUIVO DE AVISO
+          //* ***    DE COBRANCA.
+          //* ***    ********************************************************
+          //*
+          //* ***    INSTRUCOES PARA REPROCESSAMENTO CONSULTAR O JOB PA31A999.
+          //*
+       14 //EMODLAVS DD DSN=*.STEP1.SMODLAVS,
+          //       DISP=SHR
+       15 //SMODLAVS DD DSN=AD.BRQ.JC250S02.SMODLAVS,
+          //       DISP=(,CATLG,CATLG),
+          //       UNIT=(DISCO,40),
+          //       SPACE=(TRK,(25000,7500)),
+          //       DCB=(AD.A,LRECL=1000,RECFM=FB)
+          //*#RAINPUT  DD *
+          //*#REST_NEWDSN(RETURN)
+       16 //SYSOUT   DD SYSOUT=*
+       17 //SYSUDUMP DD SYSOUT=Y
+          //*
+
+ICH70001I M67777   LAST ACCESS AT 16:11:47 ON WEDNESDAY, SEPTEMBER 10, 2014
+IEF236I ALLOC. FOR T7QOC250 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D905 ALLOCATED TO
+IEF237I D036 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME EMODLAVS
+IGD101I SMS ALLOCATED TO DDNAME (SMODLAVS)
+        DSN (AD.BRQ.JC250S01.SMODLAVS                    )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DF6
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I T7QOC250 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AV.BIBGERTT                                  PASSED,    DDNAME=JOBLIB
+IGD106I AV.BIBGERAL                                  PASSED,    DDNAME=
+IGD106I MQ2A2.QSA2.USERAUTH                          PASSED,    DDNAME=
+IGD106I SA.RDG2.SREST.AL2.DCALOAD                    PASSED,    DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= ST2AL2.
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13A2A.
+IGD104I AD.BRQ.RECR.T7QO.JC247S0B.SCOBNOVO           RETAINED,  DDNAME=EMODLAVS
+IGD104I AD.BRQ.JC250S01.SMODLAVS                     RETAINED,  DDNAME=SMODLAVS
+IEF285I   M67777.T7QOC250.JOB57736.D0000101.?          SYSOUT
+IEF285I   M67777.T7QOC250.JOB57736.D0000102.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 10-Sep-2014 05:17:53 PM
+Step  Num: 1              PGM  Name: RECR2IJF     End:   10-Sep-2014 05:17:54 PM
+CPU (TCB): 00:00:00.05                            Storage below 16M:        440k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      5,004k
+Trans Act: 00:00:00.13                            Service Units:           2,015
+Tape Mnts: 0                                      Total EXCPs:               231
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB             89  23,200        D2E3 D JOBLIB             60  23,200
+D7B6 D JOBLIB              2  23,200        D0A2 D EMODLAVS           13  27,000
+D255 D SMODLAVS            9  24,000
+
+Total DASD EXCPs:                173        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014253.1717
+IEF032I STEP/STEP1   /STOP  2014253.1717
+        CPU:     0 HR  00 MIN  00.05 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   440K  SYS:   384K  EXT:     5004K  SYS:    11016K
+IEF236I ALLOC. FOR T7QOC250 STEP2
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D905 ALLOCATED TO
+IEF237I D036 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME EMODLAVS
+IGD101I SMS ALLOCATED TO DDNAME (SMODLAVS)
+        DSN (AD.BRQ.JC250S02.SMODLAVS                    )
+        STORCLAS (STANDARD) MGMTCLAS (DD2A7D2M) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA2DCZ
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I T7QOC250 STEP2 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AD.BRQ.JC250S01.SMODLAVS                     RETAINED,  DDNAME=EMODLAVS
+IGD104I AD.BRQ.JC250S02.SMODLAVS                     RETAINED,  DDNAME=SMODLAVS
+IEF285I   M67777.T7QOC250.JOB57736.D0000103.?          SYSOUT
+IEF285I   M67777.T7QOC250.JOB57736.D0000104.?          SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP2          Cond Code: 0000         Start: 10-Sep-2014 05:17:54 PM
+Step  Num: 2              PGM  Name: RECR2IHV     End:   10-Sep-2014 05:17:54 PM
+CPU (TCB): 00:00:00.03                            Storage below 16M:        440k
+CPU (SRB): 00:00:00.00                            Storage above 16M:      5,164k
+Trans Act: 00:00:00.10                            Service Units:           1,181
+Tape Mnts: 0                                      Total EXCPs:               217
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+D0E1 D JOBLIB            101  23,200        D2E3 D JOBLIB             60  23,200
+D7B6 D JOBLIB              2  23,200        D255 D EMODLAVS            4  24,000
+
+
+Total DASD EXCPs:                167        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP2   /START 2014253.1717
+IEF032I STEP/STEP2   /STOP  2014253.1717
+        CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   440K  SYS:   384K  EXT:     5164K  SYS:    10948K
+IGD104I AV.BIBGERTT                                  RETAINED,  DDNAME=JOBLIB
+IGD104I AV.BIBGERAL                                  RETAINED,  DDNAME=
+IGD104I MQ2A2.QSA2.USERAUTH                          RETAINED,  DDNAME=
+IGD104I SA.RDG2.SREST.AL2.DCALOAD                    RETAINED,  DDNAME=
+IEF285I   DB2A2.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= ST2AL2.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13A2A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: T7QOC250       System ID: AL2A        Submit: 10-Sep-2014 05:17:53 PM
+Job JESID: JOB57736       MVS level: SP7.1.3     Start:  10-Sep-2014 05:17:53 PM
+Job Class: E                                     End:    10-Sep-2014 05:17:54 PM
+CPU (TCB): 00:00:00.08                           Storage below 16M:         440k
+CPU (SRB): 00:00:00.00                           Storage above 16M:       5,164k
+Trans Act: 00:00:00.24                           Service Units:            3,196
+Tape Mnts: 0                                     Total EXCPs:                448
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: M67777                           Programmer:
+Acct Info: DECR,4252,BN,DECR5010
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/T7QOC250/START 2014253.1717
+IEF033I  JOB/T7QOC250/STOP  2014253.1717
+        CPU:     0 HR  00 MIN  00.08 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+
+RECR2IJF - INICIO DO PROCESSAMENTO
+************* PROGRAMA RECR2IJF *************
+*                                           *
+* REGISTROS LIDOS EMODLAVS...:          300 *
+*                                           *
+* REGISTROS GRAVADOS SMODLAVS:           51 *
+*                                           *
+*********************************************
+************* PROGRAMA RECR2IJF *************
+*                                           *
+*  PROGRAMA RECR2IJF ENCERRADO COM SUCESSO  *
+*                                           *
+************* PROGRAMA RECR2IJF *************
+
+*******************************************
+*******************************************
+****         CHECKPOINT RESTART        ****
+*******************************************
+** PROCESSO / JOB CADASTRADO PARA OPERAR **
+**    NA MODALIDADE DE CONTINGENCIA      **
+*******************************************
+** NAO E POSSIVEL UM RESTART AUTOMATICO  **
+*******************************************
+*******************************************
+RECR2IHV - PROCESSAMENTO NORMAL (SEM RESTART)
+************* PROGRAMA RECR2IHV *************
+*                                           *
+* REGISTROS LIDOS EMODLAVS...:            1 *
+*                                           *
+* REGISTROS GRAVADOS SMODLAVS:            0 *
+*                                           *
+* ACESSOS REALIZADOS AO ECOR.:            0 *
+*                                           *
+*********************************************

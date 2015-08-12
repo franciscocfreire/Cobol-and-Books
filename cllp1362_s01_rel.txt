@@ -1,0 +1,13 @@
+                         --- INICIO DO RELATORIO ---                            
+                                                                                
+CLLP7318               SISTEMA DE REMESSA PARA ESCRITORIO              PAG.   1 
+05/03/2015                   RELATORIO DE TOTALIZACAO                  15:18:13 
+                     - TOTAIS - DADOS CADASTRAIS DO CLIENTE                     
+                   LIDOS DO CADASTRO DE PENDENTES ............               20 
+                   LIDOS DO CADASTRO DE CLIENTES .............        2.723.710 
+                   DESPREZADOS DO CADASTRO DE PENDENCIAS .....               14 
+                   GRAVADOS NO CADASTRO DE PENDENTES ATUAL ...                6 
+                   GRAVADOS NO CADASTRO DE CLIENTES (REES) ...                6 
+                   ERRO - CLIENTES NAO ENCONTRADOS ...........               14 
+                   ERRO - CLIENTES SEM CPF ...................                0 
+                   ERRO - CLIENTES SEM TELEFONE ..............                3 

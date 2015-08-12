@@ -1,0 +1,15 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO --- 
+                                                                                                                                     
+ARQUIVO I#RDAB05        28/10/2014        23:01:56        - 1 -                                                                      
+                                                                                                                                     
+       CCLUB        CPF FILIAL DCAD-PSSOA                               HATULZ                                                       
+------------ ---------- ------ ---------------------------------------- ----------                                                   
+    94955603     106889      0 ODIRLEI MARTINS                          05.09.2014                                                   
+    15607860     107434      1                                          02.04.2014                                                   
+    30698260     108217      1                                          30.04.2014                                                   
+   905047761     109261      0 BRUNO GOMIDE PERILLO DE ARAUJO           07.05.2014                                                   
+  1245314936     122703      1                                          14.10.2014                                                   
+   100518125     139192      0 DR JOSE ANTONIO SCAFF                    14.05.2014                                                   
+   185251463     140792      0 GILBERTO RISCINHO BASTOS                 09.07.2014                                                   
+  1738551960  660000092      0 HUMBERTO MARTINS DE CASTRO               31.10.2013                                                   
+   453806112  660000172      0 HUMBERTO MIRANDA DA CUNHA                08.11.2012                                                   

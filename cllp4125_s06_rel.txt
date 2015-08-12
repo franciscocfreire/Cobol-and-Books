@@ -1,0 +1,979 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      1                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+           1 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+           2 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+           3 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+           4 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+           5 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+           6 0016  34219190                                00000                                  00000  000                                                    
+           7 0017   2245931                                00000                                  00000  000                                                    
+           8 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+           9 0017   2245931                                00000                                  00000  000                                                    
+          10 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          11 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          12 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          13 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          14 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          15 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          16 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          17 0019  32349145                                00000                                  00000  000                                                    
+          18 0016  34219190                                00000                                  00000  000                                                    
+          19 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          20 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          21 0110   6929052                                00000                                  00000  000                                                    
+          22 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          23 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          24 0014  33252409 R DUQUE DE CAXIAS              00951             OURINHOS             19915  210  SP 0014  33252409                                 
+          25 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          26 0011 961197868                                00000                                  00000  000                                                    
+          27 0110   6929052                                00000                                  00000  000                                                    
+          28 0019  32349145                                00000                                  00000  000                                                    
+          29 0017   2245931                                00000                                  00000  000                                                    
+          30 0017   2245931                                00000                                  00000  000                                                    
+          31 0110   6929052                                00000                                  00000  000                                                    
+          32 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          33 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          34 0017  96051728                                00000                                  00000  000                                                    
+          35 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          36 0016  34219190                                00000                                  00000  000                                                    
+          37 0011 991523445                                00000                                  00000  000                                                    
+          38 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          39 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          40 0016  34219190                                00000                                  00000  000                                                    
+          41 0110   6929052                                00000                                  00000  000                                                    
+          42 0017   2245931                                00000                                  00000  000                                                    
+          43 0019  32349145                                00000                                  00000  000                                                    
+          44 0019  32349145                                00000                                  00000  000                                                    
+          45 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          46 0011   8589591                                00000                                  00000  000                                                    
+          47 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          48 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          49 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          50 0110   6929052                                00000                                  00000  000                                                    
+          51 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      2                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+          52 0014  33252409 R DUQUE DE CAXIAS              00951             OURINHOS             19915  210  SP 0014  33252409                                 
+          53 0017   2245931                                00000                                  00000  000                                                    
+          54 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          55 0110   6929052                                00000                                  00000  000                                                    
+          56 0016  34219190                                00000                                  00000  000                                                    
+          57 0014  35328256 R ANTONIO RIBEIRO              00110  CASA       LINS                 16402  197  SP 0014  35328256                                 
+          58 0016  34219190                                00000                                  00000  000                                                    
+          59 0019  32349145                                00000                                  00000  000                                                    
+          60 0019  32349145                                00000                                  00000  000                                                    
+          61 0017  96051728                                00000                                  00000  000                                                    
+          62 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          63 0022  27233998 ARARIBOIA                      00007             NITEROI              24020  030  RJ 0022  27232798                                 
+          64 0062  96123853 O MESMO                        00001             JARAGUA              76330  000  GO 0062  84334780                                 
+          65 0019  32349145                                00000                                  00000  000                                                    
+          66 0019  32349145                                00000                                  00000  000                                                    
+          67 0016  34219190                                00000                                  00000  000                                                    
+          68 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          69 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          70 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          71 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          72 0017   2245931                                00000                                  00000  000                                                    
+          73 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          74 0016  34219190                                00000                                  00000  000                                                    
+          75 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          76 0019  32349145                                00000                                  00000  000                                                    
+          77 0011 969567121                                00000                                  00000  000                                                    
+          78 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          79 0017   2245931                                00000                                  00000  000                                                    
+          80 0017   2245931                                00000                                  00000  000                                                    
+          81 0016  34219190                                00000                                  00000  000                                                    
+          82 0055  99568814                                00000                                  00000  000                                                    
+          83 0110   6929052                                00000                                  00000  000                                                    
+          84 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+          85 0017  96051728                                00000                                  00000  000                                                    
+          86 0017   2245931                                00000                                  00000  000                                                    
+          87 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          88 0017  96051728                                00000                                  00000  000                                                    
+          89 0017   2245931                                00000                                  00000  000                                                    
+          90 0110   6929052                                00000                                  00000  000                                                    
+          91 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          92 0110   6929052                                00000                                  00000  000                                                    
+          93 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          94  011   4499997                                00000                                  00000  000                                                    
+          95 0110   6929052                                00000                                  00000  000                                                    
+          96 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+          97 0014  32523477                                00000                                  00000  000                                                    
+          98 0066   5444764                                00000                                  00000  000                                                    
+          99 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         100 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         101 0016  34219190                                00000                                  00000  000                                                    
+         102 0019  32349145                                00000                                  00000  000                                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      3                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         103 0019  32349145                                00000                                  00000  000                                                    
+         104 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         105 0016  34219190                                00000                                  00000  000                                                    
+         106 0019  32349145                                00000                                  00000  000                                                    
+         107 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         108 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         109 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         110 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         111 0014  33252409 R DUQUE DE CAXIAS              00951             OURINHOS             19915  210  SP 0014  33252409                                 
+         112 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         113 0016  34219190                                00000                                  00000  000                                                    
+         114 0016  34219190                                00000                                  00000  000                                                    
+         115 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         116 0017   2245931                                00000                                  00000  000                                                    
+         117 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         118 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         119 0017   2245931                                00000                                  00000  000                                                    
+         120 0017   2245931                                00000                                  00000  000                                                    
+         121 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         122 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         123 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         124 0019  32349145                                00000                                  00000  000                                                    
+         125 0017   2245931                                00000                                  00000  000                                                    
+         126 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         127 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         128 0017   2245931                                00000                                  00000  000                                                    
+         129 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         130 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         131 0019  32349145                                00000                                  00000  000                                                    
+         132 0110   6929052                                00000                                  00000  000                                                    
+         133 0017  96051728                                00000                                  00000  000                                                    
+         134 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         135 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         136 0016  34219190                                00000                                  00000  000                                                    
+         137 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         138 0110   6929052                                00000                                  00000  000                                                    
+         139 0017   2245931                                00000                                  00000  000                                                    
+         140 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         141 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         142 0011   8589591                                00000                                  00000  000                                                    
+         143 0017  96051728                                00000                                  00000  000                                                    
+         144 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         145 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         146 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         147 0055  99568814                                00000                                  00000  000                                                    
+         148 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         149 0014  33252409 R DUQUE DE CAXIAS              00951             OURINHOS             19915  210  SP 0014  33252409                                 
+         150 0014  33252409 R DUQUE DE CAXIAS              00951             OURINHOS             19915  210  SP 0014  33252409                                 
+         151 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         152 0055  99568814                                00000                                  00000  000                                                    
+         153 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      4                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         154 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         155 0110   6929052                                00000                                  00000  000                                                    
+         156 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         157 0011  23629880 AV GUILHERME COTCHING          00890             SAO PAULO            02113  012  SP 0011  23629880                                 
+         158 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         159 0017   2245931                                00000                                  00000  000                                                    
+         160 0019  32349145                                00000                                  00000  000                                                    
+         161 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         162 0016  34219190                                00000                                  00000  000                                                    
+         163 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         164 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         165 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         166 0011   2856988                                00000                                  00000  000                                                    
+         167 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         168 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         169 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         170 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         171 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         172 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         173 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         174 0031  33824337                                00000                                  00000  000                                                    
+         175 0013  38217592 RUA UM BR 116 KM 439 B. ARAPON 00169             REGISTRO             11900  000  SP 0013  38217592                                 
+         176 0016   6265347                                00000                                  00000  000                                                    
+         177 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         178 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         179 0077   6121457                                00000                                  00000  000                                                    
+         180 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         181 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         182 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         183 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         184 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         185 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         186 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         187 0019  32349145                                00000                                  00000  000                                                    
+         188 0055  99568814                                00000                                  00000  000                                                    
+         189 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         190 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         191 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         192 0011  32217704 R 24 DE MAIO                   00247  AP43       SAO PAULO            01041  001  SP 0011  32217704                                 
+         193 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         194 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         195 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         196 0011   8661281                                00000                                  00000  000                                                    
+         197 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         198 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         199 0031  33522252 ALAN KARDEC                    00001             CONTAGEM             32145  140  MG 0031  99999999                                 
+         200 0011   2856988                                00000                                  00000  000                                                    
+         201 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         202 1420    421599                                00000                                  00000  000                                                    
+         203 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         204 0017  96051728                                00000                                  00000  000                                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      5                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         205 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         206 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         207 0110   6929052                                00000                                  00000  000                                                    
+         208 0069  92536869                                00000                                  00000  000                                                    
+         209 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         210 0016  34219190                                00000                                  00000  000                                                    
+         211 0017   2245931                                00000                                  00000  000                                                    
+         212 0110   2281999                                00000                                  00000  000                                                    
+         213 0019  32349145                                00000                                  00000  000                                                    
+         214 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         215 0016  34219190                                00000                                  00000  000                                                    
+         216 0017  32751915                                00000                                  00000  000                                                    
+         217 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         218 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         219 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         220 0013  38217592 RUA UM BR 116 KM 439 B. ARAPON 00169             REGISTRO             11900  000  SP 0013  38217592                                 
+         221 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         222 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         223 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         224 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         225 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         226 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         227 0019  32349145                                00000                                  00000  000                                                    
+         228 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         229 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         230 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         231 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         232 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         233 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         234 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         235 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         236 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         237 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         238 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         239 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         240 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         241 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         242 0018   2223456                                00000                                  00000  000                                                    
+         243 0110   6929052                                00000                                  00000  000                                                    
+         244 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         245 0017   2245931                                00000                                  00000  000                                                    
+         246 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         247 0011 969115310                                00000                                  00000  000                                                    
+         248 0011  37268530                                00000                                  00000  000                                                    
+         249 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         250 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         251 1420    421599                                00000                                  00000  000                                                    
+         252 0110   6929052                                00000                                  00000  000                                                    
+         253 0055  99568814                                00000                                  00000  000                                                    
+         254 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         255 0017  96051728                                00000                                  00000  000                                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      6                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         256 0011  33337205                                00000                                  00000  000                                                    
+         257 0019  32349145                                00000                                  00000  000                                                    
+         258 0110   6929052                                00000                                  00000  000                                                    
+         259 0055  99568814                                00000                                  00000  000                                                    
+         260 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         261 0014  35328256 R ANTONIO RIBEIRO              00110  CASA       LINS                 16402  197  SP 0014  35328256                                 
+         262 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         263 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         264 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         265 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         266 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         267 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         268 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         269 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         270 0019  32349145                                00000                                  00000  000                                                    
+         271 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         272 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         273 0017   2245931                                00000                                  00000  000                                                    
+         274 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         275 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         276 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         277 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         278 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         279 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         280 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         281 0011   5627412                                00000                                  00000  000                                                    
+         282 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         283 0011 991523445                                00000                                  00000  000                                                    
+         284 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         285 0016   2922892 AV ARMANDO BIAGIONI            01156             ARARAQUARA           14810  250  SP                                                
+         286 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         287 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         288 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         289 0011  31059398                                00000                                  00000  000                                                    
+         290 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         291 0017  96051728                                00000                                  00000  000                                                    
+         292 0017   2245931                                00000                                  00000  000                                                    
+         293 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         294 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         295 0011 969115310                                00000                                  00000  000                                                    
+         296 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         297 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         298 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         299 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         300 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         301 0011 969567121                                00000                                  00000  000                                                    
+         302 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         303 0000   7171080                                00000                                  00000  000                                                    
+         304 0011   2769009                                00000                                  00000  000                                                    
+         305 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         306 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      7                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         307 0000   5758816                                00000                                  00000  000                                                    
+         308 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         309 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         310 0055  99568814                                00000                                  00000  000                                                    
+         311 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         312 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         313 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         314 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         315 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         316 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         317 0011 991523445                                00000                                  00000  000                                                    
+         318 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         319 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         320 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         321 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         322 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         323 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         324 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         325 0011   8222470                                00000                                  00000  000                                                    
+         326 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         327 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         328 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         329 0011    651676                                00000                                  00000  000                                                    
+         330 0000                                          00000                                  00000  000                                                    
+         331 0011  33337205                                00000                                  00000  000                                                    
+         332 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         333 0011  33337205                                00000                                  00000  000                                                    
+         334 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         335 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         336 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         337 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         338 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         339 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         340 0011   8661281                                00000                                  00000  000                                                    
+         341 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         342 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         343 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         344 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         345 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         346 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         347 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         348 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         349 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         350 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         351 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         352 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         353 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         354 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         355 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         356 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         357 0051  84363147 ALBERTO BINS                   00514             PORTO ALEGRE         90030  140  RS 0051  30000000                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      8                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         358 0031  36242027                                00000                                  00000  000                                                    
+         359 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         360 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         361 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         362 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         363 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         364 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         365 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         366 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         367 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         368 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         369 0011 969567121                                00000                                  00000  000                                                    
+         370 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         371 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         372 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         373 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         374 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         375 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         376 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         377 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         378 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         379 0011 991523445                                00000                                  00000  000                                                    
+         380 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         381 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         382 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         383 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         384 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         385 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         386 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         387 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         388 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         389 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         390 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         391 0011   5627412                                00000                                  00000  000                                                    
+         392 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         393 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         394 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         395 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         396 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         397 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         398 0011 991523445                                00000                                  00000  000                                                    
+         399 0055  99568814                                00000                                  00000  000                                                    
+         400 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         401 0071  33453340 ALCEU AMOROSO LIMA             00668             SALVADOR             41820  770  BA 0071  33333333                                 
+         402 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         403 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         404 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         405 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         406 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         407 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         408 0012    311804                                00000                                  00000  000                                                    
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA      9                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         409 0011 969567121                                00000                                  00000  000                                                    
+         410 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         411 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         412 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         413 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         414 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         415 0067  99170985                                00000                                  00000  000                                                    
+         416 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         417 0011  22215608 R.PADRE ANTONIO D ANGELO       00084             SAO PAULO            02516  040  SP 0011  62215608                                 
+         418 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         419 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         420 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         421 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         422 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         423 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         424 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         425 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         426 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         427 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         428 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         429 0011 965161022                                00000                                  00000  000                                                    
+         430 0055  99568814                                00000                                  00000  000                                                    
+         431 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         432 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         433 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         434 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         435 0000                                          00000                                  00000  000                                                    
+         436 0066   5444764                                00000                                  00000  000                                                    
+         437 0011  46814882                                00000                                  00000  000                                                    
+         438 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         439 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         440 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         441 0011   8589591                                00000                                  00000  000                                                    
+         442 0011   5627412                                00000                                  00000  000                                                    
+         443 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         444 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         445 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         446 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         447 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         448 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         449 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         450 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         451 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         452 0000   7171080                                00000                                  00000  000                                                    
+         453 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         454 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         455 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         456 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         457 0055  99568814                                00000                                  00000  000                                                    
+         458 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         459 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     10                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         460 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         461 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         462 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         463 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         464 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         465 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         466 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         467 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         468 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         469 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         470 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         471 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         472 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         473 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         474 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         475 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         476 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         477 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         478 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         479 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         480 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         481 0110   6929052                                00000                                  00000  000                                                    
+         482 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         483 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         484 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         485 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         486 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         487 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         488 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         489 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         490 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         491 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         492 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         493 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         494 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         495 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         496 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         497 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         498 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         499 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         500 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         501 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         502 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         503 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         504 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         505 0055  99568814                                00000                                  00000  000                                                    
+         506 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         507 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         508 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         509 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         510 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     11                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         511 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         512 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         513 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         514 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         515 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         516 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         517 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         518 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         519 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         520 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         521 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         522 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         523 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         524 0110   6929052                                00000                                  00000  000                                                    
+         525 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         526 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         527 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         528 0011 999805264                                00000                                  00000  000                                                    
+         529 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         530 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         531 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         532 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         533 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         534 0051  32247961                                00000                                  00000  000                                                    
+         535 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         536 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         537 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         538 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         539 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         540 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         541 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         542 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         543 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         544 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         545 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         546 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         547 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         548 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         549 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         550 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         551 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         552 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         553 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         554 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         555 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         556 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         557 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         558 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         559 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         560 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         561 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     12                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         562 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         563 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         564 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         565 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         566 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         567 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         568 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         569 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         570 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         571 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         572 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         573 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         574 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         575 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         576 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         577 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         578 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         579 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         580 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         581 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         582 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         583 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         584 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         585 0051  33551004                                00000                                  00000  000                                                    
+         586 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         587 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         588 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         589 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         590 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         591 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         592 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         593 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         594 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         595 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         596 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         597 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         598 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         599 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         600 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         601 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         602 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         603 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         604 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         605 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         606 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         607 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         608 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         609 0022  27233998 ARARIBOIA                      00007             NITEROI              24020  030  RJ 0022  27232798                                 
+         610 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         611 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         612 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     13                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         613 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         614 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         615 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         616 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         617 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         618 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         619 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         620 0066  96348454 MT 100 KM 72 CX 29             00072             ALTO TAQUARI         78785  000  MT 0066  34962000                                 
+         621 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         622 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         623 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         624 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         625 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         626 0011  36819554                                00000                                  00000  000                                                    
+         627 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         628 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         629 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         630 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         631 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         632 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         633 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         634 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         635 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         636 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         637 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         638 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         639 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         640 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         641 0062  81569648 WALTER SANTOS                  00172             GOIANIA              74533  250  GO 0062  32932233                                 
+         642 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         643 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         644 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         645 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         646 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         647 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         648 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         649 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         650 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         651 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         652 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         653 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         654 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         655 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         656 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         657 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         658 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         659 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         660 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         661 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         662 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         663 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     14                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         664 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         665 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         666 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         667 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         668 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         669 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         670 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         671 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         672 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         673 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         674 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         675 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         676 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         677 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         678 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         679 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         680 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         681 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         682 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         683 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         684 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         685 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         686 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         687 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         688 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         689 0000                                          00000                                  00000  000                                                    
+         690 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         691 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         692 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         693 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         694 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         695 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         696 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         697 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         698 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         699 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         700 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         701 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         702 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         703 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         704 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         705 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         706 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         707 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         708 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         709 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         710 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         711 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         712 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         713 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         714 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     15                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         715 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         716 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         717 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         718 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         719 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         720 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         721 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         722 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         723 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         724 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         725 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         726 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         727 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         728 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         729 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         730 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         731 0051  33551004                                00000                                  00000  000                                                    
+         732 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         733 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         734 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         735 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         736 0055  99568814                                00000                                  00000  000                                                    
+         737 0055  99568814                                00000                                  00000  000                                                    
+         738 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         739 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         740 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         741 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         742 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         743 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         744 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         745 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         746 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         747 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         748 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         749 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         750 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         751 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         752 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         753 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         754 0055  99568814                                00000                                  00000  000                                                    
+         755 0071  33453340 ALCEU AMOROSO LIMA             00668             SALVADOR             41820  770  BA 0071  33333333                                 
+         756 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         757 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         758 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         759 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         760 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         761 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         762 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         763 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         764 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         765 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     16                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         766 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         767 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         768 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         769 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         770 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         771 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         772 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         773 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         774 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         775 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         776 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         777 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         778 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         779 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         780 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         781 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         782 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         783 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         784 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         785 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         786 0055  99568814                                00000                                  00000  000                                                    
+         787 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         788 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         789 0022  27233998 ARARIBOIA                      00007             NITEROI              24020  030  RJ 0022  27232798                                 
+         790 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         791 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         792 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         793 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         794 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         795 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         796 0047  84193119 NOVE DE JULHO                  03845             SAO PAULO            01407  100  SP 0047  33333333                                 
+         797 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         798 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         799 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         800 0055  99568814                                00000                                  00000  000                                                    
+         801 0055  99568814                                00000                                  00000  000                                                    
+         802 0055  99568814                                00000                                  00000  000                                                    
+         803 0031    178137                                00000                                  00000  000                                                    
+         804 0011 969115310                                00000                                  00000  000                                                    
+         805 0051  34771393                                00000                                  00000  000                                                    
+         806 0000                                          00000                                  00000  000                                                    
+         807 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         808 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         809 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         810 0051  84363147 ALBERTO BINS                   00514             PORTO ALEGRE         90030  140  RS 0051  30000000                                 
+         811 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         812 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         813 0031  99798457                                00000                                  00000  000                                                    
+         814 0031  99798457                                00000                                  00000  000                                                    
+         815 0061   3901212                                00000                                  00000  000                                                    
+         816 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     17                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         817 0051  32247961                                00000                                  00000  000                                                    
+         818 0055  99568814                                00000                                  00000  000                                                    
+         819 0055  99568814                                00000                                  00000  000                                                    
+         820 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         821 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         822 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         823 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         824 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         825 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         826 0000   7171080                                00000                                  00000  000                                                    
+         827 0011   2203970                                00000                                  00000  000                                                    
+         828 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         829 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         830 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         831 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         832 0000   7171080                                00000                                  00000  000                                                    
+         833 0011   8589591                                00000                                  00000  000                                                    
+         834 0011   8222470                                00000                                  00000  000                                                    
+         835 0110   2281999                                00000                                  00000  000                                                    
+         836 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         837 0055  99568814                                00000                                  00000  000                                                    
+         838 0011  23629880 AV GUILHERME COTCHING          00890             SAO PAULO            02113  012  SP 0011  23629880                                 
+         839 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         840 0055  99568814                                00000                                  00000  000                                                    
+         841 0055  99568814                                00000                                  00000  000                                                    
+         842 0011   8589591                                00000                                  00000  000                                                    
+         843 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         844 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         845 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         846 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         847 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         848 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         849 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         850 0000   7171080                                00000                                  00000  000                                                    
+         851 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         852 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         853 0011   8589591                                00000                                  00000  000                                                    
+         854 0022  27233998 ARARIBOIA                      00007             NITEROI              24020  030  RJ 0022  27232798                                 
+         855 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         856 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         857 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         858 0066   5444764                                00000                                  00000  000                                                    
+         859 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         860 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         861 0055  99568814                                00000                                  00000  000                                                    
+         862 0055  99568814                                00000                                  00000  000                                                    
+         863 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         864 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         865 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         866 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         867 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+                                                                                                                                                                
+ 6/03/15                                                    ARQUIVO DE CLIENTES ENVIADAS                              PAGINA     18                             
+                                                      LISTAGEM A PARTIR DO CPF  000.000.000                                                                     
+                                                                                                                                                                
+      REG.   DDD  TELEFONE             ENDERECO            NUMERO   COMPL           CIDADE         CEP  COMPL UF DDD  TELEFONE                                  
+         868 0031  99798457                                00000                                  00000  000                                                    
+         869 0000   7171080                                00000                                  00000  000                                                    
+         870 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         871 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         872 0031  33542963                                00000                                  00000  000                                                    
+         873 0017  96051728                                00000                                  00000  000                                                    
+         874 0011   5911343                                00000                                  00000  000                                                    
+         875 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         876 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         877 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         878 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         879 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         880 0055  99568814                                00000                                  00000  000                                                    
+         881 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         882 0011  50789542                                00000                                  00000  000                                                    
+         883 0011 961197868                                00000                                  00000  000                                                    
+         884 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         885 0022  27233998 ARARIBOIA                      00007             NITEROI              24020  030  RJ 0022  27232798                                 
+         886 0016   6265347                                00000                                  00000  000                                                    
+         887 0011  30888798 JOAO CACHOEIRA                 00900  3 ANDAR    SAO PAULO            04535  010  SP 0011  37216267                                 
+         888 0062   2583281                                00000                                  00000  000                                                    

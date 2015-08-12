@@ -1,0 +1,599 @@
+      *===============================================================* 
+       IDENTIFICATION                  DIVISION.                        
+      *===============================================================* 
+                                                                        
+       PROGRAM-ID. RDAB0278.                                            
+       AUTHOR. ELSINO SILVA.                                            
+                                                                        
+      *===============================================================* 
+      *                 B R Q    I T   S E R V I C E S                * 
+      *---------------------------------------------------------------* 
+      *                                                               * 
+      *   PROGRAMA    : RDAB0278                                      * 
+      *   PROGRAMADOR : ELSINO SILVA           - BRQ IT SERVICES      * 
+      *   ANALISTA    : FRANCISCO FREIRE       - BRQ IT SERVICES      * 
+      *   SUPERVISOR  : JUNIOR RIBAMAR         - GP. 70               * 
+      *   DATA        : NOVEMBRO/2014                                 * 
+      *                                                               * 
+      *   OBJETIVO    : BALANCE LINE DE DADOS PRINCIPAIS DO CADU COM  * 
+      *                 DADOS PRINCIPAIS DO ENDERECO RDAB (RDBAB006). * 
+      *   ARQUIVOS:                                                   * 
+      *   ---------------------------------------------------------   * 
+      *   DDNAME   |I/O| DESCRICAO               | BOOK     | LRECL   * 
+      *   ---------+---+-------------------------+----------+------   * 
+      *   ENDRCADU | I | ENDERECO CADU           | I#RDABAP |   320   * 
+      *   ENDRRDAB | I | ENDERECO RDAB           | I#RDAB14 |   146   * 
+      *   CADURDAB | O | ENDERECO RDAB ALTERADO  | I#RDAB14 |   146   * 
+      *   DESPRDAB | O | ENDERECO RDAB DESPREZADO| I#RDAB14 |   146   * 
+      *   ---------------------------------------------------------   * 
+      *                                                               * 
+      *===============================================================* 
+                                                                        
+      *===============================================================* 
+       ENVIRONMENT                     DIVISION.                        
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       CONFIGURATION                   SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+       SPECIAL-NAMES.                                                   
+           DECIMAL-POINT IS COMMA.                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       INPUT-OUTPUT                    SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+       FILE-CONTROL.                                                    
+                                                                        
+           SELECT  ENDRCADU  ASSIGN    TO  UT-S-ENDRCADU                
+                   FILE      STATUS    IS  WRK-FS-ENDRCADU.             
+                                                                        
+           SELECT  ENDRRDAB  ASSIGN    TO  UT-S-ENDRRDAB                
+                   FILE      STATUS    IS  WRK-FS-ENDRRDAB.             
+                                                                        
+           SELECT  CADURDAB  ASSIGN    TO  UT-S-CADURDAB                
+                   FILE      STATUS    IS  WRK-FS-CADURDAB.             
+                                                                        
+           SELECT  DESPRDAB  ASSIGN    TO  UT-S-DESPRDAB                
+                   FILE      STATUS    IS  WRK-FS-DESPRDAB.             
+                                                                        
+      *===============================================================* 
+       DATA                            DIVISION.                        
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       FILE                            SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+      *  INPUT....: ARQ. ENDERECOS CADU                               * 
+      *             ORG. SEQUENCIAL    -  LRECL = 320 BYTES           * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  ENDRCADU                                                     
+           LABEL       RECORD    STANDARD                               
+           RECORDING   MODE      F                                      
+           BLOCK       CONTAINS  0.                                     
+                                                                        
+       01  FD-REG-ENDRCADU             PIC  X(320)   VALUE SPACES.      
+SAI****01  FD-REG-ENDRCADU.                                             
+SAI****    03  FD-REG-CPF            PIC  9(009)         VALUE ZEROS.   
+SAI****    03  FD-REG-FILIAL         PIC  9(005)         VALUE ZEROS.   
+SAI****    03  FD-REG-CTRL           PIC  9(002)         VALUE ZEROS.   
+SAI****    03  FD-REG-NOME-CADU      PIC  X(040)         VALUE SPACES.  
+SAI****    03  FD-REG-HULT-ATULZ     PIC  X(026)         VALUE SPACES.  
+SAI****    03  FD-REG-CLUB           PIC  9(010)         VALUE ZEROS.   
+SAI****    03  FILLER                PIC  X(008)         VALUE SPACES.  
+                                                                        
+      *---------------------------------------------------------------* 
+      *  INPUT....: ARQ. ENDERECOS RDABB006                           * 
+      *             ORG. SEQUENCIAL    -  LRECL = 146 BYTES           * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  ENDRRDAB                                                     
+           LABEL       RECORD    STANDARD                               
+           RECORDING   MODE      F                                      
+           BLOCK       CONTAINS  0.                                     
+                                                                        
+       01  FD-REG-ENDRRDAB             PIC  X(146)   VALUE SPACES.      
+                                                                        
+      *---------------------------------------------------------------* 
+      *  OUTPUT...: ARQ. DE DADOS DA PESSOA                           * 
+      *             ORG. SEQUENCIAL   -   LRECL = 146 BYTES           * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  CADURDAB                                                     
+           LABEL       RECORD    STANDARD                               
+           RECORDING   MODE      F                                      
+           BLOCK       CONTAINS  0.                                     
+                                                                        
+       01  FD-REG-CADURDAB             PIC  X(146)   VALUE SPACES.      
+                                                                        
+      *---------------------------------------------------------------* 
+      *  OUTPUT...: ARQ. DE DADOS DO RDAB (DESPREZADOS)               * 
+      *             ORG. SEQUENCIAL   -   LRECL = 146 BYTES           * 
+      *---------------------------------------------------------------* 
+                                                                        
+       FD  DESPRDAB                                                     
+           LABEL       RECORD    STANDARD                               
+           RECORDING   MODE      F                                      
+           BLOCK       CONTAINS  0.                                     
+                                                                        
+       01  FD-REG-DESPRDAB             PIC  X(146)   VALUE SPACES.      
+                                                                        
+      *---------------------------------------------------------------* 
+       WORKING-STORAGE                 SECTION.                         
+      *---------------------------------------------------------------* 
+       01   FILLER                     PIC  X(32) VALUE                 
+            'INICIO DA WORKING RDAB0278'.                               
+                                                                        
+      *-- ------------------------------------------------------------* 
+      *          CAMPOS UTILIZADOS PARA CANCELAR PROCESSAMENTO        * 
+      *---------------------------------------------------------------* 
+                                                                        
+       01  FILLER.                                                      
+           03  WRK-FS-ENDRCADU         PIC  X(02) VALUE SPACES.         
+           03  WRK-FS-ENDRRDAB         PIC  X(02) VALUE SPACES.         
+           03  WRK-FS-CADURDAB         PIC  X(02) VALUE SPACES.         
+           03  WRK-FS-DESPRDAB         PIC  X(02) VALUE SPACES.         
+           03  WRK-OPERACAO            PIC  X(13) VALUE SPACES.         
+           03  WRK-ABERTURA            PIC  X(13) VALUE 'NA ABERTURA'.  
+           03  WRK-LEITURA             PIC  X(13) VALUE 'NA LEITURA'.   
+           03  WRK-GRAVACAO            PIC  X(13) VALUE 'NA GRAVACAO'.  
+           03  WRK-FECHAMENTO          PIC  X(13) VALUE 'NO FECHAMENTO'.
+           03  WRK-BATCH               PIC  X(08) VALUE 'BATCH'.        
+      *---------------------------------------------------------------* 
+      *--  ACUMULADORES.                                                
+                                                                        
+       01  FILLER.                                                      
+           03  ACU-LDS-ENDRCADU        PIC 9(09) COMP-3    VALUE  ZEROS.
+           03  ACU-LDS-ENDRRDAB        PIC 9(09) COMP-3    VALUE  ZEROS.
+           03  ACU-GRV-CADURDAB        PIC 9(09) COMP-3    VALUE  ZEROS.
+           03  ACU-GRV-DESPRDAB        PIC 9(09) COMP-3    VALUE  ZEROS.
+           03  ACU-BRANCOS-CADU        PIC 9(09) COMP-3    VALUE  ZEROS.
+           03  ACU-ENDRIGUAL-CADU      PIC 9(09) COMP-3    VALUE  ZEROS.
+           03  ACU-NAOACHOU-CADU       PIC 9(09) COMP-3    VALUE  ZEROS.
+      *                                                                 
+      *----------------------------------------------------------------*
+      *--  EDICAO.                                                      
+                                                                        
+       01  FILLER.                                                      
+           03  WRK-EDIT01              PIC ZZZ.ZZZ.ZZ9     VALUE  ZEROS.
+           03  WRK-EDIT02              PIC ZZZ.ZZZ.ZZ9     VALUE  ZEROS.
+           03  WRK-EDIT03              PIC ZZZ.ZZZ.ZZ9     VALUE  ZEROS.
+           03  WRK-EDIT04              PIC ZZZ.ZZZ.ZZ9     VALUE  ZEROS.
+           03  WRK-EDIT05              PIC ZZZ.ZZZ.ZZ9     VALUE  ZEROS.
+           03  WRK-EDIT06              PIC ZZZ.ZZZ.ZZ9     VALUE  ZEROS.
+           03  WRK-EDIT07              PIC ZZZ.ZZZ.ZZ9     VALUE  ZEROS.
+                                                                        
+      *--  CHAVE ENDRCADU.                                              
+       01  WRK-CHV-ENDRCADU.                                            
+           03  WRK-CHV-CADU-AGE          PIC  9(005) VALUE ZEROS.       
+           03  WRK-CHV-CADU-CCTA         PIC  9(013) VALUE ZEROS.       
+           03  WRK-CHV-CADU-ORI-LOGDR    PIC  X(001) VALUE '1'.         
+           03  WRK-CHV-CADU-TPO-LOGDR    PIC  X(001) VALUE '1'.         
+                                                                        
+      *--  CHAVE ENDRRDAB.                                              
+       01  WRK-CHV-ENDRRDAB.                                            
+           03  WRK-CHV-RDAB-AGE          PIC  9(005) VALUE ZEROS.       
+           03  WRK-CHV-RDAB-CCTA         PIC  9(013) VALUE ZEROS.       
+           03  WRK-CHV-RDAB-ORI-LOGDR    PIC  X(001) VALUE SPACES.      
+           03  WRK-CHV-RDAB-TPO-LOGDR    PIC  X(001) VALUE SPACES.      
+                                                                        
+      *--  AUX. CHAVE ENDRRDAB.                                         
+       01  WRK-TEMP-ENDRRDAB.                                           
+           03  WRK-TEMP-RDAB-AGE         PIC S9(005) VALUE ZEROS.       
+           03  WRK-AUX-RDAB-AGE          REDEFINES WRK-TEMP-RDAB-AGE    
+                                         PIC  9(005).                   
+           03  WRK-TEMP-RDAB-CCTA        PIC S9(013) VALUE ZEROS.       
+           03  WRK-AUX-RDAB-CCTA         REDEFINES WRK-TEMP-RDAB-CCTA   
+                                         PIC  9(013).                   
+                                                                        
+      *--  AUX. ENDERECO CADU.                                          
+       01  WRK-ENDR-CADU.                                               
+           03  WRK-ENDR-CADU-X.                                         
+               05 WRK-CADU-ELOGDR-PSSOA  PIC  X(040) VALUE SPACES.      
+               05 WRK-CADU-ELOGDR-NRO    PIC  X(007) VALUE SPACES.      
+               05 WRK-CADU-RCOMPL-ENDER  PIC  X(020) VALUE SPACES.      
+               05 WRK-CADU-ICIDDE-ENDER  PIC  X(025) VALUE SPACES.      
+               05 WRK-CADU-CSGL-UF       PIC  X(002) VALUE SPACES.      
+           03  WRK-ENDR-CADU-9.                                         
+               05 WRK-CADU-CCEP          PIC  9(005) VALUE ZEROS.       
+               05 WRK-CADU-CCEP-COMPL    PIC  9(003) VALUE ZEROS.       
+                                                                        
+      *--  AUX. ENDERECO RDAB.                                          
+       01  WRK-ENDR-RDAB.                                               
+           03  WRK-RDAB-ELOGDR-CLI-RENEG PIC  X(040) VALUE SPACES.      
+           03  WRK-RDAB-ENRO-LOGDR-RENEG PIC  X(007) VALUE SPACES.      
+           03  WRK-RDAB-ECOMPL-LOGDR-REN PIC  X(020) VALUE SPACES.      
+           03  WRK-RDAB-IMUN-IBGE-RENEG  PIC  X(025) VALUE SPACES.      
+           03  WRK-RDAB-CSGL-UF-CLI-RENE PIC  X(002) VALUE SPACES.      
+           03  WRK-RDAB-CCEP-CLI-RENEG   PIC  9(005) VALUE ZEROS.       
+           03  WRK-RDAB-CCEP-COMPL-RENEG PIC  9(003) VALUE ZEROS.       
+                                                                        
+      *--  TEMP ENDERECO RDAB                                           
+       01  WRK-TEMP-ENDRRDAB.                                           
+           03  WRK-TEMP-CCEP-CLI-RENEG   PIC S9(005) VALUE ZEROS.       
+           03  WRK-AUX-CCEP-CLI-RENEG    REDEFINES                      
+               WRK-TEMP-CCEP-CLI-RENEG   PIC  9(005).                   
+           03  WRK-TEMP-CCEP-COMPL-RENEG PIC S9(003) VALUE ZEROS.       
+           03  WRK-AUX-CCEP-COMPL-RENEG  REDEFINES                      
+               WRK-TEMP-CCEP-COMPL-RENEG PIC  9(003).                   
+                                                                        
+                                                                        
+      *---------------------------------------------------------------* 
+       01  FILLER                      PIC  X(032)         VALUE        
+           '*       AREA DE BOOKS          *'.                          
+      *----------------------------------------------------------------*
+                                                                        
+       COPY 'I#RDAB14'.                                                 
+       COPY 'I#RDABAP'.                                                 
+                                                                        
+      *----------------------------------------------------------------*
+       01  FILLER   PIC  X(32) VALUE '*       AREA DA BRAD7100       *'.
+      *----------------------------------------------------------------*
+                                                                        
+       COPY 'I#BRAD7C'.                                                 
+                                                                        
+      *---------------------------------------------------------------* 
+       01   FILLER                     PIC  X(32)    VALUE              
+            'FIM DA WORKING RDAB0278'.                                  
+                                                                        
+      *===============================================================* 
+       PROCEDURE                       DIVISION.                        
+      *===============================================================* 
+                                                                        
+      *---------------------------------------------------------------* 
+       0000-INICIAR                    SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM 1000-INICIALIZAR.                                    
+                                                                        
+           PERFORM 2000-LER-ENDRCADU                                    
+           IF      WRK-FS-ENDRCADU     EQUAL '10'                       
+                   DISPLAY '**************** RDAB0278 ***************'  
+                   DISPLAY '*                                       *'  
+                   DISPLAY '* ARQUIVO DE ENTRADA - ENDRCADU - VAZIO *'  
+                   DISPLAY '*        PROCESSAMENTO ENCERRADO        *'  
+                   DISPLAY '*                                       *'  
+                   DISPLAY '**************** RDAB0278 ***************'  
+                   PERFORM  9000-FINALIZAR                              
+           END-IF.                                                      
+                                                                        
+           PERFORM 3000-LER-ENDRRDAB                                    
+           IF      WRK-FS-ENDRRDAB     EQUAL '10'                       
+                   DISPLAY '**************** RDAB0278 ***************'  
+                   DISPLAY '*                                       *'  
+                   DISPLAY '* ARQUIVO DE ENTRADA - ENDRRDAB - VAZIO *'  
+                   DISPLAY '*        PROCESSAMENTO ENCERRADO        *'  
+                   DISPLAY '*                                       *'  
+                   DISPLAY '**************** RDAB0278 ***************'  
+           END-IF.                                                      
+                                                                        
+           PERFORM 4000-PROCESSAR     UNTIL                             
+                  (WRK-FS-ENDRRDAB     EQUAL '10')                      
+                                                                        
+                                                                        
+           PERFORM 7000-DISPLAY-TOTAIS                                  
+                                                                        
+           PERFORM 9000-FINALIZAR.                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       0000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1000-INICIALIZAR                SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           OPEN  INPUT  ENDRCADU                                        
+                        ENDRRDAB                                        
+                 OUTPUT CADURDAB                                        
+                        DESPRDAB                                        
+                                                                        
+           MOVE  WRK-ABERTURA          TO    WRK-OPERACAO               
+           PERFORM  1100-TESTAR-FILE-STATUS.                            
+                                                                        
+      *---------------------------------------------------------------* 
+       1000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1100-TESTAR-FILE-STATUS         SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           PERFORM  1110-TESTAR-FS-ENDRCADU                             
+           PERFORM  1120-TESTAR-FS-ENDRRDAB                             
+           PERFORM  1150-TESTAR-FS-CADURDAB                             
+           PERFORM  1160-TESTAR-FS-DESPRDAB.                            
+                                                                        
+      *---------------------------------------------------------------* 
+       1100-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1110-TESTAR-FS-ENDRCADU         SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-ENDRCADU         NOT EQUAL  '00'                   
+              DISPLAY '************** RDAB0278 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              ENDRCADU             *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-ENDRCADU       
+                                                 '         *'           
+              DISPLAY '************** RDAB0278 *************'           
+              PERFORM 9999-ROTINA-ERRO                                  
+           END-IF.                                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       1110-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1120-TESTAR-FS-ENDRRDAB         SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-ENDRRDAB         NOT EQUAL  '00'                   
+              DISPLAY '************** RDAB0278 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              ENDRRDAB             *'           
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-ENDRRDAB       
+                                                 '         *'           
+              DISPLAY '************** RDAB0278 *************'           
+              PERFORM 9999-ROTINA-ERRO                                  
+           END-IF.                                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       1120-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1150-TESTAR-FS-CADURDAB         SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-CADURDAB           NOT EQUAL  '00'                 
+              DISPLAY '************** RDAB0278 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              CADURDAB              *'          
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-CADURDAB       
+                                                 '         *'           
+              DISPLAY '************** RDAB0278 *************'           
+              PERFORM 9999-ROTINA-ERRO                                  
+           END-IF.                                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       1150-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       1160-TESTAR-FS-DESPRDAB         SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           IF WRK-FS-DESPRDAB           NOT EQUAL  '00'                 
+              DISPLAY '************** RDAB0278 *************'           
+              DISPLAY '*   ERRO ' WRK-OPERACAO  ' DO ARQUIVO   *'       
+              DISPLAY '*              DESPRDAB              *'          
+              DISPLAY '*         FILE STATUS =  ' WRK-FS-DESPRDAB       
+                                                 '         *'           
+              DISPLAY '************** RDAB0278 *************'           
+              PERFORM 9999-ROTINA-ERRO                                  
+           END-IF.                                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       1160-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       2000-LER-ENDRCADU               SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           READ    ENDRCADU            INTO  REG-CADUV000               
+                                                                        
+           IF      WRK-FS-ENDRCADU     EQUAL  '10'                      
+                   MOVE HIGH-VALUES    TO      WRK-CHV-ENDRCADU         
+                   GO                  TO      2000-99-FIM              
+           END-IF.                                                      
+                                                                        
+           MOVE    WRK-LEITURA         TO      WRK-OPERACAO             
+           PERFORM 1110-TESTAR-FS-ENDRCADU                              
+                                                                        
+           MOVE  CADUV000-CAG-COBR-TARIF                                
+                                       TO  WRK-CHV-CADU-AGE             
+           MOVE  CADUV000-CCTA-COBR-TARIF                               
+                                       TO  WRK-CHV-CADU-CCTA            
+                                                                        
+           MOVE  CADUV000-ELOGDR-PSSOA(1:40)                            
+                                       TO  WRK-CADU-ELOGDR-PSSOA        
+           MOVE  CADUV000-ELOGDR-NRO   TO  WRK-CADU-ELOGDR-NRO          
+           MOVE  CADUV000-RCOMPL-ENDER(1:20)                            
+                                       TO  WRK-CADU-RCOMPL-ENDER        
+           MOVE  CADUV000-ICIDDE-ENDER(1:25)                            
+                                       TO  WRK-CADU-ICIDDE-ENDER        
+           MOVE  CADUV000-CSGL-UF      TO  WRK-CADU-CSGL-UF             
+           MOVE  CADUV000-CCEP         TO  WRK-CADU-CCEP                
+           MOVE  CADUV000-CCEP-COMPL   TO  WRK-CADU-CCEP-COMPL          
+                                                                        
+                                                                        
+           ADD     1                   TO  ACU-LDS-ENDRCADU.            
+                                                                        
+      *---------------------------------------------------------------* 
+       2000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       3000-LER-ENDRRDAB               SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           READ    ENDRRDAB            INTO  ALG-REG                    
+                                                                        
+           IF      WRK-FS-ENDRRDAB     EQUAL  '10'                      
+                   MOVE HIGH-VALUES    TO      WRK-CHV-ENDRRDAB         
+                   GO                  TO      3000-99-FIM              
+           END-IF.                                                      
+                                                                        
+           MOVE    WRK-LEITURA         TO      WRK-OPERACAO             
+           PERFORM 1120-TESTAR-FS-ENDRRDAB                              
+                                                                        
+           MOVE ALG-CAG-BCRIA          TO  WRK-TEMP-RDAB-AGE            
+           MOVE WRK-AUX-RDAB-AGE       TO  WRK-CHV-RDAB-AGE             
+           MOVE ALG-CCTA-CORR          TO  WRK-TEMP-RDAB-CCTA           
+           MOVE WRK-AUX-RDAB-CCTA      TO  WRK-CHV-RDAB-CCTA            
+           MOVE ALG-CINDCD-ORIGE-LOGDR TO  WRK-CHV-RDAB-ORI-LOGDR       
+           MOVE ALG-CINDCD-TPO-LOGDR   TO  WRK-CHV-RDAB-TPO-LOGDR       
+                                                                        
+           MOVE ALG-ELOGDR-CLI-RENEG   TO  WRK-RDAB-ELOGDR-CLI-RENEG    
+           MOVE ALG-ENRO-LOGDR-RENEG   TO  WRK-RDAB-ENRO-LOGDR-RENEG    
+           MOVE ALG-ECOMPL-LOGDR-RENEG TO  WRK-RDAB-ECOMPL-LOGDR-REN    
+           MOVE ALG-IMUN-IBGE-RENEG    TO  WRK-RDAB-IMUN-IBGE-RENEG     
+           MOVE ALG-CSGL-UF-CLI-RENEG  TO  WRK-RDAB-CSGL-UF-CLI-RENE    
+           MOVE ALG-CCEP-CLI-RENEG     TO  WRK-TEMP-CCEP-CLI-RENEG      
+           MOVE WRK-AUX-CCEP-CLI-RENEG TO  WRK-RDAB-CCEP-CLI-RENEG      
+           MOVE ALG-CCEP-COMPL-RENEG   TO  WRK-TEMP-CCEP-COMPL-RENEG    
+           MOVE WRK-AUX-CCEP-COMPL-RENEG                                
+                                       TO  WRK-RDAB-CCEP-COMPL-RENEG    
+                                                                        
+           ADD     1                   TO  ACU-LDS-ENDRRDAB.            
+                                                                        
+      *---------------------------------------------------------------* 
+       3000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       4000-PROCESSAR                  SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           IF  WRK-CHV-ENDRCADU        GREATER  WRK-CHV-ENDRRDAB        
+               ADD   1                 TO  ACU-NAOACHOU-CADU            
+               PERFORM 5100-GRAVAR-DESPRDAB                             
+               PERFORM 3000-LER-ENDRRDAB                                
+           ELSE                                                         
+              IF   WRK-CHV-ENDRCADU    LESS   WRK-CHV-ENDRRDAB          
+                   PERFORM 2000-LER-ENDRCADU                            
+              ELSE                                                      
+                 IF  WRK-ENDR-CADU     EQUAL  WRK-ENDR-RDAB             
+                     ADD  1            TO  ACU-ENDRIGUAL-CADU           
+                     PERFORM 5100-GRAVAR-DESPRDAB                       
+                 ELSE                                                   
+                    IF (WRK-ENDR-CADU-X                                 
+                                       EQUAL SPACES OR LOW-VALUES) AND  
+                       (WRK-ENDR-CADU-9                                 
+                                       EQUAL ZEROS  OR LOW-VALUES)      
+                       ADD  1          TO  ACU-BRANCOS-CADU             
+                       PERFORM 5100-GRAVAR-DESPRDAB                     
+                    ELSE                                                
+                       MOVE  CADUV000-ELOGDR-PSSOA(1:40)                
+                                       TO  ALG-ELOGDR-CLI-RENEG         
+                       MOVE  CADUV000-ELOGDR-NRO                        
+                                       TO  ALG-ENRO-LOGDR-RENEG         
+                       MOVE  CADUV000-RCOMPL-ENDER(1:20)                
+                                       TO  ALG-ECOMPL-LOGDR-RENEG       
+                       MOVE  CADUV000-ICIDDE-ENDER(1:25)                
+                                       TO  ALG-IMUN-IBGE-RENEG          
+                       MOVE  CADUV000-CSGL-UF                           
+                                       TO  ALG-CSGL-UF-CLI-RENEG        
+                       MOVE  CADUV000-CCEP                              
+                                       TO  ALG-CCEP-CLI-RENEG           
+                       MOVE  CADUV000-CCEP-COMPL                        
+                                       TO  ALG-CCEP-COMPL-RENEG         
+                                                                        
+                       PERFORM 5000-GRAVAR-CADURDAB                     
+                    END-IF                                              
+                 END-IF                                                 
+                 PERFORM 3000-LER-ENDRRDAB                              
+              END-IF                                                    
+           END-IF.                                                      
+                                                                        
+      *---------------------------------------------------------------* 
+       4000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       5000-GRAVAR-CADURDAB            SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           WRITE  FD-REG-CADURDAB      FROM  ALG-REG                    
+           MOVE   WRK-GRAVACAO         TO  WRK-OPERACAO                 
+           PERFORM  1150-TESTAR-FS-CADURDAB                             
+                                                                        
+           ADD 1                       TO  ACU-GRV-CADURDAB.            
+                                                                        
+      *---------------------------------------------------------------* 
+       5000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       5100-GRAVAR-DESPRDAB            SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           WRITE  FD-REG-DESPRDAB      FROM  ALG-REG                    
+           MOVE   WRK-GRAVACAO         TO  WRK-OPERACAO                 
+           PERFORM  1160-TESTAR-FS-DESPRDAB                             
+                                                                        
+           ADD 1                       TO  ACU-GRV-DESPRDAB.            
+                                                                        
+      *---------------------------------------------------------------* 
+       5100-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       7000-DISPLAY-TOTAIS             SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           MOVE     ACU-LDS-ENDRCADU   TO    WRK-EDIT01                 
+           MOVE     ACU-LDS-ENDRRDAB   TO    WRK-EDIT02                 
+           MOVE     ACU-BRANCOS-CADU   TO    WRK-EDIT03                 
+           MOVE     ACU-ENDRIGUAL-CADU TO    WRK-EDIT04                 
+           MOVE     ACU-GRV-CADURDAB   TO    WRK-EDIT05                 
+           MOVE     ACU-GRV-DESPRDAB   TO    WRK-EDIT06                 
+           MOVE     ACU-NAOACHOU-CADU  TO    WRK-EDIT07                 
+                                                                        
+           DISPLAY '******************** RDAB0278 ********************' 
+           DISPLAY '*                                                *' 
+           DISPLAY '*  TOTAL REG. LIDOS    - ENDRCADU : ' WRK-EDIT01 '*'
+           DISPLAY '*  TOTAL REG. LIDOS    - ENDRRDAB : ' WRK-EDIT02 '*'
+           DISPLAY '*  TOTAL REG. DESPREZ. ENDR BRANCO: ' WRK-EDIT03 '*'
+           DISPLAY '*  TOTAL REG. DESPREZ. ENDR IGUAL : ' WRK-EDIT04 '*'
+           DISPLAY '*  TOTAL REG. DESPR.NAO ACHOU CADU: ' WRK-EDIT07 '*'
+           DISPLAY '*  TOTAL REG. GRAVADOS - CADURDAB : ' WRK-EDIT05 '*'
+           DISPLAY '*  TOTAL REG. GRAVADOS - DESPRDAB : ' WRK-EDIT06 '*'
+           DISPLAY '*                                                *' 
+           DISPLAY '******************** RDAB0278 ********************'.
+                                                                        
+      *---------------------------------------------------------------* 
+       7000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *---------------------------------------------------------------* 
+       9000-FINALIZAR                  SECTION.                         
+      *---------------------------------------------------------------* 
+                                                                        
+           CLOSE  ENDRCADU                                              
+                  ENDRRDAB                                              
+                  CADURDAB                                              
+                  DESPRDAB.                                             
+                                                                        
+           MOVE   WRK-FECHAMENTO       TO      WRK-OPERACAO             
+           PERFORM  1100-TESTAR-FILE-STATUS.                            
+                                                                        
+           STOP RUN.                                                    
+                                                                        
+      *---------------------------------------------------------------* 
+       9000-99-FIM.                    EXIT.                            
+      *---------------------------------------------------------------* 
+                                                                        
+      *----------------------------------------------------------------*
+       9999-ROTINA-ERRO                SECTION.                         
+      *----------------------------------------------------------------*
+                                                                        
+           MOVE   'RDAB0278'           TO  ERR-PGM.                     
+           MOVE   'APL'                TO  ERR-TIPO-ACESSO.             
+           CALL   'BRAD7100'        USING  WRK-BATCH                    
+                                           ERRO-AREA.                   
+                                                                        
+           GOBACK.                                                      
+                                                                        
+      *----------------------------------------------------------------*
+       9999-99-FIM.                    EXIT.                            
+      *----------------------------------------------------------------*
+                                                                        

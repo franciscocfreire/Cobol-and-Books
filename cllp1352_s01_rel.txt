@@ -1,0 +1,38 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO ---                            
+                                                                                                                                                                
+CLLP2571                                           BANCO BRADESCO S/A                                                    FOLHA:    1                            
+04/03/2015                                  RELACAO DE CONTRATOS MIGRADOS / CLLP X RECR - SICV                              13:57:43                            
+                                                                                                                                                                
+                    L E G A D O                                                          N O V A  A R Q U I T E T U R A                                         
+                                                                                                                                                                
+       AGENCIA          CONTA         CARTEIRA           CONTRATO        CPSSOA-JURIDC         CTPO-CONTR         NSEQ-CONTR                                    
+                                                                                                                                                                
+           235          74534            C59                 1084                    0                  0                  0                                    
+           481          73184            C59                10017                    0                  0                  0                                    
+           895          19572            C59                 6039                    0                  0                  0                                    
+           925          11878            C59                12045                    0                  0                  0                                    
+          1596           4883            C59                12333                    0                  0                  0                                    
+          1886           9242            C59                 7180                    0                  0                  0                                    
+          1928          13589            C59                 2152                    0                  0                  0                                    
+          2080          19411            C59                10122                    0                  0                  0                                    
+          2228          15954            C59                 6088                    0                  0                  0                                    
+          2405            451            C59                 7316                    0                  0                  0                                    
+          3141           1580            C59                10181                    0                  0                  0                                    
+          3545          22159            C59                 3254                    0                  0                  0                                    
+          3614           1781            C59                 3271                    0                  0                  0                                    
+          3646           9587            C59                 5283                    0                  0                  0                                    
+          6565             33            C59                 1182                    0                  0                  0                                    
+          6565             67            C59                 1311                    0                  0                  0                                    
+          6565            714            C59                 7146                    0                  0                  0                                    
+          6565            928            C59                10273                    0                  0                  0                                    
+          6565         103523            C59                 3122                    0                  0                  0                                    
+                                                                                                                                                                
+                                S U M A R I Z A C A O                                                                                                           
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                    LIDOS - ARQUIVO SICVENTR........:                   667                                                                                     
+                    LIDOS - ARQUIVO ARQSAIDA........:                 4.638                                                                                     
+                    GRAVADOS - ARQUIVO ARQMIGR.....:                     19                                                                                     
+                    REGISTROS MIGRADOS................:                  19                                                                                     
+                    REGISTROS NAO MIGRADOS............:               4.619                                                                                     

@@ -1,0 +1,19 @@
+      =====================================================        
+      FAVOR ALTERAR O JOB CLLP2223, CONFORME INDICA ABAIXO:        
+      =====================================================        
+
+	(1) -  ALTERAR O STEP4:
+
+DE:
+//BAIXATU  DD DSN=MX.CLLP.D0PRVMZ.CGMAIS3X(+1),           
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=VTSLG,                                      
+//       VOL=(,,,255),                                    
+//       DCB=(MX.A,LRECL=0343,RECFM=FB)                   
+
+PARA:
+//BAIXATU  DD DSN=MX.CLLP.D0PRVMZ.CGMAIS3X(+1),           
+//       DISP=(,CATLG,DELETE),                            
+//       UNIT=VTSLG,                                      
+//       VOL=(,,,255),                                    
+//       DCB=(MX.A,LRECL=0443,RECFM=FB)                   

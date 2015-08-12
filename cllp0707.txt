@@ -1,0 +1,116 @@
+//CLLP0707 JOB 'CLLP,4120,PR32','F914349',MSGCLASS=Z,REGION=4M,         
+//       SCHENV=IMS                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=POOL0262                                            
+//*                                                                     
+//* ***    CRIAR ARQUIVO REDUZIDO                                       
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CADRETAN.LEI(0),                              
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SORTOUT  DD DSN=MX.CLLP.ARQOCATU(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(090000,0030000),RLSE),                             
+//       DCB=(MX.A,LRECL=0127,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ INREC FIELDS=(4,3,16,4,33,3,29,4,457,6,467,107)                        
+ SORT FIELDS=(1,3,PD,A,4,4,PD,A,8,3,CH,A,11,4,PD,A,25.5,2,BI,D,         
+              24.5,1,BI,D,23.5,1,BI,D,15,6,PD,D)                        
+ SUM FIELDS=NONE                                                        
+ END                                                                    
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK25 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK26 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK27 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK28 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK29 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK30 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

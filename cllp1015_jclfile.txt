@@ -1,0 +1,994 @@
+//CLLP1015 JOB 'CLLP,4120,PR32','F914349',MSGCLASS=Z,REGION=8192K       
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHE                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHF                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHG                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHH                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHI                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHJ                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHK                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHL                 
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHD                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP00   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    DESPREZA DUPLICADOS                                          
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.PRV.CONTRMIG.NEGATI(0),                       
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015S00.CONTRMIG.NEGT.CL(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(42,3,A,45,7,A,52,3,A,55,9,A),FORMAT=BI                   
+  SUM FIELDS=NONE                                                       
+  END                                                                   
+//*                                                                     
+//STEP0A   EXEC PGM=CLLP4760                                            
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    EFETUA BATIMENTO MIGRADOS ANTERIOR COM ATUAL                 
+//* ***    *********************************************************    
+//*                                                                     
+//MIGRAATU DD DSN=*.STEP00.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//MIGRAANT DD DSN=MX.CLLP.CONTRMIG.NEGATI.ANT(0),                       
+//       DISP=SHR                                                       
+//MIGRAEXC DD DSN=MX.CLLP.J1015S0A.MIGRAEXC(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)                                 
+//MIGRAINC DD DSN=MX.CLLP.J1015S0A.MIGRAINC(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)                                 
+//RELATO   DD DSN=MX.CLLP.J1015S0A.RELATO(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=080,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP0B   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CDSERASA.DEV.SA(0),                           
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015S0B.CDSERASA.DEV(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,14),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEP01   EXEC PGM=CLLP4765                                            
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    EFETUA BATIMENTO MIGRADOS INCLUIDOS                          
+//* ***    COM CDSERASA(CLLP)  - DEVEDOR                                
+//* ***    *********************************************************    
+//*                                                                     
+//MIGRAINC DD DSN=*.STEP0A.MIGRAINC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEP0B.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQIMIGR DD DSN=MX.CLLP.J1015S01.ARQIMIGR.DEV(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQICLLP DD DSN=MX.CLLP.J1015S01.ARQICLLP.DEV(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQNSELC DD DSN=MX.CLLP.J1015S01.ARQNSELC.DEV(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP02   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    MERGE                                                        
+//* ***    CDSERASA(CLLP) MIGRADO (INCLUIDOS) +                         
+//* ***    CDSERASA(RECR) ANTERIOR                                      
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEP01.ARQIMIGR,                                    
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.CDSERASA.MDEV.SA.ANT(0),                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015S02.CDSERASA.MDEV(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEP03   EXEC PGM=CLLP4770                                            
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    EFETUA BATIMENTO MIGRADOS EXCLUSAO                           
+//* ***    COM CDSERASA(RECR) ANTERIOR                                  
+//* ***    *********************************************************    
+//*                                                                     
+//MIGRAEXC DD DSN=*.STEP0A.MIGRAEXC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEP02.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQEMIGR DD DSN=MX.CLLP.PRV.CDSERASA.MDEV.SA(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQECLLP DD DSN=MX.CLLP.J1015S03.ARQECLLP.DEV(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP04   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR CGC.CPF DEV/NATUREZA/AGENCIA/DT.VCTO          
+//* ***    MERGE DO CDSERASA(CLLP) SEM MIGRADOS PARA RECR  +            
+//* ***             CDSERASA(RECR) RETIRADOS DO CADASTRO DE MIGRADOS    
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEP01.ARQICLLP,                                    
+//       DISP=SHR                                                       
+//         DD DSN=*.STEP03.ARQECLLP,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CDSERASA.DEV.SA(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,14),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(1,12,A,21,3,A,13,5,A),FORMAT=BI                          
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEP05   EXEC PGM=CLLP4771,                                           
+//       PARM='DEVINC1RB'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEP01.ARQIMIGR,                                    
+//       DISP=OLD                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHE,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP06   EXEC PGM=CLLP4771,                                           
+//       PARM='DEVEXC1RB'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEP03.ARQEMIGR,                                    
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHF,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPA0   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CDSERASA.AVAL.SA(0),                          
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015SA0.CDSERASA.AVAL(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,14),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPA1   EXEC PGM=CLLP4765                                            
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    EFETUA BATIMENTO MIGRADOS INCLUIDOS                          
+//* ***    COM CDSERASA(CLLP)  - AVALISTA                               
+//* ***    *********************************************************    
+//*                                                                     
+//MIGRAINC DD DSN=*.STEP0A.MIGRAINC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEPA0.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQIMIGR DD DSN=MX.CLLP.J1015SA1.ARQIMIGR.AVAL(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQICLLP DD DSN=MX.CLLP.J1015SA1.ARQICLLP.AVAL(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQNSELC DD DSN=MX.CLLP.J1015SA1.ARQNSELC.AVAL(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPA2   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    MERGE                                                        
+//* ***    CDSERASA(CLLP) MIGRADO (INCLUIDOS) +                         
+//* ***    CDSERASA(RECR) ANTERIOR                                      
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEPA1.ARQIMIGR,                                    
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.CDSERASA.MAVAL.SA.ANT(0),                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015SA2.CDSERASA.MAVAL(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPA3   EXEC PGM=CLLP4770                                            
+//*                                                                     
+//* ***    EFETUA BATIMENTO MIGRADOS EXCLUSAO                           
+//* ***    COM CDSERASA(RECR) ANTERIOR                                  
+//*                                                                     
+//MIGRAEXC DD DSN=*.STEP0A.MIGRAEXC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEPA2.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQEMIGR DD DSN=MX.CLLP.PRV.CDSERASA.MAVAL.SA(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQECLLP DD DSN=MX.CLLP.J1015SA3.ARQECLLP.AVAL(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPA4   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR CGC.CPF DEV/NATUREZA/AGENCIA/DT.VCTO          
+//* ***    MERGE DO CDSERASA(CLLP) SEM MIGRADOS PARA RECR  +            
+//* ***             CDSERASA(RECR) RETIRADOS DO CADASTRO DE MIGRADOS    
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEPA1.ARQICLLP,                                    
+//       DISP=SHR                                                       
+//         DD DSN=*.STEPA3.ARQECLLP,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CDSERASA.AVAL.SA(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(011020,2204),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(413,12,A,21,3,A,1,12,A,13,5,A),FORMAT=BI                 
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPA5   EXEC PGM=CLLP4771,                                           
+//       PARM='AVAINC1RB'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEPA1.ARQIMIGR,                                    
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHG,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPA6   EXEC PGM=CLLP4771,                                           
+//       PARM='AVAEXC1RB'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEPA3.ARQEMIGR,                                    
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHH,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPB0   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CDSERASA.DEV.SA.B204(0),                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015SB0.CDSERASA.DEV.B204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,14),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPB1   EXEC PGM=CLLP4765                                            
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    EFETUA BATIMENTO MIGRADOS INCLUIDOS                          
+//* ***    COM CDSERASA(CLLP)  - DEVEDOR CARTAO                         
+//* ***    *********************************************************    
+//*                                                                     
+//MIGRAINC DD DSN=*.STEP0A.MIGRAINC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEPB0.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQIMIGR DD DSN=MX.CLLP.J1015SB1.ARQIMIGR.DEV.B204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQICLLP DD DSN=MX.CLLP.J1015SB1.ARQICLLP.DEV.B204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQNSELC DD DSN=MX.CLLP.J1015SB1.ARQNSELC.DEV.B204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPB2   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    MERGE                                                        
+//* ***    CDSERASA(CLLP) MIGRADO (INCLUIDOS) +                         
+//* ***    CDSERASA(RECR) ANTERIOR                                      
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEPB1.ARQIMIGR,                                    
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.CDSERASA.MDEV.SA.B204.ANT(0),                 
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015SB2.CDSERASA.MDEV.B204(+1),              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPB3   EXEC PGM=CLLP4770                                            
+//*                                                                     
+//* ***    EFETUA BATIMENTO MIGRADOS EXCLUSAO                           
+//* ***    COM CDSERASA(RECR) ANTERIOR                                  
+//*                                                                     
+//MIGRAEXC DD DSN=*.STEP0A.MIGRAEXC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEPB2.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQEMIGR DD DSN=MX.CLLP.PRV.CDSERASA.MDEV.SA.B204(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQECLLP DD DSN=MX.CLLP.J1015SB3.ARQECLLP.DEVB204(+1),                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPB4   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR CGC.CPF DEV/NATUREZA/AGENCIA/DT.VCTO          
+//* ***    MERGE DO CDSERASA(CLLP) SEM MIGRADOS PARA RECR  +            
+//* ***             CDSERASA(RECR) RETIRADOS DO CADASTRO DE MIGRADOS    
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEPB1.ARQICLLP,                                    
+//       DISP=SHR                                                       
+//         DD DSN=*.STEPB3.ARQECLLP,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CDSERASA.DEV.SA.B204(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(1,12,A,21,3,A,13,5,A),FORMAT=BI                          
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPB5   EXEC PGM=CLLP4771,                                           
+//       PARM='DEVINC1RC'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEPB1.ARQIMIGR,                                    
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHI,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPB6   EXEC PGM=CLLP4771,                                           
+//       PARM='DEVEXC1RC'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEPB3.ARQEMIGR,                                    
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHJ,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPC0   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.CDSERASA.AVAL.SA.B204(0),                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015SB0.CDSERASA.AVAL.B204(+1),              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,14),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPC1   EXEC PGM=CLLP4765                                            
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    EFETUA BATIMENTO MIGRADOS INCLUIDOS                          
+//* ***    COM CDSERASA(CLLP)  - AVALISTA - CARTAO                      
+//* ***    *********************************************************    
+//*                                                                     
+//MIGRAINC DD DSN=*.STEP0A.MIGRAINC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEPC0.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQIMIGR DD DSN=MX.CLLP.J1015SC1.ARQIMIGR.AVALB204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQICLLP DD DSN=MX.CLLP.J1015SC1.ARQICLLP.AVALB204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQNSELC DD DSN=MX.CLLP.J1015SC1.ARQNSELC.AVALB204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0100,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPC2   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR AGENCIA, CONTA, CARTEIRA, CONTRATO            
+//* ***    MERGE                                                        
+//* ***    CDSERASA(CLLP) MIGRADO (INCLUIDOS) +                         
+//* ***    CDSERASA(RECR) ANTERIOR                                      
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEPC1.ARQIMIGR,                                    
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.CDSERASA.MAVAL.SA.B204.ANT(0),                
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.J1015SC2.CDSERASA.MAVALB(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(21,03,A,24,04,A,28,03,A,31,04,A),FORMAT=BI               
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPC3   EXEC PGM=CLLP4770                                            
+//*                                                                     
+//* ***    EFETUA BATIMENTO MIGRADOS EXCLUSAO                           
+//* ***    COM CDSERASA(RECR) ANTERIOR                                  
+//*                                                                     
+//MIGRAEXC DD DSN=*.STEP0A.MIGRAEXC,                                    
+//       DISP=SHR                                                       
+//ARQSERAS DD DSN=*.STEPC2.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//ARQEMIGR DD DSN=MX.CLLP.PRV.CDSERASA.MAVAL.SA.B204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//ARQECLLP DD DSN=MX.CLLP.J1015SC3.ARQECLLP.AVALB204(+1),               
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(020000,5010),RLSE),                                
+//       DCB=(MX.A,LRECL=0500,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPC4   EXEC SORTD                                                   
+//*                                                                     
+//* ***    *********************************************************    
+//* ***    CLASSIFICA POR CGC.CPF DEV/NATUREZA/AGENCIA/DT.VCTO          
+//* ***    MERGE DO CDSERASA(CLLP) SEM MIGRADOS PARA RECR  +            
+//* ***             CDSERASA(RECR) RETIRADOS DO CADASTRO DE MIGRADOS    
+//* ***    *********************************************************    
+//*                                                                     
+//SORTIN   DD DSN=*.STEPC1.ARQICLLP,                                    
+//       DISP=SHR                                                       
+//         DD DSN=*.STEPC3.ARQECLLP,                                    
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CDSERASA.AVAL.SA.B204(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,04),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=500,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+  SORT FIELDS=(413,12,A,21,3,A,1,12,A,13,5,A),FORMAT=BI                 
+  END                                                                   
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(0500))                                             
+//*                                                                     
+//STEPC5   EXEC PGM=CLLP4771,                                           
+//       PARM='AVAINC1RC'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEPC1.ARQIMIGR,                                    
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHK,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPC6   EXEC PGM=CLLP4771,                                           
+//       PARM='AVAEXC1RC'                                               
+//*                                                                     
+//* ***  LISTA  A R Q U I V O                                           
+//* ***  +-----------------------------------------------------------   
+//* ***  |PARM PARA MONTAR CABECALHO RELATO                             
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |POS - 01,03   |POS - 04,03   |POS-07,01|POS-08,01|POS-09,01   
+//* ***  +--------------+--------------+---------+-------------------   
+//* ***  |AVALISTAS= AVA|INCLUIDOS= INC|SERASA= 1|RECR= R  |CARTAO= C   
+//* ***  |DEVEDORES= DEV|EXCLUIDOS= EXC|S P C = 2|CLLP= C  |BRANCO= B   
+//* ***  +--------------+--------------+---------+-------------------   
+//*                                                                     
+//ENTRADA  DD DSN=*.STEPC3.ARQEMIGR,                                    
+//       DISP=SHR                                                       
+//RELATO   DD SYSOUT=%%FORM#LKHL,                                       
+//       DCB=(LRECL=131,RECFM=FB)                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEPC7   EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    LISTA DD'S 'RELATO' - STEP0A.                                
+//*                                                                     
+//ENT00001 DD DSN=*.STEP0A.RELATO,                                      
+//       DISP=SHR                                                       
+//SAI00001 DD SYSOUT=%%FORM#LKHD,                                       
+//       OUTLIM=5000000,                                                
+//       DCB=(LRECL=133,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//PRINTER  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

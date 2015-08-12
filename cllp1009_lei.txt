@@ -1,0 +1,30 @@
+//CLLP1009 JOB 'CLLP,4120,PR32','D030591',MSGCLASS=Z                    
+//JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP0    EXEC PGM=PLAN2440,                                           
+//       PARM=001                                                       
+//*                                                                     
+//* ***    COPIA MESTAGEN, POIS O MESMO TEM SEGURADO A ATUALIZACAO      
+//* ***    DO MESTAGEN                                                  
+//*                                                                     
+//*ENT00001 DD DSN=AD.MESU.MESTAGEN.NOVO(0),                            
+//ENT00001 DD DSN=AV.MESU.MESTAGEN.NOVO(0),                             
+//       DISP=SHR                                                       
+//SAI00001 DD DSN=AD.BRQ.A348.MESTAGEN.NOVO(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000330,0066),RLSE),                                
+//       DCB=(AD.A)                                                     
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//*SOLTA    EXEC AV,                                                    
+//*       J=CLLP1010,                                                   
+//*       DS=AD.BRQ.CLLP1000.EXEC                                       
+//*      DS=AD.BRQ.CLLP1000.PROD                                        
+//*                                                                     

@@ -1,0 +1,183 @@
+//CLLP2205 JOB 'CLLP,4120,PR32','I12808',MSGCLASS=Z,SCHENV=IMS          
+//OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               
+//OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 
+//OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 
+//OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 
+//OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 
+//OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 
+//OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  
+//OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 
+//OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  
+//OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  
+//OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  
+//OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 
+//OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 
+//OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  
+//OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  
+//OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 
+//*                                                                     
+//* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTGZ24                 
+//*                                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(,255),FILSZ=E250000000'                        
+//*                                                                     
+//* ***    CLASSIFICACAO DO CADASTRO DE BAIXAS POR AG.CONTA E DATA DA   
+//* ***    BAIXA                                                        
+//*                                                                     
+//SORTIN   DD DSN=MX.CLLP.D0PRVMZ.PRV.BAIX3MES.LEI(0),                  
+//       DISP=SHR                                                       
+//         DD DSN=MX.CLLP.S005182.BXMAIS3M.LEI(0),                      
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CLLP.CADBAIXA.TOTAL(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0008000,000800),RLSE),                             
+//       DCB=(MX.A,LRECL=0414,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK21 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK22 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK23 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK24 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK25 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK26 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK27 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK28 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK29 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK30 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK31 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK32 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK33 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK34 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK35 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK36 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK37 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK38 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK39 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK40 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SORTWK41 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(015000,4000)),                                     
+//       DSNTYPE=LARGE                                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(4,3,PD,A,26,4,PD,A,22,4,ZD,D,19,2,ZD,D,16,2,ZD,D,         
+              34,4,PD,D,97,4,CH,D,94,2,CH,D,91,2,CH,D),FORMAT=BI        
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=CLLP6530                                            
+//*                                                                     
+//* ***    SELECIONA CLIENTES COM BAIXA HA MAIS DE 1095 DIAS.           
+//*                                                                     
+//CADBAIXA DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=SHR                                                       
+//BAIX1095 DD DSN=MX.CLLP.BAIX1095(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(0180000,080000),RLSE),                             
+//       DCB=(MX.A,LRECL=0015,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//RELATO   DD SYSOUT=%%FORM#GZ24,                                       
+//       DCB=(LRECL=080,RECFM=FBA)                                      
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
