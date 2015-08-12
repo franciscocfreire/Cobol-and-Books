@@ -1,0 +1,14 @@
+RDABX055 - Atualiza PF
+Boletar os STEP3 e STEP4 para atualizar arquivo PRV
+
+RDABX056 - Atualiza PJ
+Boletar os STEP3 e STEP4 para atualizar arquivo PRV
+
+RDABX057 - Atualiza Telefone
+Boleto- RDAB9484 - Devolvido
+
+RDABX058 - HPU da Tabela RDAB006
+(pedir ciencia nos pacotes:)
+pacote HX0654587, boleto CLLP9HR4 ==> criar cllpx003 no al01
+RDAB9OZM - jobs rdab a pedido
+

@@ -1,0 +1,490 @@
+                         ----INICIO DO RELATORIO ---                                                     ----INICIO DO RELATORIO --- 
+                                                                                                                                     
+                    J E S 2  J O B  L O G  --  S Y S T E M  M Z 1 C  --  N O D E  M Z N J E 0 1                                      
+                                                                                                                                     
+03.55.53 JOB61359 ---- FRIDAY,    28 FEB 2014 ----                                                                                   
+03.55.53 JOB61359  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.                                                                 
+03.55.54 JOB61359  ICH70001I PRODSTR  LAST ACCESS AT 03:55:51 ON FRIDAY, FEBRUARY 28, 2014                                           
+03.55.54 JOB61359  $HASP373 TTHX9952 STARTED - WLM INIT  - SRVCLASS BATCHTST - SYS MZ1B                                              
+03.55.54 JOB61359  IEF403I TTHX9952 - STARTED - TIME=03.55.54                                                                        
+03.55.56 JOB61362  $HASP100 PLAN0276 ON INTRDR                            FROM JOB61359 TTHX9952                                     
+03.55.56 JOB61362  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.                                                                 
+03.55.56 JOB61359  -                                                --TIMINGS (MINS.)--                   ----PAGING COUNTS---       
+03.55.56 JOB61359  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  SRVCLASS  PAGE  SWAP   VIO SWAPS     
+03.55.56 JOB61359  -TTHX9952 STEPCTM  CTMRDOVE    00     17      5    .00    .00     .0    204  BATCHTST     0     0     0     0     
+03.55.56 JOB61359  IEF233A M 3B85,NC1975,,TTHX9952,STEP1,  378                                                                       
+   378                     MX.CACS.S029247.EXTRACT.SEMAGESE.G2118V00                                                                 
+03.55.57 JOB61359  BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT=TAPE                                                
+03.55.57 JOB61359  BUFL002I   ARQEXTRC  MX.CACS.S029247.EXTRACT.SEMAGESE.G2118V00                                                    
+03.55.57 JOB61359  BUFL004I   BDRPTRAN  Bufno=005  Dataset  menor  que 045 TRKS                                                      
+03.55.57 JOB61359  BUFL002I   BDRPTRAN  MX.TTHX.BDRPTRAN.CARTEJUR.G0001V00                                                           
+03.56.58 JOB61359  SVM4000I TTHX9952, STEP1, ARQSAIDA, ATTEMPTING SPACSECR FOR MX.TTHX.INATIVA.SEMATU.CARTEJUR.G0001V00, SM1V42, 7   
+03.56.58 JOB61359  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                       
+03.57.53 JOB61359  IEC502E K 3B85,NC1975,SL,TTHX9952,STEP1,MX.CACS.S029247.EXTRACT.SEMAGESE.G2118V00                                 
+03.57.53 JOB61359  IEC501A M 3B85,NI1816,SL,COMP,TTHX9952,STEP1,MX.CACS.S029247.EXTRACT.SEMAGESE.G2118V00                            
+03.57.56 JOB61359  IEF234E K 3B85,NI1816,PVT,TTHX9952,STEP1                                                                          
+03.57.56 JOB61359  -TTHX9952 STEP1                00   552K   105K    .03    .02    2.0   445K  BATCHTST     0     0     0     0     
+03.57.56 JOB61359  -TTHX9952 STEP2             FLUSH      0      0    .00    .00     .0      0  BATCHTST     0     0     0     0     
+03.57.56 JOB61359  IEF453I TTHX9952 - JOB FAILED - JCL ERROR - TIME=03.57.56                                                         
+03.57.56 JOB61359  -TTHX9952 ENDED.  NAME-A823132              TOTAL TCB CPU TIME=   .03  TOTAL ELAPSED TIME=   2.0                  
+03.57.56 JOB61359  $HASP395 TTHX9952 ENDED                                                                                           
+------ JES2 JOB STATISTICS ------                                                                                                    
+  28 FEB 2014 JOB EXECUTION DATE                                                                                                     
+          289 CARDS READ                                                                                                             
+          480 SYSOUT PRINT RECORDS                                                                                                   
+            0 SYSOUT PUNCH RECORDS                                                                                                   
+           38 SYSOUT SPOOL KBYTES                                                                                                    
+         2.04 MINUTES EXECUTION TIME                                                                                                 
+                                                                                                                                     
+        1 //TTHX9952 JOB 'RDAB,4120,PR32','A823132',MSGCLASS=1,REGION=7M,         JOB61359                                           
+          //       SCHENV=TEST,                                                   00000020                                           
+          //       MSGLEVEL=(1,1)                                                                                                    
+          //*---- SUBMITTED BY CONTROL-M (FROM OVERLIB)     ODATE=140227                                                             
+          //*---- SCHEDULE MX.CTMR.PR32.SCHEFILE(TTHXESPE)                                                                           
+          //*---- SCHEDULED DUE TO RBC:                                                                                              
+          //*---- JCL      MX.OVERFILE(TTHX9952)                                                                                     
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=FI280  RUN NO.=00002                                                       
+        2 //OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               00000030                                           
+        3 //OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 00000040                                           
+        4 //OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 00000050                                           
+        5 //OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 00000060                                           
+        6 //OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 00000070                                           
+        7 //OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 00000080                                           
+        8 //OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  00000090                                           
+        9 //OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 00000100                                           
+       10 //OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  00000110                                           
+       11 //OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  00000120                                           
+       12 //OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  00000130                                           
+       13 //OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 00000140                                           
+       14 //OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 00000150                                           
+       15 //OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  00000160                                           
+       16 //OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  00000170                                           
+       17 //OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 00000180                                           
+          //*                                                                     00000190                                           
+          //* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKSO                 00000200                                           
+          //* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHX                 00000210                                           
+          //* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHY                 00000220                                           
+          //*                                                                     00000230                                           
+       18 //JOBLIB   DD DSN=MX.BIBGERTT,DISP=SHR                                  00000240                                           
+       19 //         DD DSN=MX.BIBGERAL,DISP=SHR                                  00000250                                           
+       20 //         DD DSN=MJ.BIBGERAL,DISP=SHR                                  00000260                                           
+       21 //         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             00000270                                           
+       22 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             00000280                                           
+       23 //STEPCTM  EXEC CTMRDOVE,                                               00000290                                           
+          //       GR=PR32,                                                       00000300                                           
+          //       IND=MX                                                         00000310                                           
+       24 XXCTMRDOVE PROC GR=,IND=                                                                                                   
+       25 XXCTMRDOVE EXEC PGM=PLAN2575,PARM='&GR'                                                                                    
+          IEFC653I SUBSTITUTION JCL - PGM=PLAN2575,PARM='PR32'                                                                       
+       26 XXSTEPLIB  DD DSN=&IND..BIBGERAL,DISP=SHR                                                                                  
+          XX*                                                                                                                        
+          XX* ***    MONTA JOB DE DELECAO DE MEMBRO DA "OVERFILE"                                                                    
+          XX*                                                                                                                        
+          IEFC653I SUBSTITUTION JCL - DSN=MX.BIBGERAL,DISP=SHR                                                                       
+       27 XXSAIDA    DD SYSOUT=(A,INTRDR)                                                                                            
+       28 XXSYSOUT   DD SYSOUT=*                                                                                                     
+       29 XXSYSUDUMP DD SYSOUT=Y                                                                                                     
+          XX*                                                                                                                        
+          //*                                                                     00000320                                           
+       30 //STEP1    EXEC PGM=RDAB7480,                                           00000330                                           
+          //       COND=(0,NE)                                                    00000340                                           
+          //*                                                                     00000350                                           
+          //* ***    (PESSOA JURIDICA)                                            00000360                                           
+          //* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE      00000370                                           
+                                                                                                                                     
+          //* ***    ESTA ERRADA.                                                 00000380                                           
+          //* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)            00000390                                           
+          //* ***    E O ARQUIVO EXTRACT NOVO.                                    00000400                                           
+          //*                                                                     00000410                                           
+       31 //BDRPTRAN DD DSN=MX.TTHX.BDRPTRAN.CARTEJUR(00),                        00000420                                           
+          //       DISP=SHR                                                       00000430                                           
+       32 //ARQEXTRC DD DSN=MX.CACS.S029247.EXTRACT.SEMAGESE.G2118V00,            00000440                                           
+          //       DISP=SHR                                                       00000450                                           
+       33 //ARQSAIDA DD DSN=MX.TTHX.INATIVA.SEMATU.CARTEJUR(+1),                  00000460                                           
+          //       DISP=(,CATLG,DELETE),                                          00000470                                           
+          //       UNIT=(DISCO,08),                                               00000480                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00000490                                           
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        00000500                                           
+       34 //BDRPSCOR DD DSN=MX.TTHX.INATIVA.SEMATU.DESPCJUR(+1),                  00000510                                           
+          //       DISP=(,CATLG,DELETE),                                          00000520                                           
+          //       UNIT=(DISCO,08),                                               00000530                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00000540                                           
+          //       DCB=(MX.A,LRECL=0396,RECFM=FB,BUFNO=30)                        00000550                                           
+       35 //SYSOUT   DD SYSOUT=*                                                  00000560                                           
+       36 //SYSUDUMP DD SYSOUT=Y                                                  00000570                                           
+          //*                                                                     00000580                                           
+       37 //STEP2    EXEC PGM=RDAB7480,                                           00000590                                           
+          //       COND=(0,NE)                                                    00000600                                           
+          //*                                                                     00000610                                           
+          //* ***    (PESSOA FISICA)                                              00000620                                           
+          //* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE      00000630                                           
+          //* ***    ESTA ERRADA.                                                 00000640                                           
+          //* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)            00000650                                           
+          //* ***    E O ARQUIVO EXTRACT NOVO.                                    00000660                                           
+          //*                                                                     00000670                                           
+       38 //BDRPTRAN DD DSN=MX.TTHX.BDRPTRAN.CARTEFIS(00),                        00000680                                           
+          //       DISP=SHR                                                       00000690                                           
+       39 //ARQEXTRC DD DSN=MX.CACS.EXTRACT.SEMATU.GERAL.SEL(0),                  00000700                                           
+          //       DISP=SHR                                                       00000710                                           
+       40 //ARQSAIDA DD DSN=MX.TTHX.INATIVA.SEMATU.CARTEFIS(+1),                  00000720                                           
+          //       DISP=(,CATLG,DELETE),                                          00000730                                           
+          //       UNIT=(DISCO,08),                                               00000740                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00000750                                           
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        00000760                                           
+       41 //BDRPSCOR DD DSN=MX.TTHX.INATIVA.SEMATU.CARTAFIS(+1),                  00000770                                           
+          //       DISP=(,CATLG,DELETE),                                          00000780                                           
+          //       UNIT=(DISCO,08),                                               00000790                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00000800                                           
+          //       DCB=(MX.A,LRECL=0396,RECFM=FB,BUFNO=30)                        00000810                                           
+       42 //SYSOUT   DD SYSOUT=*                                                  00000820                                           
+       43 //SYSUDUMP DD SYSOUT=Y                                                  00000830                                           
+          //*                                                                     00000840                                           
+       44 //STEP3    EXEC SORTD                                                   00000850                                           
+       45 XXSORTD    PROC                                                                                                            
+       46 XXSORT     EXEC  PGM=ICEMAN                                                                                                
+       47 XXSYSOUT   DD  SYSOUT=*                                                                                                    
+          //*                                                                     00000860                                           
+          //* ***    CLASSIFICA ARQUIVO REP360WK - RELATÓRIO VGO4                 00000870                                           
+          //* ***    POR: LOCATION / CONTA CACS                                   00000880                                           
+          //* ***    SELECIONANDO LOCATION - CARTÃO E ERRO 260                    00000890                                           
+                                                                                                                                     
+          //*                                                                     00000900                                           
+       48 //SORTIN   DD DSN=MX.CACS.DB280.REP360WK(0),                            00000910                                           
+          //       DISP=SHR                                                       00000920                                           
+       49 //SORTOUT  DD DSN=MX.TTHX.CARTE.REP360WK.COMPARA(+1),                   00000930                                           
+          //       DISP=(,CATLG,DELETE),                                          00000940                                           
+          //       UNIT=(DISCO,40),                                               00000950                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00000960                                           
+          //       DCB=(MX.A,LRECL=24,RECFM=FB)                                   00000970                                           
+       50 //SORTLIB  DD DSN=SYS1.SORTLIB,                                         00000980                                           
+          //       DISP=SHR                                                       00000990                                           
+       51 //SORTWK01 DD UNIT=DISCO,                                               00001000                                           
+          //       SPACE=(CYL,(00500))                                            00001010                                           
+       52 //SORTWK02 DD UNIT=DISCO,                                               00001020                                           
+          //       SPACE=(CYL,(00500))                                            00001030                                           
+       53 //SORTWK03 DD UNIT=DISCO,                                               00001040                                           
+          //       SPACE=(CYL,(00500))                                            00001050                                           
+       54 //SORTWK04 DD UNIT=DISCO,                                               00001060                                           
+          //       SPACE=(CYL,(00500))                                            00001070                                           
+       55 //SORTWK05 DD UNIT=DISCO,                                               00001080                                           
+          //       SPACE=(CYL,(00500))                                            00001090                                           
+       56 //SORTWK06 DD UNIT=DISCO,                                               00001100                                           
+          //       SPACE=(CYL,(00500))                                            00001110                                           
+       57 //SORTWK07 DD UNIT=DISCO,                                               00001120                                           
+          //       SPACE=(CYL,(00500))                                            00001130                                           
+       58 //SORTWK08 DD UNIT=DISCO,                                               00001140                                           
+          //       SPACE=(CYL,(00500))                                            00001150                                           
+       59 //SORTWK09 DD UNIT=DISCO,                                               00001160                                           
+          //       SPACE=(CYL,(00500))                                            00001170                                           
+       60 //SORTWK10 DD UNIT=DISCO,                                               00001180                                           
+          //       SPACE=(CYL,(00500))                                            00001190                                           
+       61 //SORTWK11 DD UNIT=DISCO,                                               00001200                                           
+          //       SPACE=(CYL,(00500))                                            00001210                                           
+       62 //SORTWK12 DD UNIT=DISCO,                                               00001220                                           
+          //       SPACE=(CYL,(00500))                                            00001230                                           
+       63 //SORTWK13 DD UNIT=DISCO,                                               00001240                                           
+          //       SPACE=(CYL,(00500))                                            00001250                                           
+       64 //SORTWK14 DD UNIT=DISCO,                                               00001260                                           
+          //       SPACE=(CYL,(00500))                                            00001270                                           
+       65 //SORTWK15 DD UNIT=DISCO,                                               00001280                                           
+          //       SPACE=(CYL,(00500))                                            00001290                                           
+       66 //SORTWK16 DD UNIT=DISCO,                                               00001300                                           
+          //       SPACE=(CYL,(00500))                                            00001310                                           
+       67 //SORTWK17 DD UNIT=DISCO,                                               00001320                                           
+          //       SPACE=(CYL,(00500))                                            00001330                                           
+       68 //SORTWK18 DD UNIT=DISCO,                                               00001340                                           
+          //       SPACE=(CYL,(00500))                                            00001350                                           
+       69 //SYSIN    DD *                                                         00001360                                           
+          //*                                                                     00001430                                           
+       70 //STEP4    EXEC SORTD                                                   00001440                                           
+       71 XXSORTD    PROC                                                                                                            
+       72 XXSORT     EXEC  PGM=ICEMAN                                                                                                
+       73 XXSYSOUT   DD  SYSOUT=*                                                                                                    
+          //*                                                                     00001450                                           
+          //* ***    CLASSIFICA ARQUIVO EXTRACT PARA O CACS                       00001460                                           
+          //* ***    POR: LOCATION / CONTA CACS                                   00001470                                           
+                                                                                                                                     
+          //* ***    REMOVE DUPLICADOS                                            00001480                                           
+          //*                                                                     00001490                                           
+       74 //SORTIN   DD DSN=*.STEP1.ARQSAIDA,                                     00001500                                           
+          //       DISP=SHR                                                       00001510                                           
+       75 //         DD DSN=*.STEP2.ARQSAIDA,                                     00001520                                           
+          //       DISP=SHR                                                       00001530                                           
+       76 //SORTOUT  DD DSN=MX.TTHX.EXTRACT.CARTE.COMPARA(+1),                    00001540                                           
+          //       DISP=(,CATLG,DELETE),                                          00001550                                           
+          //       UNIT=(DISCO,40),                                               00001560                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00001570                                           
+          //       DCB=(MX.A,LRECL=24,RECFM=FB)                                   00001580                                           
+       77 //SORTLIB  DD DSN=SYS1.SORTLIB,                                         00001590                                           
+          //       DISP=SHR                                                       00001600                                           
+       78 //SORTWK01 DD UNIT=DISCO,                                               00001610                                           
+          //       SPACE=(CYL,(00500))                                            00001620                                           
+       79 //SORTWK02 DD UNIT=DISCO,                                               00001630                                           
+          //       SPACE=(CYL,(00500))                                            00001640                                           
+       80 //SORTWK03 DD UNIT=DISCO,                                               00001650                                           
+          //       SPACE=(CYL,(00500))                                            00001660                                           
+       81 //SORTWK04 DD UNIT=DISCO,                                               00001670                                           
+          //       SPACE=(CYL,(00500))                                            00001680                                           
+       82 //SORTWK05 DD UNIT=DISCO,                                               00001690                                           
+          //       SPACE=(CYL,(00500))                                            00001700                                           
+       83 //SORTWK06 DD UNIT=DISCO,                                               00001710                                           
+          //       SPACE=(CYL,(00500))                                            00001720                                           
+       84 //SORTWK07 DD UNIT=DISCO,                                               00001730                                           
+          //       SPACE=(CYL,(00500))                                            00001740                                           
+       85 //SORTWK08 DD UNIT=DISCO,                                               00001750                                           
+          //       SPACE=(CYL,(00500))                                            00001760                                           
+       86 //SORTWK09 DD UNIT=DISCO,                                               00001770                                           
+          //       SPACE=(CYL,(00500))                                            00001780                                           
+       87 //SORTWK10 DD UNIT=DISCO,                                               00001790                                           
+          //       SPACE=(CYL,(00500))                                            00001800                                           
+       88 //SORTWK11 DD UNIT=DISCO,                                               00001810                                           
+          //       SPACE=(CYL,(00500))                                            00001820                                           
+       89 //SORTWK12 DD UNIT=DISCO,                                               00001830                                           
+          //       SPACE=(CYL,(00500))                                            00001840                                           
+       90 //SORTWK13 DD UNIT=DISCO,                                               00001850                                           
+          //       SPACE=(CYL,(00500))                                            00001860                                           
+       91 //SORTWK14 DD UNIT=DISCO,                                               00001870                                           
+          //       SPACE=(CYL,(00500))                                            00001880                                           
+       92 //SORTWK15 DD UNIT=DISCO,                                               00001890                                           
+          //       SPACE=(CYL,(00500))                                            00001900                                           
+       93 //SORTWK16 DD UNIT=DISCO,                                               00001910                                           
+          //       SPACE=(CYL,(00500))                                            00001920                                           
+       94 //SORTWK17 DD UNIT=DISCO,                                               00001930                                           
+          //       SPACE=(CYL,(00500))                                            00001940                                           
+       95 //SORTWK18 DD UNIT=DISCO,                                               00001950                                           
+          //       SPACE=(CYL,(00500))                                            00001960                                           
+       96 //SYSIN    DD *                                                         00001970                                           
+          //*                                                                     00002010                                           
+       97 //STEP5    EXEC PGM=CVDT0150,                                           00002020                                           
+          //       PARM='001001'                                                  00002030                                           
+       98 //ARQTESTE DD DSN=*.STEP3.SORT.SORTOUT,                                 00002040                                           
+          //       DISP=SHR                                                       00002050                                           
+                                                                                                                                     
+       99 //ARQPROD  DD DSN=*.STEP4.SORT.SORTOUT,                                 00002060                                           
+          //       DISP=SHR                                                       00002070                                           
+      100 //DIVERGE  DD DSN=MX.TTHX.CARTE.DIVERGE(+1),                            00002080                                           
+          //       DISP=(,CATLG,DELETE),                                          00002090                                           
+          //       UNIT=(DISCO),                                                  00002100                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00002110                                           
+          //       DCB=(MX.A,LRECL=024,RECFM=FB)                                  00002120                                           
+      101 //PRODSEM  DD DSN=MX.TTHX.CARTE.PRODSEM(+1),                            00002130                                           
+          //       DISP=(,CATLG,DELETE),                                          00002140                                           
+          //       UNIT=(DISCO),                                                  00002150                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00002160                                           
+          //       DCB=(MX.A,LRECL=24,RECFM=FB)                                   00002170                                           
+      102 //TESTSEM  DD DSN=MX.TTHX.CARTE.TESTSEM(+1),                            00002180                                           
+          //       DISP=(,CATLG,DELETE),                                          00002190                                           
+          //       UNIT=(DISCO),                                                  00002200                                           
+          //       SPACE=(TRK,(040000,4000),RLSE),                                00002210                                           
+          //       DCB=(MX.A,LRECL=24,RECFM=FB)                                   00002220                                           
+      103 //SYSOUT   DD SYSOUT=T                                                  00002230                                           
+      104 //SYSUDUMP DD SYSOUT=Y                                                  00002240                                           
+          //*                                                                     00002250                                           
+      105 //STEP6    EXEC PGM=ICETOOL                                             00002260                                           
+      106 //IN       DD DSN=*.STEP5.DIVERGE,                                      00002270                                           
+          //       DISP=SHR                                                       00002280                                           
+      107 //LISTA    DD SYSOUT=(,,LKSO),OUTPUT=(*.OUTF),                          00002290                                           
+          //       DCB=(LRECL=133,RECFM=FBA)                                      00002300                                           
+      108 //DFSMSG   DD SYSOUT=T                                                  00002310                                           
+      109 //TOOLMSG  DD SYSOUT=T                                                  00002320                                           
+      110 //TOOLIN   DD *                                                         00002330                                           
+      111 //SYSOUT   DD SYSOUT=*                                                  00002410                                           
+      112 //SYSUDUMP DD SYSOUT=Y                                                  00002420                                           
+          //*                                                                     00002430                                           
+      113 //STEP7    EXEC PGM=ICETOOL                                             00002440                                           
+      114 //IN       DD DSN=*.STEP5.PRODSEM,                                      00002450                                           
+          //       DISP=SHR                                                       00002460                                           
+      115 //LISTA    DD SYSOUT=(,,LKHX),OUTPUT=(*.OUTF),                          00002470                                           
+          //       DCB=(LRECL=133,RECFM=FBA)                                      00002480                                           
+      116 //DFSMSG   DD SYSOUT=T                                                  00002490                                           
+      117 //TOOLMSG  DD SYSOUT=T                                                  00002500                                           
+      118 //TOOLIN   DD *                                                         00002510                                           
+      119 //SYSOUT   DD SYSOUT=*                                                  00002590                                           
+      120 //SYSUDUMP DD SYSOUT=Y                                                  00002600                                           
+          //*                                                                     00002610                                           
+      121 //STEP8    EXEC PGM=ICETOOL                                             00002620                                           
+      122 //IN       DD DSN=*.STEP5.TESTSEM,                                      00002630                                           
+          //       DISP=SHR                                                       00002640                                           
+      123 //LISTA    DD SYSOUT=(,,LKHY),OUTPUT=(*.OUTF),                          00002650                                           
+          //       DCB=(LRECL=133,RECFM=FBA)                                      00002660                                           
+      124 //DFSMSG   DD SYSOUT=T                                                  00002670                                           
+      125 //TOOLMSG  DD SYSOUT=T                                                  00002680                                           
+      126 //TOOLIN   DD *                                                         00002690                                           
+      127 //SYSOUT   DD SYSOUT=*                                                  00002770                                           
+      128 //SYSUDUMP DD SYSOUT=Y                                                  00002780                                           
+          //*                                                                     00002790                                           
+          //* ***    SISTEMA SIRJ - REPROCESSAMENTO DE JOB'S - MOTIVO:            00002800                                           
+          //* ***    SPACES AUMENTADOS. LEITURA DO BACKUP                         00002810                                           
+                                                                                                                                     
+          //*                                                                     00002820                                           
+      129 //                                                                                                                         
+                                                                                                                                     
+ STMT NO. MESSAGE                                                                                                                    
+       23 IEFC001I PROCEDURE CTMRDOVE WAS EXPANDED USING SYSTEM LIBRARY MX.PROCLIB                                                   
+       44 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLIB                                                    
+       70 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLIB                                                    
+ICH70001I PRODSTR  LAST ACCESS AT 03:55:51 ON FRIDAY, FEBRUARY 28, 2014                                                              
+IEF236I ALLOC. FOR TTHX9952 CTMRDOVE STEPCTM                                                                                         
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                                                                               
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IEF237I D684 ALLOCATED TO                                                                                                            
+IEF237I B814 ALLOCATED TO                                                                                                            
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB                                                                                              
+IEF237I JES2 ALLOCATED TO SAIDA                                                                                                      
+IEF237I JES2 ALLOCATED TO SYSOUT                                                                                                     
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                                                                                   
+IEF142I TTHX9952 CTMRDOVE STEPCTM - STEP WAS EXECUTED - COND CODE 0000                                                               
+IGD106I MX.BIBGERTT                                  PASSED,    DDNAME=JOBLIB                                                        
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IEF285I   DB2M1.R2.DSNLOAD                             PASSED                                                                        
+IEF285I   VOL SER NOS= DB2M12.                                                                                                       
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                                                                        
+IEF285I   VOL SER NOS= R13M1A.                                                                                                       
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB                                                       
+IEF285I   PRODSTR.TTHX9952.JOB61359.D0000106.?         SYSOUT                                                                        
+IEF285I   PRODSTR.TTHX9952.JOB61359.D0000107.?         SYSOUT                                                                        
+IEF285I   PRODSTR.TTHX9952.JOB61359.D0000108.?         SYSOUT                                                                        
+BRA020I ------------------------------------------------------------------------                                                     
+                       S t e p   E n d   S t a t i s t i c s                                                                         
+                                                                                                                                     
+Step Name: CTMRDOVE       Cond Code: 0000         Start: 28-Feb-2014 03:55:54 AM                                                     
+Step  Num: 1              PGM  Name: PLAN2575     End:   28-Feb-2014 03:55:56 AM                                                     
+CPU (TCB): 00:00:00.00                            Storage below 16M:         32k                                                     
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k                                                     
+Trans Act: 00:00:01.53                            Service Units:             204                                                     
+Tape Mnts: 0                                      Total EXCPs:                17                                                     
+                                                                                                                                     
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize                                                     
+B1C9 D STEPLIB             1  23,476                                                                                                 
+                                                                                                                                     
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0                                                     
+                                                                                                                                     
+BRA021I ------------------------------------------------------------------------                                                     
+IEF373I STEP/CTMRDOVE/START 2014059.0355                                                                                             
+IEF032I STEP/CTMRDOVE/STOP  2014059.0355                                                                                             
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                         
+        VIRT:    32K  SYS:   432K  EXT:        8K  SYS:    10140K                                                                    
+IEF236I ALLOC. FOR TTHX9952 STEP1                                                                                                    
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                                                                               
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IEF237I D684 ALLOCATED TO                                                                                                            
+IEF237I B814 ALLOCATED TO                                                                                                            
+IGD103I SMS ALLOCATED TO DDNAME BDRPTRAN                                                                                             
+IGD100I 3B85 ALLOCATED TO DDNAME ARQEXTRC                                                                                            
+IGD101I SMS ALLOCATED TO DDNAME (ARQSAIDA)                                                                                           
+        DSN (MX.TTHX.INATIVA.SEMATU.CARTEJUR.G0001V00    )                                                                           
+        STORCLAS (STANDARD) MGMTCLAS (PN2D1DNL) DATACLAS (DSRG#NUL)                                                                  
+        VOL SER NOS= SM1V42                                                                                                          
+IGD101I SMS ALLOCATED TO DDNAME (BDRPSCOR)                                                                                           
+        DSN (MX.TTHX.INATIVA.SEMATU.DESPCJUR.G0001V00    )                                                                           
+        STORCLAS (STANDARD) MGMTCLAS (PN2D1DNL) DATACLAS (DSRG#NUL)                                                                  
+        VOL SER NOS= SM1V36                                                                                                          
+IEF237I JES2 ALLOCATED TO SYSOUT                                                                                                     
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                                                                                   
+BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT=TAPE                                                                   
+BUFL002I   ARQEXTRC  MX.CACS.S029247.EXTRACT.SEMAGESE.G2118V00                                                                       
+BUFL004I   BDRPTRAN  Bufno=005  Dataset  menor  que 045 TRKS                                                                         
+BUFL002I   BDRPTRAN  MX.TTHX.BDRPTRAN.CARTEJUR.G0001V00                                                                              
+IEF142I TTHX9952 STEP1 - STEP WAS EXECUTED - COND CODE 0000                                                                          
+IGD106I MX.BIBGERTT                                  PASSED,    DDNAME=JOBLIB                                                        
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IEF285I   DB2M1.R2.DSNLOAD                             PASSED                                                                        
+IEF285I   VOL SER NOS= DB2M12.                                                                                                       
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                                                                        
+IEF285I   VOL SER NOS= R13M1A.                                                                                                       
+IGD104I MX.TTHX.BDRPTRAN.CARTEJUR.G0001V00           RETAINED,  DDNAME=BDRPTRAN                                                      
+IEF285I   MX.CACS.S029247.EXTRACT.SEMAGESE.G2118V00    KEPT                                                                          
+IEF285I   VOL SER NOS= NC1975,NI1816.                                                                                                
+IGD107I MX.TTHX.INATIVA.SEMATU.CARTEJUR.G0001V00     ROLLED IN, DDNAME=ARQSAIDA                                                      
+IGD107I MX.TTHX.INATIVA.SEMATU.DESPCJUR.G0001V00     ROLLED IN, DDNAME=BDRPSCOR                                                      
+IEF285I   PRODSTR.TTHX9952.JOB61359.D0000109.?         SYSOUT                                                                        
+IEF285I   PRODSTR.TTHX9952.JOB61359.D0000110.?         SYSOUT                                                                        
+BRA020I ------------------------------------------------------------------------                                                     
+                       S t e p   E n d   S t a t i s t i c s                                                                         
+                                                                                                                                     
+Step Name: STEP1          Cond Code: 0000         Start: 28-Feb-2014 03:55:56 AM                                                     
+Step  Num: 2              PGM  Name: RDAB7480     End:   28-Feb-2014 03:57:56 AM                                                     
+CPU (TCB): 00:00:01.94                            Storage below 16M:        468k                                                     
+CPU (SRB): 00:00:01.45                            Storage above 16M:      6,412k                                                     
+Trans Act: 00:01:59.44                            Service Units:         445,785                                                     
+Tape Mnts: 2                                      Total EXCPs:           552,469                                                     
+                                                                                                                                     
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize                                                     
+B89C D JOBLIB             30  23,476        B5EC D BDRPTRAN           70  27,720                                                     
+3B85 T ARQEXTRC      276,006  27,200        1DE9 D ARQSAIDA      128,000  27,200                                                     
+1DAA D ARQSAIDA      128,000  27,200        BFB2 D ARQSAIDA       19,961  27,200                                                     
+BE42 D BDRPSCOR           69  27,720                                                                                                 
+                                                                                                                                     
+Total DASD EXCPs:            276,130        Total Tape EXCPs:            276,006                                                     
+                                                                                                                                     
+BRA021I ------------------------------------------------------------------------                                                     
+IEF373I STEP/STEP1   /START 2014059.0355                                                                                             
+IEF032I STEP/STEP1   /STOP  2014059.0357                                                                                             
+        CPU:     0 HR  00 MIN  01.94 SEC    SRB:     0 HR  00 MIN  01.45 SEC                                                         
+        VIRT:   468K  SYS:   504K  EXT:     6412K  SYS:    10564K                                                                    
+IEF286I TTHX9952 STEP2 ARQEXTRC - DISP FIELD INCOMPATIBLE WITH DSNAME                                                                
+IEF272I TTHX9952 STEP2 - STEP WAS NOT EXECUTED.                                                                                      
+IEF373I STEP/STEP2   /START 2014059.0357                                                                                             
+IEF032I STEP/STEP2   /STOP  2014059.0357                                                                                             
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                         
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                    
+IGD104I MX.BIBGERTT                                  RETAINED,  DDNAME=JOBLIB                                                        
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=                                                              
+IGD104I MJ.BIBGERAL                                  RETAINED,  DDNAME=                                                              
+IEF285I   DB2M1.R2.DSNLOAD                             KEPT                                                                          
+IEF285I   VOL SER NOS= DB2M12.                                                                                                       
+IEF285I   SYS1.CEE.SCEERUN                             KEPT                                                                          
+IEF285I   VOL SER NOS= R13M1A.                                                                                                       
+BRA020I ------------------------------------------------------------------------                                                     
+                        J o b   E n d   S t a t i s t i c s                                                                          
+                                                                                                                                     
+Job  Name: TTHX9952       System ID: MZ1B        Submit: 28-Feb-2014 03:55:53 AM                                                     
+Job JESID: JOB61359       MVS level: SP7.1.3     Start:  28-Feb-2014 03:55:54 AM                                                     
+Job Class: A                                     End:    28-Feb-2014 03:57:56 AM                                                     
+CPU (TCB): 00:00:01.94                           Storage below 16M:         468k                                                     
+CPU (SRB): 00:00:01.45                           Storage above 16M:       6,412k                                                     
+Trans Act: 00:02:00.97                           Service Units:          445,989                                                     
+Tape Mnts: 2                                     Total EXCPs:            552,486                                                     
+                                                                                                                                     
+---------------Paging---------------        ---------------Paging---------------                                                     
+VIO In:                            0        VIO Out:                           0                                                     
+Pages In:                          0        Pages Out:                         0                                                     
+Common (LPA+CSA):                  0        Hiperspace:                        0                                                     
+VIO Reclaims:                      0        Pages Stolen:                      0                                                     
+                                                                                                                                     
+RACF User: PRODSTR                          Programmer: A823132                                                                      
+Acct Info: RDAB,4120,PR32                                                                                                            
+                                                                                                                                     
+BRA022I ------------------------------------------------------------------------                                                     
+IEF375I  JOB/TTHX9952/START 2014059.0355                                                                                             
+IEF033I  JOB/TTHX9952/STOP  2014059.0357                                                                                             
+        CPU:     0 HR  00 MIN  01.94 SEC    SRB:     0 HR  00 MIN  01.45 SEC                                                         
+                                                                                                                                     
+**********************************************************************                                                               
+**                   ESTATISTICAS DE PROCESSAMENTO                  **                                                               
+**------------------------------------------------------------------**                                                               
+** INATIVAR CONTAS QUE APRESENTEM O ERRO 260 NO BDRPTRAN            **                                                               
+**------------------------------------------------------------------**                                                               
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **                                                               
+** -------- | --------  | --------------------- | ----------------- **                                                               
+** RDAB7480 | TTHX9952  |  28/02/2014 03:55:57  |     28/02/2014    **                                                               
+**------------------------------------------------------------------**                                                               
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **                                                               
+** -------- | --- | --------------------------- | ----------------- **                                                               
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |         2.207.683 **                                                               
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |             4.776 **                                                               
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |         2.207.682 **                                                               
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **                                                               
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |         2.207.682 **                                                               
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |             4.776 **                                                               
+**------------------------------------------------------------------**                                                               
+**  MODULO  |   BOOK   | DESCRICAO                                  **                                                               
+** -------- | -------- | ------------------------------------------ **                                                               
+** POOL7100 | POOL710C | TRATAR ERROS                               **                                                               
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **                                                               
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **                                                               
+**********************************************************************                                                               

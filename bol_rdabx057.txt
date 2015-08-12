@@ -1,0 +1,76 @@
+//RDABX057 JOB 'RDAB,4120,PR32','D115848',MSGCLASS=Z,SCHENV=DB2                
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  0000021
+//         DD DSN=SA.RDG2.SREST.MZ1.DCALOAD,DISP=SHR                    0000022
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             0000023
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             0000024
+//STEP1    EXEC SORTD                                                          
+//*                                                                            
+//* ***    CLASSIFICA POR BANCO, AGENCIA E CONTA                               
+//* ***    ARQUIVO COM TAMANHO 44 BYTES(I#RDAB15)                              
+//*                                                                         
+//SORTIN   DD DSN=MX.RDAB.ARQFONES.BASEATU.CLASS(0)                         
+//       DISP=SHR                                                           
+//SORTOUT  DD DSN=MX.RDAB.JX057S01.ARQFONES(+1)                             
+//       DISP=(,CATLG,DELETE),                                              
+//       UNIT=DISCO,                                                        
+//       SPACE=(TRK,(000840,0168),RLSE),                                    
+//       DCB=(MX.A,LRECL=0044,RECFM=FB)                                     
+//SYSIN    DD *                                                             
+SORT FIELDS=(1,2,PD,A,3,3,PD,A,6,7,PD,A)                                    
+END                                                                         
+//*                                                                         
+//STEP2    EXEC SORTD                                                       
+//*                                                                         
+//* ***    CLASSIFICA POR BANCO, AGENCIA E CONTA                            
+//* ***    ARQUIVO COM TAMANHO 150 BYTES                                    
+//*                                                                         
+//SORTIN   DD DSN=MX.RDAB.S073941.CLIENTE.RDB110.CL(0),                     
+//       DISP=OLD                                                           
+//SORTOUT  DD DSN=MX.RDAB.JX057S02.AGCTCLIE(+1),                            
+//       DISP=(,CATLG,DELETE),                                              
+//       UNIT=DISCO,                                                        
+//       SPACE=(TRK,(000840,0168),RLSE),                                    
+//       DCB=(AD.A,LRECL=0150,RECFM=FB)                                     
+//SYSIN    DD *                                                             
+SORT FIELDS=(1,2,PD,A,3,3,PD,A,6,7,PD,A)                                    
+END                                                                         
+//*                                                                         
+//STEP3    EXEC PGM=RDAB0258                                                
+//*                                                                         
+//* ***    SEPARA ACEITOS E DESPREZADOS                                     
+//*                                                                         
+//ENTRAD1  DD DSN=*.STEP1.SORT.SORTOUT,                                     
+//         DISP=OLD                                                         
+//ENTRAD2  DD DSN=*.STEP2.SORT.SORTOUT,                                     
+//         DISP=OLD                                                         
+//ACEITE   DD DSN=MX.RDAB.JX057S03.ACEITE(+1),                              
+//       DISP=(,CATLG,DELETE),                                              
+//       UNIT=DISCO,                                                        
+//       SPACE=(TRK,(10000,2000),RLSE),                                     
+//       DCB=(MX.A,LRECL=0044,RECFM=FB)                                     
+//DESPZD   DD DSN=MX.RDAB.JX057S03.DESPZD,                                  
+//       DISP=(,CATLG,DELETE),                                               
+//       UNIT=DISCO,                                                         
+//       SPACE=(TRK,(10000,2000),RLSE),                                      
+//       DCB=(MX.A,LRECL=0044,RECFM=FB)                                      
+//SYSOUT   DD SYSOUT=*                                                       
+//SYSUDUMP DD SYSOUT=Y                                                       
+//SYSABOUT DD SYSOUT=Y                                                       
+//*                                                                          
+//STEP4    EXEC PGM=RDAB0259                                                 
+//*                                                                          
+//* ***    SEPARA ACEITOS E DESPREZADOS                                      
+//*                                                                          
+//ARQTEL   DD DSN=*.STEP4.ACEITE,                                            
+//         DISP=SHR                                                          
+//ARQUPDT  DD DSN=MX.RDAB.JX057S04.ARQUPDT(+1),                              
+//       DISP=(,CATLG,CATLG),                                                
+//       UNIT=DISCO,                                                         
+//       SPACE=(TRK,(10000,2000)),                                           
+//       DCB=(MX.A,LRECL=0044,RECFM=FB)                                      
+//*#*RAINPUT  DD *                                                           
+//*#*REST NEWDSN(RETURN)                                                     
+//SYSOUT   DD SYSOUT=*                                                     
+//SYSUDUMP DD SYSOUT=Y                                                     
+//SYSABOUT DD SYSOUT=Y                                                     
+//*                                                                        

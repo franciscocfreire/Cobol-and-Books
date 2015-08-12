@@ -1,0 +1,88 @@
+      ******************************************************************
+      * DCLGEN TABLE(DB2PRD.INFO_FAMLR)                                *
+      *        LIBRARY(AD.DB2.DCLGEN(CADUB065))                        *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(CADUB065)                                     *
+      *        APOST                                                   *
+      *        LABEL(YES)                                              *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE DB2PRD.INFO_FAMLR TABLE                     
+           ( CCLUB                          DECIMAL(10, 0) NOT NULL,    
+             CPTCAO_ESPAC_TBELA             DECIMAL(2, 0) NOT NULL,     
+             IPAI_PSSOA_COPLT               CHAR(70),                   
+             IMAE_PSSOA_COPLT               CHAR(70),                   
+             CEST_CVIL_RGIME                DECIMAL(2, 0),              
+             ICONJG_PSSOA                   CHAR(70),                   
+             CCPF_CONJG                     DECIMAL(9, 0),              
+             CCTRL_CPF_CONJG                DECIMAL(2, 0),              
+             CISENC_CPF_CNPJ                CHAR(1) NOT NULL,           
+             CMOTVO_ISENC_CPF               DECIMAL(1, 0),              
+             DNASC_CONJG                    DATE,                       
+             CPROFS_CONJG                   DECIMAL(5, 0),              
+             CCATEG_PROFS_CONJG             DECIMAL(5, 0),              
+             DINIC_VALDD                    DATE,                       
+             IEMPR_CONJG                    CHAR(70),                   
+             CINDCD_MGRAC                   CHAR(1) NOT NULL,           
+             DINCL_REG                      DATE NOT NULL,              
+             CFUNC_BDSCO_ULT                DECIMAL(9, 0) NOT NULL,     
+             CTERM_ULT_ATULZ                CHAR(8) NOT NULL,           
+             HULT_ATULZ                     TIMESTAMP NOT NULL,         
+             CMOTVO_AUSEN_MAE               DECIMAL(1, 0),              
+             CMOTVO_AUSEN_PAI               DECIMAL(1, 0),              
+             QDEPDT                         DECIMAL(3, 0)               
+           ) END-EXEC.                                                  
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE DB2PRD.INFO_FAMLR                  *
+      ******************************************************************
+       01  CADUB065.                                                    
+      *    *************************************************************
+           10 CCLUB                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CPTCAO-ESPAC-TBELA   PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 IPAI-PSSOA-COPLT     PIC X(70).                           
+      *    *************************************************************
+           10 IMAE-PSSOA-COPLT     PIC X(70).                           
+      *    *************************************************************
+           10 CEST-CVIL-RGIME      PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 ICONJG-PSSOA         PIC X(70).                           
+      *    *************************************************************
+           10 CCPF-CONJG           PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTRL-CPF-CONJG      PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CISENC-CPF-CNPJ      PIC X(1).                            
+      *    *************************************************************
+           10 CMOTVO-ISENC-CPF     PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DNASC-CONJG          PIC X(10).                           
+      *    *************************************************************
+           10 CPROFS-CONJG         PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCATEG-PROFS-CONJG   PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DINIC-VALDD          PIC X(10).                           
+      *    *************************************************************
+           10 IEMPR-CONJG          PIC X(70).                           
+      *    *************************************************************
+           10 CINDCD-MGRAC         PIC X(1).                            
+      *    *************************************************************
+           10 DINCL-REG            PIC X(10).                           
+      *    *************************************************************
+           10 CFUNC-BDSCO-ULT      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTERM-ULT-ATULZ      PIC X(8).                            
+      *    *************************************************************
+           10 HULT-ATULZ           PIC X(26).                           
+      *    *************************************************************
+           10 CMOTVO-AUSEN-MAE     PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CMOTVO-AUSEN-PAI     PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QDEPDT               PIC S9(3)V USAGE COMP-3.             
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 23      *
+      ******************************************************************

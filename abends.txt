@@ -1,0 +1,1768 @@
+ *----------------------------------------------------------*           
+ *-   DATA = 04/01/2005 = HORA = 00:40                     -*           
+ *----------------------------------------------------------*           
+*    POOL0080 OU WRK-MODULO --->  CHAMADA DINAMICA                      
+*    POOL0081               --->  CHAMADA ESTATICA                      
+* ------------------------------------------------                      
+* QUANDO DER 'S0C4' NA CHAMADA DA 'POOL0300', COM A SEGUINTE MENSAGEM:- 
+* POOL0190 WAS ISSUED WHILE IN AMODE 31.                                
+* SOLUCAO --> TROCAR A POOL0300 PELA 'BRAD0300' --> JA ESTA NO AMOD = 31
+* ------------------------------------------------                      
+//* QUANDO DER FALTA DE AREA DE SORTWK VIA PROC                         
+//STEP3    EXEC PMPROC#B,=======> ANTES ....................            
+//       PROG=SORT                                                      
+*===================================APOS                                
+//* INCLUIR PARAMETRO 'SORTSIZ=50' ==> AUMENTA 50 CILINDROS ....        
+//STEP3    EXEC PMPROC#B,                                               
+//       PROG=SORT,                                                     
+//* ***   SELECIONA OS REGISTROS DUPLICADOS E GRAVA OS DUPLICADOS EM OUT
+//STEP1    EXEC PGM=ICETOOL                                             
+//* ***   SELECIONA OS REGISTROS DUPLICADOS                             
+//TOOLMSG  DD  SYSOUT=*                                                 
+//DFSMSG    DD  SYSOUT=*                                                
+//ENTRADA   DD DSN=MX.CADE.AUTCDEBI(0),                                 
+//       DISP=SHR                                                       
+//          DD DSN=MX.CADE.AUTCDEBI.STD(0),                             
+//       DISP=SHR                                                       
+//SAIDA    DD DSN=MX.CADE.MANE55,                                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+//       DCB=(MX.A,LRECL=150,RECFM=FB)                                  
+//DUPLICS DD DSN=MX.CADE.MANE56,                                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+ SELECT FROM(ENTRADA) TO(SAIDA) -                                       
+ ON(1,8,PD) ON(87,4,PD) ON(66,8,ZD) -                                   
+ FIRST DISCARD(DUPLICS)                                                 
+//*                                                                     
+* ------------------------------------------------                      
+* -----   PROGRAMAS UTEIS                                               
+* - PROGRAMA QUE UTILIZA LINKAGE ==> PAGB7703   --                      
+* - PROGRAMA QUE UTILIZA PARM    ==> POUPA986   ---> DELETA DB2         
+* - PROGRAMA QUE EMITE RELATORIO ==> GCTB8001   --                      
+* - PROGRAMA QUE EMITE RELATORIO ==> RVGD9010/IPMG9700                  
+* - PROGRAMA QUE LE E GRAVA OUTRO==> IPVA9998/9 --                      
+* ------------------------------------------------                      
+PARA LISTAR REGISTROS QUE FORAM DELETADOS NA SYSOUT (DISPLAY NO SORT)   
+AO INVES DE GERAR UM ARQUIVO DE SORTOUT                                 
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//SORTIN   DD DSN=MJ.CCCC.PUB.MVATUCLS(0), ==>(LRECL = 29)              
+//       DISP=SHR                                                       
+//*                                                                     
+ INCLUDE COND=(6,3,PD,EQ,00131,AND,9,3,PD,EQ,07050,                     
+ AND,12,4,PD,EQ,0117177)                                                
+ END                                                                    
+F20290110000117000000372028 ==> TAMANHO DE REG. 29                      
+3033F03F75F177F0000005C033F                                             
+-------------------------------                                         
+F20290110000117000000012029                                             
+1033F03F75F177F0000000F033F                                             
+-------------------------------                                         
+* ------------------------------------------------                      
+* U0077 - SORTD ---> ARQUIVO VSAM ==>                                   
+* ICE077A 0 VSAM OUTPUT ERROR L(12) SORTOUT                             
+* REGISTRO DUPLICADO NO ARQUIVO DE ENTRADA.                             
+* SOLUCAO ---> EXECUTAR UM (SUM FIELDS=NONE)                            
+SORT FIELDS=(5,13,A),FORMAT=BI                                          
+     SUM FIELDS=NONE                                                    
+     END                                                                
+                   A B E N D - A I D                                    
+                 **********************                                 
+                 * DIAGNOSTIC SECTION *                                 
+                 **********************                                 
+A MESSAGE PROCESSING APPLICATION PROGRAM EXCEEDED THE                   
+ALLOWABLE EXECUTION TIME (SET AT IMS SYSTEM DEFINITION)                 
+IN A MESSAGE PROCESSING REGION.  IN THE CASE OF A BMP                   
+THIS ABEND INDICATES THAT THE VALUE SPECIFIED IN                        
+"CPUTIME=" HAS BEEN EXCEEDED.  REFER TO THE TRANSACT                    
+MACRO IN THE IMS "INSTALLATION GUIDE".                                  
+* ------------------------------------------------                      
+  * MODELO  PARA LER ARQ. VARIAVEL E GRAVAR ARQ. FIXO                   
+* ------------------------------------------------                      
+//DL02KLE  JOB 'CCLB,4253,BN,DCIR1006',MSGCLASS=Z,CLASS=A               
+//JOBLIB    DD   DSN=AV.BIBGERTT,DISP=SHR                               
+//          DD   DSN=AV.BIBGERAL,DISP=SHR                               
+//          DD   DSN=IMSVS.TST.TPGMLIB,DISP=SHR                         
+//          DD   DSN=IMSVS.TST.PGMLIB.VLF,DISP=SHR                      
+//*                                                                     
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//*                                                                     
+//SORTIN   DD DSN=AD.DL02.BRPG.UPDT.TUDOAGE1,      ----------------->   
+//       DISP=SHR                                                       
+//*                                                                     
+//SORTOF1  DD DSN=AD.DL02.BRPG.UPDT.SMARCO1,    ------------------->  AR
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0001),RLSE),                                
+//       DCB=(LRECL=0068,RECFM=FB)                                      
+//SYSIN    DD *                                                         
+ SORT FIELDS=(5,5,PD,A,12,5,PD,A)                                       
+ OUTFIL FILES=1,OUTREC=(5,68),CONVERT                                   
+ END                                                                    
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+* ------------------------------------------------                      
+* S04E - UTILITARIO DB2 ==> VERIFICAR QUAL O                            
+* REGISTRO QUE CANCELOU E TIRAR PLA UNS 5 REGISTROS                     
+* ANTES DESTE.                                                          
+* ------------------------------------------------                      
+       9000-COMMIT       SECTION.                                       
+           EXEC SQL                                                     
+              COMMIT                                                    
+           END-EXEC.                                                    
+       9000-COMMIT-FIM. EXIT.                                           
+* ------------------------------------------------                      
+*  MODELO A SER ENVIADO PARA A PRODUCAO          -                      
+* ------------------------------------------------                      
+    SR. ANTONIO DOMINGOS BARLOTTI,                                      
+CONFORME SOLICITACAO DO ANALISTA SR. ALEXANDRE, FOI PEDIDO              
+FOI SOLICITADO A PRODUCAO EXECUTAR DOIS SORT COM OMIT COND PARA  A RETIR
+                                                                        
+ REGISTROS QUE ESTAVAM  OCASIONANDO O CANCELAMENTO DO JOB CBCL0135 DOS S
+ ESTE PROCEDIMENTO FOI AUTORIZADO PELO ANALISTA DA ROTINA SR. ALEXANDRE.
+    GRATO,                                                              
+    KIYOSHI.                                                            
+* ------------------------------------------------                      
+*  S0C9 ->  INDEXADOR NEGATIVO                   -                      
+* ------------------------------------------------                      
+   U0844 - POUCO ESPAÇO ALOCADO PARA DB IMS (CLUSTER) FALTA DE ESPAÇO NO
+* ------------------------------------------------                      
+   U1035 - CONCORRENCIA DE ARQUIVO         FS-90                        
+         - PROBLEMA NA UNIDADE DE LEITURA  FS-90                        
+         - TAMANHO DE REGISTRO ERRADO      FS-39                        
+* ------------------------------------------------                      
+   U1017 - CODIGO INTERNO DE ERRO DO COBOL . EX:- DISPLAY EM PROGRAMAS O
+   S001  - IEC215I 714-0C ---> DATA CHECK -- ARQUIVO EM FITA (REPROCESSA
+   U1050 -                                                              
+         - VERIFICAR SE EH DB2                                          
+         - VERIFICAR SE TEM CHAMADA DA POOL1050                         
+         - VERIFICAR SE TEM BIBLIOTECA DB2                              
+           E TER BIBIOTECA DB2 ==> NAO FOI CRIADO BIND.                 
+           (PROBLEMA DO DBA) ==> REPASSAR PARA DBA.                     
+* ------------------------------------------------                      
+* SC03 - VERIFICAR SE HA CHAMA DE MODULO ATRAVES                        
+*        DA POOL0080 E  TROCAR PELA POOL0081..                          
+* ------------------------------------------------*                     
+//*                                                                     
+SORT FIELDS=COPY                                                        
+OMIT COND=(129,18,CH,EQ,C'300000002220010719',AND,74,8,CH,EQ,           
+           C'00143100')                                                 
+* ------------------------------------------------*                     
+ SORT FIELDS=COPY                                                       
+  OMIT COND=(1,4,PD,EQ,0200220,AND,189,3,PD,EQ,001,AND,21,2,CH,NE,C'00')
+*                       ZONADO ==>PARA PIC 9(02) ==> CH,NE,C'00'        
+* ------------------------------------------------*                     
+*  PARA ROTINA DA ELZA/TAYTIANA (GRUPO 86)        *                     
+*  - QUANDO FOR TRIBUTOS (EX. GARE,PCON,ETC)      *                     
+*    ACIONAR A TAYTIANA                           *                     
+* ------------------------------------------------*                     
+* BVPO / BACC  PARA COMPILAR - COMPILACAO       --*                     
+* BVFA   COMPILAR COMO TTXF8877  (ULTIMO BAC01026)*                     
+* PODE PEGAR O PGM     TTXF8877  (SO P/COMPILAR)  *                     
+* CARTAO-COM EXPANSAO DAS COPYS                   *                     
+* ------------------------------------------------*                     
+SORT FIELDS=(938,1,ZD,A,156,16,BI,A,6,7,ZD,A),FORMAT=BI                 
+OBS:-  TANTO FAZ 'BI' OU 'CH'  ==> PARA CAMPOS PIC X                    
+* ------------------------------------------------                      
+* SORT PULANDO / SALTANDO NNNN REGISTROS                                
+* ------------------------------------------------                      
+//STEP3    EXEC SORTD                                                   
+//*                                                                     
+//SORTIN   DD DSN=AC.EMPF.SPRVPCHS.EMPF0450(0),                         
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=AC.EMPF.SPRVPCHS.TEST,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,12),                                               
+//SYSIN    DD *                                                         
+//*                                                                     
+ SORT FIELDS=COPY,SKIPREC=1913000    ===> QTDE DE REGISTROS A SEREM PULA
+ END                                                                    
+EXCP ACCESS METHOD USED FOR SORTOUT                                     
+EXCP ACCESS METHOD USED FOR SORTIN                                      
+OUTPUT LRECL = 200, BLKSIZE = 27800, TYPE = FB                          
+INSERT 0, DELETE 1913000 ================> FORAM SALTADOS               
+RECORDS - IN: 3054858, OUT: 1141858   ===> FORAM GRAVADOS               
+END OF DFSORT                         ===> TOTAL DE 3054858 REGISTROS   
+* ------------------------------------------------                      
+* S0C4 - PODE OCORRE SE O PGM FOR COBOL/FORMVS E NAO TIVER A BIBLIOTECA(
+************========>  PARA TRATAR -811  NUM SELECT <==============     
+ IF (SQLCODE     NOT EQUAL  ZEROS AND +100 AND -811) OR  -------> ALT   
+        (SQLWARN0        EQUAL    'W')                                  
+************VAI TRAZER O PRIMEIRO REGISTRO(LINHA) QUE ENCONTRAR  ====== 
+*---------------------------------------------------------------------* 
+SORT FIELDS=COPY                                                        
+           140,1,BI,EQ,X'EF',OR,140,1,BI,EQ,X'FF'),AND,                 
+           (13,1,CH,EQ,C'3'))                                           
+*---------------------------------------------------------------------* 
+*  OMIT COND=(13,1,BI,EQ,X'E5',     AND  ===> PIC X(01)                 
+*             94,1,BI,EQ,X'E2',     AND  ===> PIC X(01)                 
+*            149,3,BI,EQ,X'F1F1F2', AND  ===> PIC 9(03)                 
+*             64,3,BI,EQ,X'00000F')      ===> PIC 9(05) COMP-3.         
+*                                                                       
+* OBS==============>  O BI SERVE PARA QUALQUER CAMPO =============*     
+*---------------------------------------------------------------------* 
+*  OMIT COND=(15,6,BI,EQ,X'F0F0F6F0F1F1',AND,                           
+*             21,19,BI,EQ,X'C360F0F0F0F3F0F6F9F2F5F5F0F0F0F1F0F740',    
+*             AND,40,1,BI,EQ,X'C3')                                     
+* OBS==============>  O BI SERVE PARA QUALQUER CAMPO =============*     
+*---------------------------------------------------------------------* 
+*PARA PROGRAMAS QUE CANCELAM POR DIFERENCAS DE AMOD COM RMOD          * 
+*  --------------------------------------                               
+*  LOAD-MOD    AMODE  RMODE  RESIDES IN                                 
+*  OBS:- ==================> DEIXAR TUDO COMO AMODE E RMODE = 24        
+*  NO CASO DESTE CANCELAMENTO, VERIFICAR NO AC.BIBGERAL, SE REALMENTE   
+*  O PROGRAMA ESTA CONFORME ACIMA E PROCEDER CONFORME ABAIXO:-          
+*  PARA VERIFICAR AMODE/RMODE = A D AC.BIBGERAL(EMPF900*)               
+*   ==>  VAI MOSTAR O AMODE/RMODE PARA ESTE PROGRAMA ****               
+*  1 - SE O PROGRAMA ESTIVER NO SBAMA, VERIFICAR SE ESTA COM O TIPO M,  
+       SE  NAO ESTIVER,PEDIR PARA FAZER,ALTERACAO NO INDICE, COLOCANDO  
+*      UM 'M'  NO TIPO E PEDIR SOMENTE SBAMA.                           
+*  1 - SE O PROGRAMA ESTIVER NO CHANGMAN, ALTERAR A PROC, ISTO EH   O   
+*      SE FOR 'COMPILE PROC    :  CO2BDB2  ===>  AMODE = 31             
+*         ALTERAR PARA            CO2BDB2A ===>  AMODE = 24 OU YES    * 
+*  A - PARA FORCAR AMODE=24 BASTA 'ESCREVER' NO CAMPO LINK EDIT PARMS   
+*      A QUAL ESTE CAMPO ESTA COM BRANCO NA TELA DO STAGE, ESCREVER     
+*                    ===========> AMODE=24 OU AMODE=31                * 
+*---------------------------------------------------------------------* 
+*PARA PUXAR PROGRAMAS SBIN ===> ENTRAR NO ROSCOEDS                    * 
+*** BI.PRD.SOURCE ***           IMP DSN=BI.PRD.SOURCE(SBIFV84)        * 
+*---------------------------------------------------------------------* 
+* QDO QUISER IMPRIMIR AQUI- LOCAL->  \\D4253A13S002\QGPALOC02A        * 
+*---------------------------------------------------------------------* 
+DB2M3W.R4.SAIBIND(PGM)    ----->   PARA VERIFICAR O BIND NO ROSCOE20    
+                                                                        
+2234   VOLKS                                                            
+POOL SQL = MONTA COMANDOS SQL.                                          
+*---------------------------------------------------------------------* 
+*  KIYOSHI   =   BEJ                                                  * 
+*  LAURIVAN  =   BDD                                                  * 
+*  ADAO      =   BD0                                                  * 
+*  DC95B18   =  KLEBER                                                * 
+*  DC95B16   =  KYIOSHI                                               * 
+*---------------------------------------------------------------------* 
+*   ...  UMA  TRILHA  CONTEM   47 K                                   * 
+*   ...  CADA CILINDRO CONTEM  15 TRILHAS.                            * 
+*---------------------------------------------------------------------* 
+DB2ASMC   =    PRECOMP/COMP           PGM ASM/DB2/IMS                   
+DB2ASMCT  =    PRECOMP/COMP/LINK      PGM ASM/DB2/IMS                   
+*****   TODAS SE ENCONTRAM   NA  DB2A2.R2.PROCLIB                       
+ASMHC     =    ASMAC                                                    
+ASMHCG    =    ASMACG                                                   
+ASMHCL    =    ASMACL                                                   
+ASMHCLG   =    ASMACLG                                                  
+                                                                        
+   VER JOB = SENH0140    PGM=SENH6185 SUA CATEG;  RO=76730              
+                                                                        
+   KLEBERVB21@HOTMAIL.COM                                               
+                                                                        
+  VER JOB  CBMZ0430  SOBRE SORTD COM VARIOS DD DE SAIDA                 
+  DIFERENTES.                                                           
+                                                                        
+STEP0A   EXEC PGM=POOL1650,                                             
+       PARM=(0083140605)                                                
+ARQENT   DD DSN=MX.BICM.CART2130(00),                                   
+ARQSAI   DD DSN=MX.BICM.CART2130.C98(+1),                               
+       DISP=(,CATLG,DELETE),                                            
+       DCB=(MX.A,LRECL=0098,RECFM=FB)                                   
+SYSOUT   DD SYSOUT=*                                                    
+SYSUDUMP DD SYSOUT=Y                                                    
+SYSIN    DD *                                                           
+0098                                                                    
+*                                                                       
+                                                                        
+0083 --->   POSICAO DA DATA NO REGISTRO A SER CONVERTIDA                
+14   --->   FORMATO DA DATA QUE ESTA NO REGISTRO                        
+06   --->   FORMATO A SER CONVERTIDO                                    
+05   --->   CONVERTER PARA 19  OU 20                                    
+                                                                        
+********->  QUANDO A DATA DE ENTRADA FOR ANO 2000 OCORRERA ABEND.       
+VERIFICAR JOB BICM0073                                                  
+                                                                        
+COURIER NEW   ---->  TAMANHO 12                                         
+NRO DE COLUNAS DE 1 A 30                                                
+                                                                        
+                                                                        
+DB2A2.R2.SBAMAPRD.HEADER(CBRC0540)                                      
+VER QUAIS SAO OS DBRM DO PROGRAMA ENTRE                                 
+PARENTESES.                                                             
+                                                                        
+-G                                                                      
+--APLICATIVOS  GERAIS                                                   
+---ALTSA                            * RECUROS PARA CATALOGAR A RO.      
+----INSTALL                                                             
+-----INSTDSN.EXE                                                        
+                                                                        
+COMIC  SANS  MS LETRA                                                   
+SEMPRE DO WTO                                                           
+A823132                                                                 
+NORM                                                                    
+IMP DSN=AD.SLIB.DMASTER(*),RANGE=/POUP/                                 
+DECE6012                                                                
+7084 0266 RUBENS                                                        
+IMP DSN=AD.MANUAIS.UPDT.SF.ORIGINAL(#)     ROT DE MANUAIS               
+IMP DSN=AD.DA37.CONT.UPDT.TST.SOURCE(SBIIPCON)                          
+                                                                        
+   2705  ->  SBALIB                                                     
+        MATRIZ   TS08                                                   
+        ALPHA    TS02                                                   
+                                                                        
+*---------------------------------------------------------------------* 
+*  DISCO 4      NOME DO BOOK   ASMP1001   OU  ASMR1001    KLEBER      * 
+*                                                                     * 
+*                    ESTE SERVE PARA ACESSAR O MANUAL DE ASM.         * 
+*---------------------------------------------------------------------* 
+   COD 3938069  0066                                                    
+   BEJ   --> KYIOSHI                                                    
+   BD9   -->ROGERIO PINTO                                               
+   BE7   -->WAGNER                                                      
+   BDC   -->CARLA                                                       
+   BE1   -->ILMA  --> MEMBRO "ABEND" COSNTA O PLANTONISTA.              
+                                                                        
+    STATUS-CODE  =   II  , TENTOU FAZER UM INSERT MAS                   
+    JA EXISTIA O REGISTRO NO DB (CHAVE DUPLICADA)                       
+                                                                        
+    STATUS-CODE  =   AI  , RECURSO INDISPONIVEL  NO DB                  
+    SOLUCAO  = AGUARDAR E REPROCESSAR O JOB.                            
+                                                                        
+    STATUS-CODE  =   XD  , ERRO NO CALL DO SYNC                         
+    SOLUCAO  = O IMS ESTA FORA DO AR, PEDIR P/                          
+               COLOCAR O IMS NO AR E REPROCESSAR.                       
+                                                                        
+    STATUS-CODE  =   NI  , CONCORRENCIA ENTRE DB                        
+    SOLUCAO = AGUARDAR E REPROCESSAR                                    
+                                                                        
+    STATUS-CODE  =   XT  , ERRO NO CALL DO SYNC                         
+    SOLUCAO  = O IMS ESTA FORA DO AR, PEDIR P/                          
+               COLOCAR O IMS NO AR E REPROCESSAR.                       
+                                                                        
+                                                                        
+    STATUS-CODE  =   LC  , CHAVE PARA INSERCAO FORA                     
+                           DE SEQUENCIA.                                
+                                                                        
+    RURA8050 U0929 BLDL FAILED FOR MEMBER RURA2999                      
+          QUER DIZER NAO EXISTE PSB ESPECIFICADA P/                     
+          O PROGRAMA                                                    
+                                                                        
+     DDDDDDD  BBBBBB   222222 ..                KLEBER                  
+                                                                        
+    SQLCODE = 000, OBSERVAR SE ALGUM DOS SQLWARN0 NAO                   
+                   ESTA IGUAL  A W, POIS ISTO OCORRE                    
+                   QDO EX. "DAT - 1 MONTH , SENDO DA                    
+                   TA = 31.10.1997 - 1 => 31.09.1997                    
+                   ESTA NAO EXISTE ENTAO O DB2AJUSTA                    
+                   PARA 30.09.1997 POREM E SETADO                       
+                  SQLWARN6 = W SOMENTE PARA AVISO.                      
+                                                                        
+                                                                        
+    SQLCODE = 117  A TABELA DB2 FOI INCLUIDA COM ALGUM CAMPO            
+                   E ESTE E NOT NULL E NO PGM DEVERA  CONSTAR           
+                   ESTE CAMPO (((QDO REALIZADAO INSERT OU UPDATE))))    
+                                                                        
+    SQLCODE = 151, ESTA TENTANDO FAZER UM UPDATE EM UM CPO              
+                   QUE PERTENCE A CHAVE DA TABELA, SOLUCAO->            
+                   PRIMEIRO FAZ UM DELETE DEPOIS FAZ UM INSERT.         
+                                                                        
+    SQLCODE = 181, EX. OCORRE QDO O CONTEUDO DA COLUNA                  
+                       DE UMA TABELA ESTIVER INCONSIS                   
+                       TENTE, POR EXEMPLO                               
+                   HLCTO-EXTR = 00:60:00                KLEBER          
+                                                                        
+    SQLCODE = 303  OS CAMPOS ESPECIFICADOS NO DECLARE ESTAO             
+                   DIFERENTES DO ESPECIFICADO NO FETCH                  
+                  "A ORDEM DOS CPOS"                                    
+                                                                        
+              OBS: PARA IDENTIFICACAO DO PROBLEMA EH NECES              
+              SARIO TIRAR UM DCLGEN DA TABELA FAZER UM SELECT           
+              NA TABELA E VERIFICAR O CONTEUDO                          
+                                                                        
+    SQLCODE = -305  ===>  SE FOR NO SELECT MAX = +100                   
+    SQLCODE = -305  ===>  SE FOR NO SELECT SUM = +100                   
+                                                                        
+    SQLCODE = -305 - OCORRE QUANDO ESTA SELECIONADO NA TABELA ALGUM VALO
+      E ESTE VALOR ESTA COM NULO.                                       
+      OBS..  QUANDO FORMATADA A TELA DA POOL7100,  OBSERVAR             
+      O NRO QUE ESTA CONTIDO NA MENSAGEM,   POIS E ESTE NRO             
+      O CPO DA TABELA COM PROBLEMA.                                     
+  EX . QUANDO O MESMO DISPONIBILZAR SQL= -305 E FOR UM                  
+     SELECT SUM E NA CONDICAO DE WHERE NAO SATISFAZER                   
+     NENHUMA CONDICAO O  MESMO NAO DISPONIBILIZARA                      
+     SQLCODE= +100 E SIM -305                                           
+                                                                        
+     EX. PARA OBTER CAMPO DE NULO 'NULL'  POUP5080'                     
+      OCORRE QUANDO NA CONDICAO DE WHERE EXISTE UM CONTEUDO             
+      DIVERGENTE DA ESPECIFICADO DO CAMPO.                              
+                                                                        
+    SQLCODE = 501, EX. VAI INFORMAR QUE O CURSOR  NAO                   
+                       ESTA ABERTO, MAS O MOTIVO PODE                   
+                       RA SER QUE O PGM TENHA  COMMIT                   
+                       E NAO TENHA A CONDICAO NO DECLA                  
+                       RE.                                              
+                       DEVE COLOCAR WITH HOLD                           
+                       EX DE PGM = POUP1620                             
+                                                                        
+    SQLCODE = 501 ==> PODE SER QUE TENHA DADO MQSERIES(PRODUTO)         
+                      EH EMITIDO VIA SUBSISTEMA.                        
+                                                                        
+           *  OCORRE -501 QDO O PGM EXECUTA UM COMMIT                   
+              E LOGO EM SEGUIDA EXECUTA UM CLOSE "PERDA                 
+              DO POINT DA TAB" SOLUCAO ACIMA OU DAR COMMIT              
+              APOS DAR CLOSE                                            
+              FECHA O ARQUIVO ==> SOLUCAO ACIMA..(WITH HOLD)            
+                                                                        
+    SQLCODE = 502  ABRIU 2 VEZES O CURSOR SEM TE-LO FECHADO.            
+                                                                        
+    SQLCODE = -507 INSERT OU UDATE COM O CURSOR FECHADO.                
+                   ***VER PARA COLOCAR PARAMETRO WITH HOLD***           
+                                                                        
+    SQLCODE = -508 PERDEU O POINTER DA TABELA                           
+                   EX. O PROGRAMA FEZ UM ACESSO A TABELA COM            
+                       FETCH , DURANTE O PROCESSAMENTO FEZ              
+                       UM  DELETE CONFORME ABAIXO.                      
+            DELETE                                                      
+            FROM DB2PRD.V01OPER_DESC_TITLO                              
+            WHERE CURRENT OF C4                                         
+                   POSTERIORMENTE  ELE EXECUTOU NOVAMANTE               
+            O MESMO DELETE A QUAL DISPONIBILIZOU SQLCODE = -508         
+            (SERIA COMO SE ELE ESTIVESSE DADO SQLCODE= +100)            
+            ISTO EH UM ERRO DE LOGICA.                                  
+                   QUE NAO EXISTE CORRESPONDENTE NA PAI.                
+                                                                        
+    SQLCODE = 604, EX. QDO FOR DAR UM INSERT NA TABELA                  
+                       ESTA SENDO VALORIZADO UM CAMPO                   
+                       SENDO QUE ESTE PODE EXISTIR NA                   
+                       TABELA DE TESTE NAO ENCONTRANDO                  
+                       O MESMO NA TABELA DE PRODUCAO.                   
+                       ..CPO USADO DENTRO DO PROGRAMA                   
+                       MAS NAO ENCONTRADO NA TABELA..                   
+                                                                        
+    SQLCODE =-803 TENTOU FAZER INSERT OU UPDATE MAS                     
+                  JA EXISTIA UM CORRESPONDENTE NA                       
+                  TABELA.                                               
+                                                                        
+     AO TENTAR INSERIR UMA LINHA NUMA TABELA                            
+     DB2 JA EXISTIA CORRESPONDENTE COM A MESMA CHAVE.                   
+                                                                        
+    SQLCODE =-803 PODE TAMBEM (TENTAR FAZER UM UPDATE                   
+                  PRIMARIA)                                             
+                                                                        
+    SQLCODE =-803 SO   DARA   -803 NO UPDATE  QUANDO                    
+                  ESTIVER ATUALIZANDO A COLUNA   QUE                    
+                  PERTENCE AO INDICE E A CHAVE                          
+                  PESQUISADA NAO ESTA COMPLETA, ISTO                    
+                  EH AO INVES DE 4 COLUNAS DA  CHAVE                    
+                  ESTAVA PESQUISANDO  COM 3  COLUNAS                    
+                  E A QUARTA COLUNA  DA CHAVE ESTAVA                    
+                  NO  SET (CAMPO A SER ATUALIZADO) ,                    
+                  ISTO DA UM SQLCODE -803)                              
+                  CASO CONTRARIO, ISTO EH SE   TODAS                    
+                  AS COLUNAS DA CHAVE ESTIVESSEM  NA                    
+                  PESQUISA NAO DARIA -803.                              
+    SQLCODE =-804 VERIFICAR SE HOUVE ESTOURO DE                         
+                  ALGUMA TABELA, ISTO EH COM BASE NA                    
+                  TABELA DEVE ESTAR CARREGANDO   UMA                    
+                  TABELA INTERNA, POREM NA TEBELA                       
+                  200. VERIFICAR O WRK-IND PARA VER                     
+                  QUAL O CONTEUDO.                                      
+                  NO FETCH DEVE TER LIDO MAIS QUE                       
+                  200 REGISTROS AVANCANDO NA WORKING.                   
+                  SOLUCAO+; AUMENTAR OCCURS DA TABELA.                  
+   EXEMPLO:   EXEC SQL UPDATE                                           
+                   DB2PRD.V01FREQ_EXTRT_CTA                             
+                   SET                                                  
+                   COPCAO_EMIS_EXTRT = :SCCEV004.COPCAO-EMIS-EXTRT,     
+                   DULT_ATULZ        = CURRENT DATE                     
+               WHERE                                                    
+                   CJUNC_DEPDC  = :SCCEV004.CJUNC-DEPDC                 
+               AND CCTA_CORR    = :SCCEV004.CCTA-CORR                   
+               AND CPRODT_EXTRT = :SCCEV004.CPRODT-EXTRT                
+                                                                        
+    CHAVE DE PESQUISA ==> CJUNC_DEPDC, CCTA_CORR, CPRODT_EXTRT,         
+                          COPCAO_EMIS_EXTRT                             
+                                                                        
+                  MESMO NAO CONSTA NA LISTA DO DBRM                     
+                  SOLUCAO-> SBAMAR O PGM NOVAMENTE E                    
+                  INCLUIR O MODULO NA LISTA DE DBRM                     
+    SQLCODE =-805 PARA CHANGMAN ===>  VER QUAL O MODULO                 
+                  QUE ESTA COM O PROBLEMA E SBAMAR                      
+                  PRIMEIRO O MODULO E DEPOIS CHAMADOR.                  
+             OBS:-SO DEPOIS QUE TERMINAR O MODULO DEVE                  
+                  SBAMAR O CHAMADOR.                                    
+                                                                        
+    SQLCODE =-818 DEVIDO A PROBLEMAS DE SBAMA ===> PROBLEMA DE BIND ....
+             DBA -CHAMADOR - MODULO OCASIONANDO DIVERGENCIA             
+                  SE EH PACKED OU NAO ENTRE CHAMADOR E MODULO           
+                                              KLEBER                    
+     ********                                                           
+     MODELO DE SELECT MAX                                               
+     PGM = EMPG0288 TB APRESENTA JOIN                                   
+                                                                        
+           EXEC SQL  SELECT                                             
+                     :EMPFV032.PTX-JURO                                 
+                FROM   DB2PRD.V01COTAC_TX_CAPTC                         
+                WHERE  CTX_BASE_CAPTC   = :EMPFV032.CTX-BASE-CAPTC      
+                  AND ((DINIC_VGCIA    <= :WRK-DATA-SUBPR               
+                  AND   DFIM_VGCIA     >= :WRK-DATA-SUBPR)              
+                  OR   (DINIC_VGCIA    <= :WRK-DATA-SUBPR               
+                  AND   DFIM_VGCIA     IS  NULL))                       
+                                                                        
+                  AND                                                   
+                  HATULZ   =  (SELECT MAX (HATULZ) FROM                 
+                  DB2PRD.V01COTAC_TX_CAPTC                              
+                                                                        
+                  WHERE                                                 
+                  CTX_BASE_CAPTC   = :EMPFV032.CTX-BASE-CAPTC           
+                  AND ((DINIC_VGCIA    <= :WRK-DATA-SUBPR               
+                  AND   DFIM_VGCIA     >= :WRK-DATA-SUBPR)              
+                  OR   (DINIC_VGCIA    <= :WRK-DATA-SUBPR               
+                  AND   DFIM_VGCIA     IS  NULL)))                      
+                                                                        
+     U0115 -   FALTA DE ESPACO, PEDIR PARA COLOCAR REGION E REEXECUTAR  
+                                                                        
+     S522 - EXCEDEU O TEMPO DE ESPERA DO SISTEMA OPERACIONAL            
+            PARA MONTAR O CARTUCHO. (AGUARDANDO RESPOSTA DO OPERADOR)   
+                                                                        
+     S804 U0000 -ERROR DURING GETMAIN SYS CODE = 804-10, BASTA COLOCAR  
+                 REGION E REEXECUTAR O PGM                              
+                                                                        
+     S001 - OCORREU DEVIDO NA CONCATENACAO UM DOS ARQ. ESTAR COM LRECL D
+        001-4,PPRT0418,STEP1,FTCONTBE-0006,AAF,STRAAF,                  
+        MX.PPRT.F4MG31.G0001V00                                         
+        DCB EROPT=ABE OR AN INVALID CODE, AND/OR NO SYNAD EXIT SPECIFIED
+        NO DUMP WAS PRODUCED FOR THIS ABEND, DUE TO SYSTEM OR INSTALLATI
+        PPRT0418 STEP1 - ABEND=S001 U0000 REASON=00000004               
+                                                                        
+    *NESTE CASO OS 2 ULTIMOS ARQ. ESTAVAM COM LRECL DIFERENTE.          
+                                                                        
+      //    DD DSN=MX.PPRT.F4AR36(0),                                   
+      //  DISP=OLD                                                      
+      //    DD DSN=MX.PPRT.F4MG31(0),                                   
+      //  DISP=OLD                                                      
+      //    DD DSN=MX.PPRT.F4MG32(0),                                   
+      //  DISP=OLD                                                      
+                                                                        
+     S102  - ENDERECO INVALIDO DA DCB.                                  
+             ISTO OCORRE QUANDO DA  S0C4 E O                            
+             ENDERECO EH DESTRUIDO. ====                                
+             ** HA INVASAO DE AREA **                                   
+                                                                        
+     U0497 - PODE OCORRER EM PGM COBOL II E O MESMO                     
+             DISPONIBILIZAR FILE-STATUS = 90 A SOLU                     
+             CAO EH APENAS REEXECUTAR O JOB POREM                       
+             VERIFICAR SE EH SQL E SE TEM COMMIT                        
+                                        KLEBER                          
+                                                                        
+        SOLUCAO = EM MINHA HEAD.                                        
+                                                                        
+    S237 - PEDIR AO OPERADOR , EXECUTAR UM PLAN1010                     
+          POREM PROVAVEMVENTE OCASIONARA O MESMO ABEND                  
+          ISTO SE TRATA DE UM PROBLEMA FISICO , A QUAL                  
+          NAO NOS PERTENCE , É DEVIDO A DIFERENCA DE                    
+          CARACTERISTICAS ENTRE UM VOLUME E OUTRO.                      
+                                                                        
+     SA37-08 ESTE ABEND OCORRE DEVIDO A ESTOURO DE                      
+             AREA NO CARTAO EZTVFM CATALOGADO NO                        
+             JCL DE PRODUCAO.                                           
+                                                                        
+     S30A -- ESTE ABEND OCORRE DEVIDO FALTA DE                          
+             PARAMETRO REGION OU AUMENTAR REGION.                       
+                                                                        
+      ANTES                                                             
+      *****                                                             
+//EZTVFM   DD UNIT=DISCO,                                               
+      DEPOIS      ----------------->  REEXECUCAO OK.                    
+      ******                                                            
+//EZTVFM   DD UNIT=DISCO,                                               
+//       SPACE=(8192,(5000,0500))                                       
+                                                                        
+     S0C4 - OCORREU DEVIDO O PGM ESTAR CHAMANDO O                       
+            MODULO PELA POOL0081, QUANDO TROQUEI                        
+            PELA POOL0080 O MESMO NAO MAIS OCASIO                       
+            NOU PROBLEMAS                                               
+            _SE O PGM DAR GOBACK DENTRO DO INPUT-                       
+             OUTPUT DO SORT O MESMO OCASIONARA ABEND,                   
+             DEVE-SE SAIR DA I-O DO SORT PARA POSTE                   KL
+             RIOR GOBACK.                                               
+                                                                        
+            PARA DESCOBRIR O OFFSET, QUANDO OCORRE S0C4                 
+            PSW - EPA  =  OFFSET                                      KL
+                                                                        
+     S0C4 - PODE DAR DEVIDO NAO ESTAR ABRINDO O ARQUIVO OU FECHANDO     
+*    S0C4 - QUANDO OCORRER ESTE TIPO DE ABEND:-                        *
+*       1 - EM PRIMEIRO LUGAR VERFICAR SE HOUVE ESTOURO DE TABELA,ISTO *
+*           EH, SE O CONTEUDO DO INDICE ESTA MAIOR QUE O MESMO.        *
+*       2 - VERIFICAR SE INVADIU A PROCEDURE DIVISION. (VERIFICAR    O *
+*           CONTEUDO DOS CAMPOS APOS O FIM DA WORKING-STORAGE SECTION, *
+*           VERIFICANDO SE TEM SUJEIRA NOS MESMOS).                    *
+*       3 - SE NAO FOR NENHUM DOS DOIS ACIMA, SE TIVER CONDICAO DE     *
+*           AUMENTAR A OCORRENCIA E REPROCESSAR O PROGRAMA, TENTAR.    *
+*       4 - VERIFICAR NA TABELA O CONTEUDO DA ULTIMA OCORRENCIA, EH    *
+*           ONDE ESTA O REGISTRO QUE OCASIONOU O ABEND.                *
+*       5 - VERIFICAR SE O CHAMADOR EH COBOL II E O CHAMADO E COBOL    *
+*       6 - VERIFICAR RMODE                                            *
+*       7 - VERIFICAR SE EH COBOL/MVS - SE FOR VERIFICAR SE TEM A BIBLIO
+*           (SYS1.CEE.SCEERUN)                                          
+**=====================================================================*
+                                                                        
+      JOB BITL0410     PGM=PPRT3515    ABEND=S0C4                       
+      MX.PPRT.SBIN.SBILOG.TRMCLI(0)        LRECL =226 VB  B=22604       
+      MX.PPRT.LOG2SWIT(0),                 LRECL =226 VB  B=27998       
+      MX.PPRT.LG2SWIT1(0),                 LRECL =226 VB  B=27998       
+      **** ESTA DIVERGENCIA DE BLKSIZE OCORRE S0C4 DURANTE A EXE        
+      CUCAO DA INSTRUCAO "PUT" DEVIDO HAVER QUEBRA DE BLOCOS, OCA       
+      SIONANDO ASSIM """"UMA INVASAO DE AREA DO PROXIMO REGISTRO"""     
+       NO MOMENTO DA LEITURA.                KLEBER    06.04.99         
+                                                                        
+     S0C6 - MUITO PROVAVEMENTE OCORREU INVASAO DE AREA,                 
+            """"ESTOURO DE TABELA""""" SENDO QUE O                      
+            CONTEUDO TAB, SE SOBREPOE A PROCEDURE                       
+            ISTO EH AO COMANDOS PROPRIAMENTE DITO            KLEBER     
+                                                                        
+     S906-EXCEDEU O NUMERO MAXIMO DE LOAD A UM MODULO,                  
+          PODENDO OCORRER QDO NO PGM CHAMADOR CHAMA                     
+          O MODULO ATRAVES DA POOL0081, A SOLUCAO E                     
+          VERIFICAR AONDE USA A POOL0081 TANTO EM CHA                   
+          MADOR COMO EM MODULO E PASSAR A UTILIZAR                      
+          A POOL0080.                                                   
+          MOVE    'DCIR9090'             TO   WK-MODULO.                
+          CALL    WK-MODULO           USING   IO-PCB.(VER PGM-DCIR1320) 
+*---------------------------------------------------------------------* 
+* CHAMA A POOL0789 QUE CONTROLA O NUMERO DE LOAD'S EMITIDOS NA        * 
+* POOL7600 PARA EVITAR ABEND S906 (ESTOURO DO CONTADOR DE LOAD'S)     * 
+*---------------------------------------------------------------------* 
+         CALL  POOL0789                                                 
+          ** CASO A REEXEUCAO OCASIONAR NOVO ABEND                      
+          EM ULTIMA INSTANCIA COLOCAR A POOL0789                        
+          EM CASO DE ABEND DA C/C OU ROTINA DE GRAN                     
+          DE IMPACTO.  OBS. NAO DEVE SER USADA  SOBRE                   
+          QUALQUER ABEND S906, EH USO RESTRITO DO PES                   
+          SOAL DA ROTINA SENHA.                                         
+          OBS. VER MODELO NO PGM SENH0311.                              
+                                                                        
+     S090-A O PROGRAMA PODE TER DADO S0C4 MAS OCORREU                   
+             INVACAO DE AREA "INVASAO NA PROCEDURE DI                   
+             VISION, VER SE O MESMO NAO TEM TABELA                      
+           COLOCAR A POOL1050. OCASIONA ABEND S0C1                      
+           SENDO QUE O O ENDERECO APONTA PARA A                         
+           PRIMEIRA INSTRUCAO OU DE UM SELECT OU INSERT ETC..           
+                                                                        
+   S878-10  NAO HA MEMORIA VIRTUAL P/ SATISFAZER A REQUISICAO           
+           . QDO FOR O BAC00500 MUDAR TODOS OS BUFNO PARA 16            
+           E A REGION DO CARTAO JCL MUDAR PARA 9M E RETIRAR A           
+           REGION DO STEP.                                              
+                                                                        
+   S013-24                                                              
+       PGM ASM, OCORRE DEVIDO A DCB DO PGM ESTAR ESPECIFICADA           
+       COMO PM E O PGM ESTA LENDO COMO GL.                              
+       SOLUCAO-> ADAPTAR A DCB A LEITURA DO ARQ.                        
+                                                                        
+     FILE STATUS = 04   --->  ARQUIVO VARIAVEL                          
+                        ====> O CAMPO QUE TEM A QTDE DE OCORRENCIA      
+                              DEVE ESTAR ZERADO                         
+              SOLUCAO:-  TRATAR FILE-STATUS = 04                        
+     FILE STATUS = 10   --->  FIM DE ARQUIVO                            
+                        ====> NAO ESTA TRATANDO FIM DE ARQUIVO          
+     FILE STATUS = 21   --->  ERRO DE SEQUENCIA                         
+     FILE STATUS = 22   --->  CHAVE DUPLICADA                           
+     FILE STATUS = 23   --->  NAO ACHOU O REGISTRO                      
+     FILE STATUS = 34                                                   
+             FALTA DE ESPACO.           ****KLEBER*****                 
+     FILE STATUS = 35 ---> FALTA CARTAO 'DD' -- PGM VSAM ---> ARQUIVO ES
+     FILE STATUS = 37 --> TIPO DE ARQUIVO NAO COMPATIVEL COM 'SELECT' DO
+     FILE STATUS = 37 --> EX. NO PGM ESTA COMO 'FB' E NO ARQ. VEIO COMO 
+     FILE STATUS = 39                                                   
+             DIVERGENCIA ENTRE TAMANHOS DE ARQUIVO O QUE ESTA           
+             ESPECIFICADO NO PGM E O QUE ESTA VINDO DO ARQ.             
+                                                                        
+             * PODE SER TAMBEM QUE O TAMANHO ESTEJE CORRETO             
+               POREM A CHAVE QUE ESTA ESPECIFICADA NO VSAM              
+               QUER DIZER O TAMANHO DA CHAVE DE PESQUISA SE             
+               JE DIFERENTE DO PGM O QUE OCASIONARA O FILE              
+               MESMO NAO POSSUI -INC. NA DEFINICAO DESTE                
+               ARQ. VSAM.                                               
+     FILE STATUS = 46                                                   
+             OCORRE NO COBOL II , ""VOLTOU LER ARQ. APOS  TER           
+             TERMINADO.                                                 
+     FILE STATUS = 47                                                   
+             OCORRE QUANDO O ARQUIVO EH ABERTO, EM SEGUIDA EH           
+             FECHADO E EM SEGUIDA TENTA UTILIZAR. (ERRO DE LOGICA).     
+     FILE STATUS = 90   --->  OPEN NOME EXTERNO DA SELECT NAO           
+                              COMPATIVEL COM JCL   OU                   
+                              ARQUIVO NAO TEM DD-DSN ESPECI             
+                              FICADO NO JCL DE PRODUCAO.                
+              IEC211I 314-04,BVEM0586,STEP02,ARQTAXAS,B82,SM1164        
+                 PODE TB DISPONIBILIZAR FILE STATUS 90 QUANDO FO        
+                        RA FECHAR O ARQ. DISPONIBILIZANDO 314-04.       
+                                                                        
+              ***  A SOLUCAO EH AGUARDAR E REPROCESSAR O JOB            
+                                                01.JUN.2000             
+             084020234E624B200100(3CC13CC13CC13CCC)0000(0000            
+      IEC147I 613-08,IFG0195B,CHEP0165,STEP02,MOVCARG1  ==> DATA CHEK EM
+      IEC147I 613-04,IFG0195B  ==> PROBLEMA DE LEITURA NA UNIDADE DE FIT
+              SELECT  MOVCARG1  ASSIGN  TO  UT-S-MOVCARG1  ==> SELECT DA
+      FILE STATUS = 90                                                  
+       I/O ERR 4830                                                     
+       IEC145I 413-08,IFG0194K,EMPI0846,STEP2,EGDADACU,4830,==> DATA CHE
+       IEC705I TAPE ON 4931,288837,SL,COMP,EMPI0846,STEP2               
+       IOS000I 4830,**,SIM,**,**06,,**,,EMPI0846                        
+       +*===============================================================
+       +* EMPF8950 - ERRO NA ABERTURA   DO ARQUIVO EGDADACU / FILE STATU
+       +*===============================================================
+           ** PODE OCORRER TAMBEM SE O PGM ESTIVER GRAVANDO             
+              EM CARTUCHO E ESTE NAO POSSUIR + ESPACO, SERIA            
+              COMO UM B37.                                              
+              EM DISCO    E ESTE NAO POSSUIR + ESPACO, SERIA            
+              COMO UM B37. ===> DA A MESMA MENSAGEM 837-08              
+           **IEC028I  837-08                      KLEBER                
+       **  PODE OCORRE TB DISPONIBILIZANDO FILE STATUS = 90             
+           SENDO ESTE UM ARQ. DE SAIDA GRAVANDO O MESMO EM              
+           CARTUCHO  SENDO QUE APRESENTA O COD.  IEC210I  214-08        
+          ** A SOLUCAO EH AUMENTAR A AREA DE SAIDA NO CARTUCHO          
+             E REPROCESSAR                         08.07.00             
+*-----------------------------------------------------------------------
+     FILE STATUS = 90  ---> ERRO NA ABERTURA DO ARQUIVO 'SEXTEMS'       
+ IEC141I 013-20,IGG0191A,FGBI2800,STEP7B,SEXTEMS,B780,SA12Q7,AC.FGBI.NBR
+     DCB=(AC.C,LRECL=0520,RECFM=FB) --> NO LUGAR DO (AC.C) TEM QUE SER (
+*-----------------------------------------------------------------------
+     FILE STATUS = 90                                                   
+ IEC141I 013-34,IGG0191A,ALTB5202,STEP1,AMCR8500,0463,281169,AC.ALTB.N00
+ +*=====================================================================
+ +* ALTB2550 -           ERRO  NA ABERTURA  DO ARQUIVO AMCR8500 FILE STA
+ +*=====================================================================
+ + ALTB2550 - PROGRAMA CANCELADO COM ABEND 3330                         
+//AMCR8500 DD DSN=AC.ALTB.N002900.EXTR1VIA.BRA1,  ===> ARQUIVO NAO ESTA 
+//       DISP=OLD,                                  LABEL=(2,BLP) ==> SA
+//       VOL=SER=281169,                                                
+//       DCB=(AC.A,LRECL=1600,RECFM=FB) ===> FALTOU COLOCAR BLKSIZE     
+*                                                                       
+SOLUCAO:- PEDIR PARA O OPERADOR COLOCAR BLKSIZE (O OPERADOR DEVE SABER O
+//       DCB=(BLKSIZE=27200,LRECL=1600,RECFM=FB,TRTCH=COMP)             
+*-----------------------------------------------------------------------
+     FILE STATUS = 90   --->                                            
+                                                                        
+IEC151I A13-10,IFG0195H,OBSO7575,STEP5,IMAGANT,4846,255846,AC.OBSO.S0761
++*======================================================================
++* OBRS0870 - ERRO NA ABERTURA   DO ARQUIVO IMAGANT  - FILE STATUS = 90 
++*======================================================================
+     DEVIDO PROBLEMA DE LEITURA NA FITA (DATA-CHECK)                    
+     - SOLUCAO ==> REPROCESSAR O STEP                                   
+*-----------------------------------------------------------------------
++ OBRS0870 - PROGRAMA CANCELADO COM ABEND 3330                          
+     FILE STATUS = 92   --->  ERRO LOGICO                               
+                              START FOI DADO START EM ARQ FECHADO       
+     FILE STATUS = 93   --->  ARQUIVO  VSAM ABERTO , DEVE-SE PEDIR      
+                              PARA DAR CLOSE NO ARQ. E REPROCESSAR      
+                                                                        
+     FILE STATUS = 96   --->  FALTOU CARTAO 'DD' OU NOME EXTERNO DIF. JC
+     FILE STATUS = 97   --->  O ARQ. SE ENCONTRA ABERTO, PEDIR          
+                              AO OPERADOR DE SISTEMA FECHAR O ARQ       
+                              E REEXECUTAR O PGM.                       
+                              FECHAR ATRAVES DO CICS.                   
+                                                                        
+     NO   VSAM   = CODIGO 108 ===> TAM. DO REG. DEF. NO CLUSTER DIF. DO 
+     NO   VSAM   = CODIGO 108 ===> EX:- CLUSTER ESTA COM 100 E O ARQ. ES
+     NO   VSAM   = CODIGO 168 ===> RECURSO INDISPONIVEL NO OPEN         
+     NO   VSAM   = CODIGO 168 ===> O ARQUIVO DEVE ESTAR ABERTO.         
+     NO   VSAM   = SEMPRE TEM O NOMEARQ.DATA  ==> QUE TRAS INFORMACOES  
+*---------------------------------------------------------------------* 
+*    ABEND -> PARA VERIFICAR SE O TERMINAL EH    ***  R D A  ***      * 
+*---------------------------------------------------------------------* 
+**->  RDA  TERMINAL   START   G H   E   FIM   G-Z  OU 0-9               
+*    TERMINAL    R.D.A                                                * 
+*    ******************         G A 5 0 0 2 6 G                       * 
+*---------------------------------------------------------------------* 
+   MODELO                                                               
+   ******                                                               
+*   PROGRAMA PPRT2570 QUANDO ABENDAR COM S0C7, VERIFICAR SE             
+*   NAO FOI EM UMA AP RELACIONADA A TAB COM TAMANHO DE 4                
+*   **** DESPREZAR O REG. DO SORT . ATRAVES DA SAGEN E SCTA             
+*---------------------------------------------------------------------* 
+ POOL0003 =  QUANDO ESTIVER UTILIZANDO ESTA POOL E DER ERRADO , EXECUTAR
+ PLAN5760 (MESMA FUNCAO)                                                
+*---------------------------------------------------------------------* 
+     POOL1500    VERIFICA A DIFERENCA ENTRE DOIS ARQ.                   
+****  ESTE é UM MODELO DE JCL A QUAL COM ESTE PARM                      
+      E COMPARADO O PRIMEIRO REG. DO ARQ1 COM O PRIMEIRO                
+      REGISTRO DO ARQ. 2                                                
+****  EXISTE UMA RPF QUE MONTA ESTE JCL, POREM TEMOS                    
+      QUE ESTAR  NO ROSCOECT!!!!  NAO->ROSCOEC1 E TECLAR                
+//    TIME=1                                                            
+//JOBLIB   DD    DSN=AV.BIBGERTT,DISP=SHR                               
+//         DD    DSN=AV.BIBGERAL,DISP=SHR                               
+//STEP1    EXEC PGM=POOL1500,PARM='N,A,-,-------,-------'               
+//*                                                                     
+//SYSUDUMP DD  SYSOUT=*                                                 
+//SYSOUT   DD  SYSOUT=*                                                 
+//ARQUIVO1 DD  DSN=MJ.CBMZ.F4AGEN.A2000,                                
+//      DISP=SHR                                                        
+//ARQUIVO2 DD  DSN=MJ.CBMZ.FITAFITA,                                    
+//      DISP=SHR                                                        
+//ARQDIF   DD  DSN=MJ.DPCT.DIFEREN,                                     
+//      DISP=(,CATLG,DELETE),UNIT=DISCO,                                
+//      DCB=(RECFM=FB),                                                 
+//      SPACE=(CYL,(1,2),RLSE)                                          
+//RELATO   DD  SYSOUT=*,DCB=(LRECL=110,BLKSIZE=11440,RECFM=FBA)         
+                                                                        
+================ PROGRAMAS UTEIS =====================================  
+======================================================================  
+     PLAN1010    PGM ===>  COPIA O ARQUIVO PARA OUTRO (SOMENTE)         
+     PLAN1010    =======>  QUANDO DER PROBLEMA NO ARQUIVO  ESTE         
+     PLAN1010    =======>  PROGRAMA COPIA UM PARA OUTRO                 
+     POUP2207    PGM DB2   DELETA REG  DA TAB ATRAVES DO PARM           
+     POUP2209    PGM DB2   DELETA REG  DA TAB ATRAVES DO PARM           
+     TTL09898    DESPREZA REGISTRO ATRAVES NO SEU NRO DO ARQ. ATRA      
+                 VES DO PARM.                                           
+     PLAN7220    CRIA ARQ. ZERADO                                       
+     CCUT0710    PGM ASM   PGM TEM PARM                                 
+     IRES0005    PGM COB   PGM TEM PARM                                 
+     MEGR0120    PGM ASM   PGM SQL ASM                                  
+     CCCO0165    PGM ASM   GERA ARQ. DE SAIDA VARIAVEL                  
+     BICM1015    PGM ASM   COM DB2.                                     
+     EMCH8135    PGM COB   LE ARQ. SEQ. E BUSCA NA TABELA DB2           
+     ACDI0110    PGM ASM   TEM FETCH EM ASM.                            
+     FCON0130    PGM ASM   TEM SELECT EM ASM.                           
+     POUP9928    PGM COB   DELETA LINHA DA POUPV024 ATRAVES DE PARM     
+     TTRR0013    PGM ASM   ESTE PGM SOLUCIONA O ABEND DO PGM RURA3000   
+                           A QTD DE CHAVES DO DISPLAY SAO AS QUAIS IRAO 
+                           NECESSITAR DESPREZAR-> ESTAS CHAVES EXISTEM  
+                           DUPLICADAS NO ARQ. CADASTRO PORTANTO DEVE    
+                           SER DESPREZADA APENAS UMA                    
+                                                             KLEBER     
+                           POSICAO 1 = CAD-AGENC                        
+                           POSICAO 4 = CAD-NUMPR                        
+                           POSICAO 8 = CAD-ORDEM                        
+                           POSICAO 10= CAD-TIPO                         
+                           POSICAO 37= CAD-NUMPARC                      
+                                                                        
+     CORR0100    PGM ASM   DB2, E CALL INIC                             
+     CORR9382    PGM ASM   DB2, E CALL INIC                             
+     TTDD7777    PGM COB   DESPREZA REG. ATRAVES DO NUMERO              
+     POUP0005    PGM COB   PGM QUEBRA GALHO FAZ INSERT NA TAB.          
+     POUP0007    PGM COB   PGM QUEBRA GALHO FAZ DELETE E INSERT         
+                           QDO O CAMPO A SER AUTUALIZADO FOR CHA        
+     TTB71998    PGM ASM   DESPREZA REGISTRO "PGM QUEBRA GALHO"         
+     EMPF6746    PGM COB   TEM RESTART,E COMMIT A CADA MIL              
+     CCUT0635    PGM ASM   MUDA O NOME DD A SER GRAVADO DENTRO DA LOGICA
+                           DO PGM """" ATRAVES DA DCB """"              
+                           PODE OBSERVAR ATRAVES DO JOB BICF0540        
+     CLIE2751    PGM DB2   POSSUI RESTART, COMMIT,DELETEL.INSERT.UPDATE 
+     BVFE8802    PGM ASM   TEM MARCADO AS POSICOES DOS CPOS DO ARQ. LOGA
+     SCEX0110    PGM COBOL TEM SORT  INTERNO                            
+     CBTE0070    PGM ASM   TEM SORT, NO MODULOE O MESMO JA CLASSIFICA   
+                           O ARQ. CONF. DEF. NOSORT FIELDS E DEPOIS     
+                           SO PROCESSA O MODULOS                        
+     TTJN0001    PGM ASM   QUEBRA GALHO, FAZ CONSISTENCIA E GRAVA       
+     SERC1510    PGM ASM   ASM-DB2 , FAZ ATUALIZACOES A TABELA.         
+     NUME5000    PGM IMS   PGM IMSBATCH, LE E IMPRIME O DB.             
+     RUEC0550    MOD COB   MODULO COBOL                                 
+     CCCO2505    PGM ASM   JOB   DBAL0340 ABEND 1414                    
+     BIPE0140    PGM ASM   POSSUI GETMAIN                               
+     CCRE0110    PGM ASM   POSSUI GETMAIN -> EXCELENTE COMO             
+     SEGF0200    PGM ASM   LEGAL                                        
+     MDCC0003    PGM ASM   * LE GRAVA FORCA SINAL                       
+     REDV9710    PGM COB   * ZERA COM EXPANSAO                          
+                           * TAB DE MES E CONSIS NA MAO                 
+                                                                        
+     TTJ20001    PGM COB   LE E CONSISTE E GRAVA                        
+     PSVP3610    PGM DB2   JOIN DE TABELAS.                             
+     FGBI0005    PGM DB2  FAZ APENAS INSERCAO NA TABELA                 
+     BALG0265    PGM ASM   TABELA- PGM PEQUENO BOM PARA TESTES.         
+     BVFE8802    PGM ASM   TEM MARCADO AS POSICOES DOS CPOS DO ARQ. LOGA
+                                                                        
+          PGM PPRT2515 ----> UNICO ARQ. DE ENTRADA.                     
+          PGM PPRT9992 ----> LE ENTRADA GRAVA SAIDA --> COBOL II        
+WKLOGHOS DS    0CL226     **** INICIO DO CPO       FINAL DO CPO         
+         DS    XL4               0001                  0004             
+LHDATA   DS    PL3               0005                  0007             
+LHPER    DS    CL1               0008                  0008             
+LHATM    DS    PL3               0009                  0011             
+         DS    C                 0014                  0014             
+LHHORA1  DS    XL4               0015                  0018             
+LHRC1    DS    CL1               0019                  0019             
+         DS    XL4               0020                  0023             
+LHRC2    DS    CL1               0024                  0024             
+         DS    XL4               0025                  0028             
+LHRC3    DS    CL1               0029                  0029             
+         SPACE 2                                                        
+LHREQTAL ORG   LHATM                                                    
+LHCODTX  DS    CL4               XXXX                  XXXX             
+LHCODAG  DS    PL3               XXXX                  XXXX             
+LHRZ     DS    PL3               XXXX                  XXXX             
+LHCONTA  DS    PL4               XXXX                  XXXX             
+LHDIG    DS    C                 XXXX                  XXXX             
+LHQTTAL  DS    PL2               XXXX                  XXXX             
+LHQTFOL  DS    PL2               XXXX                  XXXX             
+LHTIPTAL DS    PL2               XXXX                  XXXX             
+         SPACE 2                                                        
+LH3RBAR  DS    XL4               0031                  0034             
+LH3CTAP  DS    PL4               0035                  0038             
+         DS    CL1               0039                  0039             
+LH3CHAFV DS    CL4               0040                  0043             
+         DS    CL1               0044                  0044             
+LH3CTPO  DS    PL4               0045                  0048             
+LH3RAZ   DS    PL3               0049                  0051             
+                                                                        
+* TEXTO DE INPUT (AREA DE DESCOMPRIMIDA)                                
+LHTXTIN  DS    0CL143            0052                                   
+                                                                        
+* HEADER NIVEL 1                                                        
+         DS    CL7               0052                  0058             
+LH1TRM   DS    CL6               0059                  0064             
+LH1SEQ   DS    CL6               0065                  0070             
+                                                                        
+* HEADER NIVEL 2                                                        
+         DS    CL3               0071                  0073             
+         DS    CL3               XXXX                  XXXX             
+LH2RC    DS    C                 XXXX                  XXXX             
+LH2AGORG DS    CL4               XXXX                  XXXX             
+LH2AGDES DS    CL4               XXXX                  XXXX             
+LH2AUT   DS    CL3               XXXX                  XXXX             
+                                                                        
+*TRILHA 2 DO  CARTAO                                                    
+LHTRK2   DS    0CL37             XXXX                  XXXX             
+         DS    CL4               XXXX                  XXXX             
+LHT2AG   DS    CL4               XXXX                  XXXX             
+LHT2CT   DS    CL7               XXXX                  XXXX             
+LHT2DG   DS    CL1               XXXX                  XXXX             
+         DS    XL1               XXXX                  XXXX             
+LHT2SEQ  DS    CL4               XXXX                  XXXX             
+LHT2SERV DS    CL2               XXXX                  XXXX             
+LHT2REF1 DS    CL8               XXXX                  XXXX             
+LHT2VIA  DS    CL2                                                      
+LHT2UR   DS    CL2                                                      
+         SPACE 2                                                        
+* CAMPOS FINAIS DO TEXTO DE INPUT                                       
+LHVR1    DS    CL14                    VR PRINC DINHEIRO                
+LHVR2    DS    CL14                    VR PRINC CHEQUE                  
+LHAG2    DS    CL4                     AG CRED                          
+LHRZ2    DS    CL4                     RZ CRED                          
+LHCT2    DS    CL7                     CT CRED                          
+LHDG2    DS    CL1                                                      
+LHAUTO   DS    CL7                     AUTORIZANTE                      
+LHLCTO   DS    CL3                     COD LANCAMENTO                   
+LHDPVI   DS    CL2                     NRO PARCELA DO ELO/DIAS VINCULO  
+LHCRCVAL DS    CL8                                                      
+LHNOME   DS    CL32                                                     
+         DS    CL18                                                     
+         SPACE 2                                                        
+LHINSS   ORG   LHVR1                                                    
+LHVRINSS DS    CL14                                                     
+         DS    CL14                                                     
+LHDTININ DS    CL6                                                      
+LHDTFINI DS    CL6                                                      
+LHSENSIB DS    CL1                                                      
+         DS    CL64                                                     
+         SPACE 2                                                        
+WORKDESV DS    0CL20                                                    
+AGVINC   DS    PL3                                                      
+CTAVINC  DS    PL4                                                      
+         DC    13C' '                                                   
+         SPACE 2                                                        
+*---------------------------------------------------------------------* 
+* INSTRUCOES                                                          * 
+* -------                                                             * 
+* PARA CARREGAR UM REGISTRADOR COM O NRO DE OCORRENCIA PARA NAO OCOR  * 
+* RER ERRO.                                                           * 
+*  LOADTAB  EQU   *                                                   * 
+*           LA    6,TABTEXTO                                          * 
+*           L     7,=F'9999'                                          * 
+*  *                                                                  * 
+*---------------------------------------------------------------------* 
+*      SRP  CPO,2,0                                                   * 
+*                                                                     * 
+* ANTES DA EXECUCAO DA INSTRUCAO O CAMPO CPO   PL5 = 123456789F       * 
+* DEPOIS DA EXECUCAO DA INSTRUCAO O CAMPO CPO FICOU PL5 = 345678900F  * 
+*                                                                     * 
+*     SRP  CPO,64-4,0                                                 * 
+* ANTES DA INSTRUCAO   PL6 = 12345678901F                             * 
+* DEPOIS DA EXECUCAO DA INSTRUCAO  PL6 = 00001234567C                 * 
+*                                                                     * 
+* ** NA VERDADE O QUE OCORRE E O DESLOCAMENTO DO CAMPO DEPENDENDO     * 
+* DA MASCARA NESTE CASO SAO SUBTRAIDOS 4 ""PARTES"" DO CAMPO E MOVE   * 
+* SE ZEROS A ESQUERDA " A UMA DESLOCAMENTO DO CAMPO"                  * 
+*---------------------------------------------------------------------* 
+* CONSIST  CPOA,P,ERRO                                                * 
+* *O LABEL ERRO SERA EXECUTADO QDO O CPO NAO FOR CONSISTENTE          * 
+*                                                                     * 
+* ***->DATA    "CPO RECEBIDO CL6' ' " 080198                          * 
+* ***->CODDATA "CPO ENVIADO  PL3'0' " 98008                           * 
+* OBS-> SE ENTRAR DATA ZERADA NO CAMPO CODDATA                        * 
+*  OCORRERA UM S0C7 NA INSTRUCAO AP                                   * 
+*---------------------------------------------------------------------* 
+* FONES:                                                              * 
+* -----                                                               * 
+* PRODUCAO        = 4197 2952                                           
+* AMERICA (ALPHA) = 7295 1422                                         * 
+* COSTELARIA=  7085 - 0646                                            * 
+* PROBUS    =  7082 - 1883                                            * 
+* REGINALDO =  7092 - 2265                                            * 
+* PORTARIA PEDESTRE  ALPHA = 2-2100                                   * 
+* BBOONNAA = 7284 8638                                                * 
+* MICHELUCCIO = 7295 8294                                             * 
+* SOGGIORNO = 7283 6453                                               * 
+* BABBO GIOVANNI = 7295 1905                                          * 
+* FARONELLA      = 7291 - 9132                                        * 
+* ZE= 9777 4141                                                       * 
+* JJJUUULLII = 272 6188                                               * 
+* LE VILLE = 421 1086                                                 * 
+* CHRISTIANO = 2 2083                                                 * 
+* FABRICA / FEG => 7296 0854                                          * 
+* JOAO CABRAL (CEL).->9187 - 7534                                     * 
+* ROGERIO R= 9951 0647                                                * 
+* JAPAUTO = 7295 - 5040                                               * 
+* TAXI (ALPHA)= 421 - 2006                                            * 
+* TAXI ( MTZ )= 3766  6582  3765 1991                                 * 
+* TAXI ( ROMARIO ) =  9165 95 64                                      * 
+* TAXI             =  708202256  70850484                             * 
+* FEG =   7082 - 9846                                                 * 
+* MICRO = 536 - 3676                                                  * 
+*                                                                     * 
+*  DBA                                                                * 
+*  2 - 2055                                                           * 
+*  BIP-FABRICA                                                        * 
+*---------------------------------------------------------------------* 
+*  PARA VERIFICAR O BIND   ** TEM QUE ESTAR NA MAQ DE PRODUCAO        * 
+*                *****  DB2M1.R4.SAIBIND(DCIL*)      MTZ              * 
+*                *****  DB2A1.R4.SAIBIND(DCIL*)      ALPHA            * 
+*                                                                     * 
+* PGM CHAMADOR = OCRE2200   *QDO NO CHAMADOR ESTIVER COM A (PACKAGE)  * 
+*                           NAO PRECISA SBAMAR O CHAMADOR FIZER ALTE  * 
+* PGM MODULO   = GDAD0040   ALTERACAO DO MODULO, NESTE CASO O GDAD0040* 
+*                           MAS NO DBRM DO MODULO  TEM QUE ESTAR COM  * 
+*                           "A"  OU "K" CASO ESTIVER COM "X" O MESMO  * 
+*                           OCORRERA -805                             * 
+*---------------------------------------------------------------------* 
+*PARA ACESSAR COPY BOOK.              ***UTILIZADOS NO BACC           * 
+*                                                                     * 
+* IMP DSN=CB.RLCM.COPYBKS.OLD(NOME)                                   * 
+*---------------------------------------------------------------------* 
+* PGM DATECONV ?                                                      * 
+*   DIA0001000000050198110001089700000000 ---> ESTA FOI A AREA       *  
+*  DIA --> DAYS-DIFF                                                  * 
+*  00010000 --> SEND DATE       ---->NESTE CASO EH ESTA DT QUE ESTA   * 
+*  00050198 --> SEND NUMX                     INVALIDA.               * 
+*  11 --> RETURN CODE                                                 * 
+*  00010897 --> RET DATE                                              * 
+*  00000000 --> RET NUM                                               * 
+*---------------------------------------------------------------------* 
+* PARA DESCOBRIR O CONTEUDO DO  CAMPO RETURN-CODE                       
+* -    IR PARA COMPILACAO E VERIFICAR TGT                               
+       *** TGT MEMORY MAP ***                                           
+       TGTLOC                                                           
+  -    ACHEI O TGT ==> 00007A  RETURN CODE SPECIAL REGISTER             
+  -    IR NO DUMP DO JOB E VER ONDE INICIA O TGT                        
+       TASK GLOBAL TABLE (TGT)  ===> NO DUMP ....                       
+ 00060 39600088 39600318 00000002 00000BCC 00000000  00000000 0004C6C0 0
+ ==================>  NO CASO ACHEI O 0C ==> EM DECIMAL = 12            
+*---------------------------------------------------------------------* 
+* TABELA DO PSMC2000                                                  * 
+*    WHERE CPROG   =  'XXXXXXXX' AND                                  * 
+*          CJOB    =  'XXXXXXXX'                                      * 
+*                                                                     * 
+*    **->BASTA ACESSR O TSO ESPECIFICANDO O PGM E O JOB               * 
+*   O SISTEMA PSVP   - A ULTIMA DATA DO MANUAL E A CORRETA EH         * 
+*---------------------------------------------------------------------* 
+*  MH501010  - PODE DISPONIBILIZAR AS SEGUINTES MSG.                  * 
+*                                                            KLEBER   * 
+* REQUEST RECORD SENT -         10199T802                             * 
+* MH560-3003 FIRST RECORD NOT 004 HEADER FOR 101 REQUEST              * 
+* BLOCK RECEIVED -9980100                                             * 
+* EM CONTATO COM A EDICLEIA A MESMA DEIXOU A RESOLUCAO DO ABEND PARA  * 
+* O PROXIMO EXPEDIENTE.                                               * 
+* PEDIR PARA AGUARDAR E REEXECUTAR O JOB, POIS O ARQ. AINDA NAO CHE   * 
+* GOU PARA PROCESSAR                                         KLEBER   * 
+*---------------------------------------------------------------------* 
+* ...PARA SBAMAR SQL                              KLEBER              * 
+* OBS. QDO O PGM FOR NOVO SEJA ELE SQL OU PGM DEVERA FAZER ANTES      * 
+* LING = C/A              BIBLIOTECA = BIBGERAL                       * 
+* DESTINO = 01 05                                                     * 
+* PGMNAME = NOME DO PGM A SER SBAMADO                                 * 
+*                                                        KLEBER       * 
+* OBS. QDO FOR SBAMAR O CHAMADOR TEM QUE SER TRN                      * 
+*      FAZER FUNCAO   01  QDO O PGM FOR PGM **SBAMAR O PROGRAMA**     * 
+*      FAZER FUNCAO   21  E DEPOIS "AGUARDAR EXECUTAR ESTA FUNCAO"    * 
+*                         *****QDO FOR SQL **********                 * 
+*      FAZER FUNCAO   01  E DEPOIS "AGUARDAR EXECUTAR ESTA FUNCAO"    * 
+*                         *****QDO FOR PGM NORMAL****                 * 
+*      FAZER FUNCAO   14                                              * 
+*  *****PARA MUDAR O AMOED  DE 31 PARA 24 BASTA COLOCAR  "M" NA FUN   * 
+*  CAO 06.                                                            * 
+*********************************************************************** 
+*   QDO O PROGRAMA FOR RURA E TRN FAZER A FUNCAO 06 DA SEG. FORMA.    * 
+*  FUNC  06.                                                          * 
+*  ----------                                                         * 
+*   TIPO =   TRN                                                      * 
+*   MAQ=  01                        *****KLEBER******                 * 
+*                           E  DEPOIS..                               * 
+*  FUNCAO  34.                                                        * 
+*  ----------                                                         * 
+*  SOMENTE E DIFERENTE QDO TRN = 'S'                                  * 
+*                                                                       
+* ABENDOU O MODULO RURA0536 A QUAL EH CHAMADO PELO MODULO RURA0530      
+* A QUAL EH CHAMADO PELO RURA0500.                                      
+* **  RURA0500                                                          
+*       |                                                               
+*     RURA0530                                                          
+*       |                                                               
+*     RURA0536 =   ENTAO FIZEMOS A ALTERACAO NESTE PGM E NAO PRECISOU   
+*                  FAZER  SOMENTE SBAMA NOS PGM RURA0530 E RURA0500.    
+*---------------------------------------------------------------------* 
+*     .... COMO RESOLVER ABEND COBOL-2                                * 
+*   1- PEGAR O OFFSET                                                 * 
+*   2- DEPOIS IR NA COMPILACAO E VER NO ANTIGO "CONDENSED LISTING"    * 
+*   4- PEGAR O BLF JUNTO COM SEU DESLOCAMENTO                         * 
+*   5- DEPOIS PEGAR O REG. 13 OU 9                                    * 
+*   6- SE FOR UM CPO DE ARQ. PEGAR O DESLOCAMENTO                     * 
+*                                                                     * 
+*        B7C    00012C    BASE LOCATORS FOR FILES                     * 
+*                                                                     * 
+*        REG. 13 --->   007328                                        * 
+*                      +   12C                                        * 
+*                 ------------------                                  * 
+*                       007454 -> NESTE ENDERECO VAI TER O ENDERECO   * 
+*                                 DO PRIMEIRO  BLF = 000  ; SENDO     * 
+*                                 QUE DEPOIS E SO SOMAR O DESLOCA//;  * 
+*---------------------------------------------------------------------* 
+* SBAMA ESPECIAL NA MATRIZ                                            * 
+* ------------------------                              KLEBER        * 
+* 4 - 4242   PEDIR PARA DESCARREGAR SBAMA NA MTZ                      * 
+*     2644   QDO A ALHPA NAO FUNCIONA MAIS                            * 
+*     4500    ESTE E O ATUAL                                          * 
+* ------------------------                              KLEBER        * 
+* 2 - 2337   PEDIR PARA DESCARREGAR SBAMA ESPECIAL  ==> 2-2052        * 
+*     2052                                                            * 
+*                                                                     * 
+*  QUANDO NO CHANGMAN O BIBMODOB = Y  E CANCELAR POR U1033            * 
+*  TEM QUE PEDIR PARA EXECUTAR O SBAMODL PARA PODER DESCARREGAR.      * 
+*  LIGAR PARA COLORAU/EVERALDO R-4-2444) ==> DAR O NOME DO PROGRAMA   * 
+* --------------                                                      * 
+*  PEDIR DESCPGM                                                      * 
+* --------------                                                      * 
+*    QDO O PROGRAMA FOR IMS (PURO), DEVEMOS VERIFICAR O JOB SDPA6010  * 
+*  *DEVE-SE ANALISAR O SDPA6000 (*EM ALGUNS CASOS)                    * 
+*                        ( ON LINE )                                  * 
+*                                                                     * 
+*  PEDIR P/ DESCARREGAR UM BIBMODOB  OU  BIBMODL                      * 
+* ----------------------------------------------                      * 
+* DEVEMOS ACOMPANHAR O JOB SDPA6070, POREM O QUE ATUALIZA DE VERDA    * 
+* DE EH O SDPA0038 A QUAL EH EXECUTADO 2 VEZES AUTOMATICAMENTE        * 
+* 4 - 5722   - QDO NECESSITARMOS PEDIR DESCPGM 'ISTO EH O PGM ESTA    * 
+*                                                     NA BIBMODOB'    * 
+* EVERALDO DE OLIVEIRA ROCHA                                          * 
+* COLORAU (LUIZ)                                                      * 
+*---------------------------------------------------------------------* 
+* JCL DE PRODUCAO ?                                                   * 
+*                                                                     * 
+* ENTRAR NA MAQ. DO ROSCOE12-05                                       * 
+* IMP DSN=MJ.JCLTRANS(EXMZ0243)                                       * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+*  4 -4976   AR  CONDICIONADO.                                        * 
+*---------------------------------------------------------------------* 
+*    PARA CANCELAR OJOB COM DUMMP:                                    * 
+*           C JOB,DUMMP                                               * 
+*---------------------------------------------------------------------* 
+* CHAVES    **MAQ**                                                   * 
+*--------                                                             * 
+*  IMPRESSORA = OA2DSNX1  -> PARA IMPRIMIR DEVE-SE ACESSAR O EVT04    * 
+*  IMPRESSORA = OA2DSNX8  -> 28/08/2001  ===> SO MUDA ULTIMO SUFIXO   * 
+*  E APOS SELECAO DO MEMBRO COLOCAR "E"  NA FRENTE NO MEMBRO, E AL    * 
+*  TERAR O NUMERO DA IMPRESSORA FAZENDO A CONFIRMACAO COM ""Y""       * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+    POOL ABEIMP05    RPF PARA IMPRIMIR RELAROTIOS                       
+*                                                                       
+* QDO NECESSITAR COLOCAR ABEND-AID NO DUMMP                             
+*                                                                       
+//DPCTAK   JOB  'PROG,4250,BN,PROG0505',MSGCLASS=T,CLASS=A              
+//JOBLIB   DD    DSN=AV.BIBGERTT,DISP=SHR                               
+//         DD    DSN=AV.BIBGERAL,DISP=SHR                               
+//         DD    DSN=SA.RDG2.ABENDAID.V803.LOAD,DISP=SHR                
+*---------------------------------------------------------------------* 
+**====>  SORT ========>                                               * 
+**** SE DER NO SORT  A MENSAGEM ABAIXO, EH PORQUE OS ARQUIVOS         * 
+ CONCATENADOS TEM TAMANHO DE REGISTROS DIFERENTES.                    * 
+Q OPEN ERROR SORTIN ==> PROVAVELMENTE SAO ARQUIVOS CONCATENADOS QUE   * 
+J END OF DFSORT         TEM TAMANHO DE REGISTROS DIFERENTES (ENTRADA) * 
+OBS:- SE NA SAIDA DO SORT O LRECL TIVER MAIOR QUE O DE ENTRADA O      * 
+      O RESTANTE DO REGISTRO SERA PREENCHIDO COM ZEROS BINARIOS.      * 
+* NAO PODE ENTRAR NO SORT DOIS ARQUIVOS COM TAMANHOS DIFERENTES ..... * 
+* PODE ENTRAR COM LRECL IGUAIS, POREM COM BLKSIZE DIFERENTES    ..... * 
+* NESTE CASO O QUE TIVER BLKSIZE MAIOR TEM QUE ESTAR EM PRIMEIRO..... * 
+*---------------------------------------------------------------------* 
+* COMO OVERWRIDAR O CARTAO IMSEXEC                                    * 
+*                                                                     * 
+* STEP1    EXEC IMSEXEC,             ***BASTA COLOCAR DEPOIS DA PSB   * 
+*        SOUT=Z,                        A BIBLIOTECA A QUAL O TTVH1580* 
+*        MBR=TTVH1580,                  SE ENCONTRA.                  * 
+*        PSB=RESP1580,BIB=MX.BIBGERTT                                 * 
+* *                                                    KLEBER         * 
+*---------------------------------------------------------------------* 
+*  OMIT COND  ----> COM ARQUIVO VARIAVEL VB ===> EXEMPLO .....        * 
+*  ----------                                                         * 
+//SORTOUT  DD DSN=MJ.PM11.EXBR.FUNDOFIS,                                
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(08000,1000),RLSE),                                 
+//       DCB=(MJ.A,LRECL=1882,RECFM=VB)                                 
+    SORT FIELDS=COPY                                                    
+    OMIT COND=(14,3,BI,EQ,X'05537F')  ===> EXEMPLO DA  POSICAO 10,3,PD  
+    END                               ===> SOMAR 4 BYTES NA POSICAO     
+  RECORD TYPE IS V - DATA STARTS IN POSITION 5                          
+  EXBR9999.STEP1 .SORT , INPUT LRECL = 1882, BLKSIZE = 27998, TYPE = VB 
+===> O LRECL DEVE SER O MESMO DA INPUT LRECL ===> 1882 ==> VER VIA A D  
+*---------------------------------------------------------------------* 
+*===>  PARA VER O LRECL DA SAIDA PARA VB  ===> ATACHAR O ARQUIVO E DAR I
+DATA SET    ===> CB.BVFE.PRV.REDUMAST.PROJ2000.G0001V00                 
+DSORG       ===> PS                                                     
+RECFM       ===> VB                                                     
+LRECL       ===> 1952      ====>  COLOCAR ESTE LRECL PARA A SAIDA ===>  
+BLKSIZE     ===> 27998                                                  
+*//SORTIN   DD     DSN=MJ.CCMS.PRV.ENTRADA(0),DISP=SHR                * 
+*//                                                                   * 
+*//SORTOUT  DD     DSN=MJ.CCMS.PRV.SAIDA(+1),                         * 
+*//            DISP=(,CATLG,DELETE),                                  * 
+*//            UNIT=DISCO,SPACE=(TRK,(3150,630),RLSE),                * 
+*//            DCB=(MJ.A,LRECL=34,RECFM=FB                            * 
+*//                                                                   * 
+*//SYSIN     DD  *                                                    * 
+*INCLUDE COND=(1,15,CH,EQ,C'123456890909092',                         * 
+*  OU           AND,1,15,CH,EQ,C'123456789123456') E QDO FOR COMPACTADO*
+*OMIT COND                                       (15,4,PD,EQ,4811302) * 
+*                                                                     * 
+*SORT FIELDS=(1,15,A),FORMAT=BI  -> DE ACORDO COM O ARQ.              * 
+*END                                                                  * 
+*                                                                     * 
+**** SE QUISER FAZER SORT SEM ALTERAR A CLASSIFICACAO                 * 
+*   BASTA USAR O SORT FIELDS DESTA MANEIRA.                           * 
+*SORT FIELDS=COPY                                                     * 
+**** SE DENTRO DO SORT DER UM S0C7  EH PORQUE TEM UM OMIT COND OU     * 
+*    INCLUDE CONDE OU SUM FIELDS  ==>  VER A POSICAO DESTES CONDS.    * 
+* OBS:========> O SORT NORMAL COM SORT FIELDS NAO CANCELA NUNCA ===>  * 
+*---------------------------------------------------------------------* 
+*                                                                     * 
+*EXEMPLO DE OMIT COND                                                 * 
+*SORT FIELDS=COPY                                                     * 
+*OMIT COND=(63,8,BI,EQ,X'00000F0000000000')                           * 
+*                                                                     * 
+*OMIT COND=(63,8,BI,EQ,X'00000F0000000000')  EXP:- PIC X(08)          * 
+*OMIT COND=(16,4,CH,EQ,C'5820') ===>  EXP:-  PIC 9(04) ==> F5F8F2F0   * 
+*                  PARA CAMPO PIC 9(04) ===> ZONADO                   * 
+*---------------------------------------------------------------------* 
+*EXEMPLO DE INCLUDE COND                                              * 
+*SORT FIELDS=COPY                                                       
+*INCLUDE COND=(63,8,BI,EQ,X'00000F0000000000')                          
+*---------------------------------------------------------------------* 
+*EXEMPLO DE SUM FIELDS                                                * 
+*---------------------------------------------------------------------* 
+* RETURN CODE = 08 ===>  IDCAMS                                       * 
+* SOLUCAO     =    ===>  EXECUTAR SORT COM SUM FIELDS=NONE            * 
+* SUM FIELDS=NONE ==> ESTE CARTAO DE SUM FIELDS RETIRA REG. DUPLICADOS* 
+*                 ==> GERA UM UNICO REGISTRO PARA N REGISTROS         * 
+*---------------------------------------------------------------------* 
+* SUM FIELDS=NONE ==> ESTE CARTAO DE SUM FIELDS RETIRA REG. DUPLICADOS* 
+*                 ==> GERA UM UNICO REGISTRO PARA N REGISTROS         * 
+*                 ==> EXP: SE TIVER 5 REGISTROS IGUAIS GERARA 1 UNICO * 
+* SUM FIELDS=(1,5,PD) SOMA VALOR DE TODOS OS CAMPOS                   * 
+*                                                                     * 
+* SORT FIELDS=(10,9,A,131,5,A,141,7,A,189,8,A),FORMAT=BI              * 
+* SUM FIELDS=NONE                                                     * 
+* END                                                                 * 
+* OBS:- PARA SUM FIELDS=NONE EH OBRIGATORIO TER SORT FIELDS .......   * 
+*---------------------------------------------------------------------* 
+* OBS ===>  QQUER BRANCO ENTRE COMANDOS DA INVALIDO NO COMANDO SORT   * 
+*---------------------------------------------------------------------* 
+*  OMIT COND=(66,4,PD,EQ,0000004,AND,70,4,PD,EQ,0852208)              * 
+*  END                                                                * 
+======================================================================= 
+PARA DELETAR REGISTROS COM CAMPOS IGUAIS                              = 
+----------------------------------------                                
+OMIT COND=(3,3,PD,EQ,00114,AND,97,1,CH,EQ,C'S',OR,                    C 
+           3,3,PD,EQ,00354,AND,97,1,CH,EQ,C'S',OR,                    C 
+           3,3,PD,EQ,00503,AND,97,1,CH,EQ,C'S',OR,                    C 
+           3,3,PD,EQ,01996,AND,97,1,CH,EQ,C'S')                         
+END                                                                     
+======================================================================= 
+*                                                                     * 
+*  *->O QUE ESTA ESPECIFICADO NO CARTAO INREC SERA O OS CAMPOS        * 
+*     QUE IRAO SER PEGOS NO ARQ. DE ENTRADA                           * 
+*  POR EX. -> POS 1 COM TAMANHO DE 51----> PEGARA DA POSICAO 1 DESLO  * 
+*             CANDO 50 BYTES , DEPOIS POSICAO 62 PEGARA 8 BYTES ....  * 
+*                                                                     * 
+*                                                                     * 
+*  END                                   13,5 E COMPACT. C/ SUJEIRA   * 
+*                                           NO SINAL)                 * 
+*                                                                     * 
+*     LT   MENOR                                                      * 
+*     GT   MAIOR                                                      * 
+*---------------------------------------------------------------------* 
+**====>  SORT ========>  EXEMPLO DE SORT PARA AUMENTAR LRECL          * 
+*                        NESTE EXEMPLO DE 234 PARA 242                * 
+*                        AUMENTAR A PARTIR DE 235 ATE 242 (08 BYTES)  * 
+* //STEP1    EXEC SORTD                                                 
+* XXSORTD    PROC                                                       
+* XXSORT     EXEC  PGM=ICEMAN                                           
+* XXSYSOUT   DD  SYSOUT=*                                               
+* //*                                                                   
+* //* ***    CLASSIF. DO ARQUIVO INFORMACOES DE PAGAMENTO POR:          
+* //* ***    PRODUTO/FAMILIA/CONTRATO/PARCELA/PAGAMENTO                 
+* //*                                                                   
+* //SORTIN   DD DSN=AC.FGBI.COBRSORT(0),                                
+* //       DISP=(,CATLG,DELETE),                                        
+* //       UNIT=DISCO,                                                  
+* //       SPACE=(TRK,(000410,0062),RLSE),                              
+* //       DCB=(AC.A,LRECL=242,RECFM=FB)                                
+* //SYSIN    DD *                                                       
+* //*                                                                   
+*  SORT FIELDS=COPY                                                     
+*  INREC FIELDS=(1,234,X'000000000000000C')                             
+*  END                                                                  
+*0 EXCP ACCESS METHOD USED FOR SORTOUT                                  
+*0 EXCP ACCESS METHOD USED FOR SORTIN                                   
+*0 OUTPUT LRECL = 242, BLKSIZE = 27830, TYPE = FB                       
+*0 SORTOUT LRECL OF 242 IS DIFFERENT FROM SORTIN(NN) LRECL OF 234 - RC=0
+*0 INSERT 0, DELETE 0                                                   
+*0 RECORDS - IN: 949049, OUT: 949049                                    
+*0 END OF DFSORT                                                        
+*---------------------------------------------------------------------* 
+**====>  SORT ========>  EXEMPLO DE SORT PARA COLOCAR ALGUM VALOR     * 
+* ====>  OUTREC ===> ALTERA O CONTEUDO DA SAIDA DO SORT                 
+                                                                        
+SORT FIELDS=(3,3,A,6,4,A),FORMAT=BI                                     
+OUTREC FIELDS=(X'032C',3,240)  ===> A PARTIR DO 1,2 VAI FICAR COM 032C  
+END                                   (ISTO EH CAMPO COMPACTADO) 02     
+* ** NESTE EXEMPLO ARQUIVO COM TAMANHO DE 242 **                 3C     
+* ** A PARTIR DE 3,240 ==> 242                                          
+* TODOS OS CAMPOS DEVEM SER X'XXXX' ==> PARA ALPHA,ZONADO OU COMPACTADO 
+*                                                                       
+SORT FIELDS=COPY                                                        
+OUTREC FIELDS=(X'F0',1,50)     ===> NA POSICAO 1 VAI ACRESCENTAR 0      
+                                    E A PARTIR DA 1 COM 50 FICA IGUAL   
+* ** NESTE EXEMPLO ENTRA ARQ. COM TAM. DE 50 E SAI COM TAMANHO DE 51    
+* SEM ALTERAR A CLASSIFICACAO DO ARQUIVO .........................      
+* TODOS OS CAMPOS DEVEM SER X'XXXX' ==> PARA ALPHA,ZONADO OU COMPACTADO 
+*---------------------------------------------------------------------* 
+*         OI    WTO1+19,X'F0'               DESCOMPACTADO A PARTIR      
+*WTO1     WTO  '=XXXXXXXXXXX DT',ROUTCDE=11      DO PRIM  X.            
+*                                                                     * 
+*+=12345678901                 DT   *********>RESULTADO                 
+*                                                                       
+*---------------------------------------------------------------------* 
+*   LING = E    FUNCAO 6                                              * 
+*   LING = DAD  FUNCAO 5                                              * 
+*---------------------------------------------------------------------* 
+*                                                                     * 
+*  STEP2    EXEC IMSEXEC,                                             * 
+*         SOUT=Z,   --------------------> ESTE PARAMETRO EH O QUE LI  * 
+*         MBR=NUME1000,                   MITA A QTD DE LINHAS DISPO  * 
+*         PSB=NUME1000,                   NIBILIZADAS DO DUMMP(10.000)* 
+*         BIB='MJ.BIBGERAL'               PARA AUMENTAR DEVE SER      * 
+*                                         SOUT=Y                      * 
+*---------------------------------------------------------------------* 
+* CHAVE DA TABELA DB2?                                                * 
+*  CD CDES L POUPX100 2                                               * 
+*  QDO FOR POUPV010 ACESSAR COMO POUPX100                             * 
+* PARA SABER OS DBMR QUE O PGM TEM BASTA ACESSAR O ROSCOEDS E         * 
+* EXECUTAR O SEGUINTE COMANDO:                                        * 
+*                                                                     * 
+* IMP DSN=DB2A2.R2.SBAMATST.HEADER(PGM)   PGM=NOME DO PROGRAMA        * 
+*                                                                     * 
+* APARECERA TAMBEM SE O PROGRAMA EH PACKGE OU NAO SE FOR APARECERA    * 
+* A LETRA "L" NO CANTO SUPERIOR.                                      * 
+*---------------------------------------------------------------------* 
+FUNCAO   AL                                                             
+DATA DEST  AD.GP80.DBAS.R2D2.KLEBER                                     
+VOLUME  ANPR12                                                          
+UNIT    DISCO   <ENTER>                                                 
+                                                                        
+UNITS  -   TRK                                                          
+PRIMARY     10                                                          
+SECOND      50                                                          
+DSORG       PS                                                          
+RECFM       FB                                                          
+         <ENTER>                                                        
+DEPOIS   EXP DSN=                                                       
+                                                                        
+*---------------------------------------------------------------------* 
+* COMO ACESSAR O IMS05 OU IMS12                                       * 
+*                -----    -----                                       * 
+*                                                                     * 
+* 01- ENTRE NO IMS05  OU IMS12 ENTRANDO FORA DO NETVIEW               * 
+* 02- LIMPE A TELA OM A TECLA "CLEAR"  PAUSE                          * 
+* 03- TECLE  "/FOR STDMENU"                                           * 
+* 04- FACA A OPCAO POR MSG                                            * 
+* 05- INFORME O CODIGO A SER PESQUISADO                               * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+*   SEQUENCIA PARA CRIAR O ARQ.                                       * 
+*                                                                     * 
+* 1-PRIMEIRO TIRAR PLA DO ARQ. NA MAQ. DE PRODUCAO                    * 
+* 2-DEPOIS IR PARA O EVTD05 OU EQUIVALENTE                            * 
+* 1-NO ROSCOEDS EXECUTAR OS SEGUINTES COMANDOS                        * 
+* 1-A J PG8801                                                        * 
+* 2-C J T                                                             * 
+* 3-PUR PG8801                                                        * 
+* 4-D J                                                               * 
+*                                                                     * 
+* -----                                                               * 
+* 1-NO ROSCOEDS CRIAR O ARQ.                                          * 
+* 1-DSN                                                               * 
+* 2-AL                                                                * 
+* 3-ENTER                                                             * 
+* 4-AD.TESTE                                                          * 
+* 5-VOLUMES=SA2101                                                    * 
+* 6-UNITS=TRK                                                         * 
+* 7-PRIMARY=50                                   KLEBER               * 
+* 8-SECOND =10                                                        * 
+* 9-DSORG  =PS                                                        * 
+*10-RECFM  =FB                                                        * 
+*13-PASSAR O CONVERSOR                                                * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+* COMO ANALISAR ABEND DO RURA                 KLEBER 11.03.99         * 
+*---------------------------------------------------------------------* 
+ 1-PEGAR O ENDERECO DO INTERRUPT AT E VERIFICAR EM QUAL MODULO OCORREU  
+O ABEND, PARA ISSO VERIFICAR NA RELACAO ABAIXO O ENDERECO INICIAL (EPA) 
+E O FINAL (END_ADD) PARA SABER EM QUAL INTERVALO ESSE ENDERECO SE ENCON 
+TRA, O ENDERECO QUE APONTAR NO INTERRUPT AT QUE ESTIVER NO INTERVALO    
+DO EPA E END-ADD EH O MODULO QUE OCASIONOU O ABEND                      
+                                                                        
+ *** NESTE CASO O MODULO QUE OCORREU O ABEND FOI O RURA0700             
+ O OFFSET ESTA DISPONIBILIZADO NO FINAL DA RELACAO DO CDE-LIST          
+ MOSTRANDO TB O CONTEUDO DO PRIMEIRO OPERANDO E O CONTEUDO              
+DO SEGUNDO OPERANDO.                                                    
+                                                                        
+                                   ****      PROGRAMA DE CREDITO RURAL-D
+NOME DO PROGRAMA - ********   *****   COMPLETION CODE SYSTEM - 0C7      
+PSW AT ENTRY TO ABEND ** 07850007 - E03BA650 **                         
+REGISTERS AT ENTRY TO ABEND                                             
+REGS 0-7            003BCF54   003BCF54   003835B8   003BAFA4         00
+REGS 8-15           00385D84   00000000   003BA540   003BB540         00
+CDE LIST           EPA          END-ADD                                 
+                                                                        
+RURA0600        00678928        0067C000                                
+RURA0785        003810E0        00381D28                                
+RURA0780        0037B280        0037B9B8                                
+RURA0761        0064A5B0        0065A000                                
+RURA0770        003BD728        003C2000                                
+RURA0700        003BA540        003BD000                                
+RURA0650        003B5AB8        003BA000                                
+RURA0630        00232118        00232800                                
+RURA0660        003A5AC0        003B5000                                
+RURA0600        003A1928        003A5000                                
+INSTRUCAO CAUSADORA DO ABEND - F843CA5ACA2F                             
+ENDERECO RELATIVO NO PROGRAMA- 0000010A                                 
+                                                                        
+*---------------------------------------------------------------------* 
+*  QDO O PGM ESTIVER NA BIBMODOB,  A FUNCAO 06 DEVE SER FEITA DA      * 
+*  SEGUINTE MANEIRA?                                                  * 
+*                                                                     * 
+* NOME DA BIBLIOTECA = TPGMLIB                                        * 
+* DESTINO = 01                                                        * 
+*                                                                     * 
+*   **  O RESTO E TUDO IGUAL                                          * 
+*---------------------------------------------------------------------* 
+*   ANO 2000.                                                         * 
+*                                                                     * 
+*      O ANO 2000 SERA UM ANO BISSEXTO. OS ANOS SECULARES COMO, POR   * 
+* EXEMPLO 1900 E 2000 SAO ANOS BISSEXTOS SE PUDEREM SER DIVIDIDOS POR * 
+* 400. AS REGRAS BASICAS PARA CALCULAR OS ANOS BISSEXTOS INCORPORADAS * 
+* PELA  MICROSOFT NOS PROCESSOS DE DESENVOLVIMENTO DE SOFTWARE SAO?   * 
+*                                                                     * 
+*    ** OS ANOS DIVISIVEIS POR 4 SAO ANOS BISSEXTOS, MAS              * 
+*---------------------------------------------------------------------* 
+ SELECT NAME, TSNAME FROM SYSIBM.SYSTABLES                              
+                                                                        
+ WHERE  TSNAME LIKE 'POUP%' AND                                         
+     NAME = 'V01CTRL_PROCM_POUP'                                        
+  DEVE-SE ENTRAR NO TS04                                                
+*---------------------------------------------------------------------* 
+* PARA DESCOBRIR O AMOED / RMOED DO PROGRAMA   DEVE-SE ENTRAR NA      * 
+* MAQUINA DE PRODUCAO                                                 * 
+*                                                                     * 
+*FUNCTION       ===> A                                                 *
+*                                                                       
+*DATA SET       ===> MJ.BIBGERAL(PBEN*)                                 
+*VOLUMES        ===>                                                    
+*                                                                       
+*                   APRESENTARA                       KLEBER            
+*                                                                       
+*MEMBER    STATUS  ---------------------- ATTRIBUTES -------------------
+*PBEN0037                                                         AM=24 
+*---------------------------------------------------------------------* 
+*     PARA VERIFICAR A DEFINICAO DA PSB DEVEMOS?                      * 
+*    DSN                                                              * 
+*    A                                                                * 
+*    AD.ANPR.CDES(O NOME DA PSB ESPECIFICADA NO JCL)                  * 
+*                                                      KLEBER         * 
+*---------------------------------------------------------------------* 
+* //DA07LUIZ JOB 'CCCC,9999,BN,CCCC0000',CLASS=A,MSGCLASS=T           * 
+* //MSGR8020  EXEC  PSBGEN,MBR=MSGR8020,SOUT=T                        * 
+* //SYSIN DD *                                                        * 
+*          PRINT NOGEN                                                * 
+*          PCB   TYPE=DB,                                             * 
+*                DBDNAME=DBDGRG,                                      * 
+*                PROCOPT=GIRD,                                        * 
+*                KEYLEN=26                                            * 
+*          SENSEG NAME=GRGGRN,                                        * 
+*                PARENT=0                                             * 
+*          SENSEG NAME=GRGACT,                                        * 
+*                PARENT=GRGEMP                                        * 
+*          PSBGEN LANG=COBOL,                                         * 
+*                PSBNAME=MSGR8020                                     * 
+*          END                                                        * 
+*                                                                     * 
+*                                                                     * 
+* ****-> O CAMPO PROCOPT=GIRD, SIGINIFICA OS TIPOS DE ACESSOS PERMI   * 
+*        TIDOS NO DB, A QUAL NESTE CASO PERMITIRA GET->LEITURA        * 
+*        INSERT-> INSERIR , READ->LEITURA , DELETE->DE DELECAO        * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+* BLOQUEIO                                                            * 
+* 2553                                                                * 
+* *73*19554#  ESTA BLOQUEIA  ------>  2553                            * 
+* #73*19554#  ESTA LIBERADO                                           * 
+*                                                                     * 
+* *21* NRO DO RAMAL #     ---------> PROGRAMA    2-2128               * 
+*                                                                     * 
+* 4042                                                                * 
+* *73*91977#  ESTA BLOQUEIA  -------> 4052                            * 
+* #73*91977#  ESTA LIBERADO                                           * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+*STEP2    EXEC PGM=RURA0500,                                          * 
+*       PARM='04496E',                                                * 
+*       REGION=0M                                                     * 
+*                                                                     * 
+*      POR MOTIVO DE FALTA DE ESPACO, NAO DEVE SER USADO ESPORADICA   * 
+*      MENTE DEVIDO O MESMO ALOCAR TODO O ESPACO DISPONIVEL NO        * 
+*      SISTEMA, (((((((PODE TRAVAR O SISTEMA)))))))).                 * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+*JOB  =  BICM0006                                                     * 
+*PGM  =  BICM1005                                                     * 
+*  O MESMO SEMPRE DISPONIBILIZA   A MENSAGEM                          * 
+*      A QUAL ALTERA O TIPO DE CONTA COM BASE NO ARQ. MOVCLI/DIGIFONE * 
+*                                                                     * 
+*  O CONTEUDO DA CHAVE QUE OBTIVERMOS  NOS CAMPOS SEQCADAN E SEQCADAT * 
+*  E ESTA QUE DEVERA SER DESPREZADA NO ARQ. MOVCLI E DIGIFONE.        * 
+*                                                                     * 
+*---------------------------------------------------------------------* 
+*  PROGRAMA PARA VERIFICAR DIVERGENCIA  ENTRE DOIS ARQUIVOS           * 
+*  PGM = CVDT0150     OU   PODE-SE UTILIZAR A POOL1500                * 
+*                                                                     * 
+* SE UTILIZAR O PGM SERVE COMO MODELO ABAIXO:                         * 
+*                                                                     * 
+*//STEP4B   EXEC PGM=CVDT0150,                                          
+*//       PARM=001001                    ******TEM QUE VERIFICAR        
+*//ARQPROD  DD DSN=*.STEP4.CADASTRO,           COMO E ESTE PARM.        
+*//       DISP=SHR                       VERIFICAR C/ O POLI O PARM     
+*//ARQTESTE DD DSN=*.STEP4A.CADASTRO,                                   
+*//       DISP=SHR                                                      
+*//DIVERGE  DD DSN=MJ.TTDK.DIVERGE.BALG0214(+1),                        
+*//       SPACE=(TRK,(002100,0100),RLSE),            KLEBER             
+*//       DCB=(MJ.A,LRECL=0030,RECFM=FB)            ********            
+*//PRODSEM  DD DUMMY,                                                   
+*//       DCB=(LRECL=0030,RECFM=FB)                                     
+*//TESTSEM  DD DUMMY,                                                   
+*//       DCB=(LRECL=0030,RECFM=FB)                                     
+*//SYSOUT   DD SYSOUT=*                                                 
+*//SYSUDUMP DD SYSOUT=Y                                                 
+*---------------------------------------------------------------------* 
+*  ARQUIVO PARA VERIFICAR CODIGO DE ABEND.                            * 
+*  NO ROSCOECT.                                                       * 
+*  AD.G07.DBAS.ABEND                                                  * 
+*---------------------------------------------------------------------* 
+*  COMO FAZER PARA VERIFICAR SE O PGM E REUSAVEL OU NAO               * 
+*                                                                     * 
+* 1- TEMOS QUE ACESSAR PRIMEIRO O ROSCOE DE PRODUCAO                  * 
+* 2- DEPOIS DAR ->  A D      <ENTER>                                  * 
+* 3- O DSN A SER COLOCADO SERA AC.PCPA.PGMLIB(SENH0*)                 * 
+*MEMBER     STATUS ---------------- ATTRIBUTES ---------------        * 
+*SENH0600                                                             * 
+*SENH0611               REUS                   AM=24   RM=24          * 
+*SENH0612               REUS                   AM=24   RM=24          * 
+*                                                                     * 
+* *** QUE DIZER QUANDO EXISTIR REUS NA FRENTE DO PGM SIGNIFICA          
+*     QUE O PROGRAMA EH REUSAVEL                                        
+*                                                                       
+* *** QUANDO FOR FAZER A FUNCAO 34 TEM QUE COLOCAR "S" DE REUSAVEL      
+*                                                                       
+* *** E NO MOMENTO DE FAZER A FUNCAO 21  TB A NECESSIDADE DE COLO       
+*     CAR  'S' NA OPCAO DE REUSAVEL                                     
+*---------------------------------------------------------------------* 
+  RH@HEXASOLUTION.COM.BR    -> ENVIAR C.V  ESTA PEGANO MAINFRAIME       
+IMP DSN=AD.G07.DBAS.DB2FONTE(DCONB010)                                  
+*---------------------------------------------------------------------* 
+*    BIND VIA TSO                                                     * 
+* TSO PACKAGE   <ENTER>                                               * 
+*      A QUAL O JOB SERA PD07BIND                                     * 
+*---------------------------------------------------------------------* 
+ARQUIVOS DE TAMANHO VARIAVEL - TRATAMENTO RDW (4 PRIMEIRAS POSICOES)    
+RDW ==> OS PRIMEIROS 2 BYTES (COMP) CONTEM O TAMANHO DO REGISTRO        
+ARQUIVOS DE TAMANHO VARIAVEL - NO SORT CONSIDERAR RDW  (SOMAR AS 4 PRIME
+      PARA TIRAR HEXPRINT NAO CONSIDERAR 4 BYTES (NAO SOMAR)            
+   1) PARA RETIRAR O PLA: NAO CONSIDERAR RDW(NAO SOMAR)                 
+   2) PARA DAR OMIT COND:     CONSIDERAR RDW (SOMAR + 4 BYTES)          
+   3) LISTAGEM DO DUMP  : CONSIDERAR RDW (SOMAR + 4 BYTES)              
+*---------------------------------------------------------------------* 
+ARQUIVOS DE TAMANHO FIXO   ==> EXEMPLO TAMANHO DE 1600 BYTES            
+ SORT FIELDS=COPY ===> PARA TAM                                         
+ OUTFIL FILES=1,INCLUDE=(5,1,CH,EQ,C'0'),  ==> 1+4+1595 = 1600 BYTES    
+ OUTREC=(1,4,C'0',6,1595)                                               
+ END                                                                    
+- NESTE EXEMPLO A PARTIR DA POSICAO 1 COM TAMANHO DE 4    FICAM IGUAIS  
+-               A PARTIR DA POSICAO 5 COM TAMANHO DE 1    FICAM '0'     
+-               A PARTIR DA POSICAO 6 COM TAMANHO DE 1595 FICAM IGUAIS 1
+*PARA SORT COM MERGE FIELDS : ----                                      
+* MODELO DE MERGE FIELDS:- DEPENDENDO DA QUANTIDADE DE ARQUIVOS         
+*                      DEVE TER SORTIN01,02,03,04 ... ETC. ..           
+//STEP1    EXEC SORTD                                                   
+//SORTIN01 DD DSN=MW.SCDC.ARQANTIG.BKP0(0),                             
+//       DISP=SHR                                                       
+//SORTIN02 DD DSN=MW.SCDC.SCB086.ARQTIG(0),                             
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MW.SCDC.PRV.ARQANTIG(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,21),                                               
+//       SPACE=(CYL,(3000,1500),RLSE),                                  
+//       DCB=(MW.A,LRECL=1507,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+//*                                                                     
+ MERGE FIELDS=(31,9,CH,A,41,2,CH,A)                                     
+ END                                                                    
+ 0 EXCP ACCESS METHOD USED FOR SORTOUT                                  
+ 0 OUTPUT LRECL = 1507, BLKSIZE = 27126, TYPE = FB                      
+ 0 INSERT 0, DELETE 0                                                   
+ 0 RECORDS - IN: 2472, OUT: 2472                                        
+ 1 SMF RECORD NOT WRITTEN TO THE SMF DATA SET(RC=20)                    
+ 0 END OF DFSORT                                                        
+*---------------------------------------------------------------------* 
+*                                                                       
+*  ABENDS S0C7 ==>  QUANDO HOUVER INVASAO DE AREA  (QUANDO OS DADOS DOS 
+*                   ARQUIVOS NAO BATEM NADA COM NADA), VERIFICAR SE  HA 
+*                   TABELAS DEFINIDAS NA WORKING  E VERIFICAR SE OS     
+*                   INDICES DAS TABELAS ESTAO MAIORES QUE OS DEFINIDOS. 
+*                   ==>  PROVAVELMENTE ESTOURO DE ALGUMA TABELA INTERNA.
+*                   EX:- FGBI3570 (CONSULTAR RO).                       
+*---------------------------------------------------------------------* 
+*   EXEMPLO DE SORT COM 1 ENTRADA E 2 SAIDAS COM TAMANHOS DIFERENTES--* 
+*---------------------------------------------------------------------* 
+                                                                        
+//* ***    CLASSIFICA POR AGENCIA / CONTA                               
+//       DISP=SHR                                                       
+//PRIVATES DD DSN=MJ.SCCE.PRP.PRIVATES(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MJ.A,LRECL=0036,RECFM=FB)                                 
+//BLOQUEIO DD DSN=MJ.SCCE.PRP.BLOQ2LIN(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MJ.A,LRECL=0015,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+//*                                                                     
+OUTFIL INCLUDE=(37,2,PD,EQ,19),FNAMES=PRIVATES,                         
+       OUTREC=(1,36) ===> PEGAR DA ENTRADA INICIO 1 COM TAM 36          
+OUTFIL INCLUDE=(37,2,PD,EQ,23),FNAMES=BLOQUEIO,                         
+       OUTREC=(1,7,28,8) ==> PEGAR DA ENT 1,7 E 28,8                    
+SORT FIELDS=(1,3,A,4,4,A),FORMAT=BI ==> CLASSIFICACAO DA SAIDA          
+0 BLOQUEIO : EXCP USED, LRECL = 15, BLKSIZE = 27990, TYPE = FB          
+0 IN MAIN STORAGE SORT                                                  
+0 INSERT 0, DELETE 0                                                    
+0 RECORDS - IN: 94, OUT: 94                                             
+0 PRIVATES : DELETED = 2, REPORT = 0, DATA = 92                         
+0 PRIVATES : TOTAL IN = 94, TOTAL OUT = 92                              
+0 BLOQUEIO : DELETED = 92, REPORT = 0, DATA = 2                         
+0 BLOQUEIO : TOTAL IN = 94, TOTAL OUT = 2                               
+0 NUMBER OF BYTES SORTED: 3572                                          
+0 TOTAL WORK DATA SET TRACKS ALLOCATED: 0 , TRACKS USED: 0              
+0 HIPERSPACE STORAGE USED = 0K BYTES                                    
+0 DATA SPACE STORAGE USED = 0K BYTES                                    
+0 END OF DFSORT                                                         
+*---------------------------------------------------------------------* 
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    SEPARA ARQUIVO LOG DE AUTORIZACOES DO CICS EM:               
+//*                                                                     
+//*                                                                     
+//SORTIN   DD DSN=MX.CADE.LOGCDEBI(0),                                  
+//       DISP=SHR                                                       
+//SORTOUT1 DD DSN=MX.CADE.LOGCDEBC(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0100),RLSE),                                 
+//       DCB=(MX.A,LRECL=0231,RECFM=VB)                                 
+//SORTOUT2 DD DSN=MX.CADE.LOGCOMEL(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(01000,0100),RLSE),                                 
+//       DCB=(MX.A,LRECL=0231,RECFM=VB)                                 
+//SYSIN    DD *                                                         
+ OUTFIL INCLUDE=(004,1,CH,NE,C'P'),FNAMES=SORTOUT1                      
+ OUTFIL INCLUDE=(004,1,CH,EQ,C'P'),FNAMES=SORTOUT2                      
+ SORT FIELDS=(COPY)                                                     
+ END                                                                    
+ SELECT *                                                               
+      FROM DB2PRD.V01SUBCONTA_POUP  ======>  TABELA POUPV024            
+      WHERE CJUNC_DEPDC =  2696     AND                                 
+            CCTA_POUP   =  220019                                       
+--          VSDO_ATUAL_SCTA  = 0                                        
+ SELECT *                                                               
+      FROM     DB2PRD.V01CONTA_POUPANCA ===> TABELA POUPV005            
+      WHERE CJUNC_DEPDC =  2696     AND                                 
+            CCTA_POUP   =  220019                                       
+--          VSDO_ATUAL_SCTA  = 0                                        
+*---------------------------------------------------------------------* 
+*ABEND - COBOLII                                                     -* 
+*1 - PEGAR OFFSET                                                    -* 
+*2 - IR NA COMPILACAO E VER NO ANTIGO CONDENSED LISTING, POIS O ATUAL-* 
+*    EH O LINE #  HEXLOC                                             -* 
+*3 - ACHAR QUAL INSTRUCAO ABENDOU                                    -* 
+*4 - PEGAR O BLF JUNTO  COM SEU DESLOCAMENTO                         -* 
+*5 - DEPOIS PEGAR O REGISTRADOR 13 OU 9                              -* 
+*          REG 13 =  7328                                            -* 
+*                  +  12C                                            -* 
+*              -----------                                           -* 
+*                    7454  --> NESTE ENDERECO VAI TER O ENDERECO DO  -* 
+*                              1 BLF = 000 ==> DEPOIS EH SO SOMAR O  -* 
+*                                              DESLOCAMENTO          -* 
+*---------------------------------------------------------------------* 
+*PARA LOCALIZAR INICIO DE UM ARQUIVO                                 -* 
+*REG13 -->  4DE80 (OU REG 9)                                         -* 
+*BLF   --> +  13C BLF                                                -* 
+*      --> -----------                                               -* 
+*           4DFBC ==> ENDERECO PARA VER ONDE FICA O ENDERECO INICIAL -* 
+*                     DO BLF (ARQUIVOS)                               * 
+*NO ENDERECO 4DFBC ENCONTREI 72C02 QUE EH O ENDERECO DO 1 ARQ./INICIO * 
+*DO ARQUIVO -->  O PROXIMO EH O PROXIMO ARQUIVO.                        
+*---------------------------------------------------------------------* 
+*           SELECT                                                    * 
+SELECT CCNPJ_EMPR, CFLIAL_CNPJ_EMPR                                     
+      (SELECT CCNPJ_EMPR                                                
+              FROM DB2PRD.CTA_AUTRZ_ITNET)                              
+       ORDER BY 1, 2                                                    
+*---------------------------------------------------------------------* 
+*** SORT COM OUTREC FIELDS (PARA ALTERAR UM DETERMINADO CAMPO DO ARQUIVO
+//SORTIN   DD DSN=MX.BIBC.PRV.PEND6040.INCLUDE,                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.BIBC.PRV.PEND6040.OUTREC,                          
+//       DISP=(NEW,CATLG,DELETE),                                       
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(003630,0726),RLSE),                                
+//       DCB=(MX.A,LRECL=241,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+//*                                                                     
+  SORT FIELDS=COPY                                                      
+  OUTREC FIELDS=(1,69,C'26.09.2003',80,162)                             
+ END                                                                    
+//*                                                                     
+    2 - A PARTIR DA  70   ATE   COLUNA   79  ==> TODOS OS REGS SERAO ALT
+                          XXXXXXXXXX BYTES       PARA '26.09.2003'      
+    3 - A PARTIR DA  80   ATE   COLUNA  241  ==> COPIA IGUAL (INALTERADO
+        (COMO E SOMADA AS COLUNAS ==> 69+10+162 = 241                   
+*---------------------------------------------------------------------* 

@@ -1,0 +1,151 @@
+      ******************************************************************
+      * DCLGEN TABLE(DB2PRD.BSICO_PJ)                                  *
+      *        LIBRARY(AD.DB2.DCLGEN(CADUB003))                        *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(CADUB003)                                     *
+      *        APOST                                                   *
+      *        LABEL(YES)                                              *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE DB2PRD.BSICO_PJ TABLE                       
+           ( CCLUB                          DECIMAL(10, 0) NOT NULL,    
+             CPTCAO_ESPAC_TBELA             DECIMAL(2, 0) NOT NULL,     
+             IRZ_SCIAL                      CHAR(70) NOT NULL,          
+             IFANTS_EMPR_COPLT              CHAR(70),                   
+             CCLASS_ATVDD_ECONC             CHAR(2),                    
+             CRAMO_ATVDD_ECONC              DECIMAL(3, 0),              
+             CSRAMO_ATVDD_ECONC             DECIMAL(3, 0),              
+             CATVDD_ECONC                   DECIMAL(3, 0),              
+             CISENC_CPF_CNPJ                CHAR(1) NOT NULL,           
+             CCNPJ_INCPD                    DECIMAL(9, 0),              
+             CCTRL_CNPJ_INCPD               DECIMAL(2, 0),              
+             CFLIAL_CNPJ_INCPD              DECIMAL(4, 0),              
+             IRZ_SCIAL_INCPD                CHAR(70),                   
+             DINCPC                         DATE,                       
+             CTPO_FONTE_INFO                DECIMAL(3, 0),              
+             DMES_ANO_FATMT                 DECIMAL(6, 0),              
+             VFATMT_LIQ_ANO                 DECIMAL(15, 2),             
+             CTPO_CAPTL_EMPR                DECIMAL(3, 0),              
+             CPAIS_CMBIO                    DECIMAL(5, 0),              
+             CCNSTT_EMPR_CREDT              DECIMAL(3, 0),              
+             CPORTE_EMPR                    DECIMAL(3, 0),              
+             DINIC_SEDE                     DECIMAL(6, 0),              
+             CTPO_SEDE_RESID                DECIMAL(3, 0),              
+             CID_TPO_PSSOA                  CHAR(1),                    
+             EHPAGE_PSSOA                   CHAR(70),                   
+             EEMAIL_PSSOA                   CHAR(70),                   
+             CEMAIL_INVLD                   CHAR(1) NOT NULL,           
+             CDDD_CNTAT_EMPR                CHAR(4),                    
+             CFONE_CNTAT_EMPR               DECIMAL(8, 0),              
+             CRMAL_CNTAT_EMPR               CHAR(6),                    
+             ICNTAT_EMPR                    CHAR(50),                   
+             CCARGO_CLI_PF                  DECIMAL(5, 0),              
+             CINDCD_MGRAC                   CHAR(1) NOT NULL,           
+             DINCL_REG                      DATE NOT NULL,              
+             CFUNC_BDSCO_ULT                DECIMAL(9, 0) NOT NULL,     
+             CTERM_ULT_ATULZ                CHAR(8) NOT NULL,           
+             HULT_ATULZ                     TIMESTAMP NOT NULL,         
+             CNATUZ_JURID                   DECIMAL(3, 0),              
+             CRGIME_TRIBT_PSSOA             DECIMAL(1, 0),              
+             DENCRR_ATVDD_EMPR              DATE,                       
+             CPAIS                          DECIMAL(3, 0),              
+             CAGPTO_ATVDD_ECONC             DECIMAL(9, 0),              
+             NLIN_TFONI                     DECIMAL(11, 0),             
+             IPSSOA_COPLT_DETLH             CHAR(150)                   
+           ) END-EXEC.                                                  
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE DB2PRD.BSICO_PJ                    *
+      ******************************************************************
+       01  CADUB003.                                                    
+      *    *************************************************************
+           10 CCLUB                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CPTCAO-ESPAC-TBELA   PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 IRZ-SCIAL            PIC X(70).                           
+      *    *************************************************************
+           10 IFANTS-EMPR-COPLT    PIC X(70).                           
+      *    *************************************************************
+           10 CCLASS-ATVDD-ECONC   PIC X(2).                            
+      *    *************************************************************
+           10 CRAMO-ATVDD-ECONC    PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CSRAMO-ATVDD-ECONC   PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CATVDD-ECONC         PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CISENC-CPF-CNPJ      PIC X(1).                            
+      *    *************************************************************
+           10 CCNPJ-INCPD          PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTRL-CNPJ-INCPD     PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CFLIAL-CNPJ-INCPD    PIC S9(4)V USAGE COMP-3.             
+      *    *************************************************************
+           10 IRZ-SCIAL-INCPD      PIC X(70).                           
+      *    *************************************************************
+           10 DINCPC               PIC X(10).                           
+      *    *************************************************************
+           10 CTPO-FONTE-INFO      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DMES-ANO-FATMT       PIC S9(6)V USAGE COMP-3.             
+      *    *************************************************************
+           10 VFATMT-LIQ-ANO       PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 CTPO-CAPTL-EMPR      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPAIS-CMBIO          PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCNSTT-EMPR-CREDT    PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPORTE-EMPR          PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DINIC-SEDE           PIC S9(6)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTPO-SEDE-RESID      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CID-TPO-PSSOA        PIC X(1).                            
+      *    *************************************************************
+           10 EHPAGE-PSSOA         PIC X(70).                           
+      *    *************************************************************
+           10 EEMAIL-PSSOA         PIC X(70).                           
+      *    *************************************************************
+           10 CEMAIL-INVLD         PIC X(1).                            
+      *    *************************************************************
+           10 CDDD-CNTAT-EMPR      PIC X(4).                            
+      *    *************************************************************
+           10 CFONE-CNTAT-EMPR     PIC S9(8)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CRMAL-CNTAT-EMPR     PIC X(6).                            
+      *    *************************************************************
+           10 ICNTAT-EMPR          PIC X(50).                           
+      *    *************************************************************
+           10 CCARGO-CLI-PF        PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-MGRAC         PIC X(1).                            
+      *    *************************************************************
+           10 DINCL-REG            PIC X(10).                           
+      *    *************************************************************
+           10 CFUNC-BDSCO-ULT      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTERM-ULT-ATULZ      PIC X(8).                            
+      *    *************************************************************
+           10 HULT-ATULZ           PIC X(26).                           
+      *    *************************************************************
+           10 CNATUZ-JURID         PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CRGIME-TRIBT-PSSOA   PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DENCRR-ATVDD-EMPR    PIC X(10).                           
+      *    *************************************************************
+           10 CPAIS                PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CAGPTO-ATVDD-ECONC   PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 NLIN-TFONI           PIC S9(11)V USAGE COMP-3.            
+      *    *************************************************************
+           10 IPSSOA-COPLT-DETLH   PIC X(150).                          
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 44      *
+      ******************************************************************

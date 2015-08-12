@@ -1,0 +1,35 @@
+ARQUIVO CADUV000 AG/CTA        21/11/2014        13:13:03        - 1 -
+
+      CCLUB        CPF FILIAL AGENCIA          CONTA ENDERECO                                                               NRO
+----------- ---------- ------ ------- -------------- ---------------------------------------------------------------------- -------
+  812340728      62311      0     140         232778 R SP 15 - DE 1 ATE 99998                                               S/N
+ 1153674189     100993      0     288         153907 EDUARDO STUDART                                                        00227
+   86816390      54409      0     331          27692 AV PADRE ANTONIO LUIZ DIAS                                             00575
+ 1367532067      37483      0     460          67242 CORONEL MANOEL BANDEIRA                                                00772
+   46183990     140776      0     466          56733 MANOEL DA NOBREGA                                                      136
+   31686583       5947      1     550          46900 AV AMADOR BUENO DA VEIGA                                               1066
+  906636566      98232      0     594          17190 RUA NOSSA SENHORA APARECIDA                                            00250
+  346401674      31111      0     598          10906 RUA DOIS                                                               S/N
+  139005897     132928      0     656          11458 R KEISUKE KOSA                                                         108
+   95027548      81381      0     790          14988 AV MATO GROSSO                                                         00297
+ 1387582850      90762      0     805         535585 RUA MARANHAO                                                           03570
+   13908588      64804      1     951           6157 R AUGUSTO DANIEL RAUPP                                                 82
+  105369241     104301      0     994          43895 AV FLEMING - DE 1 ATE 232                                              126
+ 1620312066      54583      0    1046         700313 RUA DAS PEREIRAS                                                       00455
+ 1377218713      94500      1    1062          19039 RUA FREDERICO LEDA                                                     0001733
+   25099728      56836      1    1278           7993 AV. BRASIL                                                             00015
+  117320536      19459      0    1342          12377 DOM PEDRO II                                                           00571
+  410808792      82358      0    1612          28475 R VICTOR MOISES KFOURI( LOTEAMENTO VILLAGIO VERDE MA                   125
+  913406422      35695      0    1823         500500 AV INTERLAGOS                                                          5851
+  812362098     131053      0    1923         515707 R JPC-24 Q9-A L9                                                       S/N
+  179634615     124592      0    2130          16752 VIA LACTEA(CJ M SOL)                                                   00317
+   25631861     127348      1    2221           8361 RUA ENCRUZILHADA DO SUL                                                00422
+ 1283502841      32984      0    2560         345491 CONSELHEIRO ROSA E SILVA                                               00707
+  349550875      70589      0    2659          48137 R JOSE PERINI(LOT VILLA AMELIA)                                        10
+ 1016107525      60743      0    2683           6605 JOSE LOURENCO MARQUES DA SILVA                                         00332
+  222242841      65397      0    2761              0 TV ZE DA ZILDA                                                         30
+ 1563864085      88722      0    3053         504538 R BARAO DE URUGUAIANA(PRQ LARANJEIRAS)                                 05
+  884301192      68585      0    3224          42797 GOVERNADOR SILVIO PEDROZA                                              00318
+  741618737      82000      0    3269          74395 LINHA SAO PEDRO                                                        00001
+   31363385      17332      1    3390           1104 ALAMEDA ARAGUAIA                                                       3842
+   39680568      68625      0    3514           4698 TANCREDO NEVES                                                         03343

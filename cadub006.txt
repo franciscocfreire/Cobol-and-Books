@@ -1,0 +1,130 @@
+      ******************************************************************
+      * DCLGEN TABLE(DB2PRD.CNTRL_FONE)                                *
+      *        LIBRARY(AD.DB2.DCLGEN(CADUB006))                        *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(CADUB006)                                     *
+      *        APOST                                                   *
+      *        LABEL(YES)                                              *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE DB2PRD.CNTRL_FONE TABLE                     
+           ( CCLUB                          DECIMAL(10, 0) NOT NULL,    
+             CEMPR                          DECIMAL(10, 0) NOT NULL,    
+             CSEQ_CNTRL_FONE                DECIMAL(3, 0) NOT NULL,     
+             CPTCAO_ESPAC_TBELA             DECIMAL(2, 0) NOT NULL,     
+             CTPO_FONE_CLI                  DECIMAL(3, 0) NOT NULL,     
+             CTPO_LIN_TFONI                 DECIMAL(3, 0) NOT NULL,     
+             CINDCD_FONE_INVLD              CHAR(1) NOT NULL,           
+             CFONE                          DECIMAL(8, 0),              
+             CID_RMAL_BIP_PAGER             CHAR(15),                   
+             ICNTAT_PSSOA                   CHAR(20),                   
+             CINDCD_MGRAC                   CHAR(1) NOT NULL,           
+             DINCL_REG                      DATE NOT NULL,              
+             CFUNC_BDSCO_ULT                DECIMAL(9, 0) NOT NULL,     
+             CTERM_ULT_ATULZ                CHAR(8) NOT NULL,           
+             HULT_ATULZ                     TIMESTAMP NOT NULL,         
+             CDDI                           CHAR(4),                    
+             CDDD                           CHAR(4),                    
+             CAUTRZ_ENVIO_SMS               CHAR(1),                    
+             CESPCE_ENDER                   DECIMAL(1, 0),              
+             CTPO_FONE                      DECIMAL(2, 0),              
+             CNVEL_CONFD_ENDER              DECIMAL(3, 0),              
+             CCOMPV_ENDER_PSSOA             DECIMAL(3, 0),              
+             DINIC_UTILZ_ENDER              DATE,                       
+             DFIM_UTILZ_ENDER               DATE,                       
+             IPSSOA_CNTAT_ENDER             CHAR(40),                   
+             CENDER_PDRAO_PSSOA             CHAR(1),                    
+             CUSO_ENDER_PSSOA               DECIMAL(3, 0),              
+             CUSUAR_INCL                    CHAR(9),                    
+             HINCL_REG                      TIMESTAMP,                  
+             CUSUAR_MANUT                   CHAR(9),                    
+             HMANUT_REG                     TIMESTAMP,                  
+             ICARGO_CNTAT                   CHAR(40),                   
+             CCLUB_ENDER_PSSOA              DECIMAL(10, 0),             
+             CEMPR_ENDER_PSSOA              DECIMAL(10, 0),             
+             CSEQ_ENDER_PSSOA               DECIMAL(5, 0),              
+             CCARGO_CLI_PF                  DECIMAL(5, 0),              
+             NLIN_TFONI                     DECIMAL(11, 0)              
+           ) END-EXEC.                                                  
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE DB2PRD.CNTRL_FONE                  *
+      ******************************************************************
+       01  CADUB006.                                                    
+      *    *************************************************************
+           10 CCLUB                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CEMPR                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CSEQ-CNTRL-FONE      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPTCAO-ESPAC-TBELA   PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTPO-FONE-CLI        PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTPO-LIN-TFONI       PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-FONE-INVLD    PIC X(1).                            
+      *    *************************************************************
+           10 CFONE                PIC S9(8)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CID-RMAL-BIP-PAGER   PIC X(15).                           
+      *    *************************************************************
+           10 ICNTAT-PSSOA         PIC X(20).                           
+      *    *************************************************************
+           10 CINDCD-MGRAC         PIC X(1).                            
+      *    *************************************************************
+           10 DINCL-REG            PIC X(10).                           
+      *    *************************************************************
+           10 CFUNC-BDSCO-ULT      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTERM-ULT-ATULZ      PIC X(8).                            
+      *    *************************************************************
+           10 HULT-ATULZ           PIC X(26).                           
+      *    *************************************************************
+           10 CDDI                 PIC X(4).                            
+      *    *************************************************************
+           10 CDDD                 PIC X(4).                            
+      *    *************************************************************
+           10 CAUTRZ-ENVIO-SMS     PIC X(1).                            
+      *    *************************************************************
+           10 CESPCE-ENDER         PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTPO-FONE            PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CNVEL-CONFD-ENDER    PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCOMPV-ENDER-PSSOA   PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DINIC-UTILZ-ENDER    PIC X(10).                           
+      *    *************************************************************
+           10 DFIM-UTILZ-ENDER     PIC X(10).                           
+      *    *************************************************************
+           10 IPSSOA-CNTAT-ENDER   PIC X(40).                           
+      *    *************************************************************
+           10 CENDER-PDRAO-PSSOA   PIC X(1).                            
+      *    *************************************************************
+           10 CUSO-ENDER-PSSOA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CUSUAR-INCL          PIC X(9).                            
+      *    *************************************************************
+           10 HINCL-REG            PIC X(26).                           
+      *    *************************************************************
+           10 CUSUAR-MANUT         PIC X(9).                            
+      *    *************************************************************
+           10 HMANUT-REG           PIC X(26).                           
+      *    *************************************************************
+           10 ICARGO-CNTAT         PIC X(40).                           
+      *    *************************************************************
+           10 CCLUB-ENDER-PSSOA    PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CEMPR-ENDER-PSSOA    PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CSEQ-ENDER-PSSOA     PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCARGO-CLI-PF        PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 NLIN-TFONI           PIC S9(11)V USAGE COMP-3.            
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 37      *
+      ******************************************************************

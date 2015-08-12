@@ -1,0 +1,31 @@
+1) CRIAR JOB ABAIXO A PEDIDO NA TABELA CLLP9020:                        
+                                                                        
+CONTROL-M                                                               
+---------                                                               
+SEM DEPENDENCIAS E RELEASES                                             
+                                                                        
+//CLLP9020 JOB 'CLLP,4120,PR32','B771551',MSGCLASS=Z,REGION=4M          
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN2440,                                           
+//       PARM=002                                                       
+//*                                                                     
+//* ***    GRAVA ARQUIVOS TRANSITO PARA A  ROTINA (RDAB).               
+//*                                                                     
+//ENT00001 DD DSN=AC.CLLP.PRV.CADUV000(0),                              
+//       DISP=OLD                                                       
+//SAI00001 DD DSN=TM.CLLP.RDAB.CADUV000.CORRECAO,                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,15),                                               
+//       SPACE=(TRK,(015000,1500),RLSE)                                 
+//ENT00002 DD DSN=AC.CLLP.CADUB069.CLAS(0),                             
+//       DISP=OLD                                                       
+//SAI00002 DD DSN=TM.CLLP.RDAB.CADUB069.CORRECAO,                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,15),                                               
+//       SPACE=(TRK,(015000,1500),RLSE)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

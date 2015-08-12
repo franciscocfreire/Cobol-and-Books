@@ -1,0 +1,36 @@
+//CLLP0161 JOB 'CLLP,4120,PR32','D81645',MSGCLASS=Z,REGION=4M,          
+//       SCHENV=DB2                                                     
+//JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//STEP1    EXEC PGM=RDAB0030                                            
+//*                                                                     
+//* ***    OBTEM RATING DO CLIENTE                                      
+//*                                                                     
+//ARQPARVV DD DSN=AD.BRQ.P006.CPFCNPJ.CLAS(0),                          
+//       DISP=SHR                                                       
+//PENDIRES DD DSN=AD.BRQ.P006.ARQIRES.IRESB018(0),                      
+//       DISP=OLD                                                       
+//ARQDAPES DD DSN=AD.BRQ.P006.RDAB0030.RATING(+1),                      
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(003480,0696),RLSE),                                
+//       DCB=(AD.A,LRECL=500,RECFM=FB)                                  
+//RELVAZIO DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELTOTAL DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0081,RECFM=FBA)                                     
+//RELNENCO DD SYSOUT=(W,,AM19),                                         
+//       DCB=(LRECL=0133,RECFM=FBA)                                     
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//SOLTA    EXEC AV,                                                     
+//       J=CLLP0162,                                                    
+//       DS=AD.BRQ.DESAFICA.EXEC                                        
+//*                                                                     

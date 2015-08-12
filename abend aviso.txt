@@ -1,0 +1,54 @@
+(1) - CLLPA715
+
+STEP1
+
+DE:
+//SYSIN    DD *                            
+ INREC FIELDS=(1,3,7,3,63,2)               
+
+
+PARA:
+
+//SYSIN    DD *                             
+ INREC FIELDS=(1,3,7,3,63,2)                
+ SORT FIELDS=(1,6,BI,A)                     
+ END                                        
+
+(2) - CLLPA720
+
+STEP 1
+DE:
+//SORTOUT  DD DSN=MX.CLLP.LPCLB037.CLLPA700(+1),    
+//       DISP=(,CATLG,DELETE),                      
+//       UNIT=DISCO,                                
+//       DCB=(MX.A)                                 
+
+
+PARA:
+
+//SORTOUT  DD DSN=MX.CLLP.LPCLB037.CLLPA700(+1),    
+//       DISP=(,CATLG,DELETE),                      
+//       UNIT=DISCO,                                
+//       DCB=(MX.A,LRECL=0043,RECFM=FB)
+
+
+STEP2 - INCLUIR DD ARQNSEL
+
+//ARQNSEL  DD DSN=MX.CLLP.ARQNSEL.CLLPA700(+1),    
+//       DISP=(,CATLG,DELETE),                     
+//       UNIT=DISCO,                               
+//       SPACE=(TRK,(000260,0052),RLSE),           
+//       DCB=(MX.A,LRECL=0043,RECFM=FB)            
+
+
+(3) -CLLPA740
+
+STEP6
+
+DE
+//STEP6    EXEC PGM=CLLPG116
+
+PARA
+
+//STEP6    EXEC PGM=CLLP7116     
+

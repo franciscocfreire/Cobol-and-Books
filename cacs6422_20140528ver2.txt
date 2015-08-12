@@ -1,0 +1,667 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  M Z 1 C  --  N O D E
+
+01.32.16 JOB40402 ---- WEDNESDAY, 28 MAY 2014 ----
+01.32.16 JOB40402  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+01.32.18 JOB40402  ICH70001I PRODSTR  LAST ACCESS AT 01:32:09 ON WEDNESDAY, MAY
+01.32.18 JOB40402  $HASP373 CACS6422 STARTED - WLM INIT  - SRVCLASS BATCH_S1 - S
+01.32.18 JOB40402  IEF403I CACS6422 - STARTED - TIME=01.32.18
+01.32.18 JOB40402  +AUTOOPERATOR OVERINICIO CACS6422 PR32
+01.32.20 JOB40421  $HASP100 PLAN0276 ON INTRDR                            FROM J
+01.32.20 JOB40421  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+01.32.20 JOB40402  -                                                --TIMINGS (M
+01.32.20 JOB40402  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+01.32.20 JOB40402  -CACS6422 STEPCTM  CTMRDOVE    00     20      7    .00    .00
+01.32.20 JOB40402  BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT
+01.32.20 JOB40402  BUFL002I   ARQEXTRC  MX.CACS.EXTRACT.SEMAGESE.PSSOAFIS.G0858V
+01.32.20 JOB40402  BUFL001I   BDRPTRAN  Bufno=050  Blksize=27720  Amode=31  UNIT
+01.32.20 JOB40402  BUFL002I   BDRPTRAN  MX.CACS.BDRPTRAN.PSSOAFIS.G0463V00
+01.32.20 JOB40402  BUFL001I   BDRPSCOR  Bufno=050  Blksize=27720  Amode=31  UNIT
+01.32.20 JOB40402  BUFL002I   BDRPSCOR  MX.CACS.BDRPSCOR.PSSOAFIS.G0001V00
+01.32.51 JOB40402  -CACS6422 STEP9                00   304K  22552    .00    .01
+01.32.51 JOB40402  BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT
+01.32.51 JOB40402  BUFL002I   ARQEXTRC  MX.CACS.EXTRACT.SEMAGESE.PSSOAJUR.G0858V
+01.32.51 JOB40402  BUFL001I   BDRPTRAN  Bufno=050  Blksize=27720  Amode=31  UNIT
+01.32.51 JOB40402  BUFL002I   BDRPTRAN  MX.CACS.BDRPTRAN.PSSOAJUR.G0463V00
+01.32.51 JOB40402  BUFL001I   BDRPSCOR  Bufno=050  Blksize=27720  Amode=31  UNIT
+01.32.51 JOB40402  BUFL002I   BDRPSCOR  MX.CACS.BDRPSCOR.PSSOAJUR.G0002V00
+01.32.55 JOB40402  -CACS6422 STEP10               00  31286   2910    .00    .00
+01.32.55 JOB40402  BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT
+01.32.55 JOB40402  BUFL002I   ARQEXTRC  MX.CACS.EXTRACT.SEMAGESE.CARTAO.G0858V00
+01.32.55 JOB40402  BUFL001I   BDRPTRAN  Bufno=050  Blksize=27720  Amode=31  UNIT
+01.32.55 JOB40402  BUFL002I   BDRPTRAN  MX.CACS.BDRPTRAN.CARTAO.G0001V00
+01.32.55 JOB40402  +*===========================================================
+01.32.55 JOB40402  +* RDAB7482 -           ERRO NA ABERTURA   DO ARQUIVO BDRPSCO
+01.32.55 JOB40402  +*===========================================================
+01.32.55 JOB40402  + RDAB7482 - PROGRAMA CANCELADO COM ABEND 3330
+01.32.55 JOB40402  IDI0100S Fault Analyzer not available, Fault Analyzer SVC not
+01.32.55 JOB40402  DMB676I DUMPMZ1A DumpMaster 7.300K DMBINTRH continuing with d
+01.32.55 JOB40402  DMB615I DUMPMZ1A 7.300K DMBINTRH Starting to take Dump No 911
+01.32.55 JOB40402  DMB170I SA.UPG2.DUMPM.MZ1.DUMPFILE.BATCH #9115 records the du
+01.32.57 JOB40402  DMB616I DUMPMZ1A 7.300K DMBINTRH Dump No 9115 completed
+01.32.58 JOB40402  $HASP375 CACS6422 ESTIMATED  LINES EXCEEDED
+01.32.59 JOB40402  IEA995I SYMPTOM DUMP OUTPUT  351
+   351               USER COMPLETION CODE=3330
+   351              TIME=01.32.55  SEQ=62236  CPU=0000  ASID=02B7
+   351              PSW AT TIME OF ERROR  078D1000   8007A7C6  ILC 2  INTC 0D
+   351                ACTIVE LOAD MODULE           ADDRESS=00079000  OFFSET=0000
+   351                NAME=POOL7102
+   351                DATA AT PSW  0007A7C0 - 00181610  0A0D0000  C9E2D9E3
+   351                AR/GR 0: 008FF890/80000000   1: 00000000/80000D02
+   351                      2: 00000000/00000D02   3: 00000000/2FB9EED8
+   351                      4: 00000000/0007AD2C   5: 00000000/00000000
+   351                      6: 00000000/000000B9   7: 00000000/00000000
+   351                      8: 00000000/80079358   9: 00000000/2FB9A100
+   351                      A: 00000000/0007B000   B: 00000000/0007A000
+   351                      C: 00000000/80079000   D: 00000000/00079034
+   351                      E: 00000000/8007A71E   F: 00000000/00000000
+   351              END OF SYMPTOM DUMP
+01.32.59 JOB40402  IEF450I CACS6422 STEP10A - ABEND=S000 U3330 REASON=00000000
+   352                     TIME=01.32.59
+01.32.59 JOB40402  -CACS6422 STEP10A           U3330   2626   4252    .01    .00
+01.32.59 JOB40402  -CACS6422 STEP11   SORT     FLUSH      0      0    .00    .00
+01.32.59 JOB40402  -CACS6422 STEP11A  SORT     FLUSH      0      0    .00    .00
+01.32.59 JOB40402  -CACS6422 STEP12            FLUSH      0      0    .00    .00
+01.32.59 JOB40402  -CACS6422 STEP13            FLUSH      0      0    .00    .00
+01.32.59 JOB40402  IEF404I CACS6422 - ENDED - TIME=01.32.59
+01.32.59 JOB40402  -CACS6422 ENDED.  NAME-E243998              TOTAL TCB CPU TIM
+01.32.59 JOB40402  $HASP395 CACS6422 ENDED
+------ JES2 JOB STATISTICS ------
+  28 MAY 2014 JOB EXECUTION DATE
+          246 CARDS READ
+      206,498 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+       22,629 SYSOUT SPOOL KBYTES
+         0.70 MINUTES EXECUTION TIME
+
+        1 //CACS6422 JOB 'CACS,4120,PR32','E243998',MSGCLASS=1,CLASS=C,REGION=7M
+          //       MSGLEVEL=(1,1)
+          //*---- SUBMITTED BY CONTROL-M (FROM OVERLIB)     ODATE=140527
+          //*---- SCHEDULE MX.CTMR.PUB.PR32.CARGAS.CTM93223.G0001V00(+1)
+          //*---- SCHEDULED DUE TO RBC:
+          //*---- JCL      MX.OVERFILE(CACS6422)
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=N85H9  RUN NO.=00003
+        2 //JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR
+        3 //         DD DSN=MJ.BIBGERAL,DISP=SHR
+        4 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        5 //STEPCTM  EXEC CTMRDOVE,
+          //       GR=PR32,
+          //       IND=MX
+        6 XXCTMRDOVE PROC GR=,IND=
+        7 XXCTMRDOVE EXEC PGM=PLAN2575,PARM='&GR'
+          IEFC653I SUBSTITUTION JCL - PGM=PLAN2575,PARM='PR32'
+        8 XXSTEPLIB  DD DSN=&IND..BIBGERAL,DISP=SHR
+          XX*
+          XX* ***    MONTA JOB DE DELECAO DE MEMBRO DA "OVERFILE"
+          XX*
+          IEFC653I SUBSTITUTION JCL - DSN=MX.BIBGERAL,DISP=SHR
+        9 XXSAIDA    DD SYSOUT=(A,INTRDR)
+       10 XXSYSOUT   DD SYSOUT=*
+       11 XXSYSUDUMP DD SYSOUT=Y
+          XX*
+          //*
+       12 //STEP9    EXEC PGM=RDAB7480,
+          //       COND=(0,NE)
+          //*
+          //* ***    (PESSOA FISICA)
+          //* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE
+          //* ***    ESTA ERRADA.
+          //* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)
+          //* ***    E O ARQUIVO EXTRACT ANTERIOR.
+          //*
+       13 //BDRPTRAN DD DSN=MX.CACS.BDRPTRAN.PSSOAFIS(00),
+          //       DISP=OLD
+       14 //ARQEXTRC DD DSN=MX.CACS.EXTRACT.SEMAGESE.PSSOAFIS(0),
+          //       DISP=SHR
+       15 //ARQSAIDA DD DSN=MX.CACS.INATIVA.SEMATU.PSSOAFIS(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,03),
+          //       SPACE=(TRK,(008720,1744),RLSE),
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)
+       16 //BDRPSCOR DD DSN=MX.CACS.BDRPSCOR.PSSOAFIS(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,07),
+          //       SPACE=(TRK,(020000,4000),RLSE),
+          //       DCB=(MX.A,LRECL=0396,RECFM=FB)
+       17 //SYSOUT   DD SYSOUT=*
+       18 //SYSUDUMP DD SYSOUT=Y
+          //*
+       19 //STEP10   EXEC PGM=RDAB7480,
+          //       COND=(0,NE)
+          //*
+
+          //* ***    (PESSOA JURIDICA)
+          //* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE
+          //* ***    ESTA ERRADA.
+          //* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)
+          //* ***    E O ARQUIVO EXTRACT ANTERIOR.
+          //*
+       20 //BDRPTRAN DD DSN=MX.CACS.BDRPTRAN.PSSOAJUR(00),
+          //       DISP=SHR
+       21 //ARQEXTRC DD DSN=MX.CACS.EXTRACT.SEMAGESE.PSSOAJUR(0),
+          //       DISP=SHR
+       22 //ARQSAIDA DD DSN=MX.CACS.INATIVA.SEMATU.PSSOAJUR(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,08),
+          //       SPACE=(TRK,(020000,4000),RLSE),
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)
+       23 //BDRPSCOR DD DSN=MX.CACS.BDRPSCOR.PSSOAJUR(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,07),
+          //       SPACE=(TRK,(020000,4000),RLSE),
+          //       DCB=(MX.A,LRECL=0396,RECFM=FB)
+       24 //SYSOUT   DD SYSOUT=*
+       25 //SYSUDUMP DD SYSOUT=Y
+          //*
+       26 //STEP10A  EXEC PGM=RDAB7482,
+          //       COND=(0,NE)
+          //*
+          //* ***    (PESSOA JURIDICA)
+          //* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE
+          //* ***    ESTA ERRADA.
+          //* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)
+          //* ***    E O ARQUIVO EXTRACT NOVO.
+          //*
+       27 //BDRPTRAN DD DSN=MX.CACS.BDRPTRAN.CARTAO(00),
+          //       DISP=OLD
+       28 //ARQEXTRC DD DSN=MX.CACS.EXTRACT.SEMAGESE.CARTAO(0),
+          //       DISP=SHR
+       29 //ARQSAIDA DD DSN=MX.CACS.INATIVA.SEMATU.CARTAO(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,08),
+          //       SPACE=(TRK,(020000,4000),RLSE),
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)
+       30 //SYSOUT   DD SYSOUT=*
+       31 //SYSUDUMP DD SYSOUT=Y
+          //*
+       32 //STEP11   EXEC SORTD
+       33 XXSORTD    PROC
+       34 XXSORT     EXEC  PGM=ICEMAN,REGION=0M
+       35 XXSYSOUT   DD  SYSOUT=*
+          //*
+          //* ***    CLASSIFICA ARQUIVO EXTRACT PARA O CACS
+          //* ***    POR: LOCATION / CONTA CACS
+          //*
+       36 //SORTIN   DD DSN=MX.CACS.EXTRACT.SEMATU.PSSOAFI1(00),
+          //       DISP=OLD
+       37 //         DD DSN=MX.CACS.EXTRACT.SEMATU.CARTAOAT(00),
+
+          //       DISP=OLD
+       38 //         DD DSN=MX.CACS.EXTRACT.SEMATU.FINASAAT(00),
+          //       DISP=OLD
+       39 //         DD DSN=MX.CACS.EXTRACT.SEMATU.PSSOAJU1(00),
+          //       DISP=OLD
+       40 //         DD DSN=*.STEP9.ARQSAIDA,
+          //       DISP=OLD
+       41 //         DD DSN=*.STEP10.ARQSAIDA,
+          //       DISP=OLD
+       42 //         DD DSN=*.STEP10A.ARQSAIDA,
+          //       DISP=OLD
+       43 //SORTOUT  DD DSN=MX.CACS.EXTRACT.SEMATU.GERAL.RECLAS(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,40),
+          //       SPACE=(TRK,(020000,4000),RLSE),
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB)
+       44 //SORTLIB  DD DSN=SYS1.SORTLIB,
+          //       DISP=SHR
+       45 //SORTWK01 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       46 //SORTWK02 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       47 //SORTWK03 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       48 //SORTWK04 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       49 //SORTWK05 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       50 //SORTWK06 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       51 //SORTWK07 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       52 //SORTWK08 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       53 //SORTWK09 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       54 //SORTWK10 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       55 //SORTWK11 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       56 //SORTWK12 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       57 //SORTWK13 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       58 //SORTWK14 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       59 //SORTWK15 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       60 //SORTWK16 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       61 //SORTWK17 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       62 //SORTWK18 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       63 //SYSIN    DD *
+
+          //*
+       64 //STEP11A  EXEC SORTD
+       65 XXSORTD    PROC
+       66 XXSORT     EXEC  PGM=ICEMAN,REGION=0M
+       67 XXSYSOUT   DD  SYSOUT=*
+          //*
+          //* ***    CLASSIFICA ARQUIVO EXTRACT PARA O CACS
+          //* ***    POR: LOCATION / CONTA CACS
+          //* ***    REMOVE DUPLICADOS
+          //*
+       68 //SORTIN   DD DSN=*.STEP11.SORT.SORTOUT,
+          //       DISP=SHR
+       69 //SORTOUT  DD DSN=MX.CACS.EXTRACT.SEMATU.GERAL.SEL(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,40),
+          //       SPACE=(TRK,(020000,4000),RLSE),
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB)
+       70 //SORTLIB  DD DSN=SYS1.SORTLIB,
+          //       DISP=SHR
+       71 //SORTWK01 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       72 //SORTWK02 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       73 //SORTWK03 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       74 //SORTWK04 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       75 //SORTWK05 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       76 //SORTWK06 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       77 //SORTWK07 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       78 //SORTWK08 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       79 //SORTWK09 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       80 //SORTWK10 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       81 //SORTWK11 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       82 //SORTWK12 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       83 //SORTWK13 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       84 //SORTWK14 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       85 //SORTWK15 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       86 //SORTWK16 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       87 //SORTWK17 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+       88 //SORTWK18 DD UNIT=DISCO,
+          //       SPACE=(CYL,(00500))
+
+       89 //SYSIN    DD *
+          //*
+       90 //STEP12   EXEC PGM=PLAN1010,
+          //       PARM='SIM'
+          //*
+          //* ***    COPIA ARQUIVO PARA A ROTINA BVCB
+          //*
+       91 //SYSUT1   DD DSN=*.STEP11A.SORT.SORTOUT,
+          //       DISP=OLD
+       92 //SYSUT2   DD DSN=MX.CACS.EXTRACT.SEMATU.COPIA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,40),
+          //       SPACE=(TRK,(040000,20000),RLSE),
+          //       DCB=(MX.A,LRECL=3400,RECFM=FB)
+       93 //PRINTER  DD SYSOUT=*
+       94 //SYSOUT   DD SYSOUT=*
+       95 //SYSUDUMP DD SYSOUT=Y
+          //*
+       96 //STEP13   EXEC PGM=PLAN1010,
+          //       PARM='SIM'
+          //*
+          //* ***    COPIA ARQUIVO PARA A ROTINA BVCB
+          //*
+       97 //SYSUT1   DD DSN=*.STEP12.SYSUT2,
+          //       DISP=OLD
+       98 //SYSUT2   DD DSN=MX.CACS.BVCB.EXTRACT.SEMATU.COPIA,
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,30),
+          //       SPACE=(TRK,(040000,20000),RLSE),
+          //       DCB=(LRECL=3400,RECFM=FB)
+       99 //PRINTER  DD SYSOUT=*
+      100 //SYSOUT   DD SYSOUT=*
+      101 //SYSUDUMP DD SYSOUT=Y
+          //*
+          //* ***    SISTEMA SIRJ - REPROCESSAMENTO DE JOB'S - MOTIVO:
+          //* ***    ABEND IN866126___________________________________________
+          //*
+      102 //
+
+ STMT NO. MESSAGE
+        5 IEFC001I PROCEDURE CTMRDOVE WAS EXPANDED USING SYSTEM LIBRARY MX.PROCL
+       32 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLI
+       64 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLI
+ICH70001I PRODSTR  LAST ACCESS AT 01:32:09 ON WEDNESDAY, MAY 28, 2014
+IEF236I ALLOC. FOR CACS6422 CTMRDOVE STEPCTM
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D0B7 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I JES2 ALLOCATED TO SAIDA
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CACS6422 CTMRDOVE STEPCTM - STEP WAS EXECUTED - COND CODE 0000
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13M1A.
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000103.?         SYSOUT
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000104.?         SYSOUT
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000105.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: CTMRDOVE       Cond Code: 0000         Start: 28-May-2014 01:32:18 AM
+Step  Num: 1              PGM  Name: PLAN2575     End:   28-May-2014 01:32:20 AM
+CPU (TCB): 00:00:00.01                            Storage below 16M:         36k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k
+Trans Act: 00:00:01.66                            Service Units:             245
+Tape Mnts: 0                                      Total EXCPs:                20
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+B1C9 D STEPLIB             4  23,476
+
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/CTMRDOVE/START 2014148.0132
+IEF032I STEP/CTMRDOVE/STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:    36K  SYS:   412K  EXT:        8K  SYS:     9644K
+IEF236I ALLOC. FOR CACS6422 STEP9
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D0B7 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME BDRPTRAN
+IGD103I SMS ALLOCATED TO DDNAME ARQEXTRC
+IGD101I SMS ALLOCATED TO DDNAME (ARQSAIDA)
+        DSN (MX.CACS.INATIVA.SEMATU.PSSOAFIS.G0464V00    )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM11HJ
+IGD101I SMS ALLOCATED TO DDNAME (BDRPSCOR)
+        DSN (MX.CACS.BDRPSCOR.PSSOAFIS.G0001V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM12XC
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT=DASD
+BUFL002I   ARQEXTRC  MX.CACS.EXTRACT.SEMAGESE.PSSOAFIS.G0858V00
+BUFL001I   BDRPTRAN  Bufno=050  Blksize=27720  Amode=31  UNIT=DASD
+BUFL002I   BDRPTRAN  MX.CACS.BDRPTRAN.PSSOAFIS.G0463V00
+BUFL001I   BDRPSCOR  Bufno=050  Blksize=27720  Amode=31  UNIT=DASD
+BUFL002I   BDRPSCOR  MX.CACS.BDRPSCOR.PSSOAFIS.G0001V00
+IEF142I CACS6422 STEP9 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13M1A.
+IGD104I MX.CACS.BDRPTRAN.PSSOAFIS.G0463V00           RETAINED,  DDNAME=BDRPTRAN
+IGD104I MX.CACS.EXTRACT.SEMAGESE.PSSOAFIS.G0858V00   RETAINED,  DDNAME=ARQEXTRC
+IGD103I SMS ALLOCATED TO DDNAME SYS00001
+IGD104I SYS14148.T013251.RA000.CACS6422.R0884507     RETAINED,  DDNAME=SYS00001
+IGD107I MX.CACS.INATIVA.SEMATU.PSSOAFIS.G0464V00     ROLLED IN, DDNAME=ARQSAIDA
+IGD107I MX.CACS.BDRPSCOR.PSSOAFIS.G0001V00           ROLLED IN, DDNAME=BDRPSCOR
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000106.?         SYSOUT
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000107.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP9          Cond Code: 0000         Start: 28-May-2014 01:32:20 AM
+Step  Num: 2              PGM  Name: RDAB7480     End:   28-May-2014 01:32:51 AM
+CPU (TCB): 00:00:00.45                            Storage below 16M:        476k
+CPU (SRB): 00:00:01.06                            Storage above 16M:      8,176k
+Trans Act: 00:00:31.34                            Service Units:         215,515
+Tape Mnts: 0                                      Total EXCPs:           304,754
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+B1C9 D JOBLIB             11  23,476        8AD4 D BDRPTRAN          146  27,720
+8892 D ARQEXTRC      260,000  27,200        BEB9 D ARQEXTRC       42,785  27,200
+D9B2 D ARQSAIDA        1,628  27,200        DEF4 D BDRPSCOR          145  27,720
+
+
+Total DASD EXCPs:            304,715        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP9   /START 2014148.0132
+IEF032I STEP/STEP9   /STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.45 SEC    SRB:     0 HR  00 MIN  01.06 SEC
+        VIRT:   476K  SYS:   524K  EXT:     8176K  SYS:     9748K
+IEF236I ALLOC. FOR CACS6422 STEP10
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D0B7 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME BDRPTRAN
+IGD103I SMS ALLOCATED TO DDNAME ARQEXTRC
+IGD101I SMS ALLOCATED TO DDNAME (ARQSAIDA)
+        DSN (MX.CACS.INATIVA.SEMATU.PSSOAJUR.G0463V00    )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM11DU
+IGD101I SMS ALLOCATED TO DDNAME (BDRPSCOR)
+        DSN (MX.CACS.BDRPSCOR.PSSOAJUR.G0002V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM15P3
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT=DASD
+BUFL002I   ARQEXTRC  MX.CACS.EXTRACT.SEMAGESE.PSSOAJUR.G0858V00
+BUFL001I   BDRPTRAN  Bufno=050  Blksize=27720  Amode=31  UNIT=DASD
+BUFL002I   BDRPTRAN  MX.CACS.BDRPTRAN.PSSOAJUR.G0463V00
+BUFL001I   BDRPSCOR  Bufno=050  Blksize=27720  Amode=31  UNIT=DASD
+BUFL002I   BDRPSCOR  MX.CACS.BDRPSCOR.PSSOAJUR.G0002V00
+IEF142I CACS6422 STEP10 - STEP WAS EXECUTED - COND CODE 0000
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13M1A.
+IGD104I MX.CACS.BDRPTRAN.PSSOAJUR.G0463V00           RETAINED,  DDNAME=BDRPTRAN
+IGD104I MX.CACS.EXTRACT.SEMAGESE.PSSOAJUR.G0858V00   RETAINED,  DDNAME=ARQEXTRC
+IGD103I SMS ALLOCATED TO DDNAME SYS00002
+IGD104I SYS14148.T013255.RA000.CACS6422.R0884519     RETAINED,  DDNAME=SYS00002
+IGD107I MX.CACS.INATIVA.SEMATU.PSSOAJUR.G0463V00     ROLLED IN, DDNAME=ARQSAIDA
+IGD103I SMS ALLOCATED TO DDNAME SYS00003
+IGD104I SYS14148.T013255.RA000.CACS6422.R0884520     RETAINED,  DDNAME=SYS00003
+IGD107I MX.CACS.BDRPSCOR.PSSOAJUR.G0002V00           ROLLED IN, DDNAME=BDRPSCOR
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000108.?         SYSOUT
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000109.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP10         Cond Code: 0000         Start: 28-May-2014 01:32:51 AM
+Step  Num: 3              PGM  Name: RDAB7480     End:   28-May-2014 01:32:55 AM
+CPU (TCB): 00:00:00.09                            Storage below 16M:        476k
+CPU (SRB): 00:00:00.10                            Storage above 16M:      8,176k
+Trans Act: 00:00:03.10                            Service Units:          23,471
+Tape Mnts: 0                                      Total EXCPs:            31,286
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+B1C9 D JOBLIB             11  23,476        35B8 D BDRPTRAN          563  27,720
+DE1B D ARQEXTRC       25,019  27,200        BF5C D ARQSAIDA        5,092  27,200
+1EAF D BDRPSCOR          562  27,720
+
+Total DASD EXCPs:             31,247        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP10  /START 2014148.0132
+IEF032I STEP/STEP10  /STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.09 SEC    SRB:     0 HR  00 MIN  00.10 SEC
+        VIRT:   476K  SYS:   524K  EXT:     8176K  SYS:     9776K
+IEF236I ALLOC. FOR CACS6422 STEP10A
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IGD103I SMS ALLOCATED TO DDNAME
+IEF237I D0B7 ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME BDRPTRAN
+IGD103I SMS ALLOCATED TO DDNAME ARQEXTRC
+IGD101I SMS ALLOCATED TO DDNAME (ARQSAIDA)
+        DSN (MX.CACS.INATIVA.SEMATU.CARTAO.G0001V00      )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SM14E1
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL001I   ARQEXTRC  Bufno=050  Blksize=27200  Amode=31  UNIT=DASD
+BUFL002I   ARQEXTRC  MX.CACS.EXTRACT.SEMAGESE.CARTAO.G0858V00
+BUFL001I   BDRPTRAN  Bufno=050  Blksize=27720  Amode=31  UNIT=DASD
+BUFL002I   BDRPTRAN  MX.CACS.BDRPTRAN.CARTAO.G0001V00
+IDI0100S Fault Analyzer not available, Fault Analyzer SVC not found.
+IEA995I SYMPTOM DUMP OUTPUT
+  USER COMPLETION CODE=3330
+ TIME=01.32.55  SEQ=62236  CPU=0000  ASID=02B7
+ PSW AT TIME OF ERROR  078D1000   8007A7C6  ILC 2  INTC 0D
+   ACTIVE LOAD MODULE           ADDRESS=00079000  OFFSET=000017C6
+   NAME=POOL7102
+   DATA AT PSW  0007A7C0 - 00181610  0A0D0000  C9E2D9E3
+   AR/GR 0: 008FF890/80000000   1: 00000000/80000D02
+         2: 00000000/00000D02   3: 00000000/2FB9EED8
+         4: 00000000/0007AD2C   5: 00000000/00000000
+         6: 00000000/000000B9   7: 00000000/00000000
+         8: 00000000/80079358   9: 00000000/2FB9A100
+         A: 00000000/0007B000   B: 00000000/0007A000
+         C: 00000000/80079000   D: 00000000/00079034
+         E: 00000000/8007A71E   F: 00000000/00000000
+ END OF SYMPTOM DUMP
+IEF472I CACS6422 STEP10A - COMPLETION CODE - SYSTEM=000 USER=3330 REASON=0000000
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13M1A.
+IGD104I MX.CACS.BDRPTRAN.CARTAO.G0001V00             RETAINED,  DDNAME=BDRPTRAN
+IGD104I MX.CACS.EXTRACT.SEMAGESE.CARTAO.G0858V00     RETAINED,  DDNAME=ARQEXTRC
+IGD105I MX.CACS.INATIVA.SEMATU.CARTAO.G0001V00       DELETED,   DDNAME=ARQSAIDA
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000110.?         SYSOUT
+IEF285I   PRODSTR.CACS6422.JOB40402.D0000111.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP10A        Cond Code: U3330        Start: 28-May-2014 01:32:55 AM
+Step  Num: 4              PGM  Name: RDAB7482     End:   28-May-2014 01:32:59 AM
+CPU (TCB): 00:00:00.82                            Storage below 16M:        760k
+CPU (SRB): 00:00:00.05                            Storage above 16M:      7,500k
+Trans Act: 00:00:04.69                            Service Units:          37,332
+Tape Mnts: 0                                      Total EXCPs:             2,626
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+B1C9 D JOBLIB             18  23,476        DB09 D BDRPTRAN           49  27,720
+345F D ARQEXTRC           49  27,200
+
+Total DASD EXCPs:                116        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP10A /START 2014148.0132
+IEF032I STEP/STEP10A /STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.82 SEC    SRB:     0 HR  00 MIN  00.05 SEC
+        VIRT:   760K  SYS:   524K  EXT:     7500K  SYS:     9980K
+IEF272I CACS6422 SORT STEP11 - STEP WAS NOT EXECUTED.
+IEF373I STEP/SORT    /START 2014148.0132
+IEF032I STEP/SORT    /STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+IEF272I CACS6422 SORT STEP11A - STEP WAS NOT EXECUTED.
+IEF373I STEP/SORT    /START 2014148.0132
+IEF032I STEP/SORT    /STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+IEF272I CACS6422 STEP12 - STEP WAS NOT EXECUTED.
+IEF373I STEP/STEP12  /START 2014148.0132
+IEF032I STEP/STEP12  /STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+IEF272I CACS6422 STEP13 - STEP WAS NOT EXECUTED.
+IEF373I STEP/STEP13  /START 2014148.0132
+IEF032I STEP/STEP13  /STOP  2014148.0132
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IGD104I MJ.BIBGERAL                                  RETAINED,  DDNAME=
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13M1A.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CACS6422       System ID: MZ1A        Submit: 28-May-2014 01:32:14 AM
+Job JESID: JOB40402       MVS level: SP7.1.3     Start:  28-May-2014 01:32:18 AM
+Job Class: C                                     End:    28-May-2014 01:32:59 AM
+CPU (TCB): 00:00:01.37                           Storage below 16M:         760k
+CPU (SRB): 00:00:01.21                           Storage above 16M:       8,176k
+Trans Act: 00:00:40.79                           Service Units:          276,563
+Tape Mnts: 0                                     Total EXCPs:            338,686
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: E243998
+Acct Info: CACS,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CACS6422/START 2014148.0132
+IEF033I  JOB/CACS6422/STOP  2014148.0132
+        CPU:     0 HR  00 MIN  01.37 SEC    SRB:     0 HR  00 MIN  01.21 SEC
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** INATIVAR CONTAS QUE APRESENTEM O ERRO 260 NO BDRPTRAN            **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7480 | CACS6422  |  28/05/2014 01:32:20  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |         2.422.276 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |            10.090 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |            13.021 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |         2.422.276 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |            10.090 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+
+**********************************************************************
+**                   ESTATISTICAS DE PROCESSAMENTO                  **
+**------------------------------------------------------------------**
+** INATIVAR CONTAS QUE APRESENTEM O ERRO 260 NO BDRPTRAN            **
+**------------------------------------------------------------------**
+** PROGRAMA | JOBNAME   | DATA DE PROCESSAMENTO | DATA DE MOVIMENTO **
+** -------- | --------  | --------------------- | ----------------- **
+** RDAB7480 | CACS6422  |  28/05/2014 01:32:51  |     28/05/2014    **
+**------------------------------------------------------------------**
+**  DDNAME  | I/O | DESCRICAO DO ARQUIVO        |     QUANTIDADE    **
+** -------- | --- | --------------------------- | ----------------- **
+** ARQEXTRC |  I  | ARQ EXTRACT DO DIA ANTERIOR |           200.147 **
+** BDRPTRAN |  I  | ARQ TRANSITO ERRROS DO CACS |            39.325 **
+** ARQSAIDA |  O  | ARQ EXTRACT ZERADO          |            40.735 **
+**          |  -  | REGS EXTRACT CONTA INATIVA  |                 0 **
+**          |  -  | REGS EXTRACT S/ CORRESPOND. |           200.147 **
+** BDRPSCOR |  O  | ARQ TRANSITO S/ CORRESPOND. |            39.325 **
+**------------------------------------------------------------------**
+**  MODULO  |   BOOK   | DESCRICAO                                  **
+** -------- | -------- | ------------------------------------------ **
+** POOL7100 | POOL710C | TRATAR ERROS                               **
+** POOL7600 |          | OBTER DATA E HORA DO SISTEMA               **
+** BRAD0160 |          | OBTER O NOME DO JOB EXECUTADO              **
+**********************************************************************
+
+************** RDAB7482 *************
+*   ERRO NA ABERTURA   DO ARQUIVO   *
+*             BDRPSCOR              *
+*         FILE STATUS =  96         *
+*         PROGRAMA CANCELADO        *
+************** RDAB7482 *************

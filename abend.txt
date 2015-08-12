@@ -1,0 +1,753 @@
+                         ----INICIO DO RELATORIO ---                                                     ----INICIO DO RELATORIO -
+                                                                                                                                  
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 1 B  --  N O D E  A L N J E 0 1                                   
+                                                                                                                                  
+08.41.00 JOB89518 ---- FRIDAY,    25 JUL 2014 ----                                                                                
+08.41.00 JOB89518  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.                                                              
+08.41.01 JOB89518  ICH70001I PRODSTR  LAST ACCESS AT 08:41:01 ON FRIDAY, JULY 25, 2014                                            
+08.41.01 JOB89518  $HASP373 CLLP0140 STARTED - WLM INIT  - SRVCLASS BATCH_01 - SYS AL1A                                           
+08.41.01 JOB89518  IEF403I CLLP0140 - STARTED - TIME=08.41.01                                                                     
+08.41.01 JOB89518  +AUTOOPERATOR OVERINICIO CLLP0140 PR32                                                                         
+08.41.01 JOB89527  $HASP100 PLAN0276 ON INTRDR                            FROM JOB89518 CLLP0140                                  
+08.41.01 JOB89527  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.                                                              
+08.41.01 JOB89518  -                                                --TIMINGS (MINS.)--                   ----PAGING COUNTS---    
+08.41.01 JOB89518  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  SRVCLASS  PAGE  SWAP   VIO SWAPS  
+08.41.01 JOB89518  -CLLP0140 STEPCTM  CTMRDOVE    00     20      5    .00    .00     .0    219  BATCH_01     0     0     0     0  
+08.44.00 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12X0, 10             
+08.44.00 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.44.45 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11L0, 4              
+08.44.45 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.47.01 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA1283, 7              
+08.47.01 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.47.47 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12F7, 5              
+08.47.47 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.48.34 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12GA, 5              
+08.48.34 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.50.09 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12V3, 6              
+08.50.09 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.50.53 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA1121, 4              
+08.50.53 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.53.56 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA13A5, 10             
+08.53.56 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.54.44 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12KE, 2              
+08.54.44 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+08.57.03 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11H8, 8              
+08.57.03 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.01.00 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12FC, 9              
+09.01.00 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.03.28 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA1103, 5              
+09.03.28 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.06.28 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12D1, 10             
+09.06.28 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.08.53 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA1264, 8              
+09.08.53 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.11.21 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12SB, 8              
+09.11.21 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.12.58 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11Y5, 3              
+09.12.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.13.46 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA1258, 4              
+09.13.46 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.16.05 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA1141, 8              
+09.16.05 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.17.34 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11MA, 3              
+09.17.34 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.19.05 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11BB, 6              
+09.19.05 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.20.33 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12C2, 6              
+09.20.33 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.22.02 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11K4, 6              
+09.22.02 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.24.18 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11Y0, 7              
+09.24.18 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.28.12 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA11G4, 10             
+09.28.12 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.28.59 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA12GE, 4              
+09.28.59 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.08 JOB89518  SVM4000I CLLP0140, STEP1A, SAI, ATTEMPTING SPACSECR FOR AC.CLLP.CADUB018.CLAS.G0001V00, SA1100, 9              
+09.32.08 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  +* POOL0003 * TOTAL DE REGISTROS DO ARQUIVO =     576.328.510                                                  
+09.32.58 JOB89518  -CLLP0140 STEP1A               00 14693K  1470K   4.21    .80   51.9 24816K  BATCH_01     0     0     0     0  
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK02, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568851,     
+                            SA1W37, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK02, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568851,     
+                            SA1W37, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK02,CDFF,SA1W37,E60024DE,  328                                      
+   328             SYS14206.T093258.RA000.CLLP0140.R0568851                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK06, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568856,     
+                            SA1WA4, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK06, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568856,     
+                            SA1WA4, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK06,6ABE,SA1WA4,E60024DE,  335                                      
+   335             SYS14206.T093258.RA000.CLLP0140.R0568856                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK05, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568855,     
+                            SA1WK0, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK05, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568855,     
+                            SA1WK0, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK05,63FC,SA1WK0,E60024DE,  341                                      
+   341             SYS14206.T093258.RA000.CLLP0140.R0568855                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK01, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568850,     
+                            SA1WK1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK01, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568850,     
+                            SA1WK1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK01,63FD,SA1WK1,E60024DE,  347                                      
+   347             SYS14206.T093258.RA000.CLLP0140.R0568850                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK03, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568852,     
+                            SA1WK9, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK03, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568852,     
+                            SA1WK9, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK03,64FD,SA1WK9,E60024DE,  353                                      
+   353             SYS14206.T093258.RA000.CLLP0140.R0568852                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK04, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568854,     
+                            SA1WL1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK04, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568854,     
+                            SA1WL1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK04,65FD,SA1WL1,E60024DE,  359                                      
+   359             SYS14206.T093258.RA000.CLLP0140.R0568854                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK02, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568851,     
+                            SA1W37, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK02, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568851,     
+                            SA1W37, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK02,CDFF,SA1W37,E60024DE,  365                                      
+   365             SYS14206.T093258.RA000.CLLP0140.R0568851                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK06, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568856,     
+                            SA1WA4, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK06, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568856,     
+                            SA1WA4, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK06,6ABE,SA1WA4,E60024DE,  371                                      
+   371             SYS14206.T093258.RA000.CLLP0140.R0568856                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK05, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568855,     
+                            SA1WK0, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK05, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568855,     
+                            SA1WK0, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK05,63FC,SA1WK0,E60024DE,  378                                      
+   378             SYS14206.T093258.RA000.CLLP0140.R0568855                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK01, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568850,     
+                            SA1WK1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK01, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568850,     
+                            SA1WK1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK01,63FD,SA1WK1,E60024DE,  386                                      
+   386             SYS14206.T093258.RA000.CLLP0140.R0568850                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK03, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568852,     
+                            SA1WK9, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK03, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568852,     
+                            SA1WK9, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK03,64FD,SA1WK9,E60024DE,  392                                      
+   392             SYS14206.T093258.RA000.CLLP0140.R0568852                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK04, ATTEMPTING SPACSECR FOR SYS14206.T093258.RA000.CLLP0140.R0568854,     
+                            SA1WL1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  SVM4000I CLLP0140, STEP2.SORT, SORTWK04, ATTEMPTING SPACVOLA FOR SYS14206.T093258.RA000.CLLP0140.R0568854,     
+                            SA1WL1, 1                                                                                             
+09.32.58 JOB89518  SVM4001I RECOVERY ATTEMPT FAILED TO PASS FLST/RLST CRITERIA                                                    
+09.32.58 JOB89518  IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK04,65FD,SA1WL1,E60024DE,  398                                      
+   398             SYS14206.T093258.RA000.CLLP0140.R0568854                                                                       
+09.32.58 JOB89518  +ICE097I 2 CLLP0140.STEP2    SORT RECOVERING FROM B37 ABEND ON SORTWK DATA SET                                 
+09.32.58 JOB89518  IGD17272I VOLUME SELECTION HAS FAILED FOR INSUFFICIENT SPACE FOR  400                                          
+   400             DATA SET SYS14206.T093258.RA000.CLLP0140.R0568859                                                              
+   400             JOBNAME (CLLP0140) STEPNAME (SORT    )                                                                         
+   400             PROGNAME (ICEMAN  ) DDNAME (SORTWK02)                                                                          
+   400             REQUESTED SPACE QUANTITY = 57380809 KB                                                                         
+   400             STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                    
+   400             STORGRPS (WORK PRRESERV  )                                                                                     
+09.32.58 JOB89518  IGD17272I VOLUME SELECTION HAS FAILED FOR INSUFFICIENT SPACE FOR  401                                          
+   401             DATA SET SYS14206.T093258.RA000.CLLP0140.R0568860                                                              
+   401             JOBNAME (CLLP0140) STEPNAME (SORT    )                                                                         
+   401             PROGNAME (ICEMAN  ) DDNAME (SORTWK06)                                                                          
+   401             REQUESTED SPACE QUANTITY = 57380809 KB                                                                         
+   401             STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                    
+   401             STORGRPS (WORK PRRESERV  )                                                                                     
+09.32.58 JOB89518  IGD17272I VOLUME SELECTION HAS FAILED FOR INSUFFICIENT SPACE FOR  402                                          
+   402             DATA SET SYS14206.T093258.RA000.CLLP0140.R0568861                                                              
+   402             JOBNAME (CLLP0140) STEPNAME (SORT    )                                                                         
+   402             PROGNAME (ICEMAN  ) DDNAME (SORTWK05)                                                                          
+   402             REQUESTED SPACE QUANTITY = 57380809 KB                                                                         
+   402             STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                    
+   402             STORGRPS (WORK PRRESERV  )                                                                                     
+09.32.58 JOB89518  IGD17272I VOLUME SELECTION HAS FAILED FOR INSUFFICIENT SPACE FOR  403                                          
+   403             DATA SET SYS14206.T093258.RA000.CLLP0140.R0568862                                                              
+   403             JOBNAME (CLLP0140) STEPNAME (SORT    )                                                                         
+   403             PROGNAME (ICEMAN  ) DDNAME (SORTWK01)                                                                          
+   403             REQUESTED SPACE QUANTITY = 57380809 KB                                                                         
+   403             STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                    
+   403             STORGRPS (WORK PRRESERV  )                                                                                     
+09.32.58 JOB89518  IGD17272I VOLUME SELECTION HAS FAILED FOR INSUFFICIENT SPACE FOR  406                                          
+   406             DATA SET SYS14206.T093258.RA000.CLLP0140.R0568863                                                              
+   406             JOBNAME (CLLP0140) STEPNAME (SORT    )                                                                         
+   406             PROGNAME (ICEMAN  ) DDNAME (SORTWK03)                                                                          
+   406             REQUESTED SPACE QUANTITY = 57380809 KB                                                                         
+   406             STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                    
+   406             STORGRPS (WORK PRRESERV  )                                                                                     
+09.32.58 JOB89518  IGD17272I VOLUME SELECTION HAS FAILED FOR INSUFFICIENT SPACE FOR  408                                          
+   408             DATA SET SYS14206.T093258.RA000.CLLP0140.R0568864                                                              
+   408             JOBNAME (CLLP0140) STEPNAME (SORT    )                                                                         
+   408             PROGNAME (ICEMAN  ) DDNAME (SORTWK04)                                                                          
+   408             REQUESTED SPACE QUANTITY = 57380809 KB                                                                         
+   408             STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                    
+   408             STORGRPS (WORK PRRESERV  )                                                                                     
+09.32.59 JOB89518  IEA995I SYMPTOM DUMP OUTPUT  409                                                                               
+   409               USER COMPLETION CODE=0083                                                                                    
+   409              TIME=09.32.59  SEQ=15303  CPU=0000  ASID=0566                                                                 
+   409              PSW AT TIME OF ERROR  078D1000   00D11868  ILC 2  INTC 0D                                                     
+   409                ACTIVE LOAD MODULE           ADDRESS=00D01000  OFFSET=00010868                                              
+   409                NAME=ICEMAN                                                                                                 
+   409                DATA AT PSW  00D11862 - 41A0C778  0A0D9602  D3CD9180                                                        
+   409                GR 0: 00000000   1: 80000053                                                                                
+   409                   2: 00000053   3: 00D11812                                                                                
+   409                   4: 00000000   5: 0000001A                                                                                
+   409                   6: 000088CC   7: 40D14D94                                                                                
+   409                   8: 00D12100   9: 40D15114                                                                                
+   409                   A: 00D11878   B: 00D10100                                                                                
+   409                   C: 00D11100   D: 00007000                                                                                
+   409                   E: 00D11810   F: 00000010                                                                                
+   409              END OF SYMPTOM DUMP                                                                                           
+09.32.59 JOB89518  IEF450I CLLP0140 SORT STEP2 - ABEND=S000 U0083 REASON=00000000  410                                            
+   410                     TIME=09.32.59                                                                                          
+09.32.59 JOB89518  -CLLP0140 STEP2    SORT     U0083    284     71    .00    .00     .0  17768  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  -CLLP0140 STEP3             FLUSH      0      0    .00    .00     .0      0  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  -CLLP0140 STEP3A            FLUSH      0      0    .00    .00     .0      0  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  -CLLP0140 STEP4    SORT     FLUSH      0      0    .00    .00     .0      0  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  -CLLP0140 STEP5             FLUSH      0      0    .00    .00     .0      0  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  -CLLP0140 STEP5A            FLUSH      0      0    .00    .00     .0      0  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  -CLLP0140 STEP6    SORT     FLUSH      0      0    .00    .00     .0      0  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  -CLLP0140 STEP7             FLUSH      0      0    .00    .00     .0      0  BATCH_01     0     0     0     0  
+09.32.59 JOB89518  IEF404I CLLP0140 - ENDED - TIME=09.32.59                                                                       
+09.32.59 JOB89518  -CLLP0140 ENDED.  NAME-F914349              TOTAL TCB CPU TIME=  4.21  TOTAL ELAPSED TIME=  51.9               
+09.32.59 JOB89518  $HASP395 CLLP0140 ENDED                                                                                        
+------ JES2 JOB STATISTICS ------                                                                                                 
+  25 JUL 2014 JOB EXECUTION DATE                                                                                                  
+          172 CARDS READ                                                                                                          
+          745 SYSOUT PRINT RECORDS                                                                                                
+            0 SYSOUT PUNCH RECORDS                                                                                                
+           55 SYSOUT SPOOL KBYTES                                                                                                 
+        51.97 MINUTES EXECUTION TIME                                                                                              
+                                                                                                                                  
+        1 //CLLP0140 JOB 'CLLP,4120,PR32','F914349',MSGCLASS=1,REGION=8M,         JOB89518                                        
+          //       MSGLEVEL=(1,1)                                                                                                 
+          //*---- SUBMITTED BY CONTROL-M (FROM OVERLIB)     ODATE=140725                                                          
+          //*---- SCHEDULE AC.CTMR.PUB.PR32.CARGAS.CTM93207.G0001V00(+1)                                                          
+          //*---- SCHEDULED DUE TO RBC:                                                                                           
+          //*---- JCL      AC.OVERFILE(CLLP0140)                                                                                  
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=LNUOT  RUN NO.=00003                                                    
+        2 //JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  00000020                                        
+        3 //         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             00000030                                        
+        4 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             00000040                                        
+          //*                                                                     00000050                                        
+          //* ***    GERACAO DO ARQUIVO CADUV000                                  00000060                                        
+          //*                                                                     00000070                                        
+        5 //STEPCTM  EXEC CTMRDOVE,                                               00000080                                        
+          //       GR=PR32,                                                       00000090                                        
+          //       IND=AC                                                         00000100                                        
+        6 XXCTMRDOVE PROC GR=,IND=                                                                                                
+        7 XXCTMRDOVE EXEC PGM=PLAN2575,PARM='&GR'                                                                                 
+          IEFC653I SUBSTITUTION JCL - PGM=PLAN2575,PARM='PR32'                                                                    
+        8 XXSTEPLIB  DD DSN=&IND..BIBGERAL,DISP=SHR                                                                               
+          XX*                                                                                                                     
+          XX* ***    MONTA JOB DE DELECAO DE MEMBRO DA "OVERFILE"                                                                 
+          XX*                                                                                                                     
+          IEFC653I SUBSTITUTION JCL - DSN=AC.BIBGERAL,DISP=SHR                                                                    
+        9 XXSAIDA    DD SYSOUT=(A,INTRDR)                                                                                         
+       10 XXSYSOUT   DD SYSOUT=*                                                                                                  
+       11 XXSYSUDUMP DD SYSOUT=Y                                                                                                  
+          XX*                                                                                                                     
+          //*                                                                     00000110                                        
+       12 //STEP1A   EXEC PGM=POOL0003                                            00000120                                        
+          //*                                                                     00000130                                        
+          //* ***    DESCOMPRIMIR ARQUIVO                                         00000140                                        
+          //*                                                                     00000150                                        
+       13 //ENTRA    DD DSN=AC.PSDC.PRV.CADUB018(0),                              00000160                                        
+          //       DISP=SHR                                                       00000170                                        
+       14 //SAI      DD DSN=AC.CLLP.CADUB018.CLAS(+1),                            00000180                                        
+          //       DISP=(,CATLG,DELETE),                                          00000190                                        
+          //       UNIT=DISCO,                                                    00000200                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00000210                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00000220                                        
+          //       DATACLAS=PRODX37                                               00000230                                        
+       15 //SYSOUT   DD SYSOUT=*                                                  00000240                                        
+       16 //SYSUDUMP DD SYSOUT=Y                                                  00000250                                        
+          //*                                                                     00000260                                        
+       17 //STEP2    EXEC SORTD                                                   00000270                                        
+       18 XXSORTD    PROC                                                                                                         
+       19 XXSORT     EXEC  PGM=ICEMAN,REGION=0M                                                                                   
+       20 XXSYSOUT   DD  SYSOUT=*                                                                                                 
+          //*                                                                     00000280                                        
+          //* ***    CLASSIFICA ARQUIVO DE ENDERECO POR CPF + CLUB + CATEGORIA    00000290                                        
+          //*                                                                     00000300                                        
+       21 //SORTIN   DD DSN=*.STEP1A.SAI,                                         00000310                                        
+          //       DISP=SHR                                                       00000320                                        
+       22 //SORTOUT  DD DSN=AC.CLLP.CADUB018.CLAS(+2),                            00000330                                        
+          //       DISP=(,CATLG,DELETE),                                          00000340                                        
+                                                                                                                                  
+          //       UNIT=DISCO,                                                    00000350                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00000360                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00000370                                        
+          //       DATACLAS=PRODX37                                               00000380                                        
+       23 //SYSIN    DD *                                                         00000390                                        
+          //*                                                                     00000430                                        
+       24 //STEP3    EXEC PGM=RDAB0850                                            00000440                                        
+          //*                                                                     00000450                                        
+          //* ***    ATUALIZA O ARQUIVO COM DADOS DE ENDERECO                     00000460                                        
+          //* ***                                                                 00000470                                        
+          //*                                                                     00000480                                        
+       25 //CADUB0A4 DD DSN=AC.CLLP.CADUB0A4.CLAS(00),                            00000490                                        
+          //       DISP=SHR                                                       00000500                                        
+       26 //CADUB018 DD DSN=*.STEP2.SORT.SORTOUT,                                 00000510                                        
+          //       DISP=SHR                                                       00000520                                        
+       27 //ARQSAIDA DD DSN=AC.CLLP.V000END(+1),                                  00000530                                        
+          //       DISP=(,CATLG,DELETE),                                          00000540                                        
+          //       UNIT=DISCO,                                                    00000550                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00000560                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00000570                                        
+          //       DATACLAS=PRODX37                                               00000580                                        
+       28 //SYSOUT   DD SYSOUT=*                                                  00000590                                        
+       29 //SYSPRINT DD SYSOUT=*                                                  00000600                                        
+       30 //SYSUDUMP DD SYSOUT=Y                                                  00000610                                        
+          //*                                                                     00000620                                        
+       31 //STEP3A   EXEC PGM=POOL0003                                            00000630                                        
+          //*                                                                     00000640                                        
+          //* ***    DESCOMPRIMIR ARQUIVO                                         00000650                                        
+          //*                                                                     00000660                                        
+       32 //ENTRA    DD DSN=AC.PSDC.PRV.CADUB006(0),                              00000670                                        
+          //       DISP=SHR                                                       00000680                                        
+       33 //SAI      DD DSN=AC.CLLP.CADUB006.DESC(+1),                            00000690                                        
+          //       DISP=(,CATLG,DELETE),                                          00000700                                        
+          //       UNIT=DISCO,                                                    00000710                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00000720                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00000730                                        
+          //       DATACLAS=PRODX37                                               00000740                                        
+       34 //SYSOUT   DD SYSOUT=*                                                  00000750                                        
+       35 //SYSUDUMP DD SYSOUT=Y                                                  00000760                                        
+          //*                                                                     00000770                                        
+       36 //STEP4    EXEC SORTD                                                   00000780                                        
+       37 XXSORTD    PROC                                                                                                         
+       38 XXSORT     EXEC  PGM=ICEMAN,REGION=0M                                                                                   
+       39 XXSYSOUT   DD  SYSOUT=*                                                                                                 
+          //*                                                                     00000790                                        
+          //* ***    CLASSIFICA ARQUIVO DE TELEFONES POR CPF + CLUB               00000800                                        
+          //*                                                                     00000810                                        
+       40 //SORTIN   DD DSN=*.STEP3A.SAI,                                         00000820                                        
+          //       DISP=SHR                                                       00000830                                        
+       41 //SORTOUT  DD DSN=AC.CLLP.CADUB006.CLAS(+1),                            00000840                                        
+          //       DISP=(,CATLG,DELETE),                                          00000850                                        
+          //       UNIT=DISCO,                                                    00000860                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00000870                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00000880                                        
+          //       DATACLAS=PRODX37                                               00000890                                        
+                                                                                                                                  
+       42 //SYSIN    DD *                                                         00000900                                        
+          //*                                                                     00000930                                        
+       43 //STEP5    EXEC PGM=RDAB0855                                            00000940                                        
+          //*                                                                     00000950                                        
+          //* ***    ATUALIZA O ARQUIVO COM DADOS DE TELEFONE                     00000960                                        
+          //* ***                                                                 00000970                                        
+          //*                                                                     00000980                                        
+       44 //CADUV000 DD DSN=*.STEP3.ARQSAIDA,                                     00000990                                        
+          //       DISP=SHR                                                       00001000                                        
+       45 //CADUB006 DD DSN=*.STEP4.SORT.SORTOUT,                                 00001010                                        
+          //       DISP=SHR                                                       00001020                                        
+       46 //ARQSAIDA DD DSN=AC.CLLP.TELEV000(+1),                                 00001030                                        
+          //       DISP=(,CATLG,DELETE),                                          00001040                                        
+          //       UNIT=DISCO,                                                    00001050                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00001060                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00001070                                        
+          //       DATACLAS=PRODX37                                               00001080                                        
+       47 //SYSOUT   DD SYSOUT=*                                                  00001090                                        
+       48 //SYSPRINT DD SYSOUT=*                                                  00001100                                        
+       49 //SYSUDUMP DD SYSOUT=Y                                                  00001110                                        
+          //*                                                                     00001120                                        
+       50 //STEP5A   EXEC PGM=POOL0003                                            00001130                                        
+          //*                                                                     00001140                                        
+          //* ***    DESCOMPRIMIR ARQUIVO                                         00001150                                        
+          //*                                                                     00001160                                        
+       51 //ENTRA    DD DSN=AC.PSDC.PRV.CADUB0M1(0),                              00001170                                        
+          //       DISP=SHR                                                       00001180                                        
+       52 //SAI      DD DSN=AC.CLLP.CADUB0M1.DESC(+1),                            00001190                                        
+          //       DISP=(,CATLG,DELETE),                                          00001200                                        
+          //       UNIT=DISCO,                                                    00001210                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00001220                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00001230                                        
+          //       DATACLAS=PRODX37                                               00001240                                        
+       53 //SYSOUT   DD SYSOUT=*                                                  00001250                                        
+       54 //SYSUDUMP DD SYSOUT=Y                                                  00001260                                        
+          //*                                                                     00001270                                        
+       55 //STEP6    EXEC SORTD                                                   00001280                                        
+       56 XXSORTD    PROC                                                                                                         
+       57 XXSORT     EXEC  PGM=ICEMAN,REGION=0M                                                                                   
+       58 XXSYSOUT   DD  SYSOUT=*                                                                                                 
+          //*                                                                     00001290                                        
+          //* ***    COMPLEMENTA O ARQUIVO CADUV000 COM DATA DE ATUALIZACAO       00001300                                        
+          //*                                                                     00001310                                        
+       59 //SORTIN   DD DSN=*.STEP5A.SAI,                                         00001320                                        
+          //       DISP=SHR                                                       00001330                                        
+       60 //SORTOUT  DD DSN=AC.CLLP.CADUB0M1.CLAS(+1),                            00001340                                        
+          //       DISP=(,CATLG,DELETE),                                          00001350                                        
+          //       UNIT=DISCO,                                                    00001360                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00001370                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00001380                                        
+          //       DATACLAS=PRODX37                                               00001390                                        
+       61 //SYSIN    DD *                                                         00001400                                        
+          //*                                                                     00001430                                        
+       62 //STEP7    EXEC PGM=RDAB0857                                            00001440                                        
+          //*                                                                     00001450                                        
+                                                                                                                                  
+          //* ***    ATUALIZA O ARQUIVO COM DADOS DE TELEFONE                     00001460                                        
+          //* ***                                                                 00001470                                        
+          //*                                                                     00001480                                        
+       63 //CADUV000 DD DSN=*.STEP5.ARQSAIDA,                                     00001490                                        
+          //       DISP=SHR                                                       00001500                                        
+       64 //CADUB0M1 DD DSN=*.STEP6.SORT.SORTOUT,                                 00001510                                        
+          //       DISP=SHR                                                       00001520                                        
+       65 //ARQSAIDA DD DSN=AC.CLLP.CADUV000(+1),                                 00001530                                        
+          //       DISP=(,CATLG,DELETE),                                          00001540                                        
+          //       UNIT=DISCO,                                                    00001550                                        
+          //       SPACE=(TRK,(300000,100000),RLSE),                              00001560                                        
+          //       DCB=(AC.A,LRECL=0642,RECFM=FB),                                00001570                                        
+          //       DATACLAS=PRODX37                                               00001580                                        
+       66 //SYSOUT   DD SYSOUT=*                                                  00001590                                        
+       67 //SYSPRINT DD SYSOUT=*                                                  00001600                                        
+       68 //SYSUDUMP DD SYSOUT=Y                                                  00001610                                        
+          //*                                                                     00001620                                        
+          //* ***    SISTEMA SIRJ - REPROCESSAMENTO DE JOB'S - MOTIVO:            00001630                                        
+          //* ***    ATENDIMENTO A IN0902159                                      00001640                                        
+          //*                                                                     00001650                                        
+       69 //                                                                                                                      
+                                                                                                                                  
+ STMT NO. MESSAGE                                                                                                                 
+        5 IEFC001I PROCEDURE CTMRDOVE WAS EXPANDED USING SYSTEM LIBRARY AC.PROCLIB                                                
+       17 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLIB                                                 
+       36 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLIB                                                 
+       55 IEFC001I PROCEDURE SORTD WAS EXPANDED USING SYSTEM LIBRARY SYS2.PROCLIB                                                 
+ICH70001I PRODSTR  LAST ACCESS AT 08:41:01 ON FRIDAY, JULY 25, 2014                                                               
+IEF236I ALLOC. FOR CLLP0140 CTMRDOVE STEPCTM                                                                                      
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                                                                            
+IEF237I A302 ALLOCATED TO                                                                                                         
+IEF237I 634C ALLOCATED TO                                                                                                         
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB                                                                                           
+IEF237I JES2 ALLOCATED TO SAIDA                                                                                                   
+IEF237I JES2 ALLOCATED TO SYSOUT                                                                                                  
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                                                                                
+IEF142I CLLP0140 CTMRDOVE STEPCTM - STEP WAS EXECUTED - COND CODE 0000                                                            
+IGD106I AC.BIBGERAL                                  PASSED,    DDNAME=JOBLIB                                                     
+IEF285I   DB2A1.R2.DSNLOAD                             PASSED                                                                     
+IEF285I   VOL SER NOS= DB2A11.                                                                                                    
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                                                                     
+IEF285I   VOL SER NOS= R13AL1.                                                                                                    
+IGD104I AC.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB                                                    
+IEF285I   PRODSTR.CLLP0140.JOB89518.D0000104.?         SYSOUT                                                                     
+IEF285I   PRODSTR.CLLP0140.JOB89518.D0000105.?         SYSOUT                                                                     
+IEF285I   PRODSTR.CLLP0140.JOB89518.D0000106.?         SYSOUT                                                                     
+BRA020I ------------------------------------------------------------------------                                                  
+                       S t e p   E n d   S t a t i s t i c s                                                                      
+                                                                                                                                  
+Step Name: CTMRDOVE       Cond Code: 0000         Start: 25-Jul-2014 08:41:01 AM                                                  
+Step  Num: 1              PGM  Name: PLAN2575     End:   25-Jul-2014 08:41:01 AM                                                  
+CPU (TCB): 00:00:00.00                            Storage below 16M:         36k                                                  
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k                                                  
+Trans Act: 00:00:00.02                            Service Units:             219                                                  
+Tape Mnts: 0                                      Total EXCPs:                20                                                  
+                                                                                                                                  
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize                                                  
+CD08 D STEPLIB             4  23,476                                                                                              
+                                                                                                                                  
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0                                                  
+                                                                                                                                  
+BRA021I ------------------------------------------------------------------------                                                  
+IEF373I STEP/CTMRDOVE/START 2014206.0841                                                                                          
+IEF032I STEP/CTMRDOVE/STOP  2014206.0841                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:    36K  SYS:   344K  EXT:        8K  SYS:    10516K                                                                 
+IEF236I ALLOC. FOR CLLP0140 STEP1A                                                                                                
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                                                                            
+IEF237I A302 ALLOCATED TO                                                                                                         
+IEF237I 634C ALLOCATED TO                                                                                                         
+IGD103I SMS ALLOCATED TO DDNAME ENTRA                                                                                             
+IGD17070I DATA SET AC.CLLP.CADUB018.CLAS.G0001V00                                                                                 
+ALLOCATED SUCCESSFULLY WITH 1 STRIPE(S).                                                                                          
+IGD101I SMS ALLOCATED TO DDNAME (SAI     )                                                                                        
+        DSN (AC.CLLP.CADUB018.CLAS.G0001V00              )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (PRODX37)                                                                
+        VOL SER NOS= SA12X0                                                                                                       
+IEF237I JES2 ALLOCATED TO SYSOUT                                                                                                  
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                                                                                
+IEF142I CLLP0140 STEP1A - STEP WAS EXECUTED - COND CODE 0000                                                                      
+IGD106I AC.BIBGERAL                                  PASSED,    DDNAME=JOBLIB                                                     
+IEF285I   DB2A1.R2.DSNLOAD                             PASSED                                                                     
+IEF285I   VOL SER NOS= DB2A11.                                                                                                    
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                                                                     
+IEF285I   VOL SER NOS= R13AL1.                                                                                                    
+IGD104I AC.PSDC.PRV.CADUB018.G0725V00                RETAINED,  DDNAME=ENTRA                                                      
+IGD107I AC.CLLP.CADUB018.CLAS.G0001V00               ROLLED IN, DDNAME=SAI                                                        
+IEF285I   PRODSTR.CLLP0140.JOB89518.D0000107.?         SYSOUT                                                                     
+IEF285I   PRODSTR.CLLP0140.JOB89518.D0000108.?         SYSOUT                                                                     
+BRA020I ------------------------------------------------------------------------                                                  
+                       S t e p   E n d   S t a t i s t i c s                                                                      
+                                                                                                                                  
+Step Name: STEP1A         Cond Code: 0000         Start: 25-Jul-2014 08:41:01 AM                                                  
+Step  Num: 2              PGM  Name: POOL0003     End:   25-Jul-2014 09:32:58 AM                                                  
+CPU (TCB): 00:04:12.79                            Storage below 16M:        836k                                                  
+CPU (SRB): 00:00:48.43                            Storage above 16M:          8k                                                  
+Trans Act: 00:51:57.24                            Service Units:      24,816,404                                                  
+Tape Mnts: 0                                      Total EXCPs:        14,693,126                                                  
+                                                                                                                                  
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize                                                  
+CD08 D JOBLIB              5  23,476        A6AA D ENTRA         120,001  27,606                                                  
+68DD D ENTRA         128,001  27,606        A3A1 D ENTRA         128,001  27,606                                                  
+A616 D ENTRA         128,001  27,606        A4EE D ENTRA         128,001  27,606                                                  
+A69A D ENTRA         128,001  27,606        A6D7 D ENTRA         128,001  27,606                                                  
+CCB3 D ENTRA         128,001  27,606        A62C D ENTRA         128,001  27,606                                                  
+6838 D ENTRA         128,001  27,606        A19B D ENTRA          17,436  27,606                                                  
+59F9 D SAI           800,000  27,606        CB8C D SAI           200,000  27,606                                                  
+A6A9 D SAI           600,000  27,606        68AA D SAI           200,000  27,606                                                  
+695A D SAI           200,000  27,606        A7E8 D SAI           400,000  27,606                                                  
+CBB2 D SAI           200,000  27,606        67FD D SAI           800,000  27,606                                                  
+A42B D SAI           200,000  27,606        A0E0 D SAI           600,000  27,606                                                  
+63EA D SAI         1,000,000  27,606        A426 D SAI           600,000  27,606                                                  
+80A2 D SAI           800,000  27,606        6563 D SAI           600,000  27,606                                                  
+6464 D SAI           600,000  27,606        6992 D SAI           400,000  27,606                                                  
+6A91 D SAI           200,000  27,606        A5A1 D SAI           600,000  27,606                                                  
+CC31 D SAI           400,000  27,606        66DB D SAI           400,000  27,606                                                  
+CD32 D SAI           400,000  27,606        7C20 D SAI           400,000  27,606                                                  
+6862 D SAI           600,000  27,606        A59A D SAI         1,000,000  27,606                                                  
+A657 D SAI           200,000  27,606        A326 D SAI           800,000  27,606                                                  
+A46F D SAI           202,990  27,606                                                                                              
+                                                                                                                                  
+Total DASD EXCPs:         14,692,441        Total Tape EXCPs:                  0                                                  
+                                                                                                                                  
+BRA021I ------------------------------------------------------------------------                                                  
+IEF373I STEP/STEP1A  /START 2014206.0841                                                                                          
+IEF032I STEP/STEP1A  /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  04 MIN  12.79 SEC    SRB:     0 HR  00 MIN  48.43 SEC                                                      
+        VIRT:   836K  SYS:   524K  EXT:        8K  SYS:    14076K                                                                 
+IEF236I ALLOC. FOR CLLP0140 SORT STEP2                                                                                            
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                                                                            
+IEF237I A302 ALLOCATED TO                                                                                                         
+IEF237I 634C ALLOCATED TO                                                                                                         
+IEF237I JES2 ALLOCATED TO SYSOUT                                                                                                  
+IGD103I SMS ALLOCATED TO DDNAME SORTIN                                                                                            
+IGD17070I DATA SET AC.CLLP.CADUB018.CLAS.G0002V00                                                                                 
+ALLOCATED SUCCESSFULLY WITH 1 STRIPE(S).                                                                                          
+IGD101I SMS ALLOCATED TO DDNAME (SORTOUT )                                                                                        
+        DSN (AC.CLLP.CADUB018.CLAS.G0002V00              )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (PRODX37)                                                                
+        VOL SER NOS= SA1159                                                                                                       
+IEF237I JES2 ALLOCATED TO SYSIN                                                                                                   
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK01)                                                                                        
+        DSN (SYS14206.T093258.RA000.CLLP0140.R0568850    )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                               
+        VOL SER NOS= SA1WK1                                                                                                       
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK02)                                                                                        
+        DSN (SYS14206.T093258.RA000.CLLP0140.R0568851    )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                               
+        VOL SER NOS= SA1W37                                                                                                       
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK03)                                                                                        
+        DSN (SYS14206.T093258.RA000.CLLP0140.R0568852    )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                               
+        VOL SER NOS= SA1WK9                                                                                                       
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK04)                                                                                        
+        DSN (SYS14206.T093258.RA000.CLLP0140.R0568854    )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                               
+        VOL SER NOS= SA1WL1                                                                                                       
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK05)                                                                                        
+        DSN (SYS14206.T093258.RA000.CLLP0140.R0568855    )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                               
+        VOL SER NOS= SA1WK0                                                                                                       
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK06)                                                                                        
+        DSN (SYS14206.T093258.RA000.CLLP0140.R0568856    )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                               
+        VOL SER NOS= SA1WA4                                                                                                       
+IGD101I SMS ALLOCATED TO DDNAME (SORTWK07)                                                                                        
+        DSN (SYS14206.T093258.RA000.CLLP0140.R0568857    )                                                                        
+        STORCLAS (STANDARD) MGMTCLAS (        ) DATACLAS (DSRG#NUL)                                                               
+        VOL SER NOS= SA1W29                                                                                                       
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK02,CDFF,SA1W37,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568851                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK06,6ABE,SA1WA4,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568856                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK05,63FC,SA1WK0,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568855                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK01,63FD,SA1WK1,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568850                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK03,64FD,SA1WK9,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568852                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK04,65FD,SA1WL1,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568854                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK02,CDFF,SA1W37,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568851                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK06,6ABE,SA1WA4,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568856                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK05,63FC,SA1WK0,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568855                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK01,63FD,SA1WK1,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568850                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK03,64FD,SA1WK9,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568852                                                                                          
+IEC030I B37-04,IFG0554A,CLLP0140,SORT,SORTWK04,65FD,SA1WL1,E60024DE,                                                              
+SYS14206.T093258.RA000.CLLP0140.R0568854                                                                                          
+IGD105I SYS14206.T093258.RA000.CLLP0140.R0568851     DELETED,   DDNAME=SORTWK02                                                   
+IGD105I SYS14206.T093258.RA000.CLLP0140.R0568856     DELETED,   DDNAME=SORTWK06                                                   
+IGD105I SYS14206.T093258.RA000.CLLP0140.R0568855     DELETED,   DDNAME=SORTWK05                                                   
+IGD105I SYS14206.T093258.RA000.CLLP0140.R0568850     DELETED,   DDNAME=SORTWK01                                                   
+IGD105I SYS14206.T093258.RA000.CLLP0140.R0568852     DELETED,   DDNAME=SORTWK03                                                   
+IGD105I SYS14206.T093258.RA000.CLLP0140.R0568854     DELETED,   DDNAME=SORTWK04                                                   
+IEA995I SYMPTOM DUMP OUTPUT                                                                                                       
+  USER COMPLETION CODE=0083                                                                                                       
+ TIME=09.32.59  SEQ=15303  CPU=0000  ASID=0566                                                                                    
+ PSW AT TIME OF ERROR  078D1000   00D11868  ILC 2  INTC 0D                                                                        
+   ACTIVE LOAD MODULE           ADDRESS=00D01000  OFFSET=00010868                                                                 
+   NAME=ICEMAN                                                                                                                    
+   DATA AT PSW  00D11862 - 41A0C778  0A0D9602  D3CD9180                                                                           
+   GR 0: 00000000   1: 80000053                                                                                                   
+      2: 00000053   3: 00D11812                                                                                                   
+      4: 00000000   5: 0000001A                                                                                                   
+      6: 000088CC   7: 40D14D94                                                                                                   
+      8: 00D12100   9: 40D15114                                                                                                   
+      A: 00D11878   B: 00D10100                                                                                                   
+      C: 00D11100   D: 00007000                                                                                                   
+      E: 00D11810   F: 00000010                                                                                                   
+ END OF SYMPTOM DUMP                                                                                                              
+IEF472I CLLP0140 SORT STEP2 - COMPLETION CODE - SYSTEM=000 USER=0083 REASON=00000000                                              
+IGD106I AC.BIBGERAL                                  PASSED,    DDNAME=JOBLIB                                                     
+IEF285I   DB2A1.R2.DSNLOAD                             PASSED                                                                     
+IEF285I   VOL SER NOS= DB2A11.                                                                                                    
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                                                                     
+IEF285I   VOL SER NOS= R13AL1.                                                                                                    
+IEF285I   PRODSTR.CLLP0140.JOB89518.D0000109.?         SYSOUT                                                                     
+IGD104I AC.CLLP.CADUB018.CLAS.G0001V00               RETAINED,  DDNAME=SORTIN                                                     
+IGD105I AC.CLLP.CADUB018.CLAS.G0002V00               DELETED,   DDNAME=SORTOUT                                                    
+IEF285I   PRODSTR.CLLP0140.JOB89518.D0000101.?         SYSIN                                                                      
+IGD105I SYS14206.T093258.RA000.CLLP0140.R0568857     DELETED,   DDNAME=SORTWK07                                                   
+BRA020I ------------------------------------------------------------------------                                                  
+                       S t e p   E n d   S t a t i s t i c s                                                                      
+                                                                                                                                  
+Step Name: SORT           Cond Code: U0083        Start: 25-Jul-2014 09:32:58 AM                                                  
+Step  Num: 3              PGM  Name: ICEMAN       End:   25-Jul-2014 09:32:59 AM                                                  
+CPU (TCB): 00:00:00.30                            Storage below 16M:      8,192k                                                  
+CPU (SRB): 00:00:00.00                            Storage above 16M:     98,296k                                                  
+Trans Act: 00:00:00.60                            Service Units:          17,768                                                  
+Tape Mnts: 0                                      Total EXCPs:               284                                                  
+                                                                                                                                  
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize                                                  
+CD08 D JOBLIB              1  23,476                                                                                              
+                                                                                                                                  
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0                                                  
+                                                                                                                                  
+BRA021I ------------------------------------------------------------------------                                                  
+IEF373I STEP/SORT    /START 2014206.0932                                                                                          
+IEF032I STEP/SORT    /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.30 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:  8192K  SYS:   516K  EXT:    98296K  SYS:    12240K                                                                 
+IEF272I CLLP0140 STEP3 - STEP WAS NOT EXECUTED.                                                                                   
+IEF373I STEP/STEP3   /START 2014206.0932                                                                                          
+IEF032I STEP/STEP3   /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                 
+IEF272I CLLP0140 STEP3A - STEP WAS NOT EXECUTED.                                                                                  
+IEF373I STEP/STEP3A  /START 2014206.0932                                                                                          
+IEF032I STEP/STEP3A  /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                 
+IEF272I CLLP0140 SORT STEP4 - STEP WAS NOT EXECUTED.                                                                              
+IEF373I STEP/SORT    /START 2014206.0932                                                                                          
+IEF032I STEP/SORT    /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                 
+IEF272I CLLP0140 STEP5 - STEP WAS NOT EXECUTED.                                                                                   
+IEF373I STEP/STEP5   /START 2014206.0932                                                                                          
+IEF032I STEP/STEP5   /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                 
+IEF272I CLLP0140 STEP5A - STEP WAS NOT EXECUTED.                                                                                  
+IEF373I STEP/STEP5A  /START 2014206.0932                                                                                          
+IEF032I STEP/STEP5A  /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                 
+IEF272I CLLP0140 SORT STEP6 - STEP WAS NOT EXECUTED.                                                                              
+IEF373I STEP/SORT    /START 2014206.0932                                                                                          
+IEF032I STEP/SORT    /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                 
+IEF272I CLLP0140 STEP7 - STEP WAS NOT EXECUTED.                                                                                   
+IEF373I STEP/STEP7   /START 2014206.0932                                                                                          
+IEF032I STEP/STEP7   /STOP  2014206.0932                                                                                          
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                      
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                 
+IGD104I AC.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB                                                     
+IEF285I   DB2A1.R2.DSNLOAD                             KEPT                                                                       
+IEF285I   VOL SER NOS= DB2A11.                                                                                                    
+IEF285I   SYS1.CEE.SCEERUN                             KEPT                                                                       
+IEF285I   VOL SER NOS= R13AL1.                                                                                                    
+BRA020I ------------------------------------------------------------------------                                                  
+                        J o b   E n d   S t a t i s t i c s                                                                       
+                                                                                                                                  
+Job  Name: CLLP0140       System ID: AL1A        Submit: 25-Jul-2014 08:41:00 AM                                                  
+Job JESID: JOB89518       MVS level: SP7.1.3     Start:  25-Jul-2014 08:41:01 AM                                                  
+Job Class: A                                     End:    25-Jul-2014 09:32:59 AM                                                  
+CPU (TCB): 00:04:13.09                           Storage below 16M:       8,192k                                                  
+CPU (SRB): 00:00:48.43                           Storage above 16M:      98,296k                                                  
+Trans Act: 00:51:57.86                           Service Units:       24,834,391                                                  
+Tape Mnts: 0                                     Total EXCPs:         14,693,430                                                  
+                                                                                                                                  
+---------------Paging---------------        ---------------Paging---------------                                                  
+VIO In:                            0        VIO Out:                           0                                                  
+Pages In:                          0        Pages Out:                         0                                                  
+Common (LPA+CSA):                  0        Hiperspace:                        0                                                  
+VIO Reclaims:                      0        Pages Stolen:                      0                                                  
+                                                                                                                                  
+RACF User: PRODSTR                          Programmer: F914349                                                                   
+Acct Info: CLLP,4120,PR32                                                                                                         
+                                                                                                                                  
+BRA022I ------------------------------------------------------------------------                                                  
+IEF375I  JOB/CLLP0140/START 2014206.0841                                                                                          
+IEF033I  JOB/CLLP0140/STOP  2014206.0932                                                                                          
+        CPU:     0 HR  04 MIN  13.09 SEC    SRB:     0 HR  00 MIN  48.43 SEC                                                      
+                                                                                                                                  
+ICE170I 2 FORMAT OPERAND IGNORED                                                                                                  
+ICE201I H RECORD TYPE IS F - DATA STARTS IN POSITION 1                                                                            
+ICE805I 1 JOBNAME: CLLP0140 , STEPNAME: STEP2                                                                                     
+ICE802I 0 BLOCKSET     TECHNIQUE IN CONTROL                                                                                       
+ICE143I 0 BLOCKSET     SORT  TECHNIQUE SELECTED                                                                                   
+ICE250I 0 VISIT http://www.ibm.com/storage/dfsort FOR DFSORT PAPERS, EXAMPLES AND MORE                                            
+ICE000I 1 - CONTROL STATEMENTS FOR 5694-A01, Z/OS DFSORT V1R12 - 09:32 ON FRI JUL 25, 2014 -                                      
+            SORT FIELDS=(11,6,A,20,3,A,375,2,A),FORMAT=BI                         00000400                                        
+            INCLUDE COND=(375,2,PD,EQ,1),FORMAT=BI                                00000410                                        
+            END                                                                   00000420                                        
+ICE083A D RESOURCES WERE UNAVAILABLE FOR DYNAMIC ALLOCATION OF WORK DATA SETS (970C)                                              
+ICE753I 0 FWK=(0,0) SWK=(0,0) TWK=(0,0) RWK=(0,0) TOTAL=(0,0) BLK=56036                                                           
+ICE248I 0 ATTEMPTED TO ALLOCATE 471314MB OF DISK WORK SPACE ON 6 WORK DATA SETS                                                   
+ICE249I 0 SUCCESSFULLY ALLOCATED 0MB OF DISK WORK SPACE ON 0 WORK DATA SETS                                                       
+ICE751I 0 C5-K76982 C6-K90026 C7-K94453 C8-K94453 E4-K58148 C9-BASE   E5-K80744 E6-K94453 C4-K94453 E7-K95469                     
+ICE750I 0 DC 370431809982 TC 0 CS DSVVV KSZ 11 VSZ 11                                                                             
+ICE752I 0 FSZ=576996588 RC  IGN=0 E  AVG=644 0  WSP=482626092 C  DYN=0 56036                                                      
+ICE052I 3 END OF DFSORT                                                                                                           

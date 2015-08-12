@@ -1,0 +1,410 @@
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+ORW392-HEADER                G            1                             
+CORW392-COD-LAYOUT           C      8     1   ECORW392                  
+ECORW392-COD-LAYOUT-API-V000 VALUE            ECORW092                  
+ECORW392-COD-LAYOUT-API-V001 VALUE            ECORW192                  
+ECORW392-COD-LAYOUT-API-V002 VALUE            ECORW292                  
+ECORW392-COD-LAYOUT-API-V003 VALUE            ECORW392                  
+ECORW392-COD-LAYOUT-API-VOK  VALUE            ECORW092                  
+                             VALUE            ECORW192                  
+                             VALUE            ECORW292                  
+                             VALUE            ECORW392                  
+CORW392-TAM-LAYOUT           Z      5     9   10000                     
+ORW392-REGISTRO              G           14                             
+CORW392-SAIDA                G           14                             
+ECORW392-BLOCO-RETORNO       G           14                             
+ ECORW392-COD-RETORNO        Z      2    14   00                        
+ ECORW392-COD-ERRO           C      4    16                             
+ ECORW392-MENSAGEM           C     80    20                             
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+ECORW392-BLOCO-LOTE          G          100                             
+ ECORW392-NUM-LOTE           PS    15   100   +12227                    
+ ECORW392-DAT-GERAC          P      8   108   0                         
+ECORW392-BLOCO-DATAS         G          113                             
+ ECORW392-DAT-PREV-IMPR      P      8   113   0                         
+ ECORW392-DAT-ARMAZ          P      8   118   0                         
+ ECORW392-DAT-FIM-DISP       P      8   123   0                         
+CORW392-ENTRADA              G          128                             
+ECORW392-ACAO                C      1   128   G                         
+ ECORW392-GRAVAR             VALUE            G                         
+ ECORW392-FECHAR             VALUE            F                         
+ECORW392-DETALHE             G          129                             
+ ECORW392-SEQ-REG            PS     9   129   +3                        
+ ECORW392-BLOCO-ORIGEM       G          134                             
+5 ECORW392-SIS-ENVIO         C      4   134   CLLP                      
+5 ECORW392-COD-PROGRAMA      C      8   138   CLLP795A                  
+5 ECORW392-DAT-MOVI-APLIC-FUNPS     8   146   +20140611                 
+ ECORW392-BLOCO-CLIENTE      G          151                             
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+5 ECORW392-DISTRIB-CORRESP   PS     1   151   +0                        
+88 ECORW392-DIST-CORREIO     VALUE            +0                        
+88 ECORW392-DIST-INTERNA     VALUE            +1                        
+5 ECORW392-INDIC-VINCULO-ORGNPS     1   152   +0                        
+88 ECORW392-CLIENTE-COMUM    VALUE            +0                        
+88 ECORW392-CLIENTE-FUNCIONARVALUE            +1                        
+88 ECORW392-CLIENTE-DIRETOR  VALUE            +2                        
+88 ECORW392-CLIENTE-PARENTE-DVALUE            +3                        
+5 ECORW392-INDIC-CADTO-CLIENTC      1   153   S                         
+88 ECORW392-CLIENTE-COM-CADTOVALUE            S                         
+88 ECORW392-CLIENTE-SEM-CADTOVALUE            N                         
+5 ECORW392-CPSSOA-ENDER-PSTALPS    10   154   +0                        
+5 ECORW392-CPSSOA-JURID-PSTALPS    10   160   +0                        
+5 ECORW392-CSEQ-ENDER-PSSOA  PS     5   166   +0                        
+5 ECORW392-COD-ESTRUT-DICD   B      9   169   20569                     
+5 ECORW392-NUM-VERSAO-DICD   B      9   173   1                         
+5 ECORW392-IDENTIF-CLI-DSTNO C     40   177   00022696510000000000000000
+                                              000000000000              
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+5 ECORW392-NOME-CLIENTE      C     40   217   NOME DO AVALISTA 24       
+5 ECORW392-LOGRADOURO        C     40   257   TV COLONIAL 52            
+5 ECORW392-BAIRRO            C     20   297   ALTO                      
+5 ECORW392-MUNICIPIO         C     30   317   MOJU                      
+5 ECORW392-COD-UF            C      2   347   PA                        
+5 ECORW392-COD-CEP           PS     5   349   +68450                    
+5 ECORW392-COMPL-CEP         PS     3   352   +0                        
+5 ECORW392-CFUNC-BDSCO       PS     9   354   +0                        
+5 ECORW392-SGMTO-CLIENTE     PS     3   359   +0                        
+ ECORW392-BLOCO-DEFNC-ECOR   G          361                             
+5 ECORW392-COD-DOCTO         C      8   361   RC001                     
+5 ECORW392-COD-FORM          C      8   369   RECRW810                  
+5 ECORW392-CNL-ENVIO         PS     3   377   +999                      
+5 ECORW392-COD-IDIOMA        PS     3   379   +1                        
+ ECORW392-BLOCO-PAGINACAO-DOCG          381                             
+5 ECORW392-SEQ-PAGINA        PS     7   381   +1                        
+5 ECORW392-QTD-PAGINAS       PS     7   385   +1                        
+ ECORW392-PROCESSO           C      1   389   N                         
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+8 ECORW392-NORMAL            VALUE            N                         
+8 ECORW392-RESTART           VALUE            R                         
+8 ECORW392-REINICIO          VALUE            I                         
+ ECORW392-AREA-RESTART       C    800   390   X'C5C3D6D9F9F0404040F0F0F0
+                                              F0F0000000000012227C020140
+                                              821F020140821F020150821F02
+                                              0140920FC3D3D3D7020140611C
+                                              C3D3D3D7F7F9F5C1F4F1F2F040
+                                              4040404040D9C3F0F0F1404040
+                                              D9C5C3D9E6F8F1F0999C001C40
+                                              F9F9F940F0F0F1F0E2D5000000
+                                              1C000000003C0000001C000000
+                                              000C000000000C000050590000
+                                              0001F0F0F0F2F2F6F9F6F5F1F0
+                                              F0F0F0F0F0F0F0F0F0F0F0F0F0
+                                              F0F0F0F0F0F0F0F0F0F0F0F0F0
+                                              F040400C0CE2D5D6D4C540C4D6
+                                              40C1E5C1D3C9E2E3C140F2F440
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              40404040404040404040404040
+                                              40404040404040E3E540C3D6D3
+                                              D6D5C9C1D340F5F24040404040
+                                              40404040404040404040404040
+                                              4040404040404040C1D3E3D640
+                                              40404040404040404040404040
+                                              4040D4D6D1E440404040404040
+                                              40404040404040404040404040
+                                              404040404040D7C168450C000C
+                                              00000000000C00000000000C00
+                                              000C000000000C000C01400000
+                                              00030000000200000000000000
+                                              000000000000000002D540F0F0
+                                              C0C1F4D50C4040404040C44040
+                                              404040404040C5D9D9D640F0F1
+                                              F9F360C3C5D7D5F4F0F2F060D9
+                                              C5D1C5C9E3C1C4C140C3C5D740
+                                              D5C1D640C3D6D5E2E3C140D5C1
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              40C2C1E2C54040404040404040
+                                              40404040404040404040404040
+                                              40404040404040400000000000
+                                              0C000000000C237C04025C0000
+                                              000000059CC6350536298C003C
+                                              00000C00000000000C000C0000
+                                              0000000CF1D9C5C3D96DC1F46D
+                                              C5C3D6D96DF0F0F0F14040401C
+                                              F200000000000C000000000C00
+                                              000000000C000000000C000022
+                                              69651C000055640CF0F0F4F1F2
+                                              F0C3C1C4E44040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              4040404040404040'         
+ ECORW392-BANCO              PS     3  1190   +237                      
+ ECORW392-AGENCIA            PS     5  1192   +4025                     
+ ECORW392-CONTA              PS    13  1195   +59                       
+ ECORW392-TIPO-PSSOA         C      1  1202   F                         
+8 ECORW392-FISICA            VALUE            F                         
+8 ECORW392-JURIDICA          VALUE            J                         
+ ECORW392-DADOS-CPF-CNPJ     G         1203                             
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+5 ECORW392-CPF-CNPJ          PS     9  1203   +350536298                
+5 ECORW392-CCTRL-CPF-CNPJ    PS     2  1208   +3                        
+5 ECORW392-CFLIL-CNPJ        PS     4  1210   +0                        
+ ECORW392-DADOS-CONTRATO     G         1213                             
+5 ECORW392-CPSSOA-JURID-CONTRPS    10  1213   +0                        
+5 ECORW392-CTIPO-CONTR-NEGOC PS     3  1219   +0                        
+5 ECORW392-NSEQ-CONTR-NEGOC  PS    10  1221   +0                        
+ ECORW392-TIPO-ARQ           C      1  1227   1                         
+8 ECORW392-ARQ-NOVA          VALUE            0                         
+8 ECORW392-ARQ-LEGAD         VALUE            1                         
+ ECORW392-DADOS-UORG         G         1228                             
+5 ECORW392-CPSSOA-INTRN      PS    10  1228   +0                        
+5 ECORW392-NSEQ-INTRN        PS     8  1234   +0                        
+ ECORW392-DADOS-UORG-AGENCIA G         1239                             
+5 ECORW392-CPSSOA-JURID-REM  PS    10  1239   +0                        
+5 ECORW392-NSEQ-UND-ORGNZ-REMPS     8  1245   +0                        
+5 ECORW392-CPSSOA-JURID-DEV  PS    10  1250   +0                        
+5 ECORW392-NSEQ-UND-ORGNZ-DEVPS     8  1256   +0                        
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+ ECORW392-CSIST-BASE-ENDER   C      4  1261   CADU                      
+ FILLER                      C    544  1265   X'000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              000000000000000000000000' 
+ECORW392-FECHAMENTO          G          129                             
+  REDEFINES ECORW392-DETALHE                                            
+ ECORW392-TOT-REGS           PS     9   129   +3                        
+ FILLER                      C   1675   134   X'C3D3D3D7C3D3D3D7F7F9F5C1
+                                              020140611C0C0CE20000000000
+                                              0C00000000000C00000C000050
+                                              5900000001F0F0F0F2F2F6F9F6
+                                              F5F1F0F0F0F0F0F0F0F0F0F0F0
+                                              F0F0F0F0F0F0F0F0F0F0F0F0F0
+                                              F0F0F0F04040D5D6D4C540C4D6
+                                              40C1E5C1D3C9E2E3C140F2F440
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              40404040404040404040404040
+                                              40404040404040E3E540C3D6D3
+                                              D6D5C9C1D340F5F24040404040
+                                              40404040404040404040404040
+                                              4040404040404040C1D3E3D640
+                                              40404040404040404040404040
+                                              4040D4D6D1E440404040404040
+                                              40404040404040404040404040
+                                              404040404040D7C168450C000C
+                                              000000000C000CD9C3F0F0F140
+                                              4040D9C5C3D9E6F8F1F0999C00
+                                              1C0000001C0000001CD5C5C3D6
+                                              D9F9F0404040F0F0F0F0F00000
+                                              00000012227C020140821F0201
+                                              40821F020150821F020140920F
+                                              C3D3D3D7020140611CC3D3D3D7
+                                              F7F9F5C1F4F1F2F04040404040
+                                              40D9C3F0F0F1404040D9C5C3D9
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              E6F8F1F0999C001C40F9F9F940
+                                              F0F0F1F0E2D50000001C000000
+                                              003C0000001C000000000C0000
+                                              00000C0000505900000001F0F0
+                                              F0F2F2F6F9F6F5F1F0F0F0F0F0
+                                              F0F0F0F0F0F0F0F0F0F0F0F0F0
+                                              F0F0F0F0F0F0F0F0F0F040400C
+                                              0CE2D5D6D4C540C4D640C1E5C1
+                                              D3C9E2E3C140F2F44040404040
+                                              40404040404040404040404040
+                                              404040E3E540C3D6D3D6D5C9C1
+                                              D340F5F2404040404040404040
+                                              40404040404040404040404040
+                                              40404040C1D3E3D64040404040
+                                              4040404040404040404040D4D6
+                                              D1E44040404040404040404040
+                                              40404040404040404040404040
+                                              4040D7C168450C000C00000000
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              000C00000000000C00000C0000
+                                              00000C000C0140000000030000
+                                              00020000000000000000000000
+                                              0000000002D540F0F0C0C1F4D5
+                                              0C4040404040C4404040404040
+                                              4040C5D9D9D640F0F1F9F360C3
+                                              C5D7D5F4F0F2F060D9C5D1C5C9
+                                              E3C1C4C140C3C5D740D5C1D640
+                                              C3D6D5E2E3C140D5C140C2C1E2
+                                              C5404040404040404040404040
+                                              40404040404040404040404040
+                                              4040404000000000000C000000
+                                              000C237C04025C000000000005
+                                              9CC6350536298C003C00000C00
+                                              000000000C000C00000000000C
+                                              F1D9C5C3D96DC1F46DC5C3D6D9
+                                              6DF0F0F0F14040401CF2000000
+                                              00000C000000000C0000000000
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              0C000000000C00002269651C00
+                                              0055640CF0F0F4F1F2F0C3C1C4
+                                              E4404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+                                              40404040404040404040404040
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              40404040404040404040404040
+                                              40404040237C04025C00000000
+                                              00059CC6350536298C003C0000
+                                              0C00000000000C000C00000000
+                                              000CF100000000000C00000000
+                                              0C00000000000C000000000C00
+                                              000000000C000000000CC3C1C4
+                                              E4000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              00000000000000000000000000
+                                              000000000000000000000000' 
+ECORW392-BLOCO-IMPRESSAO     G         1809                             
+ ECORW392-PAGINA             C   8192  1809   RECRW810NOME DO DEVEDOR 24
+                                                                    OSAS
+                                              CO         11.06.2012     
+                                                                        
+M FBA  Rec# 3 RRec# 3  Dataln 10000 - CAPS ON                           
+                                                                        
+  FIELD NAME                  FORMAT    POS   DATA                      
+                                                  000000000019619211.06.
+                                              2012001RC001L  EMPR. AGRIC
+                                              . E IND. 12.06.20120000047
+                                              44500000000001273400000000
+                                              00038700000000000003330000
+                                              00000000000000000000000338
+                                              00000000000110100000000000
+                                              11020000000000001270000000
+                                              00019619                  

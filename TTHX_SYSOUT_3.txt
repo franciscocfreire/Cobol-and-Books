@@ -1,0 +1,386 @@
+                         ----INICIO DO RELATORIO ---                                                     ----INICIO DO RELATORIO --- 
+                                                                                                                                     
+                    J E S 2  J O B  L O G  --  S Y S T E M  M Z 1 C  --  N O D E  M Z N J E 0 1                                      
+                                                                                                                                     
+02.38.34 JOB50243 ---- FRIDAY,    28 FEB 2014 ----                                                                                   
+02.38.34 JOB50243  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.                                                                 
+02.38.35 JOB50243  ICH70001I PRODSTR  LAST ACCESS AT 02:38:29 ON FRIDAY, FEBRUARY 28, 2014                                           
+02.38.35 JOB50243  $HASP373 TTHX9950 STARTED - WLM INIT  - SRVCLASS BATCHTST - SYS MZ1A                                              
+02.38.35 JOB50243  IEF403I TTHX9950 - STARTED - TIME=02.38.35                                                                        
+02.38.35 JOB50244  $HASP100 PLAN0276 ON INTRDR                            FROM JOB50243 TTHX9950                                     
+02.38.35 JOB50244  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.                                                                 
+02.38.35 JOB50243  -                                                --TIMINGS (MINS.)--                   ----PAGING COUNTS---       
+02.38.35 JOB50243  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  SRVCLASS  PAGE  SWAP   VIO SWAPS     
+02.38.35 JOB50243  -TTHX9950 STEPCTM  CTMRDOVE    00     20      6    .00    .00     .0    193  BATCHTST     0     0     0     0     
+02.38.35 JOB50243  BUFL014I   DIVERGE   Bufno=005  Amode diferente da escolha do usuario                                             
+02.38.35 JOB50243  BUFL014I   PRODSEM   Bufno=005  Amode diferente da escolha do usuario                                             
+02.38.35 JOB50243  BUFL014I   TESTSEM   Bufno=005  Amode diferente da escolha do usuario                                             
+02.38.35 JOB50243  BUFL014I   ARQTESTE  Bufno=005  Amode diferente da escolha do usuario                                             
+02.38.35 JOB50243  BUFL014I   ARQPROD   Bufno=005  Amode diferente da escolha do usuario                                             
+02.38.36 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V51, 16                   
+02.38.36 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V51, NEW VOLUME SMS                                                         
+02.38.36 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V37, 16                   
+02.38.36 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V37, NEW VOLUME SMS                                                         
+02.38.37 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V45, 16                   
+02.38.37 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V45, NEW VOLUME SMS                                                         
+02.38.37 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V03, 16                   
+02.38.37 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V03, NEW VOLUME SMS                                                         
+02.38.38 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V52, 16                   
+02.38.38 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V52, NEW VOLUME SMS                                                         
+02.38.38 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V38, 16                   
+02.38.38 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V38, NEW VOLUME SMS                                                         
+02.38.39 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V16, 16                   
+02.38.39 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V16, NEW VOLUME SMS                                                         
+02.38.39 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V13, 16                   
+02.38.39 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V13, NEW VOLUME SMS                                                         
+02.38.40 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V47, 16                   
+02.38.40 JOB50243  SVM4400I VOLUME ADDED - OLD VOLUME SM1V47, NEW VOLUME SMS                                                         
+02.38.40 JOB50243  SVM4000I TTHX9950, STEP5, PRODSEM, ATTEMPTING SPACVOLA FOR MX.TTHX.PRODSEM.G0001V00, SM1V01, 16                   
+02.38.40 JOB50243  SVM4601I RECOVERY TERMINATED: DATA SET EXISTS ON MAXIMUM VOLUMES                                                  
+02.38.40 JOB50243  IEC030I B37-04,IFG0554A,TTHX9950,STEP5,PRODSEM,B4CB,SM1V01,  171                                                  
+   171             MX.TTHX.PRODSEM.G0001V00                                                                                          
+02.38.41 JOB50243  IEA995I SYMPTOM DUMP OUTPUT  173                                                                                  
+   173             SYSTEM COMPLETION CODE=B37  REASON CODE=00000004                                                                  
+   173              TIME=02.38.40  SEQ=19219  CPU=0000  ASID=030C                                                                    
+   173              PSW AT TIME OF ERROR  075C1000   80D71916  ILC 2  INTC 0D                                                        
+   173                NO ACTIVE MODULE FOUND                                                                                         
+   173                NAME=UNKNOWN                                                                                                   
+   173                DATA AT PSW  00D71910 - 41003038  0A0DB20A  00509808                                                           
+   173                AR/GR 0: 008D09F0/00D71B24   1: 00000000/A4B37000                                                              
+   173                      2: 00000000/00008CC4   3: 00000000/00D71AEC                                                              
+   173                      4: 00000000/008A64A8   5: 00000000/00D88000                                                              
+   173                      6: 00000000/008A674C   7: 00000000/008A67A4                                                              
+   173                      8: 00000000/008A676C   9: 00000000/008A5AE8                                                              
+   173                      A: 00000000/00896508   B: 00000000/00D715A2                                                              
+   173                      C: 00000000/008B327C   D: 00000000/7FFB3D20                                                              
+   173                      E: 00000000/00D715A2   F: 00000000/00000004                                                              
+   173              END OF SYMPTOM DUMP                                                                                              
+02.38.41 JOB50243  IEA848I NO DUMP WAS PRODUCED FOR THIS ABEND, DUE TO SYSTEM OR INSTALLATION REQUEST                                
+02.38.41 JOB50243  IEF450I TTHX9950 STEP5 - ABEND=SB37 U0000 REASON=00000004  175                                                    
+   175                     TIME=02.38.41                                                                                             
+02.38.41 JOB50243  -TTHX9950 STEP5             *SB37   2715    848    .05    .00     .0   140K  BATCHTST     0     0     0     0     
+02.38.41 JOB50243  -TTHX9950 STEP6             FLUSH      0      0    .00    .00     .0      0  BATCHTST     0     0     0     0     
+02.38.41 JOB50243  -TTHX9950 STEP7             FLUSH      0      0    .00    .00     .0      0  BATCHTST     0     0     0     0     
+02.38.41 JOB50243  -TTHX9950 STEP8             FLUSH      0      0    .00    .00     .0      0  BATCHTST     0     0     0     0     
+02.38.41 JOB50243  IEF404I TTHX9950 - ENDED - TIME=02.38.41                                                                          
+02.38.41 JOB50243  -TTHX9950 ENDED.  NAME-A823132              TOTAL TCB CPU TIME=   .05  TOTAL ELAPSED TIME=    .0                  
+02.38.41 JOB50243  $HASP395 TTHX9950 ENDED                                                                                           
+------ JES2 JOB STATISTICS ------                                                                                                    
+  28 FEB 2014 JOB EXECUTION DATE                                                                                                     
+          120 CARDS READ                                                                                                             
+          380 SYSOUT PRINT RECORDS                                                                                                   
+            0 SYSOUT PUNCH RECORDS                                                                                                   
+           27 SYSOUT SPOOL KBYTES                                                                                                    
+         0.09 MINUTES EXECUTION TIME                                                                                                 
+                                                                                                                                     
+        1 //TTHX9950 JOB 'RDAB,4120,PR32','A823132',MSGCLASS=1,REGION=7M,         JOB50243                                           
+          //       SCHENV=TEST,                                                   00000020                                           
+          //       MSGLEVEL=(1,1)                                                                                                    
+          //*---- SUBMITTED BY CONTROL-M (FROM OVERLIB)     ODATE=140227                                                             
+          //*---- SCHEDULE MX.CTMR.PR32.SCHEFILE(TTHXESPE)                                                                           
+          //*---- SCHEDULED DUE TO RBC:                                                                                              
+          //*---- JCL      MX.OVERFILE(TTHX9950)                                                                                     
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=FHDQF  RUN NO.=00003                                                       
+        2 //OUT1     OUTPUT JESDS=ALL,DEST=ANYLOCAL                               00000030                                           
+        3 //OUTE     OUTPUT DEST=ANYLOCAL,CLASS=E                                 00000040                                           
+        4 //OUTF     OUTPUT DEST=ANYLOCAL,CLASS=F                                 00000050                                           
+        5 //OUTG     OUTPUT DEST=ANYLOCAL,CLASS=G                                 00000060                                           
+        6 //OUTJ     OUTPUT DEST=ANYLOCAL,CLASS=J                                 00000070                                           
+        7 //OUTM     OUTPUT DEST=ANYLOCAL,CLASS=M                                 00000080                                           
+        8 //OUTN     OUTPUT DEST=ALNJE01,CLASS=N                                  00000090                                           
+        9 //OUTO     OUTPUT DEST=ANYLOCAL,CLASS=O                                 00000100                                           
+       10 //OUTP     OUTPUT DEST=ALNJE01,CLASS=P                                  00000110                                           
+       11 //OUTQ     OUTPUT DEST=ALNJE01,CLASS=Q                                  00000120                                           
+       12 //OUTR     OUTPUT DEST=ALNJE01,CLASS=R                                  00000130                                           
+       13 //OUTRR    OUTPUT DEST=ANYLOCAL,CLASS=R                                 00000140                                           
+       14 //OUTV     OUTPUT DEST=ANYLOCAL,CLASS=V                                 00000150                                           
+       15 //OUTW     OUTPUT DEST=ALNJE02,CLASS=W                                  00000160                                           
+       16 //OUT5     OUTPUT DEST=ALNJE02,CLASS=5                                  00000170                                           
+       17 //OUTZ     OUTPUT DEST=ANYLOCAL,CLASS=Z                                 00000180                                           
+          //*                                                                     00000190                                           
+          //* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHU                 00000200                                           
+          //* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHV                 00000210                                           
+          //* ***    %%LIBSYM MJ.EVTA.PRV.CAFORM %%MEMSYM OUTLKHW                 00000220                                           
+          //*                                                                     00000230                                           
+       18 //JOBLIB   DD DSN=MX.BIBGERTT,DISP=SHR                                  00000240                                           
+       19 //         DD DSN=MX.BIBGERAL,DISP=SHR                                  00000250                                           
+       20 //         DD DSN=MJ.BIBGERAL,DISP=SHR                                  00000260                                           
+       21 //         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             00000270                                           
+       22 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             00000280                                           
+       23 //STEPCTM  EXEC CTMRDOVE,                                               00000290                                           
+          //       GR=PR32,                                                       00000300                                           
+          //       IND=MX                                                         00000310                                           
+       24 XXCTMRDOVE PROC GR=,IND=                                                                                                   
+       25 XXCTMRDOVE EXEC PGM=PLAN2575,PARM='&GR'                                                                                    
+          IEFC653I SUBSTITUTION JCL - PGM=PLAN2575,PARM='PR32'                                                                       
+       26 XXSTEPLIB  DD DSN=&IND..BIBGERAL,DISP=SHR                                                                                  
+          XX*                                                                                                                        
+          XX* ***    MONTA JOB DE DELECAO DE MEMBRO DA "OVERFILE"                                                                    
+          XX*                                                                                                                        
+          IEFC653I SUBSTITUTION JCL - DSN=MX.BIBGERAL,DISP=SHR                                                                       
+       27 XXSAIDA    DD SYSOUT=(A,INTRDR)                                                                                            
+       28 XXSYSOUT   DD SYSOUT=*                                                                                                     
+       29 XXSYSUDUMP DD SYSOUT=Y                                                                                                     
+          XX*                                                                                                                        
+          //*                                                                     00000320                                           
+       30 //STEP5    EXEC PGM=CVDT0150,                                           00000330                                           
+          //       PARM='001001'                                                  00000340                                           
+       31 //ARQTESTE DD DSN=MX.TTHX.DB280.REP360WK.COMPARA(00),                   00000350                                           
+          //       DISP=SHR                                                       00000360                                           
+       32 //ARQPROD  DD DSN=MX.TTHX.EXTRACT.SEMATU.COMPARA(00),                   00000370                                           
+                                                                                                                                     
+          //       DISP=SHR                                                       00000380                                           
+       33 //DIVERGE  DD DSN=MX.TTHX.DIVERGE(+1),                                  00000390                                           
+          //       DISP=(,CATLG,DELETE),                                          00000400                                           
+          //       UNIT=(DISCO),                                                  00000410                                           
+          //       SPACE=(TRK,(030000,3000),RLSE),                                00000420                                           
+          //       DCB=(MX.A,LRECL=024,RECFM=FB)                                  00000430                                           
+       34 //PRODSEM  DD DSN=MX.TTHX.PRODSEM(+1),                                  00000440                                           
+          //       DISP=(,CATLG,DELETE),                                          00000450                                           
+          //       UNIT=(DISCO),                                                  00000460                                           
+          //       SPACE=(TRK,(010,002),RLSE),                                    00000470                                           
+          //       DCB=(MX.A,LRECL=24,RECFM=FB)                                   00000480                                           
+       35 //TESTSEM  DD DSN=MX.TTHX.TESTSEM(+1),                                  00000490                                           
+          //       DISP=(,CATLG,DELETE),                                          00000500                                           
+          //       UNIT=(DISCO),                                                  00000510                                           
+          //       SPACE=(TRK,(030000,3000),RLSE),                                00000520                                           
+          //       DCB=(MX.A,LRECL=24,RECFM=FB)                                   00000530                                           
+       36 //SYSOUT   DD SYSOUT=T                                                  00000540                                           
+       37 //SYSUDUMP DD SYSOUT=Y                                                  00000550                                           
+          //*                                                                     00000560                                           
+       38 //STEP6    EXEC PGM=ICETOOL                                             00000570                                           
+       39 //IN       DD DSN=*.STEP5.DIVERGE,                                      00000580                                           
+          //       DISP=SHR                                                       00000590                                           
+       40 //LISTA    DD SYSOUT=(,,LKHU),OUTPUT=(*.OUTF),                          00000600                                           
+          //       DCB=(LRECL=133,RECFM=FBA)                                      00000610                                           
+       41 //DFSMSG   DD SYSOUT=T                                                  00000620                                           
+       42 //TOOLMSG  DD SYSOUT=T                                                  00000630                                           
+       43 //TOOLIN   DD *                                                         00000640                                           
+       44 //SYSOUT   DD SYSOUT=*                                                  00000720                                           
+       45 //SYSUDUMP DD SYSOUT=Y                                                  00000730                                           
+          //*                                                                     00000740                                           
+       46 //STEP7    EXEC PGM=ICETOOL                                             00000750                                           
+       47 //IN       DD DSN=*.STEP5.PRODSEM,                                      00000760                                           
+          //       DISP=SHR                                                       00000770                                           
+       48 //LISTA    DD SYSOUT=(,,LKHV),OUTPUT=(*.OUTF),                          00000780                                           
+          //       DCB=(LRECL=133,RECFM=FBA)                                      00000790                                           
+       49 //DFSMSG   DD SYSOUT=T                                                  00000800                                           
+       50 //TOOLMSG  DD SYSOUT=T                                                  00000810                                           
+       51 //TOOLIN   DD *                                                         00000820                                           
+       52 //SYSOUT   DD SYSOUT=*                                                  00000900                                           
+       53 //SYSUDUMP DD SYSOUT=Y                                                  00000910                                           
+          //*                                                                     00000920                                           
+       54 //STEP8    EXEC PGM=ICETOOL                                             00000930                                           
+       55 //IN       DD DSN=*.STEP5.TESTSEM,                                      00000940                                           
+          //       DISP=SHR                                                       00000950                                           
+       56 //LISTA    DD SYSOUT=(,,LKHW),OUTPUT=(*.OUTF),                          00000960                                           
+          //       DCB=(LRECL=133,RECFM=FBA)                                      00000970                                           
+       57 //DFSMSG   DD SYSOUT=T                                                  00000980                                           
+       58 //TOOLMSG  DD SYSOUT=T                                                  00000990                                           
+       59 //TOOLIN   DD *                                                         00001000                                           
+       60 //SYSOUT   DD SYSOUT=*                                                  00001080                                           
+       61 //SYSUDUMP DD SYSOUT=Y                                                  00001090                                           
+          //*                                                                     00001100                                           
+          //* ***    SISTEMA SIRJ - REPROCESSAMENTO DE JOB'S - MOTIVO:            00001110                                           
+          //* ***    SPACES AUMENTADOS                                            00001120                                           
+          //*                                                                     00001130                                           
+                                                                                                                                     
+       62 //                                                                                                                         
+                                                                                                                                     
+ STMT NO. MESSAGE                                                                                                                    
+       23 IEFC001I PROCEDURE CTMRDOVE WAS EXPANDED USING SYSTEM LIBRARY MX.PROCLIB                                                   
+ICH70001I PRODSTR  LAST ACCESS AT 02:38:29 ON FRIDAY, FEBRUARY 28, 2014                                                              
+IEF236I ALLOC. FOR TTHX9950 CTMRDOVE STEPCTM                                                                                         
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                                                                               
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IEF237I D684 ALLOCATED TO                                                                                                            
+IEF237I B814 ALLOCATED TO                                                                                                            
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB                                                                                              
+IEF237I JES2 ALLOCATED TO SAIDA                                                                                                      
+IEF237I JES2 ALLOCATED TO SYSOUT                                                                                                     
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                                                                                   
+IEF142I TTHX9950 CTMRDOVE STEPCTM - STEP WAS EXECUTED - COND CODE 0000                                                               
+IGD106I MX.BIBGERTT                                  PASSED,    DDNAME=JOBLIB                                                        
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IEF285I   DB2M1.R2.DSNLOAD                             PASSED                                                                        
+IEF285I   VOL SER NOS= DB2M12.                                                                                                       
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                                                                        
+IEF285I   VOL SER NOS= R13M1A.                                                                                                       
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB                                                       
+IEF285I   PRODSTR.TTHX9950.JOB50243.D0000104.?         SYSOUT                                                                        
+IEF285I   PRODSTR.TTHX9950.JOB50243.D0000105.?         SYSOUT                                                                        
+IEF285I   PRODSTR.TTHX9950.JOB50243.D0000106.?         SYSOUT                                                                        
+BRA020I ------------------------------------------------------------------------                                                     
+                       S t e p   E n d   S t a t i s t i c s                                                                         
+                                                                                                                                     
+Step Name: CTMRDOVE       Cond Code: 0000         Start: 28-Feb-2014 02:38:35 AM                                                     
+Step  Num: 1              PGM  Name: PLAN2575     End:   28-Feb-2014 02:38:35 AM                                                     
+CPU (TCB): 00:00:00.00                            Storage below 16M:         32k                                                     
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k                                                     
+Trans Act: 00:00:00.02                            Service Units:             193                                                     
+Tape Mnts: 0                                      Total EXCPs:                20                                                     
+                                                                                                                                     
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize                                                     
+B1C9 D STEPLIB             4  23,476                                                                                                 
+                                                                                                                                     
+Total DASD EXCPs:                  4        Total Tape EXCPs:                  0                                                     
+                                                                                                                                     
+BRA021I ------------------------------------------------------------------------                                                     
+IEF373I STEP/CTMRDOVE/START 2014059.0238                                                                                             
+IEF032I STEP/CTMRDOVE/STOP  2014059.0238                                                                                             
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                         
+        VIRT:    32K  SYS:   340K  EXT:        8K  SYS:    10932K                                                                    
+IEF236I ALLOC. FOR TTHX9950 STEP5                                                                                                    
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB                                                                                               
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IGD103I SMS ALLOCATED TO DDNAME                                                                                                      
+IEF237I D684 ALLOCATED TO                                                                                                            
+IEF237I B814 ALLOCATED TO                                                                                                            
+IGD103I SMS ALLOCATED TO DDNAME ARQTESTE                                                                                             
+IGD103I SMS ALLOCATED TO DDNAME ARQPROD                                                                                              
+IGD101I SMS ALLOCATED TO DDNAME (DIVERGE )                                                                                           
+        DSN (MX.TTHX.DIVERGE.G0001V00                    )                                                                           
+        STORCLAS (STANDARD) MGMTCLAS (PN2D1DNL) DATACLAS (DSRG#NUL)                                                                  
+        VOL SER NOS= SM1V44                                                                                                          
+IGD101I SMS ALLOCATED TO DDNAME (PRODSEM )                                                                                           
+        DSN (MX.TTHX.PRODSEM.G0001V00                    )                                                                           
+        STORCLAS (STANDARD) MGMTCLAS (PN2D1DNL) DATACLAS (DSRG#NUL)                                                                  
+        VOL SER NOS= SM1V51                                                                                                          
+IGD101I SMS ALLOCATED TO DDNAME (TESTSEM )                                                                                           
+        DSN (MX.TTHX.TESTSEM.G0001V00                    )                                                                           
+        STORCLAS (STANDARD) MGMTCLAS (PN2D1DNL) DATACLAS (DSRG#NUL)                                                                  
+        VOL SER NOS= SM1V54                                                                                                          
+IEF237I JES2 ALLOCATED TO SYSOUT                                                                                                     
+IEF237I JES2 ALLOCATED TO SYSUDUMP                                                                                                   
+BUFL014I   DIVERGE   Bufno=005  Amode diferente da escolha do usuario                                                                
+BUFL014I   PRODSEM   Bufno=005  Amode diferente da escolha do usuario                                                                
+BUFL014I   TESTSEM   Bufno=005  Amode diferente da escolha do usuario                                                                
+BUFL014I   ARQTESTE  Bufno=005  Amode diferente da escolha do usuario                                                                
+BUFL014I   ARQPROD   Bufno=005  Amode diferente da escolha do usuario                                                                
+IGD103I SMS ALLOCATED TO DDNAME SYS00001                                                                                             
+IGD104I SYS14059.T023836.RA000.TTHX9950.R0862125     RETAINED,  DDNAME=SYS00001                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00002                                                                                             
+IGD104I SYS14059.T023836.RA000.TTHX9950.R0862126     RETAINED,  DDNAME=SYS00002                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00003                                                                                             
+IGD104I SYS14059.T023837.RA000.TTHX9950.R0862127     RETAINED,  DDNAME=SYS00003                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00004                                                                                             
+IGD104I SYS14059.T023837.RA000.TTHX9950.R0862128     RETAINED,  DDNAME=SYS00004                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00005                                                                                             
+IGD104I SYS14059.T023838.RA000.TTHX9950.R0862129     RETAINED,  DDNAME=SYS00005                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00006                                                                                             
+IGD104I SYS14059.T023838.RA000.TTHX9950.R0862130     RETAINED,  DDNAME=SYS00006                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00007                                                                                             
+IGD104I SYS14059.T023839.RA000.TTHX9950.R0862131     RETAINED,  DDNAME=SYS00007                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00008                                                                                             
+IGD104I SYS14059.T023839.RA000.TTHX9950.R0862132     RETAINED,  DDNAME=SYS00008                                                      
+IGD103I SMS ALLOCATED TO DDNAME SYS00009                                                                                             
+IGD104I SYS14059.T023840.RA000.TTHX9950.R0862133     RETAINED,  DDNAME=SYS00009                                                      
+IEC030I B37-04,IFG0554A,TTHX9950,STEP5,PRODSEM,B4CB,SM1V01,                                                                          
+MX.TTHX.PRODSEM.G0001V00                                                                                                             
+IEA995I SYMPTOM DUMP OUTPUT                                                                                                          
+SYSTEM COMPLETION CODE=B37  REASON CODE=00000004                                                                                     
+ TIME=02.38.40  SEQ=19219  CPU=0000  ASID=030C                                                                                       
+ PSW AT TIME OF ERROR  075C1000   80D71916  ILC 2  INTC 0D                                                                           
+   NO ACTIVE MODULE FOUND                                                                                                            
+   NAME=UNKNOWN                                                                                                                      
+   DATA AT PSW  00D71910 - 41003038  0A0DB20A  00509808                                                                              
+   AR/GR 0: 008D09F0/00D71B24   1: 00000000/A4B37000                                                                                 
+         2: 00000000/00008CC4   3: 00000000/00D71AEC                                                                                 
+         4: 00000000/008A64A8   5: 00000000/00D88000                                                                                 
+         6: 00000000/008A674C   7: 00000000/008A67A4                                                                                 
+         8: 00000000/008A676C   9: 00000000/008A5AE8                                                                                 
+         A: 00000000/00896508   B: 00000000/00D715A2                                                                                 
+         C: 00000000/008B327C   D: 00000000/7FFB3D20                                                                                 
+         E: 00000000/00D715A2   F: 00000000/00000004                                                                                 
+ END OF SYMPTOM DUMP                                                                                                                 
+IEA848I NO DUMP WAS PRODUCED FOR THIS ABEND, DUE TO SYSTEM OR INSTALLATION REQUEST                                                   
+IEF472I TTHX9950 STEP5 - COMPLETION CODE - SYSTEM=B37 USER=0000 REASON=00000004                                                      
+IGD106I MX.BIBGERTT                                  PASSED,    DDNAME=JOBLIB                                                        
+IGD106I MX.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IGD106I MJ.BIBGERAL                                  PASSED,    DDNAME=                                                              
+IEF285I   DB2M1.R2.DSNLOAD                             PASSED                                                                        
+IEF285I   VOL SER NOS= DB2M12.                                                                                                       
+IEF285I   SYS1.CEE.SCEERUN                             PASSED                                                                        
+IEF285I   VOL SER NOS= R13M1A.                                                                                                       
+IGD104I MX.TTHX.DB280.REP360WK.COMPARA.G0001V00      RETAINED,  DDNAME=ARQTESTE                                                      
+IGD104I MX.TTHX.EXTRACT.SEMATU.COMPARA.G0001V00      RETAINED,  DDNAME=ARQPROD                                                       
+IGD105I MX.TTHX.DIVERGE.G0001V00                     DELETED,   DDNAME=DIVERGE                                                       
+IGD105I MX.TTHX.PRODSEM.G0001V00                     DELETED,   DDNAME=PRODSEM                                                       
+IGD105I MX.TTHX.TESTSEM.G0001V00                     DELETED,   DDNAME=TESTSEM                                                       
+IEF285I   PRODSTR.TTHX9950.JOB50243.D0000107.?         SYSOUT                                                                        
+IEF285I   PRODSTR.TTHX9950.JOB50243.D0000108.?         SYSOUT                                                                        
+BRA020I ------------------------------------------------------------------------                                                     
+                       S t e p   E n d   S t a t i s t i c s                                                                         
+                                                                                                                                     
+Step Name: STEP5          Cond Code: SB37         Start: 28-Feb-2014 02:38:35 AM                                                     
+Step  Num: 2              PGM  Name: CVDT0150     End:   28-Feb-2014 02:38:41 AM                                                     
+CPU (TCB): 00:00:03.33                            Storage below 16M:      1,016k                                                     
+CPU (SRB): 00:00:00.01                            Storage above 16M:          8k                                                     
+Trans Act: 00:00:05.42                            Service Units:         140,151                                                     
+Tape Mnts: 0                                      Total EXCPs:             2,715                                                     
+                                                                                                                                     
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize                                                     
+B89C D JOBLIB             12  23,476        B1C9 D JOBLIB             43  23,476                                                     
+B48B D ARQTESTE            5  27,984        1FA8 D ARQPROD           665  27,984                                                     
+1F6A D PRODSEM            80       0        BFB2 D PRODSEM            64       0                                                     
+1D6A D PRODSEM            64       0        B44B D PRODSEM            64       0                                                     
+20AA D PRODSEM            64       0        BFC2 D PRODSEM            64       0                                                     
+B5CC D PRODSEM            64       0        B5AC D PRODSEM            64       0                                                     
+1FAA D PRODSEM            64       0        B4CB D PRODSEM            65       0                                                     
+                                                                                                                                     
+                                                                                                                                     
+Total DASD EXCPs:              1,382        Total Tape EXCPs:                  0                                                     
+                                                                                                                                     
+BRA021I ------------------------------------------------------------------------                                                     
+IEF373I STEP/STEP5   /START 2014059.0238                                                                                             
+IEF032I STEP/STEP5   /STOP  2014059.0238                                                                                             
+        CPU:     0 HR  00 MIN  03.33 SEC    SRB:     0 HR  00 MIN  00.01 SEC                                                         
+        VIRT:  1016K  SYS:   448K  EXT:        8K  SYS:    11304K                                                                    
+IEF272I TTHX9950 STEP6 - STEP WAS NOT EXECUTED.                                                                                      
+IEF373I STEP/STEP6   /START 2014059.0238                                                                                             
+IEF032I STEP/STEP6   /STOP  2014059.0238                                                                                             
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                         
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                    
+IEF272I TTHX9950 STEP7 - STEP WAS NOT EXECUTED.                                                                                      
+IEF373I STEP/STEP7   /START 2014059.0238                                                                                             
+IEF032I STEP/STEP7   /STOP  2014059.0238                                                                                             
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                         
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                    
+IEF272I TTHX9950 STEP8 - STEP WAS NOT EXECUTED.                                                                                      
+IEF373I STEP/STEP8   /START 2014059.0238                                                                                             
+IEF032I STEP/STEP8   /STOP  2014059.0238                                                                                             
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC                                                         
+        VIRT:     0K  SYS:     0K  EXT:        0K  SYS:        0K                                                                    
+IGD104I MX.BIBGERTT                                  RETAINED,  DDNAME=JOBLIB                                                        
+IGD104I MX.BIBGERAL                                  RETAINED,  DDNAME=                                                              
+IGD104I MJ.BIBGERAL                                  RETAINED,  DDNAME=                                                              
+IEF285I   DB2M1.R2.DSNLOAD                             KEPT                                                                          
+IEF285I   VOL SER NOS= DB2M12.                                                                                                       
+IEF285I   SYS1.CEE.SCEERUN                             KEPT                                                                          
+IEF285I   VOL SER NOS= R13M1A.                                                                                                       
+BRA020I ------------------------------------------------------------------------                                                     
+                        J o b   E n d   S t a t i s t i c s                                                                          
+                                                                                                                                     
+Job  Name: TTHX9950       System ID: MZ1A        Submit: 28-Feb-2014 02:38:34 AM                                                     
+Job JESID: JOB50243       MVS level: SP7.1.3     Start:  28-Feb-2014 02:38:35 AM                                                     
+Job Class: A                                     End:    28-Feb-2014 02:38:41 AM                                                     
+CPU (TCB): 00:00:03.33                           Storage below 16M:       1,016k                                                     
+CPU (SRB): 00:00:00.01                           Storage above 16M:           8k                                                     
+Trans Act: 00:00:05.44                           Service Units:          140,344                                                     
+Tape Mnts: 0                                     Total EXCPs:              2,735                                                     
+                                                                                                                                     
+---------------Paging---------------        ---------------Paging---------------                                                     
+VIO In:                            0        VIO Out:                           0                                                     
+Pages In:                          0        Pages Out:                         0                                                     
+Common (LPA+CSA):                  0        Hiperspace:                        0                                                     
+VIO Reclaims:                      0        Pages Stolen:                      0                                                     
+                                                                                                                                     
+RACF User: PRODSTR                          Programmer: A823132                                                                      
+Acct Info: RDAB,4120,PR32                                                                                                            
+                                                                                                                                     
+BRA022I ------------------------------------------------------------------------                                                     
+IEF375I  JOB/TTHX9950/START 2014059.0238                                                                                             
+IEF033I  JOB/TTHX9950/STOP  2014059.0238                                                                                             
+        CPU:     0 HR  00 MIN  03.33 SEC    SRB:     0 HR  00 MIN  00.01 SEC                                                         

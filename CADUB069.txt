@@ -1,0 +1,13 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO --- 
+                                                                                                                                     
+ARQUIVO CADUB069        24/10/2014        23:35:13        - 1 -                                                                      
+                                                                                                                                     
+       CCLUB        CPF FILIAL CONTROLE NOME                                                                                         
+------------ ---------- ------ -------- ----------------------------------------                                                     
+   125287550  660000096     15        0 CLAUDIO FERREIRA PINTO                                                                       
+   135018501     140792     91        0 GILBERTO RISCINHO BASTOS                                                                     
+   139333851     140792     91        0 GILBERTO RISCINHO BASTOS                                                                     
+   185251463     140792     91        0 GILBERTO RISCINHO BASTOS                                                                     
+   320003078  118672038     71        0 CLEVERSON ALVES DA SILVA                                                                     
+   322919045  118672038     71        0 CLEVERSON ALVES DA SILVA                                                                     
+   453806112  660000172      0        0 HUMBERTO MIRANDA DA CUNHA                                                                    

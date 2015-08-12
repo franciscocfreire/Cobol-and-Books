@@ -1,0 +1,37 @@
+     SEQ  LVL  FIELD NAME                           FORMAT       START  LENGTH
+********************************** TOP OF DATA *******************************
+       1  01 REG-PEND-ENV                          G                 1     330
+       2   02 PE-CPFCNPJ-NUM                       Z     9           1       9
+       3   02 PE-CPFCNPJ-FIL                       Z     5          10       5
+       4   02 PE-CPFCNPJ-CTR                       C     2          15       2
+       5   02 PE-AGENCIA                           Z     5          17       5
+       6   02 PE-CONTA                             Z     7          22       7
+       7   02 PE-CARTEIRA                          C     3          29       3
+       8   02 PE-CONTRATO                          Z     7          32       7
+       9   02 PE-VCTO                              C    10          39      10
+      10   02 PE-VR-LIQUIDO                        Z    13  2       49      15
+      11   02 PE-VR-COBRANCA                       Z    13  2       64      15
+      12   02 PE-VR-A-VENCER                       Z    13  2       79      15
+      13   02 PE-ID-ESCRITORIO                     C     1          94       1
+      14   02 PE-ID-INAD-PRIM-PARC                 C     2          95       2
+      15   02 PE-PRODUTOS-RENEGOCIACAO             G                97      30
+               OCCURS    10 TIMES                                             
+      16    03 PE-NAT-OP                           C     3          97       3
+      36   02 PE-NATUREZA-OPERACAO                 C     3         137       3 
+      37   02 PE-GARANTIA                          C     2         140       2 
+      38   02 PE-DESCR-NAT                         C    20         142      20 
+      39   02 PE-ID                                C     2         162       2 
+      40   02 PE-RESERVA                           C     7         164       7 
+      41   02 PE-LT                                G               171     160 
+      42    05 PE-TX-CONTRATO                      Z     2  6      171       8 
+      43    05 PE-VL-REMUNERAT                     Z    13  2      179      15 
+      44    05 PE-VL-MORATORIO                     Z    13  2      194      15 
+      45    05 PE-VL-MULTA                         Z    13  2      209      15 
+      46    05 PE-DESP-JUD-CUST                    Z    11  2      224      13 
+      47    05 PE-HONORARIOS                       Z    11  2      237      13 
+      48    05 PE-VL-TOT-DIVIDA                    Z    15  2      250      17 
+      49    05 PE-VL-TX-TARIFA                     Z    15  2      267      17 
+      50    05 PE-VL-IOF                           Z    13  2      284      15 
+      51    05 PE-VL-CORRECAO                      Z    13  2      299      15 
+      52    05 PE-VL-JRS-12PCAA                    Z    13  2      314      15 
+      53    05 PE-PERIODICIDADE                    Z     2         329       2

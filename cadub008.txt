@@ -1,0 +1,130 @@
+      ******************************************************************
+      * DCLGEN TABLE(DB2PRD.COMPL_PJ)                                  *
+      *        LIBRARY(AD.DB2.DCLGEN(CADUB008))                        *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(CADUB008)                                     *
+      *        APOST                                                   *
+      *        LABEL(YES)                                              *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE DB2PRD.COMPL_PJ TABLE                       
+           ( CCLUB                          DECIMAL(10, 0) NOT NULL,    
+             CPTCAO_ESPAC_TBELA             DECIMAL(2, 0) NOT NULL,     
+             CMUN_MTRIZ                     DECIMAL(9, 0),              
+             CUF_MTRIZ                      CHAR(2),                    
+             CREG_JUNTA_COML                DECIMAL(9, 0),              
+             DREG_JUNTA_COML                DATE,                       
+             CINSCR_MUN                     CHAR(30),                   
+             CINSCR_EST_EMPR                CHAR(20),                   
+             VCAPTL_REGTD                   DECIMAL(15, 2),             
+             CCAPTL_ABERT                   CHAR(1) NOT NULL,           
+             QTOT_ACAO_ORDNR                DECIMAL(9, 0),              
+             QTOT_ACAO_PREFC                DECIMAL(9, 0),              
+             VCAPTL_AUTRZ                   DECIMAL(15, 2),             
+             VCAPTL_REALZ                   DECIMAL(15, 2),             
+             CPRTCP_CAPTL_EST               CHAR(1) NOT NULL,           
+             PPRTCP_CAPTL_EST               DECIMAL(5, 2),              
+             CCAPTL_ESTRG                   CHAR(1) NOT NULL,           
+             PPRTCP_CAPTL_ESTRG             DECIMAL(5, 2),              
+             CINDCD_MGRAC                   CHAR(1) NOT NULL,           
+             DINCL_REG                      DATE NOT NULL,              
+             CFUNC_BDSCO_ULT                DECIMAL(9, 0) NOT NULL,     
+             CTERM_ULT_ATULZ                CHAR(8) NOT NULL,           
+             HULT_ATULZ                     TIMESTAMP NOT NULL,         
+             NREG_JUNTA_COML                DECIMAL(11, 0),             
+             CCPF_CNPJ                      DECIMAL(9, 0),              
+             CFLIAL_CPF_CNPJ                DECIMAL(4, 0),              
+             CCTRL_CPF_CNPJ                 DECIMAL(2, 0),              
+             VRENDA_BRUTA_AGROP             DECIMAL(15, 2),             
+             PCAPTL_SCIAL                   DECIMAL(5, 2),              
+             DULT_ATULZ_SCIAL               DATE,                       
+             PCAPTL_PBLIC_NACIO             DECIMAL(5, 2),              
+             PCAPTL_PBLIC_ESTRG             DECIMAL(5, 2),              
+             PCAPTL_PRIVD_NACIO             DECIMAL(5, 2),              
+             PCAPTL_PRIVD_ESTRG             DECIMAL(5, 2),              
+             QFLIAL_EMPR                    DECIMAL(4, 0),              
+             CMUN                           DECIMAL(10, 0),             
+             CUF                            DECIMAL(6, 0)               
+           ) END-EXEC.                                                  
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE DB2PRD.COMPL_PJ                    *
+      ******************************************************************
+       01  CADUB008.                                                    
+      *    *************************************************************
+           10 CCLUB                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CPTCAO-ESPAC-TBELA   PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CMUN-MTRIZ           PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CUF-MTRIZ            PIC X(2).                            
+      *    *************************************************************
+           10 CREG-JUNTA-COML      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DREG-JUNTA-COML      PIC X(10).                           
+      *    *************************************************************
+           10 CINSCR-MUN           PIC X(30).                           
+      *    *************************************************************
+           10 CINSCR-EST-EMPR      PIC X(20).                           
+      *    *************************************************************
+           10 VCAPTL-REGTD         PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 CCAPTL-ABERT         PIC X(1).                            
+      *    *************************************************************
+           10 QTOT-ACAO-ORDNR      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QTOT-ACAO-PREFC      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 VCAPTL-AUTRZ         PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 VCAPTL-REALZ         PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 CPRTCP-CAPTL-EST     PIC X(1).                            
+      *    *************************************************************
+           10 PPRTCP-CAPTL-EST     PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 CCAPTL-ESTRG         PIC X(1).                            
+      *    *************************************************************
+           10 PPRTCP-CAPTL-ESTRG   PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 CINDCD-MGRAC         PIC X(1).                            
+      *    *************************************************************
+           10 DINCL-REG            PIC X(10).                           
+      *    *************************************************************
+           10 CFUNC-BDSCO-ULT      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTERM-ULT-ATULZ      PIC X(8).                            
+      *    *************************************************************
+           10 HULT-ATULZ           PIC X(26).                           
+      *    *************************************************************
+           10 NREG-JUNTA-COML      PIC S9(11)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CCPF-CNPJ            PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CFLIAL-CPF-CNPJ      PIC S9(4)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTRL-CPF-CNPJ       PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 VRENDA-BRUTA-AGROP   PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 PCAPTL-SCIAL         PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 DULT-ATULZ-SCIAL     PIC X(10).                           
+      *    *************************************************************
+           10 PCAPTL-PBLIC-NACIO   PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 PCAPTL-PBLIC-ESTRG   PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 PCAPTL-PRIVD-NACIO   PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 PCAPTL-PRIVD-ESTRG   PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 QFLIAL-EMPR          PIC S9(4)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CMUN                 PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CUF                  PIC S9(6)V USAGE COMP-3.             
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 37      *
+      ******************************************************************

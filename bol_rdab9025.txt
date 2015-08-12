@@ -1,0 +1,22 @@
+1) CRIAR JOB ABAIXO NA TABELA RDAB9025:                                 
+                                                                        
+CONTROL-M                                                               
+---------                                                               
+SEM DEPENDENCIAS/ RELEASES                                              
+                                                                        
+//RDAB9025 JOB 'RDAB,4120,PR32','B706725',MSGCLASS=Z,REGION=6144K,      
+//       SCHENV=DB2                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//*                                                                     
+//STEP1    EXEC PGM=RDAB0253                                            
+//*                                                                     
+//* ***    ATUALIZACAO DO RDABB008                                      
+//*                                                                     
+//ARQATUAL DD DSN=MX.RDAB.CADURDAB(0),                                  
+//       DISP=SHR                                                       
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

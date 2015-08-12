@@ -1,0 +1,208 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 1 A  --  N O D E
+
+19.00.08 JOB49466 ---- FRIDAY,    25 JUL 2014 ----
+19.00.08 JOB49466  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+19.00.09 JOB49466  ICH70001I PRODSTR  LAST ACCESS AT 19:00:09 ON FRIDAY, JULY 25
+19.00.09 JOB49466  $HASP373 CLLP0155 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+19.00.09 JOB49466  IEF403I CLLP0155 - STARTED - TIME=19.00.09
+19.00.10 JOB49466  BUFL013I   ENT00001  Nao Bufferizado. Alcancado Limite de Mem
+19.00.10 JOB49466  BUFL011I   ENT00001  Memoria Solicitada(00408K)  Usada(000002
+19.00.10 JOB49466  BUFL012I   ENT00001  Memoria Reservada (04096K)  Total(000409
+19.00.10 JOB49466  BUFL002I   ENT00001  TA.RDAB.CLLP.CPFCNPJ
+19.00.10 JOB49466  BUFL013I   SAI00001  Nao Bufferizado. Alcancado Limite de Mem
+19.00.10 JOB49466  BUFL011I   SAI00001  Memoria Solicitada(00408K)  Usada(000016
+19.00.10 JOB49466  BUFL012I   SAI00001  Memoria Reservada (04096K)  Total(000409
+19.00.10 JOB49466  BUFL002I   SAI00001  AC.CLLP.CPFCNPJ.CLAS.G0001V00
+19.00.10 JOB49466  -                                                --TIMINGS (M
+19.00.10 JOB49466  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+19.00.10 JOB49466  -CLLP0155 STEP1                00    496     90    .00    .00
+19.00.10 JOB49466  IEF404I CLLP0155 - ENDED - TIME=19.00.10
+19.00.10 JOB49466  -CLLP0155 ENDED.  NAME-B771551              TOTAL TCB CPU TIM
+19.00.10 JOB49466  $HASP395 CLLP0155 ENDED
+------ JES2 JOB STATISTICS ------
+  25 JUL 2014 JOB EXECUTION DATE
+           41 CARDS READ
+          203 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           13 SYSOUT SPOOL KBYTES
+         0.00 MINUTES EXECUTION TIME
+
+        1 //CLLP0155 JOB 'CLLP,4120,PR32','B771551',MSGCLASS=1,REGION=4M,
+          //       MSGLEVEL=(1,1)
+          //*---- SUBMITTED BY CONTROL-M (FROM MEMLIB)      ODATE=140725
+          //*---- SCHEDULE AC.CTMR.PUB.PR32.CARGAS.CTM93207.G0001V00(+1)
+          //*---- SCHEDULED DUE TO RBC:
+          //*---- JCL      AC.JCLFILE(CLLP0155)
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=LNUPN  RUN NO.=00001
+        2 //JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR
+        3 //         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR
+        4 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+        5 //STEP1    EXEC PGM=PLAN2440,
+          //       PARM=003
+          //*
+          //* ***    RECEPCIONA ARQ DO RDAB
+          //*
+        6 //ENT00001 DD DSN=TA.RDAB.CLLP.CPFCNPJ,
+          //       DISP=(OLD,DELETE,KEEP)
+        7 //SAI00001 DD DSN=AC.CLLP.CPFCNPJ.CLAS(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,02),
+          //       SPACE=(TRK,(001330,0266),RLSE),
+          //       DCB=(AC.A,LRECL=0150,RECFM=FB)
+        8 //ENT00002 DD DSN=TA.RDAB.CLLP.AGCONTA,
+          //       DISP=(OLD,DELETE,KEEP)
+        9 //SAI00002 DD DSN=AC.CLLP.AGCONTA(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000010,0002),RLSE),
+          //       DCB=(AC.A,LRECL=0150,RECFM=FB)
+       10 //ENT00003 DD DSN=TA.RDAB.CLLP.CPFEXIST,
+          //       DISP=(OLD,DELETE,KEEP)
+       11 //SAI00003 DD DSN=AC.CLLP.CPFEXIST.RDAB0105(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=DISCO,
+          //       SPACE=(TRK,(000470,0094),RLSE),
+          //       DCB=(AC.A,LRECL=0150,RECFM=FB)
+       12 //PRINTER  DD SYSOUT=*
+       13 //SYSOUT   DD SYSOUT=*
+       14 //SYSUDUMP DD SYSOUT=Y
+          //*
+       15 //
+
+ICH70001I PRODSTR  LAST ACCESS AT 19:00:09 ON FRIDAY, JULY 25, 2014
+IEF236I ALLOC. FOR CLLP0155 STEP1
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I A302 ALLOCATED TO
+IEF237I 634C ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME ENT00001
+IGD101I SMS ALLOCATED TO DDNAME (SAI00001)
+        DSN (AC.CLLP.CPFCNPJ.CLAS.G0001V00               )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA11F3
+IGD103I SMS ALLOCATED TO DDNAME ENT00002
+IGD101I SMS ALLOCATED TO DDNAME (SAI00002)
+        DSN (AC.CLLP.AGCONTA.G0001V00                    )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA1034
+IGD103I SMS ALLOCATED TO DDNAME ENT00003
+IGD101I SMS ALLOCATED TO DDNAME (SAI00003)
+        DSN (AC.CLLP.CPFEXIST.RDAB0105.G0001V00          )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA1028
+IEF237I JES2 ALLOCATED TO PRINTER
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL013I   ENT00001  Nao Bufferizado. Alcancado Limite de Memoria
+BUFL011I   ENT00001  Memoria Solicitada(00408K)  Usada(0000028K) Below
+BUFL012I   ENT00001  Memoria Reservada (04096K)  Total(0004096K) Below
+BUFL002I   ENT00001  TA.RDAB.CLLP.CPFCNPJ
+BUFL013I   SAI00001  Nao Bufferizado. Alcancado Limite de Memoria
+BUFL011I   SAI00001  Memoria Solicitada(00408K)  Usada(0000168K) Below
+BUFL012I   SAI00001  Memoria Reservada (04096K)  Total(0004096K) Below
+BUFL002I   SAI00001  AC.CLLP.CPFCNPJ.CLAS.G0001V00
+IEF142I CLLP0155 STEP1 - STEP WAS EXECUTED - COND CODE 0000
+IGD105I TA.RDAB.CLLP.CPFCNPJ                         DELETED,   DDNAME=ENT00001
+IGD107I AC.CLLP.CPFCNPJ.CLAS.G0001V00                ROLLED IN, DDNAME=SAI00001
+IGD105I TA.RDAB.CLLP.AGCONTA                         DELETED,   DDNAME=ENT00002
+IGD107I AC.CLLP.AGCONTA.G0001V00                     ROLLED IN, DDNAME=SAI00002
+IGD105I TA.RDAB.CLLP.CPFEXIST                        DELETED,   DDNAME=ENT00003
+IGD107I AC.CLLP.CPFEXIST.RDAB0105.G0001V00           ROLLED IN, DDNAME=SAI00003
+IEF285I   PRODSTR.CLLP0155.JOB49466.D0000101.?         SYSOUT
+IEF285I   PRODSTR.CLLP0155.JOB49466.D0000102.?         SYSOUT
+IEF285I   PRODSTR.CLLP0155.JOB49466.D0000103.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP1          Cond Code: 0000         Start: 25-Jul-2014 07:00:09 PM
+Step  Num: 1              PGM  Name: PLAN2440     End:   25-Jul-2014 07:00:10 PM
+CPU (TCB): 00:00:00.01                            Storage below 16M:        300k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+Trans Act: 00:00:00.20                            Service Units:           1,169
+Tape Mnts: 0                                      Total EXCPs:               496
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+CD08 D JOBLIB              1  23,476        71B7 D ENT00001          202  27,900
+6A95 D SAI00001          201  27,900        7157 D ENT00002            2  27,900
+632F D SAI00002            1  27,900        7157 D ENT00003           16  27,900
+6509 D SAI00003           15  27,900
+
+Total DASD EXCPs:                438        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP1   /START 2014206.1900
+IEF032I STEP/STEP1   /STOP  2014206.1900
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:   300K  SYS:   340K  EXT:        4K  SYS:    10004K
+IGD104I AC.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   DB2A1.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= DB2A11.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13AL1.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP0155       System ID: AL1A        Submit: 25-Jul-2014 07:00:07 PM
+Job JESID: JOB49466       MVS level: SP7.1.3     Start:  25-Jul-2014 07:00:09 PM
+Job Class: A                                     End:    25-Jul-2014 07:00:10 PM
+CPU (TCB): 00:00:00.01                           Storage below 16M:         300k
+CPU (SRB): 00:00:00.00                           Storage above 16M:           4k
+Trans Act: 00:00:00.20                           Service Units:            1,169
+Tape Mnts: 0                                     Total EXCPs:                496
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: B771551
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP0155/START 2014206.1900
+IEF033I  JOB/CLLP0155/STOP  2014206.1900
+        CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+
+
+
+* CLLP0155 * PLANEJ. E CONTROLE DA PRODUCAO      *
+**************************************************
+* JOB=CLLP0155  STEP=STEP1     DATA=25/07/2014   *
+* LABEL=001/003  REGS.=00000037322 HORA=19.00.10 *
+* BLKSIZE=27900     LRECL=00150     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TA.RDAB.CLLP.CPFCNPJ                           *
+* VOLSER=SA1S10                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* AC.CLLP.CPFCNPJ.CLAS.G0001V00                  *
+* VOLSER=SA11F3                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0155  STEP=STEP1     DATA=25/07/2014   *
+* LABEL=002/003  REGS.=00000000014 HORA=19.00.10 *
+* BLKSIZE=27900     LRECL=00150     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TA.RDAB.CLLP.AGCONTA                           *
+* VOLSER=SA1S07                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* AC.CLLP.AGCONTA.G0001V00                       *
+* VOLSER=SA1034                                  *
+**************************************************
+**************************************************
+* JOB=CLLP0155  STEP=STEP1     DATA=25/07/2014   *
+* LABEL=003/003  REGS.=00000002737 HORA=19.00.10 *
+* BLKSIZE=27900     LRECL=00150     RECFM=FB     *
+*------------------------------------------------*
+*             LEITURA   UNIT=UCB                 *
+* TA.RDAB.CLLP.CPFEXIST                          *
+* VOLSER=SA1S07                                  *
+*------------------------------------------------*
+*             GRAVACAO  UNIT=UCB                 *
+* AC.CLLP.CPFEXIST.RDAB0105.G0001V00             *
+* VOLSER=SA1028                                  *
+**************************************************

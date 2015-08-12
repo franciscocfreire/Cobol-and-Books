@@ -1,0 +1,563 @@
+// REP CACS6422                                                         
+//CACS6422 JOB 'CACS,4120,PR32','A299565',MSGCLASS=Z,CLASS=C,REGION=7M  
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=MJ.BIBGERAL,DISP=SHR                                  
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO EXTRACT                                   
+//* ***    POR: LOCATION / CONTA CACS                                   
+//*                                                                     
+//SORTIN   DD DSN=MX.CACS.EXTRACT.SEMATU.GERAL(0),                      
+//       DISP=SHR                                                       
+//SAIDA1   DD DSN=MX.CACS.EXTRACT.SEMATU.PSSOAFIS(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB)                                 
+//SAIDA2   DD DSN=MX.CACS.EXTRACT.SEMATU.PSSOAJUR(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB)                                 
+//SAIDA3   DD DSN=MX.CACS.EXTRACT.SEMATU.CARTAO(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB)                                 
+//SAIDA4   DD DSN=MX.CACS.EXTRACT.SEMATU.FINASA(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB)                                 
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                         
+//       DISP=SHR                                                       
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSIN    DD *                                                         
+ SORT FIELDS=(16,06,A,22,18,A),FORMAT=BI                                
+ OUTFIL INCLUDE=(16,6,CH,EQ,C'010101'),FNAMES=SAIDA1                    
+ OUTFIL INCLUDE=(16,6,CH,EQ,C'010102'),FNAMES=SAIDA2                    
+ OUTFIL INCLUDE=(16,6,CH,EQ,C'010103',OR,16,6,CH,EQ,C'010104'),         
+        FNAMES=SAIDA4                                                   
+ OUTFIL FNAMES=SAIDA3,SAVE                                              
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE RETORNO DO MOSAIX POR                  
+//* ***    POR LOCATION / CTA CACS PARA REGISTRAR NO                    
+//* ***    EXTRACT QUANTIDADE DE LIGACOES (NAO ATENDE, ETC)             
+//*                                                                     
+//SORTIN   DD DSN=MX.CACS.ENTMOSA.CLAS(0),                              
+//       DISP=SHR                                                       
+//SAIDA1   DD DSN=MX.CACS.ENTMOSA.PSSOAFIS(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=392,RECFM=FB)                                  
+//SAIDA2   DD DSN=MX.CACS.ENTMOSA.PSSOAJUR(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=392,RECFM=FB)                                  
+//SAIDA3   DD DSN=MX.CACS.ENTMOSA.CARTAO(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=392,RECFM=FB)                                  
+//SAIDA4   DD DSN=MX.CACS.ENTMOSA.FINASA(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=392,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(01,06,A,07,18,A),FORMAT=BI                                
+ OUTFIL INCLUDE=(1,6,CH,EQ,C'010101'),FNAMES=SAIDA1                     
+ OUTFIL INCLUDE=(1,6,CH,EQ,C'010102'),FNAMES=SAIDA2                     
+ OUTFIL INCLUDE=(1,6,CH,EQ,C'010103',OR,1,6,CH,EQ,C'010104'),           
+        FNAMES=SAIDA4                                                   
+ OUTFIL FNAMES=SAIDA3,SAVE                                              
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=RDAB7450,                                           
+//       COND=(0,NE)                                                    
+//*                                                                     
+//* ***    (PESSOA FISICA)                                              
+//* ***    ATUALIZA A INFORMACAO DO RETORNO DO MOSAIX NO SEMATU.GERAL   
+//* ***    IRA VERIFICAR NO EXTRACT DO DIA ANTERIOR QUAIS REGISTROS     
+//* ***    FORAM ATUALIZADOS, CASO MOSAIX ESTEJA VAZIO, IREMOS SOMENTE  
+//* ***    ATUALIZAR AS INFORMACOES COM O DIA ANTERIOR.                 
+//*                                                                     
+//ARQEXTRC DD DSN=*.STEP1.SORT.SAIDA1,                                  
+//       DISP=SHR                                                       
+//ARQANTIG DD DSN=MX.CACS.EXTRACT.SEMAGESE.PSSOAFIS(0),                 
+//       DISP=SHR                                                       
+//CACSB0B7 DD DSN=MX.CACS.CACSB0A6.PSSOAFIS(0),                         
+//       DISP=SHR                                                       
+//ENMOSAIX DD DSN=*.STEP2.SORT.SAIDA1,                                  
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=MX.CACS.EXTRACT.SEMATU.PSSOAFI1(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5A   EXEC PGM=RDAB7450,                                           
+//       COND=(0,NE)                                                    
+//*                                                                     
+//* ***    TRATA OS LOCATION 101010 301010 401010 (CARTAO)              
+//* ***    ATUALIZA A INFORMACAO DO RETORNO DO MOSAIX NO SEMATU.GERAL   
+//* ***    IRA VERIFICAR NO EXTRACT DO DIA ANTERIOR QUAIS REGISTROS     
+//* ***    FORAM ATUALIZADOS, CASO MOSAIX ESTEJA VAZIO, IREMOS SOMENTE  
+//* ***    ATUALIZAR AS INFORMACOES COM O DIA ANTERIOR.                 
+//*                                                                     
+//ARQEXTRC DD DSN=*.STEP1.SORT.SAIDA3,                                  
+//       DISP=SHR                                                       
+//ARQANTIG DD DSN=MX.CACS.EXTRACT.SEMAGESE.CARTAO(0),                   
+//       DISP=SHR                                                       
+//CACSB0B7 DD DSN=MX.CACS.CACSB0A6.CARTAO(0),                           
+//       DISP=SHR                                                       
+//ENMOSAIX DD DSN=*.STEP2.SORT.SAIDA3,                                  
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=MX.CACS.EXTRACT.SEMATU.CARTAOAT(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5B   EXEC PGM=RDAB7450,                                           
+//       COND=(0,NE)                                                    
+//*                                                                     
+//* ***    TRATA OS LOCATION 010103 010104 (FINASA)                     
+//* ***    ATUALIZA A INFORMACAO DO RETORNO DO MOSAIX NO SEMATU.GERAL   
+//* ***    IRA VERIFICAR NO EXTRACT DO DIA ANTERIOR QUAIS REGISTROS     
+//* ***    FORAM ATUALIZADOS, CASO MOSAIX ESTEJA VAZIO, IREMOS SOMENTE  
+//* ***    ATUALIZAR AS INFORMACOES COM O DIA ANTERIOR.                 
+//*                                                                     
+//ARQEXTRC DD DSN=*.STEP1.SORT.SAIDA4,                                  
+//       DISP=SHR                                                       
+//ARQANTIG DD DSN=MX.CACS.EXTRACT.SEMAGESE.FINASA(0),                   
+//       DISP=SHR                                                       
+//CACSB0B7 DD DSN=MX.CACS.CACSB0A6.FINASA(0),                           
+//       DISP=SHR                                                       
+//ENMOSAIX DD DSN=*.STEP2.SORT.SAIDA4,                                  
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=MX.CACS.EXTRACT.SEMATU.FINASAAT(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP6    EXEC PGM=RDAB7450,                                           
+//       COND=(0,NE)                                                    
+//*                                                                     
+//* ***    (PESSOA JURIDICA)                                            
+//* ***    ATUALIZA A INFORMACAO DO RETORNO DO MOSAIX NO SEMATU.GERAL   
+//* ***    IRA VERIFICAR NO EXTRACT DO DIA ANTERIOR QUAIS REGISTROS     
+//* ***    FORAM ATUALIZADOS, CASO MOSAIX ESTEJA VAZIO, IREMOS SOMENTE  
+//* ***    ATUALIZAR AS INFORMACOES COM O DIA ANTERIOR.                 
+//*                                                                     
+//ARQEXTRC DD DSN=*.STEP1.SORT.SAIDA2,                                  
+//       DISP=SHR                                                       
+//ARQANTIG DD DSN=MX.CACS.EXTRACT.SEMAGESE.PSSOAJUR(0),                 
+//       DISP=SHR                                                       
+//CACSB0B7 DD DSN=MX.CACS.CACSB0A6.PSSOAJUR(0),                         
+//       DISP=SHR                                                       
+//ENMOSAIX DD DSN=*.STEP2.SORT.SAIDA2,                                  
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=MX.CACS.EXTRACT.SEMATU.PSSOAJU1(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,05),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP7    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA O ARQUIVO BDRPTRAN ERROS DO CACS                  
+//* ***    POR ERRO = 000260                                            
+//*                                                                     
+//SORTIN   DD DSN=MX.CACS.DB280.BDRPTRAN(0),                            
+//       DISP=SHR                                                       
+//SAIDA1   DD DSN=MX.CACS.BDRPTRAN.ERRO(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=396,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ SORT FIELDS=(04,06,A,10,18,A),FORMAT=BI                                
+ OUTFIL INCLUDE=(111,6,CH,EQ,C'000260'),FNAMES=SAIDA1                   
+ END                                                                    
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//*                                                                     
+//STEP8    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO BDRPTRAN                                  
+//* ***    SEPARANDO POR: LOCATION (FIS/JUR)                            
+//*                                                                     
+//SORTIN   DD DSN=*.STEP7.SORT.SAIDA1,                                  
+//       DISP=OLD                                                       
+//SAIDA1   DD DSN=MX.CACS.BDRPTRAN.PSSOAFIS(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,0200),RLSE),                                
+//       DCB=(MX.A,LRECL=0396,RECFM=FB)                                 
+//SAIDA2   DD DSN=MX.CACS.BDRPTRAN.PSSOAJUR(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0396,RECFM=FB)                                 
+//SAIDA3   DD DSN=MX.CACS.BDRPTRAN.CARTAO(+1),                          
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,07),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=0396,RECFM=FB)                                 
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                         
+//       DISP=SHR                                                       
+//SYSIN    DD *                                                         
+ SORT FIELDS=(04,06,A,10,18,A),FORMAT=BI                                
+ OUTFIL INCLUDE=(04,6,CH,EQ,C'010101'),FNAMES=SAIDA1                    
+ OUTFIL INCLUDE=(04,6,CH,EQ,C'010102'),FNAMES=SAIDA2                    
+ OUTFIL INCLUDE=(04,6,CH,EQ,C'101010',OR,04,6,CH,EQ,C'301010'),         
+ FNAMES=SAIDA3                                                          
+ END                                                                    
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK19 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//SORTWK20 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00460))                                            
+//*                                                                     
+//STEP9    EXEC PGM=RDAB7480,                                           
+//       COND=(0,NE)                                                    
+//*                                                                     
+//* ***    (PESSOA FISICA)                                              
+//* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE      
+//* ***    ESTA ERRADA.                                                 
+//* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)            
+//* ***    E O ARQUIVO EXTRACT ANTERIOR.                                
+//*                                                                     
+//BDRPTRAN DD DSN=*.STEP8.SORT.SAIDA1,                                  
+//       DISP=OLD                                                       
+//ARQEXTRC DD DSN=MX.CACS.EXTRACT.SEMAGESE.PSSOAFIS(0),                 
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=MX.CACS.INATIVA.SEMATU.PSSOAFIS(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(008720,1744),RLSE),                                
+//       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP10   EXEC PGM=RDAB7480,                                           
+//       COND=(0,NE)                                                    
+//*                                                                     
+//* ***    (PESSOA JURIDICA)                                            
+//* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE      
+//* ***    ESTA ERRADA.                                                 
+//* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)            
+//* ***    E O ARQUIVO EXTRACT ANTERIOR.                                
+//*                                                                     
+//BDRPTRAN DD DSN=MX.CACS.EXTRACT.SEMAGESE.PSSOAJUR(0),                 
+//       DISP=SHR                                                       
+//ARQEXTRC DD DSN=*.STEP1.SORT.SAIDA2,                                  
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=MX.CACS.INATIVA.SEMATU.PSSOAJUR(+1),                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP10A  EXEC PGM=RDAB7482,                                           
+//       COND=(0,NE)                                                    
+//*                                                                     
+//* ***    (PESSOA JURIDICA)                                            
+//* ***    GERA EXTRACT ZERADO PARA QUE O CACS INATIVE A CONTA QUE      
+//* ***    ESTA ERRADA.                                                 
+//* ***    FAZ O BATE ENTRE O ARQUIVO BDRPTRAN (ERRO=000260)            
+//* ***    E O ARQUIVO EXTRACT NOVO.                                    
+//*                                                                     
+//BDRPTRAN DD DSN=*.STEP8.SORT.SAIDA3,                                  
+//       DISP=OLD                                                       
+//ARQEXTRC DD DSN=MX.CACS.EXTRACT.SEMAGESE.CARTAO(0),                   
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=MX.CACS.INATIVA.SEMATU.CARTAO(+1),                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,08),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=3400,RECFM=FB,BUFNO=30)                        
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP11   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO EXTRACT PARA O CACS                       
+//* ***    POR: LOCATION / CONTA CACS                                   
+//*                                                                     
+//SORTIN   DD DSN=*.STEP5.ARQSAIDA,                                     
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP5A.ARQSAIDA,                                    
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP5B.ARQSAIDA,                                    
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP6.ARQSAIDA,                                     
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP9.ARQSAIDA,                                     
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP10.ARQSAIDA,                                    
+//       DISP=OLD                                                       
+//         DD DSN=*.STEP10A.ARQSAIDA,                                   
+//       DISP=OLD                                                       
+//SORTOUT  DD DSN=MX.CACS.EXTRACT.SEMATU.GERAL.RECLAS(+1),              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=3400,RECFM=FB)                                 
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                         
+//       DISP=SHR                                                       
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSIN    DD *                                                         
+ SORT FIELDS=(16,06,A,22,18,A,1030,10,A,968,10,A,1138,10,A,             
+              1090,10,A,1100,10,A,978,10,A),FORMAT=BI                   
+ END                                                                    
+//*                                                                     
+//STEP11A  EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO EXTRACT PARA O CACS                       
+//* ***    POR: LOCATION / CONTA CACS                                   
+//* ***    REMOVE DUPLICADOS                                            
+//*                                                                     
+//SORTIN   DD DSN=*.STEP11.SORT.SORTOUT,                                
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.CACS.EXTRACT.SEMATU.GERAL.SEL(+1),                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=3400,RECFM=FB)                                 
+//SORTLIB  DD DSN=SYS1.SORTLIB,                                         
+//       DISP=SHR                                                       
+//SORTWK01 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK02 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK03 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK04 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK05 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK06 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK07 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK08 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK09 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK10 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK11 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK12 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK13 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK14 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK15 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK16 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK17 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SORTWK18 DD UNIT=DISCO,                                               
+//       SPACE=(CYL,(00500))                                            
+//SYSIN    DD *                                                         
+ SORT FIELDS=(16,06,A,22,18,A),FORMAT=BI,EQUALS                         
+ SUM FIELDS=NONE                                                        
+ END                                                                    
+//*                                                                     
+//STEP12   EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    COPIA ARQUIVO PARA A ROTINA BVCB                             
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP11A.SORT.SORTOUT,                               
+//       DISP=OLD                                                       
+//SYSUT2   DD DSN=MX.CACS.EXTRACT.SEMATU.COPIA(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,40),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(MX.A,LRECL=3400,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP13   EXEC PGM=PLAN1010,                                           
+//       PARM='SIM'                                                     
+//*                                                                     
+//* ***    COPIA ARQUIVO PARA A ROTINA BVCB                             
+//*                                                                     
+//SYSUT1   DD DSN=*.STEP12.SYSUT2,                                      
+//       DISP=OLD                                                       
+//SYSUT2   DD DSN=MX.CACS.BVCB.EXTRACT.SEMATU.COPIA,                    
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,30),                                               
+//       SPACE=(TRK,(040000,20000),RLSE),                               
+//       DCB=(LRECL=3400,RECFM=FB)                                      
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

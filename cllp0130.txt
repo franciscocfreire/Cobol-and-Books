@@ -1,0 +1,20 @@
+//CLLP0130 JOB 'CLLP,4120,PR32','I311083',MSGCLASS=Z,REGION=8M          
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DADOS PRINCIPAIS POR CLUB                 
+//*                                                                     
+//SORTIN   DD DSN=AC.PSDC.PRV.CADUB0A4.DESCOMPR(0),                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AC.CLLP.CADUB0A4.CLAS(+1),                            
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300000,100000),RLSE),                              
+//       DCB=(AC.A,LRECL=0642,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+  SORT FIELDS=(11,6,A),FORMAT=BI                                        
+  END                                                                   
+//*                                                                     

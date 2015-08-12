@@ -1,0 +1,37 @@
+FAVOR ALTERAR O JOB CLLPA730 CONFORME ABAIXO
+
+(1) - ALTERAR STEP1 
+
+DE:
+
+//SORTIN   DD DSN=MX.LPCL.PRV.DBSECARG(0),       
+//       DISP=SHR                                
+
+PARA:
+
+//SORTIN   DD DSN=MX.LPCL.PRV.DBSECARG.LEI(0),       
+//       DISP=SHR                                
+
+
+(2) - Ajustar CONTROL-M
+
+De:
+CLLPA730 DNS:CLLPA705                                           
+         DNS:CLLP0701                                           
+         DNS:LPCL0269                                           
+          DJ:CLLP0966                               CLLP0200 P32
+          DJ:CLLP0021                               CLLP0010 P32
+          RJ:CLLPA735                               CLLPA700 P32
+
+PARA
+
+CLLPA730  
+         DNS:CLLP0701                                           
+         DNS:LPCL0269                                           
+		  DJ:CLLPA700                               CLLPA700 P32            
+          DJ:CLLP0966                               CLLP0200 P32
+          DJ:CLLP0021                               CLLP0010 P32
+          RJ:CLLPA735                               CLLPA700 P32
+		  
+(3) - Ajustar CONTROL-M JOB CLLP0701 para Release no job CLLPA730		  
+(4) - Ajustar CONTROL-M JOB LPCL0269 para Release no job CLLPA730

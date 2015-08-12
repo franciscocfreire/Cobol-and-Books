@@ -1,0 +1,278 @@
+      ******************************************************************
+      * DCLGEN TABLE(DB2PRD.PSSOA_UNIC)                                *
+      *        LIBRARY(AD.DB2.DCLGEN(CADUB0A4))                        *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(CADUB0A4)                                     *
+      *        APOST                                                   *
+      *        LABEL(YES)                                              *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE DB2PRD.PSSOA_UNIC TABLE                     
+           ( CCLUB                          DECIMAL(10, 0) NOT NULL,    
+             CPTCAO_ESPAC_TBELA             DECIMAL(2, 0) NOT NULL,     
+             CCLUB_VINC                     DECIMAL(10, 0),             
+             CEMPR_INC                      DECIMAL(5, 0) NOT NULL,     
+             CCTRO_CUSTO                    CHAR(4) NOT NULL,           
+             CSIT_RLCTO_PSSOA               DECIMAL(2, 0),              
+             CDEPDC                         DECIMAL(5, 0) NOT NULL,     
+             CTPO_CLI_CREDT                 DECIMAL(3, 0),              
+             CID_TPO_PSSOA                  CHAR(1) NOT NULL,           
+             CSGMTO_CLI                     DECIMAL(3, 0),              
+             CSSGTO_CLI                     DECIMAL(3, 0),              
+             CGER_RESP                      DECIMAL(9, 0),              
+             CINDCD_ENQUA_SGMTO             CHAR(1) NOT NULL,           
+             CCLUB_ORIGE_PRSCT              DECIMAL(9, 0),              
+             RCOMEN_LIVRE_GER               VARCHAR(300),               
+             CINDCD_CONS_BACEN              CHAR(1) NOT NULL,           
+             CINDCD_CPO_FALTT               CHAR(1) NOT NULL,           
+             CISENC_CPF_CNPJ                CHAR(1) NOT NULL,           
+             CMOTVO_ISENC_CPF               DECIMAL(1, 0),              
+             CCPF_CNPJ                      DECIMAL(9, 0),              
+             CCTRL_CPF_CNPJ                 DECIMAL(2, 0),              
+             CFLIAL_CPF_CNPJ                DECIMAL(4, 0),              
+             DNASC_FUNDC                    DATE,                       
+             CAGPTO_PSSOA                   CHAR(45),                   
+             DCLUB_VINC                     DATE,                       
+             DENQUA_PSSOA                   DATE,                       
+             DSIT_CAD                       DATE,                       
+             DCAD_PSSOA                     DATE,                       
+             DULT_RENOV                     DATE,                       
+             DPROX_RENOV                    DATE,                       
+             DCLI_DESDE                     DATE,                       
+             CSIT_CAD_PSSOA                 DECIMAL(1, 0) NOT NULL,     
+             DINIC_VALDD_BACEN              DATE,                       
+             DFIM_VALDD_BACEN               DATE,                       
+             CCLASS_CAD                     DECIMAL(3, 0),              
+             PCOBR_TARIF                    DECIMAL(5, 2),              
+             CBCO_COBR_TARIF                DECIMAL(3, 0),              
+             CAG_COBR_TARIF                 DECIMAL(5, 0),              
+             CCTA_COBR_TARIF                DECIMAL(13, 0),             
+             CFUNC_BDSCO_LIBRC              DECIMAL(9, 0),              
+             QREG_CNTRL_FONE                DECIMAL(3, 0),              
+             QREG_CLI                       DECIMAL(3, 0),              
+             CINDCD_COMPL                   CHAR(1) NOT NULL,           
+             QREG_DEPDT                     DECIMAL(3, 0),              
+             QREG_ENDER                     DECIMAL(3, 0),              
+             CINDCD_EXPOR                   CHAR(1) NOT NULL,           
+             CINDCD_FAMLR                   CHAR(1) NOT NULL,           
+             CINDCD_FINCR                   CHAR(1) NOT NULL,           
+             QREG_FORNC                     DECIMAL(3, 0),              
+             CINDCD_IMPOR                   CHAR(1) NOT NULL,           
+             QREG_LSNG                      DECIMAL(3, 0),              
+             QREG_PSSOA_OPER                DECIMAL(3, 0),              
+             QREG_OUTRA_DESP                DECIMAL(3, 0),              
+             QREG_OUTRA_RENDA               DECIMAL(3, 0),              
+             CINDCD_FROTA_VEIC              CHAR(1) NOT NULL,           
+             QREG_PATRM_IMOV                DECIMAL(3, 0),              
+             QREG_OUTRO_BEM                 DECIMAL(3, 0),              
+             QREG_PATRM_VEIC                DECIMAL(3, 0),              
+             QREG_PRODT_SERVC               DECIMAL(3, 0),              
+             CINDCD_PROFS                   CHAR(1) NOT NULL,           
+             QREG_PRTCP_EMPR                DECIMAL(3, 0),              
+             QREG_PRTCP_SCIO                DECIMAL(3, 0),              
+             QREG_QUADR_ADMTV               DECIMAL(3, 0),              
+             QREG_QUADR_COSLH               DECIMAL(3, 0),              
+             QREG_QUADR_SCIAL               DECIMAL(3, 0),              
+             QREG_REFT_BCRIA                DECIMAL(3, 0),              
+             QREG_REFT_CATAO                DECIMAL(3, 0),              
+             QREG_REFT_COML                 DECIMAL(3, 0),              
+             QREG_REFT_PSSOA                DECIMAL(3, 0),              
+             QREG_SEGUR                     DECIMAL(3, 0),              
+             DINCL_REG                      DATE NOT NULL,              
+             CFUNC_BDSCO_ULT                DECIMAL(9, 0) NOT NULL,     
+             CTERM_ULT_ATULZ                CHAR(8) NOT NULL,           
+             HULT_ATULZ                     TIMESTAMP NOT NULL,         
+             QREG_DEFIC_PSSOA               DECIMAL(3, 0) NOT NULL,     
+             CEMPR_ORIGE_PSSOA              DECIMAL(10, 0) NOT NULL,    
+             QREG_DOCTO_PSSOA               DECIMAL(3, 0) NOT NULL,     
+             QREG_EMPRG_PSSOA               DECIMAL(3, 0) NOT NULL,     
+             QREG_ATVDD_PSSOA               DECIMAL(3, 0) NOT NULL,     
+             QREG_MAQNA_EQPMT               DECIMAL(3, 0) NOT NULL,     
+             QREG_PATRM_AERNV               DECIMAL(3, 0) NOT NULL,     
+             QREG_PATRM_EMBCA               DECIMAL(3, 0) NOT NULL,     
+             NSEQ_ENDER_ELETR               DECIMAL(3, 0),              
+             CINDCD_RECTA_FEDRL             CHAR(1) NOT NULL,           
+             NORIGE_INFO_PROCS              DECIMAL(3, 0)               
+           ) END-EXEC.                                                  
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE DB2PRD.PSSOA_UNIC                  *
+      ******************************************************************
+       01  CADUB0A4.                                                    
+      *    *************************************************************
+           10 CCLUB                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CPTCAO-ESPAC-TBELA   PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCLUB-VINC           PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CEMPR-INC            PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTRO-CUSTO          PIC X(4).                            
+      *    *************************************************************
+           10 CSIT-RLCTO-PSSOA     PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CDEPDC               PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTPO-CLI-CREDT       PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CID-TPO-PSSOA        PIC X(1).                            
+      *    *************************************************************
+           10 CSGMTO-CLI           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CSSGTO-CLI           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CGER-RESP            PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-ENQUA-SGMTO   PIC X(1).                            
+      *    *************************************************************
+           10 CCLUB-ORIGE-PRSCT    PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 RCOMEN-LIVRE-GER.                                         
+              49 RCOMEN-LIVRE-GER-LEN                                   
+                 PIC S9(4) USAGE COMP.                                  
+              49 RCOMEN-LIVRE-GER-TEXT                                  
+                 PIC X(300).                                            
+      *    *************************************************************
+           10 CINDCD-CONS-BACEN    PIC X(1).                            
+      *    *************************************************************
+           10 CINDCD-CPO-FALTT     PIC X(1).                            
+      *    *************************************************************
+           10 CISENC-CPF-CNPJ      PIC X(1).                            
+      *    *************************************************************
+           10 CMOTVO-ISENC-CPF     PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCPF-CNPJ            PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTRL-CPF-CNPJ       PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CFLIAL-CPF-CNPJ      PIC S9(4)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DNASC-FUNDC          PIC X(10).                           
+      *    *************************************************************
+           10 CAGPTO-PSSOA         PIC X(45).                           
+      *    *************************************************************
+           10 DCLUB-VINC           PIC X(10).                           
+      *    *************************************************************
+           10 DENQUA-PSSOA         PIC X(10).                           
+      *    *************************************************************
+           10 DSIT-CAD             PIC X(10).                           
+      *    *************************************************************
+           10 DCAD-PSSOA           PIC X(10).                           
+      *    *************************************************************
+           10 DULT-RENOV           PIC X(10).                           
+      *    *************************************************************
+           10 DPROX-RENOV          PIC X(10).                           
+      *    *************************************************************
+           10 DCLI-DESDE           PIC X(10).                           
+      *    *************************************************************
+           10 CSIT-CAD-PSSOA       PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DINIC-VALDD-BACEN    PIC X(10).                           
+      *    *************************************************************
+           10 DFIM-VALDD-BACEN     PIC X(10).                           
+      *    *************************************************************
+           10 CCLASS-CAD           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 PCOBR-TARIF          PIC S9(3)V9(2) USAGE COMP-3.         
+      *    *************************************************************
+           10 CBCO-COBR-TARIF      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CAG-COBR-TARIF       PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTA-COBR-TARIF      PIC S9(13)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CFUNC-BDSCO-LIBRC    PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-CNTRL-FONE      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-CLI             PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-COMPL         PIC X(1).                            
+      *    *************************************************************
+           10 QREG-DEPDT           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-ENDER           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-EXPOR         PIC X(1).                            
+      *    *************************************************************
+           10 CINDCD-FAMLR         PIC X(1).                            
+      *    *************************************************************
+           10 CINDCD-FINCR         PIC X(1).                            
+      *    *************************************************************
+           10 QREG-FORNC           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-IMPOR         PIC X(1).                            
+      *    *************************************************************
+           10 QREG-LSNG            PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-PSSOA-OPER      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-OUTRA-DESP      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-OUTRA-RENDA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-FROTA-VEIC    PIC X(1).                            
+      *    *************************************************************
+           10 QREG-PATRM-IMOV      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-OUTRO-BEM       PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-PATRM-VEIC      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-PRODT-SERVC     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-PROFS         PIC X(1).                            
+      *    *************************************************************
+           10 QREG-PRTCP-EMPR      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-PRTCP-SCIO      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-QUADR-ADMTV     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-QUADR-COSLH     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-QUADR-SCIAL     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-REFT-BCRIA      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-REFT-CATAO      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-REFT-COML       PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-REFT-PSSOA      PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-SEGUR           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DINCL-REG            PIC X(10).                           
+      *    *************************************************************
+           10 CFUNC-BDSCO-ULT      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTERM-ULT-ATULZ      PIC X(8).                            
+      *    *************************************************************
+           10 HULT-ATULZ           PIC X(26).                           
+      *    *************************************************************
+           10 QREG-DEFIC-PSSOA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CEMPR-ORIGE-PSSOA    PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 QREG-DOCTO-PSSOA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-EMPRG-PSSOA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-ATVDD-PSSOA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-MAQNA-EQPMT     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-PATRM-AERNV     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QREG-PATRM-EMBCA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 NSEQ-ENDER-ELETR     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-RECTA-FEDRL   PIC X(1).                            
+      *    *************************************************************
+           10 NORIGE-INFO-PROCS    PIC S9(3)V USAGE COMP-3.             
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 85      *
+      ******************************************************************

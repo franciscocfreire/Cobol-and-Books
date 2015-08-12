@@ -1,0 +1,152 @@
+1) CRIAR JOB ABAIXO NA TABELA RDAB9020:                                 
+                                                                        
+CONTROL-M                                                               
+---------                                                               
+SEM DEPENDENCIAS / RELEASES (EXECUCAO A PEDIDO)                         
+                                                                        
+//RDAB9020 JOB 'RDAB,4120,PR32','B706725',MSGCLASS=Z,REGION=6144K,      
+//       SCHENV=DB2                                                     
+//JOBLIB   DD DSN=MX.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2M1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//*                                                                     
+//STEP0    EXEC PGM=PLAN2440,                                           
+//       PARM=002                                                       
+//*                                                                     
+//* ***    GRAVA ARQUIVOS TRANSITO DA ROTINA (CLLP)                     
+//*                                                                     
+//ENT00001 DD DSN=TM.CLLP.RDAB.CADUV000.CORRECAO,                       
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00001 DD DSN=MX.RDAB.CADUV000.CORRECAO(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,15),                                               
+//       SPACE=(TRK,(015000,1500),RLSE),                                
+//       DCB=(MX.A,LRECL=0320,RECFM=FB)                                 
+//ENT00002 DD DSN=TM.CLLP.RDAB.CADUB069.CORRECAO,                       
+//       DISP=OLD                                                       
+//SAI00002 DD DSN=MX.RDAB.CADUB069.CORRECAO(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,15),                                               
+//       SPACE=(TRK,(015000,1500),RLSE),                                
+//       DCB=(MX.A,LRECL=0642,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//*                                                                     
+//STEP1    EXEC DB2M1HPU                                                
+//*                                                                     
+//* ***    DESCARREGA A DB2PRD.PSSOA_FIS_BASE (RDABB008)                
+//* ***    EM ARQUIVO SEQUENCIAL.                                       
+//*                                                                     
+//SYSTSPRT DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//LISTING  DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//SYSPUNCH DD DSN=MX.RDAB.J9020S01.RDABB008.TEMP(+1),                   
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(MX.A)                                                     
+//SYSREC00 DD DSN=MX.RDAB.J9020S01.RDABB008(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,20),                                               
+//       SPACE=(TRK,(020000,4000),RLSE),                                
+//       DCB=(MX.A,LRECL=050,RECFM=FB)                                  
+//SYSIN    DD *                                                         
+ UNLOAD TABLESPACE RDABD000.RDABS008                                    
+ DB2 YES QUIESCE NO                                                     
+ SELECT A.CCGC_CPF,                                                     
+        A.CFLIAL_CGC,                                                   
+        A.CCTRL_CPF_CGC,                                                
+        C.IPRIM_TTLAR_BASE                                              
+   FROM DB2PRD.CTA_CORR_BASE_UNIC A,                                    
+        DB2PRD.PCELA_BASE_UNIC    B,                                    
+        DB2PRD.PSSOA_FIS_BASE     C                                     
+  WHERE A.CBCO           = B.CBCO                                       
+    AND A.CAG_BCRIA      = B.CAG_BCRIA                                  
+    AND A.CCTA_BCRIA_CLI = B.CCTA_CORR_BASE                             
+    AND A.CCGC_CPF       = C.CCGC_CPF                                   
+    AND B.DVCTO_BASE_UNIC >= '20.10.2014'                               
+    AND B.DVCTO_BASE_UNIC <= '25.10.2014'                               
+  GROUP BY A.CCGC_CPF,                                                  
+           A.CFLIAL_CGC,                                                
+           A.CCTRL_CPF_CGC,                                             
+           C.IPRIM_TTLAR_BASE                                           
+ ;                                                                      
+  OUTDDN (SYSREC00)                                                     
+  FORMAT DSNTIAUL                                                       
+  LOADDDN SYSPUNCH                                                      
+//*                                                                     
+//STEP1A   EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR CPF + FILIAL                                 
+//*                                                                     
+//SORTIN   DD DSN=*.STEP1.HPU.SYSREC00,                                 
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.RDAB.J9020S1A.HPUCLAS(+1),                         
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,20),                                               
+//       SPACE=(TRK,(300000,100000),RLSE),                              
+//       DCB=(AC.A,LRECL=100,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,14,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0251                                            
+//*                                                                     
+//* ***    GERA ARQUIVO DE NOMES DO CADU                                
+//*                                                                     
+//CADUV000 DD DSN=*.STEP0.SAI00001,                                     
+//       DISP=OLD                                                       
+//CADUB069 DD DSN=*.STEP0.SAI00002,                                     
+//       DISP=OLD                                                       
+//ARQSAIDA DD DSN=MX.RDAB.NOMECADU(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO),                                                  
+//       SPACE=(TRK,(300000,100000),RLSE),                              
+//       DCB=(AD.A,LRECL=100,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR CPF + HORA ATUALIZACAO (D)                   
+//*                                                                     
+//SORTIN   DD DSN=*.STEP2.ARQSAIDA,                                     
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=MX.RDAB.NOMECADU.CLASS(+1),                           
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,20),                                               
+//       SPACE=(TRK,(300000,100000),RLSE),                              
+//       DCB=(AC.A,LRECL=100,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,15,A,57,26,D),FORMAT=BI                                 
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC PGM=RDAB0252                                            
+//*                                                                     
+//* ***    GERA ARQUIVO DE NOMES DO CADU + RDAB                         
+//* ***                                                                 
+//*                                                                     
+//NOMERDAB DD DSN=*.STEP1A.SORT.SORTOUT,                                
+//       DISP=OLD                                                       
+//NOMECADU DD DSN=*.STEP3.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADURDAB DD DSN=MX.RDAB.CADURDAB(+1),                                 
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,20),                                               
+//       SPACE=(TRK,(300000,100000),RLSE),                              
+//       DCB=(AD.A,LRECL=100,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//*                                                                     

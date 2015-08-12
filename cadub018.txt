@@ -1,0 +1,163 @@
+      ******************************************************************
+      * DCLGEN TABLE(DB2PRD.ENDER_PSSOA)                               *
+      *        LIBRARY(AD.DB2.DCLGEN(CADUB018))                        *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(CADUB018)                                     *
+      *        APOST                                                   *
+      *        LABEL(YES)                                              *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE DB2PRD.ENDER_PSSOA TABLE                    
+           ( CCLUB                          DECIMAL(10, 0) NOT NULL,    
+             CEMPR                          DECIMAL(10, 0) NOT NULL,    
+             CSEQ_ENDER_PSSOA               DECIMAL(5, 0) NOT NULL,     
+             CPTCAO_ESPAC_TBELA             DECIMAL(2, 0) NOT NULL,     
+             CTPO_ENDER                     DECIMAL(1, 0),              
+             ELOGDR_PSSOA                   CHAR(70),                   
+             ELOGDR_NRO                     CHAR(7),                    
+             RCOMPL_ENDER                   CHAR(30),                   
+             EBAIRO_ENDER                   CHAR(40),                   
+             ICIDDE_ENDER                   CHAR(40),                   
+             CSGL_UF                        CHAR(2) NOT NULL,           
+             CPAIS                          DECIMAL(5, 0),              
+             CCEP                           DECIMAL(5, 0),              
+             CCEP_COMPL                     DECIMAL(3, 0),              
+             CPSTAL_EXTER_ZIP               CHAR(10),                   
+             CCX_PSTAL                      DECIMAL(5, 0),              
+             CCEP_CX_PSTAL                  DECIMAL(5, 0),              
+             CCEP_PSTAL_COMPL               DECIMAL(3, 0),              
+             CCX_PSTAL_AG                   DECIMAL(5, 0),              
+             CCX_PSTAL_EXTER                CHAR(10),                   
+             CCONF_ENDER                    DECIMAL(3, 0),              
+             CINDCD_ENDER_INVLD             CHAR(1) NOT NULL,           
+             CINDCD_MGRAC                   CHAR(1) NOT NULL,           
+             DINCL_REG                      DATE NOT NULL,              
+             CFUNC_BDSCO_ULT                DECIMAL(9, 0) NOT NULL,     
+             CTERM_ULT_ATULZ                CHAR(8) NOT NULL,           
+             HULT_ATULZ                     TIMESTAMP NOT NULL,         
+             CESPCE_ENDER                   DECIMAL(1, 0),              
+             CNVEL_CONFD_ENDER              DECIMAL(3, 0),              
+             CCOMPV_ENDER_PSSOA             DECIMAL(3, 0),              
+             DINIC_UTILZ_ENDER              DATE,                       
+             DFIM_UTILZ_ENDER               DATE,                       
+             IPSSOA_CNTAT_ENDER             CHAR(40),                   
+             CENDER_PDRAO_PSSOA             CHAR(1),                    
+             CUSO_ENDER_PSSOA               DECIMAL(3, 0),              
+             CUSUAR_INCL                    CHAR(9),                    
+             HINCL_REG                      TIMESTAMP,                  
+             CUSUAR_MANUT                   CHAR(9),                    
+             HMANUT_REG                     TIMESTAMP,                  
+             DMES_ANO_RESID                 DECIMAL(6, 0),              
+             RENDER_REDZD_CRRIO             CHAR(40),                   
+             CCATEG_ENDER                   DECIMAL(3, 0),              
+             CMUN                           DECIMAL(10, 0),             
+             CUF                            DECIMAL(6, 0),              
+             CPAIS_GEOGR                    DECIMAL(3, 0),              
+             CSIT_ENDER_PSSOA               DECIMAL(1, 0),              
+             CMOTVO_DEVLC_CORSP             DECIMAL(3, 0),              
+             DBLOQ_ENDER_PSSOA              DATE                        
+           ) END-EXEC.                                                  
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE DB2PRD.ENDER_PSSOA                 *
+      ******************************************************************
+       01  CADUB018.                                                    
+      *    *************************************************************
+           10 CCLUB                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CEMPR                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CSEQ-ENDER-PSSOA     PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPTCAO-ESPAC-TBELA   PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTPO-ENDER           PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 ELOGDR-PSSOA         PIC X(70).                           
+      *    *************************************************************
+           10 ELOGDR-NRO           PIC X(7).                            
+      *    *************************************************************
+           10 RCOMPL-ENDER         PIC X(30).                           
+      *    *************************************************************
+           10 EBAIRO-ENDER         PIC X(40).                           
+      *    *************************************************************
+           10 ICIDDE-ENDER         PIC X(40).                           
+      *    *************************************************************
+           10 CSGL-UF              PIC X(2).                            
+      *    *************************************************************
+           10 CPAIS                PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCEP                 PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCEP-COMPL           PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPSTAL-EXTER-ZIP     PIC X(10).                           
+      *    *************************************************************
+           10 CCX-PSTAL            PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCEP-CX-PSTAL        PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCEP-PSTAL-COMPL     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCX-PSTAL-AG         PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCX-PSTAL-EXTER      PIC X(10).                           
+      *    *************************************************************
+           10 CCONF-ENDER          PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CINDCD-ENDER-INVLD   PIC X(1).                            
+      *    *************************************************************
+           10 CINDCD-MGRAC         PIC X(1).                            
+      *    *************************************************************
+           10 DINCL-REG            PIC X(10).                           
+      *    *************************************************************
+           10 CFUNC-BDSCO-ULT      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTERM-ULT-ATULZ      PIC X(8).                            
+      *    *************************************************************
+           10 HULT-ATULZ           PIC X(26).                           
+      *    *************************************************************
+           10 CESPCE-ENDER         PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CNVEL-CONFD-ENDER    PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCOMPV-ENDER-PSSOA   PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DINIC-UTILZ-ENDER    PIC X(10).                           
+      *    *************************************************************
+           10 DFIM-UTILZ-ENDER     PIC X(10).                           
+      *    *************************************************************
+           10 IPSSOA-CNTAT-ENDER   PIC X(40).                           
+      *    *************************************************************
+           10 CENDER-PDRAO-PSSOA   PIC X(1).                            
+      *    *************************************************************
+           10 CUSO-ENDER-PSSOA     PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CUSUAR-INCL          PIC X(9).                            
+      *    *************************************************************
+           10 HINCL-REG            PIC X(26).                           
+      *    *************************************************************
+           10 CUSUAR-MANUT         PIC X(9).                            
+      *    *************************************************************
+           10 HMANUT-REG           PIC X(26).                           
+      *    *************************************************************
+           10 DMES-ANO-RESID       PIC S9(6)V USAGE COMP-3.             
+      *    *************************************************************
+           10 RENDER-REDZD-CRRIO   PIC X(40).                           
+      *    *************************************************************
+           10 CCATEG-ENDER         PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CMUN                 PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CUF                  PIC S9(6)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPAIS-GEOGR          PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CSIT-ENDER-PSSOA     PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CMOTVO-DEVLC-CORSP   PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DBLOQ-ENDER-PSSOA    PIC X(10).                           
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 48      *
+      ******************************************************************

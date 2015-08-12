@@ -1,0 +1,1095 @@
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 1 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+     2            806 1        1       FRANCISCO MORILHAS                        17511 SP 14.04.2014
+     2           3846 1        1       FRANCISCO COELHO CAMPINO                  17511 SP 16.07.2014
+     2           4714 1        1       WALDEMAR PEREIRA                          17511 SP 09.10.2014
+     2          87774 1        1       R JOSE BATISTA DE ALMEIDA SOBRINHO        17512 SP 20.06.2014
+     2          90511 1        1       QUINZE DE NOVEMBRO                        17504 SP 06.08.2012
+     2         113710 1        1       FELIPE JOSE JORGE                         17527 SP 02.10.2013
+     2         115831 1        1       MARCOS ROBERTO LONCOROVICI                17526 SP 17.01.2014
+     2         128901 1        1       LUIGI MAREGA                              17512 SP 14.08.2013
+     2         131801 1        1       OCTAVIO ROBERTO RAMOS                     17511 SP 17.01.2014
+     2         132017 1        1       TEODOR FERR                               17505 SP 06.06.2014
+     2         132176 1        1       RAFAEL MIGUEL NAHAS                       17512 SP 28.08.2014
+     2         132337 1        1       JOSE DA SILVEIRA BALDY                    15081 SP 05.08.2013
+     2         151607 1        1       R CANDIDO MENDES                          20241 RJ 31.03.2014
+     2         152287 1        1       R JOSE DOS SANTOS                         17511 SP 14.03.2014
+     2         153188 1        1       BENEDITO JOSE DE DEUS                     17535 SP 21.09.2009
+     2         153451 1        1       ALTINO ALMEIDA                            17522 SP 14.07.2014
+     2         156571 1        1       ARNALDO DOMINGUES                         17511 SP 29.01.2014
+     2         156787 1        1       MARIA BERTONHA CRUZ                       17512 SP 30.01.2013
+     2         156929 1        1       LUIZ AUGUSTO SPILLA                       17527 SP 02.12.2011
+     2         157440 1        1       ANGELO SELEGHIN                           17519 SP 08.07.2014
+     2         158354 1        1       CANADA                                    17520 SP 03.05.2013
+     2         158583 1        1       FELIPE NAVA                               17511 SP 24.03.2014
+     2         162803 1        1       GASPAR DE LEMOS                           17511 SP 17.07.2014
+     2         201193 1        1       RODRIGUES ALVES                           17504 SP 05.01.2012
+     2         201395 1        1       GUANAS                                    17502 SP 20.07.2012
+     2         201899 1        1       HERMES DA FONSECA                         17511 SP 08.08.2013
+     2         515452 1        1       BENEDITO MENDES FARIA                     17522 SP 19.09.2014
+     2         517168 1        1       JERUSALEM                                 17513 SP 19.04.2012
+     2         545069 1        1       R FRANCISCO COLOMBO                       17540 SP 07.08.2012
+     2         550016 1        1       ANTONIO MESSIAS DA SILVA                  17535 SP 04.01.2011
+     2         560088 1        1       SAMPAIO VIDAL                             17533 SP 18.07.2014
+     2         585882 1        1       R ANTONIO ELIAS SCHOUERI                   4945 SP 05.11.2014
+     2         701120 1        1       JOAO MARTINS COELHO                       17512 SP 11.06.2014
+     3           1185 1        1       ASSAD AZZEM                               14805 SP 28.08.2014
+     3           1352 1        1       RUA NICOLAU CARNEIRO LEAO                 14820 SP 22.09.2014
+     3           1631 1        2       R DOUTOR LAZARO LUIZ ZAMENHOF - DE 850 A  14808 SP 17.02.2014
+     3           2033 1        1       ISIDORO BITIO NETO                        14808 SP 14.07.2014
+     3           3922 1        1       NICOLINO RAIA                             14807 SP 21.10.2014
+     3          30213 1        2       AV DJALMA DUTRA                           14800 SP 14.02.2014
+     3          32526 1        1       VINTE E DOIS DE AGOSTO                    14810 SP 22.10.2014
+     3         132779 1        1       JOAO BOSCO ANTONIO DA SILVA FARIA         14807 SP 27.08.2013
+     3         132998 1        1       28(NUMERACAO COM ZERO                     14780 SP 03.10.2014
+     3         139606 1        1       MATO GROSSO                               14811 SP 02.09.2013
+     3         166759 1        1       RUA JOSE LUIZ TORQUATO                    14808 SP 08.07.2013
+     3         170163 1        1       OCTACILIO ALBERTO VOLPE                   14808 SP 26.06.2013
+     3         171653 1        1       BRASIL                                    14801 SP 23.09.2013
+     3         173495 1        1       SAVERIA LIA ROLFSEN                       14808 SP 29.04.2013
+     3         173638 1        1       RUY BARBOSA                               14810 SP 25.07.2014
+     3         179297 1        1       SAO BENTO                                 14801 SP 29.08.2014
+     3         179982 1        1       R JYDALLO JORGE                           14810 SP 16.08.2013
+     3         180224 1        1       RUA IPIRANGA                              14955 SP 14.07.2014
+     3         191410 1        1       EDUARDO PRADA                             14810 SP 04.07.2014
+     3         194018 1        1       JOSE DOS SANTOS SEVES                     14806 SP 14.05.2012
+     3         199088 1        1       FORTUNATO MICELLI                         14801 SP 06.08.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 2 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+     3         199156 1        1       PROFESSOR VIRGILIO DE ABRANCHES QUINTAO   14802 SP 31.10.2014
+     3         199346 1        1       RUA FLORENTINA FERRAZ DE FREITAS          14820 SP 21.02.2011
+     3         199628 1        1       BAHIA                                     14810 SP 27.10.2014
+     3         200115 1        1       RUA ANGELO DANIEL                         14815 SP 13.08.2013
+     3         204933 1        1       ANTONIO CORREA DE ALMEIDA MORAES          14807 SP 11.11.2013
+     3         206016 1        1       CIENTISTA FREDERICO DE MARCO              14810 SP 11.04.2014
+     3         207863 1        1       RUA JOSE ANTONIO LAURINDO                 14820 SP 17.10.2014
+     3         208800 1        2       R BERNARDO MONTEIRO                       14808 SP 20.08.2014
+     3         212480 1        1       ANTONIO MARQUES LOPES                     14807 SP 07.07.2014
+     3         216123 1        1       TRANQUINIO BOMBARDA                       14808 SP 26.03.2014
+     3         500740 1        1       ROBERTO JOSE FIORE                        14808 SP 04.09.2014
+     3         515045 1        1       TENENTEPOLICIA MILITAR FORTUNATO PICHIRI  14811 SP 05.11.2014
+     3         857810 1        1       DOUTOR SYLVIO DE MENEZES BERENGUER        14808 SP 25.01.2013
+     4            824 1        2       AV DORIA - DE 602 ATE 99999               19815 SP 22.10.2014
+     4           2597 1        1       AVENIDA DOS SABIAS                        19820 SP 08.09.2014
+     4           2651 1        1       RUA ALEMANHA                              19820 SP 13.08.2014
+     4           4727 1        1       RUA ERCILIA BOLFARINI                     19880 SP 04.09.2014
+     4           5082 1        1       CURITIBA                                  19807 SP 20.10.2014
+     4          32571 1        1       DOUTOR LYCIO BRANDAO DE CAMARGO           19802 SP 03.11.2014
+     4          33691 1        1       SMITH VASCONCELOS                         19814 SP 13.06.2014
+     4          47759 1        1       CAMBUI                                    19804 SP 13.03.2014
+     4          54686 1        1       DOUTOR FRANCISCO DE CAMPOS                19807 SP 15.10.2014
+     4          55950 1        1       TIBIRICA                                  19802 SP 24.07.2014
+     4          59984 1        1       RUA JOSE SACHETTI 140                     19885 SP 29.05.2013
+     4          61042 1        1       RUA DOS LAMBARIS                          19820 SP 16.04.2010
+     4          64173 1        1       R SAO JUDAS TADEU                         19880 SP 05.11.2014
+     4          69867 1        1       SEBASTIAO LEITE DO CANTO                  19800 SP 08.07.2014
+     4          73470 1        1       REVERENDO JOAO BATISTA NETO               19806 SP 30.06.2014
+     4          81814 1        1       RUA PIRAIBA                               19820 SP 19.04.2012
+     4          88106 1        1       REINALDO PIRES                            19813 SP 05.08.2013
+     4         506283 1        1       ESTEFANO PAULO AMBROSIO                   19813 SP 11.02.2013
+     4         600906 1        1       CAPITAO FRANCISCO RODRIGUES GARCIA        19800 SP 26.09.2014
+     5            739 1        2       IGNES VIZOTTO GAION                       17400 SP 23.10.2014
+     5           1017 1        1       RUA JOVELINO MOIZES                       17400 SP 06.11.2014
+     5           1077 1        1       R GUARANTA                                17400 SP 28.10.2014
+     5           1094 1        1       RUA EDGARD DE CASTRO MARQUES              17400 SP 10.10.2014
+     5          35561 1        1       RUA MELCHIADES NERY DE CASTRO             17400 SP 09.04.2014
+     5          37871 1        1       RUA NELO DE STEFANI                       17400 SP 22.09.2014
+     5          41032 1        1       AVENIDA PRESIDENTE VARGAS                 17400 SP 21.01.2013
+     5          50381 1        1       RUA VEREADOR FELICIO BOTINO               17400 SP 06.08.2014
+     5         511594 1        1       RUA ANALIA DE ALMEIDA 140                 17400 SP 15.07.2014
+     5         530025 1        1       ERNESTO DAUN                              17420 SP 23.05.2014
+     5         541161 1        1       RUA HORACIO COUTO 101                     17430 SP 23.05.2013
+     5         541176 1        1       RUA DR FAUSTO COUTO                       17430 SP 18.08.2014
+     6          21151 1        1       RUA FLORIANO PEIXOTO                      16450 SP 30.09.2014
+     7            337 1        1       CARLOS TOYODA                             16402 SP 04.10.2013
+     7            496 1        1       AV PEDRO VENDRAMINI                       15200 SP 24.10.2013
+     7            652 1        1       R DOM PEDRO I                             16440 SP 29.11.2013
+     7            819 1        1       R JERONIMO RUFATO                         16403 SP 04.07.2014
+     7           1174 1        1       R ARMANDO DOS ANJOS                       16403 SP 20.03.2014
+     7           1193 1        1       TECLSERIAL05E 140308AVDUQUE DE CAXIAS     16430 SP 11.06.2014
+     7           1984 1        2       R MAESTRO CARLOS GOMES                    16400 SP 30.09.2014
+     7           2012 1        1       RUY MONTEIRO DE ARAUJO                    16401 SP 03.11.2014
+     7           2062 1        1       SAO SALVADOR                              16401 SP 23.10.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 3 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+     7          55073 1        1       AV DA SAUDADE                             16401 SP 06.06.2012
+     7          58236 1        1       MARECHAL DEODORO DA FONSECA               16401 SP 04.08.2014
+     7          60744 1        1       ALBUQUERQUE LINS                          16400 SP 12.09.2014
+     7          65971 1        1       WILSON TRECENTI                           18682 SP 18.03.2014
+     7          70622 1        1       TERCEIROSARGENTO JOAO SA FARIA            16400 SP 03.09.2014
+     7          72989 1        1       RUA OTAVIO VALENCIANOI                    16480 SP 12.08.2014
+     7          74652 1        1       DOUTOR LUIZ GOMES DO VAL                  16401 SP 10.03.2014
+     7          75444 1        1       R MARIA PURCINA DIAS                      16430 SP 25.11.2013
+     7          84272 1        1       ANA NERY                                  16480 SP 19.02.2014
+     7          84692 1        1       RUA JULIO PRESTES                         16450 SP 16.08.2011
+     7          87478 1        1       AV JOAQUIM PASCHOAL MARTINS               16370 SP 18.02.2014
+     7          88908 1        1       RUA ENRIQUE DIAS 751                      16480 SP 05.03.2013
+     7          89023 1        1       RUA DR UETSUKA                            16370 SP 05.11.2014
+     7          89575 1        1       VOL DA PATRIA                             16440 SP 26.06.2013
+     7         511718 1        1       ANTONIO JOSE AZEVEDO                      16403 SP 26.12.2013
+     7         631227 1        1       MANOEL FLAVIO SILVEIRA                    16403 SP 19.05.2014
+     7         631264 1        1       AV PE ANCHIETA                            16440 SP 13.02.2014
+     7         631414 1        1       LUCY RAMOS GUIMARAES BORGES               16403 SP 30.04.2014
+     8            123 1        1       R JOSE ZANGUETTIN                         17580 SP 09.09.2013
+     8            236 1        1       R SENADOR RODOLFO MIRANDA                 17580 SP 05.11.2014
+     8            699 1        1       RUA JOAO TEIXEIRA                         17580 SP 05.11.2014
+     8            817 1        1       RUA GASTAO VIDIGAL                        17650 SP 16.09.2014
+     8            898 1        1       R RYO HAKAMADA                            17580 SP 23.10.2014
+     8            905 1        1       JORGE BERNARDONI                          17519 SP 28.10.2014
+     8          10069 1        1       BRASILIA                                  17580 SP 05.06.2014
+     8          11638 1        1       MASSARU TAKATA                            17580 SP 15.09.2014
+     8          31246 1        1       R EMBAIXADOR MACEDO SOARES                17580 SP 27.10.2014
+     8          32405 1        1       DR LUIS MIRANDA                           17580 SP 08.04.2011
+     8          35227 1        1       R CIPRIANO REMEDI                         17580 SP 23.06.2014
+     8          39085 1        1       RUA JOSE ZANGUETIN                        17580 SP 03.11.2014
+     8          39955 1        1       RUA HEITOR BATISTA RAMOS                  17670 SP 17.06.2013
+     8          40627 1        1       R.OTILIA CLEMENTINA RODE                  17580 SP 13.04.2011
+     8         500319 1        1       RUA SENADOR RODOLFO MIRANDA               17580 SP 25.05.2012
+     8         510173 1        1       IWAO HASEGAWA                             17580 SP 07.08.2013
+     8         510618 1        1       RUA EXPEDICIONARIO SOUZA FILHO            18550 SP 30.04.2014
+     9            150 1        1       RUA BRASIL                                19600 SP 09.10.2014
+     9           1085 1        1       VASCO PRETO                               19065 SP 29.08.2014
+     9           1161 1        1       RUA ADONIAS CARLOS DE SOUZA               19600 SP 06.08.2014
+     9           1275 1        1       SITIO AGUA CLARA                          19610 SP 21.08.2014
+     9          25924 1        1       RUA ALLAM KARDEC                          19600 SP 02.07.2014
+    10            148 1        1       JOSE APORTA FLOR                          17603 SP 25.07.2013
+    10            547 1        1       IPIRANGA                                  17602 SP 01.11.2013
+    10            554 1        1       SAO JOSE                                  17606 SP 11.12.2013
+    10            682 1        1       ANTONIO ANDRIANI                          17601 SP 10.12.2013
+    10            807 1        1       ALFREDO MODELLI                           17603 SP 03.01.2014
+    10            866 1        1       ANTONIO DIGIGOW                           17606 SP 15.01.2014
+    10           1624 1        1       ROBERTO CORREA MACHADO                    17603 SP 03.06.2014
+    10           2071 1        1       ASSUR BITTENCOURT                         17603 SP 23.10.2014
+    10           2081 1        1       SABINO PEREIRA PARDINHO                   17603 SP 27.10.2014
+    10          25018 1        1       DOUTOR MARIO SCAFF                         3945 SP 27.03.2013
+    10          36396 1        1       LUCELIA                                   17604 SP 23.06.2014
+    10          43335 1        1       TAMOIOS                                   17601 SP 28.03.2014
+    10          57498 1        1       SAO CIPRIANO                              17607 SP 06.01.2014
+    10          61272 1        1       DOUTOR WALDEMAR BUFFULIN                  17603 SP 29.10.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 4 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    10          70442 1        1       RUA   MANOEL DE OLIVEIRA                  17603 SP 15.10.2012
+    10          76721 1        1       GUMERCINDO DE PAULA MACHADO               17603 SP 17.05.2012
+    10          77847 1        1       MUNHOZ                                    17601 SP 06.12.2012
+    10          78115 1        1       ANTONIO CASTILHO                          17607 SP 26.02.2014
+    10         500143 1        1       PEDRO SANCHES SERRANO                     17607 SP 11.11.2013
+    10         502716 1        1       MACHADO DE ASSIS                          17602 SP 26.04.2013
+    10         504599 1        1       QUITERIA DIAS DA SILVA                    17607 SP 13.06.2014
+    10         510446 1        1       RUA CARMINO PANTOLFI                      17630 SP 20.12.2013
+    10         542176 1        1       AV  333561618                             17590 SP 19.03.2014
+    11          14457 1        2       ROD COMTE JOAO RIBEIRO DE BARROS, KM 437  17560 SP 31.01.2014
+    11          17593 1        1       R LUIZ OTOBONI                            17560 SP 31.07.2014
+    11          20252 1        1       RUA NORBERTO LUIZ DE OLIVEIRA             17560 SP 10.05.2013
+    11          21127 1        1       ESTRADA RIO DO PEIXE                      17560 SP 05.05.2014
+    11          21225 1        1       R RODOLFO ORSINI                          17560 SP 04.11.2014
+    11         854581 1        1       RUA BRASIL                                17405 SP 03.11.2014
+    12           1153 1        1       SAO PAULO                                 16901 SP 27.06.2014
+    12           2008 1        1       MONTE PASCOAL(ALPHASITIO)                  6544 SP 06.11.2014
+    12          52163 1        1       QUINTINO BOCAIUVA                         16900 SP 15.10.2012
+    12          62501 1        1       QUINTINO BOCAIUVA                         16901 SP 21.03.2014
+    12          66140 1        1       RUA JOSE MATEUS DA SILVA                  16920 SP 29.08.2014
+    12          66162 1        1       R. MAZEL                                   6708 SP 06.06.2014
+    12          69660 1        1       RUA NOVE DE JULHO                         16880 SP 25.08.2014
+    12          70313 1        1       QUINTINO BOCAIUVA                         16900 SP 25.06.2014
+    12          75638 1        1       DOM BOSCO                                 16900 SP 28.10.2014
+    12         300484 1        1       GLB ASSENTAMENTO VILA NOVA                16980 SP 14.12.2012
+    12         607417 1        1       AV TIRADENTES                             18900 SP 26.08.2013
+    12         704721 1        1       ALEXANDRE SALOMAO                         16900 SP 25.07.2014
+    13           5098 1        1       ALTO JURUA QUADRA                         17063 SP 21.10.2014
+    13           5148 1        1       SERGIPE QUADRA                            17030 SP 04.11.2014
+    13          20121 1        1       R CORREIA JUNIOR                          17050 SP 02.10.2014
+    13         130716 1        1       JOAQUIM FELIPPE DE MELLO                  17021 SP 03.06.2014
+    13         134141 1        1       RUA JOSE CARLOS DE CARVALHO  Q 1          17054 SP 24.10.2014
+    13         135418 1        1       DELIO HERMES DE OLIVEIRA CORAGEM QUADRA   17025 SP 20.02.2014
+    13         137097 1        1       ESTADOS UNIDOS QUADRA                     17054 SP 06.11.2012
+    13         144871 1        1       BRENO PINHEIRO MACHADO RIBAS              17039 SP 23.06.2014
+    13         154833 1        1       ALICE DE AZEVEDO MARQUES                  17055 SP 23.08.2013
+    13         155074 1        1       CORONEL IVON CESAR PIMENTEL               17031 SP 23.01.2012
+    13         157113 1        1       RUA JOAO RUIZ MARTINS                     17280 SP 13.08.2014
+    13         162524 1        1       RYOWA HOKAMA                              17023 SP 30.06.2014
+    13         163093 1        1       R PROFESSOR JOSE RANIERI QUADRA           17015 SP 16.09.2011
+    13         164562 1        1       FIORAVANTE TEDESCO                        17030 SP 24.10.2014
+    13         170221 1        2       R BATISTA DE CARVALHO QUADRA              17010 SP 31.10.2014
+    13         185370 1        1       ADILSON JOSE STAFUSSI                     17066 SP 15.05.2012
+    13         189714 1        1       LUCIO LUCIANO QUADRA                      17032 SP 14.10.2014
+    13         193034 1        1       ANGELO TAMAROZZI                          17054 SP 24.01.2014
+    13         195584 1        1       JOAO HENRIQUE DIX                         17063 SP 18.12.2013
+    13         204800 1        1       ANTONIO MANOEL COSTA QUADRA               17033 SP 04.06.2014
+    13         206217 1        1       R ESTADOS UNIDOS QUADRA - DE 1 ATE 12     17054 SP 29.05.2014
+    13         206583 1        1       CARLOS DEL PLETE                          17017 SP 05.11.2014
+    13         400754 1        1       RUA SEBASTIAO A DA SILVA Q 8              17021 SP 20.10.2014
+    13         401094 1        1       AV DO HIPODROMO                           17032 SP 03.04.2014
+    13         401243 1        1       AUGUSTO MORENO MUNHOZ                     17039 SP 24.06.2013
+    13         510862 1        1       D'ANNUNCIO CAMMAROSANO QUADRA             17055 SP 13.04.2012
+    13         511289 1        1       MARIA DA GRACA BUENO MARTINS Q4           17032 SP 12.08.2011
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 5 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    13         540305 1        1       RUA DOIS 110                              17160 SP 14.06.2013
+    14            437 1        1       PRIMO FERRASA                             16202 SP 16.09.2013
+    14           2056 1        1       RAFAEL GIORJAO                            16203 SP 29.04.2014
+    14           2599 1        1       SAO BENEDITO                              16203 SP 27.05.2014
+    14           2749 1        1       HIROSHI HARAMOTO                          16201 SP 02.06.2014
+    14           2935 1        1       RUA BENTO FURLANETO                       16270 SP 07.10.2014
+    14           3358 1        2       R JOAQUIM CICILIATTI                      16202 SP 07.11.2014
+    14           4257 1        1       DOMINGOS AGOSTINHO                        16203 SP 31.10.2014
+    14          68415 1        1       RUA  ERVANT CHAMAKIAN                     16201 SP 15.08.2014
+    14          68669 1        1       ALFREDO GALEOTI                           16201 SP 06.11.2014
+    14          74519 1        1       RUA  MANTURA ANTONIO                      16203 SP 27.10.2014
+    14          75682 1        1       DOUTOR DEMOSTHENES GUANAIS PEREIRA        16202 SP 01.08.2014
+    14          76636 1        1       FRANCISCO PINCERATO                       16204 SP 13.05.2013
+    14          80829 1        1       BARAO DO RIO BRANCO                       16200 SP 28.03.2013
+    14          84541 1        1       ERMANDO ZIN                               16202 SP 29.10.2014
+    14          85057 1        2       R FRANCISCO GALINDO DE CASTRO             16200 SP 19.11.2012
+    14          89711 1        1       ARTHUR ALBERTO                            16201 SP 08.01.2014
+    14         103591 1        1       ANTONIO AUGUSTO TOZZONI                   16201 SP 09.06.2014
+    14         113508 1        1       RUA JOSE MARQUES DA SILVA                 16270 SP 13.08.2014
+    14         116962 1        1       VEREADOR SERGIO ROSARIO RODRIGUES         16013 SP 28.10.2014
+    14         118389 1        1       DEZOITO                                   16202 SP 06.11.2014
+    14         127877 1        1       NICOLAU MARINO GONCALVES                  16207 SP 25.06.2014
+    14         130179 1        1       OLIVIO MONTEFUSCO DE CAMPOS               16201 SP 09.12.2013
+    14         530075 1        1       MANOEL DOMINGUES VENTURA                  16203 SP 24.07.2014
+    14         530373 1        1       R FUNDADORES                              16200 SP 27.10.2014
+    14         531066 1        1       VERA CRUZ                                 16203 SP 04.08.2014
+    14         531157 1        1       ANGELO FOLINI                             16204 SP 28.10.2014
+    14         531843 1        1       ANTONIO AUGUSTO TOZZONI                   16201 SP 01.08.2014
+    14         534439 1        1       JOSE VITOR PEREIRA GIAMPIETRO             16201 SP 13.08.2014
+    14         534544 1        1       JOSE MASSON                               16201 SP 13.08.2014
+    14         534727 1        1       ERNESTO TEIXEIRA DA SILVA                 16202 SP 11.07.2013
+    14         535225 1        1       R FLORINDO LOT                            16202 SP 06.02.2012
+    14         601469 1        1       JOSE VIEIRA                               16203 SP 29.04.2014
+    14         601519 1        1       TREZE DE MAIO                             16265 SP 27.05.2014
+    14         601530 1        1       PROFESSOR HERMINIO CANTIZANI              16200 SP 25.06.2014
+    14         601554 1        1       FLORINDO LOT                              16202 SP 14.10.2014
+    14         601565 1        1       AVAK BEDOQUIAN                            16200 SP 18.06.2014
+    14         710725 1        1       RUA AGENOR LEOPOLDO                       16265 SP 10.10.2013
+    14         710788 1        1       AV CASTILHO                               16270 SP 01.08.2014
+    14         710798 1        1       R OITO DE JULHO                           16265 SP 24.07.2014
+    14         730044 1        1       AVENIDA RUI BARBOSA                       16260 SP 28.10.2014
+    15          18680 1        1       AV DIONIZIA ZUCCHI                        16500 SP 04.09.2014
+    15          19536 1        1       R HUMBERTO VENTURA                        16500 SP 30.10.2014
+    15          20718 1        1       AV CHOTEI KOTINDA                         16500 SP 13.06.2013
+    15          21669 1        1       R RAMON MAGANHA GUIRADO                   16520 SP 24.09.2014
+    15         521893 1        1       RUA MARLENE OLHER MARINHO                 16500 SP 18.05.2010
+    15         522052 1        1       RUA VER MARTIN SANCHES CARMONA            16500 SP 30.07.2012
+    15         530593 1        1       RUA MANOEL DA SILVA PARDA                 16570 SP 23.09.2013
+    15         531016 1        1       ITAGIBA HOMEM DA COSTA                    16570 SP 02.09.2013
+    15         600125 1        1       RUA NOVE DE JULHO                         16500 SP 27.10.2014
+    15         856896 1        1       AV JACOB ZUCHI                            16500 SP 04.11.2014
+    16           1603 1        1       RUA FADLO JABUR                           19880 SP 26.09.2014
+    16           1637 1        1       SAO CARLOS                                19807 SP 14.10.2014
+    16          22628 1        1       RUA SALVADOR FARAH                        19880 SP 20.06.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 6 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    16          27224 1        1       R FELISBERTO S GARRIDO                    19880 SP 24.02.2012
+    16          29025 1        1       RUA SAO JOSE                              19880 SP 25.08.2014
+    16          29333 1        2       R JOSE VIEIRA DA CUNHA E SILVA            19800 SP 01.08.2014
+    16          29896 1        1       RUA ASSAD CHADI                           19880 SP 16.06.2014
+    16          31252 1        1       R ZACHARIAS NATAL PALAZIM                 19880 SP 01.04.2013
+    16          32329 1        1       RUA ADOLFO CAVINA                         19880 SP 05.11.2014
+    16          35967 1        2       R JOSE VIEIRA DA CUNHA E SILVA            19800 SP 02.07.2014
+    16         510310 1        1       RUA NOSSA SENHORA DE FATIMA               19880 SP 20.10.2014
+    17             89 1        1       AV ANERCIO SECCO                          15530 SP 20.06.2014
+    17            164 1        1       LINHA TREVO BAIRRO ESTACAO                15530 SP 31.03.2014
+    17            179 1        1       ATILIO VENDRAMINE                         15530 SP 25.08.2014
+    17            192 1        1       RUA ASTROGILDO ALVES MENEZES              15530 SP 21.05.2014
+    17            194 1        1       VITORIO LUVIZARIO                         15530 SP 21.05.2014
+    17            292 1        1       VITORIO LUVIZARIO                         15530 SP 25.08.2014
+    17            301 1        1       DAMIAO GONZALES MARTINEZ                  15530 SP 01.08.2014
+    17            304 1        1       LINHA KFOURI                              15530 SP 21.08.2014
+    17            306 1        1       RUA DOIS                                  15530 SP 01.08.2014
+    17         510066 1        1       R JOAQUIM C MACIEL                        15530 SP 01.08.2014
+    17         511043 1        1       AV PEDRO BENEVENTE FILHO                  15530 SP 24.09.2014
+    17         511767 1        1       SITIO TRIUNFO                             15530 SP 20.05.2013
+    17         581720 1        1       FRANCISCO MARCIANO DA SILVA               15530 SP 04.06.2014
+    18          25023 1        1       AV MANOEL SEGUNDO                         17470 SP 07.08.2014
+    18         540206 1        1       RUA PREF MARIA CARMO S C QUEIROZ          17440 SP 22.10.2014
+    18         580499 1        1       R JOSE VANZO                              17480 SP 20.03.2013
+    18         710016 1        2       AV MARIO AMARAL GURGEL                    17480 SP 27.11.2013
+    19            106 1        1       AL BRAULIO MOLINA FRIAS                   17800 SP 10.02.2014
+    19          27792 1        1       RUA RICIERI PERNOMIAN                     17780 SP 06.11.2014
+    19          30231 1        1       RUA ANTONIO VACCARI                       17780 SP 29.07.2014
+    19          34719 1        1       RUA CESAR SGARBI                          17780 SP 01.10.2014
+    19         510133 1        1       RUADEMETRIO CAVILAK                       17780 SP 03.04.2014
+    19         600526 1        1       RUA LINCINDO DE ANDRADE                   17790 SP 03.11.2014
+    19         857060 1        1       RUA JOSE BONIFACIO                        17790 SP 03.11.2014
+    19         858326 1        1       RUA GABRIEL DA SILVA BARROS               17780 SP 20.10.2014
+    20             98 1        1       RUA DOMINGO MATIAS 741                    16800 SP 08.11.2013
+    20            365 1        1       SITIO TANAKA                              16800 SP 14.07.2014
+    20          30062 1        1       AV NOSSA SRA DE FATIMA                    16800 SP 06.08.2014
+    20          31571 1        1       R JACI                                     4140 SP 11.06.2014
+    20          33575 1        1       R 3                                       16800 SP 22.02.2012
+    20         510497 1        1       RUA FERNANDA MARUYAMA                     16800 SP 15.02.2012
+    21            724 1        1       RUA JOAOMANOEL CLARA                      17720 SP 01.07.2014
+    21           1142 1        1       CX POSTAL                                 17700 SP 09.10.2014
+    21           1152 1        1       AV FELIPE CARMONA                         17700 SP 14.10.2014
+    21          16461 1        1       RUA FELIX CASTILHO DIAS 679 CASA          17700 SP 22.03.2013
+    21          29881 1        1       RUA VISCONDE DE MAUA                      17700 SP 10.09.2014
+    21          33112 1        1       R ESTEVAN CASTELLAZZI                     17700 SP 01.09.2014
+    21          33437 1        1       RUA CALIFORNIA                            17700 SP 31.07.2014
+    21          36169 1        1       RUA PORTO ALEGRE                          17800 SP 05.11.2014
+    21          43860 1        1       RUR RUAL                                  17700 SP 09.01.2014
+    21          44049 1        1       R MARIA DO N ALVARENGA                    17700 SP 25.03.2013
+    21          44353 1        1       RUA VISCONDE DE MAUA                      17700 SP 06.08.2013
+    21          44415 1        1       RUA VITORIO BETIOL 368                    17700 SP 30.09.2014
+    21         532393 1        1       RUA PROF ANTONIO PER SANTANA              17720 SP 06.08.2013
+    21         790427 1        1       R CALIL MARGI                             17700 SP 28.08.2014
+    22           1505 1        1       R PAULO FREIRE                            16300 SP 15.09.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 7 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    22           1562 1        1       R AUGUSTO PEREIRA DE MORAES               16300 SP 30.09.2014
+    22           1892 1        1       RUA FRANCISCO ALVES DA SILVA              16300 SP 05.11.2014
+    22          45794 1        1       R JOSE RODRIGUEIRO                        16300 SP 09.02.2012
+    22          46785 1        1       R PASCOAL SENATORE                        16300 SP 14.06.2012
+    22          54672 1        1       AV EUGENIA MONTRAZI                       16300 SP 11.09.2014
+    22          55654 1        1       R PREFEITO DR ENIO SOLIANI                16300 SP 08.05.2014
+    22          55876 1        1       AV PRESIDENTE CASTELO BRANCO              11704 SP 06.09.2013
+    22          56301 1        1       AV LUIZ OSORIO                            16300 SP 03.02.2014
+    22          63387 1        1       AV LEANDRO RATISBONA DE M                 16300 SP 17.01.2014
+    22          65651 1        2       RUA ANDRELINO VAZ ARRUDA                  16300 SP 04.07.2014
+    22          66564 1        1       AV MARGINAL MARIA CHICA                   16300 SP 05.06.2014
+    22          67893 1        1       R FERNANDO BOMBONATI                      16300 SP 14.05.2014
+    22          68473 1        1       R MARIA MORONE DIAS                       16300 SP 25.04.2014
+    22          70194 1        1       RUA RIO PRETO                             15290 SP 23.10.2013
+    22         595138 1        1       R ASCENCIO DIAS GUEBARA                   16310 SP 13.10.2014
+    22         641173 1        1       RUA SAO PAULO 718                         16300 SP 12.03.2014
+    22         643887 1        1       EUCLIDES BIS   240                        16300 SP 07.11.2014
+    22         645716 1        1       AVENIDA MINAS GERAIS                      16300 SP 16.09.2014
+    22         646345 1        1       RUA MANOEL TAVARES                        14740 SP 17.10.2014
+    23          99327 1        1       CATANDUVA                                 15030 SP 09.03.2010
+    23         123173 1        1       GENERAL GLICERIO                          15015 SP 05.11.2014
+    23         130757 1        1       NELVO FACCHINI                            15042 SP 05.03.2014
+    23         147316 1        1       MAJOR CARLOS DE FREITAS 111               15830 SP 11.07.2012
+    23         149257 1        1       RUA  AGNELLO DE OLIVEIRA                  15047 SP 30.01.2014
+    23         150129 1        1       DO CAJU                                   15062 SP 17.04.2014
+    23         156940 1        1       EUCLIDES DE LIMA                          15076 SP 24.10.2013
+    23         157782 1        1       CATANDUVA                                 15030 SP 05.11.2014
+    23         180402 1        1       AVENIDA DOUTOR ANTONIO TAVARES PEREIRA L  15061 SP 23.09.2013
+    23         181204 1        1       AV JOSE DA SILVA SE                       15056 SP 02.01.2013
+    23         184393 1        1       SORAIA                                    15075 SP 02.12.2013
+    23         184921 1        1       ALMIRANTE TAMANDARE                       15047 SP 29.09.2014
+    23         192721 1        1       RUA ANTONIO ROBERTO CATELANI              15115 SP 02.07.2013
+    23         193158 1        1       JOSE DOS REIS PEREIRA                     15044 SP 02.01.2014
+    23         194279 1        1       MARIDELIA                                 15055 SP 11.06.2014
+    23         194280 1        1       CAETANO ELZO ROGERIO                      15084 SP 14.05.2014
+    23         195225 1        1       PROFESSOR ENJOLRAS VAMPRE                 15091 SP 30.06.2014
+    23         196402 1        1       FAIEZ NAMETALAH TARRAF                    15081 SP 25.04.2014
+    23         199134 1        1       OSCAR BOTOSSI                             15053 SP 03.09.2014
+    23         200994 1        1       R JAIME DOS SANTOS PEREIRA 200            15042 SP 26.08.2013
+    23         201099 1        1       SALDANHA MARINHO                          15010 SP 28.04.2014
+    23         201150 1        1       R DR MAURICIO GOULART        535          15076 SP 06.09.2013
+    23         201923 1        1       POTIRENDABA                               15080 SP 05.11.2012
+    23         204405 1        2       R MELCHIADES CARDOSO DE OLIVEIRA          15077 SP 26.09.2014
+    23         204512 1        1       PROFESSOR JOSE LAUDEVINO BARBOSA(PROFESS  15044 SP 02.07.2014
+    23         205578 1        1       GUIDO CHINELLO                            15042 SP 25.09.2014
+    23         206000 1        1       PRESIDENTE ROOSEVELT                      15030 SP 23.07.2014
+    23         206146 1        1       VERGILIO ANTONIO SIMIONATO                15057 SP 07.11.2013
+    23         207939 1        1       RUA ORLANDO RAMIN                         15210 SP 23.06.2014
+    23         252012 1        1       VITOR BRITO BASTOS                        15030 SP 25.02.2014
+    23         252022 1        2       R CHAIM JOSE ELIAS                        15084 SP 29.09.2014
+    23         255329 1        1       SILVA JARDIM                              15010 SP 20.08.2014
+    23         255571 1        1       JOAO FLORIDO                              15077 SP 02.10.2014
+    23         255813 1        1       R BENEDITO TAVARES DE OLIVEIRA            15041 SP 20.10.2014
+    24            180 1        1       RUA DR FRANCISCO SANCHES DIAS             16880 SP 16.09.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 8 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    24            346 1        1       RUA JOAO RODRIGUES NASCIMENTO             16700 SP 06.03.2014
+    24            366 1        1       RUA  XENOFONTE AURELIANO SIQUEIRA         16880 SP 08.04.2014
+    24            681 1        1       RUA DR RAMOS DE MOURAO                    16880 SP 20.10.2014
+    24            723 1        1       ALAMEDA E                                 16880 SP 24.09.2014
+    24            736 1        1       RUA XV DE NOVEMBRO                        16880 SP 04.09.2014
+    24            855 1        1       RUA HUGO SCATENA                          16790 SP 06.10.2014
+    24           6000 1        1       R VEREADOR JOSE NAGAO                     16700 SP 07.11.2014
+    24           6028 1        1       R DUQUE DE CAXIAS                         16880 SP 29.08.2014
+    24           6035 1        1       R EPITACIO PESSOA                         16700 SP 26.06.2014
+    24           6044 1        1       RUA ANTONIO VIDEIRA DE ALBUQUERQUE        16700 SP 16.07.2014
+    24          25013 1        1       RUA CESAR AUGUSTO FRAZILI                 16880 SP 23.09.2014
+    24          25538 1        1       RUA TORQUATO VIRGINIO DA SILVA            16880 SP 22.04.2014
+    24          25831 1        1       R LOPES FRAGOSO                           16880 SP 03.02.2014
+    24          25833 1        1       ANTONIO DE GODOY                          16075 SP 19.05.2014
+    24          29811 1        1       RUA RAUL MOREIRA                          16790 SP 11.08.2014
+    24          30061 1        1       RUA CUNHA BUENO                           16790 SP 25.04.2014
+    24          33470 1        1       VITALINO STELIM                           16700 SP 29.05.2014
+    24          35089 1        1       RUA CINCO                                 16880 SP 16.10.2013
+    24          42222 1        1       RUA ALCIDES ALVES                         16880 SP 29.10.2014
+    24          45551 1        1       R FRANCISCO RONDON                        16880 SP 04.07.2013
+    24          46001 1        1       RUA XENOFONTE AURELIANO SIQUEIRA          16880 SP 11.06.2012
+    24          47623 1        1       RUA PARAISO                               16074 SP 28.02.2014
+    24          47817 1        1       R BARTOLOMEU BUENO                        16880 SP 22.05.2013
+    24          50537 1        1       RUA BENTETEVI                             16880 SP 27.05.2014
+    24          50653 1        1       RUA TAKEO YAKOMIZO                        16880 SP 09.06.2014
+    24          53012 1        1       RUA ROLITERIO                             16750 SP 07.05.2014
+    24          54131 1        1       RUA HUGO SCATENA                          16790 SP 16.01.2014
+    24          54653 1        1       R ISAIAS DE SOUZA LIMA                    16700 SP 22.05.2013
+    24          54672 1        1       R ANTONIO TEIXEIRA                        16700 SP 03.06.2013
+    24          54705 1        1       RUA JONA FELIX                            16700 SP 04.06.2014
+    24          56583 1        1       RUA ANINCETA RODRIGUES DE SOUZA           79180 MS 12.09.2014
+    24          56886 1        1       R DR JOAQUIM VILLAR                       16880 SP 05.08.2013
+    24          57242 1        1       RUA QUATRO                                16750 SP 09.10.2014
+    24          57567 1        1       R MATHIAS CARDOSO                         16880 SP 30.08.2012
+    24          58561 1        1       R DOIS                                    16880 SP 20.06.2014
+    24          58801 1        1       AV SIR ALEX FLEMING                       16750 SP 06.06.2013
+    24         500669 1        1       R HUGO SCATENA                            16790 SP 08.08.2014
+    24         600944 1        1       LOPES FRAGOSO                             16880 SP 29.02.2012
+    24         609131 1        1       RUA ALMIRANTE BARROSO                     16880 SP 23.07.2013
+    24         851597 1        1       RUA DUQUE DE CAXIAS                       16880 SP 03.11.2014
+    25            129 1        1       LAUREANO                                  15502 SP 09.09.2013
+    25            544 1        1       ESPIRITO SANTO                            15501 SP 28.11.2013
+    25            589 1        1       TV INOCENCIO M FILHO                      15640 SP 23.12.2013
+    25           1310 1        1       R ALFREDO GORAYB                          15500 SP 05.11.2014
+    25           1338 1        1       ALAGOAS                                   15505 SP 30.04.2014
+    25           1671 1        1       TRAVESSA GUARANI 2313                     15501 SP 25.06.2014
+    25          23448 1        1       RUA JOAQUIM INACIO NOGUEIRA               15503 SP 30.06.2014
+    25          53105 1        1       R AUGUSTO DUO                             15502 SP 04.07.2013
+    25          55509 1        1       PRESIDENTE COSTA E SILVA                  15501 SP 11.06.2014
+    25          57990 1        1       ITALIA                                    15503 SP 16.07.2014
+    25          60628 1        1       BAHIA                                     15500 SP 19.04.2012
+    25          61166 1        1       R GOIANIA                                 15501 SP 09.05.2014
+    25          69009 1        1       SITIO FRANGO RICO                         15520 SP 20.05.2013
+    25          73647 1        1       PARAIBA                                   15505 SP 01.06.2012
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 9 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    25          76063 1        1       JARDIM BOTANICO                           15501 SP 26.10.2011
+    25          76997 1        1       RODOVIA EUCLIDES DA CUNHA                 15520 SP 21.05.2014
+    25          77791 1        1       CHUKICHI KAKUDA                           15503 SP 29.05.2012
+    25          79473 1        2       AVENIDA AFONSO CAFARO                     15600 SP 02.07.2013
+    25          80543 1        1       R OSVALDO GRANDIZOLI                      15505 SP 17.10.2013
+    25          80801 1        1       BENEDITO FERRAZ FERREIRA                  15550 SP 21.10.2014
+    25          80991 1        2       AV FRANCISCO VILAR HORTA                  15500 SP 21.07.2014
+    25          81417 1        1       GOIANIA                                   15501 SP 12.08.2014
+    25          81662 1        1       RUA ESPIRITO SANTO                        15640 SP 20.12.2013
+    25          86423 1        1       OTHOGAMIZ LUIZ ARANTES                    15502 SP 05.12.2013
+    25         560408 1        1       RUA ALVARO MENDES                         15525 SP 23.06.2014
+    25         600207 1        1       URUGUAI                                   15502 SP 09.06.2014
+    25         865858 1        1       BOM CLIMA                                 15500 SP 05.11.2014
+    26            355 1        1       MORVAN FIGUEIREDO                         26285 RJ 02.12.2013
+    26            825 1        1       LUIZ GERALDO DIAS FERREIRA                21520 RJ 21.01.2014
+    26            884 1        1       OTAVIO CARNEIRO                           24230 RJ 25.11.2013
+    26            998 1        1       PEREIRA NUNES                             20540 RJ 18.03.2014
+    26           1854 1        1       ARARIBOIA                                 25570 RJ 28.02.2014
+    26           2918 1        1       R ACACIO CAMPOS DOS SANTOS                24422 RJ 30.04.2014
+    26           3321 1        1       R VINTE E QUATRO DE MAIO - DE 1116 ATE 9  20725 RJ 03.07.2014
+    26           4228 1        1       R ADALBERTO ARANHA                        20540 RJ 05.08.2014
+    26           4287 1        1       MARECHAL RONDON                           20950 RJ 11.08.2014
+    26           4848 1        1       DOUTOR ROBERTO FREIRE                     21830 RJ 15.09.2014
+    26           5490 1        1       RIO DOURO                                 25245 RJ 03.10.2014
+    26           5821 1        2       PR DE BOTAFOGO - DE 285 ATE 99999         22250 RJ 25.09.2014
+    26           5913 1        1       PATRICIO DE SOUZA                         24732 RJ 26.09.2014
+    26           6171 1        1       JOAO PESSOA                               21515 RJ 29.10.2014
+    26           6174 1        1       AV BARTOLOMEU MITRE - DE 497 ATE 1111 LA  22431 RJ 06.11.2014
+    26           6203 1        1       EST DO ROCADINHO                          25780 RJ 10.10.2014
+    26           6359 1        1       SETE                                      25908 RJ 21.10.2014
+    26           6514 1        1       JORNALISTA PINHEIRO LEMOS                 21650 RJ 03.11.2014
+    26          35289 1        1       ADALBERTO ARANHA                          20540 RJ 17.02.2014
+    26         144965 1        1       R MARQUES DE ABRANTES                     22230 RJ 02.12.2008
+    26         173882 1        1       JOAQUIM TAVORA                            24230 RJ 12.06.2014
+    26         177205 1        1       UBIRATA                                   21051 RJ 12.06.2007
+    26         242450 1        1       HOLANDA(CAROLINA)                         23092 RJ 06.11.2014
+    26         244802 1        1       DO TAQUARAL                               21842 RJ 21.08.2014
+    26         278955 1        1       RUA VISCONDE DE ASSECA                    22730 RJ 28.07.2014
+    26         279136 1        1       RUA MANOEL ARAUJO                         21230 RJ 08.08.2007
+    26         279202 1        1       R GUIMARAES ROSA                          22620 RJ 11.10.2012
+    26         282689 1        1       UM(CJ CAMPINHO)                           23067 RJ 29.01.2014
+    26         299686 1        1       FONSECA RAMOS                             24445 RJ 09.06.2014
+    26         311104 1        1       R ESMERALDA VALLADARES(LOT MARAVISTA)     24342 RJ 22.10.2014
+    26         335319 1        1       ALMIRANTE ALEXANDRINO                     20241 RJ 03.11.2014
+    26         368314 1        1       SANTO ALFREDO                             20240 RJ 03.09.2014
+    26         373470 1        1       ITAJUBARA                                 21060 RJ 09.01.2014
+    26         378269 1        1       R SARAPUI                                 26574 RJ 19.01.2001
+    26         387111 1        1       REGINALDO DE SOUZA NOGUEIRA               25943 RJ 03.02.2014
+    26         390531 1        1       RUA PROJETADA E                           21040 RJ 12.09.2011
+    26         391262 1        1       DE SANTANA                                20230 RJ 24.10.2014
+    26         392400 1        2       RUA DAS LARANJEIRAS                       22240 RJ 28.01.2014
+    26         394646 1        1       PRACA FAUSTOS BASTOS                      27135 RJ 12.09.2011
+    26         397078 1        1       R DAS LARANJEIRAS                         22240 RJ 07.08.2014
+    26         399656 1        1       MARECHAL FONTENELE                        21750 RJ 16.09.2013
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 10 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    26         401035 1        1       ARAPASO                                   21655 RJ 21.07.2014
+    26         404667 1        1       RUA PROFESSOR ALBERTO MEYER               21930 RJ 26.09.2013
+    26         405219 1        2       TRAVESSA CIRCULAR                         24445 RJ 07.05.2014
+    26         408979 1        1       CAPITUI                                   21921 RJ 19.12.2013
+    26         413290 1        1       CABRALIA                                  21557 RJ 26.02.2014
+    26         413483 1        1       ANA QUINTAO                               20751 RJ 26.02.2013
+    26         414140 1        1       R MANOEL RAMOS                            24467 RJ 12.09.2011
+    26         427160 1        1       DOS RUBIS                                 21510 RJ 07.06.2013
+    26         428340 1        1       DOIS DE DEZEMBRO                          22220 RJ 14.03.2014
+    26         429862 1        2       TV DO OUVIDOR                             20040 RJ 03.12.2013
+    26         429894 1        1       R ABILIO JOSE DE MATOS                    24436 RJ 04.06.2011
+    26         430565 1        1       TENENTE COELHO                            20250 RJ 05.08.2010
+    26         431836 1        1       IGUATEMI                                  21920 RJ 01.11.2012
+    26         431855 1        1       DARWIN BRANDAO                            21515 RJ 01.11.2011
+    26         434498 1        1       GUSTAVO SAMPAIO                           22010 RJ 12.09.2013
+    26         439242 1        1       CARLOS DE SA                              22220 RJ 07.10.2013
+    26         440313 1        1       LUSITANIA                                 20730 RJ 22.02.2013
+    26         440691 1        1       CONDE DE BONFIM                           20520 RJ 09.04.2013
+    26         442544 1        1       CAMPISTA                                  25580 RJ 28.11.2013
+    26         442549 1        1       JOAO FONSECA                              24310 RJ 29.09.2014
+    26         442650 1        2       R PRIMEIRO DE MARCO                       20010 RJ 15.10.2014
+    26         445200 1        2       R JULIO DINIZ                              4547 SP 06.08.2014
+    26         512416 1        1       RUA ENEAS MARTINS                         21660 RJ 10.10.2011
+    26         512760 1        1       RUA CONSELHEIRO AGOSTINHO                 20770 RJ 29.12.2011
+    26         514599 1        1       R GAVIAO PEIXOTO                          24230 RJ 29.09.2014
+    26         515191 1        1       AVENIDA BRASIL                            21230 RJ 05.11.2013
+    26         515369 1        1       IRAPUA                                    21215 RJ 12.06.2013
+    26         517054 1        1       ARISTIDES CAIRE                           20775 RJ 15.05.2014
+    26         520319 1        1       RUA 13                                    24910 RJ 18.10.2012
+    26         520646 1        1       TEJUPA                                    21221 RJ 07.03.2014
+    26         554820 1        1       R FRANCISCO GOIS CALMON                   21940 RJ 20.03.2014
+    26         559151 1        1       OZEIAS MOTA                               21061 RJ 03.02.2012
+    26         678916 1        1       LAGOA CLARA                               21051 RJ 02.05.2014
+    26         701060 1        1       RUA DJALMA                                25212 RJ 01.07.2008
+    26         728805 1        1       JACUNDA                                   21863 RJ 12.08.2014
+    26         821504 1        1       R CAROLINA SANTOS                         20720 RJ 21.03.2014
+    27           1975 1        1       CAINGANGUES                               86183 PR 05.09.2014
+    27          48649 1        1       NACIONAL                                  86191 PR 24.02.2014
+    27          49675 1        1       ROBERTO CONCEICAO                         86192 PR 26.09.2013
+    27          52799 1        1       ITAMARATI                                 86191 PR 23.10.2014
+    27          53557 1        1       VITORIAREGIA                              86188 PR 15.07.2014
+    27          56112 1        1       CLAUDIO MANOEL DA COSTA                   86185 PR 20.05.2014
+    27          71077 1        1       FIGUEIRA                                  86072 PR 01.08.2014
+    27          92060 1        1       DEZENOVE DE ABRIL                         86185 PR 23.04.2013
+    27         502583 1        1       MARIA JACOMEL PACCOLA                     86183 PR 08.11.2012
+    28          10739 1        1       R CONCEICAO                               16210 SP 08.10.2014
+    28          21056 1        1       R ROBERTO CLARK REIS                      16210 SP 16.01.2014
+    28         520599 1        1       AV AMALIA                                 16210 SP 05.11.2014
+    29          10720 1        1       RUA FLORIANO PEIXOTO                      16290 SP 15.07.2013
+    29          17284 1        1       R EMANOEL RAMOS DA SILVA                  16290 SP 16.02.2011
+    29         530193 1        1       RUA ORLANDO CARREIRO DE MELO              16290 SP 16.01.2014
+    29         530428 1        1       RUA ANTONIO MARQUES SOUZA 40              16290 SP 04.03.2013
+    31           1886 1        1       ANTONIO FERREIRA DE ALBUQUERQUE            4929 SP 27.08.2014
+    31           4817 1        1       NATINGUI                                   5443 SP 15.09.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 11 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    31          16266 1        1       NAZARE PAULISTA                            5448 SP 20.08.2014
+    31          50113 1        1       AL LEIRIA                                 13342 SP 14.04.2014
+    31          54516 1        1       DOUTOR GUILHERME DUMONT VILLARES           5640 SP 08.07.2013
+    31          69429 1        1       HARMONIA                                   5435 SP 09.09.2013
+    31          82880 1        2       TRAV COM STEPHANO CHOFFI                   5379 SP 23.07.2014
+    31         100205 1        1       PAVAO                                      6280 SP 26.06.2014
+    31         107442 1        2       RUA RUMAICA                                5057 SP 06.05.2013
+    31         115551 1        1       DOUTOR LUIS AUGUSTO DE QUEIROS ARANHA      5453 SP 03.11.2014
+    31         119224 1        1       GARDENIA                                   6110 SP 16.01.2014
+    31         120317 1        1       AGENOR COUTO DE MAGALHAES                  5174 SP 26.08.2013
+    31         121010 1        1       PADRE PEREIRA DE ANDRADE                   5469 SP 13.06.2012
+    31         123762 1        1       EUSEBIO DA COSTA DOURADO                   5763 SP 20.09.2013
+    31         126077 1        1       RUA  LUIZ BELLI                            6665 SP 05.11.2014
+    31         127177 1        1       JURANDA                                    5442 SP 17.07.2014
+    31         130771 1        2       RUA DOS PINHEIROS                          5422 SP 29.04.2014
+    31         139529 1        1       AUXILIAR II                               65072 MA 14.08.2012
+    31         150777 1        1       R MATIPO                                  32015 MG 16.07.2013
+    31         153033 1        1       INACIO MANUEL ALVARES                      5372 SP 04.10.2013
+    31         197000 1        1       BANDEIRANTES                               1124 SP 17.09.2014
+    31         300077 1        2       R CORONEL CAMISAO                          5590 SP 15.08.2014
+    31         300887 1        1       DOS ORQUIDOFILOS                           6843 SP 11.09.2014
+    31         400210 1        1       GUERRA JUNQUEIRO                           5463 SP 25.08.2014
+    31         854232 1        1       AV PEDROSO DE MORAIS 2536                  5420 SP 05.11.2014
+    32          46424 1        2       AV IGUACU                                 86600 PR 11.10.2013
+    32          53177 1        1       R HANS MAX SECKLES                        86600 PR 03.01.2014
+    32         510048 1        1       CAMELIAS                                  86604 PR 05.11.2014
+    32         521077 1        1       RUA ANTONIO DE PAULA                      86600 PR 08.07.2011
+    33            346 1        1       RUA PEDRO FONSECA                         19500 SP 29.10.2014
+    33          19573 1        1       RUA PASTOR LAURINDO                       19500 SP 04.11.2014
+    33          25425 1        1       RUA JOSE MARIA SANCHES                    19500 SP 11.06.2014
+    33          26145 1        1       VITOR BAZZO                               19500 SP 06.01.2014
+    33          26983 1        1       RUA BELARMINO SALES GARCIA                19500 SP 07.02.2013
+    33          27967 1        1       RUA MANSUR NAUFAL                         19500 SP 05.03.2014
+    33         522332 1        1       R ANTONIO CORDEIRO 325                    19500 SP 19.09.2014
+    34            306 1        1       RUA QUATRO                                17730 SP 06.08.2014
+    34          11651 1        1       RUA RIO GRANDE DO NORTE 944               17730 SP 31.05.2011
+    34          16636 1        1       RUA NATAL                                 17730 SP 07.01.2014
+    34          18551 1        1       RUA FORTALEZA                             17730 SP 30.09.2014
+    35           7674 1        1       RUA JEQUITIBAS                            18725 SP 16.10.2014
+    35           7759 1        1       RUA DOS CANARIOS                          18725 SP 17.09.2014
+    35           8023 1        1       R BENEDITO LENCIONI                       18720 SP 16.04.2012
+    35           8217 1        1       R TUPINIQUINS(JD TUPA)                     9831 SP 18.08.2014
+    35           8551 1        2       PRACA DA MATRIZ                           18720 SP 25.07.2014
+    35         600620 1        1       RUA DAS CALENDULAS                        18725 SP 22.07.2014
+    36            107 1        1       RUA LUIZ BALTUILHE 394                    19360 SP 27.10.2014
+    36            109 1        1       RUA CASTRO ALVES 525                      19400 SP 18.05.2013
+    36            188 1        1       JOSE EUSTACHIO DE CASTRO                  19065 SP 09.10.2014
+    36            366 1        1       ARTUR JORGE GUAZZI                        19065 SP 22.10.2014
+    36            481 1        1       MIQUELINA DIAS                            19023 SP 03.12.2013
+    36            534 1        1       RUA ANTONIO GABAN                         19160 SP 25.11.2013
+    36            547 1        1       CANDIDA RODRIGUES CASSULINO               19061 SP 16.10.2013
+    36            749 1        1       JACOB BLUMER                              19015 SP 24.09.2014
+    36           1159 1        1       BEIJAMIRO BATISTA DE ALCANTARA            19060 SP 09.01.2014
+    36           1457 1        1       AMELIA SANCHES MATHEUS                    19045 SP 27.08.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 12 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    36           1949 1        1       JOSE DE LIMA                              19027 SP 07.11.2014
+    36           2045 1        1       R AURELIO GODOY HUGO                      19040 SP 09.06.2014
+    36           2054 1        1       PEDRO ARENALES BENITO                     19045 SP 14.05.2014
+    36           2710 1        1       JULIO PERUCHE                             19026 SP 01.09.2014
+    36           2908 1        1       R JOAO MAZZARO                            19045 SP 05.09.2014
+    36           2910 1        1       RUA INGLESES DE SOUZA                     19160 SP 08.09.2014
+    36           2911 1        1       R JOSE MANHOLER                           19033 SP 09.09.2014
+    36          24263 1        1       DAS PAPOULAS                              19065 SP 27.05.2014
+    36          93208 1        1       DAS AMOREIRAS                             19066 SP 25.09.2013
+    36          98184 1        1       DONATO ARMELIN                            19013 SP 25.02.2014
+    36         100288 1        1       RUA BELA VISTA                            19023 SP 25.07.2014
+    36         101794 1        1       ANTONIO ESPIGAROLLI                       19042 SP 06.09.2012
+    36         103546 1        1       JOAO JOAQUIM GALINDO                      19057 SP 26.05.2014
+    36         107710 1        1       NORBERTO VALIM                            19110 SP 25.09.2014
+    36         109079 1        1       DOS IMIGRANTES                            19061 SP 19.09.2012
+    36         109174 1        1       NOSSA SENHORA DE LOURDES                  19033 SP 15.05.2014
+    36         113724 1        1       NOCHETE                                   19033 SP 13.02.2012
+    36         124205 1        1       RUA VICENTE DIAS GARCIA                   19160 SP 22.10.2014
+    36         124480 1        1       DOUTOR GABRIEL COSTA                      19024 SP 08.09.2014
+    36         125923 1        1       CAROLINA LANER BONGIOVANI                 19026 SP 22.04.2014
+    36         135263 1        1       AV  MARGINAL                              19027 SP 05.11.2014
+    36         137145 1        1       CORONEL ALBINO                            19020 SP 14.08.2014
+    36         139819 1        1       SANTO CREPALDI                            19013 SP 16.04.2014
+    36         143331 1        1       R CEL DIEDERICHSEN                        19570 SP 14.10.2014
+    36         145138 1        1       DOS JATOBAS                               19066 SP 08.01.2014
+    36         150088 1        1       R AQUILES TOLOMEI                         19030 SP 21.10.2013
+    36         150267 1        1       MARIA QUALIO                              19100 SP 26.11.2012
+    36         151391 1        1       CLOVIS BEVILAQUA                          19160 SP 16.09.2014
+    36         151720 1        1       RUA ALLAN KARDEK                          19300 SP 05.11.2013
+    36         520591 1        2       RUA ANTONIO SANDOVAL FILHO                19023 SP 20.06.2014
+    37          36149 1        1       RUA IDAVINA PINTO DA SILVA                19400 SP 11.08.2014
+    37          37770 1        1       R VINTE DE SETEMBRO                       19400 SP 23.06.2014
+    37          39123 1        1       RUA BONIFACIO GARCIA                      19400 SP 09.06.2014
+    37          41495 1        1       R VICENTE TERENCIO                        19400 SP 24.03.2014
+    37         858312 1        1       R PASCHOAL ALEXANDRE                      19400 SP 28.03.2014
+    37         858846 1        1       AVENIDA CARLOS PLATZEK 277                19400 SP 04.11.2014
+    38            165 1        1       RUA ATILIO REGINATO                       16370 SP 15.10.2013
+    38           1208 1        1       RUA FRANCISCO RODRIGUES PORTELA           16370 SP 04.07.2014
+    38           1339 1        1       AV CAPITAO AMERICO MACIEL DE CASTRO       16370 SP 25.08.2014
+    38           1760 1        1       RUA JOSE MARTINS RODRIGUES                16370 SP 10.10.2014
+    38           1796 1        1       DOUTOR KONDA                              16400 SP 03.11.2014
+    38           1810 1        1       RUA VERA FELIZARDO DOS SA                 16370 SP 22.10.2014
+    38           1820 1        1       RUA FRANCISCO MARTINS ROMERA              16370 SP 27.10.2014
+    38           1826 1        1       RUA FRANCISCO MARTIM ROMERA               16370 SP 28.10.2014
+    38           1829 1        1       AVENIDA EDITE CANDIDA RIBEIRO             16370 SP 28.10.2014
+    38           1837 1        1       RUA ALAMEDA ANTONIO FERREIRA GRAMA        16370 SP 28.10.2014
+    38           1838 1        1       FAZENDA REUNIDAS AG CENTAL                16370 SP 29.10.2014
+    38           1840 1        1       R PEDRO RONCHI 943                        16480 SP 29.10.2014
+    38           1848 1        1       AGROVILA 44                               16370 SP 30.10.2014
+    38           1867 1        1       R ALFREDO GOMES DA SILVA                  16370 SP 30.10.2014
+    38          19711 1        1       CAIXA POSTAL 21                           16300 SP 18.03.2014
+    38          26620 1        1       AV PARAIBA                                16401 SP 14.05.2014
+    38          28736 1        1       R JOSE MARTINS RODRIGUES                  16370 SP 29.09.2014
+    38          29606 1        1       RUA RICIERI LAMONATO                      16370 SP 25.08.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 13 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    38          31645 1        1       NINA FERRATO                              16370 SP 07.06.2013
+    38          32059 1        1       RJONAS DE FREITAS                         16370 SP 08.05.2014
+    38          40414 1        1       RUA DR BRUNO SAMMARCO                     16370 SP 02.07.2013
+    38          45861 1        1       AV ACRE                                   16370 SP 24.05.2011
+    38          48353 1        1       RUA JOSE FERREIRA LUDOVICO                16370 SP 29.05.2013
+    38          49102 1        1       RUA FRANCISCO M ROMERA                    16370 SP 20.06.2012
+    38          49230 1        1       RUA ANGELO POLO FERRATO                   16370 SP 10.12.2013
+    38          50566 1        1       RUA PAULINO NASCIMENTO                    16370 SP 06.08.2012
+    38          51435 1        1       AVENIDA PARAIBA                           16370 SP 03.01.2014
+    38          51513 1        1       MARIO FERRARI                             16370 SP 06.02.2013
+    38          51711 1        1       RUA AVAI                                  16430 SP 05.04.2013
+    38          51881 1        1       R GINO CORBUCCI                           16360 SP 06.06.2013
+    38          52188 1        1       RUA JOSE PRUDENTE                         16370 SP 07.05.2014
+    39          24070 1        2       RUA RUI BARBOSA                           19200 SP 20.10.2014
+    39          24660 1        2       RUA TRAVESSA LUIZ ALBERTINI               19570 SP 24.09.2014
+    39          31836 1        1       RUA JOAO BRITO DE SOUZA                   19570 SP 27.08.2013
+    39         542153 1        1       R RAIMUNDO ALVES DE MEDEIROS              19590 SP 03.04.2014
+    39         770107 1        1       ANGELO SEREGUETTI                         19580 SP 18.06.2014
+    39         770137 1        1       JOSE LOPES MARTINS                        19580 SP 18.02.2014
+    39         854964 1        1       RUA CAPITAO FRANCISCO WITAKER             19570 SP 03.11.2014
+    40            469 1        1       R SEBASTIAO A PEREIRA                     19160 SP 17.10.2014
+    40          23084 1        1       RUA GRA A ARANHA 295                      19160 SP 02.05.2012
+    40          23309 1        1       RUA MEXICO 420                            19160 SP 20.04.2012
+    40          23998 1        1       RUA JAPAO                                 19160 SP 29.09.2014
+    40         540237 1        1       RUA     K                                 19180 SP 17.04.2014
+    40         540442 1        1       SITIO AGUA AZUL                           19180 SP 29.07.2014
+    40         540449 1        1       SITIO SAO VICENTE                         19180 SP 24.09.2013
+    40         560929 1        1       BARAO RIO BRANCO                          19190 SP 07.10.2013
+    40         857065 1        1       SANTO ANTONIO 33                          19160 SP 03.11.2014
+    41           8967 1        1       RUA FRANCISCO PONTREMOLEZ                 19940 SP 10.10.2014
+    41           9972 1        1       R MINISTRO S FILHO                        19940 SP 16.01.2014
+    41          12023 1        1       JOSE MANOEL DE SOUZA                      86046 PR 04.11.2014
+    41          13170 1        1       RUA MINISTRO S FILHO                      19940 SP 03.06.2013
+    41         541500 1        1       OZORIO ALVES DA SILVA                     19940 SP 10.09.2014
+    42             28 1        1       RUA JUCA DIAS                             19190 SP 05.11.2014
+    42            320 1        1       TRAVESSA  ALAN SOARES                     19300 SP 27.10.2014
+    42          21849 1        1       RUA LEONILDO DENARI                       19300 SP 23.07.2014
+    42          21883 1        1       RUA TEBET JACOB                           19300 SP 03.06.2014
+    42          21921 1        1       RUA ALARICO BALIZARDO                     19300 SP 08.08.2012
+    42         510310 1        1       RUA JUSTINO DE ANDRADE                    19300 SP 16.05.2014
+    42         540019 1        1       FAZ BOM RETIRO                            19350 SP 23.07.2013
+    42         770057 1        1       EZEQUIEL MARTINS                          19350 SP 04.11.2014
+    43           6030 1        1       AV SECUNDIANO PICOLO                      17280 SP 30.05.2014
+    43          10906 1        1       R. SECUNDIANO PICCOLO                     17280 SP 30.05.2014
+    43          20643 1        1       AV BRASIL                                 17280 SP 06.02.2014
+    43          22218 1        1       ANTONIO BRAMBILA                          17280 SP 02.10.2014
+    43          30915 1        1       R JULIO FLORENCIO PEREIRA                 17280 SP 08.03.2013
+    43          32417 1        1       R CARLOS COPEDE                           17280 SP 09.03.2012
+    43          50001 1        1       AV BRASIL                                 17280 SP 30.10.2012
+    43         857950 1        1       GENESIO MARTINI                           17280 SP 04.11.2014
+    44            529 1        1       DOUTOR ALTINO ARANTES                     19900 SP 04.07.2014
+    44           1601 1        1       MARIA ANUNCIACAO JARDIM                   19904 SP 11.12.2013
+    44           1744 1        1       R ALCIDES CHIERENTIN                      19915 SP 22.04.2014
+    44           5305 1        1       CHAVANTES                                 19901 SP 05.11.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 14 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    44          50830 1        1       ANTONIO GUILHERME DA SILVA                19905 SP 17.07.2013
+    44          72815 1        2       RUA DOS EXPEDICIONARIOS                   19902 SP 06.02.2014
+    44          77700 1        1       ROQUE DE CARVALHO                         19904 SP 17.07.2014
+    44          80873 1        1       PAULO AMARAL SANTOS                       19904 SP 28.03.2014
+    44          88728 1        1       R FELISMINO F DOS SANTOS                  19914 SP 23.08.2011
+    44         131523 1        1       RUA  ARGEMIRO GERALDO                     19905 SP 18.01.2013
+    44         132987 1        1       MARIA PACHECO CHAVES                      19904 SP 07.07.2014
+    44         133003 1        1       BENEDITO VIDA LEAL                        19915 SP 23.04.2014
+    44         135614 1        1       BRASILICA MACHADO BAHIA                   19905 SP 27.03.2013
+    44         143162 1        1       R FRANCISCO VIDAL                         19914 SP 03.05.2012
+    44         145195 1        1       FRANCISCO NOVELLI                         19910 SP 23.12.2013
+    44         147081 1        1       JACAREZINHO                               19901 SP 13.03.2013
+    44         147847 1        1       R PROFESSOR SILAS RIBEIRO MORAES          19905 SP 20.08.2014
+    44         147868 1        2       R VALDIR MARTINS TAVARES                  19915 SP 28.04.2014
+    44         149081 1        1       URIAS ROCHA                               19911 SP 05.09.2012
+    44         151848 1        1       R EUCLIDES DA CUNHA, 127                  19900 SP 30.01.2014
+    44         540323 1        1       RUA CINCO                                 18990 SP 23.09.2013
+    44         541446 1        1       RUA VIRGILIO FURLANETO                    18990 SP 21.03.2014
+    44         561166 1        1       MASSAISHI NISHIAMA                        19915 SP 05.03.2014
+    44         561924 1        1       DUQUE DE CAXIAS                           19911 SP 24.07.2014
+    44         585441 1        1       NOVE DE JULHO                             19900 SP 07.03.2013
+    45            774 1        1       MANOEL GARCIA VILLARINHO                  11080 SP 04.07.2014
+    45           1489 1        1       SENADOR PINHEIRO MACHADO                  11075 SP 12.08.2013
+    45           3854 1        1       R RODRIGO SILVA                           11015 SP 04.04.2014
+    45           6272 1        1       IARA NASCIMENTO SANTINI                   11085 SP 22.09.2014
+    45           6283 1        1       DOUTOR STEFAN BRYK                        11088 SP 06.10.2014
+    45           6617 1        1       GUIOMAR FAGUNDES                          11086 SP 20.10.2014
+    45           6689 1        1       PRESIDENTE WILSON                         11320 SP 17.10.2014
+    45           6714 1        1       CAM SAO GABRIEL                           11531 SP 16.10.2014
+    45          85165 1        1       MANOEL DA NOBREGA                         11320 SP 28.08.2014
+    45         122822 1        2       R.SANTO ANTONIO DO VALONGO                11080 SP 16.09.2013
+    45         126448 1        1       OSWALDO COCHRANE                          11040 SP 30.07.2014
+    45         146908 1        1       R CARIJOS                                 11360 SP 12.09.2011
+    45         147683 1        1       AVENIDA AFONSO PENA                       11020 SP 20.12.2012
+    45         148517 1        1       FLAMINIO LEVY                             11085 SP 05.11.2014
+    45         151314 1        1       R DOUTOR EGIDIO MARTINS                   11030 SP 23.05.2012
+    45         151360 1        1       AV SENADOR PINHEIRO MACHADO               11075 SP 29.10.2014
+    45         163047 1        1       R FLAMINIO LEVI                           11085 SP 25.07.2011
+    45         165641 1        1       R FRACISCO ALVARES                         2342 SP 19.05.2014
+    45         178177 1        1       R SAO THOME                               11706 SP 28.11.2013
+    45         181530 1        1       FRANCISCO CONRADO DOS SANTOS              11718 SP 04.01.2012
+    45         181903 1        1       R VINTE E CINCO DE DEZEMBRO               11538 SP 25.08.2014
+    45         182171 1        1       CARIJOS                                   11360 SP 04.12.2012
+    45         182980 1        1       CHUCRI HUSNI                              11348 SP 22.07.2013
+    45         183543 1        1       PIONEIROS                                 11435 SP 28.06.2013
+    45         185236 1        1       TEIXEIRA DE FREITAS                       11075 SP 28.08.2014
+    45         185262 1        1       CAMPOS MELLO                              11015 SP 17.02.2014
+    45         186387 1        1       GREGORIO SERRAO                           11350 SP 16.04.2014
+    45         186644 1        1       QUATRO                                    11348 SP 04.08.2014
+    45         186749 1        1       TUPI                                      11355 SP 12.08.2014
+    45         521819 1        1       SANTO AMERICO                             11081 SP 06.08.2012
+    45         541121 1        1       MAURICIO MOURA                            11355 SP 27.06.2014
+    45         601984 1        1       JOAO BAPTISTA                             11081 SP 31.10.2014
+    45         602265 1        1       DAS PEROBAS                               11712 SP 02.09.2013
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 15 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    45         866347 1        1       R EZIO TESTINI                            11089 SP 03.11.2014
+    46            454 1        1       PAPA JOAO PAULO II                        13068 SP 20.08.2014
+    46           1851 1        1       SALDANHA MARINHO                          13188 SP 19.05.2014
+    46           6171 1        1       DAS MARGARIDAS                            13087 SP 07.11.2014
+    46           6648 1        1       MARIA CONCEICAO DA ROCHA FERRAZ           13181 SP 12.06.2014
+    46           7468 1        1       PINHEIROS                                 13035 SP 05.11.2014
+    46           8153 1        1       AUTA ROSA VIEIRA SILVA                    13053 SP 01.10.2014
+    46           8760 1        1       SAO BARNABE                               13068 SP 05.11.2014
+    46           9671 1        1       REGINA NOGUEIRA                           13045 SP 29.09.2014
+    46          42974 1        1       AVELINO DE OLIVEIRA VALENTE               13043 SP 18.12.2013
+    46          50335 1        1       PROFESSOR LUIZ DE PADUA                   13087 SP 29.04.2014
+    46          71656 1        1       ANTONIO RODRIGUES DE CARVALHO             13033 SP 19.05.2014
+    46          72436 1        1       JANIO DA SILVA QUADROS                    13070 SP 18.09.2013
+    46         175116 1        1       R SEVERINO ALVES BATISTA                  13056 SP 11.08.2014
+    46         209339 1        1       PEDRO ANTONIO DIAS                        13033 SP 06.12.2013
+    46         240815 1        1       VITORIANO DOS ANJOS                       13041 SP 04.09.2014
+    46         294175 1        1       IRENE RODRIGUES PORTO PELEGRINI           13069 SP 08.09.2014
+    46         346334 1        1       TIAGO JOAO DA SILVA                       13064 SP 16.08.2013
+    46         348715 1        1       MADRE EDUARDA SHAFERS                     13060 SP 17.10.2014
+    46         368599 1        1       PATROCINIO DO SAPUCAI                     13091 SP 26.09.2014
+    46         371266 1        1       JASMIM                                    13087 SP 23.02.2012
+    46         375458 1        1       QUINZE                                    13180 SP 21.05.2014
+    46         381583 1        1       VICEPREFEITO ANESIO CAPOVILLA  SITIOS FR  13272 SP 22.09.2014
+    46         381953 1        1       MATHEUS FERREIRA DE CAMARGO               13145 SP 03.12.2013
+    46         384124 1        1       DOUTOR LAERTE DE MORAES                   13100 SP 25.07.2014
+    46         398003 1        1       MARCOS DUTRA PEREIRA                      13181 SP 07.11.2014
+    46         399966 1        1       DOS TUCANOS                               13179 SP 25.09.2014
+    46         400148 1        1       AVENIDA ALAOR FARIA DE BARROS             13098 SP 25.03.2013
+    46         404457 1        1       SERGIO GUIMARAES FABIANO                  13059 SP 13.02.2012
+    46         408272 1        1       JOAO JOSE PEREIRA                         13050 SP 04.08.2014
+    46         410829 1        1       AMADEU SILVESTRE RAMOS                    13053 SP 06.06.2013
+    46         412763 1        1       DOUTOR EDILBERTO LUIS PEREIRA DA SILVA    13083 SP 09.07.2014
+    46         434458 1        1       MARIA CLARA MACHADO                       13051 SP 03.11.2014
+    46         446926 1        1       LUZITANA                                  13015 SP 05.02.2014
+    46         447315 1        1       PRESIDENTE COSTA E SILVA                  13172 SP 13.02.2013
+    46         447948 1        1       ALFERES RAIMUNDO                          13035 SP 24.09.2012
+    46         448577 1        1       DEZ                                       13172 SP 17.01.2014
+    46         452197 1        1       FERREIRA PENTEADO                         13010 SP 22.11.2013
+    46         453606 1        1       ALCIDES MAIA                              13060 SP 11.08.2014
+    46         460423 1        1       PIAUI                                     13031 SP 20.06.2014
+    46         572664 1        1       R DA PADROEIRA                            13060 SP 26.12.2013
+    46         585525 1        1       DAS PINDAUVAS                             13064 SP 17.09.2014
+    46         591547 1        1       GELSON BRUNO DI FALCO                     13271 SP 08.04.2014
+    46         595978 1        1       R BENTO SIMOES VIEIRA                     13082 SP 31.10.2014
+    46         596739 1        1       PADRE JEAN F. JOBARD(PADRE CHIQUINHO)     13059 SP 23.05.2014
+    46         597260 1        1       DOUTOR OSWALDO SEIFFERT                   13051 SP 28.01.2013
+    46         597759 1        1       BENJAMIN CONSTANT                         13010 SP 19.09.2014
+    46         598828 1        1       COMENDADOR ARLY GOMES RIBEIRO             13057 SP 14.05.2014
+    46         604989 1        1       RUA  MMDC                                 13025 SP 23.07.2014
+    46         607611 1        1       R DOIS                                    13053 SP 27.10.2014
+    46         608447 1        1       GABAO                                     13056 SP 12.05.2014
+    46         612217 1        2       R JOAQUIM FRANCISCO CASTELAR              13087 SP 14.07.2014
+    46         612313 1        2       AV ANDRADE NEVES                          13013 SP 13.08.2014
+    46         612378 1        1       TRES                                      13067 SP 24.03.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 16 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    46         612629 1        1       PROFESSOR FLAVIO CESAR                    13042 SP 06.08.2014
+    46         615011 1        1       QUATRO                                    13051 SP 29.08.2013
+    46         618537 1        1       GERALDO GONCALVES DIAS                    13067 SP 04.10.2013
+    46         620158 1        1       JOSE VON ZUBEN                            13101 SP 10.03.2014
+    46         621946 1        1       JOSE ARNOLDO AMBIEL                       13053 SP 25.10.2013
+    46         627132 1        1       IZABEL LOPES VENTURA                      13056 SP 27.06.2014
+    46         630620 1        2       AV COACIARA                               13056 SP 09.07.2014
+    46         652986 1        1       R DOS PARDAIS                             13179 SP 02.10.2014
+    46         664374 1        1       JOAO VEDOVELLO                            13087 SP 19.09.2014
+    46         667381 1        1       SANTOS DUMONT                             13051 SP 29.04.2014
+    46         668297 1        1       TIAGO DE CASTRO FERREIRA                  13179 SP 30.10.2014
+    46         700276 1        1       GEORGES ZAOUK                             13051 SP 11.08.2014
+    46         744630 1        1       DOUTOR MORAES SALLES                      13010 SP 26.09.2014
+    46         745249 1        1       CECILIA DOS SANTOS GINENE                 13052 SP 08.10.2014
+    46         745800 1        1       PADRE VIEIRA                              13015 SP 03.01.2013
+    47            249 1        1       LUIZ MORETTI FILHO                        86806 PR 18.12.2013
+    47            985 1        2       R FRANKO                                  86802 PR 21.05.2014
+    47           1418 1        1       PERIQUITO                                 86812 PR 15.08.2014
+    47           1551 1        1       ROD. ERWIN FCHINDLER KM 07                86818 PR 05.11.2014
+    47           1820 1        1       R TOMIO NAKAMURA                          86806 PR 03.11.2014
+    47          88621 1        1       GASTAO VIDIGAL                            86800 PR 13.01.2014
+    47         101231 1        2       AV CURITIBA - DE 901 ATE 1121             86800 PR 28.07.2014
+    47         105550 1        1       PROFESSOR JOAO CANDIDO FERREIRA           86800 PR 02.09.2014
+    47         111107 1        1       ACACIA                                    86803 PR 15.10.2014
+    47         501152 1        1       ARAGUAIA                                  86820 PR 15.10.2012
+    47         590156 1        1       R DAS ANDORINHAS                          86895 PR 29.10.2014
+    47         590810 1        1       RUA JOAO ZULMIRO DE LIMA                  86895 PR 19.09.2013
+    47         605388 1        1       FELICIO BETIATI                           86818 PR 28.03.2014
+    47         608382 1        1       ALTA GRACIA HANNA CHEMOUNI                86807 PR 12.11.2012
+    47         610805 1        1       ITARARE                                   86805 PR 21.03.2013
+    48           2229 1        1       DOS JABURUS                               83218 PR 02.05.2014
+    48           2272 1        1       RUA NELSON MEDRADO                        83255 PR 30.07.2014
+    48           2298 1        1       RUA 119                                   83252 PR 05.06.2014
+    48           2654 1        1       LUCINDA RODRIGUES CAMPOS                  83212 PR 07.07.2014
+    48           3122 1        1       ALFREDO BUDANT                            83221 PR 30.09.2014
+    48           3315 1        1       MIGUEL RIBEIRO DE ARAUJO                  83209 PR 10.10.2014
+    48           3335 1        1       DOS PELICANOS                             83218 PR 14.10.2014
+    48          11570 1        1       MANOEL PEREIRA                            83206 PR 21.05.2013
+    48          34081 1        1       CORONEL JOSE LOBO                         83203 PR 18.07.2014
+    48          34574 1        1       JOSE GOMES                                83203 PR 27.01.2014
+    48          36817 1        1       R SAVINO TRIPODI                          83250 PR 07.02.2014
+    48          46965 1        1       R JOSE JUSTINO DE MELLO                   83215 PR 06.03.2014
+    48          48023 1        1       GINES GEBRAN                              83206 PR 25.06.2014
+    48          50071 1        1       AVELINO DIAS SANTOS                       83221 PR 24.06.2013
+    48          50121 1        1       TIMBIRAS                                  83221 PR 12.06.2014
+    48          50489 1        1       TRAVESSA DO PORTO                         83250 PR 13.01.2014
+    48          50512 1        1       RUA 175                                   83252 PR 05.11.2014
+    48          53258 1        1       FRANCISCO JOAQUIM DA SILVA                83212 PR 14.05.2012
+    48          55000 1        1       BARONESA DO CERRO AZUL                    83203 PR 17.09.2014
+    48          58650 1        1       GERMANO CRISPIM DE OLIVEIRA               83212 PR 22.01.2014
+    48          59065 1        1       THEODORICO DOS SANTOS                     83203 PR 01.11.2013
+    48          59991 1        1       CAPIVARI                                  83209 PR 09.04.2014
+    48          60491 1        1       R PROFESSOR ANTONIO DOS SANTOS FILHO      83212 PR 22.09.2014
+    48          60560 1        1       VL SAMBAQUI                               83350 PR 14.04.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 17 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    48          60581 1        1       TAPAJOS                                   83221 PR 09.10.2014
+    48          64107 1        2       R MARECHAL DEODORO                        83203 PR 31.10.2014
+    48          70395 1        1       R CEL MARCALO                             83370 PR 03.12.2013
+    48          74592 1        1       CLAUDIONOR NASCIMENTO                     83221 PR 18.06.2014
+    48         100388 1        1       CORONEL JOSE LOBO                         83203 PR 09.09.2014
+    48         532903 1        1       SAMUEL PIRES DE MELLO                     83206 PR 14.08.2014
+    48         533520 1        1       PRESIDENTE KENNEDY                        80220 PR 21.01.2014
+    48         534145 1        1       PORTO AMAZONAS                            83221 PR 10.04.2013
+    48         606126 1        1       ANTONIO MORAIS PEREIRA DA COSTA           83206 PR 06.02.2014
+    48         606946 1        1       DOS GUANANDIS                             83212 PR 22.09.2014
+    48         607404 1        1       PREFEITO ROQUE VERNALHA                   83221 PR 14.11.2013
+    48         607554 1        1       TUPINAMBA                                 83221 PR 16.10.2014
+    48         607586 1        1       SAPINO TRIPODI                            83250 PR 26.09.2014
+    49           2812 1        1       R JOSE PEDRO CARDOSO                      81490 PR 28.02.2014
+    49           3855 1        1       DOS COLIBRIS                              83327 PR 07.05.2014
+    49           4074 1        1       JOSE IRINEU BUDANT                        81935 PR 21.10.2014
+    49           5041 1        1       DA INTEGRACAO                             82840 PR 06.05.2014
+    49           5407 1        1       VICENTE NICOLAU KOPYTOWSKI                81710 PR 06.10.2014
+    49           5730 1        1       CRISTIANO STROBEL                         81720 PR 11.09.2014
+    49           5945 1        1       AUGUSTO FAUSTINO STALCHMIDT               82920 PR 26.08.2014
+    49           6919 1        1       R TREZE                                   83603 PR 23.09.2014
+    49           7362 1        1       R ADRIANA CERES ZAGO BUENO                81470 PR 16.10.2014
+    49           7368 1        1       ANGELICO TOSIN                            81490 PR 21.10.2014
+    49           7447 1        1       R NILO ZANIER                             81450 PR 21.10.2014
+    49         188277 1        1       FIDELINO FIGUEIREDO                       81330 PR 29.09.2014
+    49         192445 1        1       EMANUEL KANT                              81020 PR 14.04.2014
+    49         193688 1        1       SEBASTIAO MARCOS LUIZ                     82940 PR 27.02.2012
+    49         196186 1        1       R MAJOR CARLOS FRANCISCO BERLEZE          81825 PR 11.08.2014
+    49         209876 1        1       JOSE LINHARES                             83330 PR 13.10.2014
+    49         211714 1        1       R AYRTON GREIFFO                          81230 PR 08.01.2014
+    49         213213 1        1       TESOUREIRO                                83706 PR 27.03.2014
+    49         213378 1        1       SEBASTIAO ALCEBIADES NOGUEIRA             83065 PR 25.06.2014
+    49         215528 1        1       CASCAVEL                                  81670 PR 28.10.2013
+    49         216814 1        1       MARTA KATEIVA DE OLIVEIRA                 82120 PR 17.09.2014
+    49         219550 1        1       MARECHAL DEODORO                          80010 PR 09.01.2012
+    49         219606 1        1       PADOVA                                    82020 PR 12.05.2014
+    49         227707 1        1       EMILIO ZATTERA                            82300 PR 16.01.2014
+    49         232230 1        1       FRANCISCO SAROT                           81480 PR 28.04.2014
+    49         233719 1        2       TV OLIVEIRA BELLO                         80020 PR 22.09.2014
+    49         237244 1        1       ACACIA                                    83508 PR 01.04.2013
+    49         237561 1        1       ALBERICO FLORES BUENO                     82840 PR 30.04.2013
+    49         238029 1        1       CAPITAO DOUTOR ANTONIO JOSE               81810 PR 05.11.2014
+    49         238189 1        1       PROFESSORA MARIA DE ASSUMPCAO             81670 PR 09.07.2013
+    49         240241 1        1       JOSE TORRES NETO                          81310 PR 29.09.2014
+    49         517777 1        1       PAULO SETUBAL                             81750 PR 09.12.2013
+    49         519199 1        1       DESEMBARGADOR CID CAMPELO                 81170 PR 24.07.2013
+    49         521776 1        1       CORONEL JOSE CARVALHO DE OLIVEIRA         81570 PR 06.10.2014
+    49         523118 1        1       SOLDADO JOSE BUENO DA SILVA               81850 PR 05.11.2014
+    49         523822 1        1       DONATO CRACCO                             81920 PR 22.09.2014
+    49         621544 1        1       DOUTOR MARIO JORGE                        81450 PR 29.09.2014
+    49         622405 1        1       AYRTON TURRA                              82970 PR 30.04.2014
+    49         624575 1        1       WANDA WOLF                                82410 PR 01.09.2014
+    49         625896 1        1       JOAO BONATTO                              82110 PR 09.10.2014
+    49         627100 1        1       SANTO ANTONIO                             80230 PR 03.11.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 18 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    49         627603 1        1       PEDRO VIOLANI                             82940 PR 18.07.2011
+    50            204 1        2       RUA VIOLETAS                              86170 PR 12.02.2014
+    50            363 1        1       RUA SERGIPE                               86170 PR 18.07.2014
+    50          27953 1        1       SITIO SAO RAFAEL                          86170 PR 30.09.2014
+    50          30500 1        1       RUA CEARA                                 86170 PR 10.02.2010
+    50          30514 1        1       RUA SERGIO SEVERO DE CARVALHO             86170 PR 21.10.2014
+    50          32350 1        2       RUA LUIZ DELIBERADOR                      86170 PR 05.11.2014
+    51          46210 1        1       AV PARANA                                 86230 PR 08.05.2014
+    51          60516 1        1       RUA LARANJINHA                            86230 PR 24.06.2014
+    51          70043 1        1       AVENIDA DAS CRAVINAS                      86300 PR 30.06.2014
+    51          80331 1        1       R    ANCHIETA                             86300 PR 23.06.2014
+    51          83369 1        1       R FRANCISCO DE OLIVEIRA                   86300 PR 14.06.2012
+    51          83785 1        1       R ALIPIO FERREIRA DE CASTRO               86300 PR 22.10.2014
+    51         531395 1        1       ELOINA RIBAS BASTOS                       83015 PR 21.06.2013
+    52             48 1        1       DOURADINHO                                86701 PR 11.09.2014
+    52             81 1        1       SUIRIRIDOSUL                              86703 PR 25.10.2013
+    52           1024 1        1       SABIAPOCA                                 86702 PR 06.02.2014
+    52           1046 1        1       GAVIAO-DE-COLEIRA                         86702 PR 06.02.2014
+    52           1583 1        1       R JURITI - DE 1 ATE 799                   86706 PR 21.05.2014
+    52           1811 1        1       R CIGARRA                                 86708 PR 03.11.2014
+    52           2146 1        1       R GARCAS - DE 1430 ATE 1799               86708 PR 26.08.2014
+    52           2563 1        1       R JURITI-PIRANGA                          86703 PR 07.11.2014
+    52           2567 1        1       SUIRIRICINZA                              86702 PR 09.10.2014
+    52           2593 1        1       TICOTICODOBICOAMARELO                     86702 PR 09.10.2014
+    52           2644 1        1       R LOFOFORO                                86709 PR 09.10.2014
+    52           2689 1        1       ARIRAMBABRONZEADO                         86710 PR 09.10.2014
+    52          64150 1        1       FLAMINGOS                                 86700 PR 16.10.2014
+    52          70144 1        1       DAS POMBAS                                86700 PR 28.10.2014
+    52          75749 1        1       R CISNE BRANCO                            86707 PR 30.05.2014
+    52          80563 1        1       ARAPACUDATOCA                             86706 PR 30.10.2013
+    52          99634 1        1       ACANTISO                                  86705 PR 10.10.2013
+    52         110015 1        1       RUA    JAPIM                              86703 PR 19.12.2013
+    52         110910 1        1       JURUACU                                   86708 PR 30.01.2014
+    52         200895 1        1       SAI                                       86701 PR 26.06.2014
+    52         205008 1        1       R INHAMBU-CHITA                           86702 PR 23.06.2012
+    52         210109 1        1       MERGULHAOZINHO                            86710 PR 14.09.2012
+    52         210270 1        2       R SOCO                                    86702 PR 03.09.2014
+    52         210365 1        1       QUIRUA                                    86707 PR 10.04.2012
+    52         210521 1        1       CABURECANELA                              86703 PR 01.11.2012
+    52         210683 1        1       NHAMBU                                    86701 PR 10.04.2014
+    52         211111 1        1       ANAMBEPRETO                               86703 PR 10.02.2014
+    52         213326 1        1       R DANCARINO-ROSADO                        86701 PR 25.08.2014
+    52         214763 1        1       ARAPONGAS                                 86700 PR 03.09.2013
+    52         215039 1        1       PATODECRISTA                              86703 PR 06.02.2013
+    52         216211 1        1       R BEIJA-FLOR-BRANCO                       86704 PR 31.05.2013
+    52         510092 1        1       TRISTEPIA                                 86702 PR 16.08.2013
+    53           1896 1        1       GAL MALLET                                86112 PR 31.01.2014
+    53           3172 1        1       DALTO                                     86183 PR 25.09.2014
+    53           3203 1        1       R DAS VIOLETAS                            86042 PR 11.03.2014
+    53           4558 1        1       DONA LEOPOLDINA                           86039 PR 14.08.2014
+    53           4680 1        1       DOUTOR ELIAS CESAR                        86015 PR 14.08.2014
+    53           5404 1        1       JOSE SPOLADORE                            86038 PR 10.10.2014
+    53           5646 1        1       R JOAO LOZANO                             86200 PR 05.11.2014
+    53          34783 1        1       R OLEGARIO PEREIRA                        88056 SC 10.09.2014
+
+TRANSITO ARQLOGRD.BASEFICA DESENVOLVIMENTO        10/11/2014        09:16:03        - 19 -
+
+    AG            CTA IND ORIG IND TPO ENDERECO                                    CEP UF HATULZ
+------ -------------- -------- ------- ---------------------------------------- ------ -- ----------
+    53          87130 1        1       R WALTER MOTTA CAMPOS                     86047 PR 18.10.2013
+    53         118700 1        1       R PARA - DE 1 ATE 1178                    86010 PR 19.08.2014
+    53         124990 1        1       R MARQUES DE VALENCA                      86061 PR 17.06.2014
+    53         128765 1        1       WALDEMAR PASTORE                          86072 PR 05.08.2013
+    53         158806 1        1       JOAO GONCALVES DE SOUZA                   86045 PR 03.11.2014
+    53         159166 1        1       R XAVANTES                                86183 PR 26.06.2014
+    53         159461 1        1       R PONTA GROSSA                            86800 PR 20.03.2014
+    53         164199 1        1       ERNESTO ANGELO GUASTI                     86183 PR 27.05.2014
+    53         165352 1        1       RUA GARGO COUTINHO                        86039 PR 10.07.2014
+    53         165888 1        1       ARLINDO RIBEIRO DO PRADO                  86082 PR 07.05.2012
+    53         167303 1        1       ALEXANDER GRAHAM BELL                     86063 PR 16.09.2014
+    53         167896 1        1       R POTIGUAR DE MEDEIROS                    86210 PR 16.08.2011
+    53         173000 1        1       RIO DE JANEIRO                            86010 PR 12.06.2013
+    53         177407 1        1       EMILIO STRIQUER                           86044 PR 17.09.2014
+    53         401825 1        1       INGLATERRA                                86046 PR 22.08.2014
+    53         602220 1        1       R MAL FLORIANO PEIXOTO                    86187 PR 12.09.2013
+    53         611581 1        1       CANDIDA GONCALVES ROSA                    86079 PR 21.06.2012
+    54            357 1        1       LUIS GOMES TOURINHO                        8430 SP 16.09.2014
+    54           1114 1        1       GIUSEPPE MARINO                            2181 SP 03.10.2014
+    54         115339 1        1       JOAO BOEMER                                3018 SP 21.01.2014
+    54         117130 1        1       R FLORES DO PIAUI                          7250 SP 18.09.2013
+    54         118880 1        1       H                                          7085 SP 20.03.2013
+    54         122619 1        1       DINAH GONCALVES BRANDAO                    8470 SP 14.04.2014
+    54         123330 1        1       RAGUEB CHOHFI                              8375 SP 13.08.2014
+    54         126370 1        2       RUA DOS OPERARIOS,                         4161 SP 27.10.2014
+    54         133157 1        1       R DIVIANA                                  3563 SP 17.04.2012
+    54         134136 1        1       RUA  ANTONIO MARIA BESSA                   8280 SP 29.07.2013
+    54         135895 1        1       R DOS MANACAS(JD EUCALIPTOS)               7716 SP 22.01.2014

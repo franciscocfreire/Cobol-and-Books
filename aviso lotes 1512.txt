@@ -1,0 +1,46 @@
+************* PROGRAMA CLLP7955 *************      
+*                                           *      
+* REGISTROS LIDOS EMODLAVS...:           12 *      
+*                                           *      
+* REGISTROS GRAVADOS SMODLAVS:           12 *      
+*                                           *      
+* ACESSOS REALIZADOS AO ECOR.:           12 *      
+*                                           *      
+*********************************************      
+*** ECOR2912 - LOTE FINALIZADO = 000000000013987   
+
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013988  
+************* PROGRAMA CLLP2955 *************      
+*                                           *      
+* REGISTROS LIDOS EMODLAVS...:           36 *      
+*                                           *      
+* REGISTROS GRAVADOS SMODLAVS:           36 *      
+*                                           *      
+* ACESSOS REALIZADOS AO ECOR.:           36 *      
+*                                           *      
+*********************************************      
+*** ECOR2912 - LOTE FINALIZADO = 000000000013988   
+
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013989    
+************* PROGRAMA CLLP2955 *************        
+*                                           *        
+* REGISTROS LIDOS EMODLAVS...:           34 *        
+*                                           *        
+* REGISTROS GRAVADOS SMODLAVS:           34 *        
+*                                           *        
+* ACESSOS REALIZADOS AO ECOR.:           34 *        
+*                                           *        
+*********************************************        
+*** ECOR2912 - LOTE FINALIZADO = 000000000013989     
+
+*** ECOR2912 - LOTE INCIALIZADO = 000000000013990        
+************* PROGRAMA CLLP2955 *************            
+*                                           *            
+* REGISTROS LIDOS EMODLAVS...:            1 *            
+*                                           *            
+* REGISTROS GRAVADOS SMODLAVS:            1 *            
+*                                           *            
+* ACESSOS REALIZADOS AO ECOR.:            1 *            
+*                                           *            
+*********************************************            
+*** ECOR2912 - LOTE FINALIZADO = 000000000013990         

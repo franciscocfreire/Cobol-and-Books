@@ -1,0 +1,20 @@
+Alterar o JOB CLLP1070 na maquina AL1 conforme abaixo
+
+(1) - Alterar STEP1
+
+DE:
+//*#RELENCVV DD SYSOUT=(P,,OSL9)                      
+//*#RELENCVV DD DUMMY,                                
+//*#       DCB=(LRECL=0132,RECFM=FBA)                 
+//*#RELTOTAL DD SYSOUT=(,,OSM0)                       
+//*#RELTOTAL DD DUMMY,                                
+//*#       DCB=(LRECL=0081,RECFM=FBA)                 
+
+PARA:
+//*#RELENCVV DD SYSOUT=(P,,OSL9)                      
+//RELENCVV DD DUMMY,                                
+//       DCB=(LRECL=0132,RECFM=FBA)                 
+//*#RELTOTAL DD SYSOUT=(,,OSM0)                       
+//RELTOTAL DD DUMMY,                                
+//       DCB=(LRECL=0081,RECFM=FBA)                 
+

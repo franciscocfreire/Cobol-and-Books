@@ -1,0 +1,34 @@
+//CLLP0155 JOB 'CLLP,4120,PR32','B771551',MSGCLASS=Z,REGION=4M          
+//JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR                                  
+//         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC PGM=PLAN2440,                                           
+//       PARM=003                                                       
+//*                                                                     
+//* ***    RECEPCIONA ARQ DO RDAB                                       
+//*                                                                     
+//ENT00001 DD DSN=TA.RDAB.CLLP.CPFCNPJ,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00001 DD DSN=AC.CLLP.CPFCNPJ.CLAS(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001330,0266),RLSE),                                
+//       DCB=(AC.A,LRECL=0150,RECFM=FB)                                 
+//ENT00002 DD DSN=TA.RDAB.CLLP.AGCONTA,                                 
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00002 DD DSN=AC.CLLP.AGCONTA(+1),                                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000010,0002),RLSE),                                
+//       DCB=(AC.A,LRECL=0150,RECFM=FB)                                 
+//ENT00003 DD DSN=TA.RDAB.CLLP.CPFEXIST,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//SAI00003 DD DSN=AC.CLLP.CPFEXIST.RDAB0105(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(000470,0094),RLSE),                                
+//       DCB=(AC.A,LRECL=0150,RECFM=FB)                                 
+//PRINTER  DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     

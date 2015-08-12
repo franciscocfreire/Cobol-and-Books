@@ -1,0 +1,1096 @@
+                         --- INICIO DO RELATORIO ---                                                     --- INICIO DO RELATORIO --- 
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 1 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       10014    6982493      1 VANILDA DOS SANTOS                       01.09.2004                              
+     0              0       10022    7199365      1 ALEXANDRE CALIXTO DE BASTOS              30.12.2004                              
+     0              0       10049    5680563      1 MANOEL APARECIDO DA SILVA                29.04.2003                              
+     0              0       10057   10349959      1 CAMARA MUNICIPAL DE MONTES ALTOS         01.01.1960                              
+     0              0       10073    4487225      1 ANTONIO MARCOS CAZZOLI                   01.06.2001                              
+     0              0       10081    5747544      1 ARILDO WAGNER ALVES RANGEL               23.06.2003                              
+     0              0       10090    4201203      1 ALEXANDRE JOSE DE BARROS E SILVA DE ALME 23.11.2000                              
+     0              0       10111   94925567      2 MARISA DUTRA PIRES                       02.10.1995                              
+     0              0       10138    2966504      1 MARIA DIVA FERREIRA DOS SANTOS           05.02.1999                              
+     0              0       10197    3379154      1 ELIZABETH JANUA COELE MARTINS PUJOL      02.09.1999                              
+     0              0       10200    3571326      1 VALDIR DE SOUZA CARDOSO                  13.12.1999                              
+     0              0       10219    5774413      1 FRANCISCO DOS PRAZERES DE LIMA           24.07.2003                              
+     0              0       10243    6100041      1 JAIME SOARES DA SILVA                    06.02.2004                              
+     0              0       10251    5153989      1 SIMONE DE SOUZA                          09.07.2002                              
+     0              0       10260    4051480      1 TOMAZ JOSE PINHEIRO DE ARAUJO            14.09.2000                              
+     0              0       10294    5084269      1 DANIELLE RODRIGUES JUNQUEIRA             10.06.2002                              
+     0              0       10308    1700436      1 SONIA MARIA SILVA DE ARRUDA              24.02.1997                              
+     0              0       10316    5028984      1 ANTONIO NUNES MACHADO DE LUIS EDUARDO MA 25.03.2002                              
+     0              0       10324    5691616      1 GERALDO LUIS FERNANDES COSTA             03.06.2003                              
+     0              0       10332    3573066      1 JAILTON DOS SANTOS ALMEIDA               25.11.1999                              
+     0              0       10340     853435      1 SAMUEL LINS CAVALCANTE NETO              16.10.1995                              
+     0              0       10359   84684117      1 H CARLOS SCHNEIDER SOCANOM COMERCIO E IN 30.05.1996                              
+     0              0       10367    6217179      1 ANTONIO PAULO BRAGA                      08.04.2004                              
+     0              0       10383    6119205      1 ROSANI GUSTINELLI WAKASUGUI              10.02.2004                              
+     0              0       10405    7190252      1 ANGELITA JAQUES DE OLIVEIRA              03.01.2005                              
+     0              0       10421    4906611      1 IDELSO PEREIRA                           25.01.2002                              
+     0              0       10472    3254201      2 MARCIA BENTO EPP                         01.02.2001                              
+     0              0       10480     646101      1 SOLANGE MARGARIDA ESTEVAM FI             26.05.1995                              
+     0              0       10502    6650139      1 PODERES PUBLICOS RAIMUNDO NONATO BERREDO 28.07.1998                              
+     0              0       10529    5436954      1 VICENTE CANOVAS BOTAZZO SUD MENUCCI EPP  01.12.2002                              
+     0              0       10537   66299702      1 EMERSON CABRAL CAVALCANTI                17.07.1991                              
+     0              0       10561    5029049      1 GENIVALDO BISPO DOS SANTOS               26.02.2002                              
+     0              0       10588    6268604      1 HORPHELINA SILAS B                       29.04.2004                              
+     0              0       10600   44756138      1 ANA LUCIA CHILES MARINS                  01.10.1980                              
+     0              0       10618     933886      1 M Z P DA SILVA PICCOLI                   08.01.1996                              
+     0              0       10642    3939959      1 MONICA CASSIA MITSUI TAKETANI            31.05.2000                              
+     0              0       10650   46989208      1 ARLINDO MUNUERA                          09.03.1976                              
+     0              0       10685    5023937      1 DIMAS EDUARDO CORREA MILANESEME          18.01.2002                              
+     0              0       10693    5026953      1 MANOEL BORGES DONIZETI                   08.05.2002                              
+     0              0       10707    1614683      1 MARIA ANTONIA NOVAES PEREIRA             03.01.1997                              
+     0              0       10715     684334      1 GILDASIO LUCIO SOARES                    06.06.1995                              
+     0              0       10723    4946710      1 MARIA DAS GRACAS MORINI AJAIME           26.02.2002                              
+     0              0       10758   19935725      1 JOSE COSMO MOREIRA                       07.05.2004                              
+     0              0       10766    5525770      1 IVANETE PEREIRA SANTOS                   01.03.2003                              
+     0              0       10774    7371960      1 GLEIDSON MENDES AMORIM                   06.06.2005                              
+     0              0       10790    4378377      1 MARIA ALCIONE GOMES                      30.03.2001                              
+     0              0       10804    4490316      1 VIRGINIA MARIA OSORIO VARAJAO            04.06.2001                              
+     0              0       10812    4275165      1 MARIA ROSANGELA LEITE FLORES             30.01.2001                              
+     0              0       10820   71371090      1 JOSE JOVANIO ROBERTO                     10.11.1993                              
+     0              0       10839   38635926      1 REGINA IZABEL DA SILVA GREGORIO          21.07.1990                              
+     0              0       10847    3057005      1 EVANDRO RODRIGUES DA SILVA               10.09.1998                              
+     0              0       10855    3955144      1 WILSON ARAUJO COSTA                      28.06.2000                              
+     0              0       10863    6906140      1 AFONSO CARLOS DA COSTA                   30.07.2004                              
+     0              0       10871   24954695      1 IVO JAHN                                 16.11.1988                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 2 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       10880    3229076      1 REINALDO RIOS DA SILVA                   16.06.1999                              
+     0              0       10898    5978998      1 GILDA RODRIGUES DOS SANTOS               07.11.2003                              
+     0              0       10901   17227422      1 ACO MINAS GERAIS SOCANOM ACOMINAS        07.03.1967                              
+     0              0       10944    7427442      1 FABIANA DIAS DE FREITAS PIMENTA          02.06.2005                              
+     0              0       10960    7178273      1 SILVIO GUALBERTO DOS SANTOS              17.01.2002                              
+     0              0       10979    7335341      1 C R DOS SANTOS & CIA LTDA ME             12.04.2005                              
+     0              0       10995    7514792      1 HELTON DIONE DOS SANTOS                  19.07.2005                              
+     0              0       11002    7378353      1 IGREJA DE CRISTO MINISTERIO EL SHADAI    02.05.2005                              
+     0              0       11010    5530313      1 JAIR DIAS DA SILVA                       14.02.2003                              
+     0              0       11029    2625698      1 DAMASO RIVERO ALONSO                     26.06.1998                              
+     0              0       11037    6101746      1 MARIA DE FATIMA BORGES FONTES            26.01.2004                              
+     0              0       11053    5883241      2 NIDELSON APARECIDO DOS SANTOS            22.04.2004                              
+     0              0       11070    1593790      1 MARIA VERONICA FERREIRA DA SILVA PIZIMI  17.12.1996                              
+     0              0       11088    1554316      1 EVANGELHO ALEIXO DA SILVA                01.11.1996                              
+     0              0       11100    6165700      1 VALDIMIR INOCENCIO                       15.03.2004                              
+     0              0       11118    6204254      1 ELAINE MIQUELOTI DA SILVA                15.04.2004                              
+     0              0       11150    6995374      1 GILVAN CORINO DO NASCIMENTO              14.09.2004                              
+     0              0       11169    6927590      1 GERALDA OLIVEIRA DA SILVA                16.08.2004                              
+     0              0       11177    6714670      1 DEUSELITA SEVERO ALVES                   16.07.2004                              
+     0              0       11185    4349661      1 ADRIANA MARIE OJIMA                      22.03.2001                              
+     0              0       11193   82613571      1 GRECE OLIVEIRA DE SOUZA                  20.04.1974                              
+     0              0       11207    5257973      1 SIMONE C L DE MENEZES                    22.08.2002                              
+     0              0       11215    1069416      1 LUCIO JOSE DE MENEZES NETO               02.10.2004                              
+     0              0       11258    3791137      1 MARIA DE JESUS DA CONCEICAO SILVA        12.04.2000                              
+     0              0       11266   71548424      1 SADEF SOCIEDADE DE AMIGOS DAS QUADRAS DE 01.07.2000                              
+     0              0       11290    4843987      1 HILTON BATISTA DIAS                      01.11.2001                              
+     0              0       11312    6223084      1 SIMONE ZATTAR                            26.04.2004                              
+     0              0       11320    5919041      1 ALS SHOPPING CENTER SOCANOM              24.08.2003                              
+     0              0       11339   33115817      1 DE MILLUS SOCANOM IND E COM              01.01.1991                              
+     0              0       11347    7033081      1 JOAO BASTOS NETO EPP                     23.09.2004                              
+     0              0       11355    7086054      1 TERESINHA FATIMA RESENDE BARCELOS        23.09.2004                              
+     0              0       11401    7218737      1 ALOISIO ADARC DA SILVEIRA                18.01.2005                              
+     0              0       11444    5461602      1 TIAGO DRAGONETTI EPP                     03.01.2003                              
+     0              0       11460   96860226      2 SALVADOR FERREIRA DOS ANJOS              07.11.2000                              
+     0              0       11487    3937628      1 MARIA GERALDA SANTANA AMORIM FIR         11.07.2000                              
+     0              0       11509    7336419      1 JESUS AIRES NUNES                        14.03.2005                              
+     0              0       11517    3696706      1 FRANCISCO DE A A DE PAULA                10.03.2000                              
+     0              0       11525    5244131      1 JOSEMEIRE BARBOSA DA SILVA GOES          26.08.2002                              
+     0              0       11533    3178384      1 DJALMA BARBOSA DE LIMA LEILOES           06.04.1999                              
+     0              0       11550    6266609      1 WELLINGTON OLIVEIRA DE SANTANA           18.05.2004                              
+     0              0       11568    2330506      1 TELERJ CELULAR S/ABLOQ JUD               14.12.1998                              
+     0              0       11584    2167131      1 M L CESAR CALCADOS ME                    10.09.1997                              
+     0              0       11622    1608250      1 ROSELI MONTEIRO DA SILVA LEITE           17.12.1996                              
+     0              0       11630   62375191      1 BARRACAO SUPERMERCADO LTDA               21.02.1990                              
+     0              0       11673    1296447      1 HILDA GUIRAO                             05.07.1996                              
+     0              0       11681   69018810      3 SENIOR ASSESSORIA E CONSULTORIA SOCANOM  30.03.1992                              
+     0              0       11690   18433227      1 JOSE ANTONIO DA SILVA                    10.03.1975                              
+     0              0       11703    3905709      1 SILVIO CESAR LIMA E SILVA                20.06.2000                              
+     0              0       11720    6968370      1 VILMA ALBINO LEONCO SOROCABA EPP         24.08.2004                              
+     0              0       11754    5830297      1 DESETEC                                  01.01.0001                              
+     0              0       11770    2267976      1 ROSANIA MARCELINA DE FREITAS AMARAL      14.11.1997                              
+     0              0       11797    3312383      1 VALQUIRIA JACOB DE ARAUJO FALEIRO        27.07.1999                              
+     0              0       11800    5068561      1 JOAO GERALDO BEGNINI EPP                 05.06.2002                              
+     0              0       11835    5517202      1 MARIA SALETE TEIXEIRA ASSUNCAO           10.02.2003                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 3 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       11851     919471      1 COML. DE BEBIDAS IRMAOS LTDA.            13.11.1995                              
+     0              0       11894   14551253      1 ANTONIO SANTANA DA SILVA                 16.05.1978                              
+     0              0       11908    5678980      1 MARIA SILVIA FERREIRA CONFECCOES         10.09.2001                              
+     0              0       11916    4157875      1 ELAINE MEROTI DE ALMEIDA-EPP             17.11.2000                              
+     0              0       11932    5398327      1 JULIO CESAR VIEIRA DE MAGALHAES UCHOA    20.11.2002                              
+     0              0       11959    5429149      1 LUIZ ALBERTO LOUREIRO                    05.12.2002                              
+     0              0       11967    5799751      1 RICARDO PAULO ARANTES                    31.07.2003                              
+     0              0       11975    4372541      2 EMM EXPLORACAO E COMERCIALIZAC           13.10.2003                              
+     0              0       11991   65392771      1 OURINVEST PARTICIPACOES S/A              11.01.1991                              
+     0              0       12009    4312198      1 ANTONIO M FREITAS                        25.01.2001                              
+     0              0       12017   10285542      1 DOMINGOS MARQUES TAVARES                 07.05.2001                              
+     0              0       12041    5868035      1 FRANCISCO SANTOS NEVES                   27.08.2003                              
+     0              0       12068    7431053      1 CICERA RITA SARAIVA DO NASCIMENTO        10.06.2005                              
+     0              0       12084    5222121      1 CHAVAO LUZ INFORMATICA LTDA ME           12.08.2002                              
+     0              0       12092   96624226      1 ORLANDO GALLINARI SOROCABA               10.10.1996                              
+     0              0       12114    3665427      1 EDIMO FERREIRA DE QUEIROZ FI             04.02.2000                              
+     0              0       12130   16355273      1 JOSE ANCHIETA FERNANDES DA SILVA         15.06.1998                              
+     0              0       12173    4878031      1 ROBERTO BARRETO DE MATOS                 18.01.2002                              
+     0              0       12181   22809537      1 DISCAL COMERCIO DE CONFECCOES E CALCADOS 20.06.2000                              
+     0              0       12190    6071899      1 PODERES PUBLICOS FLAVIO DE CARVALHO RAMO 17.04.1986                              
+     0              0       12211    2743859      1 AILTON ALVES DOS SANTOS                  02.09.1998                              
+     0              0       12220    5076491      1 ROBERTO CARLOS LEMOS ME                  04.06.2002                              
+     0              0       12270    4757391      1 PATRICIA DE MEDEIROS RUSSO EPP           17.10.2001                              
+     0              0       12327    1714947      1 PAULO CESAR PINTO                        17.03.1991                              
+     0              0       12335    4925950      1 JURANDIR SILVA DE AQUINO                 22.02.2002                              
+     0              0       12386    4923628      1 SUZANA FERRAZ                            23.11.2001                              
+     0              0       12424    6065252      1 DIOGO IBRAHIM CAMPOS                     14.01.2004                              
+     0              0       12432   60239001      1 WILMAR ALVES CARDOSO                     20.03.1989                              
+     0              0       12440    7066563      1 LIDIANE SILVA DOS SANTOS                 08.11.2004                              
+     0              0       12459   16404287      1 SUZANO BAHIA SUL PAPEL E CELULOSE SA     08.12.1987                              
+     0              0       12475   60876075      1 EMPRESA DE ELETRICIDADE VALE PARANAPANEM 12.06.1934                              
+     0              0       12483   22182455      1 MARIA GONCALINA MOREIRA FREIRE FI        01.08.1986                              
+     0              0       12491    7092777      1 A.A. SOUZA SERVICOS AUTOMOTIVOS E PECAS  17.11.2004                              
+     0              0       12505    4776782      1 ROBERTO ALVES CAVALCANTE EPP             04.01.2003                              
+     0              0       12513    4253743      1 SERGIO ITAMAR DE SOUZA                   03.02.2000                              
+     0              0       12521   22263537      1 SCHEILA LIVIA MARTINS NIQUINI            07.08.2000                              
+     0              0       12530    4958895      1 SELMA VIEIRA DA SILVA                    22.03.2002                              
+     0              0       12548    7217694      1 ENZO JOSE ALMEIDA                        25.01.2005                              
+     0              0       12556    7380510      1 DEAM FACTORING E FOMENTO MERCANTIL LTDA  26.04.2005                              
+     0              0       12564    4002434      1 W A AUTOMOVEIS LTDA                      11.08.2000                              
+     0              0       12580   33718164      1 MARIA HELENA GIROTO COIMBRA              17.01.1990                              
+     0              0       12599    4674199      1 FLORENTINO IGNACIO MENDONCA NETO         12.07.2001                              
+     0              0       12602    2492039      1 EDVALDO DE OLIVEIRA SILVA                05.04.1998                              
+     0              0       12637    6028087      1 EDSON MARCELLO VIANNA                    01.12.2003                              
+     0              0       12645    3442868      1 MARCIO DAVI NICOLETTI BATISTA EPP        29.09.1999                              
+     0              0       12653    4011696      1 KEKE SE KE CENTRO AUTOMOTIVO LTDA ME     18.08.2000                              
+     0              0       12661    4916825      1 JAMIR MENDES PEREIRA                     25.01.2002                              
+     0              0       12670    4955054      1 GENILSON ETELVINO DE MEDEIORS            20.03.2002                              
+     0              0       12688   74013962      1 EDSON JUAREZ MASSOCATO                   30.12.1993                              
+     0              0       12700    6257368      1 CONCEICAO APARECIDA DOS SANTOS           19.05.2004                              
+     0              0       12726    5195822      1 MATEUS GOMES SANTOSME                    24.07.2002                              
+     0              0       12734    6534045      1 CENTRO DE FORMACAO DE CONDUTORES AUTO MO 05.07.2004                              
+     0              0       12742    4449835      1 MILTON JOSE DE CAMPOS                    16.04.2001                              
+     0              0       12769   46001848      2 IATE CLUBE DE CAMPINAS                   28.10.1984                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 4 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       12807      15793      1 2P VEICULOS LTDA - ME                    01.01.0001                              
+     0              0       12823    5912625      1 ADRIANO ANDRADE DE JESUS                 01.09.2003                              
+     0              0       12831    5928704      1 MARILEIDE DA SILVA CELULAR               10.10.2003                              
+     0              0       12858    7201361      1 ALFA - COM. E IND. DO VESTUARIO SOCANOM  18.12.1956                              
+     0              0       12890    3029687      1 VASCO JOSE LOPES DA SILVA                01.03.1999                              
+     0              0       12904    3969190      1 ODAIR JOSE MACHADO                       04.08.2000                              
+     0              0       12912    3997000      1 ALOISIO DOS SANTOS NASCIMENTO            15.08.2000                              
+     0              0       12920    4409941      1 IVO CUSTODIO DORIA                       25.04.2001                              
+     0              0       12971    6188227      1 VALDIRENI F N CHERRI                     31.03.2004                              
+     0              0       13005    6290027      1 JOSE CARLOS GONCALVES                    04.10.1979                              
+     0              0       13030   33337619      1 DIVINA REZENDE DE CASTRO                 25.08.1989                              
+     0              0       13048    5437339      1 LIVIA MARIA CORDEIRO DOS SANTOS          12.12.2002                              
+     0              0       13056   20003398      1 HUMBERTO DE OLIVEIRA DE LELIS            01.08.1984                              
+     0              0       13064    6235807      1 GASPAR DOS REIS OLIVEIRA                 07.05.2004                              
+     0              0       13072    6255825      1 JOAO DA SILVA GOMES                      17.05.2004                              
+     0              0       13080    5644431      1 JANETE BONALDO                           30.12.2003                              
+     0              0       13099    6244153      1 L A S MARICATO COSMETICOS                07.04.2004                              
+     0              0       13102    6256777      1 PAULA ROBERTA RORIZ SANTOS               22.04.2004                              
+     0              0       13110    5626786      1 SERGIO JOSE DE OLIVEITA                  08.04.2003                              
+     0              0       13145    6147694      1 MARCIA REGINA DE SOUZA FAGUNDES          03.03.2004                              
+     0              0       13153    5956173      1 FERNANDO EDUARDO DE ALMEIDA              22.10.2003                              
+     0              0       13170   61660619      1 PAPAGALLO PASTELARIA LTDA ME             21.08.1996                              
+     0              0       13188    6346646      1 CARLENE PEREIRA DE MENDONCA              24.06.2004                              
+     0              0       13196    1124015      1 ALAOR PEREIRA DE SAO BERNARDO            19.02.1973                              
+     0              0       13200    6192732      1 JOSE NEIS FERRI                          22.03.2004                              
+     0              0       13218    4930694      1 ERICK COSTA TRAZZI M E                   20.02.2002                              
+     0              0       13226    3395657      1 DROGARIA EVEREST LTDA ME                 24.08.2002                              
+     0              0       13234    6927837      1 F I L MARTINS COMERCIO                   04.08.2004                              
+     0              0       13242    4477598      1 VALERIA DE CASSIA DA SILVA               15.06.2001                              
+     0              0       13269    7070375      1 ELIEDIS ALVES DA SILVA                   04.11.2004                              
+     0              0       13277   42105890      1 BHP BILLITON METAIS SOCANOM              03.06.1971                              
+     0              0       13285    7137038      1 SPGEO ENGENHARIA DE FUNDACOES LTDA       14.12.2004                              
+     0              0       13293    7134981      1 ENRICO COELHO CEOLOTTO                   23.11.2004                              
+     0              0       13307    8687535      1 BENJAMIM LUCIANO DE ALMEIDA              08.08.1983                              
+     0              0       13315    6964715      1 KAROLINE TENEDINI CANSI                  03.09.2004                              
+     0              0       13323    5769373      1 ROBERTO CARLOS BERNARDI TRANSPORTES      14.07.2003                              
+     0              0       13340    5138621      1 SADI DE SOUZA                            27.06.2002                              
+     0              0       13358    7258434      1 OTELINO LUCIO OLIVEIRA REIS              02.03.2005                              
+     0              0       13366    7070304      1 SILVIA MEDINSKI LIMA                     19.10.2004                              
+     0              0       13374    3081123      1 SANDRA NOVACK                            09.04.1999                              
+     0              0       13382    2211425      1 FRANCISCO WELLINGTON CAMELO DE AGUIAR    25.09.1997                              
+     0              0       13439    1268778      1 COMPENSADOS TRIUNFO LTDA                 16.07.2004                              
+     0              0       13447    3863611      1 LUCIENE LOPES DIAS DOS SANTOS            26.06.2000                              
+     0              0       13455    4546500      1 ANDREIA BERNARDES DA SILVA               26.06.2001                              
+     0              0       13463    4409999      1 JOSE LAZARO                              23.04.2001                              
+     0              0       13480    4835056      1 CARLA ADRIANA MIRABER FERRETO            22.12.2001                              
+     0              0       13510    5155869      1 GILDASIO PEREIRA LINS                    10.06.2002                              
+     0              0       13536    5744543      1 MARLENE DE OLIVEIRA                      20.06.2003                              
+     0              0       13544   26602599      1 CELSO SURDI PRIMO                        06.04.1990                              
+     0              0       13552   96195615      1 INDUSTRIAS TUDOR S.P. DE BATERIAS LTDA   01.01.0001                              
+     0              0       13587   33609504      1 SANTA CASA BL JUDICIAL                   20.08.1998                              
+     0              0       13595    5016999      1 JERUZA BEATRICE NOVAIS SANTOS            24.04.2002                              
+     0              0       13617    6185849      1 MARIA ELAINE RIBEIRO DE SOUSA RANGEL     15.03.2004                              
+     0              0       13633    7435337      1 ERIKA C DOS SANTOS                       16.06.2005                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 5 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       13641   41801226      1 HILTON NAVES ARAUJO                      17.02.1992                              
+     0              0       13650    5220987      1 JULIA CAMPI LIMA BARBOSA                 29.07.2002                              
+     0              0       13668    4208827      1 FRANCISCO EVANILDO DE MOURA FRANCO       19.12.2000                              
+     0              0       13684   13194220      1 JOSE A F BITENCOURT                      28.09.1982                              
+     0              0       13706     429799      1 CUSTODIO CELIO DA SILVA                  11.08.1995                              
+     0              0       13722    4961229      1 SANTOS E LEAO COMERCIO DE GAS LTDA       24.01.2002                              
+     0              0       13730    4597144      1 DORIVAL ALVES PEREIRA DAP                01.07.2001                              
+     0              0       13749   61083002      1 COMPANHIA AGRICOLA CAIUA                 01.01.0001                              
+     0              0       13765    5918605      1 LEONARDO AUGUSTO VIEIRA COELHO           03.10.2003                              
+     0              0       13790   30508345      1 PETROSERV SOCANOM                        23.10.1986                              
+     0              0       13811   37621901      1 NATANAEL RAIMUNDO DA VEIGA               22.12.1992                              
+     0              0       13838    3572709      1 MARIA APARECIDA LEAL SANTANA             14.12.1999                              
+     0              0       13854    4305848      1 ADRIANA DOS SANTOS RIBEIRO               21.02.2001                              
+     0              0       13862    4127305      1 LUZIA ROSA FERREIRA SOUZA                01.11.2000                              
+     0              0       13870    4819085      1 JOSIMAR DOS SANTOS                       13.12.2001                              
+     0              0       13900    5005351      1 CITIINSURANCE DO BRASIL VIDA E PREVIDENC 05.11.2001                              
+     0              0       13919    5155199      1 JOSE DOS SANTOS VIEIRA                   25.07.2002                              
+     0              0       13927    5288999      1 SILVANO PEREIRA DUARTE                   12.09.2002                              
+     0              0       13935    5363799      1 NILSABETH FERREIRA DE BARROS             24.10.2002                              
+     0              0       13943    1070207      1 NEUZA MARIA BERNARDELLE                  01.03.1996                              
+     0              0       13960    3755598      1 CATIA APARECIDA DA ROSA                  31.03.2000                              
+     0              0       13978    3097914      1 C E S DOS SANTOS ME                      16.04.1999                              
+     0              0       13986    5788582      1 DALTON MAGNO ARAUJO LIMA                 31.07.2003                              
+     0              0       13994    5555290      1 LUIS MIGUEL BARBOSA                      14.03.2003                              
+     0              0       14001    4056517      1 INOVACAO TREINAMENTO E DESENVOLVIMENTO L 13.09.2000                              
+     0              0       14010     939242      1 MARIA HELENA ROSA VERCESI RIBEIRAO PRETO 24.11.1995                              
+     0              0       14044    3479968      1 ADRIANA VIEIRA VAZ                       15.11.1999                              
+     0              0       14079    5058493      1 ROSANGELA MARIA DO NASCIMENTO            17.04.2002                              
+     0              0       14095    5398836      1 OSVALDO ALVES PEREIRA                    01.09.2002                              
+     0              0       14109    3705701      1 MARIA LUCIA MOREIRA DOS SANTOS           13.03.2000                              
+     0              0       14117    2503450      1 JOANA D ARC DE OLIVEIRA                  22.04.1998                              
+     0              0       14133    5740776      1 LUIS PIRES PINHEIRO FI                   10.06.2003                              
+     0              0       14168    5281200      1 SOLANGE BARBIERI                         01.09.2002                              
+     0              0       14184    4754455      1 LEANDRO JOSE DE OLIVEIRA                 30.10.2000                              
+     0              0       14206   56830680      1 IVO BENEDITO                             09.12.1986                              
+     0              0       14214   32082489      1 OCEANUS AGENCIA MARITIMA SOCANOM         06.05.1991                              
+     0              0       14222   63739973      1 BENAION INDUSTRIA DE PAPEL E CELULOSE S/ 03.10.1991                              
+     0              0       14249    2436519      1 JOSE NILDO DE QUEIROZ CONFECCOES         27.02.1998                              
+     0              0       14257    7509730      1 ANA NEUSA P DE OLIVEIRA                  03.09.1984                              
+     0              0       14273   53577961     67 BRASIL TRANSPORTES INTERMODAL LTDA       28.06.1984                              
+     0              0       14281       1180      2 CENTRAIS ELETRICAS BRASILEIRAS SOCANOM E 11.11.1994                              
+     0              0       14303    6370957      1 MASSAS MDC ALIMENTOS LTDA ME             01.06.2004                              
+     0              0       14311    6088852      1 CELIO FERREIRA VINHOTE                   05.02.2004                              
+     0              0       14320    1726957      1 AMARA MIRANDA DE ALMEIDA - ME            10.03.1997                              
+     0              0       14338    5292261      1 AGNALDO LUIZ PINHEIRO                    06.11.2001                              
+     0              0       14346    5657107      1 LINDOMAR PEREIRA DE SOUZA HORTIFRUTIGRAN 16.05.2003                              
+     0              0       14354    6169687      1 JOAO SIDNEI BISSACOT                     20.02.2004                              
+     0              0       14370    6076427      1 STEFANO SANCHES                          12.01.2004                              
+     0              0       14389    7019264      1 CARLOS ALEXANDRE BIESDORF                24.09.2004                              
+     0              0       14397    7020540      1 MARIA MARQUES PEREIRA                    30.09.2004                              
+     0              0       14400    7097162      1 CELIO JOSE SOARES                        24.11.2004                              
+     0              0       14419    2054185      1 ELISABETH REGINA TENEDINI CANSI          18.08.1997                              
+     0              0       14427    5521860      1 PITTER AUGUSTO PALADINI                  21.02.2003                              
+     0              0       14435    2309580      1 FLAVIA ROMA DOS SANTOS                   07.01.1998                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 6 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       14451   35112556      1 MELQUIADES SILVA CARDOSO                 11.04.1995                              
+     0              0       14460    1111851      1 MARIA GRACIEMA FURTADO PIRES             02.05.1996                              
+     0              0       14478    7238339      1 SERGIO ANTONIO BOSCO CONFECCOES          03.02.2005                              
+     0              0       14494    7247427      1 NELSON PANTANO                           04.03.2005                              
+     0              0       14524    7276179      1 NMP COMERCIO DE BEBIDAS LTDA             11.03.2005                              
+     0              0       14532    1214371      1 JOSE VALERIANO NETO                      20.05.1996                              
+     0              0       14567    3759251      1 JOSE AURELIO                             06.04.2000                              
+     0              0       14575    4408283      1 NADSON REIS                              27.04.2001                              
+     0              0       14591   29964749      1 BRASCAN IMOBILIARIA INCORPORACOES SOCANO 19.09.1998                              
+     0              0       14605    5023036      1 THEODORA C N BEZERRA                     22.04.2002                              
+     0              0       14621    2286299      1 JERRIANE SILVA COSTA                     16.12.1997                              
+     0              0       14630   48440937      1 CARLOS APARECIDO RUBBO FI                01.05.1977                              
+     0              0       14656    5348607      1 JACQUELINE MONCALVES MESSIAS PEREIRA FI  01.10.2002                              
+     0              0       14672    5788907      1 MILTON CAVALCANTE DE ARAUJO              29.07.2003                              
+     0              0       14680   51882124      1 LAR DOS IDOSOS DR ANTONIO ANADAO         03.08.1983                              
+     0              0       14699    1394953      1 ESPIRITO SANTO INVESTIMENTOS SOCANOM     16.12.1996                              
+     0              0       14702    6105946      1 FLAVIO JUNIOR PEREIRA                    01.02.2004                              
+     0              0       14710   26243121      1 REINALDO DE ARAUJO                       01.03.1990                              
+     0              0       14729    3553646      1 MARIA SOLIDADE RABELO LIMA               10.12.1999                              
+     0              0       14737    1511321      1 ALMIR PEREIRA DE ANDRADE                 18.10.1996                              
+     0              0       14800   79174215      1 VALDECIR DOS SANTOS FI                   01.04.1986                              
+     0              0       14826   59424069      1 CASSIO ANTONIO PEREZ                     23.08.1988                              
+     0              0       14834    2022855      1 BRANDINA LEDEBUHR                        01.08.1997                              
+     0              0       14850   15102288      1 CONSTRUTORA NORBERTO ODEBRECHT SOCANOM   01.08.1946                              
+     0              0       14877    4640007      1 GUILHERME PEIXOTO GARCIA                 28.08.2001                              
+     0              0       14885    1445313      1 IVONETTE NEVES DE SOUZA                  04.11.1996                              
+     0              0       14893    6131972      1 DOUGLAS DA SILVA RUELA                   12.02.2004                              
+     0              0       14915   90629056      1 ADERE IND SERIGRAFICA LTDA               09.04.1960                              
+     0              0       14940    4948341      1 NILSON NUNES                             07.03.2002                              
+     0              0       14982    5262908      1 VANDEIR ROGERIO DA SILVA                 01.03.2001                              
+     0              0       14990    4730654     11 ATLANTICA HOTELS INTERNATIONAL QUALITA C 05.07.2004                              
+     0              0       15008    1982858      1 CARLOS VILAS BOAS DE ALMEIDA             22.07.1997                              
+     0              0       15040    6042940      1 ROBERT DE ALMEIDA                        19.12.2003                              
+     0              0       15059    6248381      1 ADRIANA DA SILVA                         06.05.2004                              
+     0              0       15067    5149183      1 BEATRIZ OLIMPIA DA CUNHA                 08.05.2002                              
+     0              0       15075    5555211      1 GERALDO CESAR ROQUE                      14.03.2003                              
+     0              0       15091    4475609      1 DURVAL FERREIRA PORTO                    31.10.2003                              
+     0              0       15105    2906711      1 NIELSON BRAZAO DA GAMA                   22.12.1998                              
+     0              0       15113    6297020      1 ALEX ALVES DOS SANTOS PESCADOS EPP       27.01.2004                              
+     0              0       15130    6354894      1 MOACIR SOTERO DOS SANTOS NETO            22.06.2004                              
+     0              0       15148    6536906      1 EDILANIA DE PAULA NOBREGA                14.07.2004                              
+     0              0       15164    6142631      1 ELIAS DA SILVA LIMA                      20.11.2003                              
+     0              0       15172    4476352      1 FLAVIO LEAO DE MATOS                     30.05.2001                              
+     0              0       15180    5067508      1 AURELINO GARCIA DO AMARAL NETO           24.04.2002                              
+     0              0       15199    1489627      1 SIMONE ROSA CAMPOS SANTOS                16.10.1996                              
+     0              0       15210    7148579      1 RENATO GARRIDO                           27.12.2004                              
+     0              0       15229    7169134      1 SANDRA DOS SANTOS LIMA                   15.12.2004                              
+     0              0       15237    6307106      1 MARCOS VINICIUS DE SOUZA ARAUJO TABACO E 16.04.2004                              
+     0              0       15288   35654292      1 JONAS MOREIRA DA SILVA                   26.06.1991                              
+     0              0       15296    6199157      1 VANDERLEIA MARIA DA SILVA BOTELHO NE     30.03.2004                              
+     0              0       15300    5731612      1 MARIA DAS GRACAS FERREIRA DE REZENDE     28.04.2003                              
+     0              0       15318    7181713      1 ROBERTO CAMPOS FILHO                     20.01.2005                              
+     0              0       15334    5375791      1 ANDREA OLIVEIRA BASTOS ME                21.10.2002                              
+     0              0       15385    4599528      1 ORLANDO MARTINS FREIRE                   01.02.1985                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 7 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       15393   58675398      1 WELLINGTON JOAQUIM PURSINO               15.03.1988                              
+     0              0       15415   19116847      1 SEBASTIAO BERNARDO DE SALES              30.03.1978                              
+     0              0       15423    3336337      1 LUCIENE INEZ ROCHA                       10.07.1999                              
+     0              0       15431   52864956      1 GALITEZI CIA LTDA STAR VIDEO             18.08.1983                              
+     0              0       15458   14772867      1 EBDA MARINALVA SOUZA DAS NEVES           29.05.1981                              
+     0              0       15466    5815176      1 MARISTELA DE ABREU GOULARTE              12.08.2003                              
+     0              0       15474    5644775      1 JORGE DE JESUS SANTOS DA PARALELA        29.04.2003                              
+     0              0       15490    4169843      1 CCE DA AMAZONIA SOCANOM                  24.07.1971                              
+     0              0       15504     679147      1 MARIA DA HORA SANTOS LIMA                14.06.1995                              
+     0              0       15512    2794124      1 JOSE RICARDO MURAD EPP                   23.09.1990                              
+     0              0       15520    1954090      1 ALDEIA LIBERDADE E VIDA                  18.06.1997                              
+     0              0       15547     538268      1 NERA AMERICA LATINA LTDA                 01.01.0001                              
+     0              0       15555    1995168      2 STELLA REGINA DI MAIO                    17.07.1997                              
+     0              0       15580   10064392      1 SONIA MARIA FERREIRA DA LUZ              20.06.1975                              
+     0              0       15601    5669815      1 ANDERSON TORRES                          01.05.2003                              
+     0              0       15610    3177972      1 HELIO KRENKEL PEREIRA                    27.05.1999                              
+     0              0       15636    5978811      1 GILMAR TRAJANO DE SANTANAME              14.10.2003                              
+     0              0       15644    6138020      1 WELLINGTON DE LIMA NASCIMENTO            12.03.2004                              
+     0              0       15652   67630368      2 CAPTO ASSESSORIA E CONSULTORIA COMERCIAL 19.05.1992                              
+     0              0       15709    3273314      1 NICIA ALMEIDA DA SILVA                   09.07.1999                              
+     0              0       15741   81517922      1 MARIO LUIZ RAMBO FI                      01.08.1989                              
+     0              0       15750    3325475      1 SIMAO ALESANDRO DALLA COSTA              02.08.1999                              
+     0              0       15768    1191457      1 ELIENE PIRES DE FREITAS                  07.01.2000                              
+     0              0       15784    2674181      1 MARCOS VINICIUS JERONIMO BARROSO         18.02.1998                              
+     0              0       15814    3897275      1 EDEMILSON FERRAES                        15.05.2000                              
+     0              0       15822    2719960      1 MARIA DE JESUS CAMPOS                    28.07.1998                              
+     0              0       15830   16395212      1 JOSE SOUZA PINHEIRO                      12.11.1987                              
+     0              0       15849    3956543      1 JOSE MOACI RODRIGUES TORRES ME           28.07.2000                              
+     0              0       15857    4474485      1 JOSE PEDRO GOMES DE ALCANTARA            05.05.2001                              
+     0              0       15873   34550186      1 RAIMUNDA SILVA DE ALMEIDA CONSTRUCOES    05.04.1990                              
+     0              0       15881    4265453      1 MARLENE APARECIDA LOPES MACHADO          11.01.2001                              
+     0              0       15890   37609476      1 MARIA ELEUZA FERREIRA SANTOS             23.10.1992                              
+     0              0       15920    4867513      1 FRANCISCO DA SILVA OLIVEIRA II           30.11.2001                              
+     0              0       15946    4971619      1 LINDOMAR DE SOUZA                        22.03.2002                              
+     0              0       15954    3519800      1 LEONILDO SALVADOR C. IMOVEIS             16.11.1999                              
+     0              0       15962    4553421      1 FRANCISCA FERREIRA NASCIMENTO GESSO      13.07.2001                              
+     0              0       15970    3866396      1 MARIA DA GRACA DE BON BRANDAO            10.06.2000                              
+     0              0       15989    3060573      1 WELLINGTON RODRIGUES SANTANA SILVA       23.03.1999                              
+     0              0       16039    4044629      1 MARIA LUCIEIDE DA SILVA NASCIMENTO       06.09.2000                              
+     0              0       16071    3706634      1 ALCEU LUIS GUTERVIL                      20.03.2000                              
+     0              0       16101    5387506      1 ROBERTO AURELIANO DOS SANTOS             20.11.2002                              
+     0              0       16110    5560208      1 JOSE MARCIO DOS SANTOS SILVA             26.03.2003                              
+     0              0       16128    2984774      1 MARIZETH DE OLIVEIRA COSTA               10.02.1999                              
+     0              0       16179    5841993      1 FERNANDO EMANUEL FERNANDES               30.07.2003                              
+     0              0       16187    4494632      1 MARIA LOURDES DA SILVA MATOS             15.05.2001                              
+     0              0       16209   17227422      1 GERDAU ACO MINAS SOCANOM                 07.03.1967                              
+     0              0       16225    5684858      1 EMERSON GASPARIN                         03.06.2003                              
+     0              0       16250    5444606      1 KID PLACAS & FAIXAS LTDA ME              10.12.2002                              
+     0              0       16276    6076347      1 LUIZ ADRIANO MORAIS DE MATOS             27.01.2004                              
+     0              0       16322   88111505      1 WAGNER ALIODES NUNES                     12.04.1982                              
+     0              0       16357    6062504      1 MARIA FILOMENA PIASTRELLI DE CARVALHO    26.11.2003                              
+     0              0       16373   60499605      2 SESI SIFCO S A                           19.08.1958                              
+     0              0       16381   62258884      1 CAMARGO CORREA CIMENTOS SOCANOM          12.11.1968                              
+     0              0       16390   93652584      1 JOSE BONIFACIO DORNELES TOURRUCOO        31.10.1990                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 8 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       16403    1680509      2 SERGIO ROBERTO FERREIRA FILHO EPP        10.05.2004                              
+     0              0       16411    3705025      1 VANDERLEI MACIEL DA COSTA                13.03.2000                              
+     0              0       16420    6351115      1 ADEMAR BUENO DA SILVA EPP                21.06.2004                              
+     0              0       16438    6960258      1 GERALDO BORGES MACHADO                   18.08.2004                              
+     0              0       16446    6933934      1 ROBSON ROGERIO GUERRA                    30.07.2004                              
+     0              0       16462    1819365      1 LUCIO OTAVIO ELIAS ISAAC                 26.03.1997                              
+     0              0       16470    4021284      1 EDILEUSA ALVES DA SILVA                  01.08.2000                              
+     0              0       16497   29506474      1 REXAM BEVEREGE CAN SOUTH AMERICA S/A     08.06.1977                              
+     0              0       16500   16404287     33 SUZANO BAHIA SUL PAPEL E CELULOSE SA     27.09.1948                              
+     0              0       16519    7114749      1 JOCELIA FERREIRA VIEIRA DA SILVA         24.11.2004                              
+     0              0       16535   87001335      1 PURAS DO BRASIL SA BLOQ JUDICIAL         25.06.1998                              
+     0              0       16543    7127042      1 JUNIO DE FREITAS ROCHA VAREJAO EPP       06.12.2004                              
+     0              0       16560    2972109      1 DAVID DE SOUZA                           11.02.1999                              
+     0              0       16586    7076221      1 MARCELO RICARDO ANTONIO EPP              30.08.2004                              
+     0              0       16616    7128876      1 MARCIEL DONIZETE INDAIAS                 02.12.2004                              
+     0              0       16624    7405133      1 ELIZEU AUGUSTO DE FREITAS                01.06.2005                              
+     0              0       16632   16701716      1 FIAT AUTOMOVEIS SOCANOM BLOQUEIO JUDICIA 06.07.1973                              
+     0              0       16640    7003843      1 GLAUCIANA SILVA DOS SANTOS FERREIRA      22.07.2004                              
+     0              0       16675      26998      1 AGRO PASTORIL SAO JOSE DO JATAHY         12.07.1994                              
+     0              0       16683    5320933      1 NILZA MARINHO PILONETO                   20.09.2002                              
+     0              0       16705    5477720      1 HELDER RODRIGUES DA SILVA & CIA LTDA ME  21.01.2003                              
+     0              0       16748   44899284      1 PANIFICADORA FLOR DAS VILAS DE BARUERI L 16.09.1971                              
+     0              0       16756    7282615      1 FABIANO B DE CARVALHO                    22.02.2005                              
+     0              0       16764    7396163      1 MARCIO SEITARO NAKAZATO                  20.05.2005                              
+     0              0       16802    6240457      1 OFFICINNA DE TURISMO VIAGENS, PLANEJAMEN 05.04.2004                              
+     0              0       16810    7413791      1 AGUINALDO SILVA DE MELO                  20.03.2005                              
+     0              0       16829    7404469      1 IZAUL DE SIQUEIRA                        13.04.2005                              
+     0              0       16845    6123261      1 ANA CAROLINA DAMAS MEDEIROS ME           03.02.2004                              
+     0              0       16853    7431895      1 LEANDRO APARECIDA BORGES                 13.06.2005                              
+     0              0       16861   71416234      1 STIKCAR BRASIL IND DE MAQ E FERRAMENTAS  14.12.1993                              
+     0              0       16888    5402837      1 HELENICE DE ALMEIDA MOTA SANTOS          22.11.2002                              
+     0              0       16896    4092568      1 VICTORIO RUBEN IPPOLITI                  17.10.2000                              
+     0              0       16900    4047164      1 ROSEMEIRE CALMON CALDAS COELHO           08.09.2000                              
+     0              0       16926   41417403      1 MARIA DE FATIMA GOMES ALBUQUERQUEME      15.04.1992                              
+     0              0       16942    2409618      1 PEDRO RAFAEL PALONE DE OLIVEIRA          20.02.1998                              
+     0              0       16977    4270101      1 MARIA CATARINA PIVETTA                   06.02.2001                              
+     0              0       16985    4538160      1 ALDINO MENEGAT ME                        25.06.2001                              
+     0              0       17000    7196926      1 C ROLIM TECIDOS SOCANOM                  26.07.1966                              
+     0              0       17019   93516557      1 JAQUELINE BRAGA DE SOUZA                 01.08.1990                              
+     0              0       17043   10189942      1 ROBERVAL OLIVEIRA BATISTA                12.03.1996                              
+     0              0       17060    3486837      1 F E I TRANSPORTES E LOGISTICA LTDA ME    27.10.1999                              
+     0              0       17078    4355007      1 MARIA TATIANE PIRES DE MELO CAITANO      23.03.2001                              
+     0              0       17094    5423423      1 ALICE ANDRADE DE LEMOS                   22.11.2002                              
+     0              0       17108    4353925      1 JEANES SOARES DE AMORIM MOURA            27.03.2001                              
+     0              0       17124    5643999      1 IEDA ELIAS CAMPOS DO CARMO               15.05.2003                              
+     0              0       17132   97198394      1 REMO JOSE BOLZAN                         23.02.1994                              
+     0              0       17140   13306048      1 JOSE LAZARO DA SILVA SANTOS              01.01.2000                              
+     0              0       17159    6030116      1 MARIA LUCIA LUIZ XAVIER PINTO            20.11.2003                              
+     0              0       17183    2757923      1 DAVI PORFIRIO DA SILVAME                 05.08.1998                              
+     0              0       17230   36240547      1 HEBARA DISTRIBUIDORA DE PRODUTOS LOTERIC 19.01.2000                              
+     0              0       17256    4127030      1 SALETE APARECIDA DE QUADROS SOARES       17.10.2000                              
+     0              0       17264    3644963      1 HERCULES MANDETTA NETO                   25.02.2000                              
+     0              0       17272    4096904      1 SIDNEI QUINTELA BARBOSA                  13.10.2000                              
+     0              0       17299    4131635      1 EXTRATIVA FERTILIZANTES SOCANOM          25.09.2000                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 9 -                                                                      
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       17302    2355740      1 JOSE RODRIGO FONSECA JUNDIAI             02.02.1998                              
+     0              0       17310    4273234      1 SONIA MARIA FRANCA DE ASSIS DE OLIVEIRA  19.01.2001                              
+     0              0       17353    3363550      1 RAIMUNDO MOREIRA PIMENTEL                20.08.1999                              
+     0              0       17361    2520196      1 MARCIA TOMAZ DE CAMPOS EPP               15.05.1998                              
+     0              0       17370    2781613      1 ANTONIO JUAREZ NAZARENO                  28.09.1998                              
+     0              0       17388    3714537      1 WILSON LUIZ PALARO                       10.03.2000                              
+     0              0       17396    3863232      1 MARIA JOSE RODRIGUES A GOIANA II         12.06.2000                              
+     0              0       17400   67543728      1 MANOEL DELMIRO FERNANDES CONFECCOES      31.01.1992                              
+     0              0       17426    4281495      1 ROBERTO FERNANDES BANDEIRA               09.02.2001                              
+     0              0       17434    4136673      1 OSMARINA FERREIRA DE SOUZA               01.11.2000                              
+     0              0       17442    4499013      1 DIVINO SILVA QUEIROZ                     12.06.2001                              
+     0              0       17450   86994142      1 JOSE PAES DE AZEVEDO                     30.03.1994                              
+     0              0       17469    2295386      1 EVANDRA LOURDES CADO ALVES               17.11.1997                              
+     0              0       17477    3064290      1 SOUZA E COSTA LTDAME                     29.03.1999                              
+     0              0       17493    4004187      1 ROSALBA RODRIGUES DE LIMA                18.08.2000                              
+     0              0       17507    3473078      1 JOANA DARC VERAS                         25.09.1999                              
+     0              0       17523    3322659      1 MORIVALDO MACHADO GALVAO                 21.09.1999                              
+     0              0       17566    4477858      1 MERE ROZELAINE LINK COSTA                29.05.2001                              
+     0              0       17604   49679970      1 EDGARD SANTO BELINI                      01.06.1978                              
+     0              0       17620   89480628      1 MERI LIMA KNORR                          19.10.1978                              
+     0              0       17647    4020054      1 ADEMAR FERREIRA DE OLIVEIRA COMBUSTIVEIS 28.08.2000                              
+     0              0       17655    5327349      1 MARIA BARBOSA DA SILVA                   18.09.2002                              
+     0              0       17736    5865633      1 JOAO LUIS CHAINCA NETO                   21.08.2003                              
+     0              0       17744    4815734      1 JARI CELULOSE PAPEL E EMBALAGENS S/A     10.11.1970                              
+     0              0       17752    5608913      1 CINTHIA M MINGUTA                        24.04.2003                              
+     0              0       17760    5457986      1 CONCEICAO APARECIDA DE OLIVEIRA          23.12.2002                              
+     0              0       17779    2635296      1 GERALDO NELSON BRANDAO                   13.07.1998                              
+     0              0       17795    4005669      1 RODRIGO ESBER FI                         18.08.2000                              
+     0              0       17809    3252559      1 TEREZA CAMANHO DE SOUZA EPP              22.06.1999                              
+     0              0       17841    2141017      1 MARIA APARECIDA ARAUJO GARCIA            15.08.1997                              
+     0              0       17850    3654535      1 WASHINGTON DIVINO DE ANDRADE             12.10.1996                              
+     0              0       17868    5983027      1 IVAN ANDRADE DA SILVA                    05.11.2003                              
+     0              0       17876    5878442      1 REFRIGERANTES DO AMAPA SOCANOM           04.09.1990                              
+     0              0       17892    4306789      1 MARILENA F. DA SILVA                     21.02.2001                              
+     0              0       17906    5488018      1 JOSINEIDE CARDOSO DOS SANTOS             17.01.2003                              
+     0              0       17914    4257664      1 EDMILSON DE SOUZA PINHEIRO               23.01.2001                              
+     0              0       17922    4590471      1 LUCILENE DIVINA GOMES                    18.07.2001                              
+     0              0       17930    6299075      1 PG COMUNICACAO - ME                      24.05.2004                              
+     0              0       17949    2243928      1 MAURICIO HEIS                            24.11.1997                              
+     0              0       17957    2424404      1 RITA DE PAIVA XAVIER                     01.02.1998                              
+     0              0       17973    5996671      1 CELMAS CASADO SILVA                      23.10.2003                              
+     0              0       17981    6310426      1 RONALDO FRANCISCO NASCIMENTO             27.05.2004                              
+     0              0       17990    6948028      1 P R ALBANO ME                            04.08.2004                              
+     0              0       18007    7030425      1 HELENA DE ALCANTARA PANIAGO              07.10.2004                              
+     0              0       18031    4520545      1 JANETE PELISON PIES                      19.06.2001                              
+     0              0       18040    4988967      1 JOSE MARIA DE ABREU                      02.04.2002                              
+     0              0       18058    3853384      1 MARIA DA LUZ A DO NASCIMENTO             05.06.2000                              
+     0              0       18074   33041260      1 GLOBEX UTILIDADES SOCANOM                30.04.1994                              
+     0              0       18082   38687935      1 ELEUZA MARIA DE MOURA                    04.07.1990                              
+     0              0       18112    5210936      1 ROGERIO S COELHO                         12.07.2002                              
+     0              0       18139    1675141      1 LUCIA MELO FERRREIRA                     24.01.1997                              
+     0              0       18147    6926080      1 SAUL DA S MAIA FILHO                     05.08.2004                              
+     0              0       18155    3469193      1 W W SERVICOS LTDA ME                     14.09.1999                              
+     0              0       18171    5592477      1 ANDRE LUIZ DOS REIS                      09.04.2003                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 10 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       18180    7060382      1 AILTON CESAR PEREIRA SOUZA               04.10.2004                              
+     0              0       18201    7408979      1 HUGMAR FERREIRA DE ANDRADE               15.06.2005                              
+     0              0       18210    5113676      1 ESTER INEZ DIAS NOGUEIRA                 14.06.2002                              
+     0              0       18228    7141753      1 WELINGTON JOSE CANDIDO PLASTICOS ME      18.11.2004                              
+     0              0       18236    1910017      1 USINA FAZENDA CENTRO OESTE LTDA          26.08.1996                              
+     0              0       18244    5873254      1 BEATRIS APARECIDA PEREIRA                10.08.2003                              
+     0              0       18279    5816172      1 MARIA Z DA SILVA                         30.07.2003                              
+     0              0       18287   17193590      1 MASCARENHAS BARBOSA ROSCOE SA CONSTRUCOE 26.09.1966                              
+     0              0       18295    3726478      1 HELIO SANTOS DA SILVA                    19.09.2003                              
+     0              0       18309    5759254      1 LUCIA JANUARIO DE FARIAS                 25.03.2003                              
+     0              0       18317    7513808      1 GLOBAL PROPERTIES CONSULTORIA EMPRESARIA 13.07.2005                              
+     0              0       18333    4377356      1 JOSE FIRMINO FERREIRA EPP                17.05.2001                              
+     0              0       18341    7281492      1 ECO TINTAS LTDA                          23.02.2005                              
+     0              0       18368    3269512      1 VIDO & SOUZA COMERCIAL LTDA EPP          14.06.1999                              
+     0              0       18376    7502292      1 ANTONIO DE SOUZA SANTOS                  25.07.2005                              
+     0              0       18422   71317796      1 MARIA DAS MERCES BATISTA DE OLIVEIRA     20.08.1993                              
+     0              0       18430    2973069      1 MARIA TENORIO DE MELO                    03.02.1999                              
+     0              0       18449   37611084      1 MARIA E S ROLIN                          22.04.1994                              
+     0              0       18465    4811655      1 PAULO S DOS SANTOS                       11.12.2001                              
+     0              0       18473    3636926      1 GALBA MARIA DO NASCIMENTO SILVA          04.02.2000                              
+     0              0       18503      17417      1 MILTON GONCALVES ME                      25.05.1994                              
+     0              0       18511    3710536      1 MARILDO MARTINS CORREIA                  21.03.2000                              
+     0              0       18520   45988110      1 ORSA CELULOSE PAPEL E EMBALAGENS SOCANOM 19.10.1951                              
+     0              0       18538    3483648      1 MARTA ALVES DA SILVA                     04.11.1999                              
+     0              0       18546    5981100      1 FRANCISCO ALVES MOTA                     13.11.2003                              
+     0              0       18554    4493013      1 GUINNESS ENTRETENIMENTO LTDA EPP         08.06.2001                              
+     0              0       18597    1169998      1 SUELAINE RODRIGUES DE MAGALHAES          29.04.1996                              
+     0              0       18619    4932320      1 LUCIANO DE SOUZA                         19.02.2002                              
+     0              0       18643    5978206      1 DATANETWORK TELECOMUNICACOES LTDA EPP    05.11.2003                              
+     0              0       18660    5068567      1 PAULO JUNIOR DE OLIVEIRA                 21.05.2002                              
+     0              0       18678    5511034      1 JOSE FERNANDO RAMOS PECCHIAIO EPP        28.01.2003                              
+     0              0       18686    3883641      1 LUIS CARLOS DOS SANTOS                   14.06.2000                              
+     0              0       18694   38860722      1 JOSE REINALDO DOMINGOS PONCE             06.06.1990                              
+     0              0       18716    3528240      1 FRANCISCO ANTONIO PELLUSO EPP            17.11.1999                              
+     0              0       18724   90301094      1 JOAO RIVEIRA BUENO                       06.09.2002                              
+     0              0       18732   51279974      1 EDSON A GABRIEL                          01.08.1979                              
+     0              0       18740    5387623      1 MAPRA MANGUEIRAS SERVICOS INDUSTRIAIS LT 31.10.2002                              
+     0              0       18783    7095584      1 SCRTM SERVICOS DE COBRANCAS E RECEBIMENT 12.11.2004                              
+     0              0       18805    3453771      1 LUCIA REGINA FRANCISCO COSTA             31.08.2000                              
+     0              0       18813    3979981      1 GERALDO BRAGA DOS SANTOS EPP             01.08.2000                              
+     0              0       18821    1743984      1 WELLINGTON JOSE DE LACERDA               25.03.1997                              
+     0              0       18830    4475012      1 ONIUDO BATISTA DE OLIVEIRA               31.05.2001                              
+     0              0       18848    3683247      1 ELTON RODRIGO OQUEROS DAVID              13.03.2000                              
+     0              0       18864    2933023      1 T GRAO TERMINAIS DE GRANEIS SOCANOM      16.10.1998                              
+     0              0       18872   37826096      1 EDVALDO FERRIRA DA SILVA O NATURALIZADO  08.06.1993                              
+     0              0       18902    3943655      1 KATIUSCIA BRIAO DA ROSA                  17.07.2000                              
+     0              0       18945    3511637      1 ANTONIO CHAGAS DA SILVA SONORIZACAO      13.10.1999                              
+     0              0       18953    5138934      1 RICARDO STAMBON BRAGHIROLI DOS SANTOS    14.06.2002                              
+     0              0       18970    4246962      1 ANA BRASILEIRO OLIVEIRA                  18.01.2001                              
+     0              0       18988    4346480      1 OILSON FERNANDES DOS SANTOS              20.03.2001                              
+     0              0       18996   24135527      1 BENEDITO SERRALHARIA                     31.05.1989                              
+     0              0       19011    5087649      1 ADMILSON PINHEIRO DA SILVA               27.05.2002                              
+     0              0       19046    4540568      1 MARCIA FERREIRA PINTO FI                 03.11.2005                              
+     0              0       19054    2814596      1 EDNA CASTRO GUERREIRO                    26.10.1998                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 11 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       19070    2358236      1 AURO VIRGILIO SILVA                      05.02.1998                              
+     0              0       19100    4231516      1 DONALDO DA COSTA GONCALVES               28.11.2000                              
+     0              0       19127   29964749      2 BRASCAN IMOB INC SOCANOM BLOQUEIO JUDICI 11.12.2001                              
+     0              0       19143    5014913      1 BRUNO BELTRAME                           28.03.2002                              
+     0              0       19160   26805200      1 TRANSPORTADORA PROGRESSO LTDA EPP        17.05.1991                              
+     0              0       19178    5470438      1 F A X FREITAS RESTAURANTES ME            31.01.2003                              
+     0              0       19186    1425787     16 REDECARD S/A                             02.10.1996                              
+     0              0       19194    4883582      1 DAMIAO DE FREITAS PIRES                  06.02.2002                              
+     0              0       19208    3033621      1 EDINA DE FATIMA PEREIRA GUIMARAES        02.02.1999                              
+     0              0       19224    5806891      1 EDILSON DE LIMA SILVA                    13.08.2003                              
+     0              0       19283   85097400      1 ILTON AGOSTINI FI                        01.07.1991                              
+     0              0       19291   17227422      1 GERDAU ACOMINAS SOCANOM                  07.03.1967                              
+     0              0       19305   56790389      1 ANTONIO JOAQUIM SANTOS EMPORIO ME        29.12.1986                              
+     0              0       19313    2879250      1 ATENTO BRASIL SOCANOM.                   02.03.1999                              
+     0              0       19321    1320854      1 CIBA ESPECIALIDES QUIMICAS LTDA          01.07.1996                              
+     0              0       19348    5542358      1 IZABEL C DOS S F DE SANT ANNA            10.03.2003                              
+     0              0       19380    5978615      1 MARINEZ DE CASTRO BARBOSA                08.04.2003                              
+     0              0       19399    5656717      1 VILMAR PEREIRA DA SILVA                  09.05.2003                              
+     0              0       19402   33067745      1 ERICSSON TELELECOMUNIACOES               27.07.1989                              
+     0              0       19410    3236453      1 ALAOR DONIZETI DE FREITAS                21.06.1999                              
+     0              0       19429    5974964      1 ROSANA DE OLIVEIRA                       15.10.2003                              
+     0              0       19437    6106197      1 VILMAR PEREIRA VALENTE FI                26.01.2004                              
+     0              0       19453    5654138      1 JOSE GUSTAVO D ANNA                      14.05.2003                              
+     0              0       19461     863164      1 FRANCISCO AIRTON VALENTE                 11.09.1995                              
+     0              0       19470    5293649      1 GLEISON OLIVEIRA DE MORAS                03.09.2002                              
+     0              0       19488    3665614      1 ILDO DE OLIVEIRA CASTRO                  17.02.2000                              
+     0              0       19496   56645062      1 PRES CONSTRUCOES SOCANOM                 01.11.1986                              
+     0              0       19500    1106781      1 MARIA AP GALVAO S PIRAPORA               04.04.1990                              
+     0              0       19534   16404287     33 SUZANO BAHIA SUL PAPEL E CELULOSE SA     08.12.1987                              
+     0              0       19542   37885407      1 GERALDO FRANCISCO O GOIANO               30.08.1993                              
+     0              0       19550    6165464      1 ANDREA RODRIGUES MORAIS MESQUITA         24.03.2004                              
+     0              0       19569    5460034      1 TURB TRANSPORTE URBANO SOCANOM           31.12.2002                              
+     0              0       19577    6789394      1 MORGANA ROCHA ALVES                      12.07.2004                              
+     0              0       19607    3049992      1 DANIEL MIRANDA DOS SANTOS                22.03.1999                              
+     0              0       19623    1445451      1 ITAMAR DOS REIS SIQUEIRA                 17.06.1985                              
+     0              0       19631    3763782      1 MARCIO ANDRE BISCHOFF                    31.03.2000                              
+     0              0       19640    7295630      1 NELSON MENDES COELHO FILHO               22.03.2005                              
+     0              0       19658    4088208      1 CGMP CENTRO DE GESTAO E MEIOS DE PAGAMEN 09.10.2000                              
+     0              0       19682    7363042      1 ROBERVAL CIESCILIVSKI                    04.04.2005                              
+     0              0       19704    7432715      1 WEVERTON QUIRINO DO CARMO                16.06.2005                              
+     0              0       19712    4303770      1 WALDEMIR JOSE DE SOUZA                   23.02.2001                              
+     0              0       19720   17227422      1 GERDAU ACOMINAS SA                       13.02.2004                              
+     0              0       19739    7043536      1 RODRIGO R ETTINGER REPRESENTCOES         28.09.2004                              
+     0              0       19747    6886912      1 RICARDO DA PAZ MELLO                     26.08.2004                              
+     0              0       19755    4788636      1 SARA RAMOS DA SILVA                      29.11.2001                              
+     0              0       19763    3423178      1 LUARGON INDUSTRIA E COMERCIO LTDA ME     21.09.1999                              
+     0              0       19771    7305326      1 ALESSANDRA ALVES S LAMOUNIER             28.03.2005                              
+     0              0       19798    6938551      1 LL TECNOLOGIA E INFORMATICA LTDA ME      18.08.2004                              
+     0              0       19828   17262213      7 CONSTRUTORA ANDRADE GUTIERREZ SOCANOM    30.08.1948                              
+     0              0       19836    5879660      1 NEIDE VIDAL DE FARIA                     22.09.2003                              
+     0              0       19852    7316975      1 JOAO JOSE PINHEIRO PEDRAS                18.04.2005                              
+     0              0       19860   41316373      1 ITIEL ALVES DO NASCIMENTO                19.11.1991                              
+     0              0       19909    6146703      1 SUELEN DE LIMA CARVALHO                  01.03.2004                              
+     0              0       19925    7393667      1 LILIAN LUANA R BARREIROS                 18.05.2005                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 12 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       19941    7443908      1 BURGOS MEDICOS ASSOCIADOS S/S LTDA       09.06.2005                              
+     0              0       19968    7173153      1 GIZELDA PERES DUARTE                     09.05.2003                              
+     0              0       19976    6108978      1 MAINARA BIAZATI GOUVEIA                  26.01.2004                              
+     0              0       20001    7092445      1 FRANCISCA VIANA MACEDO                   18.11.2004                              
+     0              0       20010    7313207      1 JAIRO UBIRATAN CASTRO DA SILVA           08.04.2005                              
+     0              0       20028    5516121      1 TIFFAJ COMERCIO E PRESTACAO DE SERVICOS  15.07.2005                              
+     0              0       20036    7374017      1 SEBASTIAO RIBEIRO CAMELO                 13.05.2005                              
+     0              0       20044    6250073      1 MARIA JOSE GOMES DE MESQUITA             25.03.2004                              
+     0              0       20060    7252225      1 MT DISTRIBUIDORA DE REVISTA LTDA - ME    04.03.2005                              
+     0              0       20095    4048111      1 ROSANIA PROCOPIO DA SILVA                15.09.2000                              
+     0              0       20109    3171542      2 BEATRIZ CANELLES                         30.03.2000                              
+     0              0       20117    1863874      1 MARIA ODILA MACHADO DOS SANTOS ME        22.05.1997                              
+     0              0       20150    5218566      1 ELIAS FIGUEIRA DA SILVA                  23.08.2002                              
+     0              0       20168    1765199      1 SEBASTIAO SOARES DE BRITO                02.04.1997                              
+     0              0       20192   45543915      1 CARREFOUR COM E IND LTDA CHAMPION ES     10.06.1974                              
+     0              0       20206    5934257      1 MARIA GERUSA DIAS DOS SANTOS             18.09.2003                              
+     0              0       20222   21737366      1 MILTON RUBENS DE FREITAS                 08.09.2000                              
+     0              0       20249    3309734      1 IRAILSON ANDRADE DOS SANTOS              07.07.1999                              
+     0              0       20257    3643170      1 EDILMA DOS SANTOS SOUZA                  10.02.2000                              
+     0              0       20265    4911088      1 VENILTON MARTINS DO COUTO                05.02.2002                              
+     0              0       20303   30346357      1 JOAO CARLOS FARIA M E                    28.08.1979                              
+     0              0       20311    4230961      1 MARLUCIA DE CASTRO BARBOSA               12.01.2001                              
+     0              0       20354   45995388      1 J. CAPRINI GRAFICA EDITORA LTDA          01.01.0001                              
+     0              0       20362   90586199      1 IZABEL BRUXEL HONZIK                     03.03.1986                              
+     0              0       20389   14031348      1 MANUEL FERREIRA SIMOES                   31.03.1986                              
+     0              0       20397    5296952      1 MARCELO DA SILVA ALVES                   04.09.2002                              
+     0              0       20400    5994781      1 EVANDRO PEREIRA                          19.11.2003                              
+     0              0       20435    6906430      1 FIDC INDUSTRIA                           12.08.2009                              
+     0              0       20451   13069489      1 UESB DEBORA LEONARDO DOS SANTOS          26.03.1998                              
+     0              0       20486    3580771      1 JULIANA MACHADO FERRAZ FI                06.01.2000                              
+     0              0       20494    3414663      1 WINNER & FITNESS ACADEMIA DE GINASTICA L 26.08.1999                              
+     0              0       20508    3538943      1 ROGER PIRAZZA                            24.11.1999                              
+     0              0       20516    3591673      1 SHIMOZONO CIA LTDA EPP                   10.01.2000                              
+     0              0       20524    3666024      1 NELSI CARLOS DA SILVA CONSERVACAO        01.02.2000                              
+     0              0       20532    3585704      1 AUREA CORREIA DO NASCIMENTO              01.01.2000                              
+     0              0       20540   60325503      1 ARMIR CONSTANTINO GUIMARAES              01.03.1989                              
+     0              0       20567    4547269      1 PAULA DE OLIVEIRA TADDEI                 11.07.2001                              
+     0              0       20575    1731479      1 BRASILVET INDUSTRIA E COMERCIO DE PRODUT 27.03.1997                              
+     0              0       20591   17393547     10 EMSA EMPRESA SUL AMERICANA DE MONTAGENS  18.05.1992                              
+     0              0       20605    3371993      1 SAMUEL BELEM GOMES EPP                   20.08.1999                              
+     0              0       20613    5005193      1 MARCELINA R MARINHO                      23.03.2002                              
+     0              0       20621   22818033      1 JORGE CARVALHO DE LIMA                   19.04.1988                              
+     0              0       20656    3687847      1 MARIA DAS DORES DOS SANTOS PEREIRA       09.03.2000                              
+     0              0       20664    1560886      1 ALEXANDRE PEDRO DA ROCHA                 02.12.1996                              
+     0              0       20702    2602496      1 ANTONIO RICARDO DE SOUZA SCHUCK          12.06.1998                              
+     0              0       20710   13306469      1 OSVALDO MARIO E SILVA FILHO              13.05.1983                              
+     0              0       20753    2183757      1 EDITORA ABRIL SOCANOM                    30.01.1999                              
+     0              0       20761   74678194      1 ANTONIO CARLOS DE SOUZA MORAES           27.04.1994                              
+     0              0       20770    4754226      1 CARLOS FERNANDO BRITO COSTA              07.11.2001                              
+     0              0       20788    2719774      1 FRANCISCO DA SILVA NUNES                 01.09.1998                              
+     0              0       20796    4783727      1 DULCELENA MARIA SILVA DE ALMEIDA         26.11.2001                              
+     0              0       20800    4872991      1 OMNIA COESAO SOCIAL                      29.11.2001                              
+     0              0       20826    5239673      1 EDINEIA DE FATIMA GONCALVES DA COSTA     20.08.2002                              
+     0              0       20850    5311224      1 AGNALDO APARECIDO DE SOUZA               01.08.2002                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 13 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       20869    4996841      1 JOAO RAMOS MOTA                          10.04.2002                              
+     0              0       20877    5817049      1 ALBERTO PARRA FERNANDES                  13.08.2003                              
+     0              0       20982    5452342      1 JULEI FATIMA SOARES                      13.12.2002                              
+     0              0       20990    5654863      1 RUFINO ORTIZ                             21.05.2003                              
+     0              0       21008   29918943      1 IESA PROJETOS EQUIPAMENTOS E MONTAGENS S 04.12.1985                              
+     0              0       21016    4066950      1 MARIANGELA DA SILVA                      15.08.2000                              
+     0              0       21024    2113145      1 NATERCIA DIAS DE ANDRADE                 25.08.1997                              
+     0              0       21032   74407651      1 JURANDIR BARBOSA EPP                     17.02.1994                              
+     0              0       21040    5683462      1 RAIMUNDA GOMES DA SILVA ASSIS            06.06.2003                              
+     0              0       21059    5661736      1 ANA C. DA SILVA BAZAR ME                 24.04.2003                              
+     0              0       21075    6107310      1 NEIDE MARIA CARVALHO GONCALVES           06.02.2004                              
+     0              0       21083    5648058      1 MARIA IZABEL GONCALVES DOS SANTOS OLIVEI 20.03.2003                              
+     0              0       21105    6186584      1 CILAS LOPES DE FARIA                     20.02.2004                              
+     0              0       21121    4452325      1 RITA DE CASSIA FILGUEIRA DE ASSIS        21.05.2001                              
+     0              0       21130   47599147      1 PAUL HEINZ VON HAENHLING                 20.08.1991                              
+     0              0       21164   22079230      1 INES DA CONSOLACAO VIANA DUTRA           01.05.1986                              
+     0              0       21172    2995005      1 CORALDINO MACEDO FONSECA                 01.02.1999                              
+     0              0       21180    3741928      1 WASHINGTON DA SILVA BARBOSA              15.02.2000                              
+     0              0       21199   78548807      1 ALFREDO DE JESUS DIAS                    02.10.1984                              
+     0              0       21202    7004652      1 LUCIA HELENA MOREIRA FERNANDES           15.09.2004                              
+     0              0       21210    7010716      1 ISRAEL WERNEK                            28.09.2004                              
+     0              0       21229    7021222      1 ELIZABETE JORGE DA MATA XAVIER           01.10.2004                              
+     0              0       21261    7011246      1 SHEILLA DA SILVA SAUDEME                 22.09.2004                              
+     0              0       21270    7026835      1 REGINA CELIA BARCELOS                    16.09.2004                              
+     0              0       21296     338743      1 NITEROI MARKET SOCANOM                   21.05.1969                              
+     0              0       21318    2985913      1 LISIANE STIVAL                           12.02.1999                              
+     0              0       21334    4779819      1 MARTA DE SOUZA CANUTO                    01.10.2001                              
+     0              0       21342    3743459      1 EUZENIR CARDOSO DA SILVA                 23.03.2000                              
+     0              0       21350    7092966      1 FELLIPE AURELIO GULLICH MELUSO           09.11.2004                              
+     0              0       21369    5990100      1 ESTRELA SUL TERRAPLANAGEM LTDA           17.11.2003                              
+     0              0       21377    4382682      1 LIRIA LOCATELLI UGGIONI                  30.03.2001                              
+     0              0       21385    7358761      1 GERDAU ACOS LONGOS SOCANOM               15.04.2005                              
+     0              0       21393    6267485      1 FRANCICA EUZILENE BEZERRA                13.05.2004                              
+     0              0       21407    6791470      1 MARGARETE CORREA DO NASCIMENTO           08.07.2004                              
+     0              0       21466    7117133      1 CARLOS EMILIO NOGUEIRA UCHOA             10.12.2004                              
+     0              0       21474    5561473      1 ALEXANDRA DO NASCIMENTO COUTINHO         26.03.2003                              
+     0              0       21490    6312484      1 ADAILTON FRANCISCO MASCARENHAS           14.06.2004                              
+     0              0       21504    7196779      1 MARLENE LAURIANA DOS SANTOS              24.01.2005                              
+     0              0       21512    7400150      1 VERA OTT SOUZA                           17.05.2005                              
+     0              0       21539     974211      1 LINHA AMARELA SA                         21.11.1995                              
+     0              0       21563    7443026      1 ESTEFERSON OLIVEIRO DE SOUZA ME          20.06.2005                              
+     0              0       21571    4696362      1 PAULO SERGIO DE OLIVEIRA APIAIME         11.09.2004                              
+     0              0       21598    7347660      1 PEDRO LUIZ DE ANDRADE NETO               25.04.2005                              
+     0              0       21601    6048344      1 CONCORDIA POLARIS FIDC                   01.01.2005                              
+     0              0       21636    7365160      1 REGIS RIBEIRO                            13.04.2005                              
+     0              0       21644    7015996      1 SILVIO CESAR LAGE SANTOS                 23.09.2004                              
+     0              0       21660     876457      1 ADRIANA MARQUES DE SOUZA                 18.10.1995                              
+     0              0       21687    3132207      1 EVANILDO TEIXEIRA DA SILVA               26.04.1999                              
+     0              0       21695    4809154      1 MARTA DO CARMO FERNANDES                 12.11.2001                              
+     0              0       21709    1973280      1 VILMA CARVALHO PEREIRA                   04.07.1997                              
+     0              0       21741    4813891      1 CELIA GOULART VITALINO                   07.11.2001                              
+     0              0       21750    5006480      1 LUCIANO BRUNETTI PRAIA GRANDE EPP        14.03.2002                              
+     0              0       21776    1225983      1 S.I. GAMA MANUTENCAO INDUSTRIAL LTDA     01.01.0001                              
+     0              0       21806   56375678      1 ROMEU CARBINATTI                         16.08.1966                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 14 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       21830   60852167      1 IND TAPETES ATLANTIDA SOCANOM ITA        18.10.1936                              
+     0              0       21849   20989372      1 PERFINACO INDUSTRIA E COMERCIO SOCANOM   12.03.1979                              
+     0              0       21857    5016347      1 GEORGE WEBSTER ROCHA BANDEIRA            16.04.2002                              
+     0              0       21865    5287151      1 MARCOS LUIS DA SILVA                     25.10.2002                              
+     0              0       21873    3576648      1 FREITAS E FREITAS LTDA                   30.12.1999                              
+     0              0       21890    5124362      1 REINALDO BETAO DE BELFORD ROXO ELETROMOV 03.07.2002                              
+     0              0       21911    5603193      1 MARCELO MOCELLIN                         10.04.2003                              
+     0              0       21920   67515957      1 LUIZ HERNANE ALVES DE OLIVEIRA           15.05.1996                              
+     0              0       21938    5861788      1 GUILHERME DA SILVA TABOSA                01.09.2003                              
+     0              0       21954    6072611      1 FLAVIA VAZ MALMONGE EPP                  08.12.2003                              
+     0              0       21970   55323588      1 NAZARI & GARCIA LTDA                     20.07.1965                              
+     0              0       21989   55331847      1 FUNDICAO IRMAOS OLIVETTI INDUSTRIA E COM 12.01.1965                              
+     0              0       22004   45921947      1 COM E IND MOLAS GASPAR LTDA              15.01.1962                              
+     0              0       22012   57265522      1 A CASA DA VOVO MARIA DE NAZARE           24.05.1987                              
+     0              0       22039   57977183      1 IBRATA INDUSTRIA BRASILEIRA DE TECNOLOGI 10.08.1987                              
+     0              0       22047   45208428      1 FEIRAO DO ALUMINIO UTILIDADES DOMESTICAS 02.01.1981                              
+     0              0       22071   68912740      1 PRODUTO PROJETOS DE AUTOMACAO COM E REPR 24.08.2000                              
+     0              0       22101   54669569      1 ASILO SAO VICENTE DE PAULO DE PIRAJU     01.01.1987                              
+     0              0       22110   44647097      1 INDUSTRIA DE MAQUINAS SOGIMA LTDA        20.05.1980                              
+     0              0       22136   71890412      1 METAL MECA LEONIDAS CHAGAS ME            28.07.1993                              
+     0              0       22152   57344509      1 COLORADO ARMARINHOS E ENFEITES LTDA      24.04.1987                              
+     0              0       22179   45408457      1 CASAS DAS BALANCAS SOROCABA LTDA         26.04.1985                              
+     0              0       22209   49438583      1 IND E COM DE CHAPEUS RIO BRANCO LTDA     02.03.1978                              
+     0              0       22225   56027220      1 KHANUHA AGRO COMERCIAL DE MAQUINAS LTDA  10.07.1986                              
+     0              0       22241   43704998      1 AUGUSTO DA MOTA REPRESENTACOES LTDA      16.08.1973                              
+     0              0       22250   50858612      1 M P O EMPREENDIMENTOS E PARTICIPACOES LT 21.06.1982                              
+     0              0       22284   43833979      1 PINO PROJETOS INCORPORACOES E OBRAS LTDA 18.09.1978                              
+     0              0       22306   47605829      1 MACHADO LUCCA & CIA LTDA EPP             21.10.1976                              
+     0              0       22322   53312286      1 MEDICON ASSISTENCIA MEDICA S/C LTDA      30.09.1991                              
+     0              0       22365   45975117      1 CELP COMERCIO DE APARELHOS ELETRONICOS L 01.01.1981                              
+     0              0       22373   84797877      1 ESCOMPARIM E ESCOMPARIM LTDA             05.08.1991                              
+     0              0       22420   61062212      1 FUNDACAO INSTITUTO DE MOLESTIAS DO APARE 09.06.1967                              
+     0              0       22462   48088967      1 ALEX NABHAN & CIA LTDA                   07.01.1977                              
+     0              0       22489   76196765      1 GUTIERREZ CIA LTDA                       02.01.1988                              
+     0              0       22519   47833983      1 FERAUP FERNANDOPOLIS AUTO PECAS LTDA     21.05.1965                              
+     0              0       22551   44889491      1 AUTO POSTO FALQUEIRO LIMITADA            23.09.1980                              
+     0              0       22560   47841903      1 COOPERATIVA AGROPECUARIA E DE CAFEICULTO 27.09.1993                              
+     0              0       22632   61447520      1 IRMAOS SALOMAO LTDA                      20.10.1980                              
+     0              0       22691   53498739      1 BETARI REPRESENTACOES S/C LTDA           02.05.1984                              
+     0              0       22730   75403022      1 BAUER E CIA LTDA                         01.09.1967                              
+     0              0       22748   60707817      1 EXPRESSO JOPE                            16.09.1986                              
+     0              0       22764   62536180      1 WALCYR FELICIANO FERREIRA ADAMANTINA ME  14.03.1990                              
+     0              0       22780   67735068      1 MARIA APARECIDA TOFFANETO DA SILVA ME    12.03.1992                              
+     0              0       22799   53957627      1 RECOMBRAS AR CONDICIONADO E REPRESENTACO 04.05.1989                              
+     0              0       22802   47963483      1 AZAMOTO MOTOS E PECAS LTDA               10.11.1981                              
+     0              0       22810   59967539      2 DISTRIBUIDORA RIOPRETANA DE DROGAS LTDA  31.05.1965                              
+     0              0       22829   54576327      1 INDUSTRIA E COMERCIO DE ROUPAS LIT S ROL 19.07.1985                              
+     0              0       22837   71479950      1 J ALVES FERNANDES E CIA LTDA             01.09.1967                              
+     0              0       22845   71458830      1 CLINICA NOSSA SENHORA DO CARMO S/C       17.06.1964                              
+     0              0       22853   71674626      1 VIEIRA E GASSI LTDA                      26.05.1993                              
+     0              0       22870   54629167      1 COMERCIAL BIG MODAS LTDA                 17.07.1985                              
+     0              0       22896   46010831      1 GRANULACAO DUTRA S/C LTDA                23.01.1986                              
+     0              0       22926   62592332      1 LIFASE CONFECCOES E COMERCIO DE BRINDES  27.03.1990                              
+     0              0       22934   66062209      1 DANIEL MAIA ASSESSORIA DE MODA LTDA      01.08.1991                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 15 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       22950   53093621      1 POLIAGRO AGROPECUARIA LTDA               26.09.1983                              
+     0              0       22985   67858381      1 CEREALISTA BRACINZA LTDA                 12.05.1992                              
+     0              0       23019   81195778      1 TERRANOVA PECAS PARA MAQUINAS AGRICOLAS  20.03.1989                              
+     0              0       23027   62269311      1 ART SCREEN SERIGRAFICA LTDA              25.11.1968                              
+     0              0       23051   64767288      1 SAN CEL MODAS LTDA ME                    16.10.1990                              
+     0              0       23078   53503496      1 CONCEITOS DE MODA CONFECCOES LTDA        21.05.1984                              
+     0              0       23086   46947040      1 CALGARO & FILHOS LTDA                    02.05.1975                              
+     0              0       23132   55901094      1 ENEOMAC COMERCIO DE GABINETES LTDA ME    28.10.1986                              
+     0              0       23140   77456036      1 CENTRO DE ULTRASSONOGRAFIA DE MARINGA S  02.10.1977                              
+     0              0       23159   59371278      1 BRESSAN & VALENTINI LTDA ME              22.08.1988                              
+     0              0       23191   44861763      1 PRUDENQUIMICA INDUSTRIA E COMERCIO LTDA  18.07.1972                              
+     0              0       23221   44572295      1 NAKATANI OTSUBO LTDA                     14.06.1973                              
+     0              0       23272   53657623      1 SERRARIA BIANCO LTDA ME                  23.07.1984                              
+     0              0       23310   79689279      1 AUTOMOTOR PVAI VEICULOS E MAQUINAS LTDA  20.06.1959                              
+     0              0       23329   50293265      1 SALEMIL REPRESENTACOES SC LTDA           12.06.1978                              
+     0              0       23353   51403780      1 CARLOS AUGUSTO DE ALMEIDA TRONCON        24.09.1979                              
+     0              0       23361   58716549      1 EMPRESA DE TRANSPORTES NETINHO LTDA      01.03.1988                              
+     0              0       23434   62011457      1 WILLIAM JAMIL ABBUD & CIA LTDA           21.02.1968                              
+     0              0       23450   51395440      1 CLUBE CAMPESTRE DOS CEM                  22.09.1982                              
+     0              0       23469   44689156      1 CIAL BARIRIENSE DE TRATORES E VEICULOS L 01.06.1963                              
+     0              0       23507   38949293      1 CARL STEIN BIJOUTERIAS LTDA ME           06.06.1990                              
+     0              0       23558   68388057      1 CANNIS COMERCIO DE ENXOVAIS LTDA         05.08.1992                              
+     0              0       23566   46359857      1 TRIANGULO TERRAPLENAGEM LTDA             30.06.1993                              
+     0              0       23574   50966159      2 ARMARINHOS E BIJOUTERIAS CEARA LTDA      16.08.1972                              
+     0              0       23582   54955869      1 CENTURY SPACE VIDEOS LTDA                02.09.1985                              
+     0              0       23590   47094990      1 SANTOS & FEJER COMERCIAL E EXPORTADORA L 20.05.1975                              
+     0              0       23612   71953335      1 FENIX INDUSTRIA E COMERCIO DE ABSORVENTE 02.08.1993                              
+     0              0       23620   68302298      1 DELFA BIJOUTERIAS LTDA                   01.09.1992                              
+     0              0       23698   43458371      1 GHACHACHE & GHACHACHE LTDA ME            20.02.1972                              
+     0              0       23710   44006310      1 MOTOR ELETRIC HZ LTDA                    05.03.1974                              
+     0              0       23728   54480520      1 VIMAVI COMERCIO DE PRODUTOS ALIMENTICIOS 10.05.1985                              
+     0              0       23736   44940146      1 INDUSTRIA E COMERCIO DE ARTEFATOS DE CIM 09.10.1975                              
+     0              0       23787   61105334      1 FERMI FERRAMENTAS E MAQUINAS INDUSTRIAIS 13.07.1966                              
+     0              0       23795   54719018      1 ESCRITORIO CONTABIL GUADANHIM E CARMO S/ 16.09.1991                              
+     0              0       23809   49073984      1 POSTO DE SERVICO AMAZONAS LTDA           26.11.1971                              
+     0              0       23825   56849151      1 CURT COURO COMERCIO E REPRESENTACAO DE C 12.11.1986                              
+     0              0       23841   57044554      1 ELASTOFOAM ESPUMAS E EMBALAGENS INDUSTRI 06.01.1987                              
+     0              0       23850   56296403      1 TRANSPORTADORA VIGARIO LTDA              25.08.1976                              
+     0              0       23884   53334710      1 INDUSTRIA E COMERCIO DE MOVEIS KOBAYASHI 13.01.1956                              
+     0              0       23906   46528030      1 MALHARIA RAIAN LTDA                      06.05.1975                              
+     0              0       23922   55599906      1 ENXOVAL PERES DE OSVALDO CRUZ LTDA       01.03.1986                              
+     0              0       23957   60977683      1 LANCHONETE METROS LTDA ME                01.06.1989                              
+     0              0       23973   59654459      1 JOAO LHETI RIGUEIRO                      01.11.1988                              
+     0              0       24007   76681956      1 SACARIA BRASILIA LTDA                    10.03.1983                              
+     0              0       24058   57008781      3 WERNER OSTERMANN CONDUTORES ELETRICOS LT 15.05.1959                              
+     0              0       24074   49971179      1 JOSE ROQUE DA FONSECA ESPECIARIAS E COND 28.11.1978                              
+     0              0       24082   56953946      1 RUBENS TOPAL TRANSPORTES LTDA ME         16.01.1987                              
+     0              0       24090   60839115      1 FORTALEZA ROMERO NEGOCIOS IMOBILIARIOS E 19.07.1966                              
+     0              0       24104   49135890      1 SEBASTIAO GUERRA & CIA LTDA              20.01.1978                              
+     0              0       24112   52959772      1 ELETRONICA SERVIDEO LTDA                 03.10.1983                              
+     0              0       24120   96355854      1 NELSON PIZZO FILHO DUARTINA              26.03.1993                              
+     0              0       24163   67078063      1 TRY LINGERIE LTDA                        22.10.1991                              
+     0              0       24210   46199980      1 CONFECCOES CRIANYL LTDA                  14.05.1974                              
+     0              0       24252   61358875      1 INDUSTRIA DE ARTEFATOS DE METAIS E PLAST 12.01.1959                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 16 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+     0              0       24295   53228136      1 IMPER SPRESS IMPERMEABILIZANTE PARA TECI 07.02.1984                              
+     0              0       24325   58635608      1 PORTO 25 ADM EMPR E PART LTDA            22.11.1987                              
+     0              0       24333   56845829      1 OLGA PEREIRA SABADIN MICRO EMPRESA       24.11.1986                              
+     0              0       24341   81706715      1 ESTOJOTIC IND E COM DE ESTOJOS LTDA ME   12.12.1989                              
+     0              0       24350   54579925      1 J C INDUSTRIA E COMERCIO DE ARTEFATOS CI 11.08.1976                              
+     0              0       24392   50933555      1 GUAPEVA S/A INDUSTRIA COMERCIO AGROPECUA 07.08.1959                              
+     0              0       24449   43547462      1 ALFA MODAS LTDA                          23.10.1972                              
+     0              0       24457   53661005      1 JOSE DA COSTA ALARCON                    12.09.1980                              
+     0              0       24481   43966514      1 ALMEIDA TINTAS LTDA                      05.12.1978                              
+     0              0       24520   47474663      1 SILGAR LIVRARIA EDITORA E ENCADERNADORA  04.08.1991                              
+     0              0       24554   56074727      1 LIDER COMERCIO E REPRESENTACAO LTDA      06.07.1986                              
+     0              0       24562   57773780      1 DANROB ARTES GRAFICAS LTDA               06.08.1987                              
+     0              0       24570   58122615      1 AUTHENTIC REPRESENTACOES S/C LTDA        13.09.1988                              
+     0              0       24619   79128195      1 RIO BRANCO COMERCIO DE MATERIAIS PARA CO 12.08.1966                              
+     0              0       24651   51657518      1 A GRACIOSA DE LINS COMERCIO E TECIDOS LT 16.10.1937                              
+     0              0       24740   62022553      1 INDUSTRIA DE MEIAS FINA FIL LTDA         12.06.1968                              
+     0              0       24759   47422597      1 ROBLES PRATA DE LEI LTDA                 08.04.1976                              
+     0              0       24767   45897121      1 A HIDRALICA COMERCIO DE MATERIAIS PARA C 01.04.1981                              
+     0              0       24775   56815400      1 RISTON ANDRADE LTDA ME                   03.03.1972                              
+     0              0       24783   64683329      1 BAR LANCHONETE E RESTAURANTE TRISTAO DAH 29.01.1990                              
+     0              0       24821   84873751      1 CAREGNATO MOVEIS E ESTRUTURAS METALICAS  01.10.1991                              
+     0              0       24856   51394930      1 BELTERRA EMPREENDIMENTOS IMOBILIARIOS LT 15.05.1981                              
+     0              0       24872   78001377      1 IBL INDUSTRIA E COMERCIO DE ARTIGOS MEDI 19.04.1991                              
+     0              0       24899   60139789      1 AVIAMENTOS NARA LTDA                     01.03.1989                              
+     0              0       24902   43451855      1 CREACOES ANA COSTA INDUSTRIA COMERCIO E  08.11.1972                              
+     0              0       24937   60505625      1 JAMIL ZAHR & CIA LTDA                    01.08.1981                              
+    16          17969       23914   53818126      1 AGRO PASTORIL VALE DO JUINA LTDA         18.06.1984                              
+    21          26071       24066   46436333      1 AUTO ELETRICA OSVALDO CRUZ LTDA          13.01.1977                              
+    36          28118       22683   55334411      1 REFRISON REFRIGERACAO E ELETRONICA LTDA  03.09.1971                              
+    49              0       23400   76917962      1 MEZANON INDUSTRIA E COMERCIO DE MOVEIS L 13.09.1983                              
+    59          14211       23213   79071361      1 S SIGAKI E CIA LTDA                      20.04.1970                              
+    74          15272       22624   43001981      2 COOPERATIVA AGRICOLA MISTA DE ADAMANTINA 04.05.1965                              
+   106          52247       23639   56044696      1 CONF POCLEIN LTDA                        16.07.1986                              
+   116          22383       22292   79597571      1 HELIO BORTOLATO CIA LTDA                 01.10.1986                              
+   316         114459       21792    5052047      1 FLAVIO MARTINS DE MELO EPP               14.05.2002                              
+   478          48785       21148    3997994      1 OUVER ENTERTAINMENT SOCANOM              18.08.2000                              
+   484         111666       10030    5140104      1 PROTESIM MONITORAMENTO ELETRONICO SOCANO 28.02.2002                              
+   511          63742       21946    5967700      1 TIAGO SEVERINO                           29.10.2003                              
+   811            400       16799    4878227      1 ALEXANDRE LVF DOS SANTOS WALDECK         04.02.2002                              
+  1015          37791       17248    4087258      1 ROBSON SCHAAF LESSA                      11.09.2000                              
+  1146           8145       21822     403379      1 OSCAR MOREIRA ARAUJO FILHO-FI            16.01.1995                              
+  1435          72887       17884    5773110      1 CILENE MARCIA CASSELLA                   27.11.2002                              
+  2022          21609       16454    6128111      1 REGIANE APARECIDA CARVALHO VENANCIO ARAU 12.02.2004                              
+  2026         500174       10170   74408543      1 LEONILDA FOLONI DA SILVA TIMBU           17.02.1994                              
+  2033           8468       12718    6977647      1 ERALDA MANUELA DE AGUIAR BARRETO CAVALCA 30.08.2004                              
+  2038           7423       10162    5589695      1 ANDREA DA SILVA CARDOSO                  27.03.2003                              
+  2039           7545       14818    5544246      1 EDIOMARA COREIA DA SILVA                 11.03.2003                              
+  2039           7738       16152    5652420      1 FERNANDO CESAR ROQUE                     15.05.2003                              
+  2039           7343       18627   33777251      1 HELIO LEITE DE MORAIS                    06.07.1990                              
+  2063           6555       10782    3764499      1 ANTONIO PAIXAO SANTOS                    18.04.2000                              
+  2063           6474       15261    7140134      1 MERIVALDO ROCHA SANTOS                   02.12.2004                              
+  2063           4852       17345   13638374      1 JESUS RODRIGUES MEIRA                    11.02.1985                              
+  2074          21242       17680    5271468      1 METAL J C MECANICA INDUSTRIAL LTDA       23.08.2002                              
+  2074          26070       19445    5498311      1 LISIANE M SCHIMUNECK                     04.02.2003                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 17 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+  2074          19369       20648    4065862      1 VILASIO LUCIANO SEIBEL                   01.10.2000                              
+  2075          19433       14443    7228970      1 PAULO ROGERIO SANTANA                    24.01.2005                              
+  2079          23143       10731    5652743      1 ALINE DA SILVA NASCIMENTO                23.05.2003                              
+  2096          24190       20087    6019900      1 JOSE ADILSON INACIO                      03.12.2003                              
+  2104           8177       12815    5308661      1 PATRICIA GRAZZIOLI DIAS                  16.09.2002                              
+  2106          18319       11940    4277135      1 WAGNER FELIX                             02.01.2001                              
+  2106          20374       19895   86958071      1 JOANITA ANDRADE FIDELIZ                  31.01.1994                              
+  2106          17768       20818    5543622      1 PAULO HENRIQUE TEIXEIRA                  24.02.2003                              
+  2107         103338       10065    5196891      1 VANIA DUTRA MARTINS                      20.07.2002                              
+  2107          93360       13714   41790627      1 JULIO CESAR EMIDIO DE MOURA              27.01.1992                              
+  2107         105068       18104    7251307      1 ROGERIO GOMES DE SOUZA                   01.03.2005                              
+  2107         104298       19585   35984178      1 JOAO BATISTA DE AZEVEDO                  06.03.2004                              
+  2108          24613       12416    5476451      1 EDILSON PINTO DA SILVA                   24.01.2003                              
+  2108          26918       21091    6021758      1 JONATA SOUZA DOS SANTOS                  04.12.2003                              
+  2109          13980       11541    5608152      1 RODOLFO LANSER BLOEMER                   15.04.2003                              
+  2119          23149       21679    3866288      1 SEBASTIAO PEREIRA DA SILVA SECOS E MOLHA 10.06.2000                              
+  2121          27015       17582    2810952      1 SOLANGE M MACIEL                         25.04.2002                              
+  2124          16607       11924    4274959      1 VALTER EURIPEDES ALVES                   05.02.2001                              
+  2124          15902       15806    4333389      1 KATIA SANTOS BERNARDES                   14.03.2001                              
+  2131           7007       16551    7110196      1 POSTO LUBMAX                             30.11.2004                              
+  2140          29400       19526    5395064      1 LUCIANA FONTES DE MOURA CONFECCOES       07.11.2002                              
+  2152          19044       14540    7266184      1 M. D. S. RIO PRETO REPRESENTACAO DE PROD 03.03.2005                              
+  2152          19146       19887    7284893      1 GIMENES AMARAL                           22.03.2005                              
+  2162           6206       15253    2886318      1 ZANETE MARIA MONTANARI OLDRA             10.11.1998                              
+  2164          27989       12157   34587592      1 MARIA RAIMUNDA CASTELO BRANCO SILVA      25.07.1990                              
+  2164         515245       18120    6214583      1 DANIELLE DOS SANTOS FONTENELE            15.04.2004                              
+  2178          23020       19674    5815775      1 R DIAS DE SOUSA ME                       08.08.2003                              
+  2179          22170       11665    5972547      1 EDELSON DA SILVA BARBOSA                 04.11.2003                              
+  2179          20003       19240    5078136      1 MARIA ABADIA PEREIRA DOS SANTOS          04.06.2002                              
+  2180          21577       18066    6222697      1 BRUNA DE OLIVEIRA NASCIMENTO RODRIGUES   24.03.2004                              
+  2187          12820       16268   29872017      1 MON CHERI MOTEL LTDA ME                  15.06.1979                              
+  2201          62400       19356    1859623      1 MIGUEL WEISE KHOURI                      15.05.1997                              
+  2214          15172       21962    5931942      1 EMPORIO CEARENSE DE DISTRIBUICAO E IMPOR 28.08.2003                              
+  2220          26644       21237    7086607      1 VANESSA OLIVEIRA CONFECCOES EPP          09.11.2004                              
+  2223          17077       11606   92524685      1 WILLIAM RODRIGUES DOS SANTOS             04.05.1989                              
+  2233           8393       11410    7307733      1 CLAUDIA FARAH DA CUNHA MONDELO ME        18.03.2005                              
+  2238           8575       16730    7349331      1 JANETE JEANE PFLUK                       15.03.2005                              
+  2239          14913       10120    4321517      1 JUCELIO SOUZA DE PINHO                   01.03.2001                              
+  2241          21900       12203    4529850      1 ROSENTHAL ROSENTHAL IND COM DE ROUPAS LT 28.06.2001                              
+  2241          22799       17728    5222044      1 ARI PINTO DE ALMEIDA                     25.08.2002                              
+  2247          18874       21253   55396618      1 LOURIVAL DE SOUZA E SILVA                29.01.1986                              
+  2251          10679       12840    4673259      1 ERISANGELA DE PAULA MONTEIRO             19.09.2001                              
+  2253           2840       18589    4114379      1 SONIA SCHLATTER                          20.12.1999                              
+  2263           2343       11762    2501760      1 DITEC - DINAMICA TREINAMENTO EVENTOS E C 01.06.1997                              
+  2263         500047       19135    4275265      1 NILSON HARTVIG                           01.02.2001                              
+  2274          20383       21245     124222      1 PERPETUA MARIA DE ANDRADE                14.09.1982                              
+  2290           4849       15083      67886      1 ANTONIO ALDECI FERREIRA EPP              12.04.1994                              
+  2290           4925       15245    6942737      1 ADEMIR XAVIER DA SILVA COMBUSTIVEIS      17.08.2004                              
+  2290           3371       15865    4306404      1 IVONETE XAVIER DA SILVA ROSINSKI         01.03.2001                              
+  2305          19288       16284    6110229      1 RS COMERCIO DE BOMBAS LTDA ME            16.02.2004                              
+  2314          11470       11274    6985363      1 SILVANIA MARIA DE LIMA                   16.09.2004                              
+  2314          12240       20052   37891900      1 WAGNER LUIZ GONZAGA                      01.04.1993                              
+  2347           2245       21300    7205426      1 GESLAINE ROVARIS                         01.02.2005                              
+  2372          12265       10928   59291534      1 CASA BAHIA COML LTDABLOQ JUD             15.08.1970                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 18 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+  2374          23911       10910   54445200      1 COMERCIAL ASSET MANAGEMENT SOCANOM DTVM  26.04.1985                              
+  2374          80084       20370    4806631      1 OURINVEST REAL ESTATE PARTICIPACOES SOCA 30.10.2001                              
+  2374          80212       20885   78632767      1 BANCO OURINVEST SOCANOM                  03.10.1969                              
+  2389            929       13412   68001122      1 NEURO H V C MEDICOS ASSOCIADOS S/C LTDA  03.02.1999                              
+  2394          11620       17531    4919634      1 FELIPE LIRA ABDOU                        19.02.2002                              
+  2397          33366       19810    7171444      1 GLEIDSON SILVA DOS REIS                  07.01.2005                              
+  2406           3180       14958    6256944      1 JOSE ZITO DA SILVA                       13.05.2004                              
+  2406           2430       17558    3424903      1 CLARICE GOMES DE ALVARENGA AMERICO DE CA 01.09.1999                              
+  2425          10383       10677    4947666      1 ANTONIA MARTINS DE SOUZA                 06.02.2002                              
+  2425          24168       17329   14683163      1 JOSE FERREIRA BITENCOURT                 23.06.1998                              
+  2425          11158       20680    4411117      1 JOSE RENATO DE SOUZA                     30.04.2001                              
+  2439           2814       17221    3964180      1 PEDRO BORGES CAMPOS                      10.07.2000                              
+  2440           4687       15628    5855946      1 GLAUCIO CUSTODIO BATISTA                 29.07.2003                              
+  2442           5126       15482   70999644      1 RITA DE CASSIA ARAUJO DE SOUZA           01.05.1993                              
+  2445           3510       12874    6028613      1 IGOR FERNANDES VILELA                    11.12.2003                              
+  2445           3444       16349    2319427      1 ROBERTO VILELA CAMPOS                    02.01.1998                              
+  2455           7349       13161    2664013      1 VENICIO LUCAS SILVA                      30.07.1998                              
+  2455           5881       16195    2869326      1 WILSON NEVES                             25.11.1998                              
+  2467          13066       19151    4186738      1 PAULO F DE ALMEIDA SILVA                 04.12.2000                              
+  2468           9974       19003    5444365      1 MILTON SILVA TORNEARIA                   24.12.2002                              
+  2472          15612       18899    3380790      1 MANOEL BENICIO DIAS NETO                 27.08.1999                              
+  2478         531096       16772    7326810      1 FLAVIO ENRIQUE FERREIRA DA SILVA         06.04.2005                              
+  2482          10188       10740    6956418      1 ROSANE RODRIGUES DE FREITAS              24.08.2004                              
+  2482           3516       18961    4127630      1 RAPHAEL AUGUSTO PACHECO MODICA - EIRELI  25.10.2000                              
+  2489          11875       10286    4859168      1 PAULO ROBERTO PINTO                      04.06.2001                              
+  2513           2300       12165    5082236      1 SEBASTIAO GASPAR CELESTINO               28.05.2002                              
+  2517           3474       14230    6277683      1 MARCOS THEODORO LEITE                    15.05.2004                              
+  2518           9779       10987    7133629      1 ROMEU MAGLIANO FILHO                     06.12.2004                              
+  2523           3543       17540    5217700      1 ANDREIA LUNA DE TACIO                    30.07.2002                              
+  2538          14627       18937    4947955      1 SANDRA L F CORREA                        04.02.2002                              
+  2538          17835       21610    4378546      1 MARIA CATARINA SILVEIRA SANTOS           04.04.2001                              
+  2553           9387       16578    5387514      1 JOSE ANTONIO SIQUEIRA SILVA              20.11.2002                              
+  2553           8136       21903    5637134      1 LUIZ CARLOS DA SILVA                     01.05.2003                              
+  2557           4819       20125    5392320      1 VILMAR JOSE PEREIRA                      21.11.2002                              
+  2557         510060       20842   21053897      1 IEDA DOS SANTOS LUCAS MENDES             21.06.1985                              
+  2557         510603       21881   41948803      1 WILSON BRAGA                             08.06.1992                              
+  2605          12359       16241    5865980      1 SIMONE CORREIA DOS SANTOS                25.08.2003                              
+  2608          24179       21547    5489201      1 MARIA DE FATIMA VIEIRA DE ARAUJO         20.01.2003                              
+  2635          18329       20079    1786322      1 JOAO ANTONIO DIAS ME                     11.04.1997                              
+  2646          20052       14362    5572051      1 NOELI DA LUZ DA SILVA BIJOUTERIAS EPP    26.02.2003                              
+  2683           3029       10154    6251288      1 PRISCILA ALVES DE SOUZA EPP              09.11.2012                              
+  2690          10662       10375   84488006      1 AURELIO PINTO DE AQUINO                  03.06.1993                              
+  2690           7350       10553    4301730      1 MARIO LUIZ OKAMURA DE FARIAS             20.02.2001                              
+  2690           1233       17205    2960129      1 RUBSON BATISTA GRANDAL                   28.01.1999                              
+  2690              0       19216    3000936      1 MARIA DE FATIMA RODRIGUES DANTAS ARAUJO  12.02.1999                              
+  2714           6425       16306    2536674      1 VALERIA DAS GRACAS VASCONCELOS           20.05.1998                              
+  2718          14420       10936    7361943      1 JOSE RODRIGUES DOS SANTOS MATERIAIS EPP  30.03.2005                              
+  2721           9702       14192    5958044      1 ISAIAS ANDRE DE LIMA ME                  20.10.2003                              
+  2732           5195       12289   58842238      1 MARCAO MEC FUNILARIA E PINTURA S/C LTDA  04.05.1988                              
+  2733          12856       14648    5202830      1 CELIA VICENTE FERREIRA                   17.07.2002                              
+  2733          12864       17639    2761819      1 ANTONIO MOREIRA DE DEUS                  28.09.1998                              
+  2762          11436       19330    5464240      1 REBAT CAR REPARADORA DE VEIC LTDA        02.01.2003                              
+  2764           5427       16608    7106510      1 S D BOOKS COMERCIO DE LIVROS E REVISTAS  26.11.2004                              
+  2767           9767       12963    6209596      1 ROSEMAR APARECIDA LOPES BOVOLON BRASIL C 24.03.2004                              
+                                                                                                                                     
+ARQUIVO CADUV002        29/10/2014        09:13:43        - 19 -                                                                     
+                                                                                                                                     
+    AG            CTA       CCLUB        CPF FILIAL NOME                                     DT FUNDACAO                             
+------ -------------- ----------- ---------- ------ ---------------------------------------- -----------                             
+  2799          17247       11126       6456      1 JOSE ANTONIO GOMES BORRACHARIA ME        18.05.1994                              
+  2799          11920       18198    3313465      1 NELSON CAVALCANTE DE OLIVEIRA FILHO      21.07.1999                              
+  2807          12250       12629     881117      1 C. CARVALHO REPRESENTACOES COMERCIAIS LT 25.10.1995                              
+  2821           7939       12467     886326      1 VIA SUL CORRETORA E ADM SEGUROS LTDA     30.10.1995                              
+  2821           9229       19232    5268136      1 JOSEANE FRANCISCO ME                     28.08.2002                              
+  2822           3730       10626    2658264      1 ADILTA PORTELA NOVAES DE ALENCAR         21.07.1998                              
+  2830          21484       12122    5658900      1 RAFAEL BORIERO                           22.05.2003                              
+  2838           6143       11045    4592563      1 ADRIANA DE FARIA TELES                   31.10.2003                              
+  2850          13377       13820    6050013      1 JANAINE GONCALVES QUEIROS VESRUARIO      09.12.2003                              
+  2850          16169       17825    5763678      1 LUCIANO C MACHADO                        11.07.2003                              
+  2853           6289       13625   65465593      1 ODILON ADAO DA SILVA                     30.01.1991                              
+  2853           6222       19950    7168850      1 JOSE LUIZ TEIXEIRA DA SILVA EPP          11.01.2005                              
+  2858           9204       12866    7034856      1 EDUARDO AUGUSTO SOUZA ZANONI EPP         05.11.2004                              
+  2874           7672       11380    4393554      1 ARMANDO LEITE DE OLIVEIRA ME             06.03.2001                              
+  2875           4438       15911    4539135      1 JOSE AMARAL CORDEIRO DA SILVA GLP MG     21.06.2001                              
+  2885           2736       16489    6338575      1 MARCELO FRUSCHEIN EPP                    16.06.2004                              
+  2888           3373       16918    4530146      1 FERNANDO STRONA                          07.12.2000                              
+  2890          11609       10391    4115450      1 LILIAN KEHL                              01.11.2000                              
+  2890           3480       14869   93750354      1 JORGE PAULO STORCK                       30.11.1990                              
+  2901           4230       20427     752562      1 HELBERT GLORIA                           11.08.1995                              
+  3002         289480       17213   33105404      1 TRR SECURITAS CORRETORA DE SEGUROS LTDA  14.09.1973                              
+  3186          16021       14966    6297015      1 CBP COMERCIO DE PAINEIS PUBLICITARIOS LT 28.04.2004                              
+  3229              0       11878    4738220      1 MARIA LENICE NOBRE DA SILVA SANTANA      09.10.2001                              
+  3229            935       13013   12229415      1 SOCANOM USINA CORURIPE ACUCAR E ALCOOL   02.02.1925                              
+  3238          70800       13773    7196926      1 C ROLIM TECIDOS SOCANOM                  11.11.1965                              
+  3386          17119       24287   51272474      2 COMERCIAL IKEDA LTDA                     06.05.1965                              
+  3661           1898       11576   16481186      1 OSVALDO SOUZA BRAGA FIRMA                04.08.1988                              
+  5914         550025       21733   93854792      1 JORGE LEMOS DA SILVA                     09.07.1991                              

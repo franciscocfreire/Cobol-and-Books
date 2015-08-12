@@ -1,0 +1,47 @@
+1) ALTERAR JOB CLLP0140 AL1 ADICIONANDO O DD CADUB005
+                                                                        
+DE:
+
+//*                                                                     
+//STEP1    EXEC PGM=RDAB0850                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO COM DADOS DE ENDERECO                     
+//* ***                                                                 
+//*                                                                     
+//CADUB0A4 DD DSN=AC.CLLP.CADUB0A4.CLAS(0),                             
+//       DISP=SHR                                                       
+//CADUB018 DD DSN=AC.CLLP.CADUB018.CLAS(0),                             
+//       DISP=SHR                                                       
+//ARQSAIDA DD DSN=AC.CLLP.V000END(+1),                                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300000,100000),RLSE),                              
+//       DCB=(AC.A,LRECL=0320,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+
+PARA:
+
+//*                                                                     
+//STEP1    EXEC PGM=RDAB0850                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO COM DADOS DE ENDERECO                     
+//* ***                                                                 
+//*                                                                     
+//CADUB0A4 DD DSN=AC.CLLP.CADUB0A4.CLAS(0),                             
+//       DISP=SHR                                                       
+//CADUB018 DD DSN=AC.CLLP.CADUB018.CLAS(0),                             
+//       DISP=SHR                                                       
+//CADUB005 DD DSN=AC.CLLP.PRV.CADUB005(0),
+//       DISP=SHR
+//ARQSAIDA DD DSN=AC.CLLP.V000END(+1),                                  
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300000,100000),RLSE),                              
+//       DCB=(AC.A,LRECL=0320,RECFM=FB),                                
+//       DATACLAS=PRODX37                                               
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  

@@ -1,0 +1,227 @@
+
+                    J E S 2  J O B  L O G  --  S Y S T E M  A L 1 A  --  N O D E
+
+13.56.53 JOB18642 ---- FRIDAY,    25 JUL 2014 ----
+13.56.53 JOB18642  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+13.56.53 JOB18642  ICH70001I PRODSTR  LAST ACCESS AT 13:56:49 ON FRIDAY, JULY 25
+13.56.53 JOB18642  $HASP373 CLLP0140 STARTED - WLM INIT  - SRVCLASS BATCH_01 - S
+13.56.53 JOB18642  IEF403I CLLP0140 - STARTED - TIME=13.56.53
+13.56.53 JOB18642  +AUTOOPERATOR OVERINICIO CLLP0140 PR32
+13.56.53 JOB18645  $HASP100 PLAN0276 ON INTRDR                            FROM J
+13.56.53 JOB18645  IRR010I  USERID PRODSTR  IS ASSIGNED TO THIS JOB.
+13.56.53 JOB18642  -                                                --TIMINGS (M
+13.56.53 JOB18642  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB
+13.56.53 JOB18642  -CLLP0140 STEPCTM  CTMRDOVE    00     17      5    .00    .00
+13.56.54 JOB18642  BUFL001I   CADUV000  Bufno=050  Blksize=27840  Amode=31  UNIT
+13.56.54 JOB18642  BUFL002I   CADUV000  AC.CLLP.TELEV000.G0001V00
+13.56.54 JOB18642  BUFL001I   CADUB0M1  Bufno=050  Blksize=27606  Amode=31  UNIT
+13.56.54 JOB18642  BUFL002I   CADUB0M1  AC.CLLP.CADUB0M1.CLAS.G0001V00
+13.56.54 JOB18642  BUFL001I   ARQSAIDA  Bufno=050  Blksize=27840  Amode=31  UNIT
+13.56.54 JOB18642  BUFL002I   ARQSAIDA  AC.CLLP.CADUV000.G0001V00
+14.02.42 JOB18642  -CLLP0140 STEP7                00  7110K   573K    .99    .33
+14.02.42 JOB18642  IEF404I CLLP0140 - ENDED - TIME=14.02.42
+14.02.42 JOB18642  -CLLP0140 ENDED.  NAME-B752247              TOTAL TCB CPU TIM
+14.02.42 JOB18642  $HASP395 CLLP0140 ENDED
+------ JES2 JOB STATISTICS ------
+  25 JUL 2014 JOB EXECUTION DATE
+           39 CARDS READ
+          223 SYSOUT PRINT RECORDS
+            0 SYSOUT PUNCH RECORDS
+           15 SYSOUT SPOOL KBYTES
+         5.81 MINUTES EXECUTION TIME
+
+        1 //CLLP0140 JOB 'CLLP,4120,PR32','B752247',MSGCLASS=1,REGION=8M,
+          //       MSGLEVEL=(1,1)
+          //*---- SUBMITTED BY CONTROL-M (FROM OVERLIB)     ODATE=140725
+          //*---- SCHEDULE AC.CTMR.PUB.PR32.CARGAS.CTM93207.G0001V00(+1)
+          //*---- SCHEDULED DUE TO RBC:
+          //*---- JCL      AC.OVERFILE(CLLP0140)
+          //*---- CONTROL-M JOB IDENTIFICATION:  ORDER ID=LNUOT  RUN NO.=00007
+        2 //JOBLIB   DD DSN=AC.BIBGERAL,DISP=SHR
+        3 //         DD DSN=DB2A1.R2.DSNLOAD,DISP=SHR
+        4 //         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR
+          //*
+          //* ***    GERACAO DO ARQUIVO CADUV000
+          //*
+        5 //STEPCTM  EXEC CTMRDOVE,
+          //       GR=PR32,
+          //       IND=AC
+        6 XXCTMRDOVE PROC GR=,IND=
+        7 XXCTMRDOVE EXEC PGM=PLAN2575,PARM='&GR'
+          IEFC653I SUBSTITUTION JCL - PGM=PLAN2575,PARM='PR32'
+        8 XXSTEPLIB  DD DSN=&IND..BIBGERAL,DISP=SHR
+          XX*
+          XX* ***    MONTA JOB DE DELECAO DE MEMBRO DA "OVERFILE"
+          XX*
+          IEFC653I SUBSTITUTION JCL - DSN=AC.BIBGERAL,DISP=SHR
+        9 XXSAIDA    DD SYSOUT=(A,INTRDR)
+       10 XXSYSOUT   DD SYSOUT=*
+       11 XXSYSUDUMP DD SYSOUT=Y
+          XX*
+          //*
+       12 //STEP7    EXEC PGM=RDAB0857
+          //*
+          //* ***    ATUALIZA O ARQUIVO COM DADOS DE TELEFONE
+          //* ***
+          //*
+       13 //CADUV000 DD DSN=AC.CLLP.TELEV000(00),
+          //       DISP=SHR
+       14 //CADUB0M1 DD DSN=AC.CLLP.CADUB0M1.CLAS(00),
+          //       DISP=SHR
+       15 //ARQSAIDA DD DSN=AC.CLLP.CADUV000(+1),
+          //       DISP=(,CATLG,DELETE),
+          //       UNIT=(DISCO,40),
+          //       SPACE=(TRK,(010000,2000),RLSE),
+          //       DCB=(AC.A,LRECL=0320,RECFM=FB)
+       16 //SYSOUT   DD SYSOUT=*
+       17 //SYSPRINT DD SYSOUT=*
+       18 //SYSUDUMP DD SYSOUT=Y
+          //*
+          //* ***    SISTEMA SIRJ - REPROCESSAMENTO DE JOB'S - MOTIVO:
+          //* ***    REPROCESSANDO DEVIDO AO PROBLEMA NO REGION______________
+          //*
+       19 //
+
+ STMT NO. MESSAGE
+        5 IEFC001I PROCEDURE CTMRDOVE WAS EXPANDED USING SYSTEM LIBRARY AC.PROCL
+ICH70001I PRODSTR  LAST ACCESS AT 13:56:49 ON FRIDAY, JULY 25, 2014
+IEF236I ALLOC. FOR CLLP0140 CTMRDOVE STEPCTM
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I A302 ALLOCATED TO
+IEF237I 634C ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I JES2 ALLOCATED TO SAIDA
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+IEF142I CLLP0140 CTMRDOVE STEPCTM - STEP WAS EXECUTED - COND CODE 0000
+IGD106I AC.BIBGERAL                                  PASSED,    DDNAME=JOBLIB
+IEF285I   DB2A1.R2.DSNLOAD                             PASSED
+IEF285I   VOL SER NOS= DB2A11.
+IEF285I   SYS1.CEE.SCEERUN                             PASSED
+IEF285I   VOL SER NOS= R13AL1.
+IGD104I AC.BIBGERAL                                  RETAINED,  DDNAME=STEPLIB
+IEF285I   PRODSTR.CLLP0140.JOB18642.D0000101.?         SYSOUT
+IEF285I   PRODSTR.CLLP0140.JOB18642.D0000102.?         SYSOUT
+IEF285I   PRODSTR.CLLP0140.JOB18642.D0000103.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: CTMRDOVE       Cond Code: 0000         Start: 25-Jul-2014 01:56:53 PM
+Step  Num: 1              PGM  Name: PLAN2575     End:   25-Jul-2014 01:56:53 PM
+CPU (TCB): 00:00:00.00                            Storage below 16M:         36k
+CPU (SRB): 00:00:00.00                            Storage above 16M:          8k
+Trans Act: 00:00:00.02                            Service Units:             200
+Tape Mnts: 0                                      Total EXCPs:                17
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+CD08 D STEPLIB             1  23,476
+
+Total DASD EXCPs:                  1        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/CTMRDOVE/START 2014206.1356
+IEF032I STEP/CTMRDOVE/STOP  2014206.1356
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+        VIRT:    36K  SYS:   308K  EXT:        8K  SYS:    10056K
+IEF236I ALLOC. FOR CLLP0140 STEP7
+IGD103I SMS ALLOCATED TO DDNAME JOBLIB
+IEF237I A302 ALLOCATED TO
+IEF237I 634C ALLOCATED TO
+IGD103I SMS ALLOCATED TO DDNAME CADUV000
+IGD103I SMS ALLOCATED TO DDNAME CADUB0M1
+IGD101I SMS ALLOCATED TO DDNAME (ARQSAIDA)
+        DSN (AC.CLLP.CADUV000.G0001V00                   )
+        STORCLAS (STANDARD) MGMTCLAS (PN7DNLNL) DATACLAS (DSRG#NUL)
+        VOL SER NOS= SA12EE
+IEF237I JES2 ALLOCATED TO SYSOUT
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSUDUMP
+BUFL001I   CADUV000  Bufno=050  Blksize=27840  Amode=31  UNIT=DASD
+BUFL002I   CADUV000  AC.CLLP.TELEV000.G0001V00
+BUFL001I   CADUB0M1  Bufno=050  Blksize=27606  Amode=31  UNIT=DASD
+BUFL002I   CADUB0M1  AC.CLLP.CADUB0M1.CLAS.G0001V00
+BUFL001I   ARQSAIDA  Bufno=050  Blksize=27840  Amode=31  UNIT=DASD
+BUFL002I   ARQSAIDA  AC.CLLP.CADUV000.G0001V00
+IEF142I CLLP0140 STEP7 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I AC.CLLP.TELEV000.G0001V00                    RETAINED,  DDNAME=CADUV000
+IGD104I AC.CLLP.CADUB0M1.CLAS.G0001V00               RETAINED,  DDNAME=CADUB0M1
+IGD107I AC.CLLP.CADUV000.G0001V00                    ROLLED IN, DDNAME=ARQSAIDA
+IEF285I   PRODSTR.CLLP0140.JOB18642.D0000104.?         SYSOUT
+IEF285I   PRODSTR.CLLP0140.JOB18642.D0000105.?         SYSOUT
+IEF285I   PRODSTR.CLLP0140.JOB18642.D0000106.?         SYSOUT
+BRA020I ------------------------------------------------------------------------
+                       S t e p   E n d   S t a t i s t i c s
+
+Step Name: STEP7          Cond Code: 0000         Start: 25-Jul-2014 01:56:53 PM
+Step  Num: 2              PGM  Name: RDAB0857     End:   25-Jul-2014 02:02:42 PM
+CPU (TCB): 00:00:59.74                            Storage below 16M:        452k
+CPU (SRB): 00:00:20.29                            Storage above 16M:      7,416k
+Trans Act: 00:05:48.44                            Service Units:       6,990,521
+Tape Mnts: 0                                      Total EXCPs:         7,110,302
+
+Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+CD08 D JOBLIB              6  23,476        A8D9 D CADUV000      600,000  27,840
+A7E8 D CADUV000      400,000  27,840        A669 D CADUV000      766,438  27,840
+6AAE D CADUB0M1      600,000  27,606        6AD8 D CADUB0M1      400,000  27,606
+A2DB D CADUB0M1      600,000  27,606        67F8 D CADUB0M1      200,000  27,606
+A4A3 D CADUB0M1      800,000  27,606        6991 D CADUB0M1      600,000  27,606
+59B2 D CADUB0M1      373,922  27,606        CDA3 D ARQSAIDA       76,000  27,840
+A561 D ARQSAIDA       64,000  27,840        A2E2 D ARQSAIDA       64,000  27,840
+64DC D ARQSAIDA       64,000  27,840        C891 D ARQSAIDA       64,000  27,840
+A86A D ARQSAIDA       64,000  27,840        CDB1 D ARQSAIDA       64,000  27,840
+A26E D ARQSAIDA       64,000  27,840        683C D ARQSAIDA       64,000  27,840
+5922 D ARQSAIDA       64,000  27,840        6A57 D ARQSAIDA       64,000  27,840
+A45C D ARQSAIDA       64,000  27,840        A6A5 D ARQSAIDA       64,000  27,840
+6917 D ARQSAIDA       64,000  27,840        68AF D ARQSAIDA       64,000  27,840
+6566 D ARQSAIDA       64,000  27,840        7A90 D ARQSAIDA       64,000  27,840
+6558 D ARQSAIDA       64,000  27,840        A0ED D ARQSAIDA       64,000  27,840
+6862 D ARQSAIDA       64,000  27,840        6914 D ARQSAIDA       64,000  27,840
+690E D ARQSAIDA       64,000  27,840        6374 D ARQSAIDA       64,000  27,840
+635E D ARQSAIDA       64,000  27,840        6A5C D ARQSAIDA       64,000  27,840
+A563 D ARQSAIDA       64,000  27,840        6825 D ARQSAIDA       64,000  27,840
+65D7 D ARQSAIDA       26,438  27,840
+
+Total DASD EXCPs:          7,106,804        Total Tape EXCPs:                  0
+
+BRA021I ------------------------------------------------------------------------
+IEF373I STEP/STEP7   /START 2014206.1356
+IEF032I STEP/STEP7   /STOP  2014206.1402
+        CPU:     0 HR  00 MIN  59.74 SEC    SRB:     0 HR  00 MIN  20.29 SEC
+        VIRT:   452K  SYS:   480K  EXT:     7416K  SYS:    13836K
+IGD104I AC.BIBGERAL                                  RETAINED,  DDNAME=JOBLIB
+IEF285I   DB2A1.R2.DSNLOAD                             KEPT
+IEF285I   VOL SER NOS= DB2A11.
+IEF285I   SYS1.CEE.SCEERUN                             KEPT
+IEF285I   VOL SER NOS= R13AL1.
+BRA020I ------------------------------------------------------------------------
+                        J o b   E n d   S t a t i s t i c s
+
+Job  Name: CLLP0140       System ID: AL1B        Submit: 25-Jul-2014 01:56:52 PM
+Job JESID: JOB18642       MVS level: SP7.1.3     Start:  25-Jul-2014 01:56:53 PM
+Job Class: A                                     End:    25-Jul-2014 02:02:42 PM
+CPU (TCB): 00:00:59.74                           Storage below 16M:         452k
+CPU (SRB): 00:00:20.29                           Storage above 16M:       7,416k
+Trans Act: 00:05:48.45                           Service Units:        6,990,721
+Tape Mnts: 0                                     Total EXCPs:          7,110,319
+
+---------------Paging---------------        ---------------Paging---------------
+VIO In:                            0        VIO Out:                           0
+Pages In:                          0        Pages Out:                         0
+Common (LPA+CSA):                  0        Hiperspace:                        0
+VIO Reclaims:                      0        Pages Stolen:                      0
+
+RACF User: PRODSTR                          Programmer: B752247
+Acct Info: CLLP,4120,PR32
+
+BRA022I ------------------------------------------------------------------------
+IEF375I  JOB/CLLP0140/START 2014206.1356
+IEF033I  JOB/CLLP0140/STOP  2014206.1402
+        CPU:     0 HR  00 MIN  59.74 SEC    SRB:     0 HR  00 MIN  20.29 SEC
+
+******************** RDAB0857 ********************
+*                                                *
+*  TOTAL REG. LIDOS    - CADUV000 : 153.680.039  *
+*  TOTAL REG. LIDOS    - CADUB0M1 : 153.678.629  *
+*  TOTAL REG. GRAVADOS - ARQSAIDA : 153.680.039  *
+*                                                *
+******************** RDAB0857 ********************

@@ -1,0 +1,204 @@
+//CLLP0144 JOB 'CLLP,4120,PR32','A172212',MSGCLASS=Z,REGION=8M          
+//JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//*                                                                     
+//* ***    GERACAO DO ARQUIVO CADUV001                                  
+//*                                                                     
+//STEP0A   EXEC PGM=POOL0003                                            
+//*                                                                     
+//* ***    DESCOMPRIMIR ARQUIVO                                         
+//*                                                                     
+//ENTRA    DD DSN=AD.BRQ.CADU.CADUA0A4.HPM.COMP,                        
+//       DISP=SHR                                                       
+//SAI      DD DSN=AD.BRQ.P006.CADUB0A4.CLAS2(+1),                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(002,001),RLSE),                                    
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=T                                                  
+//SYSUDUMP DD SYSOUT=T                                                  
+//*                                                                     
+//STEP1    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA DADOS PRINCIPAIS POR CLUB                         
+//*                                                                     
+//SORTIN   DD DSN=*.STEP0A.SAI,                                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.CADUB0A4.CLAS2(+2),                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001670,0334),RLSE),                                
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(11,6,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//STEP1A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO DE ENDERECO POR CLUB - SEQ + CATEGORIA    
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.CADUB018.CLAS(0),                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.CADUB018.CLAS.TEMP,                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001670,0334),RLSE),                                
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(11,6,A,20,3,A,375,2,A),FORMAT=BI                          
+ INCLUDE COND=(375,2,PD,EQ,1)                                           
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC PGM=RDAB0870                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO COM DADOS DE ENDERECO                     
+//* ***                                                                 
+//*                                                                     
+//CADUB0A4 DD DSN=*.STEP1.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//CADUB018 DD DSN=*.STEP1A.SORT.SORTOUT,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQSAIDA DD DSN=AD.BRQ.P006.V001END(+1),                              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(005650,1130),RLSE),                                
+//       DCB=(AD.A,LRECL=570,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP2A   EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA DADOS PRINCIPAIS POR CLUB                         
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.CADUB006.CLAS(0),                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.CADUB006.CLAS.TEMP,                       
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001670,0334),RLSE),                                
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(11,6,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC PGM=RDAB0875                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO COM DADOS DE TELEFONE                     
+//* ***                                                                 
+//*                                                                     
+//CADUV001 DD DSN=*.STEP2.ARQSAIDA,                                     
+//       DISP=OLD                                                       
+//CADUB006 DD DSN=*.STEP2A.SORT.SORTOUT,                                
+//       DISP=(OLD,DELETE,KEEP)                                         
+//ARQSAIDA DD DSN=AD.BRQ.P006.V001TELE(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(005650,1130),RLSE),                                
+//       DCB=(AD.A,LRECL=570,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP3A   EXEC PGM=POOL0003                                            
+//*                                                                     
+//* ***    DESCOMPRIMIR ARQUIVO                                         
+//*                                                                     
+//ENTRA    DD DSN=AD.BRQ.CADU.CADUB065.HPM.COMP,                        
+//       DISP=SHR                                                       
+//SAI      DD DSN=AD.BRQ.P006.CADUB065.CLAS(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300,050),RLSE),                                    
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=T                                                  
+//SYSUDUMP DD SYSOUT=T                                                  
+//*                                                                     
+//STEP4    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO INFORMACOES FAMILIARES POR CLUB           
+//*                                                                     
+//SORTIN   DD DSN=*.STEP3A.SAI,                                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.CADUB065.CLAS(+2),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001670,0334),RLSE),                                
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(11,6,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//STEP5    EXEC PGM=RDAB0880                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO COM DADOS DE INFORMACOES FAMILIARES       
+//* ***                                                                 
+//*                                                                     
+//CADUV001 DD DSN=*.STEP3.ARQSAIDA,                                     
+//       DISP=OLD                                                       
+//CADUB065 DD DSN=*.STEP4.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQSAIDA DD DSN=AD.BRQ.P006.V001FAMI(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(005650,1130),RLSE),                                
+//       DCB=(AD.A,LRECL=570,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//STEP5A   EXEC PGM=POOL0003                                            
+//*                                                                     
+//* ***    DESCOMPRIMIR ARQUIVO                                         
+//*                                                                     
+//ENTRA    DD DSN=AD.BRQ.CADU.CADUB067.HPM.COMP,                        
+//       DISP=SHR                                                       
+//SAI      DD DSN=AD.BRQ.P006.CADUB067.CLAS(+1),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(300,050),RLSE),                                    
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSOUT   DD SYSOUT=T                                                  
+//SYSUDUMP DD SYSOUT=T                                                  
+//*                                                                     
+//STEP6    EXEC SORTD                                                   
+//*                                                                     
+//* ***    CLASSIFICA ARQUIVO INFORMACOES PROFISSIONAIS POR  CLUB       
+//*                                                                     
+//SORTIN   DD DSN=*.STEP5A.SAI,                                         
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.CADUB067.CLAS(+2),                        
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,02),                                               
+//       SPACE=(TRK,(001670,0334),RLSE),                                
+//       DCB=(AD.A,LRECL=0642,RECFM=FB)                                 
+//SYSIN    DD *                                                         
+ SORT FIELDS=(11,6,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//STEP7    EXEC PGM=RDAB0885                                            
+//*                                                                     
+//* ***    ATUALIZA O ARQUIVO COM DADOS DE INFORMACOES PROFISSIONAIS    
+//* ***                                                                 
+//*                                                                     
+//CADUV001 DD DSN=*.STEP5.ARQSAIDA,                                     
+//       DISP=OLD                                                       
+//CADUB067 DD DSN=*.STEP6.SORT.SORTOUT,                                 
+//       DISP=OLD                                                       
+//ARQSAIDA DD DSN=AD.BRQ.P006.CADUV001(+1),                             
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=(DISCO,03),                                               
+//       SPACE=(TRK,(005650,1130),RLSE),                                
+//       DCB=(AD.A,LRECL=570,RECFM=FB)                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSUDUMP DD SYSOUT=Y                                                  
+//*                                                                     
+//SOLTA    EXEC AV,                                                     
+//       J=CLLP0151,                                                    
+//       DS=AD.BRQ.DESAFICA.EXEC                                        
+//*                                                                     

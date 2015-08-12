@@ -1,0 +1,115 @@
+      ******************************************************************
+      * DCLGEN TABLE(DB2PRD.INFO_PROFS)                                *
+      *        LIBRARY(AD.DB2.DCLGEN(CADUB067))                        *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        STRUCTURE(CADUB067)                                     *
+      *        APOST                                                   *
+      *        LABEL(YES)                                              *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE DB2PRD.INFO_PROFS TABLE                     
+           ( CCLUB                          DECIMAL(10, 0) NOT NULL,    
+             CEMPR                          DECIMAL(10, 0) NOT NULL,    
+             CPTCAO_ESPAC_TBELA             DECIMAL(2, 0) NOT NULL,     
+             IRZ_SCIAL                      CHAR(70),                   
+             CCNPJ_EMPR                     DECIMAL(9, 0),              
+             CCTRL_CNPJ_EMPR                DECIMAL(2, 0),              
+             CFLIAL_CNPJ_EMPR               DECIMAL(4, 0),              
+             CPORTE_EMPR                    DECIMAL(3, 0),              
+             CCOMPS_EMPR                    DECIMAL(1, 0),              
+             CPROFS_PF                      DECIMAL(5, 0),              
+             CCATEG_PROFS_CREDT             DECIMAL(5, 0),              
+             DINIC_VALDD                    DATE,                       
+             CCARGO_CLI_PF                  DECIMAL(5, 0),              
+             DMES_ANO_ATVDD                 DECIMAL(6, 0),              
+             DADMIS                         DATE,                       
+             CCNPJ_ANTER_CLI                DECIMAL(9, 0),              
+             CCTRL_CNPJ_ANTER               DECIMAL(2, 0),              
+             CFLIAL_CNPJ_ANTER              DECIMAL(4, 0),              
+             IRZ_SCIAL_ANTER                CHAR(70),                   
+             QANO_EMPR_ANTER                DECIMAL(2, 0),              
+             QMES_EMPR_ANTER                DECIMAL(2, 0),              
+             VRENDA_MES                     DECIMAL(15, 2),             
+             VRENDA_INFRD                   DECIMAL(15, 2),             
+             VRENDA_FAMLR_MES               DECIMAL(15, 2),             
+             CID_COMPV_RENDA                CHAR(1) NOT NULL,           
+             RDEPTO_ALOC                    CHAR(40),                   
+             CINDCD_MGRAC                   CHAR(1) NOT NULL,           
+             DINCL_REG                      DATE NOT NULL,              
+             CFUNC_BDSCO_ULT                DECIMAL(9, 0) NOT NULL,     
+             CTERM_ULT_ATULZ                CHAR(8) NOT NULL,           
+             HULT_ATULZ                     TIMESTAMP NOT NULL,         
+             CTPO_COMPV_RENDA               DECIMAL(2, 0)               
+           ) END-EXEC.                                                  
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE DB2PRD.INFO_PROFS                  *
+      ******************************************************************
+       01  CADUB067.                                                    
+      *    *************************************************************
+           10 CCLUB                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CEMPR                PIC S9(10)V USAGE COMP-3.            
+      *    *************************************************************
+           10 CPTCAO-ESPAC-TBELA   PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 IRZ-SCIAL            PIC X(70).                           
+      *    *************************************************************
+           10 CCNPJ-EMPR           PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTRL-CNPJ-EMPR      PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CFLIAL-CNPJ-EMPR     PIC S9(4)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPORTE-EMPR          PIC S9(3)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCOMPS-EMPR          PIC S9(1)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CPROFS-PF            PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCATEG-PROFS-CREDT   PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DINIC-VALDD          PIC X(10).                           
+      *    *************************************************************
+           10 CCARGO-CLI-PF        PIC S9(5)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DMES-ANO-ATVDD       PIC S9(6)V USAGE COMP-3.             
+      *    *************************************************************
+           10 DADMIS               PIC X(10).                           
+      *    *************************************************************
+           10 CCNPJ-ANTER-CLI      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CCTRL-CNPJ-ANTER     PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CFLIAL-CNPJ-ANTER    PIC S9(4)V USAGE COMP-3.             
+      *    *************************************************************
+           10 IRZ-SCIAL-ANTER      PIC X(70).                           
+      *    *************************************************************
+           10 QANO-EMPR-ANTER      PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 QMES-EMPR-ANTER      PIC S9(2)V USAGE COMP-3.             
+      *    *************************************************************
+           10 VRENDA-MES           PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 VRENDA-INFRD         PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 VRENDA-FAMLR-MES     PIC S9(13)V9(2) USAGE COMP-3.        
+      *    *************************************************************
+           10 CID-COMPV-RENDA      PIC X(1).                            
+      *    *************************************************************
+           10 RDEPTO-ALOC          PIC X(40).                           
+      *    *************************************************************
+           10 CINDCD-MGRAC         PIC X(1).                            
+      *    *************************************************************
+           10 DINCL-REG            PIC X(10).                           
+      *    *************************************************************
+           10 CFUNC-BDSCO-ULT      PIC S9(9)V USAGE COMP-3.             
+      *    *************************************************************
+           10 CTERM-ULT-ATULZ      PIC X(8).                            
+      *    *************************************************************
+           10 HULT-ATULZ           PIC X(26).                           
+      *    *************************************************************
+           10 CTPO-COMPV-RENDA     PIC S9(2)V USAGE COMP-3.             
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 32      *
+      ******************************************************************

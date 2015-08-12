@@ -1,0 +1,97 @@
+//CLLP0153 JOB 'CLLP,4120,PR32','A999036',MSGCLASS=Z,REGION=4M          
+//JOBLIB   DD DSN=AV.BIBGERTT,DISP=SHR                                  
+//         DD DSN=AV.BIBGERAL,DISP=SHR                                  
+//         DD DSN=AV.CHGM.LOADLIB.BSL.LOB,DISP=SHR                      
+//         DD DSN=SA.RDG2.SREST.AL2.DCALOAD,DISP=SHR                    
+//         DD DSN=DB2A2.R2.DSNLOAD,DISP=SHR                             
+//         DD DSN=SYS1.CEE.SCEERUN,DISP=SHR                             
+//STEP1    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR CPF + HORA ATUALIZACAO                       
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.CADUV000(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.ARQCADU.CADUV000(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,00100),RLSE),                               
+//       DCB=(AD.A,LRECL=320,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(12,9,A,21,4,A,25,2,A,55,26,D),FORMAT=BI                   
+ END                                                                    
+//*                                                                     
+//STEP2    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR AGENCIA E CONTA                              
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.CADUV000(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.ARQCADU.CADUV000.CLASFI(+1),              
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,00100),RLSE),                               
+//       DCB=(AC.A,LRECL=320,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(37,5,A,42,13,A),FORMAT=BI                                 
+ END                                                                    
+//*                                                                     
+//STEP3    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR CLUB                                         
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.CADUV002(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.ARQCADU.CADUV002(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,00100),RLSE),                               
+//       DCB=(AD.A,LRECL=165,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,10,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//STEP4    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR CLUB                                         
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.CADUV001(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.ARQCADU.CADUV001(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,00100),RLSE),                               
+//       DCB=(AD.A,LRECL=570,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,10,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//SOLTA    EXEC AV,                                                     
+//       J=CLLP0155,                                                    
+//       DS=AD.BRQ.DESAFICA                                             
+//                                                                      
+//STEP5    EXEC SORTD,                                                  
+//       PARM='DYNALLOC=(DISCO,50),FILSZ=E100000000'                    
+//*                                                                     
+//* ***    CLASSIFICAR POR CPF                                          
+//*                                                                     
+//SORTIN   DD DSN=AD.BRQ.P006.CADUV004(0),                              
+//       DISP=SHR                                                       
+//SORTOUT  DD DSN=AD.BRQ.P006.ARQCADU.CADUV004(+1),                     
+//       DISP=(,CATLG,DELETE),                                          
+//       UNIT=DISCO,                                                    
+//       SPACE=(TRK,(001000,00100),RLSE),                               
+//       DCB=(AD.A,LRECL=XXX,RECFM=FB),                                 
+//       DATACLAS=PRODX37                                               
+//SYSIN    DD *                                                         
+ SORT FIELDS=(1,26,A),FORMAT=BI                                         
+ END                                                                    
+//*                                                                     
+//*                                                                     

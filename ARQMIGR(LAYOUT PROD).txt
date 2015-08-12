@@ -1,0 +1,47 @@
+LVL    FIELD NAME                  FORMAT    POS
+01 WRK-REG-CONTRATOE              G            1
+ 03 WRK-PARTE1-E                  G            1
+  05 WRK-TIPO-REG-E               C      1     1
+  05 WRK-AGENCIA-E                Z      5     2
+  05 WRK-CON-CORR-E               G            7
+   10 WRK-CONTA-E                 Z      7     7
+   10 WRK-DIG-CON-E               C      1    14
+  05 WRK-CARTEIRA-E               C      3    15
+  05 WRK-CONTRATO-E               Z      7    18
+  05 WRK-VCTO-E                   C     10    25
+  05 WRK-ID-SEL-E                 C      2    35
+  05 WRK-DATAS-E                  G           37
+   10 WRK-ENTRADAS-E              C     10    37
+   10 WRK-VCTO-MORA-E             C     10    47
+  05 WRK-CPF-ADVOGADO-E           Z      9    57
+  05 WRK-CTR-CPF-ADVOG-E          Z      2    66
+ 03 WRK-PARTE2-E                  G           68
+  05 WRK-NOME-E                   C     40    68
+                                                
+  05 WRK-VAL-NINC-E               Z  13  2   108
+  05 WRK-VAL-CORR-E               Z  13  2   123
+  05 WRK-AGRELAC-E                Z      5   138
+  05 WRK-GARANTIA-E               Z      3   143
+  05 WRK-PRODUTO-E                Z      3   146
+  05 WRK-SPRODUTO-E               Z      3   149
+  05 WRK-CONVENIO-E               Z      9   152
+ 03 WRK-PARTE3-E                  G          161
+  05 WRK-AGENANT-E                Z      5   161
+  05 WRK-CONTANT-E                Z      7   166
+  05 WRK-DTRANSFTRAG-E            C     10   173
+ 03 WRK-LT                        G          183
+  05 WRK-TAXA-CONTRATO            Z   2  6   183
+  05 WRK-VR-REMUNERATORIO         Z  13  2   191
+  05 WRK-VALOR-MORATORIO          Z  13  2   206
+  05 WRK-VALOR-MULTA              Z  13  2   221
+  05 WRK-DESP-JUD-CUSTAS          Z  11  2   236
+  05 WRK-HONORARIOS               Z  11  2   249
+  05 WRK-VL-TOTAL-DIVIDA          Z  15  2   262
+  05 WRK-VL-TAXA-TARIFA           Z  15  2   279
+  05 WRK-VL-IOF                   Z  11  2   296
+  05 WRK-VL-CORRECAO              Z  11  2   309
+  05 WRK-VL-JUROS-12PCAA          Z  11  2   322
+  05 WRK-PERIODICIDADE            C      1   335
+  05 WRK-DB2DTOPE-AUX             C     10   336
+  05 WRK-DB2VROPE-AUX             Z     15   346
+
